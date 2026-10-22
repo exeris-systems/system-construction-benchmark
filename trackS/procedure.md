@@ -10,7 +10,8 @@ Track S pilots (D-46).
 | Instrument | Provider | Model | Sees |
 | --- | --- | --- | --- |
 | Persona — fleet technician, dispatcher, airspace desk | Mistral API | `ministral-8b-2512` (open weights: `mistralai/Ministral-3-8B-Instruct-2512`, Apache 2.0) | `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`) |
-| Judge | Mistral API | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | the derived contract + the reference requirements |
+| Judge, script series | Gemini API | Gemini 3.8 Flash, exact identifier fixed before its calibration | the derived contract + the reference requirements |
+| Judge, native series | Mistral API | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | the derived contract + the reference requirements |
 
 Instruments are fixed across subjects and calibrated before the first subject. The subjects, the
 judge's calibration and the S-naive and S-instructed tasks are added to this procedure before they
