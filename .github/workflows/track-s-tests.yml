@@ -1,0 +1,19 @@
+name: track-s-tests
+on:
+  pull_request:
+    paths: ["trackS/**", ".github/workflows/track-s-tests.yml"]
+  push:
+    branches: [main]
+    paths: ["trackS/**", ".github/workflows/track-s-tests.yml"]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with: { python-version: "3.14" }
+      # Standard library only; a stubbed transport, so no network and no API key.
+      - run: python3 -I trackS/test_run_track_s.py
+      - run: python3 -I trackS/run-track-s.py persona-control --persona-model ministral-8b-2512 --dry-run
