@@ -24,6 +24,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-10-22-persona-control-8b-f2f7fd73` | `ministral-8b-2512` | `f2f7fd73…563` (draft 3) | **fail** |
 | `runs/track-s/2026-10-22-persona-control-8b-7d40bed8` | `ministral-8b-2512` | `7d40bed8…0c0` (draft 3, frozen) | **fail** |
 | `runs/track-s/2026-10-22-persona-holdout` (held-out set `c3160a5e…`) | `ministral-8b-2512` | `7d40bed8…0c0` (draft 3, frozen) | **fail** |
+| `runs/track-s/2026-10-22-persona-holdout-2` (held-out set 2 `616089c9…`) | `mistral-small-2603` | `7d40bed8…0c0` (draft 4) | **run failed** — no answer |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -142,3 +143,11 @@ the slice does not give, or answer "I don't know" where it answers, without asse
 Counting the borderline failures as passing (HT1, HD4, HT6) gives 60. Against 66 of 72 on the
 control set, the prompt kept its gains on the questions it was revised against and lost them on new
 ones.
+
+### `2026-10-22-persona-holdout-2` — run failed
+
+Draft 4's deciding run. The model check passed: the provider describes `mistral-small-2603` as
+"Mistral Small 4", with reasoning among its capabilities. The first question was refused with HTTP
+429 on every one of eight attempts over ten minutes, and the run failed as an infrastructure error.
+Each refusal reports `x-ratelimit-limit-req-minute: 0`: the key is allowed no requests to this
+model, so the run records no answer and no verdict.

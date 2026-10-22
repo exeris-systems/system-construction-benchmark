@@ -1,0 +1,66 @@
+{
+  "track": "S",
+  "mode": "persona-holdout-2",
+  "status": "failed",
+  "started": "2026-10-22T18:56:00.530696+00:00",
+  "parameters": {
+    "mode": "persona-holdout-2",
+    "persona_provider": "mistral",
+    "persona_model": "mistral-small-2603",
+    "persona_rpm": 10.0,
+    "persona_max_tokens": 2048,
+    "repetitions": 3
+  },
+  "inputSha256": {
+    "world-brief.md": "dfb0de323972b2ead2811e441914d27f6fa1f98410e7c433010e8dcd057f130e",
+    "brief-slices.yaml": "7c417a65224604ea834574e457e0b285dafb79b476821cb3315b58eed8169125",
+    "persona-prompt.md": "7d40bed84f31bedc5958ad45dc28fc4957f92c971fe2ff6b27789688480250c0",
+    "persona-holdout-2.yaml": "616089c964f4b4c98aa9fe7808bce28e139d58826fa737d71fbb67eede27d087",
+    "run-track-s.py": "372a6401c56402ef3e7e6d32eb101886e55ce28665336de4358d9e0a522dad02"
+  },
+  "instruments": {
+    "persona": {
+      "provider": "mistral",
+      "model": "mistral-small-2603",
+      "description": {
+        "id": "mistral-small-2603",
+        "object": "model",
+        "created": 1792695360,
+        "owned_by": "mistralai",
+        "capabilities": {
+          "completion_chat": true,
+          "function_calling": true,
+          "reasoning": true,
+          "completion_fim": false,
+          "fine_tuning": false,
+          "vision": true,
+          "ocr": false,
+          "classification": false,
+          "moderation": false,
+          "audio": false,
+          "audio_transcription": false,
+          "audio_transcription_realtime": false,
+          "audio_speech": false,
+          "unified_resources": false
+        },
+        "name": "mistral-small-2603",
+        "description": "Mistral Small 4.",
+        "max_context_length": 262144,
+        "aliases": [
+          "mistral-small-latest",
+          "mistral-vibe-cli-fast",
+          "magistral-small-latest"
+        ],
+        "deprecation": null,
+        "deprecation_replacement_model": null,
+        "default_model_temperature": 0.3,
+        "billing_model_name": "mistral-small-2603",
+        "type": "base",
+        "audio_transcription_capabilities": null,
+        "audio_speech_capabilities": null
+      }
+    }
+  },
+  "failure": "technician/1/JT1: HTTP 429: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+  "finished": "2026-10-22T19:06:19.457794+00:00"
+}

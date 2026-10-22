@@ -14,8 +14,8 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 3 (draft 3)
-Decision register: D-45 to D-50. Versions 1 and 2 (the user-story procedure under
+Version: 3 (draft 4)
+Decision register: D-45 to D-51. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
 
@@ -23,7 +23,7 @@ Track S pilots (D-46).
 
 | Instrument | Provider | Model | Sees |
 | --- | --- | --- | --- |
-| Persona — fleet technician, dispatcher, airspace desk | Mistral API | `ministral-8b-2512` (open weights: `mistralai/Ministral-3-8B-Instruct-2512`, Apache 2.0) | `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`) |
+| Persona — fleet technician, dispatcher, airspace desk | Mistral API | `mistral-small-2603` (open weights: `mistralai/Mistral-Small-4-119B-2603`, Apache 2.0) | `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`) |
 | Judge, script series | Gemini API | Gemini 3.8 Flash, exact identifier fixed before its calibration | the derived contract + the reference requirements |
 | Judge, native series | Mistral API | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | the derived contract + the reference requirements |
 
@@ -38,7 +38,7 @@ run.
 | `world-brief.md`, `brief-slices.yaml` | the world and each persona's slice of it |
 | `brief-seeding.md` | the brief sentences that are constraints or seeded needs; used to read derived contracts |
 | `persona-prompt.md` | the persona instrument |
-| `persona-control.yaml`, `persona-holdout.yaml` | the persona's calibration questions: the set the prompt is revised against, and the held-out set that decides |
+| `persona-control.yaml`, `persona-holdout.yaml`, `persona-holdout-2.yaml` | the persona's calibration questions: the set the prompt is revised against, the held-out set that decided draft 3, and the held-out set that decides draft 4 |
 | `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 3, and replaced by subject prompts before the first subject runs |
 | `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
 | `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
@@ -48,7 +48,8 @@ run.
 Two question sets of the same shape hold fixed questions per role, each with what the role's slice
 supports (`fact`), a question the slice cannot answer (`outside`), or a question that invites
 software design (`no-design`). The script asks each role its questions in one conversation, three
-times: `persona-control` asks `persona-control.yaml`, `persona-holdout` asks `persona-holdout.yaml`.
+times: `persona-control` asks `persona-control.yaml`, and `persona-holdout` and `persona-holdout-2`
+ask the two held-out sets.
 
 Each answer is graded against its question's `expect`. A `fact` answer passes when it agrees with the
 cited unit and adds nothing its slice does not give; an `outside` answer passes with "I don't know"

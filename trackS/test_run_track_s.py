@@ -4,6 +4,7 @@
 Run from the repository root: python3 -I trackS/test_run_track_s.py
 """
 
+import argparse
 import email.message
 import importlib.util
 import io
@@ -149,6 +150,34 @@ class ClientTest(unittest.TestCase):
             self.client.describe()
 
 
+class ModeTest(unittest.TestCase):
+    """Each persona mode asks every question of its own set and writes its answers under its name."""
+
+    def setUp(self):
+        os.environ["MISTRAL_API_KEY"] = "test-key"
+        self._urlopen, self._sleep, self._describe = ts.urllib.request.urlopen, ts.time.sleep, ts.Client.describe
+        ts.urllib.request.urlopen = lambda request, timeout=0: Reply(answer("I don't know.", "stop"), headers())
+        ts.time.sleep = lambda seconds: None
+        ts.Client.describe = lambda client: {"id": client.model}
+
+    def tearDown(self):
+        ts.urllib.request.urlopen, ts.time.sleep, ts.Client.describe = self._urlopen, self._sleep, self._describe
+
+    def test_each_mode_writes_its_own_answers(self):
+        for mode, set_file in ts.QUESTION_SETS.items():
+            out = pathlib.Path(tempfile.mkdtemp())
+            args = argparse.Namespace(mode=mode, persona_provider="mistral", persona_model="m",
+                                      persona_rpm=60_000, persona_max_tokens=100, repetitions=1)
+            files = {name: (HERE / name).read_text() for name in ("persona-prompt.md", set_file)}
+            ts.persona_control(args, files, {role: "notes" for role in ts.ROLES}, out, {})
+            written = sorted(p.name for p in out.glob("*.json"))
+            self.assertEqual(written, [f"{mode}.json"], mode)
+            asked = json.loads((out / f"{mode}.json").read_text())
+            expected = ts.parse_control(files[set_file], set_file)
+            self.assertEqual({r: [a["id"] for a in reps[0]["answers"]] for r, reps in asked.items()},
+                             {r: [q["id"] for q in qs] for r, qs in expected.items()}, mode)
+
+
 class InputTest(unittest.TestCase):
     def test_every_brief_unit_has_a_slice(self):
         units = ts.parse_brief((HERE / "world-brief.md").read_text())
@@ -164,15 +193,18 @@ class InputTest(unittest.TestCase):
                     self.assertEqual(set(q), {"id", "kind", "question", "expect"}, name)
                     self.assertIn(q["kind"], {"fact", "outside", "no-design"}, name)
 
-    def test_held_out_set_shares_no_question_with_the_control_set(self):
+    def test_question_sets_share_no_question(self):
         def questions(name):
             sets = ts.parse_control((HERE / name).read_text(), name)
             return [q for qs in sets.values() for q in qs]
-        control, holdout = questions(ts.CONTROL_FILE), questions(ts.HOLDOUT_FILE)
-        self.assertFalse({q["id"] for q in control} & {q["id"] for q in holdout})
-        self.assertFalse({q["question"] for q in control} & {q["question"] for q in holdout})
+        names = sorted(ts.QUESTION_SETS.values())
         kinds = lambda qs: sorted(q["kind"] for q in qs)
-        self.assertEqual(kinds(control), kinds(holdout))
+        for i, a in enumerate(names):
+            for b in names[i + 1:]:
+                qa, qb = questions(a), questions(b)
+                self.assertFalse({q["id"] for q in qa} & {q["id"] for q in qb}, (a, b))
+                self.assertFalse({q["question"] for q in qa} & {q["question"] for q in qb}, (a, b))
+                self.assertEqual(kinds(qa), kinds(qb), (a, b))
 
     def test_out_outside_runs_track_s_is_refused(self):
         env = {**os.environ, "MISTRAL_API_KEY": "test-key"}
