@@ -1,3 +1,12 @@
+---
+title: "Campaign 1 anti-requirements"
+type: reference
+visibility: public
+owning-repo: system-construction-benchmark
+status: active
+last-verified: 2026-10-22
+---
+
 # Campaign 1 anti-requirements
 
 These properties are not required and must not become hidden `PASS` criteria. They are of two kinds (`trackS/brief-seeding.md`, synchronisation rule).

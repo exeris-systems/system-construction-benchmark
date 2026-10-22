@@ -1,3 +1,12 @@
+---
+title: "Domain profile — Autonomous Drone Fleet Manager"
+type: reference
+visibility: public
+owning-repo: system-construction-benchmark
+status: active
+last-verified: 2026-10-22
+---
+
 # Domain profile — Autonomous Drone Fleet Manager
 
 This profile fixes the shape of the domain before requirements are written. Every requirement in `system-requirements.yaml` must be consistent with it. Track S personas and subjects never see this profile; personas know only their slices of `trackS/world-brief.md` (decision register D-47). It describes behaviour and boundaries only; it names no implementation technology except standard protocols at the process boundary (program plan §3.3).
