@@ -35,6 +35,13 @@ the three repetitions, `outside` questions get "I don't know" or a referral, and
 questions get needs rather than features. The rate-limit headers recorded on every call show the
 remaining quota, from which the subject runs are scheduled.
 
+## Tests
+
+`python3 -I trackS/test_run_track_s.py` checks the script against a stubbed transport: a 429 logged
+with its body and rate-limit headers and retried, a non-natural finish reason and a client error
+failing the run, a model check that rejects another model, every brief unit sliced, and an output
+directory outside `runs/track-s/` refused. It needs no network and no key.
+
 ## Run record
 
 The output directory is committed unedited:
