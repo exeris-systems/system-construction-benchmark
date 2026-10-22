@@ -1,10 +1,19 @@
+---
+title: "Campaign 1 anti-requirements"
+type: reference
+visibility: public
+owning-repo: system-construction-benchmark
+status: active
+last-verified: 2026-10-22
+---
+
 # Campaign 1 anti-requirements
 
-These properties are not required and must not become hidden `PASS` criteria. They are of two kinds (`user-stories/brief-seeding.md`, synchronisation rule).
+These properties are not required and must not become hidden `PASS` criteria. They are of two kinds (`trackS/brief-seeding.md`, synchronisation rule).
 
 ## User-visible
 
-Each appears in `user-stories/world-brief.md` §8 in the users' words; changing one here requires the matching change there.
+Each appears in `trackS/world-brief.md` §8 in the users' words; changing one here requires the matching change there.
 
 - Management or analytical reports, exports, and dashboards.
 - Login through an external identity provider.

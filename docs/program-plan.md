@@ -173,7 +173,7 @@ The result, the raw answers, and the decisions taken are published as `neutralit
 
 ### 3.5 Anti-requirements
 
-Listed in `contract/anti-requirements.md`, split into user-visible items (kept in sync with `contract/user-stories/world-brief.md` §8) and technical items. No other list is authoritative.
+Listed in `contract/anti-requirements.md`, split into user-visible items (kept in sync with `trackS/world-brief.md` §8) and technical items. No other list is authoritative.
 
 ### 3.6 Gated scope
 
@@ -793,7 +793,7 @@ Exact model identifiers are pinned in the preregistration and recorded per run.
 
 **Off-vendor series.** Gemini Flash runs through Antigravity, a different harness, at a reasoning-effort level fixed in the preregistration and recorded per run. It is the only data point outside Anthropic and is reported as a separate series in its own table. It is never compared with the Claude runs in one table or claim: a harness difference cannot be told apart from a model difference.
 
-Single sessions without an agent loop — the neutrality audit and the user-story procedure — may use other models, as assigned in `contract/user-stories/procedure.md`.
+Single sessions without an agent loop may use other models: Track S instruments and subjects are assigned in `trackS/procedure.md` (D-48); the neutrality audit's models are fixed by its published procedure before the audit runs (D-03).
 
 ```yaml
 model:

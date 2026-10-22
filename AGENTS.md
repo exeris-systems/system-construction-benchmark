@@ -51,7 +51,8 @@ Conversation with the founder happens in Polish.
 
 | Path | What it holds |
 | --- | --- |
-| `contract/` | domain profile, requirements, anti-requirements, arms; `contract/user-stories/` — the frozen user-story procedure |
+| `contract/` | domain profile, requirements, anti-requirements, arms |
+| `trackS/` | Track S: world brief, persona slices, prompts, control set, `run-track-s.py` (D-45 to D-48) |
 | `docs/` | program plan, Phase 1 plan, decision register |
 | `preregistration/` | frozen sets with their timestamps; hypotheses before a campaign |
 | `oracle/`, `mutants/`, `harness/`, `prompts/` | the instrument as it is built |
@@ -67,8 +68,8 @@ in [`docs/repo-review-rules.md`](docs/repo-review-rules.md).
 
 ## Verification and reporting
 
-A change to the user-story procedure reruns `python3 -I contract/user-stories/run-procedure.py
---dry-run --model M --analyst-model A`. A change to the agent material reruns `agents_file_check.py`,
+A change to Track S reruns `python3 -I trackS/run-track-s.py persona-control --persona-model M
+--dry-run`. A change to the agent material reruns `agents_file_check.py`,
 `agents_render.py --check` and `agents_bundle.py verify` from `exeris-systems/exeris-agents`.
 
 Report what ran and its result, and name what did not run as not run — silence is not a pass.

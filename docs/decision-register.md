@@ -328,7 +328,7 @@ Impact: program plan §7.1, §9.1, §9.6, §14; preregistration.
 
 ### D-39 — Claude classes on one harness, Gemini Flash as a separate series
 
-Scored runs use three Claude classes on Claude Code: Haiku (fast), Sonnet (balanced, the Phase 4 model), Opus (deep); exact identifiers are pinned in the preregistration. Gemini Flash runs through Antigravity as a separate series — the only data point outside Anthropic — reported in its own table and never compared with Claude runs, because a harness difference cannot be told apart from a model difference. Single sessions without an agent loop, such as the neutrality audit, are assigned in `contract/user-stories/procedure.md`.
+Scored runs use three Claude classes on Claude Code: Haiku (fast), Sonnet (balanced, the Phase 4 model), Opus (deep); exact identifiers are pinned in the preregistration. Gemini Flash runs through Antigravity as a separate series — the only data point outside Anthropic — reported in its own table and never compared with Claude runs, because a harness difference cannot be told apart from a model difference. Single sessions without an agent loop use other models: Track S assigns its instruments and subjects in `trackS/procedure.md` (D-48), and the neutrality audit's models are fixed by its published procedure (D-03).
 
 Impact: program plan §8, §9.6.
 
