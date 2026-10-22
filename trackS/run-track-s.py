@@ -27,7 +27,7 @@ import urllib.error
 import urllib.request
 
 HERE = pathlib.Path(__file__).resolve().parent
-RUNS = HERE.parent / "runs"
+RUNS = HERE.parent / "runs" / "track-s"
 CONTROL_FILE = "persona-control.yaml"
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
@@ -146,6 +146,8 @@ class Client:
             sys.exit(f"{role}: unknown provider {provider!r}; known: {sorted(PROVIDERS)}")
         if "latest" in model:
             sys.exit(f"{role}: {model}: use an exact identifier, not an alias")
+        if rpm <= 0:
+            sys.exit(f"{role}: calls per minute must be positive, got {rpm}")
         self.role, self.provider, self.model = role, provider, model
         self.spec = PROVIDERS[provider]
         self.interval, self.max_tokens, self.recorder = 60 / rpm, max_tokens, recorder
@@ -160,11 +162,24 @@ class Client:
         return {"Content-Type": "application/json", "x-goog-api-key": self.key}
 
     def describe(self):
-        """The model's own description; this endpoint generates nothing."""
+        """The model's own description, checked against the requested identifier; generates nothing."""
         url = f"{self.spec['base']}/models/{self.model}"
         request = urllib.request.Request(url, headers=self._headers())
-        with urllib.request.urlopen(request, timeout=60) as response:
-            return json.load(response)
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                headers, info = dict(response.headers), json.load(response)
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode(errors="replace")
+            self.recorder.log("describe", self, "describe", headers=dict(e.headers), http=e.code, body=detail[:2000])
+            raise RunFailed(f"{self.role}: model check: HTTP {e.code}: {detail[:500]}")
+        except (urllib.error.URLError, socket.timeout, TimeoutError, ConnectionError) as e:
+            self.recorder.log("describe", self, "describe", error=repr(e))
+            raise RunFailed(f"{self.role}: model check: {e!r}")
+        self.recorder.log("describe", self, "describe", headers=headers)
+        served = info.get("id") or (info.get("name") or "").removeprefix("models/")
+        if served != self.model:
+            raise RunFailed(f"{self.role}: requested {self.model}, the provider describes {served!r}")
+        return info
 
     def _body(self, system, turns):
         if self.spec["kind"] == "openai":
