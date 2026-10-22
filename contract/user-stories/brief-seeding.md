@@ -1,7 +1,7 @@
 # Brief seeding declaration
 
 Applies to: `world-brief.md` v1.0
-Visibility: published with the user-story procedure; **never given to the story writer** (it names requirement IDs).
+Visibility: published with the user-story procedure; **never given to any role that produces stories** (it names requirement IDs). It applies unchanged to every persona slice, because slices are selections of brief units (`brief-slices.yaml`).
 
 Every sentence of the brief is one of three kinds:
 

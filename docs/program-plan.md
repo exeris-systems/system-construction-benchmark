@@ -780,9 +780,9 @@ Three classes for scored runs, all on one harness (Claude Code):
 
 Exact model identifiers are pinned in the preregistration and recorded per run.
 
-**Off-vendor series.** Gemini Flash runs through Antigravity, a different harness. It is the only data point outside Anthropic and is reported as a separate series in its own table. It is never compared with the Claude runs in one table or claim: a harness difference cannot be told apart from a model difference.
+**Off-vendor series.** Gemini Flash runs through Antigravity, a different harness, at a reasoning-effort level fixed in the preregistration and recorded per run. It is the only data point outside Anthropic and is reported as a separate series in its own table. It is never compared with the Claude runs in one table or claim: a harness difference cannot be told apart from a model difference.
 
-Single sessions without an agent loop — the neutrality audit and other audits — may use other models (e.g. Gemini Argon), as assigned in the role table of `contract/user-stories/story-writer-prompt.md`.
+Single sessions without an agent loop — the neutrality audit and the user-story procedure — may use other models, as assigned in `contract/user-stories/procedure.md`.
 
 ```yaml
 model:
@@ -1018,7 +1018,7 @@ Hypotheses, contract, oracle, mutation suite, `arms.yaml`, the rejected-arms tab
 - a **protected tag** (`us-procedure-*`, `prereg-*`, `domain-b-*`): a repository ruleset forbids deleting or moving tags matching these patterns. A tag is a name for the frozen commit, not evidence of time;
 - an **independent timestamp** of the commit: archival of the public repository by Software Heritage ("Save code now"), or an OpenTimestamps proof of the commit hash. Commit dates are set by the author and prove nothing; the hosting provider's push history is neither permanent nor protected from force-pushes.
 
-Documents and run metadata refer to a frozen set by its tag; the tag resolves to the commit hash.
+Documents and run metadata refer to a frozen set by its tag; the tag resolves to the commit hash. Pull requests that carry a frozen set are merged with a merge commit, never squashed or rebased: both rewrite commits, and the tag would then point outside the history of `main`.
 
 ### 12.3 Cost of the instrument
 

@@ -1,6 +1,8 @@
 # Local run artifacts can be large and may contain environment data.
 runs/*
 !runs/.gitkeep
+!runs/pilot/
+!runs/user-stories/
 
 # Local and tool-specific data.
 .env

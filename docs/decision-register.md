@@ -44,6 +44,7 @@
 | D-40 | How is the instrument's cost measured? | Self-reported active seconds cannot be checked and claim false precision. | arkstack-dev | closed 2026-10-22 — see below |
 | D-41 | What happens when a human intervenes in a scored run? | Human guidance is neither identical across arms nor reproducible, and the contract author knows one arm best. | arkstack-dev | closed 2026-10-22 — see below |
 | D-42 | How is a frozen set shown to predate its use? | A tag can be moved and a commit date is set by the author; neither proves time. | arkstack-dev | closed 2026-10-22 — see below |
+| D-43 | How are interviews produced? | A self-played interview has no information asymmetry; relaying four chat sessions by hand puts a human in the loop. | arkstack-dev | closed 2026-10-22 — see below |
 
 Closed decisions must state their evidence, date, author, and impact on the contract or preregistration. Rejected decisions are retained.
 
@@ -278,14 +279,14 @@ Impact: SR-ROUTE-03b, SR-TEN-03.
 
 User stories come from a world independent of the requirements:
 
-1. **World brief**, written and published by the contract author: who the operators and dispatchers are, which drones they fly, which missions they run, the conditions they work in, which regulations apply. It describes the world only — no system behaviour, no thresholds, no states, no mechanisms, and no account of past failures: failures written by the author would map one-to-one onto requirements, so bad days are invented by the story writer in its interviews. It is the single point where the author shapes the content, so it is short and public.
-2. **Story writer**: a model from a different vendor that receives only the brief and produces stories through interviews with personas (fleet technician, dispatcher, airspace desk), not through an instruction to "write user stories". It never sees the requirements.
-3. **Mapping**: a separate instance that sees the requirements maps stories to them; the author reviews the mapping.
+1. **World brief**, written and published by the contract author: who the operators and dispatchers are, which drones they fly, which missions they run, the conditions they work in, which regulations apply. It describes the world only — no system behaviour, no thresholds, no states, no mechanisms, and no account of past failures: failures written by the author would map one-to-one onto requirements, so bad days are invented in the interviews. It is the single point where the author shapes the content, so it is short and public.
+2. **Interviews between separate sessions** (D-43): a persona per role (fleet technician, dispatcher, airspace desk) knows only its mechanical slice of the brief; an interviewer knows only the business section and the role names; an analyst writes the stories from the transcripts alone. No role producing stories sees the requirements.
+3. **Mapping**: a separate instance that sees the requirements maps stories to them; the author reviews the mapping and records every change as a published override.
 4. **A requirement without a story is a signal, not a gap to fill**: either the brief is too thin or the requirement is a platform requirement in domain clothing — the same logic as `motivating_arm`. Missing stories are written by the author.
 
-Every story carries `provenance_origin`: `independent` (derived from a fact in the brief), `brief_seeded` (derived from a constraint or seeded need listed in `contract/user-stories/brief-seeding.md`), or `author`. The mapping instance also marks any story that paraphrases a specific brief sentence. The seeding declaration names requirement IDs and is never given to the writer. Track S reports the three sets separately, and the story-writing model does not take part in Track S.
+Every story carries `provenance_origin`: `independent` (derived from a fact in the brief), `brief_seeded` (derived from a constraint or seeded need listed in `contract/user-stories/brief-seeding.md`), or `author`. The mapping instance also marks any story that paraphrases a specific brief sentence. The seeding declaration names requirement IDs and is never given to a role that produces stories. Track S reports the three sets separately, and the story-producing model does not take part in Track S.
 
-Roles, vendors, and the isolation of chat-interface runs are fixed in `contract/user-stories/story-writer-prompt.md` and published with a hash before the writer runs.
+Roles, vendors, and parameters are fixed in `contract/user-stories/procedure.md` and frozen with a protected tag and an independent timestamp (D-42) before the run.
 
 Stories, written either way, use the language of operators and dispatchers — what happened, what they need, what they fear — and state no thresholds, state names, or order of steps.
 
@@ -307,7 +308,7 @@ Impact: program plan §7.1, §9.1, §9.6, §14; preregistration.
 
 ### D-39 — Claude classes on one harness, Gemini Flash as a separate series
 
-Scored runs use three Claude classes on Claude Code: Haiku (fast), Sonnet (balanced, the Phase 4 model), Opus (deep); exact identifiers are pinned in the preregistration. Gemini Flash runs through Antigravity as a separate series — the only data point outside Anthropic — reported in its own table and never compared with Claude runs, because a harness difference cannot be told apart from a model difference. Gemini Argon is used only for single sessions without an agent loop, such as the neutrality audit.
+Scored runs use three Claude classes on Claude Code: Haiku (fast), Sonnet (balanced, the Phase 4 model), Opus (deep); exact identifiers are pinned in the preregistration. Gemini Flash runs through Antigravity as a separate series — the only data point outside Anthropic — reported in its own table and never compared with Claude runs, because a harness difference cannot be told apart from a model difference. Single sessions without an agent loop, such as the neutrality audit, are assigned in `contract/user-stories/procedure.md`.
 
 Impact: program plan §8, §9.6.
 
@@ -328,3 +329,11 @@ Impact: program plan §7.2, §9.1, §11, §16.
 Every frozen set gets a tag protected by a repository ruleset against deletion and moves, and an independent timestamp of its commit — Software Heritage archival of the public repository, or an OpenTimestamps proof of the commit hash. The tag names the set; the timestamp proves when it existed. Tag signing is optional: it proves who, not when.
 
 Impact: program plan §12.2.
+
+### D-43 — Procedure v2: interviews between separate sessions, by script
+
+Procedure v1 (`us-procedure-v1`) had one model play both interviewer and interviewees. The model asking the questions knew the answers, so the interview had no information asymmetry: the analyst asked about what it already meant to write. Version 2 separates the roles into sessions that see different inputs — personas their brief slice, the interviewer only the business section, the analyst only the transcripts — and runs them by script (`contract/user-stories/run-procedure.py`), because relaying four chat sessions by hand would make a person the channel for every exchange. A script needs an API, so the story roles move to the Gemini API free tier — interviews on Gemini 3.5 Flash Lite and the single analyst call on Gemini 3.8 Flash, a split forced by the free tier's daily request limits and recorded in the procedure — and the first neutrality auditor moves to GPT-6; an auditor is still never from the story producer's vendor.
+
+Two self-play runs before the procedure freeze, in `runs/pilot/`; not used as input; motivated the switch to a two-agent design because a self-played interview has no information asymmetry.
+
+Impact: `contract/user-stories/procedure.md`; mapping prompt; role assignment; Track S excludes both Gemini model ids.
