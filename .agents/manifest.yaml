@@ -1,0 +1,90 @@
+# Composition and delivery metadata for this repository's agent material.
+# agents-md-schema.md rules 5, 7, 8 and 12: profiles and workflows compose by reference, provider
+# directories are generated, imports are version-pinned, and what a vendor cannot do is written
+# down rather than assumed.
+#
+# The check asserts this file and the filesystem agree in BOTH directions: every name here exists,
+# and every profile, skill and workflow on disk is named here.
+version: 2
+repository: system-construction-benchmark
+
+# The organisation bundle, pinned and vendored under .agents/vendor/. `ref` is the commit the
+# vendored tree was taken from and `sha256` is a digest over every byte of it, so a hand-edit of
+# the vendored copy is a CI failure rather than a silent local fork (rule 8). Bumping the version
+# means re-vendoring with `agents_bundle.py vendor`, not editing in place.
+imports:
+  - bundle: exeris-agents
+    version: 2.1.0
+    ref: abfdbe5336e3c29b807241b0bb00a6091cb42fea
+    sha256: sha256:7454a4e4f8682b664899225551dbf4e827e40a2c8889c989ff24e9ebdf2f960f
+
+# No role profiles, skills or workflows yet: the instrument is contract and procedure, and no task
+# here has a lifecycle that a profile or workflow would compose. They are added when the oracle and
+# harness exist and have bounded procedures of their own.
+agents: []
+skills: []
+workflows: []
+
+# Repository-owned policies only. The shared `agent-safety-and-autonomy` and
+# `error-handling-and-fallback` come from the bundle and are composed as `bundle:<name>`.
+policies:
+  - instrument-integrity
+  - contract-neutrality
+
+references: []
+
+# Not adopted yet, each for a stated reason rather than by omission:
+#
+#   hooks    (rule 12) — the policies above are enforced at review (docs/repo-review-rules.md),
+#            and no action here needs to be denied at runtime before a review sees it.
+#   schemas  (rule 13) — no profile publishes an output contract.
+#   evals    (rule 14) — no profiles ship, so there is nothing to evaluate.
+hooks: null
+schemas: []
+evals: null
+
+# No nested AGENTS.md: no subtree has materially different constraints.
+nested: []
+
+renderer:
+  # One implementation, shared across repositories. It lives with the bundle, because the renderer
+  # and the semantics it renders are one contract and a pinned version has to cover both.
+  source: exeris-systems/exeris-agents
+  entrypoint: tools/agents_render.py
+  check: tools/agents_file_check.py
+  bundle: tools/agents_bundle.py
+
+adapters:
+  # Claude is the only adapter in use; with no profiles, skills or workflows declared it renders
+  # nothing yet, and the other runtimes are deferred until there is material to render.
+  claude:
+    target: .claude
+    agents: .claude/agents/{name}.md
+    skills: symlink
+    workflows: .claude/skills/{name}/SKILL.md
+  copilot:
+    target: .github
+    skills: native
+    status: deferred
+  codex:
+    target: .codex
+    skills: native
+    status: deferred
+  gemini:
+    target: .gemini
+    skills: native
+    status: deferred
+  antigravity:
+    target: .agents
+    skills: native
+    status: deferred
+  cursor:
+    target: .cursor
+    skills: native
+    status: deferred
+
+degradations: {}
+
+provider-owned:
+  # Operational configuration, exempt from the generated-marker check by this list (rule 7).
+  - .github/workflows/
