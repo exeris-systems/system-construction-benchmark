@@ -1,0 +1,112 @@
+# Persona control set — the calibration of the Track S persona instrument (decision register D-48).
+#
+# Each role is asked its questions in order, in one conversation, several times. A persona passes when
+# no answer contradicts its slice of world-brief.md (brief-slices.yaml), answers to the same question
+# agree across repetitions, questions outside its slice get "I don't know" or a referral, and it
+# designs no software. `expect` states what the slice supports; `kind` says which property the
+# question probes:
+#   fact      — the slice answers it; the answer must agree with the cited unit
+#   outside   — the slice does not; the persona must not invent an answer
+#   no-design — the persona must describe needs, not features or mechanisms
+
+technician:
+  - id: T1
+    kind: fact
+    question: How many drones does your company run, roughly?
+    expect: a few hundred (3.b1)
+  - id: T2
+    kind: fact
+    question: Can any of your drones charge on any of your pads?
+    expect: no — connector types differ and are not interchangeable (3.b1)
+  - id: T3
+    kind: fact
+    question: When a pad is free at another company's site, can you use it?
+    expect: no — pads are never lent to another company (3.b2)
+  - id: T4
+    kind: fact
+    question: What happens to a drone that restarts in the air?
+    expect: it restarts after a software fault and carries on (6.b3)
+  - id: T5
+    kind: fact
+    question: Do the reports from your drones always reach you, and in order?
+    expect: no — late, out of order, more than once, or not at all (6.b2)
+  - id: T6
+    kind: outside
+    question: How does the airspace desk decide how long a closure lasts?
+    expect: does not know, or refers to the airspace desk or the authorities (not in the technician slice)
+  - id: T7
+    kind: outside
+    question: Which drone does a dispatcher pick for a delivery, and along which corridor?
+    expect: does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)
+  - id: T8
+    kind: no-design
+    question: What screens and buttons should the new service have?
+    expect: describes needs and worries, proposes no screens, features or mechanisms
+
+dispatcher:
+  - id: D1
+    kind: fact
+    question: Who decides which drone flies and along which way?
+    expect: the dispatcher, as the licensed person responsible for the flight (2.b2, 4.b4)
+  - id: D2
+    kind: fact
+    question: Would you like the software to pick the drone for you?
+    expect: no — company policy is that software never chooses a drone or a way (4.b4)
+  - id: D3
+    kind: fact
+    question: Can several flights take off from the same site at the same moment?
+    expect: only up to the number of take-off and landing places the site has (4.b3)
+  - id: D4
+    kind: fact
+    question: What changes about a closure during the day?
+    expect: closures are amended, e.g. the area widened or the end time moved (5.b1)
+  - id: D5
+    kind: fact
+    question: What does a closure mean for drones that are already in the air?
+    expect: a closure can come into force while drones of several companies are flying (5.b2)
+  - id: D6
+    kind: outside
+    question: Which connector types do your charging pads use?
+    expect: does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond "several types, not interchangeable")
+  - id: D7
+    kind: outside
+    question: How much disruption did yesterday's closure cause across all the companies?
+    expect: does not know the cross-company figure, or refers to the airspace desk (2.b3 is not in the dispatcher slice)
+  - id: D8
+    kind: no-design
+    question: How should the system store the routes internally?
+    expect: has no view on internals; describes what it needs to know or decide
+
+desk:
+  - id: A1
+    kind: fact
+    question: Whose information do you keep, and who uses it?
+    expect: the shared airspace picture — corridors, zones, closures from the authorities — for all customer companies (2.b3)
+  - id: A2
+    kind: fact
+    question: Can you look into one company's flights to see how a closure affected it?
+    expect: no — the desk has no business looking into any one company's operations (2.b3)
+  - id: A3
+    kind: fact
+    question: What kinds of closures do the authorities announce?
+    expect: planned ones with a start and end time, and sudden ones that apply at once (5.b1)
+  - id: A4
+    kind: fact
+    question: How often does the service you work with get restarted?
+    expect: during working hours, while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)
+  - id: A5
+    kind: outside
+    question: How many drones does each of your customers run?
+    expect: does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)
+  - id: A6
+    kind: outside
+    question: What do technicians do when a drone comes back with a fault?
+    expect: does not know, or refers to the companies' technicians (2.b1 is not in the desk slice)
+  - id: A7
+    kind: outside
+    question: Do the drones' reports reach the companies late or out of order?
+    expect: does not know, or refers to the operating companies (6.b2 is not in the desk slice)
+  - id: A8
+    kind: no-design
+    question: Which database should keep the closures?
+    expect: has no view on technology; describes what it needs from the information

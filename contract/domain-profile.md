@@ -1,6 +1,6 @@
 # Domain profile — Autonomous Drone Fleet Manager
 
-This profile fixes the shape of the domain before requirements are written. Every requirement in `system-requirements.yaml` must be consistent with it. User stories are written from `user-stories/world-brief.md`, never from this profile (decision register D-36). It describes behaviour and boundaries only; it names no implementation technology except standard protocols at the process boundary (program plan §3.3).
+This profile fixes the shape of the domain before requirements are written. Every requirement in `system-requirements.yaml` must be consistent with it. Track S personas and subjects never see this profile; personas know only their slices of `trackS/world-brief.md` (decision register D-47). It describes behaviour and boundaries only; it names no implementation technology except standard protocols at the process boundary (program plan §3.3).
 
 ## 1. Customer and tenancy
 

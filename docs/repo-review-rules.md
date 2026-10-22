@@ -27,7 +27,7 @@ the rules below are how a reviewer applies them to a diff.
 
 B1. **A frozen set is not edited in place.** `preregistration/frozen-sets.md` lists every frozen set
     and the paths it contains. A diff that modifies or deletes a file belonging to a frozen set —
-    today everything under `contract/user-stories/` — without the same pull request declaring a new
+    today everything under `trackS/` — without the same pull request declaring a new
     version of that set (the version line of its procedure file and a decision-register entry) →
     `[HARD BLOCK]`. A new version that leaves `frozen-sets.md` without a row for it, to be filled
     once tagged → `[CONTRACT]`.
@@ -48,7 +48,7 @@ B4. **The contract names no technology.** A framework, library, database, broker
     where reachability is in doubt, or one that only a single arm's component can meet →
     `[CONTRACT]`.
 
-B5. **Synchronised artefacts change together.** A change to `contract/user-stories/world-brief.md`
+B5. **Synchronised artefacts change together.** A change to `trackS/world-brief.md`
     without the matching change to `brief-slices.yaml` and `brief-seeding.md` → `[HARD BLOCK]`. A
     change to a user-visible item of `contract/anti-requirements.md` without the matching change to
     brief §8, or the reverse → `[CONTRACT]`. A parameter value in `system-requirements.yaml` that

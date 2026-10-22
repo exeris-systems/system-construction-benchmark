@@ -10,6 +10,8 @@ trap 'rm -rf "$tmp"' EXIT
 git -C "$tmp" init --quiet
 git -C "$tmp" fetch --quiet --depth 1 https://github.com/exeris-systems/exeris-agents "$ref"
 git -C "$tmp" checkout --quiet FETCH_HEAD
+# The bundle's tools read frontmatter with PyYAML; the review's runner has a bare interpreter.
+python3 -c "import yaml" 2>/dev/null || python3 -m pip install --quiet --disable-pip-version-check pyyaml
 status=0
 python3 -I "$tmp/tools/agents_file_check.py" --root . || status=1
 python3 -I "$tmp/tools/agents_render.py" --root . --check || status=1
