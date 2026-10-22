@@ -1,0 +1,29 @@
+{
+ "id": "26462650298048fda41b7d1db4d372f7",
+ "created": 1792694384,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1598,
+  "total_tokens": 1633,
+  "completion_tokens": 35,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only work with drones and their maintenance, not with job planning or counts of deliveries. The hospital logistics firm handles its own deliveries and jobs."
+   }
+  }
+ ]
+}

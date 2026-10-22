@@ -1,0 +1,29 @@
+{
+ "id": "c85afc906bc946849f0bb116ab01158e",
+ "created": 1792694468,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1455,
+  "total_tokens": 1518,
+  "completion_tokens": 63,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service needs to display the **network of flight corridors** between named sites, grouped into zones, and show any **closures** announced by the authorities—both planned and sudden. It should also reflect amendments to closures, like widened areas or changed end times, so all customers can see the current restrictions."
+   }
+  }
+ ]
+}

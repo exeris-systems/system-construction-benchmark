@@ -1,0 +1,29 @@
+{
+ "id": "36040f4597b84d35ba4c0285dbfbb85a",
+ "created": 1792694430,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1566,
+  "total_tokens": 1624,
+  "completion_tokens": 58,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, they don’t always. Batteries drain faster than planned in cold or windy conditions, so I have to keep an eye on them and make sure they’re charged before sending drones out. This means I sometimes have to adjust schedules or send drones to charge earlier than expected."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "c573e0fd802e4d9c8b2098edfc95581d",
+ "created": 1792694420,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1489,
+  "total_tokens": 1551,
+  "completion_tokens": 62,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the service should show anything—like corridors, zones, or closures—because I don’t work on software design or user interfaces. My job is to keep the shared airspace data accurate and up to date for all customers, but I don’t decide how it’s displayed."
+   }
+  }
+ ]
+}

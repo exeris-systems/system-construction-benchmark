@@ -1,0 +1,29 @@
+{
+ "id": "9b1343cd71924c778c501171df60632e",
+ "created": 1792694452,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2037,
+  "total_tokens": 2105,
+  "completion_tokens": 68,
+  "prompt_tokens_details": {
+   "cached_tokens": 1920
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The platform company’s system should notify me when a new airspace closure is announced, so I can see it in the service and adjust my flight plans. The updates come in automatically, but since the service can crash or restart during the day, I have to check for changes regularly to make sure I’m aware of any new restrictions."
+   }
+  }
+ ]
+}

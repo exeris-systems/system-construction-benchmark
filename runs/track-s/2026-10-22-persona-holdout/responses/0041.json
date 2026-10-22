@@ -1,0 +1,29 @@
+{
+ "id": "6cb1fe121dea47a9b62f4d24e099c0fe",
+ "created": 1792694454,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1062,
+  "total_tokens": 1156,
+  "completion_tokens": 94,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The airspace information I keep is governed by the **EU drone operation rules** (Implementing Regulation (EU) 2019/947), which define zones where flying is prohibited, and the **EU U-space rules** (Implementing Regulation (EU) 2021/664), which cover airspace information and flight authorisation. These rules shape how closures and zones are structured and shared among customers."
+   }
+  }
+ ]
+}

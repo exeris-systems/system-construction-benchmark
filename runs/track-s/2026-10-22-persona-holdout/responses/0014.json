@@ -1,0 +1,29 @@
+{
+ "id": "618401a156e1423499890a4ee092b5e4",
+ "created": 1792694400,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1825,
+  "total_tokens": 1864,
+  "completion_tokens": 39,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. That’s the job of the drone maintenance team, not dispatchers. I only see the drones when they’re ready for a flight or when there’s a problem."
+   }
+  }
+ ]
+}

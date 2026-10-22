@@ -1,0 +1,29 @@
+{
+ "id": "2218a8c965b54959ad1922fca0931b29",
+ "created": 1792694484,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1721,
+  "total_tokens": 1766,
+  "completion_tokens": 45,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company handles how records are kept and shared, but I just make sure drones are sent to technicians for repairs when they’re needed. I don’t deal with storing or managing those records."
+   }
+  }
+ ]
+}

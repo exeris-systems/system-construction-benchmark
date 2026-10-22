@@ -1,0 +1,29 @@
+{
+ "id": "9855a2503db9484585ecefdc9b4d309d",
+ "created": 1792694398,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1759,
+  "total_tokens": 1814,
+  "completion_tokens": 55,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I don’t watch every drone constantly—I’m responsible for hundreds at once. I rely on updates from drones and ground systems to stay aware, but since radio coverage is patchy and reports can be unreliable, I have to stay alert for delays or missing information."
+   }
+  }
+ ]
+}

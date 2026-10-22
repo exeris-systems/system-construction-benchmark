@@ -1,0 +1,29 @@
+{
+ "id": "d7b0b0b0f7b749fabbef7669757b16c6",
+ "created": 1792694478,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1559,
+  "total_tokens": 1599,
+  "completion_tokens": 40,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, they don’t always. Batteries drain faster than planned in cold or windy conditions, so I have to keep an eye on them and send drones to charge more often than expected."
+   }
+  }
+ ]
+}

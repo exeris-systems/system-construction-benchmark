@@ -1,0 +1,29 @@
+{
+ "id": "844ed30e5fe34bcead290d6298068971",
+ "created": 1792694498,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2019,
+  "total_tokens": 2081,
+  "completion_tokens": 62,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform’s airspace desk handles closures and airspace rules, but I don’t work with them directly. They likely update the system with the new restrictions, and I rely on those updates to adjust flight plans. If you need details, you’d have to ask them."
+   }
+  }
+ ]
+}

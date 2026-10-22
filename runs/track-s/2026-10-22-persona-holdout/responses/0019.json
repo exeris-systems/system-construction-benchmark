@@ -1,0 +1,29 @@
+{
+ "id": "145964b87a4547fabefb569f5481dfa5",
+ "created": 1792694410,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1261,
+  "total_tokens": 1305,
+  "completion_tokens": 44,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the customer companies don’t want management reports, exports, or dashboards beyond what’s needed for day-to-day operations. They only care about the shared airspace information and how closures affect their flights."
+   }
+  }
+ ]
+}
