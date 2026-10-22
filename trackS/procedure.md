@@ -14,8 +14,8 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 3 (draft)
-Decision register: D-45 to D-48. Versions 1 and 2 (the user-story procedure under
+Version: 3 (draft 2)
+Decision register: D-45 to D-49. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
 

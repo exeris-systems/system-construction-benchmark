@@ -59,6 +59,7 @@ last-verified: 2026-10-22
 | D-46 | What justifies a DOD gate, and what are the story runs so far? | Without stories as provenance, a gate needs another justification. | arkstack-dev | closed 2026-10-22 — see below |
 | D-47 | What do Track S roles receive? | The brief is split between instruments and subject. | arkstack-dev | closed 2026-10-22 — see below |
 | D-48 | Which instruments and subjects does Track S use? | An instrument must be fixed, calibrated and reproducible; a subject must not be judged by its own family. | arkstack-dev | closed 2026-10-22 — see below |
+| D-49 | How does a Track S draft change after a failed calibration? | The persona failed its first calibration, and the procedure is versioned but not yet tagged. | arkstack-dev | closed 2026-10-22 — see below |
 
 Closed decisions must state their evidence, date, author, and impact on the contract or preregistration. Rejected decisions are retained.
 
@@ -429,3 +430,12 @@ Considered and rejected: Gemini 3.5 Flash Lite as a subject (no longer offered i
 Every call records the response headers that report rate limits, and the body of every 429, so quotas are documented in the run record. Exhausted daily or monthly quota is an infrastructure error (§9.1). The persona calibration runs first; its headers show the remaining quota, from which the subject runs are scheduled. Free-tier terms on data use and use of output are recorded before the first subject.
 
 Impact: program plan §6.4, §8, §9.6; the Track S procedure and its script.
+
+### D-49 — A draft changes by a new draft version
+
+Until version 3 of the Track S procedure is tagged, each revision of its files is a new draft version — `Version: 3 (draft 2)`, `(draft 3)` and so on — declared in `trackS/procedure.md` with a decision here. Rule B1 and `frozen-sets-check` stay as they are: no draft is exempt, and every revision is visible in the version line.
+
+Draft 2 revises `persona-prompt.md` after the persona's first calibration (`runs/track-s/2026-10-22-persona-control`, 47 of 72 answers passing; `trackS/calibration-log.md`): the persona speaks for its own organisation only, says it does not know a number, name, type or frequency its notes do not give, and says nothing about how a system works or keeps information. If the revised persona still fails, the next draft changes the persona model, which amends D-48.
+
+Impact: `trackS/procedure.md`, `trackS/persona-prompt.md`, `trackS/calibration-log.md`.
+
