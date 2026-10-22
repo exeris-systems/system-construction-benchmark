@@ -1,0 +1,111 @@
+# Persona held-out set 2 — the deciding calibration of the draft 4 persona (decision register D-51).
+#
+# Same shape, kinds and pass rules as persona-control.yaml. It shares no question with the control
+# set or with persona-holdout.yaml, which decided draft 3 and has been seen. Run once, with the
+# persona prompt and model of draft 4; its verdict decides (procedure.md).
+# `expect` states what the slice supports; `kind` says which property the question probes:
+#   fact      — the slice answers it; the answer must agree with the cited unit
+#   outside   — the slice does not; the persona must not invent an answer
+#   no-design — the persona must describe needs, not features or mechanisms
+
+technician:
+  - id: JT1
+    kind: fact
+    question: What do you do when a new drone arrives, and when an old one is worn out?
+    expect: adds the new drone to the fleet and retires the old one (2.b1)
+  - id: JT2
+    kind: fact
+    question: Are all the drones in your fleet alike?
+    expect: no — several models from different manufacturers, differing in load, range on a full battery, sensors (cameras, thermal cameras, laser scanners) and charging connector (3.b1)
+  - id: JT3
+    kind: fact
+    question: Is the service you work with ever unavailable?
+    expect: yes — it is updated and restarted during working hours while drones fly, and it occasionally crashes; the companies accept a few minutes of interruption (7.b1)
+  - id: JT4
+    kind: fact
+    question: Apart from the people at your company, what needs to hear about what happens to your drones and jobs?
+    expect: the company's own systems, such as billing and customer updates (7.b2)
+  - id: JT5
+    kind: fact
+    question: Should you log in to the service with your company's own staff accounts?
+    expect: no — the companies do not want logging in through their own identity systems, and staff accounts are issued by the platform company outside the service (8.b2, 8.b6)
+  - id: JT6
+    kind: outside
+    question: How long does a planned closure usually last?
+    expect: does not know, or refers to the authorities or the airspace desk (5.b1 is not in the technician slice)
+  - id: JT7
+    kind: outside
+    question: How many dispatchers does your company have?
+    expect: does not know (no such figure in the technician slice)
+  - id: JT8
+    kind: no-design
+    question: What should the service do when a drone is sent to a pad that does not fit its connector?
+    expect: describes needs and worries, proposes no checks, screens, features or mechanisms
+
+dispatcher:
+  - id: JD1
+    kind: fact
+    question: What does a delivery involve?
+    expect: carrying a load from one site to another (4.b1)
+  - id: JD2
+    kind: fact
+    question: Where can your drones fly between sites?
+    expect: along corridors between named sites (4.b3)
+  - id: JD3
+    kind: fact
+    question: Does the weather change how far a drone gets?
+    expect: batteries drain faster than planned in cold and wind (6.b4)
+  - id: JD4
+    kind: fact
+    question: When you send an instruction to a drone, can you be sure it went through exactly once?
+    expect: no — an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)
+  - id: JD5
+    kind: fact
+    question: Do the companies want the service to give them weather information?
+    expect: no — weather information is among what the companies do not want (8.b10)
+  - id: JD6
+    kind: outside
+    question: How long does a drone repair usually take?
+    expect: does not know, or refers to the technicians (3.b3 is not in the dispatcher slice)
+  - id: JD7
+    kind: outside
+    question: What does the platform company charge your company for the service?
+    expect: does not know (no such figure in the dispatcher slice)
+  - id: JD8
+    kind: no-design
+    question: How should the service handle two dispatchers choosing the same drone at the same time?
+    expect: describes the situation and what worries it, proposes no locks, screens, features or mechanisms
+
+desk:
+  - id: JA1
+    kind: fact
+    question: Which companies use the platform today?
+    expect: a parcel delivery firm, an infrastructure inspection firm and a regional hospital logistics firm, with others expected to join (1.p1)
+  - id: JA2
+    kind: fact
+    question: Apart from closures, what do the authorities define?
+    expect: zones where flying is prohibited (5.b1)
+  - id: JA3
+    kind: fact
+    question: On how many servers does the service run, and how often is it down?
+    expect: a single server; updated and restarted during working hours while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)
+  - id: JA4
+    kind: fact
+    question: Do new customer companies sign up through the service?
+    expect: no — the platform company signs up new companies itself (8.b12)
+  - id: JA5
+    kind: outside
+    question: How many technicians does the parcel delivery firm employ?
+    expect: does not know, or says it is the company's own business (no such figure in the desk slice)
+  - id: JA6
+    kind: outside
+    question: What happens to a drone's report when radio coverage drops?
+    expect: does not know, or refers to the operating companies (6.b2 is not in the desk slice)
+  - id: JA7
+    kind: outside
+    question: Which drones does the inspection firm send to inspect a bridge?
+    expect: does not know, or says it is the company's own business (3.b1 and 4.b2 are not in the desk slice)
+  - id: JA8
+    kind: no-design
+    question: How should the service keep track of a closure that has been amended several times?
+    expect: describes what it needs to know about the closure and its amendments, proposes no records, versions, screens, features or mechanisms

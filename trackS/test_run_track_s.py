@@ -164,15 +164,18 @@ class InputTest(unittest.TestCase):
                     self.assertEqual(set(q), {"id", "kind", "question", "expect"}, name)
                     self.assertIn(q["kind"], {"fact", "outside", "no-design"}, name)
 
-    def test_held_out_set_shares_no_question_with_the_control_set(self):
+    def test_question_sets_share_no_question(self):
         def questions(name):
             sets = ts.parse_control((HERE / name).read_text(), name)
             return [q for qs in sets.values() for q in qs]
-        control, holdout = questions(ts.CONTROL_FILE), questions(ts.HOLDOUT_FILE)
-        self.assertFalse({q["id"] for q in control} & {q["id"] for q in holdout})
-        self.assertFalse({q["question"] for q in control} & {q["question"] for q in holdout})
+        names = sorted(ts.QUESTION_SETS.values())
         kinds = lambda qs: sorted(q["kind"] for q in qs)
-        self.assertEqual(kinds(control), kinds(holdout))
+        for i, a in enumerate(names):
+            for b in names[i + 1:]:
+                qa, qb = questions(a), questions(b)
+                self.assertFalse({q["id"] for q in qa} & {q["id"] for q in qb}, (a, b))
+                self.assertFalse({q["question"] for q in qa} & {q["question"] for q in qb}, (a, b))
+                self.assertEqual(kinds(qa), kinds(qb), (a, b))
 
     def test_out_outside_runs_track_s_is_refused(self):
         env = {**os.environ, "MISTRAL_API_KEY": "test-key"}

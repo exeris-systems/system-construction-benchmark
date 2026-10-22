@@ -5,6 +5,7 @@ Modes:
   persona-control   ask each persona its fixed control questions (persona-control.yaml), in one
                     conversation per role, several times, and record every exchange
   persona-holdout   the same, with the held-out questions (persona-holdout.yaml)
+  persona-holdout-2 the same, with the second held-out set (persona-holdout-2.yaml)
 
 Each role names a provider and a model. Every request and response is written to the output
 directory verbatim, with every response header that reports a rate limit and the body of every 429,
@@ -32,7 +33,8 @@ RUNS = HERE.parent / "runs" / "track-s"
 CONTROL_FILE = "persona-control.yaml"
 HOLDOUT_FILE = "persona-holdout.yaml"
 # Each persona mode asks the questions of one set file and writes its answers under the mode's name.
-QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FILE}
+QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FILE,
+                 "persona-holdout-2": "persona-holdout-2.yaml"}
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
 
