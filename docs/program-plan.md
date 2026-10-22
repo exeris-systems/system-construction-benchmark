@@ -25,7 +25,7 @@ Rules that follow:
 
 1. **Fail closed.** A gate the instrument cannot judge reliably yields `UNKNOWN`, and `UNKNOWN` counts as `FAIL`.
 2. **Calibrate before measuring.** An oracle that has never returned `FAIL` on a known-broken build is unvalidated, and its `PASS` is not a result.
-3. **The contract author is a competitor.** Every contract item needs an explicit provenance and passes a neutrality audit.
+3. **The contract author is a competitor.** Every contract item carries an explicit rationale, written as the author's, and passes a neutrality audit.
 4. **An excluded arm is a decision, not an omission.** Every arm considered and rejected is listed in §5A.6 with its reason. Silently leaving out a competitor is treated as an unreported result.
 
 Rule 4 exists because the arms that threaten the thesis most are also the easiest to dismiss in one sentence.
@@ -42,7 +42,7 @@ What does it cost to bring a system to a fixed, machine-verifiable level of corr
 
 ```text
 NOT requirements discovery, scope negotiation, or domain design in the construction track
-    (contract derivation is measured separately, platform-independently — Track S, §6.4).
+    (requirements elicitation and contract derivation are measured separately, per model — Track S, §6.4).
 NOT code quality beyond what the oracle checks.
 NOT platform performance (the code is written by the agent — §7.6).
 NOT production readiness.
@@ -83,7 +83,7 @@ Everything the oracle does not check is optimised downwards by the agent. When e
 | **Runtime cost** | CPU, RSS, IO, startup, latency | **descriptive_only** |
 | **Operational complexity** | processes, containers, brokers, coordinators | gated (structurally) |
 | **Agent reliability** | false-DONE rate, first-pass gap, self-correction | gated |
-| **Specification** | contract derivation from narrative user stories | model only, no arms (§6.4) |
+| **Specification** | requirements elicitation and contract derivation | per model, no arms (§6.4) |
 
 A single construction run has one of four outcomes:
 
@@ -131,7 +131,7 @@ Names of entities, fields, actions, endpoints, and events are contract content. 
   requirement: >
     A workflow started before the process stops resumes after restart from the
     last durable point and finishes with the same final result.
-  provenance: "US-17 — a dispatcher dispatches a mission; the process restarts mid-flight"
+  rationale: "a dispatched mission must survive a restart of the single-node service (domain profile §3)"
   motivating_arm: none          # none | exeris | spring | jhipster | ...
   observable_via: [http, db, process_signal]
   gate: true
@@ -140,7 +140,7 @@ Names of entities, fields, actions, endpoints, and events are contract content. 
   reachable_without: [graph_engine, event_store, external_orchestrator]
 ```
 
-**Gating rule:** an item without `provenance` and without an assigned mutation test is not a gate.
+**Gating rule:** an item without `rationale` and without an assigned mutation test is not a gate. A rationale is written by the contract author and every report says so; it cites `regulatory_basis` or a decision of the register where one exists (D-46).
 
 **Neutrality rule:** an item with `motivating_arm != none` needs a domain justification or it is dropped.
 
@@ -278,7 +278,7 @@ Report sentence: *"The contract exercises 9 of 17 kernel SPI surfaces. Results d
     For a mission origin and a hop limit N, the system returns the tenant's eligible
     drones reachable over at most N open corridors within their remaining range,
     with the hop count and total length of the shortest such path.
-  provenance: "US-xx — a dispatcher looks for drones able to reach a mission origin"
+  rationale: "the dispatcher chooses the drone and needs the candidates that can reach the origin (D-33)"
   motivating_arm: none
   reachable_without: [graph_engine]
   gate: true
@@ -421,7 +421,7 @@ M-19  restriction fan-out exposes another tenant's incidents or events
 
 M-16 guards against an aggregate check that is vacuously true on no data — e.g. "all sagas terminal" over an empty table. The guard is part of the oracle, not a comment.
 
-The result (`oracle-selftest.json`) is an artifact of every run and a published metric. Phase 1 calibrates a smaller pilot set (`M-P1-*`, see [Phase 1 plan](phase-1-plan.md)); the full set grows as its gates enter the frozen contract.
+The result (`oracle-selftest.json`) is an artifact of every run and a published metric. The set grows as its gates enter the contract ([Phase 1 plan](phase-1-plan.md)).
 
 ---
 
@@ -610,13 +610,15 @@ L3b — how many turns/tokens a concrete operation saves
 
 ### 6.4 Track S — specification
 
-Contract derivation is measured as a separate track, never inside construction: mixing the two makes a `FAIL` ambiguous between a misread requirement and a broken build.
+Track S measures whether and how well a model gathers requirements before it builds, and how well it derives a contract from what it gathered — a measured capability and input for routing the specification stage, never a source of the reference contract (decision register D-45, D-46). It is a separate track, never inside construction: mixing the two makes a `FAIL` ambiguous between a misread requirement and a broken build.
 
-- **Input:** the world brief and the mapped user stories (the `provenance` texts), without the DOD (decision register D-37). Stories carry `provenance_origin: independent | brief_seeded | author` (D-36), and Track S reports results on the three sets separately. The model that wrote the stories does not take part in Track S.
-- **Scope:** a Track S contract is not penalised for adding technical anti-requirements, which the brief never states.
-- **Output:** a contract written by the agent.
-- **Scoring:** item-level comparison with the reference contract — reference DOD items covered, missed, and items added beyond the anti-requirements.
-- The contract contains no technology names, so Track S is platform-independent: it runs per model, without arms.
+- **Instruments:** personas (fleet technician, dispatcher, airspace desk), each knowing only its slice of the world brief, and a judge. Both are fixed across subjects and calibrated before the first one (D-48).
+- **Subject:** the model under test, as interviewer and analyst; the analyst stage sees only its own transcripts.
+- **Variants:** S-naive — a client request and a channel to the personas, with nothing telling the subject to use it; S-instructed — told to interview, then write requirements.
+- **Output:** a contract derived by the subject.
+- **Scoring:** the judge compares it with the reference requirements — recall, precision, and additions excluded by user-visible anti-requirements; S-naive also records whether elicitation started before the first artefact. Technical anti-requirements, which the brief never states, are not counted against a subject (D-47).
+- **Ceiling:** some reference requirements cannot be derived from the brief. The ceiling is the same for every subject, estimated once and reported separately, never used to rescale scores.
+- **Series:** a script series, in which every subject runs through the same harness, so subjects may be compared across vendors; and a native-harness series (S-naive only), each harness reported on its own (D-48).
 
 A chained track (S → construction on the agent's own contract → reference oracle) is permitted as a descriptive end-to-end result only. It never replaces the construction track and is not used for arm comparisons.
 
@@ -860,7 +862,7 @@ network access: y/n + allowlist        system time and time zone
 JDK / OS / hardware                    oracle version + self-test result
 external arm module versions           surface maturity levels (§3.10)
 simulator and event-sink version + hash  database version + profile
-Track S: world-brief + brief-seeding hashes
+Track S: hashes of the world brief, brief slices, seeding declaration and every prompt (D-47)
 ```
 
 ### 9.4 Invalidation
@@ -902,9 +904,10 @@ The matrix is fixed here and in the preregistration, before any scored run; it i
 | Phase 6 | Haiku × Exeris × L3 × 3 | 3 | H3 |
 | Off-vendor series | Gemini Flash (Antigravity) × 3 full arms × L1 × 3 | 9 | separate table; no comparison with Claude runs |
 | Phase 7 | Changes 3, 4, 5 × 3 full arms × 3, Phase 4 model | 27 change sessions | H2, H4 |
-| Track S | 3 models through the API, no agent loop | a few calls | Track S |
+| Track S, script series | 4 subjects × 2 variants × 3 | 24 | Track S (D-48) |
+| Track S, native series | 3 subjects in 2 harnesses × S-naive × 3 | 9 | Track S (D-48) |
 
-Total: 45 construction runs on Claude Code, 9 in the off-vendor series, and 27 change sessions. Track S runs through the API, which pins the model version; the API budget is also the reserve for retries after infrastructure errors.
+Total: 45 construction runs on Claude Code, 9 in the off-vendor series, and 27 change sessions. Track S runs through vendor APIs with fixed instruments; exhausted daily or monthly quota is an infrastructure error, as in §9.1.
 
 Configurations not run in Campaign 1, each with its reason:
 
@@ -916,6 +919,11 @@ Configurations not run in Campaign 1, each with its reason:
 | Changes 1 and 2 | budget; no hypothesis depends on them (H2 uses Changes 3–5, H4 uses Change 5) |
 | Axon embedded | optional continuity arm; first to go under budget (§5A.4) |
 | Temporal | §5A.6 |
+| Gemini 3.8 Flash as a Track S script-series subject | 20 requests a day on the free tier against about 75 per subject run; it is the script-series judge and a native-series subject instead (D-48) |
+| Gemini 3.5 Flash Lite as a Track S subject | no longer offered in the vendor's own agent harness, Antigravity, though still served by the Gemini API; a subject its vendor has begun withdrawing may disappear before the matrix is done or replicated (D-48) |
+| S-instructed in the Track S native series | an instructed interview in an agent harness measures the harness's tool handling more than elicitation; the script series measures it (D-48) |
+
+Track S instrument, judge and host options considered and rejected are listed in D-48.
 
 The harness asserts, on every turn, that the model reported by the vendor matches `env.lock`; a mismatch is an infrastructure error.
 
@@ -985,6 +993,7 @@ Outcomes are recorded **per gate**, not only per run. Each turn in `trajectory.j
 H1  At an equal DOD level, construction cost in Exeris is lower than in the BEST
     of the other full arms.
     Falsified if: median cost_usd(Exeris) > 0.7 × min(cost_usd of the full arms).
+    Reported on two scopes, both preregistered: backend gates only, and the whole contract (D-44).
 
 H2  The cost of a semantic change grows more slowly in Exeris than in the generating arm.
     Falsified if: Semantic Change Cost(JHipster) ≤ Exeris on Change 3, 4, or 5.
@@ -1070,7 +1079,7 @@ The drone simulator, charging service, and event sink are instrument, not infras
 | **3** | Preregistration of hypotheses + `arms.yaml` + rejected-arms table, published with a hash | published before the first scored run |
 | **4** | Baseline: Sonnet × **3 full arms** × L1 × 3 runs = **9 runs** | first numbers |
 | **4b** | Durable/ops subset: Restate (engine design), DBOS (deployment shape), optionally Axon embedded (continuity) | the process and footprint table has ≥1 single-process arm besides Exeris |
-| **4s** | Track S: models × user stories, no arms | item-level scoring against the reference contract |
+| **4s** | Track S: instrument calibration, then subjects × variants (D-48) | derived contracts scored against the reference requirements |
 | **5** | Knowledge ablation on Exeris (L2, L3) + L0 on every full arm, descriptive — §9.6 | |
 | **6** | Model matrix at L1 + fast model at L3 on Exeris (H3) — §9.6 | |
 | **7** | Change benchmark: Changes 3, 4, 5, cold context — §9.6 | |
@@ -1112,7 +1121,7 @@ surface maturity:               see arms.yaml (§3.10)
   definition, not a strength — read only together with the cost row (§7.3)
 ```
 
-Track S results are reported separately, per model, with no arm columns.
+Track S results are reported separately, per subject, with no arm columns; the script series may compare subjects across vendors, the native series may not.
 
 Every report includes: the limits section (§1.2, §1.3), instrument calibration state (§13), the coverage declaration (§3.9), the rejected-arms table (§5A.6), and the list of fences (§9.5).
 

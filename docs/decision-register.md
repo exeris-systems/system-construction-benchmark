@@ -21,7 +21,7 @@ last-verified: 2026-10-22
 | D-08 | Which model runs Phase 4b? | Determines cost comparability for durable/ops gates. | arkstack-dev | closed 2026-10-22 — see below |
 | D-09 | Which contract artifacts does an agent see during a construction run? | Fixes the agent input across arms and knowledge levels; anything visible becomes part of the prompt under the equivalence audit. | arkstack-dev | closed 2026-10-22 — see below |
 | D-10 | When does the agent see oracle output? | `false_DONE_rate` is undefined if the agent can run the oracle before declaring done. | arkstack-dev | closed 2026-10-22 — see below |
-| D-11 | Is contract derivation measured, and where? | Mixing derivation with construction makes a FAIL ambiguous between a misread requirement and a broken build. | arkstack-dev | closed 2026-10-22 — see below |
+| D-11 | Is contract derivation measured, and where? | Mixing derivation with construction makes a FAIL ambiguous between a misread requirement and a broken build. | arkstack-dev | superseded by D-45 |
 | D-12 | What granularity do trajectories record? | Per-stage routing data cannot be recovered from run-level outcomes after the fact; the harness schema is set in Phase 2. | arkstack-dev | closed 2026-10-22 — see below |
 | D-13 | May campaign results feed back into Exeris docs, tooling, or routing? | Tuning the measured inputs on the measurement contaminates later L1–L3 results. | arkstack-dev | closed 2026-10-22 — see below |
 | D-14 | Are domain names part of the contract? | Naming entities, fields, and actions is a large share of construction effort and is unrelated to the platform. | arkstack-dev | closed 2026-10-22 — see below |
@@ -46,14 +46,19 @@ last-verified: 2026-10-22
 | D-33 | Who chooses a mission's route and drone? | If the system plans routes or assigns drones, the oracle must judge solution quality. | arkstack-dev | closed 2026-10-22 — see below |
 | D-34 | What is a slot? | SR-SAGA-01/02 rest on slots that were not defined. | arkstack-dev | closed 2026-10-22 — see below |
 | D-35 | When is an in-flight mission affected by a restriction? | Progress along a route is not observable when position is only a corridor. | arkstack-dev | closed 2026-10-22 — see below |
-| D-36 | How are user stories written? | Stories written after the requirements easily paraphrase them, and Track S then measures copying. | arkstack-dev | closed 2026-10-22 — see below |
-| D-37 | What does a Track S run receive? | Without the brief, Track S is penalised for scope it never saw. | arkstack-dev | closed 2026-10-22 — see below |
+| D-36 | How are user stories written? | Stories written after the requirements easily paraphrase them, and Track S then measures copying. | arkstack-dev | superseded by D-46 |
+| D-37 | What does a Track S run receive? | Without the brief, Track S is penalised for scope it never saw. | arkstack-dev | superseded by D-47 |
 | D-38 | What run matrix does Campaign 1 have, and through which channel? | Subscription throughput, not money, limits the program; trimming the matrix during the campaign would look like selecting results. | arkstack-dev | closed 2026-10-22 — see below |
 | D-39 | Which models run scored sessions, and on which harness? | The harness dominates token counts; mixing harnesses in one comparison confounds harness with model. | arkstack-dev | closed 2026-10-22 — see below |
 | D-40 | How is the instrument's cost measured? | Self-reported active seconds cannot be checked and claim false precision. | arkstack-dev | closed 2026-10-22 — see below |
 | D-41 | What happens when a human intervenes in a scored run? | Human guidance is neither identical across arms nor reproducible, and the contract author knows one arm best. | arkstack-dev | closed 2026-10-22 — see below |
 | D-42 | How is a frozen set shown to predate its use? | A tag can be moved and a commit date is set by the author; neither proves time. | arkstack-dev | closed 2026-10-22 — see below |
-| D-43 | How are interviews produced? | A self-played interview has no information asymmetry; relaying four chat sessions by hand puts a human in the loop. | arkstack-dev | closed 2026-10-22 — see below |
+| D-43 | How are interviews produced? | A self-played interview has no information asymmetry; relaying four chat sessions by hand puts a human in the loop. | arkstack-dev | superseded by D-45 |
+| D-44 | Do UI gates enter Campaign 1? | Generated UI on some arms and hand-written UI on others can make H1 a statement about frontend generation alone. | arkstack-dev | closed 2026-10-22 — see below |
+| D-45 | What does Track S measure? | User stories cannot both ground the reference contract and be the output a model is scored on. | arkstack-dev | closed 2026-10-22 — see below |
+| D-46 | What justifies a DOD gate, and what are the story runs so far? | Without stories as provenance, a gate needs another justification. | arkstack-dev | closed 2026-10-22 — see below |
+| D-47 | What do Track S roles receive? | The brief is split between instruments and subject. | arkstack-dev | closed 2026-10-22 — see below |
+| D-48 | Which instruments and subjects does Track S use? | An instrument must be fixed, calibrated and reproducible; a subject must not be judged by its own family. | arkstack-dev | closed 2026-10-22 — see below |
 
 Closed decisions must state their evidence, date, author, and impact on the contract or preregistration. Rejected decisions are retained.
 
@@ -79,7 +84,7 @@ Impact: Campaign 1 DOD; coverage declaration.
 
 ### D-05 — Frontend flakiness is decided by a trial
 
-Not a decision but a Phase 1 procedure: N runs of the UI gates on both reference implementations (D-15), against the 5% variance threshold. The result decides. The frontend scope itself waits for the H1 scope decision.
+Not a decision but a Phase 1 procedure: N runs of the UI gates on both reference implementations (D-15), against the 5% variance threshold. The result decides. The frontend scope is decided by D-44.
 
 Impact: Phase 1 plan.
 
@@ -128,6 +133,8 @@ The oracle is hidden until the agent's first "done" declaration. From then on th
 Impact: Phase 2 harness loop; §7.2 metrics are defined against this protocol.
 
 ### D-11 — Specification track (Track S)
+
+**Superseded by D-45.**
 
 Contract derivation is measured as a separate track, not inside construction:
 
@@ -286,6 +293,8 @@ Impact: SR-ROUTE-03b, SR-TEN-03.
 
 ### D-36 — Independently written user stories
 
+**Superseded by D-46.**
+
 User stories come from a world independent of the requirements:
 
 1. **World brief**, written and published by the contract author: who the operators and dispatchers are, which drones they fly, which missions they run, the conditions they work in, which regulations apply. It describes the world only — no system behaviour, no thresholds, no states, no mechanisms, and no account of past failures: failures written by the author would map one-to-one onto requirements, so bad days are invented in the interviews. It is the single point where the author shapes the content, so it is short and public.
@@ -302,6 +311,8 @@ Stories, written either way, use the language of operators and dispatchers — w
 Impact: `provenance` of every requirement; Track S input (program plan §6.4).
 
 ### D-37 — Track S input: brief and mapped stories
+
+**Superseded by D-47.**
 
 A Track S run receives `world-brief.md` and the stories whose mapping scope is `in_contract` — at least one `direct` or `partial` mapping — so the boundary is set by the mapping data, not by the author's judgement. Stories marked `excluded`, `contradicts`, or `unaddressed` are withheld, because they would penalise scope the contract does not have; their counts are reported. Anti-requirements are split into user-visible ones, which appear in brief §8 and are kept in sync with it, and technical ones, which never appear in the brief and which a Track S contract is not penalised for adding. The hashes of `world-brief.md` and `brief-seeding.md` are part of a Track S run's `env.lock`: the `brief_seeded` category depends on the seeding declaration, so a change to it changes Track S results.
 
@@ -341,8 +352,80 @@ Impact: program plan §12.2.
 
 ### D-43 — Procedure v2: interviews between separate sessions, by script
 
+**Superseded by D-45.**
+
 Procedure v1 (`us-procedure-v1`) had one model play both interviewer and interviewees. The model asking the questions knew the answers, so the interview had no information asymmetry: the analyst asked about what it already meant to write. Version 2 separates the roles into sessions that see different inputs — personas their brief slice, the interviewer only the business section, the analyst only the transcripts — and runs them by script (`contract/user-stories/run-procedure.py`), because relaying four chat sessions by hand would make a person the channel for every exchange. A script needs an API, so the story roles move to the Gemini API free tier — interviews on Gemini 3.5 Flash Lite and the single analyst call on Gemini 3.8 Flash, a split forced by the free tier's daily request limits and recorded in the procedure — and the first neutrality auditor moves to GPT-6; an auditor is still never from the story producer's vendor.
 
 Two self-play runs before the procedure freeze, in `runs/pilot/`; not used as input; motivated the switch to a two-agent design because a self-played interview has no information asymmetry.
 
 Impact: `contract/user-stories/procedure.md`; mapping prompt; role assignment; Track S excludes both Gemini model ids.
+
+### D-44 — UI gates in Campaign 1, H1 on two scopes
+
+UI gates enter the Campaign 1 contract. H1 is reported on two scopes, both preregistered: backend gates only, and the whole contract. Subset arms carry no UI gates. The flakiness trial of D-05 still decides whether a UI gate stays gated.
+
+Impact: program plan §12.1 (H1); Phase 1 DOD.
+
+### D-45 — Track S measures elicitation and derivation per model
+
+Track S measures whether and how well a model gathers requirements before it builds, and how well it derives a contract from what it gathered — input for routing the specification stage, never a source of the reference contract.
+
+| Role | Kind | Sees | Fixed across subjects |
+| --- | --- | --- | --- |
+| Persona (fleet technician, dispatcher, airspace desk; one session each) | instrument | `persona-prompt.md` + its slice of `world-brief.md` | yes |
+| Interviewer and analyst | subject | the task prompt, brief §1, role names; the analyst stage sees only its own transcripts | no — the model under test |
+| Judge | instrument | the derived contract + `system-requirements.yaml` | yes |
+
+Variants: **S-naive** — the subject receives a client request and a channel to the personas, and nothing tells it to interview; measured is whether it opens the channel before producing requirements or code, and after how many turns. **S-instructed** — the subject is told to interview the three roles and then write requirements; measured is the quality of elicitation.
+
+Metrics: `elicitation_initiated` and `turns_before_first_artifact` (S-naive), `questions_per_interview`, `follow_up_ratio`, `derived_recall`, `derived_precision`, `out_of_scope_additions`.
+
+Ceiling: the reference requirements were not derived from the brief, so some cannot be derived from it. The ceiling is the same for every subject, so comparisons between subjects are valid as they stand; it is estimated once — reference requirements a careful reader cannot trace to any brief sentence — and reported separately, never used to rescale scores.
+
+Every subject in the script series runs through the same harness and instruments; only the model differs, so Track S may compare models across vendors in one table, unlike the construction track. The chained descriptive track (Track S contract → construction → reference oracle) is unchanged.
+
+Impact: program plan §1.2, §2, §6.4, §15.
+
+### D-46 — Stories are Track S output; gates carry an authored rationale
+
+User stories no longer justify gates. A DOD item's justification is an authored `rationale` (program plan §3.2), citing `regulatory_basis` or a decision of this register where one exists; every report states that rationales were written by the contract author. Neutrality rests on the reachability rule, `motivating_arm`, and the neutrality audit (D-03).
+
+The two self-play runs in `runs/pilot/` (procedure v1) and the run in `runs/user-stories/2026-10-23/` (procedure v2) are pilots of Track S. They stay where they are — run records are append-only — and are not reference material.
+
+Impact: program plan §0 rule 3, §3.2; `contract/user-stories/` moves to `trackS/` as a new version of the procedure.
+
+### D-47 — Track S inputs
+
+Personas receive their slices of `world-brief.md` (`brief-slices.yaml`); the subject receives brief §1 and the role names. Brief §8 reaches the subject only through what personas say. User-visible anti-requirements appear in brief §8, technical ones never do, and a derived contract is not counted out of scope for adding a technical one. `brief-seeding.md` stays, to read derived items that trace to seeded sentences. The hashes of the brief, the slices, the seeding declaration and every prompt are in each Track S `env.lock`.
+
+Impact: program plan §6.4, §9.3.
+
+### D-48 — Track S instruments, subjects, and series
+
+Two series, never compared with each other. **Script series**: one harness, the procedure script, so subjects may be compared across vendors. **Native-harness series**, S-naive only: the subject is an agent in its own harness, given the client request and one tool, `ask_user(role, question)`, which relays the question to the persona instrument and returns its answer, recorded in the script's format; each harness is reported on its own (as D-39).
+
+| Instrument | Model | Host | Why |
+| --- | --- | --- | --- |
+| Persona | `ministral-8b-2512` | Mistral API, free tier | small and consistent suffices; 625K tokens per minute and 3 requests per second cover every subject; open weights (`mistralai/Ministral-3-8B-Instruct-2512`, Apache 2.0) let the persona be reproduced at another host, marked as a fence |
+| Judge, script series | Gemini 3.8 Flash, exact identifier | Gemini API, free tier | outside the family of every script-series subject; one request per run, so 20 requests a day suffice |
+| Judge, native series | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | Mistral API, free tier | outside the family of every native-series subject; 250K tokens per minute holds one large request per run; the dated identifier is pinned, unlike `mistral-large-4` |
+
+Calibration before the first subject: **persona control** — a fixed, scripted set of questions per role, run several times; answers must not contradict the slice and must be consistent across repetitions. **Judge mutants** — derived contracts of known recall and precision (the reference requirements with items removed, with invented items added, with items reworded); the judge must report exactly the removed and the invented items, and an empty contract judged as covering anything fails it (as M-16).
+
+| Series | Subject | Channel |
+| --- | --- | --- |
+| Script | Claude Haiku, Sonnet, Opus | Anthropic API |
+| Script | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | Mistral API, free tier — shares a vendor with the persona, disclosed in every report |
+| Native | Claude Code, Phase 4 model (Sonnet) | Claude Code + `ask_user` |
+| Native | Antigravity, Gemini 3.8 Flash | Antigravity + `ask_user` |
+| Native | Antigravity, Gemini 4 Argon | Antigravity + `ask_user` — access on this account is limited; an exhausted quota is an infrastructure error (§9.1), as for every subject |
+
+Each series has its own judge, outside the family of every subject in it; the series are never compared, so their judges need not be the same.
+
+Matrix: script series 4 subjects × 2 variants × 3 runs = 24; native series 3 subjects in 2 harnesses × S-naive × 3 runs = 9.
+
+Considered and rejected: Gemini 3.5 Flash Lite as a subject (no longer offered in the vendor's own agent harness, Antigravity, as of 2026-10-22, though still served by the Gemini API; a subject its vendor has begun withdrawing may disappear before the matrix is done or replicated); Gemini 3.8 Flash as a script-series subject (20 requests a day against about 75 per subject run — it is the script-series judge and a native-series subject instead); one judge for both series (no model is outside the families of the subjects of both); `mistral-large-4` as a judge (20K tokens per minute, and no version in its name); Groq in any role (8K tokens per minute is less than one analyst or judge request); OpenRouter free models (50 requests a day); Hugging Face serverless (cold starts and queueing add noise to an instrument); the native series for S-instructed (it would measure the harness's tool handling more than elicitation).
+
+Every call records the response headers that report rate limits, and the body of every 429, so quotas are documented in the run record. Exhausted daily or monthly quota is an infrastructure error (§9.1). The persona calibration runs first; its headers show the remaining quota, from which the subject runs are scheduled. Free-tier terms on data use and use of output are recorded before the first subject.
+
+Impact: program plan §6.4, §8, §9.6; the Track S procedure and its script.
