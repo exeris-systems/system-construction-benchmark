@@ -103,6 +103,14 @@ class ClientTest(unittest.TestCase):
             self.client.call("s", "system", [("user", "q")])
         self.assertEqual(len(self.calls()), 1)
 
+    def test_body_that_is_not_json_is_retried(self):
+        class NotJson(Reply):
+            def read(self):
+                return b"<html>gateway</html>"
+        self.replies = [NotJson(None, headers()), Reply(answer("hello", "stop"), headers())]
+        self.assertEqual(self.client.call("s", "system", [("user", "q")]), "hello")
+        self.assertIn("invalid JSON", self.calls()[0]["error"])
+
     def test_model_check_rejects_another_model(self):
         self.replies = [Reply({"id": "some-other-model"}, headers())]
         with self.assertRaises(ts.RunFailed):
@@ -135,6 +143,16 @@ class InputTest(unittest.TestCase):
                 capture_output=True, text=True, env=env)
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("--out must be a new directory under", result.stderr)
+
+    def test_missing_key_leaves_no_run_directory(self):
+        env = {k: v for k, v in os.environ.items() if k != "MISTRAL_API_KEY"}
+        out = HERE.parent / "runs" / "track-s" / "test-missing-key-should-not-exist"
+        result = subprocess.run(
+            [sys.executable, "-I", str(SCRIPT), "persona-control", "--persona-model", "m", "--out", str(out)],
+            capture_output=True, text=True, env=env)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("MISTRAL_API_KEY", result.stderr)
+        self.assertFalse(out.exists())
 
     def test_non_positive_rate_is_refused(self):
         os.environ["MISTRAL_API_KEY"] = "test-key"

@@ -221,6 +221,11 @@ class Client:
             try:
                 with urllib.request.urlopen(request, timeout=600) as response:
                     return dict(response.headers), json.load(response)
+            except json.JSONDecodeError as e:
+                # A success status with a body that is not JSON is the provider's fault, not the model's.
+                self.recorder.log(number, self, session, retry=attempt, error=f"invalid JSON: {e}")
+                if attempt == MAX_ATTEMPTS:
+                    raise RunFailed(f"{session}: response body is not JSON")
             except urllib.error.HTTPError as e:
                 detail = e.read().decode(errors="replace")
                 self.recorder.log(number, self, session, headers=dict(e.headers), http=e.code,
@@ -286,8 +291,6 @@ class Recorder:
 
 def persona_control(args, files, notes, out, run):
     control = parse_control(files[CONTROL_FILE])
-    if set(control) != set(ROLES):
-        sys.exit(f"{CONTROL_FILE} roles {sorted(control)} do not match {sorted(ROLES)}")
     recorder = Recorder(out)
     persona = Client("persona", args.persona_provider, args.persona_model, args.persona_rpm,
                      args.persona_max_tokens, recorder)
@@ -331,6 +334,8 @@ def main():
     notes = {role: render(units, [u for u in units if role in slices[u]]) for role in ROLES}
     hashes = {name: sha256(text) for name, text in files.items()}
     control = parse_control(files[CONTROL_FILE])
+    if set(control) != set(ROLES):
+        sys.exit(f"{CONTROL_FILE} roles {sorted(control)} do not match {sorted(ROLES)}")
 
     if args.dry_run:
         print(json.dumps({"inputSha256": hashes,
@@ -343,6 +348,11 @@ def main():
     out = args.out.resolve()
     if not out.is_relative_to(RUNS.resolve()):
         sys.exit(f"--out must be a new directory under {RUNS}")
+    # Everything that can stop the run before its first call is checked before its directory exists,
+    # so a kept run directory always holds a run that started.
+    key = PROVIDERS.get(args.persona_provider, {}).get("key")
+    if not key or not os.environ.get(key):
+        sys.exit(f"persona: provider {args.persona_provider!r} needs {key or 'a known provider'} set")
     out.mkdir(parents=True, exist_ok=False)
     args.out = out
     run = {"track": "S", "mode": args.mode, "status": "running", "started": now(),
