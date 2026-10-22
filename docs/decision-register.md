@@ -43,6 +43,7 @@
 | D-39 | Which models run scored sessions, and on which harness? | The harness dominates token counts; mixing harnesses in one comparison confounds harness with model. | arkstack-dev | closed 2026-10-22 — see below |
 | D-40 | How is the instrument's cost measured? | Self-reported active seconds cannot be checked and claim false precision. | arkstack-dev | closed 2026-10-22 — see below |
 | D-41 | What happens when a human intervenes in a scored run? | Human guidance is neither identical across arms nor reproducible, and the contract author knows one arm best. | arkstack-dev | closed 2026-10-22 — see below |
+| D-42 | How is a frozen set shown to predate its use? | A tag can be moved and a commit date is set by the author; neither proves time. | arkstack-dev | closed 2026-10-22 — see below |
 
 Closed decisions must state their evidence, date, author, and impact on the contract or preregistration. Rejected decisions are retained.
 
@@ -321,3 +322,9 @@ Impact: `harness/instrument-cost.json`; program plan §12.3.
 In a scored run the only feedback to the agent is the oracle report after a "done" declaration (D-10): identical for every arm and reproducible. Any human message to the agent makes the run a `FAIL` annotated `intervened`; it stays in every metric, including `false_DONE_rate`, and is never retried. Hallucination, a wrong path, or getting stuck is an agent failure — the phenomenon publication #1 measures — so excluding such runs would remove the subject from the data. Only harness-side infrastructure errors are retried: a failed container, a subscription limit, a broken network — the environment, never the conversation. How much help an agent needs is measured by the oracle cycles (`done_declarations_to_true_done`); a series with formalised human hints would be a separate preregistered series and is not part of Campaign 1.
 
 Impact: program plan §7.2, §9.1, §11, §16.
+
+### D-42 — Protected tags and independent timestamps
+
+Every frozen set gets a tag protected by a repository ruleset against deletion and moves, and an independent timestamp of its commit — Software Heritage archival of the public repository, or an OpenTimestamps proof of the commit hash. The tag names the set; the timestamp proves when it existed. Tag signing is optional: it proves who, not when.
+
+Impact: program plan §12.2.

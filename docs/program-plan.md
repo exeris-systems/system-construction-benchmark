@@ -1013,6 +1013,13 @@ The existing corpus already partly undermines this whole axis: a single-process 
 
 Hypotheses, contract, oracle, mutation suite, `arms.yaml`, the rejected-arms table (§5A.6), the coverage declaration (§3.9), and the abort policy are published **before** the campaign, with a hash.
 
+**Freezing a set.** Every frozen set — the user-story procedure, the preregistration, the Domain B contract — gets:
+
+- a **protected tag** (`us-procedure-*`, `prereg-*`, `domain-b-*`): a repository ruleset forbids deleting or moving tags matching these patterns. A tag is a name for the frozen commit, not evidence of time;
+- an **independent timestamp** of the commit: archival of the public repository by Software Heritage ("Save code now"), or an OpenTimestamps proof of the commit hash. Commit dates are set by the author and prove nothing; the hosting provider's push history is neither permanent nor protected from force-pushes.
+
+Documents and run metadata refer to a frozen set by its tag; the tag resolves to the commit hash.
+
 ### 12.3 Cost of the instrument
 
 Contract, oracle, mutation suite, reference implementations, harness, and audits are reported as a separate line in `harness/instrument-cost.json`, by category (contract design including naming, oracle, mutants, reference implementations, harness, audits). Tokens are measured from the session logs of the agent harness. Human time is a rough estimate in working days per category, flagged as an estimate; a figure in seconds would claim a precision that self-reported time does not have. Accounting starts in Phase 1.
