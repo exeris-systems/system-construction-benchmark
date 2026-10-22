@@ -19,8 +19,8 @@ compares no arms (program plan §14).
 ## Exit criteria
 
 - The contract artifacts of program plan §3.1 exist, with every entity, field, action, endpoint and
-  event named (D-14), and every gated requirement carrying `provenance`, `motivating_arm`,
-  `reachable_without`, an oracle check and mutation IDs (§3.2).
+  event named (D-14), and every gated requirement carrying `rationale`, `motivating_arm`,
+  `reachable_without`, an oracle check and mutation IDs (§3.2, D-46).
 - The agent brief is rendered from `contract/`, never written by hand, and hashed (§3.11, D-09).
 - The simulator and the event sink are versioned, and their control scenarios give the same result
   on both reference implementations (§13, D-17, D-18).
@@ -38,53 +38,43 @@ compares no arms (program plan §14).
 | Artefact | State |
 | --- | --- |
 | `contract/domain-profile.md` | tenancy, autonomy, actors and channels, telemetry order, airspace graph, slots, scale, time, regulatory provenance |
-| `contract/system-requirements.yaml` | 39 requirements with parameters, parameter constraints and vocabulary; `provenance` pending |
+| `contract/system-requirements.yaml` | 39 requirements with parameters, parameter constraints and vocabulary |
 | `contract/anti-requirements.md` | user-visible and technical items, synchronised with brief §8 |
-| `contract/user-stories/` | procedure v2, frozen as `us-procedure-v2` with an independent timestamp |
-| `runs/user-stories/2026-10-23/` | the canonical story run: 44 stories |
+
+Track S — requirements elicitation measured per model — runs in parallel and does not feed the
+contract (D-45, D-46).
 
 ## Work, in dependency order
 
-1. **Map the stories.** Run `contract/user-stories/mapping-prompt.md` on the canonical run's
-   analyst output, unedited. Review the mapping and record every change as a published override.
-   Assign `provenance` to each requirement from its primary story; write `author` stories only for
-   requirements left uncovered, and report the uncovered ones with their hypotheses rather than
-   filling them silently (D-36, D-37).
-2. **Name the domain and its boundary.** `domain-model.yaml` (entities, fields, actions, states —
+1. **Name the domain and its boundary.** `domain-model.yaml` (entities, fields, actions, states —
    the vocabulary of the requirements), `expected-api.yaml` (what the system exposes),
    `external-api.yaml` (drone commands, charge-service requests, the event sink, with idempotency
    keys), and `expected-events.yaml` (event names and payloads, delivered by webhook) (§3.1, D-14,
    D-17, D-18).
-3. **Write the DOD.** `dod.yaml` from the requirements, one behaviour per gate (§4.1 rule 4), and
-   `failure-scenarios.yaml` including REC-1/2/3 (§3.7). Decide the frontend scope before any UI gate
-   is written (below).
-4. **Render the agent brief.** A render step from `contract/` into `contract/agent-brief/`, hashed,
+2. **Write the DOD.** `dod.yaml` from the requirements, one behaviour per gate (§4.1 rule 4), each
+   with an authored `rationale` (D-46), UI gates included (D-44), and `failure-scenarios.yaml`
+   including REC-1/2/3 (§3.7).
+3. **Render the agent brief.** A render step from `contract/` into `contract/agent-brief/`, hashed,
    carrying only what D-09 allows.
-5. **Build the simulator and the event sink.** Drones, charging service, and readiness, waypoint and
+4. **Build the simulator and the event sink.** Drones, charging service, and readiness, waypoint and
    arrival sources as one versioned component, with control scenarios whose result is
    arm-independent by construction (D-17). The sink deduplicates by `eventId` and queries the API on
    receipt, which makes publication before commit observable (D-18).
-6. **Build the oracle, gate group by gate group**, each check observing only at the process boundary
+5. **Build the oracle, gate group by gate group**, each check observing only at the process boundary
    and publishing the distribution behind an aggregate verdict (§4.1): registration, validation and
    query; tenancy and access; telemetry and connectivity; charging; missions, routing and airspace;
    durable execution and recovery; events and idempotency.
-7. **Write the mutation suite** for the gates that exist: M-01 to M-19 where their gate is in the
+6. **Write the mutation suite** for the gates that exist: M-01 to M-19 where their gate is in the
    contract, each a reproducible broken build with the check that must fail it (§4.5).
-8. **Build the two reference implementations** — Exeris and Spring vanilla — from the contract,
+7. **Build the two reference implementations** — Exeris and Spring vanilla — from the contract,
    agent-built if convenient; they are instrument, never shown to a scored run, and implement the
    construction contract only (D-15).
-9. **Calibrate.** Both references pass; every mutant is caught for its intended reason; repeated runs
+8. **Calibrate.** Both references pass; every mutant is caught for its intended reason; repeated runs
    are stable; the flakiness trials of D-05 and D-20 are recorded.
-10. **Declare coverage and arms**, run the neutrality audit under its published procedure, and open
-    the comment window (D-03).
-11. **Version the contract** (`CONTRACT_VERSION` 1.0.0) and hand over to Phase 2. The contract is
+9. **Declare coverage and arms**, run the neutrality audit under its published procedure, and open
+   the comment window (D-03).
+10. **Version the contract** (`CONTRACT_VERSION` 1.0.0) and hand over to Phase 2. The contract is
     frozen with the preregistration in Phase 3 (§12.2).
-
-## Decided before the DOD is written
-
-- **Frontend scope.** Whether UI gates enter Campaign 1, and if so H1 is reported on two scopes —
-  backend gates only and the whole contract — both preregistered. Subset arms carry no UI gates.
-  Until this is recorded in the decision register, no UI gate is written.
 
 ## Out of scope
 
