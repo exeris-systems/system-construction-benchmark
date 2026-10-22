@@ -42,7 +42,8 @@ compares no arms (program plan §14).
 | `contract/anti-requirements.md` | user-visible and technical items, synchronised with brief §8 |
 
 Track S — requirements elicitation measured per model — runs in parallel and does not feed the
-contract (D-45, D-46).
+contract (D-45, D-46). The cost of this order: every gate's rationale is the contract author's own,
+not derived from independent user stories, and every report says so (D-46).
 
 ## Work, in dependency order
 

@@ -862,7 +862,7 @@ network access: y/n + allowlist        system time and time zone
 JDK / OS / hardware                    oracle version + self-test result
 external arm module versions           surface maturity levels (§3.10)
 simulator and event-sink version + hash  database version + profile
-Track S: world-brief + brief-seeding hashes
+Track S: hashes of the world brief, brief slices, seeding declaration and every prompt (D-47)
 ```
 
 ### 9.4 Invalidation

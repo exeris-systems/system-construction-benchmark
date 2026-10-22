@@ -84,7 +84,7 @@ Impact: Campaign 1 DOD; coverage declaration.
 
 ### D-05 — Frontend flakiness is decided by a trial
 
-Not a decision but a Phase 1 procedure: N runs of the UI gates on both reference implementations (D-15), against the 5% variance threshold. The result decides. The frontend scope itself waits for the H1 scope decision.
+Not a decision but a Phase 1 procedure: N runs of the UI gates on both reference implementations (D-15), against the 5% variance threshold. The result decides. The frontend scope is decided by D-44.
 
 Impact: Phase 1 plan.
 
