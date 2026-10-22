@@ -448,3 +448,11 @@ The prompt is frozen at its last revision, SHA-256 `7d40bed8…0c0`, rather than
 Within one pull request, successive revisions of a file are told apart by the SHA-256 that every run records and `trackS/calibration-log.md` cites; a new draft version is declared for each change that reaches `main` (D-49).
 
 Impact: `trackS/procedure.md`, `trackS/persona-prompt.md`, `trackS/persona-holdout.yaml`, `trackS/run-track-s.py`, `trackS/calibration-log.md`, `trackS/how-to-calibrate-persona.md`.
+
+### D-51 — The persona model changes to `mistral-small-2603`
+
+Draft 4 of the Track S procedure changes the persona model from `ministral-8b-2512` to `mistral-small-2603` (open weights `mistralai/Mistral-Small-4-119B-2603`, Apache 2.0), and amends D-48 for the persona only. The frozen draft 3 prompt passed 57 of 72 answers on the held-out set against a threshold of 65 (`trackS/calibration-log.md`); the prompt stays at `7d40bed8…0c0`, so the change tests whether the model, rather than the wording, keeps the persona to its slice.
+
+`trackS/persona-holdout-2.yaml` holds 24 questions with the same mix of kinds, sharing none with the control set or the first held-out set, which has been seen. It is run once with the draft 4 prompt and model, under the threshold of D-50. The provider reports 20,000 tokens and one request per second for this model, against 625,000 tokens for `ministral-8b-2512`; the subject runs are scheduled from the limits recorded in its calibration.
+
+Impact: `trackS/procedure.md`, `trackS/persona-holdout-2.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`.
