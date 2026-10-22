@@ -221,8 +221,9 @@ class Client:
             try:
                 with urllib.request.urlopen(request, timeout=600) as response:
                     return dict(response.headers), json.load(response)
-            except json.JSONDecodeError as e:
-                # A success status with a body that is not JSON is the provider's fault, not the model's.
+            except ValueError as e:
+                # A success status with a body that is not JSON, or not UTF-8, is the provider's fault,
+                # not the model's. ValueError covers both JSONDecodeError and UnicodeDecodeError.
                 self.recorder.log(number, self, session, retry=attempt, error=f"invalid JSON: {e}")
                 if attempt == MAX_ATTEMPTS:
                     raise RunFailed(f"{session}: response body is not JSON")
@@ -363,6 +364,9 @@ def main():
         run["status"] = "completed"
     except RunFailed as e:
         run["status"], run["failure"] = "failed", str(e)
+    except Exception as e:  # any other stop is still recorded in run.json, then re-raised
+        run["status"], run["failure"] = "failed", f"unexpected: {e!r}"
+        raise
     finally:
         run["finished"] = now()
         (args.out / "run.json").write_text(json.dumps(run, indent=2, default=str) + "\n")

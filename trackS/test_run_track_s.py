@@ -111,6 +111,14 @@ class ClientTest(unittest.TestCase):
         self.assertEqual(self.client.call("s", "system", [("user", "q")]), "hello")
         self.assertIn("invalid JSON", self.calls()[0]["error"])
 
+    def test_body_that_is_not_utf8_is_retried(self):
+        class NotUtf8(Reply):
+            def read(self):
+                return b"\xff\xfe\xfa"
+        self.replies = [NotUtf8(None, headers()), Reply(answer("hello", "stop"), headers())]
+        self.assertEqual(self.client.call("s", "system", [("user", "q")]), "hello")
+        self.assertIn("invalid JSON", self.calls()[0]["error"])
+
     def test_model_check_rejects_another_model(self):
         self.replies = [Reply({"id": "some-other-model"}, headers())]
         with self.assertRaises(ts.RunFailed):
