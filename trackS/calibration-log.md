@@ -135,6 +135,10 @@ limits.
 | `no-design` (3 questions) | 5 of 9 | HD8 ×3: asks for the service to notify it automatically. HT8 ×1: lists what the service should let it log. |
 | total | 57 of 72 | |
 
-Below the threshold of 65, and no `fact` answer contradicts its slice outright. Counting every
-borderline answer as passing (HT1, HD4, HT6, HA8) gives at most 61. Against 66 of 72 on the control
-set, the prompt kept its gains on the questions it was revised against and lost them on new ones.
+The persona fails on both criteria of D-50. 57 of 72 is below the threshold of 65, and one `fact`
+answer contradicts its slice: HT2 in its third repetition says the platform handles what is shared
+with regulators, where 3.b3 has the regulators ask the company. The other `fact` failures add what
+the slice does not give, or answer "I don't know" where it answers, without asserting the opposite.
+Counting the borderline failures as passing (HT1, HD4, HT6) gives 60. Against 66 of 72 on the
+control set, the prompt kept its gains on the questions it was revised against and lost them on new
+ones.
