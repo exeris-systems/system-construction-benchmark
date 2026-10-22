@@ -69,7 +69,7 @@ jobs:
   # report a check on a pull request that can no longer merge.
   docs:
     if: ${{ github.event.action != 'closed' }}
-    uses: exeris-systems/.github/.github/workflows/docs-lint.yml@main
+    uses: exeris-systems/.github/.github/workflows/docs-lint.yml@aa521373811a9c7dcfaf024e47ba5b5d54d6fa60 # exeris-systems/.github@main
     with:
       mode: ramp                # switch to strict per repo once the frontmatter backfill has landed
       section-check: false      # enable after subsystem/module pages carry the required sections
@@ -79,10 +79,10 @@ jobs:
       exclude: "runs contract/user-stories"
   commits:
     if: ${{ github.event.action != 'closed' }}
-    uses: exeris-systems/.github/.github/workflows/commit-lint.yml@main
+    uses: exeris-systems/.github/.github/workflows/commit-lint.yml@aa521373811a9c7dcfaf024e47ba5b5d54d6fa60 # exeris-systems/.github@main
   pr-body:
     if: ${{ github.event.action != 'closed' }}
-    uses: exeris-systems/.github/.github/workflows/pr-body-check.yml@main
+    uses: exeris-systems/.github/.github/workflows/pr-body-check.yml@aa521373811a9c7dcfaf024e47ba5b5d54d6fa60 # exeris-systems/.github@main
   # The L2 review of ADR-085 §J.33, published under the organisation's identity by ADR-087 §B.
   # Without this job the routine runs only in Cowork sessions and never on a pull request.
   #
@@ -141,14 +141,26 @@ jobs:
     # pull request, and closing one that still carries it is such an event — so without this the
     # model runs again on a pull request whose review is over and whose check decides nothing.
     if: ${{ always() && github.event.action != 'closed' }}
-    uses: exeris-systems/.github/.github/workflows/review.yml@main
+    uses: exeris-systems/.github/.github/workflows/review.yml@aa521373811a9c7dcfaf024e47ba5b5d54d6fa60 # exeris-systems/.github@main
     with:
       publish: true
-      repo-routine: docs/repo-review-rules.md
       l1-results: >-
         {"docs-lint": "${{ needs.docs.result }}",
          "commit-lint": "${{ needs.commits.result }}",
          "pr-body-check": "${{ needs.pr-body.result }}"}
+      repo-routine: docs/repo-review-rules.md
+      repo-checks: |
+        for s in tools/runs-append-only/runs-append-only.sh \
+                 tools/frozen-sets-check/frozen-sets-check.sh \
+                 tools/credential-scan/credential-scan.sh \
+                 tools/agents-material-check/agents-material-check.sh; do
+          if [ -x "$s" ]; then
+            echo "== $s"; "$s"; echo "-- exit $?"
+          else
+            echo "== $s: this branch does not carry it"
+          fi
+        done
+      review-in-parts: true
     secrets:
       claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       exeris_bot_app_id: ${{ secrets.EXERIS_BOT_APP_ID }}
@@ -231,7 +243,7 @@ jobs:
   # permission block at the top, which is the one permission the review itself does not need.
   judge:
     if: ${{ github.event.action == 'closed' }}
-    uses: exeris-systems/.github/.github/workflows/judge-review.yml@main
+    uses: exeris-systems/.github/.github/workflows/judge-review.yml@aa521373811a9c7dcfaf024e47ba5b5d54d6fa60 # exeris-systems/.github@main
     secrets:
       exeris_bot_app_id: ${{ secrets.EXERIS_BOT_APP_ID }}
       exeris_bot_private_key: ${{ secrets.EXERIS_BOT_PRIVATE_KEY }}
