@@ -1,0 +1,29 @@
+{
+ "id": "c323045be1bd4cdb96611b65c0530d2d",
+ "created": 1792683202,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1663,
+  "total_tokens": 1769,
+  "completion_tokens": 106,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not all at once. Each site has only so many places where drones can take off and land at the same time—usually just one or two. If too many drones try to leave or arrive at once, they’d have to wait or share the space, which isn’t safe.\n\nDispatchers have to plan around that. Sometimes they’ll delay a flight if the site is busy, or they’ll split up jobs so drones don’t all try to leave together. It’s one of the things we watch closely."
+   }
+  }
+ ]
+}

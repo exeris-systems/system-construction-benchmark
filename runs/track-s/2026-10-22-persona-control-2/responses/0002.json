@@ -1,0 +1,29 @@
+{
+ "id": "fed7262682ba42b0b0d42c254b36d57f",
+ "created": 1792683184,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1324,
+  "total_tokens": 1407,
+  "completion_tokens": 83,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not at all. Each drone has its own charging connector, and the pads are set up for specific models. If you’ve got a drone with a USB-C port, it won’t fit on a pad meant for a micro-USB one. We’ve had to keep separate pads for each type—it’s a real headache when a drone’s battery’s low and the wrong pad’s in use."
+   }
+  }
+ ]
+}

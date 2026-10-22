@@ -1,0 +1,29 @@
+{
+ "id": "ae85977c30c84d938162ecb664413480",
+ "created": 1792683216,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1012,
+  "total_tokens": 1157,
+  "completion_tokens": 145,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We keep the airspace information that the authorities publish—like the zones where drones can’t fly, and the closures they announce. That’s all public data, so it’s not tied to any one company. We also track which corridors and sites are busy, but only in a way that doesn’t show which company’s drones are using them.\n\nThe companies use it to see where their drones can fly and where they can’t. They don’t get reports or logs; they just see the current picture of the airspace and the closures. If a closure affects multiple companies, we’ll tell them how many sites or corridors are blocked, but we don’t dig into their operations. That’s not our job."
+   }
+  }
+ ]
+}

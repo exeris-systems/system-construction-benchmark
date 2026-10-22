@@ -1,0 +1,29 @@
+{
+ "id": "e2ef6c2b7c6b402c9af04f176e82c729",
+ "created": 1792683314,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1234,
+  "total_tokens": 1374,
+  "completion_tokens": 140,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, it varies a lot. My company’s fleet changes all the time—we add new drones when we get more work, and we retire old ones when they’re past their best. Right now, we’ve got somewhere between 200 and 300 drones flying, but that number bounces up and down.\n\nSome of our customers, like the parcel company, use more drones than others. The hospital logistics team doesn’t need as many, and the inspection firm might have a few big, heavy drones for their jobs. But we’re always swapping them out—batteries wear down, sensors get damaged, and we upgrade to newer models when we can."
+   }
+  }
+ ]
+}

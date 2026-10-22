@@ -1,0 +1,29 @@
+{
+ "id": "7bf36249b59f4d6fb4e1ded0ba661b5e",
+ "created": 1792683270,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1139,
+  "total_tokens": 1241,
+  "completion_tokens": 102,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I can’t look at any one company’s flights. My job is to keep the shared picture of the airspace—like the corridors, zones, and closures—so everyone can see what’s open and what’s closed. I don’t track which drones belong to which company or where they’re flying.\n\nIf a closure happens, I can tell you how many sites are affected and how many corridors are blocked, but not which specific drones or companies are impacted. That’s not my role."
+   }
+  }
+ ]
+}

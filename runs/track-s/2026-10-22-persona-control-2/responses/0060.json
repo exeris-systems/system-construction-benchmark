@@ -1,0 +1,29 @@
+{
+ "id": "820eac0e66aa43f5928803d89932b5c6",
+ "created": 1792683337,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1801,
+  "total_tokens": 1922,
+  "completion_tokens": 121,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures get changed all the time—sometimes even while drones are already in the air. For example, a sudden weather alert might expand a no-fly zone, or a planned closure might get moved to an earlier or later time.\n\nWe get updates from the authorities, but they don’t always tell us *why*—just that the rules have changed. That means dispatchers have to check the new boundaries and adjust flights on the fly. Sometimes we have to reroute drones mid-job or even call one back if it’s too close to the new restricted area. It’s a constant headache."
+   }
+  }
+ ]
+}

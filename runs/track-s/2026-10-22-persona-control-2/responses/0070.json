@@ -1,0 +1,29 @@
+{
+ "id": "5706b98613bc48e3adf7ee0ffc2dd92f",
+ "created": 1792683377,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1686,
+  "total_tokens": 1780,
+  "completion_tokens": 94,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Technicians handle faults on their own—we don’t get involved.\n\nIf a drone comes back with a problem, their team checks it out, fixes it, or sends it for repair. They’re the ones who know their drones best, and they’ve got their own ways of dealing with faults.\n\nSometimes they’ll ask us if a closure or a corridor issue caused the problem, but that’s just to double-check. Otherwise, it’s all up to them."
+   }
+  }
+ ]
+}

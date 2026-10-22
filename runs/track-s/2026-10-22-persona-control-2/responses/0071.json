@@ -1,0 +1,29 @@
+{
+ "id": "49f7032f42cf452ab3f90d8982c2d796",
+ "created": 1792683379,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1796,
+  "total_tokens": 1888,
+  "completion_tokens": 92,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Sometimes, yes—especially when the service crashes or restarts.\n\nIf the server goes down while drones are flying, their reports might not come through right away. We usually get them back in order once the service is back up, but it can take a few minutes.\n\nThe companies know this is a risk, so they’ve got their own backup plans. They don’t rely on us for real-time updates—just the big picture of the airspace."
+   }
+  }
+ ]
+}

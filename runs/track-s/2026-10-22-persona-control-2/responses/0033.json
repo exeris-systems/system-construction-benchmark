@@ -1,0 +1,29 @@
+{
+ "id": "46c559d3102d45ae92a5d35277254eeb",
+ "created": 1792683252,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1422,
+  "total_tokens": 1508,
+  "completion_tokens": 86,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher decides which drone flies and along which way. It’s their legal responsibility—software doesn’t pick the drone or the route for them. But they *do* need help figuring out which of their drones can even get to where a job starts, especially when there are a lot of flights planned at once. That’s where the platform comes in—it helps them see what’s possible without making the call for them."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "dbaed9738078471686656e5b5c1199ed",
+ "created": 1792683335,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1680,
+  "total_tokens": 1790,
+  "completion_tokens": 110,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not all at once. Each site has only so many takeoff and landing spots, and they’re shared between all the companies. If too many drones try to leave or land at the same time, they’ll block each other—some might have to wait or even get rerouted.\n\nDispatchers have to plan carefully, especially at busy sites like ports or hospitals, where multiple jobs might need to start or end at the same time. Sometimes we have to stagger takeoffs by a few minutes just to avoid collisions or gridlock."
+   }
+  }
+ ]
+}

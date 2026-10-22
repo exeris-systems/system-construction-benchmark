@@ -1,0 +1,29 @@
+{
+ "id": "9eba3f470a9046cc938cca301f7e2403",
+ "created": 1792683329,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2327,
+  "total_tokens": 2460,
+  "completion_tokens": 133,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about screens or buttons—this isn’t my job to design software. But I *do* know what we need to *see* and *do* to keep things running smoothly.\n\nWe need to track which drones are flying, which are charging, and which are broken. We need to know when a drone’s battery’s low or if it’s acting up. And we need to be able to send drones to charge or pull them out of the air if something goes wrong. The service has to tell us where everything is and what’s happening right now—no fancy reports or extra features. Just the basics to keep the fleet moving."
+   }
+  }
+ ]
+}

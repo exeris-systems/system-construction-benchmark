@@ -1,0 +1,29 @@
+{
+ "id": "6865779fda1248dda94e4c9f33edc9f6",
+ "created": 1792683236,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1335,
+  "total_tokens": 1399,
+  "completion_tokens": 64,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Nope, not at all. Each drone model has its own charging connector, and they’re not interchangeable. If a drone’s battery is low, we’ve got to make sure it’s plugged into the right pad for its type. Mixing them up would just waste time and could even damage the drone."
+   }
+  }
+ ]
+}

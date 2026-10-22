@@ -1,0 +1,29 @@
+{
+ "id": "ab059312d2e14641bfba0a88bc25f14d",
+ "created": 1792683325,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2002,
+  "total_tokens": 2148,
+  "completion_tokens": 146,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t deal with the airspace desk—they’re a separate team, and I don’t know how they decide that. But I *do* know that closures can be a real headache for us.\n\nSometimes they’re short—like a few minutes if a plane flies through—and sometimes they’re hours long, especially if there’s bad weather or a big event nearby. The desk probably looks at the rules, the weather, and what’s happening in the sky at the time. But since I’m not part of that team, I can’t say for sure how they figure it out. I just know we’ve got to wait it out and make sure all our drones are safe before we let them fly again."
+   }
+  }
+ ]
+}

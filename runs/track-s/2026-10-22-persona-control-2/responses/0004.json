@@ -1,0 +1,29 @@
+{
+ "id": "7c53b41f7a174bd1807cb4fa0e5f2b1e",
+ "created": 1792683189,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1492,
+  "total_tokens": 1633,
+  "completion_tokens": 141,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s one of those things that keeps us on our toes. If a drone restarts mid-flight, it usually just keeps going—its autopilot picks up where it left off. But sometimes it gets confused, especially if the restart happens right when it’s supposed to switch tasks, like moving from delivery to inspection. Then it might just hover or fly in circles until we get it back.\n\nWe’ve had a few close calls where it landed in the wrong spot because the restart messed up the coordinates. The worst part is, we don’t always know it happened until we get the logs back. And if the radio’s bad, we might not even see it restart at all."
+   }
+  }
+ ]
+}

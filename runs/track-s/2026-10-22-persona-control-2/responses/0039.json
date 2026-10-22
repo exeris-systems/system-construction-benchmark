@@ -1,0 +1,29 @@
+{
+ "id": "6f826d6b08d54ac08b01c7b1b71a5bdf",
+ "created": 1792683264,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2072,
+  "total_tokens": 2188,
+  "completion_tokens": 116,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t track that kind of thing—it’s not my job. Each company handles its own disruptions, and we don’t share detailed numbers with each other. I can tell you what happened to *our* flights, though. For example, we had to reroute three drones around the closure, and one had to land early because it couldn’t safely continue. But I’d have to check with the other dispatchers to see how bad it was for them. The platform might have some logs, but I don’t know if they’re broken down by company."
+   }
+  }
+ ]
+}

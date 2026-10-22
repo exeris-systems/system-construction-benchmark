@@ -1,0 +1,29 @@
+{
+ "id": "429a3ee29383422cad01419119542984",
+ "created": 1792683304,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1371,
+  "total_tokens": 1462,
+  "completion_tokens": 91,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service gets restarted a few times a week—usually in the morning and sometimes in the afternoon if we notice it’s running slow or if we need to update it.\n\nIt’s not a big deal, just a few minutes of downtime. The companies know it happens, and they’ve said it’s fine as long as it’s not too long. But we try not to do it when drones are flying a lot, just to be safe."
+   }
+  }
+ ]
+}

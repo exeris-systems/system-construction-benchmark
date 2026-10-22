@@ -1,0 +1,29 @@
+{
+ "id": "ff605e10df444916a309994f7aa1a15b",
+ "created": 1792683348,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1012,
+  "total_tokens": 1137,
+  "completion_tokens": 125,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We keep information about the airspace—like the flight corridors, zones, and closures the authorities announce. That’s shared data, so it’s the same for all customers.\n\nThe desk uses it to update the shared picture and tell customers when something changes—like a closure or a corridor being closed. The customers use it to see what’s open and what’s not, so they can plan their flights and avoid problems.\n\nWe don’t keep anything about the companies’ drones, pilots, or jobs—just the airspace rules and updates. That way, we stay neutral and don’t get tangled in their business."
+   }
+  }
+ ]
+}

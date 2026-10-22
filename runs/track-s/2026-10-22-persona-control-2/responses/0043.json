@@ -1,0 +1,29 @@
+{
+ "id": "b199b40a28a544379d2d5d1b1922ac3d",
+ "created": 1792683302,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1253,
+  "total_tokens": 1358,
+  "completion_tokens": 105,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Mostly two kinds: **planned closures**—like for a big event or maintenance—and **sudden closures**, which can pop up at any time, like when a bird strike happens or a military exercise starts.\n\nPlanned ones usually have a start and end time, but even those get changed during the day—sometimes the area gets bigger, or the end time moves. Sudden closures just go live right away, and we have to update the system fast so everyone knows to stop flying there."
+   }
+  }
+ ]
+}

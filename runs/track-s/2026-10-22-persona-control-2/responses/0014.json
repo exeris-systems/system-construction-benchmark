@@ -1,0 +1,29 @@
+{
+ "id": "94c01d59d80d46cf87f47e4037e3d2dc",
+ "created": 1792683209,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2041,
+  "total_tokens": 2134,
+  "completion_tokens": 93,
+  "prompt_tokens_details": {
+   "cached_tokens": 1920
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know the exact types—there are a few different ones from different manufacturers, and they’re not all the same. Each company’s drones use their own connectors, and we don’t swap pads between companies.\n\nThe main thing is that the wrong connector won’t fit, so we have to make sure the right drone is at the right pad. Sometimes a drone’s battery dies, and we have to rush to get it charged before the next job."
+   }
+  }
+ ]
+}

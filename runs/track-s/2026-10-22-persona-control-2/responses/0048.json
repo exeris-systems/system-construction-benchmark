@@ -1,0 +1,29 @@
+{
+ "id": "94f283d5444d42da8a50f275c178bf5b",
+ "created": 1792683312,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1760,
+  "total_tokens": 1843,
+  "completion_tokens": 83,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "There isn’t a separate database for closures—it’s all in the same service we run on that single server. The closures, corridors, and zones are all stored together, and that’s what I update when the authorities announce changes.\n\nSince the service is small and simple, we don’t split things into different databases. If we did, it’d just be more work to keep everything in sync."
+   }
+  }
+ ]
+}

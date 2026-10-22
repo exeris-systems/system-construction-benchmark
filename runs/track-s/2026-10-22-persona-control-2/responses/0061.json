@@ -1,0 +1,29 @@
+{
+ "id": "1b8f1ac6f66c4387adbad1cc78a9594e",
+ "created": 1792683339,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1938,
+  "total_tokens": 2102,
+  "completion_tokens": 164,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure happens while drones are flying, we have to act fast. The dispatcher has to decide whether the drone can safely keep going, or if it needs to land, reroute, or even return to its home site.\n\nSometimes the closure is small, and the drone can just go around it. But if it’s a big zone, like a sudden storm warning, we might have to call the drone back—especially if it’s carrying something important, like a medical package. And if the closure is near the drone’s destination, we might have to tell the customer to wait or find another way.\n\nIt’s stressful because we can’t always control the drone’s path once it’s in the air. We just hope the autopilot can handle it, or that the drone can safely land somewhere nearby."
+   }
+  }
+ ]
+}

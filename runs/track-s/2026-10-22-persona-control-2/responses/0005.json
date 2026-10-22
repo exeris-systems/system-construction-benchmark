@@ -1,0 +1,29 @@
+{
+ "id": "d89c3530ae8544b9978ef1be3ba01a77",
+ "created": 1792683190,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1649,
+  "total_tokens": 1787,
+  "completion_tokens": 138,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Not even close. Reports come and go like clockwork—well, *almost* like clockwork. Sometimes they arrive late, sometimes they’re duplicated, and sometimes they just don’t show up at all. If the drone’s flying near a big industrial site or a port, the radio signal can be all over the place. We’ve had whole flights where the last few reports just vanish into thin air.\n\nAnd order? Forget about it. If three drones are flying at once, their reports might arrive in any sequence—or not at all. We just have to cross-check everything and hope for the best. It’s like trying to read a book where the pages keep getting shuffled."
+   }
+  }
+ ]
+}

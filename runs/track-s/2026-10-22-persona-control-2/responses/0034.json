@@ -1,0 +1,29 @@
+{
+ "id": "3d55bda62e3b403189997205aab81ac8",
+ "created": 1792683254,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1522,
+  "total_tokens": 1609,
+  "completion_tokens": 87,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, we don’t want software to pick the drone for us. That’s not how we work. The dispatcher is the one who signs off on every flight—that’s the law. They need to know which drones are available and which ones can actually make it to the job, but they’ll still decide which one to use based on their own judgment. The software just needs to give them the right information to make that call."
+   }
+  }
+ ]
+}

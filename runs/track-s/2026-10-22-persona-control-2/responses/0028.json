@@ -1,0 +1,29 @@
+{
+ "id": "0905f90362f843df963b90144035a18d",
+ "created": 1792683240,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1501,
+  "total_tokens": 1665,
+  "completion_tokens": 164,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that happens more than you’d think. When a drone restarts mid-flight, it usually just keeps going—its autopilot picks up where it left off. But sometimes it can mess up the job, like if it’s in the middle of an inspection and skips a point or flies the wrong way. We’ve had cases where it just loops around a few times before landing safely, though.\n\nThe tricky part is that we don’t always know right away if it happened. The drone might just land and report back normally, or it might send a garbled message. If the job was critical—like delivering blood or inspecting a bridge—we’ll double-check the data later to make sure nothing got missed. But for most deliveries, we just assume it’s fine unless we get complaints."
+   }
+  }
+ ]
+}

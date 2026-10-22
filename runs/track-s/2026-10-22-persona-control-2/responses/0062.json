@@ -1,0 +1,29 @@
+{
+ "id": "035a31ef4c49453eadbf0f7dd6e3a839",
+ "created": 1792683341,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2113,
+  "total_tokens": 2239,
+  "completion_tokens": 126,
+  "prompt_tokens_details": {
+   "cached_tokens": 2048
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We have a few different connector types—it depends on the drone model. Some use a standard USB-C, others have a proprietary plug that looks like a thick, flat rectangle, and a few use a smaller, round connector that’s more like a phone charger but bigger.\n\nThe problem is, none of them are interchangeable. If a drone’s connector doesn’t match the pad, it won’t charge. So we have to keep track of which pads go with which drones, and sometimes we have to move drones around if the wrong one tries to charge. It’s a pain, especially when we’re short on time."
+   }
+  }
+ ]
+}

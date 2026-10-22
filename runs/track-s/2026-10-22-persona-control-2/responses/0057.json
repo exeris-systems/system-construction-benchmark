@@ -1,0 +1,29 @@
+{
+ "id": "0eca1d01670049368d453da7d8e52483",
+ "created": 1792683331,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1422,
+  "total_tokens": 1533,
+  "completion_tokens": 111,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher decides which drone flies and along which way. It’s their legal responsibility—no software picks the drone or the route. They look at the job, the drone’s battery level, the sensors it needs, and the current airspace rules to choose the best one.\n\nSometimes, they ask the system to show them which drones are available and could get to the job’s starting point, but the final call is always theirs. If a drone’s battery is too low or a sensor isn’t right for the job, they’ll pick another one."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "de65bff08ac14f7a8bbb3cfe42ee7c53",
+ "created": 1792683231,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1900,
+  "total_tokens": 2024,
+  "completion_tokens": 124,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about databases—my job isn’t to manage data storage. The closures come in from the authorities, and we update the service with them. The service itself is just a single server that holds all the airspace info—zones, corridors, and closures—so everyone can see it at once.\n\nIf you’re asking who *should* keep the closures, that’s not my call. The companies don’t care about databases, just that the info is right and up to date. The platform handles it all in one place, and that’s how it’s worked so far."
+   }
+  }
+ ]
+}
