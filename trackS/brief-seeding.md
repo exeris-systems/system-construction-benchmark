@@ -1,15 +1,15 @@
 # Brief seeding declaration
 
 Applies to: `world-brief.md` v1.0
-Visibility: published with the user-story procedure; **never given to a persona or a subject** (it names requirement IDs). It applies unchanged to every persona slice, because slices are selections of brief units (`brief-slices.yaml`).
+Visibility: published with the Track S procedure; **never given to a persona or a subject** (it names requirement IDs). It applies unchanged to every persona slice, because slices are selections of brief units (`brief-slices.yaml`).
 
 Every sentence of the brief is one of three kinds:
 
-- **fact** — describes the world; any need derived from it counts as independent;
-- **constraint** — a business or legal limit the users impose; stories that restate it are `brief_seeded`;
-- **seeded need** — states something users want; stories derived from it are `brief_seeded`.
+- **fact** — describes the world; a derived item that rests on it counts as independent;
+- **constraint** — a business or legal limit the users impose; a derived item that restates it is `brief_seeded`;
+- **seeded need** — states something users want; a derived item that rests on it is `brief_seeded`.
 
-Only constraints and seeded needs are listed. Every other sentence is a fact. The mapping instance marks a story `brief_seeded` when it is derived from a listed sentence, and separately marks any story that paraphrases a specific brief sentence of any kind (`paraphrases_brief: §x`).
+Only constraints and seeded needs are listed. Every other sentence is a fact. In Track S (D-46, D-47), a requirement in a subject's derived contract that traces to a listed sentence is read as `brief_seeded`, and its recall is reported apart from items that trace only to facts; the declaration is not a scoring input of the judge.
 
 | Brief | Sentence | Kind | Points to |
 | --- | --- | --- | --- |
