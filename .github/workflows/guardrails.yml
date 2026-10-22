@@ -73,10 +73,10 @@ jobs:
     with:
       mode: ramp                # switch to strict per repo once the frontmatter backfill has landed
       section-check: false      # enable after subsystem/module pages carry the required sections
-      # Taken out: `runs` holds raw run records, committed unedited, and `contract/user-stories`
-      # holds prompts and a brief that run-procedure.py hands to models verbatim — frontmatter
-      # added to either would change a frozen record or what a model reads.
-      exclude: "runs contract/user-stories"
+      # Taken out: `runs` holds raw run records, committed unedited, and `trackS` (formerly
+      # `contract/user-stories`) holds prompts and a brief that the Track S script hands to models
+      # verbatim — frontmatter added to either would change a frozen record or what a model reads.
+      exclude: "runs contract/user-stories trackS"
   commits:
     if: ${{ github.event.action != 'closed' }}
     uses: exeris-systems/.github/.github/workflows/commit-lint.yml@aa521373811a9c7dcfaf024e47ba5b5d54d6fa60 # exeris-systems/.github@main
