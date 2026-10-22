@@ -29,3 +29,10 @@ Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute
 
 3. Commit the output directory unedited, and record the verdict against the criteria of
    [`procedure.md`](procedure.md) in [`calibration-log.md`](calibration-log.md).
+
+4. With the persona prompt frozen, run the held-out set once, the same way, with mode
+   `persona-holdout` and an output directory named `YYYY-MM-DD-persona-holdout`. Its verdict decides.
+
+   ```sh
+   python3 -I trackS/run-track-s.py persona-holdout --persona-model ministral-8b-2512 --out runs/track-s/YYYY-MM-DD-persona-holdout
+   ```

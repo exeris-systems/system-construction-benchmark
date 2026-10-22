@@ -17,3 +17,4 @@ jobs:
       # Standard library only; a stubbed transport, so no network and no API key.
       - run: python3 -I trackS/test_run_track_s.py
       - run: python3 -I trackS/run-track-s.py persona-control --persona-model ministral-8b-2512 --dry-run
+      - run: python3 -I trackS/run-track-s.py persona-holdout --persona-model ministral-8b-2512 --dry-run
