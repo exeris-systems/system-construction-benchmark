@@ -1,0 +1,407 @@
+contract_status: proposed_full_campaign_requirements
+purpose: >
+  Behavioral requirements for an autonomous drone-fleet manager, written inside
+  domain-profile.md. This document specifies observable domain behavior only; it does not
+  prescribe implementation technology, schema, API shape, process topology, or code-generation
+  approach.
+
+normative_terms:
+  must: mandatory behavior
+  may: permitted behavior
+
+parameters:
+  telemetry_silence_window_s: 30
+  silence_detection_delta_s: 15          # domain profile §8: [T, T + Δ]
+  degraded_window_frames: 20
+  degraded_gap_ratio: 0.25               # missing sequence numbers within the window
+  degraded_recovery_ratio: 0.10          # link hysteresis; below degraded_gap_ratio
+  battery_warning_pct: 30
+  battery_critical_pct: 15
+  battery_hysteresis_pct: 5
+  battery_full_pct: 98
+  battery_early_completion_min_pct: 80
+  mission_min_battery_pct: 50
+  range_safety_reserve_pct: 20
+  route_max_hops_limit: 8                # upper bound for the N request parameter
+  mission_pause_timeout_s: 120
+  restriction_activation_delta_s: 15
+
+parameter_constraints:
+  - mission_min_battery_pct > battery_warning_pct + battery_hysteresis_pct
+  - battery_warning_pct > battery_critical_pct + battery_hysteresis_pct
+  - battery_early_completion_min_pct >= mission_min_battery_pct   # an early-released drone is eligible
+  - degraded_recovery_ratio < degraded_gap_ratio
+
+# Requirements use these words; the names themselves are fixed in domain-model.yaml.
+vocabulary:
+  connectivity: [online, degraded, lost]
+  operational: [idle, reserved, in_mission, returning, charging, decommissioned]
+  position: >
+    where telemetry last placed the drone: docked at a pad, at a location, or on a corridor in
+    flight; independent of the operational state
+  taken_over: flag orthogonal to the operational state; a drone in_mission can be taken over
+  open_service_work: fact derived from service-work records; orthogonal to the operational state
+  mission: [pending_approval, approved, reserving, rejected_unavailable_resources, dispatched, paused, completed, aborted]
+  returning: one state for every return to a pad or home location; the reason is recorded with it
+  rejected_vs_aborted: >
+    rejected_unavailable_resources ends a mission that never dispatched because a reservation
+    failed; aborted ends a mission by a decision or policy, before or after dispatch.
+
+requirements:
+  # --- registration, query, validation ---
+
+  - id: SR-REG-01
+    group: registration
+    requirement: >
+      An operator registers, reads, updates, and decommissions the tenant's drones and charging
+      pads. A drone records its model, payload capacity, range, sensor packages, connector type,
+      and home location; a pad records its location and connector type. A drone that is reserved
+      or in_mission cannot be decommissioned.
+
+  - id: SR-QRY-01
+    group: query
+    requirement: >
+      Drone, mission, and incident lists can be filtered by state, sorted by a declared key, and
+      paginated. Paging through a list with a stable sort returns every matching record exactly
+      once, including at page boundaries.
+
+  - id: SR-VAL-01
+    group: validation
+    requirement: >
+      A request with an invalid payload is rejected with a client error that identifies each
+      invalid field, and changes no state.
+    failure_semantics: validation_error
+
+  # --- tenancy and access ---
+
+  - id: SR-TEN-01
+    group: tenancy_and_access
+    requirement: >
+      Every read and write is confined to the caller's tenant. A request naming another tenant's
+      resource is answered exactly as for a resource that does not exist.
+    failure_semantics: isolation_violation
+
+  - id: SR-TEN-02
+    group: tenancy_and_access
+    requirement: >
+      Actions are permitted by role as in domain profile §1: operators maintain drones and pads,
+      request charging, and open and close service work; dispatchers create, approve, and abort
+      missions and take over drones; the platform administrator manages corridors, zones, and
+      restrictions. Any other action is rejected as forbidden. Tenant confinement (SR-TEN-01) is
+      evaluated before role: a request naming another tenant's resource is answered as not found
+      whatever the caller's role, including the platform administrator.
+
+  - id: SR-TEN-03
+    group: tenancy_and_access
+    requirement: >
+      For each version of a restriction, the platform administrator can read, per tenant, the
+      number of missions that lost their approval or were aborted because of that version. The
+      number is final within restriction_activation_delta_s of activation. Nothing else about
+      tenant data is readable by the administrator.
+
+  - id: SR-TEN-04
+    group: tenancy_and_access
+    requirement: >
+      When one restriction affects several tenants, each tenant's incidents, events, and views
+      contain only its own affected missions and drones.
+    failure_semantics: isolation_violation
+
+  # --- cross-vector invariants ---
+
+  - id: SR-INV-01
+    group: cross_vector_invariants
+    requirement: >
+      While a drone's connectivity is lost, the system must reject every command from any role
+      that would change the drone's assignment: mission assignment, charging request, and take-off.
+      A degraded connection does not block charging requests or take-off; whether a degraded
+      drone can be given a mission is governed by SR-ROUTE-01. Only the system's silence detection
+      (SR-TEL-03b) may move a drone into lost, and only a current telemetry frame (SR-TEL-02)
+      may move it out.
+    failure_semantics: domain_state_violation
+
+  - id: SR-INV-02
+    group: cross_vector_invariants
+    requirement: >
+      A drone may be charging only while docked at a pad assigned to it. A telemetry frame that
+      reports the drone as undocked ends charging in the same state change that records the
+      undocking, and causes a charge-service stop request.
+    failure_semantics: domain_state_violation
+
+  - id: SR-INV-03
+    group: cross_vector_invariants
+    requirement: >
+      A decommissioned drone is terminal. It rejects every domain action. Telemetry frames for it
+      are retained in its history and change no state.
+    failure_semantics: domain_state_violation
+
+  - id: SR-INV-04
+    group: cross_vector_invariants
+    requirement: >
+      When automatic safety policies and human decisions or the mission plan conflict, the higher
+      rule wins: (1) an active airspace restriction, (2) critical battery, (3) a dispatcher or
+      operator decision, (4) the mission plan. Rules 1 and 2 act even while the drone is taken
+      over. A warning-level policy never overrides rules 3 or 4: it emits its event, and any
+      action it requests is deferred until no higher rule is in effect.
+    failure_semantics: domain_state_violation
+
+  - id: SR-INV-05
+    group: cross_vector_invariants
+    requirement: >
+      While a drone has open service work, the system rejects mission allocation and take-off.
+      Charging requests are accepted. The restriction ends only when an operator closes the
+      service work.
+    failure_semantics: domain_state_violation
+
+  # --- telemetry ---
+
+  - id: SR-TEL-01
+    group: telemetry
+    requirement: >
+      Each telemetry frame carries a device session number that increases every time the drone
+      restarts, a sequence number within that session, and a device timestamp. Frames are ordered
+      by (session, sequence); the device timestamp is recorded but never used for ordering. A frame
+      that is not newer than the last processed frame is retained in the drone's telemetry history
+      and must not change current position, battery, connectivity, or operational state. A frame
+      with a (session, sequence) already received is a duplicate and is recorded at most once.
+      Telemetry history is readable through the API.
+
+  - id: SR-TEL-02
+    group: telemetry
+    requirement: >
+      A current frame is one that advances the drone's (session, sequence) order. When a current
+      frame is processed for a lost drone, the drone becomes degraded if its loss window
+      (SR-TEL-03a) exceeds degraded_gap_ratio and online otherwise; the open connectivity incident
+      is closed and a link-restored event is emitted. A degraded drone becomes online, with a
+      link-restored event, when its loss window is at or below degraded_recovery_ratio. A new
+      session starts with an empty window.
+
+  - id: SR-TEL-03a
+    group: telemetry
+    requirement: >
+      A drone's loss window is the last degraded_window_frames sequence numbers of its current
+      session, ending at the highest sequence number received; a window shorter than that spans
+      the sequence numbers received so far. It is evaluated only when a current frame is
+      processed. A late frame counts as received from the next evaluation on and never triggers
+      an evaluation itself. When more than degraded_gap_ratio of the window is missing, an online
+      drone becomes degraded and a link-degraded event is emitted.
+
+  - id: SR-TEL-03b
+    group: telemetry
+    requirement: >
+      When no current frame has arrived for telemetry_silence_window_s, a drone that is neither
+      docked nor decommissioned becomes lost within [window, window + silence_detection_delta_s].
+      The system opens a critical connectivity incident and, if the drone is executing a mission,
+      pauses the mission.
+
+  - id: SR-TEL-04a
+    group: telemetry
+    requirement: >
+      When battery falls to or below battery_warning_pct, the system emits one low-battery event
+      and records a charging request. It does so again only after battery has risen above
+      battery_warning_pct + battery_hysteresis_pct. If the drone is executing a mission, the
+      charging request takes effect when the mission ends (SR-INV-04).
+
+  - id: SR-TEL-04b
+    group: telemetry
+    requirement: >
+      When battery falls to or below battery_critical_pct during flight, the system in one state
+      change initiates return, aborts the active mission, opens an incident, and emits an
+      emergency-return event. The return targets a free compatible pad reserved as in
+      SR-CHARGE-02; when none is free, the drone queues with critical priority (SR-CHARGE-03) and
+      returns to its home location. This applies while the drone is taken over. It happens at most
+      once per crossing, with the same hysteresis as SR-TEL-04a.
+
+  - id: SR-TEL-05
+    group: telemetry
+    requirement: >
+      A mission paused because its drone was lost resumes when a current frame restores the link
+      within mission_pause_timeout_s. Otherwise it is aborted and its reservations are released,
+      with compensation events; the drone stays lost with its incident open.
+
+  # --- charging orchestration ---
+
+  - id: SR-CHARGE-01
+    group: charging_orchestration
+    requirement: >
+      A charging request, from an operator or from SR-TEL-04a, is accepted only for a drone that
+      is not decommissioned, whose connectivity is not lost, that is not charging, and whose
+      battery is below battery_full_pct. Its observable result is a charge-service request; the
+      internal representation of that request is not prescribed.
+    failure_semantics: domain_state_violation
+
+  - id: SR-CHARGE-02
+    group: charging_orchestration
+    requirement: >
+      A pad is compatible with a drone when it belongs to the drone's tenant and its connector
+      type matches the drone's. A charging request for a drone in_mission takes effect when the
+      mission ends; only a dispatcher abort ends a mission early. For a drone in flight and not
+      in_mission, a charging request initiates return and reserves a free compatible pad,
+      preferring the drone's home location, then the location it is flying to. For an idle drone,
+      or one docked at an incompatible pad, it reserves a free compatible pad and requests
+      charging. A drone docked at a compatible pad charges there.
+
+  - id: SR-CHARGE-03
+    group: charging_orchestration
+    requirement: >
+      When no free compatible pad exists, the drone waits for one and the system emits a
+      charging-pad-unavailable event. Waiting drones are served critical-battery requests first,
+      then in order of request acceptance.
+
+  - id: SR-CHARGE-04
+    group: charging_orchestration
+    requirement: >
+      Charging completes when telemetry reports battery at or above battery_full_pct, or when an
+      operator ends it early while battery is at or above battery_early_completion_min_pct.
+      On completion the system releases the pad, clears the charge-service request, and assigns
+      the pad to the next waiting compatible drone (SR-CHARGE-03), if any.
+
+  # --- mission lifecycle, override, eligibility, airspace ---
+
+  - id: SR-MIS-01
+    group: mission_lifecycle
+    regulatory_basis: "2021/664 Art. 10"
+    requirement: >
+      A dispatcher creates a mission of type delivery or inspection with an origin, an end location
+      (the destination for delivery; the origin for inspection), a drone, and a route given as a
+      sequence of corridors from the drone's current location through the origin to the end
+      location; for inspection the route passes through every waypoint location in order. The
+      system validates and never computes the route or chooses the drone: it rejects a route whose
+      consecutive corridors do not share a location, that does not start at the drone's location,
+      or that does not pass through the origin and end at the end location. The mission starts as
+      pending_approval. Only an approved mission proceeds to reservation and dispatch. A
+      dispatcher may abort a mission at any non-terminal state; abort releases its reservations
+      with compensation events.
+
+  - id: SR-OVR-01
+    group: override
+    requirement: >
+      A dispatcher may take over and release a drone. While it is taken over, the drone's mission
+      plan does not advance by itself, warning-level policies emit their events and record their
+      requests, which take effect after the drone is released, and rules 1 and 2 of SR-INV-04
+      still act. A drone whose connectivity is lost can be taken over: taking over is a decision
+      recorded by the system, not a command to the drone, and the connectivity incident stays
+      open.
+
+  - id: SR-ROUTE-01
+    group: eligibility_and_routing
+    requirement: >
+      A drone is eligible for a mission only when it is idle, online, not taken over, has no open
+      service work and no charging request, has battery at or above mission_min_battery_pct, and
+      has an effective range (SR-ROUTE-02) at least the total corridor length of the mission
+      route. For a delivery mission it must also have sufficient payload capacity; for an
+      inspection mission, every required sensor package.
+
+  - id: SR-ROUTE-02
+    group: eligibility_and_routing
+    requirement: >
+      On dispatcher request with a hop limit N (1 ≤ N ≤ route_max_hops_limit), the system returns
+      the requesting tenant's eligible drones located at the mission origin or reachable from it
+      over at most N currently open corridors, where the shortest such path's total corridor
+      length does not exceed the drone's effective range: model range × current battery fraction
+      × (1 − range_safety_reserve_pct). For each drone it returns the hop count and total length of that
+      path. The corridor graph may contain cycles.
+    reachable_without: [graph_engine]
+
+  - id: SR-ROUTE-03a
+    group: eligibility_and_routing
+    regulatory_basis: "2019/947 Art. 15; 2021/664 Art. 10"
+    requirement: >
+      A mission cannot be approved while any corridor of its route is covered by an active
+      prohibition restriction, directly or through a zone.
+
+  - id: SR-ROUTE-03b
+    group: eligibility_and_routing
+    regulatory_basis: "2021/664 Art. 10"
+    requirement: >
+      When a prohibition restriction becomes active, by creation or by the start of its validity
+      period, then within restriction_activation_delta_s every affected mission of every tenant is
+      handled: an approved mission not yet dispatched loses its approval; a dispatched mission is
+      aborted and its drone returns. A mission is affected when any corridor of its full route is
+      covered, whatever part of the route has already been flown. This applies while the drone is
+      taken over (SR-INV-04).
+
+  - id: SR-AIR-01
+    group: airspace
+    regulatory_basis: "2021/664 Art. 9"
+    requirement: >
+      A restriction has a validity period and a version. A new version supersedes the previous one
+      from its own validity start; evaluation always uses the current version.
+
+  # --- durable mission execution ---
+
+  - id: SR-SAGA-01
+    group: durable_mission_execution
+    requirement: >
+      Concurrent missions must never hold the same drone, charging pad, take-off slot, or landing
+      slot at the same time. A mission that loses a contested resource ends as
+      rejected_unavailable_resources, with the contested resource named.
+
+  - id: SR-SAGA-02
+    group: durable_mission_execution
+    requirement: >
+      A mission reserves its resources in this order: drone, take-off slot, landing slot. Reserving
+      the drone re-checks that the route starts at the drone's current location; if it does not,
+      the mission ends as rejected_unavailable_resources with that reason. If a later reservation
+      fails, the system releases every earlier reservation of that mission,
+      restores the drone to idle, sets the mission to rejected_unavailable_resources, and emits a
+      compensation event per released reservation.
+
+  - id: SR-SAGA-03
+    group: durable_mission_execution
+    requirement: >
+      After its reservations, a mission waits for the external events of its type (domain profile
+      §5): readiness, then arrival at the destination for delivery; readiness, each waypoint
+      reached in order, then arrival at the origin for inspection. A forced
+      process termination and restart must not repeat any committed effect: no second reservation,
+      no second event with a different eventId for a state transition already emitted (redelivery
+      of the same eventId is permitted, SR-X-05), and no outbound command with a new idempotency
+      key for a command already sent (SR-X-04). The mission then completes after the expected
+      external event. An external event received more than once is applied once.
+
+  # --- records ---
+
+  - id: SR-REC-01
+    group: records
+    regulatory_basis: "2019/947 Annex, UAS.SPEC.050"
+    requirement: >
+      Service work for a drone is recorded with its opening and closing, and the record remains
+      readable after the work is closed and after the drone is decommissioned.
+
+  # --- event consistency and idempotency ---
+
+  - id: SR-X-01
+    group: event_consistency_and_idempotency
+    requirement: >
+      A domain event must never be visible externally before the durable state change it represents
+      commits. A rolled-back state change must produce no externally visible event.
+
+  - id: SR-X-02
+    group: event_consistency_and_idempotency
+    requirement: >
+      Every emitted event carries a unique eventId, the tenant identifier, a correlation identifier
+      (from the incoming request, or generated at the system boundary for automatic reactions),
+      the identifier of its cause when the cause is a restriction (restriction id and version) or
+      a timeout, the primary entity identifier, the state version after the change, and the
+      complete target state required by its event contract. In a reaction caused by a
+      restriction, the event names the restriction as its cause and carries a correlation
+      identifier generated for that tenant; the correlation identifier of the administrator's
+      request never appears in a tenant's events.
+
+  - id: SR-X-03
+    group: event_consistency_and_idempotency
+    requirement: >
+      Retrying the same mutating user action with the same idempotency key returns the same result
+      without a duplicate state change or duplicate domain event. Telemetry frames are deduplicated
+      by (session, sequence) (SR-TEL-01); external events by their event identifier.
+
+  - id: SR-X-04
+    group: event_consistency_and_idempotency
+    requirement: >
+      Every outbound drone command and charge-service request carries an idempotency key. A command
+      sent again for the same intent, including after a restart, carries the same key.
+
+  - id: SR-X-05
+    group: event_consistency_and_idempotency
+    requirement: >
+      An event may be delivered to the sink more than once with the same eventId; this is not a
+      defect. Two events with different eventIds for the same state transition are a defect.

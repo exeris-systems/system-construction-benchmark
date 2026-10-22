@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.2",
+  "scope": "benchmark-instrument",
+  "categories": [
+    "contract_design",
+    "oracle",
+    "mutants",
+    "reference_implementations",
+    "harness",
+    "audits"
+  ],
+  "entries": [
+    {
+      "date": "before 2026-10-22",
+      "category": "contract_design",
+      "humanDaysEstimate": {
+        "min": 0.25,
+        "max": 0.375,
+        "basis": "2–3 h, 8 h working day"
+      },
+      "tokens": null,
+      "tokenSource": "not logged",
+      "notes": "Earlier contract work (program plan, first requirements draft); Phase 0 excluded."
+    },
+    {
+      "date": "2026-10-22",
+      "category": "contract_design",
+      "humanDaysEstimate": {
+        "min": 0.25,
+        "max": 0.375,
+        "basis": "2–3 h, 8 h working day"
+      },
+      "tokens": {
+        "input": 166,
+        "output": 148005,
+        "cacheRead": 17241712,
+        "cacheWrite": 301957
+      },
+      "tokenSource": "Claude Code session log of the contract work in this repository, 05:43–08:21 UTC; chat-interface review sessions are not logged and not included",
+      "notes": "Domain profile, requirements, decisions D-16..D-41, user-story procedure. The human-time estimate covers all of this day's instrument work, including the chat review session."
+    },
+    {
+      "date": "2026-10-22",
+      "category": "contract_design",
+      "humanDaysEstimate": null,
+      "tokens": null,
+      "tokenSource": "claude.ai chat interface; usage not exposed, not measurable",
+      "proxy": {
+        "transcriptCharacters": null,
+        "turns": null,
+        "source": "conversation export"
+      },
+      "notes": "Architecture reviews of the domain profile, requirements, decisions, and user-story procedure. Human time is counted in the entry above."
+    }
+  ],
+  "notes": "Tokens are measured where a session log exists; sessions without a log are listed by name with tokens null and are never added to a token total, so a token sum is not the full cost. Human time is a rough estimate in working days per entry, never seconds, and is counted once. Record only work on contract, oracle, mutants, reference implementations, harness, and audits; never campaign runs."
+}

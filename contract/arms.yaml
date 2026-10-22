@@ -1,0 +1,26 @@
+# Phase 1 declaration only; it does not authorize a scored campaign.
+arms:
+  - id: exeris
+    scope: pilot
+    external_store: postgres
+    surfaces_under_test:
+      http: stable
+      persistence: stable
+      events: preview
+  - id: spring-dbos
+    scope: planned_subset
+    proximity: deployment_shape
+    external_store: postgres
+    surfaces_under_test:
+      durable_execution: to_be_verified
+      persistence: to_be_verified
+      events: to_be_verified
+    note: "Declared comparator for H5; versions and maturity are not yet frozen."
+
+operational_claims:
+  h5a_process_count: "Expected application-process tie: 1 : 1."
+  durable_store: "Every arm needs a database; all arms run against the same PostgreSQL version and profile, so the store is a shared dependency, not a compared one."
+  h5b_scope: "Compare resting footprint only after an equivalent deployment profile is frozen."
+  frontend_process_policy: >
+    A frontend development server is not counted in backend D-floor. If a frontend gate is admitted,
+    its artifact must be served statically by the application deployment or reported outside the backend process vector.
