@@ -1,0 +1,29 @@
+{
+ "id": "7cff57afefad48159b00febbbd112891",
+ "created": 1792681683,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 940,
+  "total_tokens": 1097,
+  "completion_tokens": 157,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We keep the information about the airspace itself—like which zones are open or closed, where the flight corridors are, and when closures start or end. That’s all public data from the authorities, so it’s the same for everyone.\n\nWe also track how closures affect our customers—like how many of their drones are stuck in a closed zone or how many sites are blocked. But we don’t dig into their operations, like which drones belong to which company or who’s flying where. That’s their business, not ours.\n\nThe platform company’s management uses this to see how well the service is running—like if closures are causing big delays. But we don’t share anything with the customers themselves. They get alerts through their own systems, not from us."
+   }
+  }
+ ]
+}

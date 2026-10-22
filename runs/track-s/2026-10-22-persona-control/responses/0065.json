@@ -1,0 +1,29 @@
+{
+ "id": "e61adf4ae5cd4fdfb9bde39cb4a108a5",
+ "created": 1792681802,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 940,
+  "total_tokens": 1055,
+  "completion_tokens": 115,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We keep the airspace information that the authorities publish—like zones, closures, and corridor details. That’s shared data, so everyone sees the same thing. The companies don’t give us their own flight plans or drone locations; we don’t need that to do our job.\n\nThe only people who use it are the airspace desk here and the companies’ own staff. They check the service to see if their drones can fly where they’re supposed to, and if there are any sudden closures or changes. That’s it—no one else touches it."
+   }
+  }
+ ]
+}

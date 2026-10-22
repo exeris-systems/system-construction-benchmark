@@ -1,0 +1,29 @@
+{
+ "id": "f6dfd84afe274395a6e8d152e1c98425",
+ "created": 1792681633,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1162,
+  "total_tokens": 1262,
+  "completion_tokens": 100,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, it varies a lot by customer. The parcel delivery guy has maybe a couple hundred—he’s always adding more as demand grows. The inspection firm has fewer, probably around fifty or so, since they don’t need as many at once. The hospital logistics one is somewhere in between, maybe eighty or ninety. So overall, we’re talking a few hundred drones total across all of them, but it’s not like we track them all at once—each company manages their own fleet."
+   }
+  }
+ ]
+}

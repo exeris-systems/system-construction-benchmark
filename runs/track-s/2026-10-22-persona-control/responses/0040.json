@@ -1,0 +1,29 @@
+{
+ "id": "51bbfa330fc5407eb93feeab92dc0d07",
+ "created": 1792681741,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2397,
+  "total_tokens": 2510,
+  "completion_tokens": 113,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the system stores anything internally—that’s not my job. All I care about is that the system tells me which drones *could* reach a job’s starting point, not which one *should* be chosen.\n\nI just need to know the sites involved in a route—where the drone starts, where it goes, and where it ends. If the system can show me that, I can decide if it’s safe to fly there based on the drone’s battery, sensors, and any closures. The rest is up to me."
+   }
+  }
+ ]
+}

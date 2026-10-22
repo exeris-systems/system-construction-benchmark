@@ -1,0 +1,29 @@
+{
+ "id": "21a5f09d3ff14f9cb0888926cc3b76b2",
+ "created": 1792681818,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1451,
+  "total_tokens": 1557,
+  "completion_tokens": 106,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t track how many drones each company has—it’s not my job. The companies manage their own fleets, and I don’t need to know their exact numbers to do my work.\n\nWhat *does* matter to me is how many of their drones might be affected by a closure. For example, if a corridor gets blocked, I can see if multiple companies have drones flying through it at the same time. But I don’t know how many drones they have in total. You’d have to ask them."
+   }
+  }
+ ]
+}

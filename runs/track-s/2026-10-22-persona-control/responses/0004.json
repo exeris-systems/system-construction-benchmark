@@ -1,0 +1,29 @@
+{
+ "id": "547579b1e1254fac97920217b0558b96",
+ "created": 1792681639,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1471,
+  "total_tokens": 1648,
+  "completion_tokens": 177,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh man, that’s one of those things that can really mess things up. If a drone just randomly restarts mid-flight, it might keep going—sometimes it does, sometimes it doesn’t. If it does, it might just keep flying where it was headed, or it might get confused and start doing weird stuff, like flying in circles or heading off-course. The big worry is that it could end up in the wrong place, or worse, crash somewhere it shouldn’t.\n\nWe usually get a report from the drone’s autopilot when it restarts, but since radio coverage is so spotty, the message might not come through right away—or at all. By the time we notice, the drone could already be miles away from where it was supposed to be. That’s why we always double-check the logs and the last known position when something like that happens."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "67d3818e7a614ae38e09628dd458f21f",
+ "created": 1792681739,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2265,
+  "total_tokens": 2386,
+  "completion_tokens": 121,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t track that kind of thing—it’s not my job. The platform shows me what’s happening with *my* company’s drones, but not the others’. If you want to know how many flights were affected across all companies, you’d have to ask the platform team or look at their logs.\n\nAll I know is that yesterday’s closure near the industrial zone messed up a few of *my* deliveries. We had to reroute some drones and cancel a couple of inspections because the drones couldn’t get back in time. But I don’t know what happened with the other companies."
+   }
+  }
+ ]
+}

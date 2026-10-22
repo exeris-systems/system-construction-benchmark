@@ -1,0 +1,29 @@
+{
+ "id": "60f16eac8b5642a18077aa013044964f",
+ "created": 1792681786,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1754,
+  "total_tokens": 1911,
+  "completion_tokens": 157,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Not all at once—sites have limits. For example, a busy port might only let two drones take off or land at the same time, depending on the space and the rules. If more are trying, we have to stagger them.\n\nSometimes it’s obvious—like if one drone is still landing and another is just taking off. But other times it’s tricky, especially if drones are restarting mid-flight or if the radio signals get delayed. I’ve had to call off a takeoff because the system didn’t update fast enough about a drone that was still in the airspace.\n\nThe platform could help by showing me who’s already using the site, but it can’t decide for me. I still have to make sure no two drones are in the way at once."
+   }
+  }
+ ]
+}

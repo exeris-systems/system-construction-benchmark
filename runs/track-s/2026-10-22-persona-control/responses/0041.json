@@ -1,0 +1,29 @@
+{
+ "id": "5673b90030154733b537741be2e822b0",
+ "created": 1792681743,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 940,
+  "total_tokens": 1064,
+  "completion_tokens": 124,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We keep the information that the authorities publish about airspace restrictions—like closures, zones, and corridors. That’s public data, so it’s not tied to any one company. We also track how those closures affect our customers: which sites are blocked, how many drones are stuck, and how long the delays last.\n\nThe companies use it to plan their flights. They don’t see each other’s data—just the shared airspace picture and how it’s changing. The platform company itself uses it to update the system and make sure everything stays accurate. That’s it. No one else touches it."
+   }
+  }
+ ]
+}

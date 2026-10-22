@@ -1,0 +1,29 @@
+{
+ "id": "ad2c4d6d065e450896215e971c9f0dbe",
+ "created": 1792681644,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1833,
+  "total_tokens": 1976,
+  "completion_tokens": 143,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t handle that—it’s not my job. The airspace desk is part of the platform company’s operations team, and they deal with the regulators and the U-space rules. They’re the ones who get the notices about airspace closures, like when a military exercise is happening or a big event is going on.\n\nI think they look at how long the restriction is supposed to last based on the official notices, but I’m not sure how they decide if it’s safe to lift it early or if they need to extend it. I just know that sometimes closures get updated, and we all have to adjust our flights accordingly. If you want details, you’d have to ask them."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "7023d62e8f0c472eb4d0e3dd364c7ffb",
+ "created": 1792681747,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1194,
+  "total_tokens": 1318,
+  "completion_tokens": 124,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Mostly two kinds: **planned closures** and **sudden ones**.\n\nPlanned closures come with a start and end time—like a military exercise or a festival where flying is banned for a few hours. But then there are **sudden closures**, often because of weather or an emergency. Those can pop up at any time, and they might even get changed mid-day—like when a closure gets widened or moved.\n\nSometimes, the authorities also add temporary restrictions, like lowering the max altitude in a zone. That’s not a full closure, but it still messes with our flights."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "55478a726d7c48c1834975678bc3acd9",
+ "created": 1792681717,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1817,
+  "total_tokens": 1942,
+  "completion_tokens": 125,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t deal with the airspace desk—they’re a separate team at the platform company. But from what I’ve heard, they usually set closures based on the rules and how long it takes to clear the area.\n\nSometimes they overestimate, like when they close a whole zone for a few hours because of a big event, but the actual issue gets fixed in half that time. Other times, they underestimate—like when a temporary restriction pops up because of a fire or a protest, and it drags on longer than expected. We just have to wait for their updates and adjust our plans accordingly."
+   }
+  }
+ ]
+}

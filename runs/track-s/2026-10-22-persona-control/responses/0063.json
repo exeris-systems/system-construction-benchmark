@@ -1,0 +1,29 @@
+{
+ "id": "5784da1e8f2842aa919d0152de1b0004",
+ "created": 1792681797,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2609,
+  "total_tokens": 2776,
+  "completion_tokens": 167,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t track that kind of thing—it’s not my job. The platform might have some numbers, but I’d have to ask the support team about that. I just deal with my own company’s drones and jobs.\n\nFor me, yesterday’s closure was a headache. We had three deliveries stuck because the closure blocked the usual routes, and one inspection had to be rerouted last minute. I had to call off one drone entirely because the battery was too low to find an alternative path. And then, when the closure got extended, I had to scramble to reassign the loads to other drones before they missed their deadlines.\n\nBut I don’t know how bad it was for the other companies. Maybe they were fine, maybe they had worse problems—I just focus on what’s in front of me."
+   }
+  }
+ ]
+}

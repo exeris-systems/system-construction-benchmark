@@ -1,0 +1,29 @@
+{
+ "id": "aafb428195c24db9b4ddb5bf30fc79e2",
+ "created": 1792681652,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1350,
+  "total_tokens": 1507,
+  "completion_tokens": 157,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher does—it’s their legal responsibility. They pick the drone and the route based on what’s available, the job’s needs, and the rules. They can’t let software decide that for them, but they *do* need help figuring out which drones are free and where they can go.\n\nFor example, if a delivery needs to go from Site A to Site B, the dispatcher might check which drones are charged up, have the right sensors if needed, and can reach the start point without hitting a closure. Sometimes they have to wait for a drone to finish its current job or for a site to clear up so another drone can land. It’s all about timing and making sure the drone isn’t stuck in a no-fly zone or running low on battery."
+   }
+  }
+ ]
+}

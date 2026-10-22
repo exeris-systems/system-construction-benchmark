@@ -1,0 +1,29 @@
+{
+ "id": "111541e9c16d4a65943c93eeaa0a7c67",
+ "created": 1792681678,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2242,
+  "total_tokens": 2390,
+  "completion_tokens": 148,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t track that kind of thing—it’s not my job. But I can tell you what happened *here* at my site.\n\nYesterday, a sudden closure near the port shut down half our drones mid-flight. Three had to land early because they couldn’t get clearance to keep going. One got stuck in a loop trying to reroute, so I had to call it back manually. The rest just kept flying, but now they’re all sitting at the airport waiting for the closure to lift. It messed up our whole schedule for the day.\n\nI’d guess other companies had similar problems, but I don’t know the details. The platform might have some logs, but I’d ask the tech team about that."
+   }
+  }
+ ]
+}

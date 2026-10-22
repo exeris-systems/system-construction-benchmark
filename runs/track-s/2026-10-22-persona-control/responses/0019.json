@@ -1,0 +1,29 @@
+{
+ "id": "29a45d0facaf48fe94e4c15ce88fafdc",
+ "created": 1792681689,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1248,
+  "total_tokens": 1413,
+  "completion_tokens": 165,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Mostly two kinds: **planned closures** and **sudden closures**.\n\nPlanned closures come with a start and end time—like a military exercise or a big event where flying’s banned for a few hours. But even those get changed all the time. Sometimes the start time moves, or the area gets bigger, or the end time gets pushed back. We have to update the system fast, before drones start flying into the wrong place.\n\nThen there are **sudden closures**, like when a bird hits a wind turbine and they shut down a whole zone for safety. Those happen without warning, and we have to act immediately—pause all flights in that area, tell the companies, and hope the drones can land safely. Those are the worst because you don’t have time to plan."
+   }
+  }
+ ]
+}

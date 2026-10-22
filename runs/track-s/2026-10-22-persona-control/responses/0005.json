@@ -1,0 +1,29 @@
+{
+ "id": "21fa15b564d140debca856824cebad4c",
+ "created": 1792681642,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1664,
+  "total_tokens": 1818,
+  "completion_tokens": 154,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Not even close. Reports come and go like the weather—sometimes they arrive on time, sometimes they’re delayed, sometimes they don’t show up at all. And if the drone restarts in flight, you might get multiple reports for the same thing, or none at all. It’s like trying to follow a conversation where half the words are missing.\n\nWe’ve had drones send updates out of order, or just drop off completely for minutes at a time. If the radio signal is weak—like near a port or in bad weather—you might not hear from a drone for what feels like forever. And if the drone’s battery is low, it might just shut down before sending its final report. It’s frustrating, but we’ve learned to expect it."
+   }
+  }
+ ]
+}

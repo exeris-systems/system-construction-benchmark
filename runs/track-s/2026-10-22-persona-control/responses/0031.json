@@ -1,0 +1,29 @@
+{
+ "id": "bfb93ba051ba49d1a000ae2fdd00ffff",
+ "created": 1792681719,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1959,
+  "total_tokens": 2119,
+  "completion_tokens": 160,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher doesn’t pick the drone—they just assign the job to the company’s system, and our software picks the right one. It looks at which drones are available, their battery levels, and how close they are to the start site.\n\nThe corridor? That’s set by the company’s own planning system, not ours. We just make sure the drone can handle the route—like if it’s long enough for the battery or if the sensors are right for the job. Sometimes the route changes last-minute because of weather or airspace, and then we have to adjust on the fly.\n\nIt’s all automated, but if something goes wrong, the dispatcher has to step in and fix it. Like when a drone’s battery’s too low, or the route goes through a closed zone."
+   }
+  }
+ ]
+}

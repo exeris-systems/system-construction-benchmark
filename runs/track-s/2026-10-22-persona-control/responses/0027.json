@@ -1,0 +1,29 @@
+{
+ "id": "9eceb6d180e843dab6c5538f76843a8c",
+ "created": 1792681711,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1416,
+  "total_tokens": 1482,
+  "completion_tokens": 66,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, pads are strictly tied to each company’s own sites. They’re not shared—even if one’s empty, we can’t just send our drones there. Each company sets up and maintains its own charging infrastructure, and that’s it. If a pad is down or full, we have to deal with it ourselves."
+   }
+  }
+ ]
+}

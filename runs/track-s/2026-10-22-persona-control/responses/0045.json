@@ -1,0 +1,29 @@
+{
+ "id": "661dcd32c81f46989557eee5d3e79660",
+ "created": 1792681751,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1448,
+  "total_tokens": 1570,
+  "completion_tokens": 122,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "That varies a lot. The parcel company probably has the biggest fleet—hundreds, maybe? They’re always expanding. The hospital one is smaller, maybe a dozen or so. The inspection firm is somewhere in between, but I don’t track exact numbers.\n\nWhat matters more is how many drones are flying at once near a site. Some sites get busy, and if too many drones try to take off or land at the same time, we have to slow things down. But I don’t keep tabs on how many each company has—just how many are affected by closures or site limits."
+   }
+  }
+ ]
+}

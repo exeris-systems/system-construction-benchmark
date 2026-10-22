@@ -1,0 +1,29 @@
+{
+ "id": "9c92e0df25704d2b95b0e00b2401dc6d",
+ "created": 1792681695,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1705,
+  "total_tokens": 1820,
+  "completion_tokens": 115,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Technicians don’t come to *me*—they’re not part of my world. When a drone has a fault, it’s their job to check it, fix it, or send it back to the factory if it’s broken.\n\nSometimes they call the airspace desk if they’re not sure why a drone couldn’t finish a job—like if it got stuck in a closed zone or if the system told it to land early. But mostly, they just deal with their own drones and their own problems. I only see the airspace, not the drones themselves."
+   }
+  }
+ ]
+}

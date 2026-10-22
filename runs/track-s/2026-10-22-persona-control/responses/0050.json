@@ -1,0 +1,29 @@
+{
+ "id": "517948de1445468f803882958df26774",
+ "created": 1792681763,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1302,
+  "total_tokens": 1404,
+  "completion_tokens": 102,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Nope, not at all. Each drone has its own charging connector, and they’re all different. You can’t just plug any drone into any pad—it’s like trying to fit a square peg into a round hole. That’s why we’ve got a bunch of different pads set up at each site, one for each type of drone. It’s a pain to keep track of, especially when a drone’s battery’s about to die and you’ve got to rush it to the right pad."
+   }
+  }
+ ]
+}

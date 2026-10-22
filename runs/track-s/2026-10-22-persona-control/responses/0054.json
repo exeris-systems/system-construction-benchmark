@@ -1,0 +1,29 @@
+{
+ "id": "d6458bfed8af4a1490030a6b28020655",
+ "created": 1792681772,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1907,
+  "total_tokens": 2067,
+  "completion_tokens": 160,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t deal with that—it’s not my job. The airspace desk is a separate team, and they’re the ones who talk to the regulators and figure out how long a closure should last. They’ve got their own rules and data, and they’re the ones who make sure everything stays legal.\n\nI just make sure the drones are ready to fly when they’re supposed to. If there’s a closure, I’ll get a message saying, *\"Hey, no drones in this area for the next two hours,\"* and I’ll make sure none of my drones are scheduled to go there. But how long the closure lasts? That’s their call. They’ve got the maps, the weather data, and all the red tape to deal with. I just follow their instructions."
+   }
+  }
+ ]
+}

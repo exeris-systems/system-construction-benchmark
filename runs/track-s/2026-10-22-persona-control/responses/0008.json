@@ -1,0 +1,29 @@
+{
+ "id": "e464d52493ab40b78af910d8dfa2728f",
+ "created": 1792681649,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2139,
+  "total_tokens": 2319,
+  "completion_tokens": 180,
+  "prompt_tokens_details": {
+   "cached_tokens": 1920
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about screens or buttons—this isn’t my area. I just use whatever the platform gives us to check drone statuses, see if they’re charging, or get alerts when something’s wrong.\n\nIf you’re asking what I *need* to see, it’s mostly:\n- Which drones are flying, which are charging, and which are broken.\n- If a drone’s battery is low or if it’s stuck somewhere.\n- When a job starts or finishes, so I know if it’s on time or delayed.\n- If a charging pad is out of order, so I can fix it or move a drone to another pad.\n\nBut I don’t pick routes, assign drones, or do any of that planning stuff. That’s up to the companies themselves. Just keep it simple—no fancy dashboards or reports, just the basics so I can do my job."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "23338340b4ca4609bd1e9feb9f3af352",
+ "created": 1792681765,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1422,
+  "total_tokens": 1524,
+  "completion_tokens": 102,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No way. Each company keeps its own pads locked down to its own drones. They’re not shared, even if they’re sitting empty. The rules say we’ve got to keep our equipment separate—no mixing drones from different companies on the same charging setup. That’s one of those \"don’t ask, don’t tell\" kind of things. If we tried to use someone else’s pad, they’d probably call the platform and complain, and then we’d both be in trouble with the regulators."
+   }
+  }
+ ]
+}

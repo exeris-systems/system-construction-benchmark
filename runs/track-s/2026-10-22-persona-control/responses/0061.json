@@ -1,0 +1,29 @@
+{
+ "id": "ddfaef956b304409a6324151be4e8047",
+ "created": 1792681791,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2130,
+  "total_tokens": 2378,
+  "completion_tokens": 248,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure happens while a drone is flying, it’s my job to decide what to do—fast. Sometimes the drone can just reroute around the closed area, if the rules allow it and the battery is okay. Other times, I have to call it back to land, check if it can take off again from a different spot, or even cancel the whole job if it’s too risky.\n\nFor example, I once had an inspection drone mid-flight when a sudden closure blocked its return path. The drone’s battery was low, and the wind was picking up, so I had to land it at the nearest safe spot—even if it wasn’t the original site. Then I had to figure out how to get it back to the company’s pad later, because the charging connectors don’t match everywhere.\n\nThe worst part? The closure might change while the drone is still in the air. I’ll get updates saying, *“Oh, now this area’s closed too,”* and I have to scramble again. Sometimes the drone’s autopilot handles it, but other times it just freezes or restarts, and then I’m playing whack-a-mole with the system to get it back under control."
+   }
+  }
+ ]
+}

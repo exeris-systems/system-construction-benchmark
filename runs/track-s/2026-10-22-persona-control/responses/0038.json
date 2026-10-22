@@ -1,0 +1,29 @@
+{
+ "id": "518a7f2e35334deba539fd1eb74ace1a",
+ "created": 1792681737,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2118,
+  "total_tokens": 2250,
+  "completion_tokens": 132,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We’ve got a few different types—it’s a mess. Some pads use USB-C, some use a proprietary connector from one of the drone manufacturers, and others use a different standard that’s only compatible with older models. They’re not interchangeable, so if a drone’s battery is dead and the pad doesn’t match, we’re out of luck until we can swap it out.\n\nSometimes, a drone will arrive at a site with a dead battery, and the pad there won’t fit. Then we have to scramble to find another pad with the right connector or call a tech to bring the right charger. It slows everything down."
+   }
+  }
+ ]
+}

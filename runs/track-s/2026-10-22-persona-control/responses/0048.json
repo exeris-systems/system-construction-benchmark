@@ -1,0 +1,29 @@
+{
+ "id": "a7984ce0e8f14e1d8bf4f2724c5cfd78",
+ "created": 1792681758,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1855,
+  "total_tokens": 1968,
+  "completion_tokens": 113,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "There’s no separate database for closures—it’s all just in the service itself. The whole system runs on a single server, and the closures are stored right there alongside the flight corridors and site info.\n\nWe don’t have a fancy database setup; it’s all mixed in with the rest of the airspace data. If we had more time, we’d probably want to split it up, but right now, it’s all one big file. The companies don’t care about the tech—just that the info is accurate and up to date."
+   }
+  }
+ ]
+}

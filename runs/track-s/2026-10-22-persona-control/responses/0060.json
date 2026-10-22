@@ -1,0 +1,29 @@
+{
+ "id": "d3ef46d80afa462cb55650ceaa88c3e3",
+ "created": 1792681788,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1922,
+  "total_tokens": 2114,
+  "completion_tokens": 192,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures are a nightmare—they keep changing. Sometimes an area gets widened, or a planned closure gets moved to an earlier time, or a sudden one pops up because of a protest or a fire. The worst part? It happens while drones are already in the air.\n\nFor example, I had a delivery going from a warehouse to a hospital when a sudden closure was announced near the hospital. I had to call the drone back, find a new route, and hope the battery held out. Then, an hour later, the closure got extended—now I had to cancel the whole job and reassign the load to another drone.\n\nThe platform sends updates, but they’re not always in time. Sometimes the info is wrong, or it takes too long to get through. I end up double-checking with the authorities myself just to be sure. And if the system crashes during a closure change, we’re stuck waiting for it to come back up."
+   }
+  }
+ ]
+}

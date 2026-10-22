@@ -1,0 +1,29 @@
+{
+ "id": "4172dc160e454cca88f93074404da163",
+ "created": 1792681681,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2401,
+  "total_tokens": 2570,
+  "completion_tokens": 169,
+  "prompt_tokens_details": {
+   "cached_tokens": 2048
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the system stores anything internally—that’s not my job. But I *do* know how we think about routes when we’re planning flights.\n\nWe don’t use GPS coordinates for everything—some sites have multiple landing spots, and drones can’t just park anywhere. So we think in terms of named sites and specific takeoff/landing pads at those sites. For example, \"Site A, Pad 3\" is different from \"Site A, Pad 5,\" even if they’re close together.\n\nFor inspections, we follow a set order of points, but deliveries are usually just from one site to another. The key is making sure the drone can get from A to B without hitting a closure or running out of battery. And sometimes we have to wait for a site to clear up before sending another drone out."
+   }
+  }
+ ]
+}

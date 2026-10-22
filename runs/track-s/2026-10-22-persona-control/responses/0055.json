@@ -1,0 +1,29 @@
+{
+ "id": "d6b5b67d12f543cca468e350b92feb44",
+ "created": 1792681775,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2084,
+  "total_tokens": 2247,
+  "completion_tokens": 163,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher doesn’t pick the drone—they just assign the job to a site, and the system picks the drone itself. It’s all about which drones are available, their battery levels, and where they’re currently charging. If a drone’s already out on a delivery, it won’t get picked for another one until it’s back.\n\nAs for the corridor? That’s usually set by the customer’s system—they tell us the start and end points, and the drone just flies the straightest route it can between them. The dispatcher doesn’t plan the path; they just make sure the drone’s ready to go. Sometimes the route’s blocked by weather or airspace rules, and then the drone just has to wait or find another way. It’s not pretty, but that’s how it works."
+   }
+  }
+ ]
+}

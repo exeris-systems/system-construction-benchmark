@@ -1,0 +1,29 @@
+{
+ "id": "375caa1de02844ce954e12f2a51e4b0a",
+ "created": 1792681733,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1774,
+  "total_tokens": 1928,
+  "completion_tokens": 154,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures get changed all the time—sometimes multiple times in a single day. The authorities might widen a restricted zone because of an event, or they’ll move the end time of a closure if something unexpected happens, like a protest or a weather alert.\n\nFor example, I remember one time a closure near a port was expanded suddenly because of a ship traffic issue. Halfway through the day, the rules changed, and drones already in the air had to reroute or land early. It messed up a few deliveries, and we had to call off a couple of inspections because the drones couldn’t get back safely.\n\nWe get updates through the platform, but sometimes the changes come so fast that dispatchers have to double-check the latest rules before signing off a flight."
+   }
+  }
+ ]
+}

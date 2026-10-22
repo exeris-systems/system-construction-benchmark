@@ -1,0 +1,29 @@
+{
+ "id": "b02fec6168de46dfb594d9febdb4c50c",
+ "created": 1792681784,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1607,
+  "total_tokens": 1738,
+  "completion_tokens": 131,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, absolutely not. The rules say I’m the one responsible for every flight, and if something goes wrong—like a drone crashes or a job gets delayed—my company could be held liable. If software picks the drone, and then something happens, who’s to blame? The company? The software? The platform? It’s not worth the risk.\n\nI just want tools to help me *see* what’s possible—like which drones are available, which ones have enough battery, or which routes are clear. But the final call? That’s mine. If I let software decide, I’d be sleeping with one eye open every time."
+   }
+  }
+ ]
+}

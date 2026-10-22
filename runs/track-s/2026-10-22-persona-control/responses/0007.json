@@ -1,0 +1,29 @@
+{
+ "id": "2c49ec97021644ca95c3894fe1fc1dfd",
+ "created": 1792681647,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1993,
+  "total_tokens": 2127,
+  "completion_tokens": 134,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher doesn’t pick the drone or the route—they just assign the job to the company’s system. The company’s own software (or their own people) figure out which drone is available, where it’s closest to the pickup, and which corridor it can take based on airspace rules and battery life.\n\nSometimes the drone’s battery is low, or the weather’s bad, so they might pick a different one. But they don’t use the platform’s system for that—they’ve got their own way of handling it. The platform just makes sure the job gets sent to the right company and that the drone’s autopilot knows where to go."
+   }
+  }
+ ]
+}

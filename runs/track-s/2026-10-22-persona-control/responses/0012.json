@@ -1,0 +1,29 @@
+{
+ "id": "3809e01b72484b2bad68ddd794853d59",
+ "created": 1792681658,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1798,
+  "total_tokens": 1924,
+  "completion_tokens": 126,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures get changed all the time—sometimes multiple times in a single day. The authorities might expand a no-fly zone because of a protest or a fire, or they might shorten a closure’s end time if the weather clears up unexpectedly. Sometimes they even add new ones suddenly, like when a military exercise starts without warning.\n\nDispatchers have to keep an eye on these updates because a drone already in the air might suddenly be flying through a restricted area. If that happens, we have to call the flight back or reroute it—if we can—before it gets into trouble. It’s a constant headache."
+   }
+  }
+ ]
+}

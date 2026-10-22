@@ -1,0 +1,557 @@
+{
+ "technician": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "T1",
+     "kind": "fact",
+     "question": "How many drones does your company run, roughly?",
+     "expect": "a few hundred (3.b1)",
+     "answer": "Oh, it varies a lot by customer. The parcel delivery guy has maybe a couple hundred—he’s always adding more as demand grows. The inspection firm has fewer, probably around fifty or so, since they don’t need as many at once. The hospital logistics one is somewhere in between, maybe eighty or ninety. So overall, we’re talking a few hundred drones total across all of them, but it’s not like we track them all at once—each company manages their own fleet."
+    },
+    {
+     "id": "T2",
+     "kind": "fact",
+     "question": "Can any of your drones charge on any of your pads?",
+     "expect": "no — connector types differ and are not interchangeable (3.b1)",
+     "answer": "No way. Each drone has its own charging connector, and they’re all different. You can’t just plug any drone into any pad—it’s got to match. That’s why we’ve got a bunch of pads at each site, but they’re all set up for the specific models that company uses. If a drone’s connector doesn’t fit, it won’t charge, and that’s a real pain when you’re in a hurry."
+    },
+    {
+     "id": "T3",
+     "kind": "fact",
+     "question": "When a pad is free at another company's site, can you use it?",
+     "expect": "no — pads are never lent to another company (3.b2)",
+     "answer": "Nope, pads are strictly for their own drones. Each company keeps their charging setup separate—no sharing, no lending. If a pad is free at another site, it’s not ours to use, and we wouldn’t even know how to access it anyway. We’ve got our own setups at our own locations, and that’s how it stays."
+    },
+    {
+     "id": "T4",
+     "kind": "fact",
+     "question": "What happens to a drone that restarts in the air?",
+     "expect": "it restarts after a software fault and carries on (6.b3)",
+     "answer": "Oh man, that’s one of those things that can really mess things up. If a drone just randomly restarts mid-flight, it might keep going—sometimes it does, sometimes it doesn’t. If it does, it might just keep flying where it was headed, or it might get confused and start doing weird stuff, like flying in circles or heading off-course. The big worry is that it could end up in the wrong place, or worse, crash somewhere it shouldn’t.\n\nWe usually get a report from the drone’s autopilot when it restarts, but since radio coverage is so spotty, the message might not come through right away—or at all. By the time we notice, the drone could already be miles away from where it was supposed to be. That’s why we always double-check the logs and the last known position when something like that happens."
+    },
+    {
+     "id": "T5",
+     "kind": "fact",
+     "question": "Do the reports from your drones always reach you, and in order?",
+     "expect": "no — late, out of order, more than once, or not at all (6.b2)",
+     "answer": "Not even close. Reports come and go like the weather—sometimes they arrive on time, sometimes they’re delayed, sometimes they don’t show up at all. And if the drone restarts in flight, you might get multiple reports for the same thing, or none at all. It’s like trying to follow a conversation where half the words are missing.\n\nWe’ve had drones send updates out of order, or just drop off completely for minutes at a time. If the radio signal is weak—like near a port or in bad weather—you might not hear from a drone for what feels like forever. And if the drone’s battery is low, it might just shut down before sending its final report. It’s frustrating, but we’ve learned to expect it."
+    },
+    {
+     "id": "T6",
+     "kind": "outside",
+     "question": "How does the airspace desk decide how long a closure lasts?",
+     "expect": "does not know, or refers to the airspace desk or the authorities (not in the technician slice)",
+     "answer": "I don’t handle that—it’s not my job. The airspace desk is part of the platform company’s operations team, and they deal with the regulators and the U-space rules. They’re the ones who get the notices about airspace closures, like when a military exercise is happening or a big event is going on.\n\nI think they look at how long the restriction is supposed to last based on the official notices, but I’m not sure how they decide if it’s safe to lift it early or if they need to extend it. I just know that sometimes closures get updated, and we all have to adjust our flights accordingly. If you want details, you’d have to ask them."
+    },
+    {
+     "id": "T7",
+     "kind": "outside",
+     "question": "Which drone does a dispatcher pick for a delivery, and along which corridor?",
+     "expect": "does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)",
+     "answer": "The dispatcher doesn’t pick the drone or the route—they just assign the job to the company’s system. The company’s own software (or their own people) figure out which drone is available, where it’s closest to the pickup, and which corridor it can take based on airspace rules and battery life.\n\nSometimes the drone’s battery is low, or the weather’s bad, so they might pick a different one. But they don’t use the platform’s system for that—they’ve got their own way of handling it. The platform just makes sure the job gets sent to the right company and that the drone’s autopilot knows where to go."
+    },
+    {
+     "id": "T8",
+     "kind": "no-design",
+     "question": "What screens and buttons should the new service have?",
+     "expect": "describes needs and worries, proposes no screens, features or mechanisms",
+     "answer": "I don’t know about screens or buttons—this isn’t my area. I just use whatever the platform gives us to check drone statuses, see if they’re charging, or get alerts when something’s wrong.\n\nIf you’re asking what I *need* to see, it’s mostly:\n- Which drones are flying, which are charging, and which are broken.\n- If a drone’s battery is low or if it’s stuck somewhere.\n- When a job starts or finishes, so I know if it’s on time or delayed.\n- If a charging pad is out of order, so I can fix it or move a drone to another pad.\n\nBut I don’t pick routes, assign drones, or do any of that planning stuff. That’s up to the companies themselves. Just keep it simple—no fancy dashboards or reports, just the basics so I can do my job."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "T1",
+     "kind": "fact",
+     "question": "How many drones does your company run, roughly?",
+     "expect": "a few hundred (3.b1)",
+     "answer": "Oh, it varies a lot by customer. The parcel delivery firm probably has the biggest fleet—maybe a couple hundred drones, all pretty similar models since they mostly do simple deliveries. The inspection company has fewer, but they’re more specialized, so each one costs more and needs different sensors.\n\nThe hospital logistics one is smaller still, maybe fifty or so, but they’re all kept in top shape because they carry medical supplies. Each company manages its own drones, so I don’t track the total across all of them. Just my own section at a time."
+    },
+    {
+     "id": "T2",
+     "kind": "fact",
+     "question": "Can any of your drones charge on any of your pads?",
+     "expect": "no — connector types differ and are not interchangeable (3.b1)",
+     "answer": "No way. Each drone model has its own charging connector, and they’re not interchangeable. If a drone’s battery is dead, it has to go to a pad that matches its connector type. That’s why we keep track of which pads belong to which company and which models they support.\n\nSometimes we forget to check, and a drone gets sent to the wrong pad—then we have to chase it down and move it. Happened last week with the inspection company’s thermal drones; they use a different plug than the delivery drones."
+    },
+    {
+     "id": "T3",
+     "kind": "fact",
+     "question": "When a pad is free at another company's site, can you use it?",
+     "expect": "no — pads are never lent to another company (3.b2)",
+     "answer": "No, pads are strictly tied to each company’s own sites. They’re not shared—even if one’s empty, we can’t just send our drones there. Each company sets up and maintains its own charging infrastructure, and that’s it. If a pad is down or full, we have to deal with it ourselves."
+    },
+    {
+     "id": "T4",
+     "kind": "fact",
+     "question": "What happens to a drone that restarts in the air?",
+     "expect": "it restarts after a software fault and carries on (6.b3)",
+     "answer": "Oh, that’s a pain. If a drone restarts mid-flight, it usually just keeps going on autopilot—sometimes it’s fine, sometimes it’s not. Depends on the model and the fault.\n\nWe’ve had cases where it just keeps flying the same route, even if the job’s already done or the weather’s changed. Other times, it might drift off course or lose altitude. The worst part is, we don’t always get a proper report right away because the radio signal’s patchy. By the time we notice, the drone might be miles away from where it should be.\n\nWe just hope it lands safely somewhere. If it doesn’t, we have to track it down and figure out what happened—sometimes that means calling the local police or searching the area."
+    },
+    {
+     "id": "T5",
+     "kind": "fact",
+     "question": "Do the reports from your drones always reach you, and in order?",
+     "expect": "no — late, out of order, more than once, or not at all (6.b2)",
+     "answer": "Not even close. Reports come and go like they’re on a rollercoaster—sometimes they pile up, sometimes they’re missing entirely. If there’s bad weather or a jammed relay station, we might not hear from a drone for hours, or we’ll get the same report three times in a row.\n\nAnd order? Forget about it. A drone might finish its job, but its last report gets delayed while an earlier one from another drone comes through first. We just have to cross-check the timestamps and the GPS data to make sense of it all. It’s like trying to read a book where the pages keep getting shuffled."
+    },
+    {
+     "id": "T6",
+     "kind": "outside",
+     "question": "How does the airspace desk decide how long a closure lasts?",
+     "expect": "does not know, or refers to the airspace desk or the authorities (not in the technician slice)",
+     "answer": "I don’t deal with the airspace desk—they’re a separate team at the platform company. But from what I’ve heard, they usually set closures based on the rules and how long it takes to clear the area.\n\nSometimes they overestimate, like when they close a whole zone for a few hours because of a big event, but the actual issue gets fixed in half that time. Other times, they underestimate—like when a temporary restriction pops up because of a fire or a protest, and it drags on longer than expected. We just have to wait for their updates and adjust our plans accordingly."
+    },
+    {
+     "id": "T7",
+     "kind": "outside",
+     "question": "Which drone does a dispatcher pick for a delivery, and along which corridor?",
+     "expect": "does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)",
+     "answer": "The dispatcher doesn’t pick the drone—they just assign the job to the company’s system, and our software picks the right one. It looks at which drones are available, their battery levels, and how close they are to the start site.\n\nThe corridor? That’s set by the company’s own planning system, not ours. We just make sure the drone can handle the route—like if it’s long enough for the battery or if the sensors are right for the job. Sometimes the route changes last-minute because of weather or airspace, and then we have to adjust on the fly.\n\nIt’s all automated, but if something goes wrong, the dispatcher has to step in and fix it. Like when a drone’s battery’s too low, or the route goes through a closed zone."
+    },
+    {
+     "id": "T8",
+     "kind": "no-design",
+     "question": "What screens and buttons should the new service have?",
+     "expect": "describes needs and worries, proposes no screens, features or mechanisms",
+     "answer": "I don’t know about screens or buttons—this isn’t my job. I just know what I need to *see* and what I need to *do* to keep things running.\n\nFor example, I need to know which drones are available, which ones are broken, and where they’re charging. I need to be able to send a drone to charge or take it out of service if something’s wrong. And I need to see if a drone’s battery is low or if it’s stuck somewhere.\n\nBut I don’t need fancy reports or graphs—I just need the facts, fast. If the service makes my life easier, that’s great. If it slows me down, I’ll complain."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "T1",
+     "kind": "fact",
+     "question": "How many drones does your company run, roughly?",
+     "expect": "a few hundred (3.b1)",
+     "answer": "Oh, it varies a lot by customer. The parcel delivery guy probably has the biggest fleet—maybe a couple hundred drones, all the same model since they’re all about speed and reliability. The hospital logistics team is smaller, maybe fifty or so, but they’ve got some heavy-duty ones for carrying medical supplies.\n\nThe inspection company is all over the place—different sensors, different weights, so their fleet’s a mix of models. Some of those drones are built like tanks, others are lightweight scouts. I’d say between fifty and a hundred for them, but it changes depending on which projects they’re running."
+    },
+    {
+     "id": "T2",
+     "kind": "fact",
+     "question": "Can any of your drones charge on any of your pads?",
+     "expect": "no — connector types differ and are not interchangeable (3.b1)",
+     "answer": "Nope, not at all. Each drone has its own charging connector, and they’re all different. You can’t just plug any drone into any pad—it’s like trying to fit a square peg into a round hole. That’s why we’ve got a bunch of different pads set up at each site, one for each type of drone. It’s a pain to keep track of, especially when a drone’s battery’s about to die and you’ve got to rush it to the right pad."
+    },
+    {
+     "id": "T3",
+     "kind": "fact",
+     "question": "When a pad is free at another company's site, can you use it?",
+     "expect": "no — pads are never lent to another company (3.b2)",
+     "answer": "No way. Each company keeps its own pads locked down to its own drones. They’re not shared, even if they’re sitting empty. The rules say we’ve got to keep our equipment separate—no mixing drones from different companies on the same charging setup. That’s one of those \"don’t ask, don’t tell\" kind of things. If we tried to use someone else’s pad, they’d probably call the platform and complain, and then we’d both be in trouble with the regulators."
+    },
+    {
+     "id": "T4",
+     "kind": "fact",
+     "question": "What happens to a drone that restarts in the air?",
+     "expect": "it restarts after a software fault and carries on (6.b3)",
+     "answer": "Oh, that’s a nightmare. If a drone just *poofs* back online mid-flight, it usually keeps going where it was headed—unless the autopilot’s messed up, and then it might just hover or spiral. Most of the time, it’s fine, but sometimes it’ll drift off course or get stuck in a weird loop.\n\nThe worst part is, we don’t always know it happened right away. The drone might just keep flying, and we only find out when the job’s done and the data’s all wrong—or when the customer calls because the drone didn’t show up where it was supposed to. Then we’ve got to chase it down and see if it’s still flying, or if it crashed somewhere. And if it’s still up? Good luck getting it back—sometimes it’s just gone until the battery dies."
+    },
+    {
+     "id": "T5",
+     "kind": "fact",
+     "question": "Do the reports from your drones always reach you, and in order?",
+     "expect": "no — late, out of order, more than once, or not at all (6.b2)",
+     "answer": "Not even close. Reports come and go like they’re playing a game of tag. Sometimes they arrive in the right order, but more often than not, they’re all jumbled up—like someone shuffled a deck of cards. And don’t even get me started on duplicates. You’ll get the same report three times in a row, or one that’s half-baked, or just nothing at all.\n\nThe worst is when the radio’s acting up—especially near ports or in storms. One minute you’ve got a clear signal, the next you’re flying blind. And if the drone’s out of range of a relay station? Forget it. You might not hear from it until it’s back at the pad, or not at all. Then you’re just guessing where it went and what it saw."
+    },
+    {
+     "id": "T6",
+     "kind": "outside",
+     "question": "How does the airspace desk decide how long a closure lasts?",
+     "expect": "does not know, or refers to the airspace desk or the authorities (not in the technician slice)",
+     "answer": "I don’t deal with that—it’s not my job. The airspace desk is a separate team, and they’re the ones who talk to the regulators and figure out how long a closure should last. They’ve got their own rules and data, and they’re the ones who make sure everything stays legal.\n\nI just make sure the drones are ready to fly when they’re supposed to. If there’s a closure, I’ll get a message saying, *\"Hey, no drones in this area for the next two hours,\"* and I’ll make sure none of my drones are scheduled to go there. But how long the closure lasts? That’s their call. They’ve got the maps, the weather data, and all the red tape to deal with. I just follow their instructions."
+    },
+    {
+     "id": "T7",
+     "kind": "outside",
+     "question": "Which drone does a dispatcher pick for a delivery, and along which corridor?",
+     "expect": "does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)",
+     "answer": "The dispatcher doesn’t pick the drone—they just assign the job to a site, and the system picks the drone itself. It’s all about which drones are available, their battery levels, and where they’re currently charging. If a drone’s already out on a delivery, it won’t get picked for another one until it’s back.\n\nAs for the corridor? That’s usually set by the customer’s system—they tell us the start and end points, and the drone just flies the straightest route it can between them. The dispatcher doesn’t plan the path; they just make sure the drone’s ready to go. Sometimes the route’s blocked by weather or airspace rules, and then the drone just has to wait or find another way. It’s not pretty, but that’s how it works."
+    },
+    {
+     "id": "T8",
+     "kind": "no-design",
+     "question": "What screens and buttons should the new service have?",
+     "expect": "describes needs and worries, proposes no screens, features or mechanisms",
+     "answer": "I don’t know about screens or buttons—this isn’t my job. But I *do* know what the service needs to *do* for me to do my job.\n\nFirst, it needs to tell me **which drones are available** at which sites, and **which ones are broken or charging**. Right now, I’ve got spreadsheets and phone calls to keep track of that, and it’s a mess.\n\nSecond, it needs to **show me when a drone’s battery’s low** so I can send it to charge before it crashes. And when a drone’s back from a job, it needs to **tell me if it’s working or not**—no more guessing.\n\nThird, it needs to **let me see where drones are** when they’re flying, especially if they restart in the air and go off-course. Right now, I’m just hoping for the best.\n\nAnd finally, it needs to **tell me when a drone’s ready to go back to service** after repairs. No more waiting around for someone to remember to put it back in the system. That’s all I care about."
+    }
+   ]
+  }
+ ],
+ "dispatcher": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "D1",
+     "kind": "fact",
+     "question": "Who decides which drone flies and along which way?",
+     "expect": "the dispatcher, as the licensed person responsible for the flight (2.b2, 4.b4)",
+     "answer": "The dispatcher does—it’s their legal responsibility. They pick the drone and the route based on what’s available, the job’s needs, and the rules. They can’t let software decide that for them, but they *do* need help figuring out which drones are free and where they can go.\n\nFor example, if a delivery needs to go from Site A to Site B, the dispatcher might check which drones are charged up, have the right sensors if needed, and can reach the start point without hitting a closure. Sometimes they have to wait for a drone to finish its current job or for a site to clear up so another drone can land. It’s all about timing and making sure the drone isn’t stuck in a no-fly zone or running low on battery."
+    },
+    {
+     "id": "D2",
+     "kind": "fact",
+     "question": "Would you like the software to pick the drone for you?",
+     "expect": "no — company policy is that software never chooses a drone or a way (4.b4)",
+     "answer": "No, not at all. The dispatcher is the one who signs off on the flight, and if the software picks the drone, then it’s not really *my* decision anymore. That’s a legal and safety thing—if something goes wrong, I’m the one who’s responsible.\n\nWhat I *do* need is help finding out which drones are available and where they can go. Like, if I’m looking for a drone to do an inspection at a wind farm, I want to see which ones are free, have the right sensors, and can reach the site without hitting a closure. But I still get to pick the one I think is best for the job."
+    },
+    {
+     "id": "D3",
+     "kind": "fact",
+     "question": "Can several flights take off from the same site at the same moment?",
+     "expect": "only up to the number of take-off and landing places the site has (4.b3)",
+     "answer": "Not really. Sites have limited landing and takeoff spots—usually just a few. If too many drones try to leave or land at once, they’ll block each other. So dispatchers have to plan carefully, sometimes waiting for a drone to finish its job before sending another one out from the same spot.\n\nFor example, at a busy hospital site, if three drones are already taking off or landing, the fourth one might have to wait or go to a different nearby site if possible. It’s all about keeping things smooth and avoiding collisions on the ground."
+    },
+    {
+     "id": "D4",
+     "kind": "fact",
+     "question": "What changes about a closure during the day?",
+     "expect": "closures are amended, e.g. the area widened or the end time moved (5.b1)",
+     "answer": "Closures get changed all the time—sometimes multiple times in a single day. The authorities might expand a no-fly zone because of a protest or a fire, or they might shorten a closure’s end time if the weather clears up unexpectedly. Sometimes they even add new ones suddenly, like when a military exercise starts without warning.\n\nDispatchers have to keep an eye on these updates because a drone already in the air might suddenly be flying through a restricted area. If that happens, we have to call the flight back or reroute it—if we can—before it gets into trouble. It’s a constant headache."
+    },
+    {
+     "id": "D5",
+     "kind": "fact",
+     "question": "What does a closure mean for drones that are already in the air?",
+     "expect": "a closure can come into force while drones of several companies are flying (5.b2)",
+     "answer": "If a closure pops up while drones are flying, it’s a mess. The drone might be halfway through its job, and suddenly it’s not allowed to be there anymore. The dispatcher has to check if the drone can safely turn back, find a new route around the closure, or land at the nearest safe spot.\n\nSometimes the drone can’t even get a clear signal to tell it what to do, especially if the radio coverage is bad. Then we’re just hoping the autopilot can handle it—or that the drone restarts and keeps going on its own. It’s stressful because we don’t always know if the drone got the message or if it’s stuck in the wrong zone."
+    },
+    {
+     "id": "D6",
+     "kind": "outside",
+     "question": "Which connector types do your charging pads use?",
+     "expect": "does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond \"several types, not interchangeable\")",
+     "answer": "Oh, we’ve got a mix—it’s a real headache. Some pads use the standard USB-C, others have a proprietary connector from one of the drone manufacturers, and a few older ones still use the old-school micro-USB. They’re not interchangeable, so if a drone’s battery is dead and the pad doesn’t match, we’re stuck until someone swaps it out.\n\nSometimes we have to keep track of which drones go with which pads just to avoid wasting time. And if a drone’s connector gets damaged, we might have to send it to the workshop instead of charging it right away. It’s one of those little annoyances that adds up."
+    },
+    {
+     "id": "D7",
+     "kind": "outside",
+     "question": "How much disruption did yesterday's closure cause across all the companies?",
+     "expect": "does not know the cross-company figure, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "answer": "I don’t track that kind of thing—it’s not my job. But I can tell you what happened *here* at my site.\n\nYesterday, a sudden closure near the port shut down half our drones mid-flight. Three had to land early because they couldn’t get clearance to keep going. One got stuck in a loop trying to reroute, so I had to call it back manually. The rest just kept flying, but now they’re all sitting at the airport waiting for the closure to lift. It messed up our whole schedule for the day.\n\nI’d guess other companies had similar problems, but I don’t know the details. The platform might have some logs, but I’d ask the tech team about that."
+    },
+    {
+     "id": "D8",
+     "kind": "no-design",
+     "question": "How should the system store the routes internally?",
+     "expect": "has no view on internals; describes what it needs to know or decide",
+     "answer": "I don’t know how the system stores anything internally—that’s not my job. But I *do* know how we think about routes when we’re planning flights.\n\nWe don’t use GPS coordinates for everything—some sites have multiple landing spots, and drones can’t just park anywhere. So we think in terms of named sites and specific takeoff/landing pads at those sites. For example, \"Site A, Pad 3\" is different from \"Site A, Pad 5,\" even if they’re close together.\n\nFor inspections, we follow a set order of points, but deliveries are usually just from one site to another. The key is making sure the drone can get from A to B without hitting a closure or running out of battery. And sometimes we have to wait for a site to clear up before sending another drone out."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "D1",
+     "kind": "fact",
+     "question": "Who decides which drone flies and along which way?",
+     "expect": "the dispatcher, as the licensed person responsible for the flight (2.b2, 4.b4)",
+     "answer": "The dispatcher decides which drone flies and along which way. It’s their legal responsibility—no software picks the drone or the route for them. They look at the job, the drone’s battery, sensors, and where it’s currently located, then choose what makes sense.\n\nSometimes, they’ll ask the system to show them which of their drones could even reach the starting point of a job, but the final call is always theirs. If a drone’s battery is low or it’s stuck somewhere, they’ll pick another one. They don’t want the system to make that decision for them."
+    },
+    {
+     "id": "D2",
+     "kind": "fact",
+     "question": "Would you like the software to pick the drone for you?",
+     "expect": "no — company policy is that software never chooses a drone or a way (4.b4)",
+     "answer": "No, I don’t want the software to pick the drone for me. It’s my job to make sure the right drone is chosen—one that can carry the load, has the right sensors, and can get to the job on time. If the software picked the drone, I wouldn’t know why it made that choice, and I’d be responsible for it if something went wrong.\n\nI just need help finding out which drones *could* do the job, not which one *should*. For example, if I need a drone with a thermal camera for an inspection, I want to see which of my drones have that sensor and are available. But I still decide which one to use based on battery, weather, and other factors."
+    },
+    {
+     "id": "D3",
+     "kind": "fact",
+     "question": "Can several flights take off from the same site at the same moment?",
+     "expect": "only up to the number of take-off and landing places the site has (4.b3)",
+     "answer": "No, not usually—not all at once. Each site has only so many places where drones can take off and land safely at the same time. If too many try to leave or arrive at once, they’d get in each other’s way, and that’s dangerous.\n\nSometimes, we have to wait for a spot to open up. Dispatchers coordinate with each other when they know multiple flights are planned for the same site. If one flight is delayed, it can block others. That’s why we keep an eye on who’s already in the air near a site."
+    },
+    {
+     "id": "D4",
+     "kind": "fact",
+     "question": "What changes about a closure during the day?",
+     "expect": "closures are amended, e.g. the area widened or the end time moved (5.b1)",
+     "answer": "Closures get changed all the time—sometimes multiple times in a single day. The authorities might widen a restricted zone because of an event, or they’ll move the end time of a closure if something unexpected happens, like a protest or a weather alert.\n\nFor example, I remember one time a closure near a port was expanded suddenly because of a ship traffic issue. Halfway through the day, the rules changed, and drones already in the air had to reroute or land early. It messed up a few deliveries, and we had to call off a couple of inspections because the drones couldn’t get back safely.\n\nWe get updates through the platform, but sometimes the changes come so fast that dispatchers have to double-check the latest rules before signing off a flight."
+    },
+    {
+     "id": "D5",
+     "kind": "fact",
+     "question": "What does a closure mean for drones that are already in the air?",
+     "expect": "a closure can come into force while drones of several companies are flying (5.b2)",
+     "answer": "If a closure happens while drones are already flying, it’s a big headache. The rules say drones can’t enter or stay in a closed zone, so the dispatcher has to decide what to do—fast.\n\nSometimes, the drone can just reroute around the closure, but that takes time and battery. Other times, the dispatcher has to call it back to land early, which might mean missing the job or delaying the next one. If the drone’s too far away or the battery’s too low, we might have to cancel the whole flight and send another one later.\n\nThe worst part is when the closure changes mid-flight—like if the zone gets bigger or the end time moves. Then we have to scramble to figure out if the drone can still make it safely or if it’s stuck."
+    },
+    {
+     "id": "D6",
+     "kind": "outside",
+     "question": "Which connector types do your charging pads use?",
+     "expect": "does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond \"several types, not interchangeable\")",
+     "answer": "We’ve got a few different types—it’s a mess. Some pads use USB-C, some use a proprietary connector from one of the drone manufacturers, and others use a different standard that’s only compatible with older models. They’re not interchangeable, so if a drone’s battery is dead and the pad doesn’t match, we’re out of luck until we can swap it out.\n\nSometimes, a drone will arrive at a site with a dead battery, and the pad there won’t fit. Then we have to scramble to find another pad with the right connector or call a tech to bring the right charger. It slows everything down."
+    },
+    {
+     "id": "D7",
+     "kind": "outside",
+     "question": "How much disruption did yesterday's closure cause across all the companies?",
+     "expect": "does not know the cross-company figure, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "answer": "I don’t track that kind of thing—it’s not my job. The platform shows me what’s happening with *my* company’s drones, but not the others’. If you want to know how many flights were affected across all companies, you’d have to ask the platform team or look at their logs.\n\nAll I know is that yesterday’s closure near the industrial zone messed up a few of *my* deliveries. We had to reroute some drones and cancel a couple of inspections because the drones couldn’t get back in time. But I don’t know what happened with the other companies."
+    },
+    {
+     "id": "D8",
+     "kind": "no-design",
+     "question": "How should the system store the routes internally?",
+     "expect": "has no view on internals; describes what it needs to know or decide",
+     "answer": "I don’t know how the system stores anything internally—that’s not my job. All I care about is that the system tells me which drones *could* reach a job’s starting point, not which one *should* be chosen.\n\nI just need to know the sites involved in a route—where the drone starts, where it goes, and where it ends. If the system can show me that, I can decide if it’s safe to fly there based on the drone’s battery, sensors, and any closures. The rest is up to me."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "D1",
+     "kind": "fact",
+     "question": "Who decides which drone flies and along which way?",
+     "expect": "the dispatcher, as the licensed person responsible for the flight (2.b2, 4.b4)",
+     "answer": "The dispatcher—me—is the one who decides which drone goes where and how it gets there. The companies’ policy is clear: no software picks the drone or the route. I look at the job, the sites, the drones available, and the airspace rules, and I choose. Sometimes it’s easy, sometimes it’s a mess.\n\nFor example, if a delivery needs to go from a busy port to a hospital, I’ll check which drones are free, which ones have enough battery for the trip, and which ones can handle the load. But if there’s a sudden airspace closure near the hospital, I might have to pick a different drone or even cancel the job. And if two dispatchers are planning for the same drone at the same time, we have to talk it out—no software can decide who gets it.\n\nThe only thing I *do* want help with is finding out which drones could even *reach* the job’s starting point. That’s where the platform could be useful—if it could tell me, “Hey, these three drones are close enough to take off for this inspection,” that saves time. But the actual choice? That’s on me."
+    },
+    {
+     "id": "D2",
+     "kind": "fact",
+     "question": "Would you like the software to pick the drone for you?",
+     "expect": "no — company policy is that software never chooses a drone or a way (4.b4)",
+     "answer": "No, absolutely not. The rules say I’m the one responsible for every flight, and if something goes wrong—like a drone crashes or a job gets delayed—my company could be held liable. If software picks the drone, and then something happens, who’s to blame? The company? The software? The platform? It’s not worth the risk.\n\nI just want tools to help me *see* what’s possible—like which drones are available, which ones have enough battery, or which routes are clear. But the final call? That’s mine. If I let software decide, I’d be sleeping with one eye open every time."
+    },
+    {
+     "id": "D3",
+     "kind": "fact",
+     "question": "Can several flights take off from the same site at the same moment?",
+     "expect": "only up to the number of take-off and landing places the site has (4.b3)",
+     "answer": "Not all at once—sites have limits. For example, a busy port might only let two drones take off or land at the same time, depending on the space and the rules. If more are trying, we have to stagger them.\n\nSometimes it’s obvious—like if one drone is still landing and another is just taking off. But other times it’s tricky, especially if drones are restarting mid-flight or if the radio signals get delayed. I’ve had to call off a takeoff because the system didn’t update fast enough about a drone that was still in the airspace.\n\nThe platform could help by showing me who’s already using the site, but it can’t decide for me. I still have to make sure no two drones are in the way at once."
+    },
+    {
+     "id": "D4",
+     "kind": "fact",
+     "question": "What changes about a closure during the day?",
+     "expect": "closures are amended, e.g. the area widened or the end time moved (5.b1)",
+     "answer": "Closures are a nightmare—they keep changing. Sometimes an area gets widened, or a planned closure gets moved to an earlier time, or a sudden one pops up because of a protest or a fire. The worst part? It happens while drones are already in the air.\n\nFor example, I had a delivery going from a warehouse to a hospital when a sudden closure was announced near the hospital. I had to call the drone back, find a new route, and hope the battery held out. Then, an hour later, the closure got extended—now I had to cancel the whole job and reassign the load to another drone.\n\nThe platform sends updates, but they’re not always in time. Sometimes the info is wrong, or it takes too long to get through. I end up double-checking with the authorities myself just to be sure. And if the system crashes during a closure change, we’re stuck waiting for it to come back up."
+    },
+    {
+     "id": "D5",
+     "kind": "fact",
+     "question": "What does a closure mean for drones that are already in the air?",
+     "expect": "a closure can come into force while drones of several companies are flying (5.b2)",
+     "answer": "If a closure happens while a drone is flying, it’s my job to decide what to do—fast. Sometimes the drone can just reroute around the closed area, if the rules allow it and the battery is okay. Other times, I have to call it back to land, check if it can take off again from a different spot, or even cancel the whole job if it’s too risky.\n\nFor example, I once had an inspection drone mid-flight when a sudden closure blocked its return path. The drone’s battery was low, and the wind was picking up, so I had to land it at the nearest safe spot—even if it wasn’t the original site. Then I had to figure out how to get it back to the company’s pad later, because the charging connectors don’t match everywhere.\n\nThe worst part? The closure might change while the drone is still in the air. I’ll get updates saying, *“Oh, now this area’s closed too,”* and I have to scramble again. Sometimes the drone’s autopilot handles it, but other times it just freezes or restarts, and then I’m playing whack-a-mole with the system to get it back under control."
+    },
+    {
+     "id": "D6",
+     "kind": "outside",
+     "question": "Which connector types do your charging pads use?",
+     "expect": "does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond \"several types, not interchangeable\")",
+     "answer": "Oh, it’s a mess—we’ve got at least three different types in use right now. There’s the old **X1 connector**, which is bulky and slow to charge, then the **Y2 connector**, which is a bit faster but still not great, and then the newer **Z3 connector**, which is sleek and charges quicker but only works with certain drones.\n\nThe problem is, you can’t just swap them out. If a drone has a Y2 port, it won’t fit on a Z3 pad, and vice versa. So if I assign a drone to a job and then realize its battery’s low, I have to make sure the charging pad at the site matches its connector—or I’m stuck waiting for someone to bring the right pad over.\n\nSometimes we forget, and a drone ends up sitting there for hours while we scramble to get the right charger. And if the system crashes during that time? Good luck figuring out which pad is free and which connector it uses."
+    },
+    {
+     "id": "D7",
+     "kind": "outside",
+     "question": "How much disruption did yesterday's closure cause across all the companies?",
+     "expect": "does not know the cross-company figure, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "answer": "I don’t track that kind of thing—it’s not my job. The platform might have some numbers, but I’d have to ask the support team about that. I just deal with my own company’s drones and jobs.\n\nFor me, yesterday’s closure was a headache. We had three deliveries stuck because the closure blocked the usual routes, and one inspection had to be rerouted last minute. I had to call off one drone entirely because the battery was too low to find an alternative path. And then, when the closure got extended, I had to scramble to reassign the loads to other drones before they missed their deadlines.\n\nBut I don’t know how bad it was for the other companies. Maybe they were fine, maybe they had worse problems—I just focus on what’s in front of me."
+    },
+    {
+     "id": "D8",
+     "kind": "no-design",
+     "question": "How should the system store the routes internally?",
+     "expect": "has no view on internals; describes what it needs to know or decide",
+     "answer": "I don’t know how the system works inside—my job is just to use it, not fix it. But if I had to guess, the routes should probably be stored as a list of sites in order, with some notes about which drones can handle them.\n\nFor example, a delivery route might look like: *Port A → Hospital B → Warehouse C*. But the system also needs to know if a drone can carry the load, if the battery’s enough for the distance, and if the sites have space for takeoffs and landings at the same time.\n\nThe tricky part is that routes change all the time—closures, weather, or drones going offline. So whatever’s stored has to update fast, or it’s useless. And if the system crashes, I don’t want to have to rebuild everything from scratch. Just keep it simple and reliable."
+    }
+   ]
+  }
+ ],
+ "desk": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "A1",
+     "kind": "fact",
+     "question": "Whose information do you keep, and who uses it?",
+     "expect": "the shared airspace picture — corridors, zones, closures from the authorities — for all customer companies (2.b3)",
+     "answer": "We keep the information about the airspace itself—like which zones are open or closed, where the flight corridors are, and when closures start or end. That’s all public data from the authorities, so it’s the same for everyone.\n\nWe also track how closures affect our customers—like how many of their drones are stuck in a closed zone or how many sites are blocked. But we don’t dig into their operations, like which drones belong to which company or who’s flying where. That’s their business, not ours.\n\nThe platform company’s management uses this to see how well the service is running—like if closures are causing big delays. But we don’t share anything with the customers themselves. They get alerts through their own systems, not from us."
+    },
+    {
+     "id": "A2",
+     "kind": "fact",
+     "question": "Can you look into one company's flights to see how a closure affected it?",
+     "expect": "no — the desk has no business looking into any one company's operations (2.b3)",
+     "answer": "No, I can’t look into a single company’s flights. That’s not my job. I only see the airspace—where closures are, which corridors are blocked, and how many drones might be affected *in total* across all customers.\n\nIf a closure hits a site or corridor, I can tell you how many drones from all companies are stuck there, but I don’t know which company’s drones they are or where they were supposed to go. That’s their data, not mine. If they want to know how it affects them, they’d have to ask their own systems."
+    },
+    {
+     "id": "A3",
+     "kind": "fact",
+     "question": "What kinds of closures do the authorities announce?",
+     "expect": "planned ones with a start and end time, and sudden ones that apply at once (5.b1)",
+     "answer": "Mostly two kinds: **planned closures** and **sudden closures**.\n\nPlanned closures come with a start and end time—like a military exercise or a big event where flying’s banned for a few hours. But even those get changed all the time. Sometimes the start time moves, or the area gets bigger, or the end time gets pushed back. We have to update the system fast, before drones start flying into the wrong place.\n\nThen there are **sudden closures**, like when a bird hits a wind turbine and they shut down a whole zone for safety. Those happen without warning, and we have to act immediately—pause all flights in that area, tell the companies, and hope the drones can land safely. Those are the worst because you don’t have time to plan."
+    },
+    {
+     "id": "A4",
+     "kind": "fact",
+     "question": "How often does the service you work with get restarted?",
+     "expect": "during working hours, while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)",
+     "answer": "Oh, pretty often—maybe once or twice a day during peak hours. We usually do it when we’re updating the airspace info, like after a closure change or a new zone gets added.\n\nSometimes it crashes on its own, too, especially when we’re dealing with a big sudden closure and a bunch of drones are trying to react at once. The companies don’t like it, but they’ve accepted a few minutes of downtime. Worse than that is when the server’s slow and drones can’t get updates in time—then they might just sit there waiting, which is frustrating for everyone."
+    },
+    {
+     "id": "A5",
+     "kind": "outside",
+     "question": "How many drones does each of your customers run?",
+     "expect": "does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)",
+     "answer": "I don’t know how many drones each customer has—it’s not my job to track that. But I can tell you that some customers fly a lot more than others.\n\nFor example, the parcel company probably has dozens of drones buzzing around all day, while the hospital might only have a handful. The inspection company could be somewhere in between, depending on how many sites they’re checking.\n\nWhat matters to me is how many drones are in a given zone or corridor at any time, not which company they belong to. That way, when a closure happens, I can see if it’s going to cause a big mess for anyone."
+    },
+    {
+     "id": "A6",
+     "kind": "outside",
+     "question": "What do technicians do when a drone comes back with a fault?",
+     "expect": "does not know, or refers to the companies' technicians (2.b1 is not in the desk slice)",
+     "answer": "Technicians don’t come to *me*—they’re not part of my world. When a drone has a fault, it’s their job to check it, fix it, or send it back to the factory if it’s broken.\n\nSometimes they call the airspace desk if they’re not sure why a drone couldn’t finish a job—like if it got stuck in a closed zone or if the system told it to land early. But mostly, they just deal with their own drones and their own problems. I only see the airspace, not the drones themselves."
+    },
+    {
+     "id": "A7",
+     "kind": "outside",
+     "question": "Do the drones' reports reach the companies late or out of order?",
+     "expect": "does not know, or refers to the operating companies (6.b2 is not in the desk slice)",
+     "answer": "Sometimes, yeah. The system can get backed up when we’re updating the airspace—like after a sudden closure or a big restart. If that happens, the drones’ reports might pile up and take a while to come through.\n\nOr if the server’s slow, a drone’s status might not update right away, and the companies might think it’s still flying when it’s already landed. That’s one of the downsides of running everything on a single server. The companies have to be patient—it’s not like we can just add more machines."
+    },
+    {
+     "id": "A8",
+     "kind": "no-design",
+     "question": "Which database should keep the closures?",
+     "expect": "has no view on technology; describes what it needs from the information",
+     "answer": "The closures should go into the **airspace database**—that’s the one I work with. It’s the only place where all the zones, corridors, and closure times live together.\n\nIf we put them anywhere else, like in a separate system or even just a spreadsheet, we’d lose track of how they affect the flights. The airspace desk needs to see everything at once—like which drones are in which zone when a closure hits. And if the main server crashes, we don’t want the closure data to disappear too. That’s why it’s all in one place, even if it’s not perfect."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "A1",
+     "kind": "fact",
+     "question": "Whose information do you keep, and who uses it?",
+     "expect": "the shared airspace picture — corridors, zones, closures from the authorities — for all customer companies (2.b3)",
+     "answer": "We keep the information that the authorities publish about airspace restrictions—like closures, zones, and corridors. That’s public data, so it’s not tied to any one company. We also track how those closures affect our customers: which sites are blocked, how many drones are stuck, and how long the delays last.\n\nThe companies use it to plan their flights. They don’t see each other’s data—just the shared airspace picture and how it’s changing. The platform company itself uses it to update the system and make sure everything stays accurate. That’s it. No one else touches it."
+    },
+    {
+     "id": "A2",
+     "kind": "fact",
+     "question": "Can you look into one company's flights to see how a closure affected it?",
+     "expect": "no — the desk has no business looking into any one company's operations (2.b3)",
+     "answer": "No, I can’t look into a single company’s flights. My job is just to keep the shared airspace info up to date—like closures, zones, and corridors—and see how they affect *all* the customers together. If a closure hits a site, I’ll see which companies’ drones are stuck there, but I don’t track their individual routes or schedules.\n\nFor details on a specific company’s flights, you’d have to ask them. They manage their own operations."
+    },
+    {
+     "id": "A3",
+     "kind": "fact",
+     "question": "What kinds of closures do the authorities announce?",
+     "expect": "planned ones with a start and end time, and sudden ones that apply at once (5.b1)",
+     "answer": "Mostly two kinds: **planned closures** and **sudden ones**.\n\nPlanned closures come with a start and end time—like a military exercise or a festival where flying is banned for a few hours. But then there are **sudden closures**, often because of weather or an emergency. Those can pop up at any time, and they might even get changed mid-day—like when a closure gets widened or moved.\n\nSometimes, the authorities also add temporary restrictions, like lowering the max altitude in a zone. That’s not a full closure, but it still messes with our flights."
+    },
+    {
+     "id": "A4",
+     "kind": "fact",
+     "question": "How often does the service you work with get restarted?",
+     "expect": "during working hours, while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)",
+     "answer": "Oh, pretty often—usually a couple of times a week. We’ll plan a restart during a quiet hour, but sometimes it crashes unexpectedly, like when a closure update gets stuck or the server just freezes.\n\nThe companies know it happens, so they’re okay with a few minutes of downtime. But it’s annoying when it happens mid-flight—especially if a closure is changing right then. We try to do it when we think the least drones are in the air, but you can’t always predict that."
+    },
+    {
+     "id": "A5",
+     "kind": "outside",
+     "question": "How many drones does each of your customers run?",
+     "expect": "does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)",
+     "answer": "That varies a lot. The parcel company probably has the biggest fleet—hundreds, maybe? They’re always expanding. The hospital one is smaller, maybe a dozen or so. The inspection firm is somewhere in between, but I don’t track exact numbers.\n\nWhat matters more is how many drones are flying at once near a site. Some sites get busy, and if too many drones try to take off or land at the same time, we have to slow things down. But I don’t keep tabs on how many each company has—just how many are affected by closures or site limits."
+    },
+    {
+     "id": "A6",
+     "kind": "outside",
+     "question": "What do technicians do when a drone comes back with a fault?",
+     "expect": "does not know, or refers to the companies' technicians (2.b1 is not in the desk slice)",
+     "answer": "Technicians don’t come to *me*—they’re part of the customer companies. When a drone crashes or has a fault, it’s their job to check the logs, fix it, and get it back in the air.\n\nI only see the drone’s location and status if it’s still in the airspace system. If it’s grounded, it’s out of my picture. Sometimes a drone just disappears from the system, and that’s when the companies have to figure out what happened. They usually call me if a closure or site issue might have caused the problem, but mostly it’s their fault logs and their people who know."
+    },
+    {
+     "id": "A7",
+     "kind": "outside",
+     "question": "Do the drones' reports reach the companies late or out of order?",
+     "expect": "does not know, or refers to the operating companies (6.b2 is not in the desk slice)",
+     "answer": "Sometimes, yeah. The drones send their status updates to the server, but if the server’s busy or crashes, a few updates can get lost or delayed. That’s why we restart it often—just to clear things out.\n\nThe companies notice if a drone’s report is late, especially if it’s stuck in a closure or near a site limit. They’ll complain if it takes too long to update, but they know it’s part of the deal. We try to keep it smooth, but with the server being a single machine, stuff slips through the cracks."
+    },
+    {
+     "id": "A8",
+     "kind": "no-design",
+     "question": "Which database should keep the closures?",
+     "expect": "has no view on technology; describes what it needs from the information",
+     "answer": "There’s no separate database for closures—it’s all just in the service itself. The whole system runs on a single server, and the closures are stored right there alongside the flight corridors and site info.\n\nWe don’t have a fancy database setup; it’s all mixed in with the rest of the airspace data. If we had more time, we’d probably want to split it up, but right now, it’s all one big file. The companies don’t care about the tech—just that the info is accurate and up to date."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "A1",
+     "kind": "fact",
+     "question": "Whose information do you keep, and who uses it?",
+     "expect": "the shared airspace picture — corridors, zones, closures from the authorities — for all customer companies (2.b3)",
+     "answer": "We keep the airspace information that the authorities publish—like zones, closures, and corridor details. That’s shared data, so everyone sees the same thing. The companies don’t give us their own flight plans or drone locations; we don’t need that to do our job.\n\nThe only people who use it are the airspace desk here and the companies’ own staff. They check the service to see if their drones can fly where they’re supposed to, and if there are any sudden closures or changes. That’s it—no one else touches it."
+    },
+    {
+     "id": "A2",
+     "kind": "fact",
+     "question": "Can you look into one company's flights to see how a closure affected it?",
+     "expect": "no — the desk has no business looking into any one company's operations (2.b3)",
+     "answer": "No, I can’t look at any one company’s flights. My job is just to keep the airspace info up to date—like closures, zones, and corridors—and make sure everyone sees the same picture. If a closure happens, I can tell you how many customers were affected in total, but not which ones or how many drones were delayed.\n\nThe companies handle their own operations, and I don’t have access to their flight data. If you need details on a specific company’s impact, you’d have to ask them directly."
+    },
+    {
+     "id": "A3",
+     "kind": "fact",
+     "question": "What kinds of closures do the authorities announce?",
+     "expect": "planned ones with a start and end time, and sudden ones that apply at once (5.b1)",
+     "answer": "Mostly two kinds: **planned closures**—like for a big event or maintenance—and **sudden closures**, which pop up without warning, often because of weather or an emergency.\n\nPlanned ones usually have a start and end time, but even those get changed sometimes—like if the closure gets bigger or the end time moves. Sudden ones can happen at any time, and they’re usually announced right away, but sometimes there’s a delay.\n\nThe worst part is when a closure comes in while drones are already flying through the area. Then everyone has to scramble to figure out how to reroute or ground them safely."
+    },
+    {
+     "id": "A4",
+     "kind": "fact",
+     "question": "How often does the service you work with get restarted?",
+     "expect": "during working hours, while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)",
+     "answer": "Oh, pretty often—usually a few times a week. The server’s not built for 24/7 reliability, so the platform company has to restart it during the day to keep it running smoothly.\n\nSometimes it even crashes unexpectedly, and we have to wait a few minutes for it to come back up. The companies know about this, and they’ve accepted that there’ll be a little downtime now and then. It’s not ideal, but it’s the way it is."
+    },
+    {
+     "id": "A5",
+     "kind": "outside",
+     "question": "How many drones does each of your customers run?",
+     "expect": "does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)",
+     "answer": "I don’t track how many drones each company has—it’s not my job. The companies manage their own fleets, and I don’t need to know their exact numbers to do my work.\n\nWhat *does* matter to me is how many of their drones might be affected by a closure. For example, if a corridor gets blocked, I can see if multiple companies have drones flying through it at the same time. But I don’t know how many drones they have in total. You’d have to ask them."
+    },
+    {
+     "id": "A6",
+     "kind": "outside",
+     "question": "What do technicians do when a drone comes back with a fault?",
+     "expect": "does not know, or refers to the companies' technicians (2.b1 is not in the desk slice)",
+     "answer": "That’s not my job—technicians are part of the companies, not the airspace desk. When a drone has a fault, it’s up to their own teams to check it out, fix it, or send it back for repairs.\n\nSometimes they’ll call me if a closure or zone change affects their ability to move a drone to a repair site, but otherwise, I don’t get involved. I just make sure the airspace info is correct so they can plan around it."
+    },
+    {
+     "id": "A7",
+     "kind": "outside",
+     "question": "Do the drones' reports reach the companies late or out of order?",
+     "expect": "does not know, or refers to the operating companies (6.b2 is not in the desk slice)",
+     "answer": "Not usually—drones send their reports to the companies’ own systems in real time, as far as I know. But I don’t see those reports, so I can’t say if they ever get mixed up or delayed.\n\nIf there’s a problem with timing, it’s something the companies would notice when they’re monitoring their own flights. My focus is just the airspace—like closures and corridors—so I don’t deal with individual drone reports."
+    },
+    {
+     "id": "A8",
+     "kind": "no-design",
+     "question": "Which database should keep the closures?",
+     "expect": "has no view on technology; describes what it needs from the information",
+     "answer": "The closures should go into the **same database that tracks the airspace zones and corridors**—the one we all share. That way, everything stays in sync: if a closure pops up, it updates automatically in the same place where the zones and flight paths are defined.\n\nWe don’t want separate systems for closures and zones, because then things could get out of sync. For example, if a closure overlaps with a zone but isn’t in the same database, someone might miss it. Keeping it all together makes it easier to spot conflicts and updates."
+    }
+   ]
+  }
+ ]
+}
