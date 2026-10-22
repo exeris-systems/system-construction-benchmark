@@ -23,7 +23,7 @@ The contract, oracle, and harness are part of the instrument under study. Every 
 
 ## Immediate milestone
 
-Phase 1: freeze the campaign contract, implement the external oracle, and calibrate it against deliberate mutants — see the [Phase 1 plan](docs/phase-1-plan.md). Tokens and an estimate of human time spent on the instrument are recorded in `harness/instrument-cost.json`.
+Phase 1: complete the campaign contract, build the external oracle, and calibrate it against deliberate mutants and two reference implementations — see the [Phase 1 plan](docs/phase-1-plan.md). Tokens and an estimate of human time spent on the instrument are recorded in `harness/instrument-cost.json`.
 
 ## Condition for progressing
 

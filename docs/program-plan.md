@@ -421,7 +421,7 @@ M-19  restriction fan-out exposes another tenant's incidents or events
 
 M-16 guards against an aggregate check that is vacuously true on no data — e.g. "all sagas terminal" over an empty table. The guard is part of the oracle, not a comment.
 
-The result (`oracle-selftest.json`) is an artifact of every run and a published metric. Phase 1 calibrates a smaller pilot set (`M-P1-*`, see [Phase 1 plan](phase-1-plan.md)); the full set grows as its gates enter the frozen contract.
+The result (`oracle-selftest.json`) is an artifact of every run and a published metric. The set grows as its gates enter the contract ([Phase 1 plan](phase-1-plan.md)).
 
 ---
 

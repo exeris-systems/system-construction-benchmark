@@ -1,130 +1,92 @@
+---
+title: "Phase 1 plan — contract, oracle, and calibration"
+type: methodology
+visibility: public
+owning-repo: system-construction-benchmark
+status: active
+last-verified: 2026-10-22
+---
+
 # Phase 1 plan — contract, oracle, and calibration
 
 ## Goal
 
-Build a small, technology-neutral and externally verifiable benchmark instrument. Phase 1 ends when its oracle detects every approved deliberate defect. It does **not** run agents, compare arms, or claim that the current Exeris application satisfies the final campaign contract.
-
-## Non-goals
-
-- Do not extend the Drone Fleet application for product completeness.
-- Do not freeze the expanded flight lifecycle, durable recovery, or frontend as Campaign 1 gates yet.
-- Do not expose the current implementation to a future greenfield agent run.
-- Do not measure performance, cost, or platform superiority.
-
-## Scope decision
-
-The Phase 1 pilot contract is one vertical slice:
-
-```text
-create Drone → request charging → persisted state changes → event is observable
-```
-
-Requirements come from `contract/system-requirements.yaml`.
-
-## Deliverables
-
-| Deliverable | Location | Completion condition |
-| --- | --- | --- |
-| System requirements | `contract/system-requirements.yaml` | Domain language only; no Exeris, Spring, database, or generator names. |
-| Pilot DOD | `contract/dod.yaml` | Every gate has provenance, `motivating_arm: none`, `reachable_without`, observable boundary, oracle check, and mutation IDs. |
-| API expectation | `contract/expected-api.yaml` | Endpoint behavior, request/response semantics, and errors; not a copied implementation artifact. |
-| Event expectation | `contract/expected-events.yaml` | Name, payload semantics, correlation, and after-commit requirement. |
-| Domain model | `contract/domain-model.yaml` | Minimal concepts and allowed state transitions. |
-| Anti-requirements | `contract/anti-requirements.md` | Explicitly excludes unmeasured production features. |
-| Coverage declaration | `contract/coverage-declaration.md` | Per arm: surfaces exercised and explicitly out of scope. |
-| Arm declaration | `contract/arms.yaml` | Scope, proximity, external store, and surface maturity are explicit. |
-| Contract version | `contract/CONTRACT_VERSION` | Set to `0.1.0-pilot`; any semantic contract change increments it. |
-| Oracle protocol | `oracle/` | Black-box checks and an evidence schema. |
-| Mutation suite | `mutants/` | Each approved mutation has a reproducible broken target and expected `FAIL`. |
-| Neutrality audit | `contract/neutrality-audit.md` | Raw answers of the auditor models, comment-window input, and resolved findings (D-03). |
-| Run-artifact contract | `harness/` | A run directory can record all required evidence without a manual spreadsheet. |
-| Instrument-cost ledger | `harness/instrument-cost.json` | Token vectors from session logs and a working-day estimate of human time, per category (D-40). |
-
-## Pilot DOD to freeze
-
-This is deliberately a small calibration set. IDs become stable only after review.
-
-| Candidate ID | Observable requirement | Boundaries |
-| --- | --- | --- |
-| `DOD-DRONE-01` | A valid request creates a drone; retrieval returns the same required state. | HTTP, database |
-| `DOD-DRONE-02` | An invalid creation request returns a 4xx response identifying the invalid input. | HTTP |
-| `DOD-ACTION-01` | An eligible charging request creates an observable charge-service request; its storage representation is not prescribed. | HTTP, arm adapter |
-| `DOD-EVENT-01` | A successful charge request produces exactly one event with a correlation ID and the committed drone state. | HTTP, database, event boundary |
-| `DOD-MIGRATION-01` | A fresh database can apply the application schema and serve the above flow. | process, database, HTTP |
-
-The current UI is retained as a manual discovery artifact. It becomes a gate only after an ARIA-only browser check is shown to be stable.
-
-## Oracle design
-
-### Hard boundaries
-
-The oracle may observe only:
-
-- HTTP responses;
-- state through an arm-declared, read-only data adapter;
-- process lifecycle and exit status;
-- an event-consumer boundary or persisted outbox/event-store boundary;
-- browser roles and accessible names, if the UI gate is admitted.
-
-It may not inspect source annotations, generated classes, framework tables, logs as the sole proof, or in-process objects.
-
-### Checks
-
-| Check | Purpose | Required evidence |
-| --- | --- | --- |
-| `check_api` | Create, retrieve, error semantics, action response. | request/response transcript with redacted IDs. |
-| `check_data` | Persisted state agrees with the API response. | arm-declared adapter query, validated by mutation. |
-| `check_events` | Exactly-once observation, correlation, payload, and post-commit ordering. | shared external webhook, broker consumer, or consumer-side queue record correlated to the request and committed state. |
-| `check_migrations` | Fresh schema bootstrap. | isolated database initialization log and schema version. |
-| `check_frontend` | Optional, later only. | ARIA-role/name browser trace. |
-
-Every check returns `PASS`, `FAIL`, `UNKNOWN`, or `UNREACHABLE_IN_PARADIGM`. `UNKNOWN` is a failed gate for campaign admission. A combined verdict must retain a machine-readable decomposition of every sub-check rather than report only “E2E failed”.
-
-## Calibration mutations
-
-The first approved pilot suite contains these five defects. Additions require an explicit contract and oracle revision.
-
-| ID | Deliberate defect | Oracle must return |
-| --- | --- | --- |
-| `M-P1-01` | Accept an invalid creation payload. | `FAIL` from `check_api`. |
-| `M-P1-02` | Return success from charge request without persisting its state transition. | `FAIL` from `check_data`. |
-| `M-P1-03` | Persist the state transition but emit no event. | `FAIL` from `check_events`. |
-| `M-P1-04` | The mutant publishes an event, then deliberately rolls back its state change. | `FAIL` from `check_events`: orphan event has no committed state and no successful HTTP result. |
-| `M-P1-05` | No-op target returns success while creating neither a row nor an event. | `FAIL` simultaneously from `check_data` and `check_events`. |
-
-Phase 1 is calibrated only when all five produce `FAIL` and both intact reference targets produce `PASS`. The full campaign mutation set will later add saga, pagination, OpenAPI, tenant-isolation, and browser mutants as their corresponding gates enter the frozen contract.
-
-## Work sequence
-
-1. **Freeze scope.** Decide which neutral business state `DOD-ACTION-01` targets. Write the decision before coding an oracle.
-2. **Write the contract.** Create the six contract artifacts above, review for implementation leakage, and assign provenance to every DOD point.
-3. **Choose observation adapters.** Each arm declares a read-only state-query adapter; its mapping is harness configuration, not contract schema. Events must cross a shared external boundary (webhook, common broker consumer, or consumer-side queue). An application-private outbox row alone is not proof of external publication.
-4. **Implement the oracle.** Begin with API and data checks; add migration and event checks only after their evidence path is deterministic.
-5. **Create mutants.** Implement one reproducible broken target per approved mutation. The oracle must fail each one for the intended reason.
-6. **Dry-run the intact target repeatedly.** Establish that the same unchanged target does not vary; record `UNKNOWN` and flaky behavior rather than retrying it away.
-7. **Run the neutrality audit.** Run the published procedure (D-03) on the DOD alone, without platform names or implementation context, with several auditor models; open the comment window. Publish the raw answers and the decisions.
-8. **Freeze the Phase 1 instrument.** Version the contract and oracle, record hashes and environment versions, then create the Phase 2 harness plan.
+Build the instrument that every later phase measures with: a frozen-ready campaign contract, an
+external oracle, the simulator and event sink it observes through, and a mutation suite it catches in
+full, calibrated against two independent reference implementations. Phase 1 runs no scored agent and
+compares no arms (program plan §14).
 
 ## Exit criteria
 
-- Every pilot gate is technology-neutral and has provenance, `motivating_arm`, `reachable_without`, a mutation ID, and an external observation path.
-- Both intact reference targets — Exeris and Spring vanilla (D-15) — pass every admitted pilot gate.
-- All five approved pilot mutations fail the intended oracle check: 5/5 detection.
-- Repeated oracle runs against the same unchanged reference produce no unexplained result change.
-- `UNKNOWN` is represented in artifacts and treated as non-passing.
-- The coverage declaration and neutrality audit are complete.
-- The contract, oracle, mutations, and environment record have versions/hashes and are ready to publish before any scored agent run.
-- Instrument-building token vectors and human-time estimates are recorded in `harness/instrument-cost.json`.
+- The contract artifacts of program plan §3.1 exist, with every entity, field, action, endpoint and
+  event named (D-14), and every gated requirement carrying `provenance`, `motivating_arm`,
+  `reachable_without`, an oracle check and mutation IDs (§3.2).
+- The agent brief is rendered from `contract/`, never written by hand, and hashed (§3.11, D-09).
+- The simulator and the event sink are versioned, and their control scenarios give the same result
+  on both reference implementations (§13, D-17, D-18).
+- The oracle returns `PASS` on every in-scope gate of both reference implementations — Exeris and
+  Spring vanilla — and detects 100% of the approved mutants (§4.4, §4.5, D-15).
+- Repeated oracle runs against an unchanged reference produce no unexplained change; time-dependent
+  gates and UI gates have a measured flakiness, and any above 5% is moved to the descriptive section
+  (§3.8, D-05, D-20).
+- The coverage declaration and `arms.yaml` are complete, and the neutrality audit has run under its
+  published procedure with its comment window closed (§3.4, §3.9, D-03).
+- Instrument cost is recorded per category in `harness/instrument-cost.json` (§12.3, D-40).
 
-## Phase 1 decision log
+## Done
 
-| Decision | Owner | Due before |
-| --- | --- | --- |
-| Event observation boundary shared by all arms | unassigned | `check_events` implementation |
-| Read-only state-query adapter per arm | unassigned | `check_data` implementation |
-| Neutrality-audit procedure published (D-03) | arkstack-dev | Contract freeze |
-| Whether stable ARIA evidence admits a UI gate | unassigned | Contract freeze |
+| Artefact | State |
+| --- | --- |
+| `contract/domain-profile.md` | tenancy, autonomy, actors and channels, telemetry order, airspace graph, slots, scale, time, regulatory provenance |
+| `contract/system-requirements.yaml` | 39 requirements with parameters, parameter constraints and vocabulary; `provenance` pending |
+| `contract/anti-requirements.md` | user-visible and technical items, synchronised with brief §8 |
+| `contract/user-stories/` | procedure v2, frozen as `us-procedure-v2` with an independent timestamp |
+| `runs/user-stories/2026-10-23/` | the canonical story run: 44 stories |
 
-## Estimated order of magnitude
+## Work, in dependency order
 
-Treat this as instrument engineering, not application coding: several focused days is realistic. Do not use this estimate as a campaign cost or compare it with an agent arm; instrument cost is reported separately.
+1. **Map the stories.** Run `contract/user-stories/mapping-prompt.md` on the canonical run's
+   analyst output, unedited. Review the mapping and record every change as a published override.
+   Assign `provenance` to each requirement from its primary story; write `author` stories only for
+   requirements left uncovered, and report the uncovered ones with their hypotheses rather than
+   filling them silently (D-36, D-37).
+2. **Name the domain and its boundary.** `domain-model.yaml` (entities, fields, actions, states —
+   the vocabulary of the requirements), `expected-api.yaml` (what the system exposes),
+   `external-api.yaml` (drone commands, charge-service requests, the event sink, with idempotency
+   keys), and `expected-events.yaml` (event names and payloads, delivered by webhook) (§3.1, D-14,
+   D-17, D-18).
+3. **Write the DOD.** `dod.yaml` from the requirements, one behaviour per gate (§4.1 rule 4), and
+   `failure-scenarios.yaml` including REC-1/2/3 (§3.7). Decide the frontend scope before any UI gate
+   is written (below).
+4. **Render the agent brief.** A render step from `contract/` into `contract/agent-brief/`, hashed,
+   carrying only what D-09 allows.
+5. **Build the simulator and the event sink.** Drones, charging service, and readiness, waypoint and
+   arrival sources as one versioned component, with control scenarios whose result is
+   arm-independent by construction (D-17). The sink deduplicates by `eventId` and queries the API on
+   receipt, which makes publication before commit observable (D-18).
+6. **Build the oracle, gate group by gate group**, each check observing only at the process boundary
+   and publishing the distribution behind an aggregate verdict (§4.1): registration, validation and
+   query; tenancy and access; telemetry and connectivity; charging; missions, routing and airspace;
+   durable execution and recovery; events and idempotency.
+7. **Write the mutation suite** for the gates that exist: M-01 to M-19 where their gate is in the
+   contract, each a reproducible broken build with the check that must fail it (§4.5).
+8. **Build the two reference implementations** — Exeris and Spring vanilla — from the contract,
+   agent-built if convenient; they are instrument, never shown to a scored run, and implement the
+   construction contract only (D-15).
+9. **Calibrate.** Both references pass; every mutant is caught for its intended reason; repeated runs
+   are stable; the flakiness trials of D-05 and D-20 are recorded.
+10. **Declare coverage and arms**, run the neutrality audit under its published procedure, and open
+    the comment window (D-03).
+11. **Version the contract** (`CONTRACT_VERSION` 1.0.0) and hand over to Phase 2. The contract is
+    frozen with the preregistration in Phase 3 (§12.2).
+
+## Decided before the DOD is written
+
+- **Frontend scope.** Whether UI gates enter Campaign 1, and if so H1 is reported on two scopes —
+  backend gates only and the whole contract — both preregistered. Subset arms carry no UI gates.
+  Until this is recorded in the decision register, no UI gate is written.
+
+## Out of scope
+
+Agent runs of any kind, arm comparison, Domain B (its contract is frozen in Campaign 1's
+preregistration, D-07), and runtime measurement.
