@@ -1,0 +1,29 @@
+{
+ "id": "ef00dbb5eae74e73b11fe38f31e5ce97",
+ "created": 1792681807,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1195,
+  "total_tokens": 1327,
+  "completion_tokens": 132,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Mostly two kinds: **planned closures**—like for a big event or maintenance—and **sudden closures**, which pop up without warning, often because of weather or an emergency.\n\nPlanned ones usually have a start and end time, but even those get changed sometimes—like if the closure gets bigger or the end time moves. Sudden ones can happen at any time, and they’re usually announced right away, but sometimes there’s a delay.\n\nThe worst part is when a closure comes in while drones are already flying through the area. Then everyone has to scramble to figure out how to reroute or ground them safely."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "b63bee43cc4e4369bc3f49eaf14c51f5",
+ "created": 1792683262,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1959,
+  "total_tokens": 2057,
+  "completion_tokens": 98,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know the exact types off the top of my head, but there are a few different ones in use. Each company has its own charging pads, and they’re not interchangeable. If a drone’s connector doesn’t match the pad, it won’t charge. That’s why we have to keep track of which pads belong to which company and make sure the right drones go to the right ones. Sometimes we get confused, especially when there are a lot of drones around."
+   }
+  }
+ ]
+}

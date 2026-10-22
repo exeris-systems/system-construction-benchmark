@@ -1,0 +1,29 @@
+{
+ "id": "203fa8c983034a6f9881cb5497ced045",
+ "created": 1792683250,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2251,
+  "total_tokens": 2422,
+  "completion_tokens": 171,
+  "prompt_tokens_details": {
+   "cached_tokens": 1920
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about screens or buttons—this isn’t my area. But I *do* know what we need the service to do, and what it *shouldn’t* do.\n\nWe need it to tell us:\n- Which drones are available at which sites (and which ones are broken or charging).\n- When a drone’s battery is low or a job’s delayed.\n- If a drone’s autopilot crashes or restarts in flight (so we know to check the data later).\n\nAnd it *shouldn’t* try to:\n- Plan routes or pick drones for us.\n- Send alerts by email or text—our own systems handle that.\n- Let us log in with our company accounts.\n- Do anything with billing, pricing, or weather.\n- Try to fix problems—we’re the ones who fix the drones."
+   }
+  }
+ ]
+}

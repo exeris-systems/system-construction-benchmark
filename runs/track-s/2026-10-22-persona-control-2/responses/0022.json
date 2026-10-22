@@ -1,0 +1,29 @@
+{
+ "id": "5e6aa3a9f28748f096cab6bdd999f2b4",
+ "created": 1792683226,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1662,
+  "total_tokens": 1778,
+  "completion_tokens": 116,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t deal with drones or their faults at all—that’s not my job. When a drone comes back with a problem, the technicians handle it on the ground. They check the drone, fix it if they can, or send it back to the workshop if it’s serious.\n\nSometimes they’ll call the customer’s support team, but that’s outside my area. My role is just the airspace—making sure the corridors and closures are right so the drones can fly safely. If a drone’s down, I don’t know why or who it belongs to."
+   }
+  }
+ ]
+}

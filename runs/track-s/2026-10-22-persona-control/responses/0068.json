@@ -1,0 +1,29 @@
+{
+ "id": "a84b051d9e544c99964df5c9d1b900bc",
+ "created": 1792681816,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1340,
+  "total_tokens": 1439,
+  "completion_tokens": 99,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, pretty often—usually a few times a week. The server’s not built for 24/7 reliability, so the platform company has to restart it during the day to keep it running smoothly.\n\nSometimes it even crashes unexpectedly, and we have to wait a few minutes for it to come back up. The companies know about this, and they’ve accepted that there’ll be a little downtime now and then. It’s not ideal, but it’s the way it is."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "cb6192c4d23148e79f20e2172635b060",
+ "created": 1792681691,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1426,
+  "total_tokens": 1549,
+  "completion_tokens": 123,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, pretty often—maybe once or twice a day during peak hours. We usually do it when we’re updating the airspace info, like after a closure change or a new zone gets added.\n\nSometimes it crashes on its own, too, especially when we’re dealing with a big sudden closure and a bunch of drones are trying to react at once. The companies don’t like it, but they’ve accepted a few minutes of downtime. Worse than that is when the server’s slow and drones can’t get updates in time—then they might just sit there waiting, which is frustrating for everyone."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "78e8c4e966984920b383bd974388be3a",
+ "created": 1792683261,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1845,
+  "total_tokens": 1948,
+  "completion_tokens": 103,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure comes while drones are already flying, we have to check if any of our flights are affected. Sometimes a drone might be in a restricted zone without us realizing it, or it might have to reroute to avoid the closure. If the closure is too big, we might have to call the drone back early or find another way for it to finish its job. It’s stressful because we can’t just assume the drone will handle it—sometimes we have to intervene and adjust the flight plan manually."
+   }
+  }
+ ]
+}

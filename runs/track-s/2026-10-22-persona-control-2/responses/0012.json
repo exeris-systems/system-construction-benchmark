@@ -1,0 +1,29 @@
+{
+ "id": "61e0a251770d4db5b9a717d6dd425de6",
+ "created": 1792683204,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1780,
+  "total_tokens": 1892,
+  "completion_tokens": 112,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures get changed all the time—sometimes even while drones are already in the air. The authorities might widen a restricted zone, move the end time of a planned closure, or suddenly add a new one because of something like a protest or a weather event.\n\nWe get updates through the platform, but they don’t always come in time. Sometimes a drone is already flying through a zone that just got closed, and we have to call it back or reroute it. It’s stressful because we can’t always predict when or how a closure will change."
+   }
+  }
+ ]
+}

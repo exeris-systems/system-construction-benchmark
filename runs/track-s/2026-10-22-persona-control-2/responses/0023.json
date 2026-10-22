@@ -1,0 +1,29 @@
+{
+ "id": "949e6c9d10414d1e9bdba115d46c396d",
+ "created": 1792683228,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1794,
+  "total_tokens": 1890,
+  "completion_tokens": 96,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t see the drones’ reports at all—they go straight to the companies. But I’ve heard from the companies that sometimes their systems get overwhelmed when a lot of drones are flying, and reports can pile up or take a little longer to process. It’s not my fault, though—I just keep the airspace data straight.\n\nIf a report is delayed, the companies handle it themselves. They’ve got their own ways of tracking what’s happening with their drones."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "b8325110a5414d529a51f98aa3e3d6e7",
+ "created": 1792683197,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2098,
+  "total_tokens": 2241,
+  "completion_tokens": 143,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, I don’t know about screens or buttons—this isn’t my area. But I *do* know what we need to see and do to keep things running smoothly.\n\nWe need to see which drones are flying, which are charging, and which are broken. If a drone’s battery’s low, we need to know where the nearest pad is and if it’s free. And if a drone’s acting weird—like restarting in the air—we need to see its logs right away.\n\nBut I’m not the one who’d design that. The dispatchers and the airspace team would know better about what they need to see. I just know what keeps *me* up at night."
+   }
+  }
+ ]
+}

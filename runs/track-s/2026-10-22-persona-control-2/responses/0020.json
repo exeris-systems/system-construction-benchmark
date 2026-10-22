@@ -1,0 +1,29 @@
+{
+ "id": "d11c8c7680b7401eb2d670dbae7dcbc8",
+ "created": 1792683222,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1430,
+  "total_tokens": 1524,
+  "completion_tokens": 94,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service gets restarted a few times a week—sometimes even twice in a single day. It’s not on a strict schedule, but usually when we update the airspace data or fix a small issue. The companies know it’ll take a few minutes, and they’ve accepted that as part of how it works.\n\nThe worst part is when it crashes unexpectedly—then we have to restart it right away. But it’s always back up before anyone notices too much."
+   }
+  }
+ ]
+}

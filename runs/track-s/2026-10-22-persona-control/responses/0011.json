@@ -1,0 +1,29 @@
+{
+ "id": "971415c154ed46949d272b254a234b7e",
+ "created": 1792681656,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1674,
+  "total_tokens": 1787,
+  "completion_tokens": 113,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Not really. Sites have limited landing and takeoff spots—usually just a few. If too many drones try to leave or land at once, they’ll block each other. So dispatchers have to plan carefully, sometimes waiting for a drone to finish its job before sending another one out from the same spot.\n\nFor example, at a busy hospital site, if three drones are already taking off or landing, the fourth one might have to wait or go to a different nearby site if possible. It’s all about keeping things smooth and avoiding collisions on the ground."
+   }
+  }
+ ]
+}

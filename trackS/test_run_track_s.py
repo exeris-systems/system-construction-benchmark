@@ -132,6 +132,17 @@ class ClientTest(unittest.TestCase):
         with self.assertRaises(ts.RunFailed):
             self.client.describe()
 
+    def test_model_check_body_that_is_not_an_object_is_a_run_failure(self):
+        self.replies = [Reply(["ministral-8b-2512"], headers())]
+        with self.assertRaises(ts.RunFailed):
+            self.client.describe()
+
+    def test_model_check_without_a_string_name_is_a_run_failure(self):
+        for description in ({"name": 5}, {"name": None}, {}):
+            self.replies = [Reply(description, headers())]
+            with self.assertRaises(ts.RunFailed, msg=description):
+                self.client.describe()
+
     def test_model_check_failure_is_a_run_failure(self):
         self.replies = [http_error(404, b'{"message": "not found"}', headers())]
         with self.assertRaises(ts.RunFailed):

@@ -1,0 +1,29 @@
+{
+ "id": "3839c305ee5246219028b5fab421753f",
+ "created": 1792683221,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1307,
+  "total_tokens": 1417,
+  "completion_tokens": 110,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Mostly two kinds: **planned closures**—like for an event or maintenance—and **sudden closures**, which can pop up at any time, like for a security reason or weather. Sometimes a planned closure gets changed during the day—maybe the time gets moved or the area gets bigger. That happens a lot.\n\nThe authorities also announce **permanent zones** where drones can’t fly at all, but those don’t change much. The tricky ones are the sudden closures because they can catch drones already in the air."
+   }
+  }
+ ]
+}

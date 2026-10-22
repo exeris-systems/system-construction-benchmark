@@ -1,0 +1,29 @@
+{
+ "id": "3b507eb718424e53bae1bc9caf841375",
+ "created": 1792683321,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1653,
+  "total_tokens": 1824,
+  "completion_tokens": 171,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s a real pain. If a drone just suddenly restarts mid-flight—usually because of some software glitch—it’ll keep flying on its own, but it might not behave right. Sometimes it’ll just keep going where it was headed, other times it’ll drift off course or even hover weirdly.\n\nWe usually spot it on the maps and watch to see if it’s still safe. If it’s still in the airspace it’s allowed to be in, we’ll let it finish its job or come back to the pad on its own. But if it’s acting up—like flying too low or too fast—we’ll have to ground it manually and send someone to check it out. Those restarts can mess up the battery or the sensors, so we’ve got to inspect it before we let it fly again."
+   }
+  }
+ ]
+}

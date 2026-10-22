@@ -1,0 +1,29 @@
+{
+ "id": "6ec4fe96fe854f78addc9242c00b896b",
+ "created": 1792681721,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2131,
+  "total_tokens": 2274,
+  "completion_tokens": 143,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about screens or buttons—this isn’t my job. I just know what I need to *see* and what I need to *do* to keep things running.\n\nFor example, I need to know which drones are available, which ones are broken, and where they’re charging. I need to be able to send a drone to charge or take it out of service if something’s wrong. And I need to see if a drone’s battery is low or if it’s stuck somewhere.\n\nBut I don’t need fancy reports or graphs—I just need the facts, fast. If the service makes my life easier, that’s great. If it slows me down, I’ll complain."
+   }
+  }
+ ]
+}

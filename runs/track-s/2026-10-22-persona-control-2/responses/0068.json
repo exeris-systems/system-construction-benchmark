@@ -1,0 +1,29 @@
+{
+ "id": "cf802ddb046345b3b69dc2eff72edabb",
+ "created": 1792683362,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1446,
+  "total_tokens": 1566,
+  "completion_tokens": 120,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service gets restarted a few times a week—usually in the morning, sometimes in the afternoon if something’s wrong.\n\nWe don’t plan it; it just happens. The server’s not built to run forever, so we have to reboot it to keep it stable. And since it’s a single server, there’s no way around it.\n\nIt’s annoying because drones are flying during those times, and the service goes down for a minute or two. But the companies know that’s part of the deal. We just make sure we do it when we think it’ll cause the least trouble."
+   }
+  }
+ ]
+}

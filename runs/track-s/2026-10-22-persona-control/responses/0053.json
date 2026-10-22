@@ -1,0 +1,29 @@
+{
+ "id": "0aee3f5720d240a7ac15dfee787aec12",
+ "created": 1792681769,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1728,
+  "total_tokens": 1892,
+  "completion_tokens": 164,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Not even close. Reports come and go like they’re playing a game of tag. Sometimes they arrive in the right order, but more often than not, they’re all jumbled up—like someone shuffled a deck of cards. And don’t even get me started on duplicates. You’ll get the same report three times in a row, or one that’s half-baked, or just nothing at all.\n\nThe worst is when the radio’s acting up—especially near ports or in storms. One minute you’ve got a clear signal, the next you’re flying blind. And if the drone’s out of range of a relay station? Forget it. You might not hear from it until it’s back at the pad, or not at all. Then you’re just guessing where it went and what it saw."
+   }
+  }
+ ]
+}

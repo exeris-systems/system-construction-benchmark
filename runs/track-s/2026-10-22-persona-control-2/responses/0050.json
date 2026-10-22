@@ -1,0 +1,29 @@
+{
+ "id": "c6b3f77891094c4b8189f262e00a2a0f",
+ "created": 1792683317,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1388,
+  "total_tokens": 1505,
+  "completion_tokens": 117,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not at all. Each drone has its own charging connector, and they’re all different. We’ve got pads for the small delivery drones, pads for the heavier inspection drones, and even pads for the ones with thermal cameras—they all need their own type. You can’t just plug any drone into any pad; it’s got to match exactly.\n\nThat’s why we’ve got a few dozen pads set up at each site, but they’re all labeled and assigned to specific drone models. If a drone’s connector doesn’t fit, it won’t charge at all."
+   }
+  }
+ ]
+}

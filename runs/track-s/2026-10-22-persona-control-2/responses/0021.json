@@ -1,0 +1,29 @@
+{
+ "id": "ddfdf02b354f443a8a9fecfd179c5bed",
+ "created": 1792683224,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1536,
+  "total_tokens": 1647,
+  "completion_tokens": 111,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how many drones each customer has. That’s their business, not mine. I only track the airspace—like the corridors and sites—and how many of those are busy or closed. If a customer wants to know how many drones they’re running, they’d have to ask their own systems.\n\nSometimes a customer will tell me how many drones they’ve got at a site, but only so I can warn them if too many are trying to take off or land at once. That’s about capacity, not counting their entire fleet."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "0c208e0b3b0a4ba0b04b26807ea6efdd",
+ "created": 1792681701,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1162,
+  "total_tokens": 1275,
+  "completion_tokens": 113,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, it varies a lot by customer. The parcel delivery firm probably has the biggest fleet—maybe a couple hundred drones, all pretty similar models since they mostly do simple deliveries. The inspection company has fewer, but they’re more specialized, so each one costs more and needs different sensors.\n\nThe hospital logistics one is smaller still, maybe fifty or so, but they’re all kept in top shape because they carry medical supplies. Each company manages its own drones, so I don’t track the total across all of them. Just my own section at a time."
+   }
+  }
+ ]
+}

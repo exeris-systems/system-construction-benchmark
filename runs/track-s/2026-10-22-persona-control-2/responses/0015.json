@@ -1,0 +1,29 @@
+{
+ "id": "8fe4b1173c264c419a0bbeaa0c7f99ea",
+ "created": 1792683211,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2149,
+  "total_tokens": 2268,
+  "completion_tokens": 119,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t track that kind of thing—each company handles its own disruptions. But for us, yesterday’s closure messed up a few jobs. One drone was already in the air when the zone expanded, so we had to call it back and reroute it. Another job got delayed because the site was suddenly off-limits, and we had to wait for the closure to end before sending a replacement drone.\n\nIt wasn’t a total disaster, but it took extra time to adjust. I don’t know how the other companies were affected—I just focus on my own drones and jobs."
+   }
+  }
+ ]
+}

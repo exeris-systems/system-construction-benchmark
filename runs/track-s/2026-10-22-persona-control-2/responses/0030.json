@@ -1,0 +1,29 @@
+{
+ "id": "4dbc7e44de0b44d1938722c668c544b7",
+ "created": 1792683244,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1844,
+  "total_tokens": 2024,
+  "completion_tokens": 180,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t deal with that—the airspace desk is a separate team. But I *do* know that closures can be a real headache for us. Sometimes they’re short-lived, like a few minutes for a military exercise, and we just reroute the drones or hold them on the ground. Other times, they last hours—like when a big event is happening nearby—and then we’ve got to cancel jobs or move drones to other sites.\n\nThe worst part is that we don’t always get much warning. If the closure is sudden, we might not even know until the drones are already in the air. And since we can’t just call them back—especially if they’re far away—we’ve got to hope they can find another way or land safely. The airspace desk probably looks at the rules and the weather, but honestly, we just deal with the fallout."
+   }
+  }
+ ]
+}

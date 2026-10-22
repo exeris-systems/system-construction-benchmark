@@ -1,0 +1,29 @@
+{
+ "id": "9717d4e3834048e7a383b4ac0de44e59",
+ "created": 1792683183,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1234,
+  "total_tokens": 1310,
+  "completion_tokens": 76,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, we’ve got a few hundred—maybe around 300 to 400, depending on which customer you’re talking about. Some of our clients have smaller fleets, like the hospital, while the parcel delivery guys run the biggest ones. But since we share the same platform, the total number can jump around based on who’s active that week."
+   }
+  }
+ ]
+}

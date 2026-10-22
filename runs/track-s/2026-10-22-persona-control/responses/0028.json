@@ -1,0 +1,29 @@
+{
+ "id": "6ab1f0dcc36b41aa865e8302af1c3fde",
+ "created": 1792681713,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1496,
+  "total_tokens": 1657,
+  "completion_tokens": 161,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s a pain. If a drone restarts mid-flight, it usually just keeps going on autopilot—sometimes it’s fine, sometimes it’s not. Depends on the model and the fault.\n\nWe’ve had cases where it just keeps flying the same route, even if the job’s already done or the weather’s changed. Other times, it might drift off course or lose altitude. The worst part is, we don’t always get a proper report right away because the radio signal’s patchy. By the time we notice, the drone might be miles away from where it should be.\n\nWe just hope it lands safely somewhere. If it doesn’t, we have to track it down and figure out what happened—sometimes that means calling the local police or searching the area."
+   }
+  }
+ ]
+}

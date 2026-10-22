@@ -1,0 +1,29 @@
+{
+ "id": "87402fa05b2f4f61b44bbe8865053f78",
+ "created": 1792683346,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2386,
+  "total_tokens": 2464,
+  "completion_tokens": 78,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the system stores anything internally—that’s not my job. All I know is that the routes are defined by the corridors between named sites, and the system needs to show me which drones can get to where a job starts.\n\nIf the system loses track of the routes or the sites, then dispatchers can’t plan flights properly. That’s all I can say."
+   }
+  }
+ ]
+}

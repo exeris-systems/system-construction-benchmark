@@ -1,0 +1,29 @@
+{
+ "id": "6c0585b080664ef08b935e6e1086b33a",
+ "created": 1792681745,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1082,
+  "total_tokens": 1182,
+  "completion_tokens": 100,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I can’t look into a single company’s flights. My job is just to keep the shared airspace info up to date—like closures, zones, and corridors—and see how they affect *all* the customers together. If a closure hits a site, I’ll see which companies’ drones are stuck there, but I don’t track their individual routes or schedules.\n\nFor details on a specific company’s flights, you’d have to ask them. They manage their own operations."
+   }
+  }
+ ]
+}

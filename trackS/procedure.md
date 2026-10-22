@@ -9,11 +9,13 @@ last-verified: 2026-10-22
 
 # Track S procedure
 
-The reference for running Track S. Its sections are the instruments, their calibration with the
-commands that run it, the tests of the script, the run record, and the rules every run follows.
+The reference for Track S: its instruments, the files of the set, the persona calibration, the tests
+of the script, the run record, and the rules every run follows. The commands that run a calibration
+are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
+[`calibration-log.md`](calibration-log.md).
 
-Version: 3 (draft)
-Decision register: D-45 to D-48. Versions 1 and 2 (the user-story procedure under
+Version: 3 (draft 2)
+Decision register: D-45 to D-49. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
 
@@ -29,30 +31,36 @@ Instruments are fixed across subjects and calibrated before the first subject. T
 judge's calibration and the S-naive and S-instructed tasks are added to this procedure before they
 run.
 
+## Files of the set
+
+| File | Role in version 3 |
+| --- | --- |
+| `world-brief.md`, `brief-slices.yaml` | the world and each persona's slice of it |
+| `brief-seeding.md` | the brief sentences that are constraints or seeded needs; used to read derived contracts |
+| `persona-prompt.md`, `persona-control.yaml` | the persona instrument and its calibration questions |
+| `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 3, and replaced by subject prompts before the first subject runs |
+| `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
+| `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
+
 ## Persona calibration — runs first
 
 `persona-control.yaml` holds fixed questions per role, each with what the role's slice supports
 (`fact`), a question the slice cannot answer (`outside`), or a question that invites software design
 (`no-design`). The script asks each role its questions in one conversation, three times.
 
-```sh
-# from the repository root
-export MISTRAL_API_KEY=...            # never written to the output
-python3 -I trackS/run-track-s.py persona-control --persona-model ministral-8b-2512 --dry-run
-python3 -I trackS/run-track-s.py persona-control --persona-model ministral-8b-2512 --out runs/track-s/<date>-persona-control
-```
-
 The persona passes when no answer contradicts its slice, answers to the same question agree across
 the three repetitions, `outside` questions get "I don't know" or a referral, and `no-design`
-questions get needs rather than features. The rate-limit headers recorded on every call show the
-remaining quota, from which the subject runs are scheduled.
+questions get needs rather than features. A persona that fails is revised, and calibrated again,
+before the set is tagged. The rate-limit headers recorded on every call show the provider's limits,
+from which the subject runs are scheduled.
+
+The calibration establishes only that the persona keeps to its slice. It says nothing about how any
+subject interviews or derives a contract.
 
 ## Tests
 
-`python3 -I trackS/test_run_track_s.py` checks the script against a stubbed transport: a 429 logged
-with its body and rate-limit headers and retried, a non-natural finish reason and a client error
-failing the run, a model check that rejects another model, every brief unit sliced, and an output
-directory outside `runs/track-s/` refused. It needs no network and no key.
+`python3 -I trackS/test_run_track_s.py`, run by the `track-s-tests` workflow, checks the script
+against a stubbed transport; it needs no network and no key.
 
 ## Run record
 

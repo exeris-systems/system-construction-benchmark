@@ -1,0 +1,29 @@
+{
+ "id": "c891106ad12e403f8d29aa84757d76d4",
+ "created": 1792683308,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1565,
+  "total_tokens": 1656,
+  "completion_tokens": 91,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Technicians handle faults on their own—it’s not part of what I do. They check the drone, fix it, or send it back to the manufacturer if needed.\n\nI only see the airspace side of things: if a drone can’t fly because of a fault, it just won’t appear in the system until it’s fixed and ready to go again. But I don’t know why it’s grounded or who’s working on it."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "46280a884def41a9b049b802a63e9d1a",
+ "created": 1792681794,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2389,
+  "total_tokens": 2594,
+  "completion_tokens": 205,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, it’s a mess—we’ve got at least three different types in use right now. There’s the old **X1 connector**, which is bulky and slow to charge, then the **Y2 connector**, which is a bit faster but still not great, and then the newer **Z3 connector**, which is sleek and charges quicker but only works with certain drones.\n\nThe problem is, you can’t just swap them out. If a drone has a Y2 port, it won’t fit on a Z3 pad, and vice versa. So if I assign a drone to a job and then realize its battery’s low, I have to make sure the charging pad at the site matches its connector—or I’m stuck waiting for someone to bring the right pad over.\n\nSometimes we forget, and a drone ends up sitting there for hours while we scramble to get the right charger. And if the system crashes during that time? Good luck figuring out which pad is free and which connector it uses."
+   }
+  }
+ ]
+}

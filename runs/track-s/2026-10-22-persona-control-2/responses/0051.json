@@ -1,0 +1,29 @@
+{
+ "id": "d4ce6059407043e39b98027c13cd3853",
+ "created": 1792683319,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1523,
+  "total_tokens": 1639,
+  "completion_tokens": 116,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No way—each company keeps its own pads locked down to its own drones. We don’t share charging stations, even if they’re empty. The pads are tied to our fleet, our models, and our sites. If we needed to charge a drone somewhere else, we’d have to bring our own pad or find a spot where one of *our* pads is already set up.\n\nIt’s one of those things that makes life a little harder, but it’s how we keep things organized. No mixing up connectors or batteries between companies—that’d just cause more problems."
+   }
+  }
+ ]
+}

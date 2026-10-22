@@ -1,0 +1,29 @@
+{
+ "id": "5ba94ad0c68e44f4886e58157f547793",
+ "created": 1792681731,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1648,
+  "total_tokens": 1763,
+  "completion_tokens": 115,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not usually—not all at once. Each site has only so many places where drones can take off and land safely at the same time. If too many try to leave or arrive at once, they’d get in each other’s way, and that’s dangerous.\n\nSometimes, we have to wait for a spot to open up. Dispatchers coordinate with each other when they know multiple flights are planned for the same site. If one flight is delayed, it can block others. That’s why we keep an eye on who’s already in the air near a site."
+   }
+  }
+ ]
+}

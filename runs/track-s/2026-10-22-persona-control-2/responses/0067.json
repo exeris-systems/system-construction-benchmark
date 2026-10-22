@@ -1,0 +1,29 @@
+{
+ "id": "eeeab2821f0f4ceb9b97ee52316ad914",
+ "created": 1792683352,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1286,
+  "total_tokens": 1433,
+  "completion_tokens": 147,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Mostly two kinds: **planned closures** and **sudden closures**.\n\nPlanned ones come with a start and end time—like a temporary no-fly zone for a big event. We get them a few days ahead, but sometimes the details change, like the end time getting pushed back.\n\nThen there are **sudden closures**, which pop up without warning—like a military exercise or a weather-related restriction. Those take effect right away, and we have to update the system fast.\n\nSometimes a closure gets amended during the day, like an area getting bigger or the end time moving. That’s when things get tricky—we’ve got to make sure everyone sees the latest version before it causes chaos."
+   }
+  }
+ ]
+}

@@ -189,7 +189,10 @@ class Client:
             self.recorder.log("describe", self, "describe", error=repr(e))
             raise RunFailed(f"{self.role}: model check: {e!r}")
         self.recorder.log("describe", self, "describe", headers=headers)
-        served = info.get("id") or (info.get("name") or "").removeprefix("models/")
+        if not isinstance(info, dict):
+            raise RunFailed(f"{self.role}: model check: response is not a JSON object")
+        name = info.get("name")
+        served = info.get("id") or (name.removeprefix("models/") if isinstance(name, str) else None)
         if served != self.model:
             raise RunFailed(f"{self.role}: requested {self.model}, the provider describes {served!r}")
         return info

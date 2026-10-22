@@ -1,0 +1,29 @@
+{
+ "id": "f17859ea6c214ebeb9de669eeacc59a7",
+ "created": 1792683256,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1625,
+  "total_tokens": 1720,
+  "completion_tokens": 95,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not really. Each site only has so many places where drones can take off and land at once. If too many flights are scheduled for the same time, we have to stagger them—maybe one every few minutes. It’s not just about the drones; sometimes the load or the crew isn’t ready yet, so we have to wait. That’s why we need to know how many spots are free at a site before we plan too many flights at once."
+   }
+  }
+ ]
+}

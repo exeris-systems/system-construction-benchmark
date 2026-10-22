@@ -1,0 +1,29 @@
+{
+ "id": "c167024f932541f9bad687733e995f40",
+ "created": 1792681781,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1350,
+  "total_tokens": 1593,
+  "completion_tokens": 243,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher—me—is the one who decides which drone goes where and how it gets there. The companies’ policy is clear: no software picks the drone or the route. I look at the job, the sites, the drones available, and the airspace rules, and I choose. Sometimes it’s easy, sometimes it’s a mess.\n\nFor example, if a delivery needs to go from a busy port to a hospital, I’ll check which drones are free, which ones have enough battery for the trip, and which ones can handle the load. But if there’s a sudden airspace closure near the hospital, I might have to pick a different drone or even cancel the job. And if two dispatchers are planning for the same drone at the same time, we have to talk it out—no software can decide who gets it.\n\nThe only thing I *do* want help with is finding out which drones could even *reach* the job’s starting point. That’s where the platform could be useful—if it could tell me, “Hey, these three drones are close enough to take off for this inspection,” that saves time. But the actual choice? That’s on me."
+   }
+  }
+ ]
+}

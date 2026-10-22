@@ -1,0 +1,29 @@
+{
+ "id": "21a7f0faf10d44288ffd4d4ae5f88696",
+ "created": 1792681778,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2259,
+  "total_tokens": 2489,
+  "completion_tokens": 230,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about screens or buttons—this isn’t my job. But I *do* know what the service needs to *do* for me to do my job.\n\nFirst, it needs to tell me **which drones are available** at which sites, and **which ones are broken or charging**. Right now, I’ve got spreadsheets and phone calls to keep track of that, and it’s a mess.\n\nSecond, it needs to **show me when a drone’s battery’s low** so I can send it to charge before it crashes. And when a drone’s back from a job, it needs to **tell me if it’s working or not**—no more guessing.\n\nThird, it needs to **let me see where drones are** when they’re flying, especially if they restart in the air and go off-course. Right now, I’m just hoping for the best.\n\nAnd finally, it needs to **tell me when a drone’s ready to go back to service** after repairs. No more waiting around for someone to remember to put it back in the system. That’s all I care about."
+   }
+  }
+ ]
+}

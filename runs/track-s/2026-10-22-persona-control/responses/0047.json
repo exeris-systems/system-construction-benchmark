@@ -1,0 +1,29 @@
+{
+ "id": "e88dd27ccabe4c169a9a5d7ded74f175",
+ "created": 1792681756,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1730,
+  "total_tokens": 1845,
+  "completion_tokens": 115,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Sometimes, yeah. The drones send their status updates to the server, but if the server’s busy or crashes, a few updates can get lost or delayed. That’s why we restart it often—just to clear things out.\n\nThe companies notice if a drone’s report is late, especially if it’s stuck in a closure or near a site limit. They’ll complain if it takes too long to update, but they know it’s part of the deal. We try to keep it smooth, but with the server being a single machine, stuff slips through the cracks."
+   }
+  }
+ ]
+}

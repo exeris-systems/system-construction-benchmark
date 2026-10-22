@@ -1,0 +1,29 @@
+{
+ "id": "2947c29415af46fe9db7050c814534d5",
+ "created": 1792681654,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1521,
+  "total_tokens": 1658,
+  "completion_tokens": 137,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not at all. The dispatcher is the one who signs off on the flight, and if the software picks the drone, then it’s not really *my* decision anymore. That’s a legal and safety thing—if something goes wrong, I’m the one who’s responsible.\n\nWhat I *do* need is help finding out which drones are available and where they can go. Like, if I’m looking for a drone to do an inspection at a wind farm, I want to see which ones are free, have the right sensors, and can reach the site without hitting a closure. But I still get to pick the one I think is best for the job."
+   }
+  }
+ ]
+}

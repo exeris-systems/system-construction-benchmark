@@ -1,0 +1,29 @@
+{
+ "id": "3314e2c3fb4d485a9e681c65f49fb47b",
+ "created": 1792681749,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1331,
+  "total_tokens": 1436,
+  "completion_tokens": 105,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, pretty often—usually a couple of times a week. We’ll plan a restart during a quiet hour, but sometimes it crashes unexpectedly, like when a closure update gets stuck or the server just freezes.\n\nThe companies know it happens, so they’re okay with a few minutes of downtime. But it’s annoying when it happens mid-flight—especially if a closure is changing right then. We try to do it when we think the least drones are in the air, but you can’t always predict that."
+   }
+  }
+ ]
+}

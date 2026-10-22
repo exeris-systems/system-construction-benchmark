@@ -1,0 +1,29 @@
+{
+ "id": "eb5b64932cb94f28afccc68edd7b7eef",
+ "created": 1792681697,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1836,
+  "total_tokens": 1949,
+  "completion_tokens": 113,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Sometimes, yeah. The system can get backed up when we’re updating the airspace—like after a sudden closure or a big restart. If that happens, the drones’ reports might pile up and take a while to come through.\n\nOr if the server’s slow, a drone’s status might not update right away, and the companies might think it’s still flying when it’s already landed. That’s one of the downsides of running everything on a single server. The companies have to be patient—it’s not like we can just add more machines."
+   }
+  }
+ ]
+}

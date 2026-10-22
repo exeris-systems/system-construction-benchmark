@@ -1,0 +1,29 @@
+{
+ "id": "80747cbc522b49d1a95870bbd2e2edc8",
+ "created": 1792681754,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1585,
+  "total_tokens": 1714,
+  "completion_tokens": 129,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Technicians don’t come to *me*—they’re part of the customer companies. When a drone crashes or has a fault, it’s their job to check the logs, fix it, and get it back in the air.\n\nI only see the drone’s location and status if it’s still in the airspace system. If it’s grounded, it’s out of my picture. Sometimes a drone just disappears from the system, and that’s when the companies have to figure out what happened. They usually call me if a closure or site issue might have caused the problem, but mostly it’s their fault logs and their people who know."
+   }
+  }
+ ]
+}

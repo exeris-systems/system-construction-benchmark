@@ -1,0 +1,29 @@
+{
+ "id": "b7fb63afffa74e5187c69f2a0e279388",
+ "created": 1792683310,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1672,
+  "total_tokens": 1750,
+  "completion_tokens": 78,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t deal with the drones’ reports at all. The companies handle their own drones and their own reports—whether they’re late or not is up to them.\n\nMy job is just to make sure the airspace info is up to date so everyone knows where they *can* fly. If a drone’s report is delayed, that’s not something I’d see or fix."
+   }
+  }
+ ]
+}

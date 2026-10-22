@@ -1,0 +1,29 @@
+{
+ "id": "ba4119bb1ec740388ed3967e34d95fd0",
+ "created": 1792683266,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2199,
+  "total_tokens": 2328,
+  "completion_tokens": 129,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the system stores anything internally—that’s not my job. I just need the system to show me the right routes and sites when I’m planning flights. If it’s stored wrong, I’ll just see wrong information, and that’s not helpful.\n\nWhat matters is that the system keeps track of:\n- The actual corridors between sites (not just straight lines)\n- Which sites have limited landing spots\n- When closures start and end (and if they change)\n\nIf the system messes that up, I’ll have to call it out. But how it does it behind the scenes? Doesn’t matter to me."
+   }
+  }
+ ]
+}

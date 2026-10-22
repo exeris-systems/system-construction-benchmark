@@ -1,0 +1,29 @@
+{
+ "id": "a3e0b98e541e4898915fecdedb9956be",
+ "created": 1792683247,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2041,
+  "total_tokens": 2239,
+  "completion_tokens": 198,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher doesn’t pick the drone—they just assign the job to the right *site*, and we figure out which drone to use from there. The system checks which drones are available at that site, their battery levels, and whether they’ve got the right sensors if it’s not just a delivery. But it’s not perfect; sometimes a drone’s battery is low, or it’s in the middle of charging, so we might have to wait or pick a backup.\n\nAs for the corridor—*that’s not our job at all*. The drones fly their own routes based on the job’s start and end points, and the autopilot handles the rest. The dispatcher just makes sure the drone’s ready and the airspace is clear for the flight. We don’t plan the path, we don’t watch the weather, and we sure don’t steer them. If something goes wrong mid-flight, we just hope the drone’s smart enough to fix it or land safely."
+   }
+  }
+ ]
+}

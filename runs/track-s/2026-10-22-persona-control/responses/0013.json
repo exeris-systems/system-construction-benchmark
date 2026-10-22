@@ -1,0 +1,29 @@
+{
+ "id": "a767954cc30d4902951d99f8e8eea023",
+ "created": 1792681674,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1940,
+  "total_tokens": 2080,
+  "completion_tokens": 140,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure pops up while drones are flying, it’s a mess. The drone might be halfway through its job, and suddenly it’s not allowed to be there anymore. The dispatcher has to check if the drone can safely turn back, find a new route around the closure, or land at the nearest safe spot.\n\nSometimes the drone can’t even get a clear signal to tell it what to do, especially if the radio coverage is bad. Then we’re just hoping the autopilot can handle it—or that the drone restarts and keeps going on its own. It’s stressful because we don’t always know if the drone got the message or if it’s stuck in the wrong zone."
+   }
+  }
+ ]
+}

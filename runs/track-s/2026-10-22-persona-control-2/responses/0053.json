@@ -1,0 +1,29 @@
+{
+ "id": "ce81cdf82507432cb13ec99db20bc562",
+ "created": 1792683323,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1840,
+  "total_tokens": 1987,
+  "completion_tokens": 147,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Not even close. Reports come and go like they’re playing a game of tag. Sometimes they arrive on time, sometimes they’re delayed, and sometimes they just don’t show up at all. If the radio signal’s weak—like near a port or in bad weather—you might get nothing for a while, or you might get the same report multiple times.\n\nAnd the order? Forget about it. If a drone sends updates, they might not come in the right sequence. You’ll see one report from a job, then another from a different job, then back to the first one. It’s like trying to read a book where the pages keep getting shuffled. You just have to piece it together as best you can."
+   }
+  }
+ ]
+}

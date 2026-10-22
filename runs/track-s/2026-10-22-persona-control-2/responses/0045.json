@@ -1,0 +1,29 @@
+{
+ "id": "334556b98dd5475395fd52ea907fbcb0",
+ "created": 1792683306,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1474,
+  "total_tokens": 1550,
+  "completion_tokens": 76,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how many drones each customer has—it’s not my job to track that. My focus is just the airspace: the corridors, zones, and closures that affect everyone equally.\n\nIf you need that kind of detail, you’d have to ask the customers themselves. They manage their own fleets, and I don’t get involved in their operations."
+   }
+  }
+ ]
+}

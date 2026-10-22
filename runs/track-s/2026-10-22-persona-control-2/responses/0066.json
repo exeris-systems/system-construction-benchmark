@@ -1,0 +1,29 @@
+{
+ "id": "ed44be01e5f748e0bf594481327bf9bc",
+ "created": 1792683350,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1155,
+  "total_tokens": 1274,
+  "completion_tokens": 119,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I can’t look at any one company’s flights. My job is just to keep the airspace picture up to date—who the closures affect is their own problem to figure out.\n\nWhen a closure comes in, I’ll tell all the customers about it, and they’ll have to work out how it hits their own operations. Sometimes they’ll ask me how many corridors or zones are closed, but I don’t track their drones or jobs.\n\nIf they want to know how a closure messed with their flights, they’ll have to ask their own systems or their own people."
+   }
+  }
+ ]
+}

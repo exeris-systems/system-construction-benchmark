@@ -1,0 +1,29 @@
+{
+ "id": "c9e13b8a66074751a8b6ba91ace16d39",
+ "created": 1792683238,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1417,
+  "total_tokens": 1487,
+  "completion_tokens": 70,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No way—each company keeps its own charging pads at its own sites. We don’t share them, even if one’s empty. The pads are tied to the company’s fleet, and we don’t lend or borrow them. If a drone needs charging, it’s got to go back to its home site or one of our own pads."
+   }
+  }
+ ]
+}

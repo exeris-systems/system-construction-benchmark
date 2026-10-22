@@ -1,0 +1,29 @@
+{
+ "id": "5b484b383de24a7f8a34ea592e77814e",
+ "created": 1792681820,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1572,
+  "total_tokens": 1671,
+  "completion_tokens": 99,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "That’s not my job—technicians are part of the companies, not the airspace desk. When a drone has a fault, it’s up to their own teams to check it out, fix it, or send it back for repairs.\n\nSometimes they’ll call me if a closure or zone change affects their ability to move a drone to a repair site, but otherwise, I don’t get involved. I just make sure the airspace info is correct so they can plan around it."
+   }
+  }
+ ]
+}

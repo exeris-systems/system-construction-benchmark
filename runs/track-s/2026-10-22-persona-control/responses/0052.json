@@ -1,0 +1,29 @@
+{
+ "id": "8a82c5bb71f1485aaebf98f92af6c5f6",
+ "created": 1792681767,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1538,
+  "total_tokens": 1712,
+  "completion_tokens": 174,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s a nightmare. If a drone just *poofs* back online mid-flight, it usually keeps going where it was headed—unless the autopilot’s messed up, and then it might just hover or spiral. Most of the time, it’s fine, but sometimes it’ll drift off course or get stuck in a weird loop.\n\nThe worst part is, we don’t always know it happened right away. The drone might just keep flying, and we only find out when the job’s done and the data’s all wrong—or when the customer calls because the drone didn’t show up where it was supposed to. Then we’ve got to chase it down and see if it’s still flying, or if it crashed somewhere. And if it’s still up? Good luck getting it back—sometimes it’s just gone until the battery dies."
+   }
+  }
+ ]
+}

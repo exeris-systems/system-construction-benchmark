@@ -1,0 +1,29 @@
+{
+ "id": "a0358b147efc453f9f5d7ec251887935",
+ "created": 1792683383,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1898,
+  "total_tokens": 1993,
+  "completion_tokens": 95,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about databases—my job isn’t to manage them.\n\nThe closures come in from the authorities, and we just update the shared airspace info based on what we get. The system keeps track of them, but I don’t decide where or how they’re stored.\n\nIf you’re asking who would know about databases, you’d have to ask the IT team—they’re the ones who set that up. I just work with whatever’s there."
+   }
+  }
+ ]
+}

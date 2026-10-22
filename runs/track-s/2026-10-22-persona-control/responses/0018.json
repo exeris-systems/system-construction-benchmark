@@ -1,0 +1,29 @@
+{
+ "id": "499cda17f73d402db1fd367205c258ff",
+ "created": 1792681686,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1115,
+  "total_tokens": 1236,
+  "completion_tokens": 121,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I can’t look into a single company’s flights. That’s not my job. I only see the airspace—where closures are, which corridors are blocked, and how many drones might be affected *in total* across all customers.\n\nIf a closure hits a site or corridor, I can tell you how many drones from all companies are stuck there, but I don’t know which company’s drones they are or where they were supposed to go. That’s their data, not mine. If they want to know how it affects them, they’d have to ask their own systems."
+   }
+  }
+ ]
+}

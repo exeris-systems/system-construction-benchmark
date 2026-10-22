@@ -1,0 +1,29 @@
+{
+ "id": "e4e0242798eb4b40b3d1f7110e633cde",
+ "created": 1792681823,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1687,
+  "total_tokens": 1781,
+  "completion_tokens": 94,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Not usually—drones send their reports to the companies’ own systems in real time, as far as I know. But I don’t see those reports, so I can’t say if they ever get mixed up or delayed.\n\nIf there’s a problem with timing, it’s something the companies would notice when they’re monitoring their own flights. My focus is just the airspace—like closures and corridors—so I don’t deal with individual drone reports."
+   }
+  }
+ ]
+}

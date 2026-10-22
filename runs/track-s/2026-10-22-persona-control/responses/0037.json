@@ -1,0 +1,29 @@
+{
+ "id": "1f2c166aebb3491aac4ae39c52a2740e",
+ "created": 1792681735,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1944,
+  "total_tokens": 2107,
+  "completion_tokens": 163,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure happens while drones are already flying, it’s a big headache. The rules say drones can’t enter or stay in a closed zone, so the dispatcher has to decide what to do—fast.\n\nSometimes, the drone can just reroute around the closure, but that takes time and battery. Other times, the dispatcher has to call it back to land early, which might mean missing the job or delaying the next one. If the drone’s too far away or the battery’s too low, we might have to cancel the whole flight and send another one later.\n\nThe worst part is when the closure changes mid-flight—like if the zone gets bigger or the end time moves. Then we have to scramble to figure out if the drone can still make it safely or if it’s stuck."
+   }
+  }
+ ]
+}

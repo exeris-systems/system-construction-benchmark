@@ -1,0 +1,29 @@
+{
+ "id": "7f8770c8086442958590145772d008f1",
+ "created": 1792683195,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1973,
+  "total_tokens": 2086,
+  "completion_tokens": 113,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "That’s not our job—the dispatchers handle that. They pick the drone based on which one’s closest, has enough battery, and fits the load. Sometimes they’ll even choose a different route if they think it’s safer or faster, but they don’t use our system for that.\n\nWe just make sure the drones are ready to go—batteries charged, sensors working, no loose parts. If a drone’s down for repairs, they’ll pick another one. But they don’t ask us which one to use; that’s all on them."
+   }
+  }
+ ]
+}

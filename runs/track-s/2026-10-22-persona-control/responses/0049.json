@@ -1,0 +1,29 @@
+{
+ "id": "8515eb244777413f9a861427bcafe74a",
+ "created": 1792681761,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1162,
+  "total_tokens": 1288,
+  "completion_tokens": 126,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, it varies a lot by customer. The parcel delivery guy probably has the biggest fleet—maybe a couple hundred drones, all the same model since they’re all about speed and reliability. The hospital logistics team is smaller, maybe fifty or so, but they’ve got some heavy-duty ones for carrying medical supplies.\n\nThe inspection company is all over the place—different sensors, different weights, so their fleet’s a mix of models. Some of those drones are built like tanks, others are lightweight scouts. I’d say between fifty and a hundred for them, but it changes depending on which projects they’re running."
+   }
+  }
+ ]
+}

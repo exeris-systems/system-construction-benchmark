@@ -1,0 +1,29 @@
+{
+ "id": "d1430736410e4cb4b026fd166ee8020d",
+ "created": 1792681709,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1289,
+  "total_tokens": 1398,
+  "completion_tokens": 109,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No way. Each drone model has its own charging connector, and they’re not interchangeable. If a drone’s battery is dead, it has to go to a pad that matches its connector type. That’s why we keep track of which pads belong to which company and which models they support.\n\nSometimes we forget to check, and a drone gets sent to the wrong pad—then we have to chase it down and move it. Happened last week with the inspection company’s thermal drones; they use a different plug than the delivery drones."
+   }
+  }
+ ]
+}

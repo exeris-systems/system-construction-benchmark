@@ -1,0 +1,29 @@
+{
+ "id": "225889e816a14289bd9162374cf09d2d",
+ "created": 1792683327,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2165,
+  "total_tokens": 2315,
+  "completion_tokens": 150,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher doesn’t pick the drone—*we* do. They just tell us which delivery needs to go where, and we grab the first drone that’s ready, has enough battery, and is at the right site. It’s usually the one that’s already charged and sitting idle, or the one that’s closest to the pickup point.\n\nThe corridor? That’s mostly up to the drone’s autopilot. The dispatcher just gives us the start and end points, and the drone figures out the safest route on its own—unless there’s a big airspace closure or something, then we have to reroute manually. We don’t plan the whole thing in advance; it’s more about reacting to what’s available right now."
+   }
+  }
+ ]
+}

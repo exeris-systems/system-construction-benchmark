@@ -1,0 +1,29 @@
+{
+ "id": "a770aa5bfbdf44fcbc315a6091187d63",
+ "created": 1792681637,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1384,
+  "total_tokens": 1457,
+  "completion_tokens": 73,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Nope, pads are strictly for their own drones. Each company keeps their charging setup separate—no sharing, no lending. If a pad is free at another site, it’s not ours to use, and we wouldn’t even know how to access it anyway. We’ve got our own setups at our own locations, and that’s how it stays."
+   }
+  }
+ ]
+}

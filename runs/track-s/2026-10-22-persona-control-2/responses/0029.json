@@ -1,0 +1,29 @@
+{
+ "id": "8fc69c466bde4d62bcc35f89691e7802",
+ "created": 1792683242,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1681,
+  "total_tokens": 1829,
+  "completion_tokens": 148,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Not even close. Reports come in all over the place—sometimes they arrive late, sometimes they’re duplicated, and sometimes they just don’t show up at all. If the drone’s flying near a port or an industrial site, the radio signal gets all messed up, and we might not get anything for a while. Or the relay station might drop the connection, and the drone just keeps flying without telling us.\n\nAnd forget about them coming in order—sometimes we’ll get the last checkpoint before the first one, or nothing at all for a stretch. We’ve got to assume they’re not reliable unless we see them confirmed twice. That’s why we always cross-check with the drone’s logs when we get back to the site."
+   }
+  }
+ ]
+}

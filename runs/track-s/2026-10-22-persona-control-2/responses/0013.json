@@ -1,0 +1,29 @@
+{
+ "id": "c48346993f0b4baf89e3d2bd66eac7e9",
+ "created": 1792683207,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1908,
+  "total_tokens": 2030,
+  "completion_tokens": 122,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure happens while drones are flying, we have to act fast. The drone might be inside the zone already, or it might be heading toward it. If it’s in the zone, we have to call it back immediately—no choice. If it’s outside but on a path that will take it into the zone, we have to reroute it or stop the job.\n\nSometimes the drone restarts mid-flight and keeps going, so we have to check its position and adjust plans. It’s a mess when closures change while drones are in the air—we’re always playing catch-up."
+   }
+  }
+ ]
+}

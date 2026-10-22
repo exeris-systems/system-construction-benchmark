@@ -1,0 +1,29 @@
+{
+ "id": "93f63fbe70b548ab8687be58d3aaf71c",
+ "created": 1792683258,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1731,
+  "total_tokens": 1829,
+  "completion_tokens": 98,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures get changed all the time—sometimes even while drones are already flying. For example, an area might get widened, or an end time for a closure might move. The authorities send updates, and we have to adjust our flights right away. Sometimes a closure gets lifted early, or a new one pops up suddenly, like if there’s an emergency. We have to watch for those changes and make sure our flights stay safe. It’s a lot of back-and-forth."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "4b767cfd26584544a81a5384587a5908",
+ "created": 1792683187,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1425,
+  "total_tokens": 1478,
+  "completion_tokens": 53,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No way—each company’s pads are locked to their own fleet. If a pad’s free at another site, it’s not ours to use. We’ve got our own pads at our own sites, and that’s it. No sharing, no exceptions."
+   }
+  }
+ ]
+}

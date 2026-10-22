@@ -1,0 +1,29 @@
+{
+ "id": "a63176e37b9d4da49dffab709d38f67a",
+ "created": 1792681715,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1673,
+  "total_tokens": 1802,
+  "completion_tokens": 129,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Not even close. Reports come and go like they’re on a rollercoaster—sometimes they pile up, sometimes they’re missing entirely. If there’s bad weather or a jammed relay station, we might not hear from a drone for hours, or we’ll get the same report three times in a row.\n\nAnd order? Forget about it. A drone might finish its job, but its last report gets delayed while an earlier one from another drone comes through first. We just have to cross-check the timestamps and the GPS data to make sense of it all. It’s like trying to read a book where the pages keep getting shuffled."
+   }
+  }
+ ]
+}
