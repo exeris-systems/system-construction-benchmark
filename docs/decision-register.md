@@ -438,4 +438,3 @@ Until version 3 of the Track S procedure is tagged, each revision of its files i
 Draft 2 revises `persona-prompt.md` after the persona's first calibration (`runs/track-s/2026-10-22-persona-control`, 47 of 72 answers passing; `trackS/calibration-log.md`): the persona speaks for its own organisation only, says it does not know a number, name, type or frequency its notes do not give, and says nothing about how a system works or keeps information. If the revised persona still fails, the next draft changes the persona model, which amends D-48.
 
 Impact: `trackS/procedure.md`, `trackS/persona-prompt.md`, `trackS/calibration-log.md`.
-
