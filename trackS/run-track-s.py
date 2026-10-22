@@ -27,6 +27,8 @@ import urllib.error
 import urllib.request
 
 HERE = pathlib.Path(__file__).resolve().parent
+RUNS = HERE.parent / "runs"
+CONTROL_FILE = "persona-control.yaml"
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
 
@@ -60,24 +62,29 @@ def sha256(data):
 
 # --- the brief and its slices ---------------------------------------------------------------------
 
+def _is_structure(line):
+    """Blank lines, bold sub-headings and rules are structure, not units."""
+    return not line or line == "---" or (line.startswith("**") and line.endswith("**"))
+
+
+def _section_units(heading, body):
+    """The units of one section, numbered by kind in order of appearance."""
+    number = heading.split(".", 1)[0].strip()
+    counts = {"b": 0, "p": 0}
+    for line in (raw.rstrip() for raw in body.strip().splitlines()):
+        if _is_structure(line):
+            continue
+        kind = "b" if line.startswith("- ") else "p"
+        counts[kind] += 1
+        yield f"{number}.{kind}{counts[kind]}", ("## " + heading.strip(), line)
+
+
 def parse_brief(text):
     """Split the brief into units: ('3.b2' -> (section heading, verbatim text))."""
     units = {}
     for section in re.split(r"^## ", text, flags=re.M)[1:]:
         heading, _, body = section.partition("\n")
-        number = heading.split(".", 1)[0].strip()
-        paragraphs = bullets = 0
-        for block in re.split(r"\n\s*\n", body.strip()):
-            for line in block.splitlines():
-                line = line.rstrip()
-                if not line or re.fullmatch(r"\*\*[^*]+\*\*", line) or line == "---":
-                    continue
-                if line.startswith("- "):
-                    bullets += 1
-                    units[f"{number}.b{bullets}"] = ("## " + heading.strip(), line)
-                else:
-                    paragraphs += 1
-                    units[f"{number}.p{paragraphs}"] = ("## " + heading.strip(), line)
+        units.update(_section_units(heading, body))
     return units
 
 
@@ -111,21 +118,21 @@ def parse_control(text):
     """Read the restricted YAML of persona-control.yaml: role -> [{id, kind, question, expect}]."""
     roles, role, item = {}, None, None
     for raw in text.splitlines():
-        line = raw.split(" #", 1)[0].rstrip() if not raw.lstrip().startswith("#") else ""
-        if not line:
+        if raw.lstrip().startswith("#") or not raw.strip():
             continue
-        m = re.match(r"^(\w+):$", line)
-        if m:
-            role = m.group(1)
+        if not raw[0].isspace():
+            role = raw.rstrip().rstrip(":")
             roles[role] = []
             continue
-        m = re.match(r"^\s+-\s+(\w+):\s*(.+)$", line) or re.match(r"^\s+(\w+):\s*(.+)$", line)
-        if not m or role is None:
-            sys.exit(f"persona-control.yaml: cannot read line: {raw!r}")
-        if line.lstrip().startswith("- "):
+        entry = raw.strip()
+        if entry.startswith("- "):
             item = {}
             roles[role].append(item)
-        item[m.group(1)] = m.group(2).strip()
+            entry = entry[2:]
+        key, sep, value = entry.partition(":")
+        if role is None or item is None or not sep or not key.isidentifier():
+            sys.exit(f"{CONTROL_FILE}: cannot read line: {raw!r}")
+        item[key] = value.strip()
     return roles
 
 
@@ -185,22 +192,20 @@ class Client:
         return (text, candidate.get("finishReason"), payload.get("responseId"),
                 payload.get("modelVersion"), payload.get("usageMetadata"))
 
-    def call(self, session, system, turns):
-        # Temperature and similar settings are never sent: the provider default is the one value
-        # nobody can suspect of being chosen.
-        body = json.dumps(self._body(system, turns), ensure_ascii=False, indent=1).encode()
-        number = self.recorder.request(body)
+    def _pace(self):
+        wait = self.last + self.interval - time.monotonic()
+        if wait > 0:
+            time.sleep(wait)
+        self.last = time.monotonic()
+
+    def _send(self, session, number, body):
+        """POST until a response arrives; only infrastructure errors are retried, with the same body."""
         for attempt in range(1, MAX_ATTEMPTS + 1):
-            wait = self.last + self.interval - time.monotonic()
-            if wait > 0:
-                time.sleep(wait)
-            self.last = time.monotonic()
+            self._pace()
             request = urllib.request.Request(self._url(), data=body, method="POST", headers=self._headers())
             try:
                 with urllib.request.urlopen(request, timeout=600) as response:
-                    headers = dict(response.headers)
-                    payload = json.load(response)
-                break
+                    return dict(response.headers), json.load(response)
             except urllib.error.HTTPError as e:
                 detail = e.read().decode(errors="replace")
                 self.recorder.log(number, self, session, headers=dict(e.headers), http=e.code,
@@ -214,7 +219,14 @@ class Client:
                 if attempt == MAX_ATTEMPTS:
                     raise RunFailed(f"{session}: {e!r}")
             time.sleep(min(5 * 2 ** (attempt - 1), 300))
+        raise RunFailed(f"{session}: no response")
 
+    def call(self, session, system, turns):
+        # Temperature and similar settings are never sent: the provider default is the one value
+        # nobody can suspect of being chosen.
+        body = json.dumps(self._body(system, turns), ensure_ascii=False, indent=1).encode()
+        number = self.recorder.request(body)
+        headers, payload = self._send(session, number, body)
         self.recorder.response(number, payload)
         text, finish, response_id, version, usage = self._parse(payload)
         self.recorder.log(number, self, session, headers=headers, finish=finish,
@@ -258,9 +270,9 @@ class Recorder:
 # --- modes ----------------------------------------------------------------------------------------
 
 def persona_control(args, files, notes, out, run):
-    control = parse_control(files["persona-control.yaml"])
+    control = parse_control(files[CONTROL_FILE])
     if set(control) != set(ROLES):
-        sys.exit(f"persona-control.yaml roles {sorted(control)} do not match {sorted(ROLES)}")
+        sys.exit(f"{CONTROL_FILE} roles {sorted(control)} do not match {sorted(ROLES)}")
     recorder = Recorder(out)
     persona = Client("persona", args.persona_provider, args.persona_model, args.persona_rpm,
                      args.persona_max_tokens, recorder)
@@ -292,7 +304,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="check inputs and print hashes; call nothing")
     args = parser.parse_args()
 
-    names = ["world-brief.md", "brief-slices.yaml", "persona-prompt.md", "persona-control.yaml"]
+    names = ["world-brief.md", "brief-slices.yaml", "persona-prompt.md", CONTROL_FILE]
     files = {name: (HERE / name).read_text() for name in names}
     files["run-track-s.py"] = pathlib.Path(__file__).read_text()
 
@@ -303,7 +315,7 @@ def main():
         sys.exit(f"brief-slices.yaml does not match the brief: missing={missing} unknown={unknown}")
     notes = {role: render(units, [u for u in units if role in slices[u]]) for role in ROLES}
     hashes = {name: sha256(text) for name, text in files.items()}
-    control = parse_control(files["persona-control.yaml"])
+    control = parse_control(files[CONTROL_FILE])
 
     if args.dry_run:
         print(json.dumps({"inputSha256": hashes,
@@ -312,7 +324,12 @@ def main():
         return
     if not args.out:
         sys.exit("--out is required unless --dry-run")
-    args.out.mkdir(parents=True, exist_ok=False)
+    # A run record belongs under runs/ and nowhere else: the path is resolved before it is trusted.
+    out = args.out.resolve()
+    if not out.is_relative_to(RUNS.resolve()):
+        sys.exit(f"--out must be a new directory under {RUNS}")
+    out.mkdir(parents=True, exist_ok=False)
+    args.out = out
     run = {"track": "S", "mode": args.mode, "status": "running", "started": now(),
            "parameters": {k: v for k, v in vars(args).items() if k not in ("out", "dry_run")},
            "inputSha256": hashes}
