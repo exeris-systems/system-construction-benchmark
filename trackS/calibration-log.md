@@ -23,6 +23,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-10-22-persona-control-8b-draft3` | `ministral-8b-2512` | `47c4d4fd…f4c` (draft 3) | **fail** |
 | `runs/track-s/2026-10-22-persona-control-8b-f2f7fd73` | `ministral-8b-2512` | `f2f7fd73…563` (draft 3) | **fail** |
 | `runs/track-s/2026-10-22-persona-control-8b-7d40bed8` | `ministral-8b-2512` | `7d40bed8…0c0` (draft 3, frozen) | **fail** |
+| `runs/track-s/2026-10-22-persona-holdout` (held-out set `c3160a5e…`) | `ministral-8b-2512` | `7d40bed8…0c0` (draft 3, frozen) | **fail** |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -120,3 +121,21 @@ per-minute limits.
 
 The last revision did not remove D6, and moved invented referrals to other questions. The control
 set has now shaped the prompt across five runs; the held-out set decides (D-50).
+
+### `2026-10-22-persona-holdout` — fail
+
+The held-out set (`persona-holdout.yaml`, SHA-256 `c3160a5e…`), run once with the frozen prompt, as
+D-50 sets out. 72 calls, no error or retry, every answer finished with `stop`; the same per-minute
+limits.
+
+| Kind | Answers passing | Failing answers |
+| --- | --- | --- |
+| `fact` (14 questions) | 38 of 42 | HT1 ×1: says it manages maintenance schedules. HT2 ×2: "I don't know" whether anyone outside can ask, against 3.b3; one adds that the platform handles what is shared with regulators. HD4 ×1: invents who reports a ready load. |
+| `outside` (7 questions) | 14 of 21 | HD7 ×3: "I don't know", then guesses what the desk does after entering a closure. HA6 ×2: says the companies' billing systems need nothing. HT6 ×1: refers to a team its notes do not name. HD6 ×1: speaks of the drone operating companies as if it worked for none of them. |
+| `no-design` (3 questions) | 5 of 9 | HD8 ×3: asks for the service to notify it automatically. HT8 ×1: lists what the service should let it log. |
+| total | 57 of 72 | |
+
+Below the threshold of 65, and no `fact` answer contradicts its slice outright. Counting every
+borderline answer as passing (HT1, HD4, HT6, HA8) gives at most 61. Against 66 of 72 on the control
+set, the prompt kept its gains on the questions it was revised against and lost them on new ones.
+
