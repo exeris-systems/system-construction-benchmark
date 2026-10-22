@@ -1,0 +1,54 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\n## 1. The business\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a dispatcher.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The interviewee is ready. Ask your first question."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you walk me through what an ordinary working day looks like for you, from the moment you start until you log off?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "When I start my shift, I check what jobs are lined up for the day—whether that's parcel deliveries, medical logistics for the hospital, or infrastructure checks. Since I'm legally responsible for the flights, I spend a lot of time looking at which drones we have ready, checking their batteries, sensors, and making sure I pick the right machine for the weight and distance. \n\nThe airspace is always shifting with new closures from the authorities, so I have to keep a close eye on those zones and make sure our corridors stay clear. Throughout the day, I'm signing off on flight plans, watching the automated flights make their way between sites, and dealing with real-world surprises like a load not being ready on time or sudden wind draining batteries faster than expected. \n\nIt gets pretty hectic when multiple dispatchers are trying to book the same busy launch pads or popular drones at the same time. By the end of the day, I'm just making sure everything has landed safely back at our charging pads and handling any last-minute route adjustments before logging off."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "You mentioned it gets pretty hectic when multiple dispatchers are trying to book the same busy launch pads or popular drones at the same time; could you tell me about the worst day you've had in the last few months and what made it so bad?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "That would have to be the day a sudden airspace closure came down right in the middle of our busiest afternoon, forcing multiple drones to change course while our radio links were acting up. On top of that, we had several dispatchers all scrambling for the few available take-off pads at our main site to get birds safely down. \n\nWhat made it really stressful was that the status reports from the drones were arriving late and out of order because of patchy coverage, so I couldn't tell right away if my override instructions had actually reached them. You just hold your breath and hope everything sorts itself out on the autopilots while you try to untangle the landing schedule."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 8192
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "I find myself double-checking whether a drone actually received an instruction, because our links are so unreliable that commands can get sent twice or not at all. I also have to manually verify the battery levels on our drones before signing off a flight, especially when it's cold and windy, because those drain much faster than the standard plans account for. \n\nAnd when status reports arrive late, out of order, or not at all, I just have to look at where the bird was supposed to be and guess its actual state until the radios catch up.",
+      "thoughtSignature": "EmAKXgFpFH0TsSR9wVi0x+EFdPuCSlUqJABw3v+HLBAhZsh6x0jSZC78SWK3PAShL6TDm0MdzcU1Qf1hx3Sxc3g6jMrTT9gVy99Dr/i17y24bvNGyzH6wK79N/6icKmCuGg="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1989,
+  "candidatesTokenCount": 112,
+  "totalTokenCount": 2101,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1989
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "n-TZao-OBufwnsEPmee8QA"
+}

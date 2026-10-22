@@ -1,0 +1,57 @@
+{
+  "procedure": "user-story procedure v2 (decision register D-36, D-43)",
+  "status": "completed",
+  "started": "2026-10-22T10:24:05.608650+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "analystModel": "gemini-3.8-flash",
+  "modelLimits": {
+    "gemini-3.5-flash-lite": {
+      "name": "models/gemini-3.5-flash-lite",
+      "version": "3.5-flash-lite-07-2026",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    "gemini-3.8-flash": {
+      "name": "models/gemini-3.8-flash",
+      "version": "3.0",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    }
+  },
+  "callsPerMinute": {
+    "interviews": 14,
+    "analyst": 4
+  },
+  "temperature": "provider default (not sent)",
+  "maxTurns": 25,
+  "maxOutputTokens": {
+    "turn": 8192,
+    "analyst": 65536
+  },
+  "inputSha256": {
+    "world-brief.md": "dfb0de323972b2ead2811e441914d27f6fa1f98410e7c433010e8dcd057f130e",
+    "brief-slices.yaml": "107cafd568b94530beacc8c3f1088bf1c55949a6c55a8f8a9586013efd6e4d5e",
+    "persona-prompt.md": "0f180f10e62b563ebada95982dbc17572dbfdfbbcd1ab3a00e7d31748bf92bd9",
+    "interviewer-prompt.md": "5f17847372d7cc148549774defa75837a5fb301ebb89e27c0a69fab583b0e591",
+    "analyst-prompt.md": "838f1403933caa95d8ee9e19975086fbcbed8c974f874f136fec3470f8a3d00e",
+    "run-procedure.py": "293c694708042459378d5b7f5630fa2ffda305f60a14d28b1c685c2eec1137a1"
+  },
+  "interviews": {
+    "technician": {
+      "ending": "ended_by_interviewer",
+      "endingMessage": "END OF INTERVIEW",
+      "questions": 6
+    },
+    "dispatcher": {
+      "ending": "ended_by_interviewer",
+      "endingMessage": "END OF INTERVIEW",
+      "questions": 6
+    },
+    "desk": {
+      "ending": "ended_by_interviewer",
+      "endingMessage": "END OF INTERVIEW",
+      "questions": 6
+    }
+  },
+  "finished": "2026-10-22T10:34:21.249217+00:00"
+}
