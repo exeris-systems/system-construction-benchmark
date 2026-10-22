@@ -124,6 +124,14 @@ class ClientTest(unittest.TestCase):
         with self.assertRaises(ts.RunFailed):
             self.client.describe()
 
+    def test_model_check_body_that_is_not_json_is_a_run_failure(self):
+        class NotJson(Reply):
+            def read(self):
+                return b"<html>gateway</html>"
+        self.replies = [NotJson(None, headers())]
+        with self.assertRaises(ts.RunFailed):
+            self.client.describe()
+
     def test_model_check_failure_is_a_run_failure(self):
         self.replies = [http_error(404, b'{"message": "not found"}', headers())]
         with self.assertRaises(ts.RunFailed):
@@ -164,8 +172,22 @@ class InputTest(unittest.TestCase):
 
     def test_non_positive_rate_is_refused(self):
         os.environ["MISTRAL_API_KEY"] = "test-key"
-        with self.assertRaises(SystemExit):
+        with self.assertRaises(ts.RunFailed):
             ts.Client("persona", "mistral", "m", 0, 100, None)
+
+    def test_invalid_settings_leave_no_run_directory(self):
+        env = {**os.environ, "MISTRAL_API_KEY": "test-key"}
+        cases = [["--persona-model", "m", "--persona-rpm", "0"],
+                 ["--persona-model", "m", "--persona-rpm", "-5"],
+                 ["--persona-model", "mistral-small-latest"],
+                 ["--persona-model", "m", "--persona-provider", "nobody"],
+                 ["--persona-model", "m", "--repetitions", "0"]]
+        for i, extra in enumerate(cases):
+            out = HERE.parent / "runs" / "track-s" / f"test-invalid-settings-{i}-should-not-exist"
+            result = subprocess.run([sys.executable, "-I", str(SCRIPT), "persona-control", *extra, "--out", str(out)],
+                                    capture_output=True, text=True, env=env)
+            self.assertNotEqual(result.returncode, 0, extra)
+            self.assertFalse(out.exists(), extra)
 
 
 if __name__ == "__main__":

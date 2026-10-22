@@ -138,22 +138,32 @@ def parse_control(text):
 
 # --- providers ------------------------------------------------------------------------------------
 
+def role_problem(role, provider, model, rpm, max_tokens):
+    """Why a role's settings cannot run, or None. Checked before a run directory exists."""
+    if provider not in PROVIDERS:
+        return f"{role}: unknown provider {provider!r}; known: {sorted(PROVIDERS)}"
+    if "latest" in model:
+        return f"{role}: {model}: use an exact identifier, not an alias"
+    if rpm <= 0:
+        return f"{role}: calls per minute must be positive, got {rpm}"
+    if max_tokens <= 0:
+        return f"{role}: max output tokens must be positive, got {max_tokens}"
+    if not os.environ.get(PROVIDERS[provider]["key"]):
+        return f"{role}: {PROVIDERS[provider]['key']} is not set"
+    return None
+
+
 class Client:
     """One provider and model for one role, paced below its per-minute limit."""
 
     def __init__(self, role, provider, model, rpm, max_tokens, recorder):
-        if provider not in PROVIDERS:
-            sys.exit(f"{role}: unknown provider {provider!r}; known: {sorted(PROVIDERS)}")
-        if "latest" in model:
-            sys.exit(f"{role}: {model}: use an exact identifier, not an alias")
-        if rpm <= 0:
-            sys.exit(f"{role}: calls per minute must be positive, got {rpm}")
+        problem = role_problem(role, provider, model, rpm, max_tokens)
+        if problem:
+            raise RunFailed(problem)
         self.role, self.provider, self.model = role, provider, model
         self.spec = PROVIDERS[provider]
         self.interval, self.max_tokens, self.recorder = 60 / rpm, max_tokens, recorder
-        self.key = os.environ.get(self.spec["key"])
-        if not self.key:
-            sys.exit(f"{role}: {self.spec['key']} is not set")
+        self.key = os.environ[self.spec["key"]]
         self.last = 0.0
 
     def _headers(self):
@@ -168,6 +178,9 @@ class Client:
         try:
             with urllib.request.urlopen(request, timeout=60) as response:
                 headers, info = dict(response.headers), json.load(response)
+        except ValueError as e:
+            self.recorder.log("describe", self, "describe", error=f"invalid JSON: {e}")
+            raise RunFailed(f"{self.role}: model check: response body is not JSON")
         except urllib.error.HTTPError as e:
             detail = e.read().decode(errors="replace")
             self.recorder.log("describe", self, "describe", headers=dict(e.headers), http=e.code, body=detail[:2000])
@@ -351,9 +364,12 @@ def main():
         sys.exit(f"--out must be a new directory under {RUNS}")
     # Everything that can stop the run before its first call is checked before its directory exists,
     # so a kept run directory always holds a run that started.
-    key = PROVIDERS.get(args.persona_provider, {}).get("key")
-    if not key or not os.environ.get(key):
-        sys.exit(f"persona: provider {args.persona_provider!r} needs {key or 'a known provider'} set")
+    problem = role_problem("persona", args.persona_provider, args.persona_model, args.persona_rpm,
+                           args.persona_max_tokens)
+    if problem:
+        sys.exit(problem)
+    if args.repetitions <= 0:
+        sys.exit(f"--repetitions must be positive, got {args.repetitions}")
     out.mkdir(parents=True, exist_ok=False)
     args.out = out
     run = {"track": "S", "mode": args.mode, "status": "running", "started": now(),
@@ -364,7 +380,7 @@ def main():
         run["status"] = "completed"
     except RunFailed as e:
         run["status"], run["failure"] = "failed", str(e)
-    except Exception as e:  # any other stop is still recorded in run.json, then re-raised
+    except BaseException as e:  # any other stop, an interrupt included, is recorded, then re-raised
         run["status"], run["failure"] = "failed", f"unexpected: {e!r}"
         raise
     finally:
