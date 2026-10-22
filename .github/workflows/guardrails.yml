@@ -144,6 +144,7 @@ jobs:
     uses: exeris-systems/.github/.github/workflows/review.yml@main
     with:
       publish: true
+      repo-routine: docs/repo-review-rules.md
       l1-results: >-
         {"docs-lint": "${{ needs.docs.result }}",
          "commit-lint": "${{ needs.commits.result }}",
