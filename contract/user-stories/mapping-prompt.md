@@ -1,15 +1,15 @@
 # Mapping instance — prompt and run procedure
 
-Version: 0.1 (draft)
-Part of the published user-story procedure (decision register D-36, D-37). Runs after the story writer, before any story is assigned as `provenance`.
+Version: 2 (draft)
+Part of the published user-story procedure (decision register D-36, D-37). Runs after the analyst (`procedure.md`), before any story is assigned as `provenance`.
 
 ---
 
 ## Run procedure
 
-- **Model:** as assigned in the role table of `story-writer-prompt.md`. Fresh session, no memory, no custom instructions, no web, no tools beyond the attached input.
-- **Input, exactly:** this prompt; the writer's output (stories and its question list), unedited; `system-requirements.yaml`; `domain-profile.md`; `world-brief.md`; `brief-seeding.md`.
-- **Not given:** DOD, oracle, mutants, arms, preregistration, the writer's interview transcripts. The mapping judges stories as they will reach Track S, not how they were produced.
+- **Model:** as assigned in the role table of `procedure.md`. Fresh session, no memory, no custom instructions, no web, no tools beyond the attached input.
+- **Input, exactly:** this prompt; the analyst's output (`analyst-output.md`: stories and its question list), unedited; `system-requirements.yaml`; `domain-profile.md`; `world-brief.md`; `brief-seeding.md`.
+- **Not given:** DOD, oracle, mutants, arms, preregistration, the interview transcripts. The mapping judges stories as they will reach Track S, not how they were produced.
 - **Output:** published in full, unedited.
 - **Author review:** the contract author reviews the mapping afterwards. Every change the author makes is recorded as an override with a one-sentence reason and published next to the original mapping. The author never edits the mapping file itself.
 
@@ -17,14 +17,14 @@ Part of the published user-story procedure (decision register D-36, D-37). Runs 
 
 ## Prompt
 
-You are reviewing the traceability between a set of user stories and a set of system requirements. The user stories were written independently, from a description of the users' world only, by an analyst who never saw the requirements. Your job is to report honestly how well they support the requirements, not to make them fit.
+You are reviewing the traceability between a set of user stories and a set of system requirements. The user stories were written independently by an analyst who never saw the requirements, from interviews with simulated users whose knowledge came from a description of their world only. Your job is to report honestly how well they support the requirements, not to make them fit.
 
 The attached files are:
 
 - `stories` — the user stories, each with an `id`;
 - `system-requirements.yaml` — the requirements, each with an `id`;
 - `domain-profile.md` — background to the requirements;
-- `world-brief.md` — the only description of the world the story writer saw;
+- `world-brief.md` — the description of the world; the simulated users each saw only a part of it, and the analyst saw none of it;
 - `brief-seeding.md` — the brief sentences that state constraints or needs rather than facts, with the requirements each one points to.
 
 ### Main risk
@@ -67,7 +67,7 @@ Do not write new stories. Do not edit stories or requirements. Do not suggest wo
 - counts per requirement status and per story scope;
 - the share of `in_contract` stories that are `brief_seeded`, and the share that paraphrase the brief;
 - every `contradicts` and `unaddressed` story, listed, each with one sentence;
-- the writer's questions that, if answered, would most likely have changed coverage.
+- the analyst's questions that, if answered, would most likely have changed coverage.
 
 ### Output format
 

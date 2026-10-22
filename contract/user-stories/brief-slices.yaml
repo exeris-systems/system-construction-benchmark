@@ -1,0 +1,58 @@
+# Mechanical partition of world-brief.md into persona slices (decision register D-36, D-43).
+#
+# A unit is a paragraph (p) or a bullet (b) of a brief section, numbered in order of appearance;
+# bold sub-headings are structure, not units. Each unit is given verbatim to the roles listed
+# for it. No text is added: a slice is a selection of brief units, so brief-seeding.md applies
+# to every slice unchanged. run-procedure.py refuses to run if a unit is missing from this file
+# or the brief has a unit this file does not list.
+#
+# Roles: technician (fleet technician), dispatcher, desk (airspace desk).
+# The interviewer receives §1 only; the analyst receives no brief units.
+
+interviewer: ["1.p1", "1.p2"]
+
+units:
+  "1.p1": [technician, dispatcher, desk]
+  "1.p2": [technician, dispatcher, desk]
+
+  "2.b1": [technician]                       # fleet technicians
+  "2.b2": [dispatcher]                       # dispatchers
+  "2.b3": [desk]                             # airspace desk
+
+  "3.b1": [technician, dispatcher]           # fleet composition
+  "3.b2": [technician, dispatcher]           # home sites, pads
+  "3.b3": [technician]                       # repairs, regulators
+
+  "4.b1": [technician, dispatcher]           # deliveries
+  "4.b2": [technician, dispatcher]           # inspections
+  "4.b3": [dispatcher, desk]                 # corridors, take-off and landing places
+  "4.b4": [dispatcher]                       # choice of drone and way
+  "4.b5": [dispatcher]                       # concurrent planning
+  "4.b6": [dispatcher]                       # outside events
+
+  "5.b1": [dispatcher, desk]                 # zones, closures, amendments
+  "5.b2": [dispatcher, desk]                 # closure while drones fly
+  "5.b3": [technician, dispatcher, desk]     # regulations
+
+  "6.b1": [technician, dispatcher, desk]     # autopilots, supervision
+  "6.b2": [technician, dispatcher]           # radio coverage, reports
+  "6.b3": [technician, dispatcher]           # restarts in flight
+  "6.b4": [technician, dispatcher]           # batteries in cold and wind
+  "6.b5": [technician, dispatcher]           # nobody watches every drone
+  "6.b6": [technician, dispatcher]           # unreliable instruction links
+
+  "7.b1": [technician, dispatcher, desk]     # single server, restarts
+  "7.b2": [technician, dispatcher]           # companies' own systems
+
+  "8.b1": [technician, dispatcher, desk]
+  "8.b2": [technician, dispatcher, desk]
+  "8.b3": [technician, dispatcher, desk]
+  "8.b4": [technician, dispatcher, desk]
+  "8.b5": [technician, dispatcher, desk]
+  "8.b6": [technician, dispatcher, desk]
+  "8.b7": [technician, dispatcher, desk]
+  "8.b8": [technician, dispatcher, desk]
+  "8.b9": [technician, dispatcher, desk]
+  "8.b10": [technician, dispatcher, desk]
+  "8.b11": [technician, dispatcher, desk]
+  "8.b12": [technician, dispatcher, desk]
