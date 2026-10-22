@@ -4,6 +4,7 @@
 Run from the repository root: python3 -I trackS/test_run_track_s.py
 """
 
+import argparse
 import email.message
 import importlib.util
 import io
@@ -147,6 +148,34 @@ class ClientTest(unittest.TestCase):
         self.replies = [http_error(404, b'{"message": "not found"}', headers())]
         with self.assertRaises(ts.RunFailed):
             self.client.describe()
+
+
+class ModeTest(unittest.TestCase):
+    """Each persona mode asks every question of its own set and writes its answers under its name."""
+
+    def setUp(self):
+        os.environ["MISTRAL_API_KEY"] = "test-key"
+        self._urlopen, self._sleep, self._describe = ts.urllib.request.urlopen, ts.time.sleep, ts.Client.describe
+        ts.urllib.request.urlopen = lambda request, timeout=0: Reply(answer("I don't know.", "stop"), headers())
+        ts.time.sleep = lambda seconds: None
+        ts.Client.describe = lambda client: {"id": client.model}
+
+    def tearDown(self):
+        ts.urllib.request.urlopen, ts.time.sleep, ts.Client.describe = self._urlopen, self._sleep, self._describe
+
+    def test_each_mode_writes_its_own_answers(self):
+        for mode, set_file in ts.QUESTION_SETS.items():
+            out = pathlib.Path(tempfile.mkdtemp())
+            args = argparse.Namespace(mode=mode, persona_provider="mistral", persona_model="m",
+                                      persona_rpm=60_000, persona_max_tokens=100, repetitions=1)
+            files = {name: (HERE / name).read_text() for name in ("persona-prompt.md", set_file)}
+            ts.persona_control(args, files, {role: "notes" for role in ts.ROLES}, out, {})
+            written = sorted(p.name for p in out.glob("*.json"))
+            self.assertEqual(written, [f"{mode}.json"], mode)
+            asked = json.loads((out / f"{mode}.json").read_text())
+            expected = ts.parse_control(files[set_file], set_file)
+            self.assertEqual({r: [a["id"] for a in reps[0]["answers"]] for r, reps in asked.items()},
+                             {r: [q["id"] for q in qs] for r, qs in expected.items()}, mode)
 
 
 class InputTest(unittest.TestCase):
