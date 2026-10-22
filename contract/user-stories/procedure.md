@@ -1,6 +1,6 @@
 # User-story procedure
 
-Version: 2 (draft)
+Version: 2
 Decision register: D-36, D-37, D-43. Version 1 (single self-played writer) is frozen at tag `us-procedure-v1`.
 
 ## Design
@@ -23,7 +23,8 @@ The interviewer's §1 contains a listed constraint ("Each company's fleet, jobs,
 | Role | Vendor | Model | Channel | Notes |
 | --- | --- | --- | --- | --- |
 | Contract author's working models | Anthropic | Claude | Claude Code | reference row |
-| Interviewer, personas, analyst | Google | Gemini Flash | Gemini API, `run-procedure.py` | excluded from Track S by exact model id |
+| Interviewer, personas | Google | Gemini 3.5 Flash Lite | Gemini API, `run-procedure.py` | excluded from Track S by exact model id |
+| Analyst | Google | Gemini 3.8 Flash | Gemini API, `run-procedure.py` | excluded from Track S by exact model id |
 | Mapping instance | Anthropic | Claude Opus | fresh session | shares the author's vendor; it sees the requirements anyway |
 | Neutrality auditor 1 (D-03) | OpenAI | GPT-6 | chat, temporary chat | ran the two v1 writer runs; an auditor sees only the DOD, in a session without memory |
 | Neutrality auditor 2 (D-03) | Anthropic | Claude Opus | fresh session | **shares the author's vendor — disclosed in every report** |
@@ -32,13 +33,28 @@ The parameters are fixed here before the run and passed to the script; the model
 
 | Parameter | Value |
 | --- | --- |
-| `--model` | *full versioned identifier, fixed before the run — never a `-latest` alias (the script refuses one)* |
-| temperature | provider default: `--temperature` is not passed and nothing is sent, so the value is not chosen by the author |
-| `--max-turns` | 30 |
+| `--model` (interviewer, personas) | `gemini-3.5-flash-lite` |
+| `--analyst-model` | `gemini-3.8-flash` |
+
+The API offers no dated variant of either model; the `-latest` aliases (e.g. `gemini-flash-latest`, currently routed to `gemini-3.8-flash`) are not used, because their target can change. The model version each response reports is recorded per call.
+| temperature, thinking level | provider defaults: nothing is sent, so no value is chosen by the author |
+| `--rpm` / `--analyst-rpm` | 14 / 4 calls per minute, below the per-minute limits |
+| `--max-turns` | 25 |
 | `--max-output-tokens-turn` | 8192 |
 | `--max-output-tokens-analyst` | 65536 |
 
-Before the run, confirm the API's terms of use for this purpose (data use on the free tier, permitted use of output). The brief and all prompts are public, so data use for training discloses nothing.
+**Why two models.** The run uses the Gemini API free tier, whose limits on the contract author's account on 2026-10-22 were:
+
+| Model | Requests per minute | Tokens per minute | Requests per day |
+| --- | --- | --- | --- |
+| Gemini 3.8 Flash | 5 | 250K | 20 |
+| Gemini 3.5 Flash Lite | 15 | 250K | 500 |
+| Gemini 3.1 Flash Lite | 15 | 250K | 500 |
+| Gemma 4 31B | 30 | 16K | 14.4K |
+
+Interviews need up to 3 × 25 × 2 = 150 calls, more than Gemini 3.8 Flash allows in a day; a run spread over several days could not be resumed (below) and could change model version midway. Gemma 4 31B's 16K tokens per minute cannot hold the analyst's input. The split is forced by these limits, not chosen for an outcome: interviews on Gemini 3.5 Flash Lite (150 calls, 30% of its daily limit), the single analyst call on Gemini 3.8 Flash, where story quality is decided. Before the first content call the script reads both models' token limits and refuses to start if a setting exceeds them.
+
+Start the canonical run on a fresh daily limit; `--dry-run` makes no calls and is the only test. The brief and all prompts are public, so data use on the free tier for training discloses nothing.
 
 ## Run
 
