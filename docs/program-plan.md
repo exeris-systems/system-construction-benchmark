@@ -904,7 +904,7 @@ The matrix is fixed here and in the preregistration, before any scored run; it i
 | Phase 6 | Haiku × Exeris × L3 × 3 | 3 | H3 |
 | Off-vendor series | Gemini Flash (Antigravity) × 3 full arms × L1 × 3 | 9 | separate table; no comparison with Claude runs |
 | Phase 7 | Changes 3, 4, 5 × 3 full arms × 3, Phase 4 model | 27 change sessions | H2, H4 |
-| Track S, script series | 4 subjects × 2 variants × 3 | 24 | Track S (D-48) |
+| Track S, script series | 3 subjects × 2 variants × 3 | 18 | Track S (D-48) |
 | Track S, native series | 2 harnesses × S-naive × 3 | 6 | Track S (D-48) |
 
 Total: 45 construction runs on Claude Code, 9 in the off-vendor series, and 27 change sessions. Track S runs through vendor APIs with fixed instruments; exhausted daily or monthly quota is an infrastructure error, as in §9.1.
@@ -919,7 +919,7 @@ Configurations not run in Campaign 1, each with its reason:
 | Changes 1 and 2 | budget; no hypothesis depends on them (H2 uses Changes 3–5, H4 uses Change 5) |
 | Axon embedded | optional continuity arm; first to go under budget (§5A.4) |
 | Temporal | §5A.6 |
-| Gemini 3.8 Flash as a Track S script-series subject | 20 requests a day on the free tier against about 75 per subject run; it is the judge instead, and a native-series subject (D-48) |
+| Gemini 3.8 Flash as a Track S script-series subject | 20 requests a day on the free tier against about 75 per subject run; it is a native-series subject instead (D-48) |
 | S-instructed in the Track S native series | an instructed interview in an agent harness measures the harness's tool handling more than elicitation; the script series measures it (D-48) |
 
 Track S instrument and host options considered and rejected are listed in D-48.
