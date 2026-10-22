@@ -1,0 +1,29 @@
+{
+ "id": "38fd218811a544e5abc354b1faed00ba",
+ "created": 1792691981,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1874,
+  "total_tokens": 1910,
+  "completion_tokens": 36,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only track the flights and drones for my own company, not the others. The platform company would have to gather that information from all of us."
+   }
+  }
+ ]
+}

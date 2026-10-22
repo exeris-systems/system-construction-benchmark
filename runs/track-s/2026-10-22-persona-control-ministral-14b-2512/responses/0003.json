@@ -1,0 +1,29 @@
+{
+ "id": "7b9aa79d2ffe45b0b3f50a0213e581b7",
+ "created": 1792690813,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1524,
+  "total_tokens": 1641,
+  "completion_tokens": 117,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Nope, not at all. Each company’s got their own pads at their own sites—we don’t share ‘em. The rules say we’ve got to keep our equipment separate, and honestly, it’d be a nightmare to mix ‘em up anyway. Different connectors, different charging protocols, different maintenance records—it’d be a mess.\n\nIf a customer’s running low on pads at one of their sites, they’ve got to ask their own techs to sort it out or order new ones. We don’t touch their stuff, and they don’t touch ours."
+   }
+  }
+ ]
+}

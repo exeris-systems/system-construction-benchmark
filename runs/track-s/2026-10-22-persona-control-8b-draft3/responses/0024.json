@@ -1,0 +1,29 @@
+{
+ "id": "dfafa1922d0740ad930c9cab092b652e",
+ "created": 1792691567,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1398,
+  "total_tokens": 1453,
+  "completion_tokens": 55,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. My notes don’t specify which database or system stores the closures—only that the airspace desk needs to track and update them for all customers. If you need details about storage, you’d need to ask someone who manages the technical infrastructure."
+   }
+  }
+ ]
+}

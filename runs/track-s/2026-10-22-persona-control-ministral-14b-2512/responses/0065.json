@@ -1,0 +1,29 @@
+{
+ "id": "80302fe84227411ab30834f11f912dbf",
+ "created": 1792690982,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1012,
+  "total_tokens": 1128,
+  "completion_tokens": 116,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We keep the airspace information that the authorities publish—things like zones where drones can’t fly, and closures that come in suddenly or are planned ahead. That’s the same for all our customers, so it’s not tied to any one company.\n\nThe airspace desk uses it to update the shared picture of where drones can and can’t go. The companies’ own systems pull that info to decide whether their drones can fly their routes. They don’t ask us for reports or anything—just the current state of the airspace so their own tools can work."
+   }
+  }
+ ]
+}

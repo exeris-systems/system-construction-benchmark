@@ -1,0 +1,29 @@
+{
+ "id": "2e33a9103c284f9f81673866704c0c34",
+ "created": 1792691529,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1416,
+  "total_tokens": 1470,
+  "completion_tokens": 54,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, reports from drones don’t always reach me on time, in order, or even at all. They can arrive late, out of sequence, more than once, or not at all, especially in bad radio coverage or around places like ports and industrial sites."
+   }
+  }
+ ]
+}

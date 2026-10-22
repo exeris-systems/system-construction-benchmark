@@ -1,0 +1,29 @@
+{
+ "id": "c7c3553a914c4995967fed9742e3dc41",
+ "created": 1792690933,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1624,
+  "total_tokens": 1702,
+  "completion_tokens": 78,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "That’s not my area—I don’t deal with drones or their tech issues at all. The airspace desk just tracks where they *can* and *can’t* fly. If a drone has a problem, that’s between the company and their own maintenance team. We might see a closure pop up because of it, but we don’t get involved in fixing the drone itself."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "53273d6399024827a0960dd8b64dfc37",
+ "created": 1792691648,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1644,
+  "total_tokens": 1704,
+  "completion_tokens": 60,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure comes into force while drones are already flying, those drones may have to change their route or land early—even if they were already in the air when the closure started. I have to make sure they stay safe and legal, which can be stressful when closures change mid-flight."
+   }
+  }
+ ]
+}

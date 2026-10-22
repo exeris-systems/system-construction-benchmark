@@ -1,0 +1,29 @@
+{
+ "id": "5dff4e9fba18465d9197924bfc025eb7",
+ "created": 1792690975,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2270,
+  "total_tokens": 2449,
+  "completion_tokens": 179,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s a mess—there’s no standard. We’ve got drones with all kinds of connectors: some use the old-style XT60, others have the newer DJI-style plugs, and a few have these weird proprietary ones that only fit their own chargers.\n\nThe worst part? You can’t just swap a battery between drones—if the connector doesn’t match the pad, it won’t charge. So if a drone’s battery dies and the wrong pad’s free, we’re stuck waiting until the right one opens up. And if a pad’s down for maintenance? Total nightmare.\n\nThe software should at least tell us which pad matches which drone, but right now we’ve got to check that manually. And if a drone’s connector gets damaged? That’s a whole other headache—sometimes we’ve got to send a tech out just to fix a charging issue."
+   }
+  }
+ ]
+}

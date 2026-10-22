@@ -1,0 +1,29 @@
+{
+ "id": "0bb721de2c93417ab1a3edde39c75394",
+ "created": 1792692508,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1569,
+  "total_tokens": 1600,
+  "completion_tokens": 31,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace rules and flight authorisations are handled by the platform company’s airspace desk, not by the fleet technicians."
+   }
+  }
+ ]
+}

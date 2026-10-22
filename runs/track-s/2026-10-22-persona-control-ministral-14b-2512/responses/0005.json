@@ -1,0 +1,29 @@
+{
+ "id": "f5c2b385bdf541259b9519a2d5aa4bff",
+ "created": 1792690819,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1865,
+  "total_tokens": 2072,
+  "completion_tokens": 207,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Hell no. Reports come in all over the place—sometimes they’re fine, but more often than not, they’re a mess. You’ll get duplicates, or ones that come in late, or ones that just never show up at all.\n\nRadio’s patchy, especially near big sites or in bad weather. If a drone’s flying over an industrial area or a port, half the time the signal bounces off buildings and you get delayed or garbled data. And if it’s relaying through one of those old stations, forget it—sometimes the whole batch gets lost.\n\nWe’ve had drones finish a job and not log it for hours, or send the same status update three times in a row. You just learn to cross-check with other drones in the area or wait for the next ping. And if something’s critical—like a battery warning—you might not even get it until it’s too late. You just hope the drone’s still flying straight while you’re waiting for the data to catch up."
+   }
+  }
+ ]
+}

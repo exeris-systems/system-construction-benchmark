@@ -1,0 +1,29 @@
+{
+ "id": "cade497666734da2b3f8fd781a4f51a8",
+ "created": 1792691979,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1827,
+  "total_tokens": 1859,
+  "completion_tokens": 32,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know which connector types the charging pads use. The platform company would know, since it manages the shared service for all the drone operating companies."
+   }
+  }
+ ]
+}

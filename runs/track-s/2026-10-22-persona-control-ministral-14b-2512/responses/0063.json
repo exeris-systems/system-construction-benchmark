@@ -1,0 +1,29 @@
+{
+ "id": "2d7c901676724451bf005ba2b8c60688",
+ "created": 1792690978,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2464,
+  "total_tokens": 2624,
+  "completion_tokens": 160,
+  "prompt_tokens_details": {
+   "cached_tokens": 1920
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know the full picture—each company tracks its own disruptions in its own systems. But from what I saw here, it was bad.\n\nA few drones got stuck in the closure zone and had to land early. One inspection job got canceled because the drone couldn’t reroute in time. And the parcel company had to reschedule a bunch of deliveries because their drones were grounded while we waited for the closure to lift.\n\nThe worst part was the confusion—some updates came through late, and a couple of dispatchers missed the change until their drones were already in the air. That’s why we need the software to *shout* when closures happen, not just sit there quietly. But even then, it’s not our job to fix it—just to react fast."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "2190a350742a43bfb71ef6444b0cf0be",
+ "created": 1792691569,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1180,
+  "total_tokens": 1226,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know the exact number, but I work with fleets that can run a few hundred drones at a time. Each company manages its own drones, so the total depends on how many companies are using the service."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "96067a833df843d196ef62eb2b30c58b",
+ "created": 1792690956,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2218,
+  "total_tokens": 2357,
+  "completion_tokens": 139,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s not something we decide—dispatchers don’t pick drones or routes through the platform. Each customer company has its own systems for that, and they tell *us* which drone and which corridor to use. We just follow their instructions.\n\nThe platform gives us the airspace info and the rules, but the actual routing and drone selection is handled by their own software. We don’t have anything in our system that picks drones or plans paths—it’s all done outside. Sometimes we get a last-minute change if a drone’s battery’s low or a corridor’s closed, but that’s about it. We just make sure the drone’s ready to go when they say."
+   }
+  }
+ ]
+}

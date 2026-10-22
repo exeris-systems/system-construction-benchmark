@@ -1,0 +1,29 @@
+{
+ "id": "f9ccd78e2a3b45c390aa715b99fb5015",
+ "created": 1792691920,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1686,
+  "total_tokens": 1739,
+  "completion_tokens": 53,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures can be changed during the day, like when an area gets bigger or an end time moves. That means I have to keep checking for updates while drones are already flying, and I have to make sure my flights stay safe even if the rules change."
+   }
+  }
+ ]
+}

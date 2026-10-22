@@ -1,0 +1,29 @@
+{
+ "id": "81016574c5ce4e048e9384e09358187f",
+ "created": 1792692641,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1498,
+  "total_tokens": 1536,
+  "completion_tokens": 38,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk handles the closures but doesn’t decide which database stores them. Someone on the platform’s technical team would know where the information is kept."
+   }
+  }
+ ]
+}

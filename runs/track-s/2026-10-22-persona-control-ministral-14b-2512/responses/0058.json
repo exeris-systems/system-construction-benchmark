@@ -1,0 +1,29 @@
+{
+ "id": "b70b63ee1ac942c2a334c5a6c7b64568",
+ "created": 1792690965,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1595,
+  "total_tokens": 1689,
+  "completion_tokens": 94,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Hell no. That’s not how it works—dispatchers are legally responsible for every flight. If the software picked a drone and something went wrong, who’d be accountable? Me? The company? The platform?\n\nWe *do* want help figuring out which drones are available, where they are, and what sensors they’ve got—but the final call is ours. The software can suggest, but we decide. That’s the rule, and it’s not changing."
+   }
+  }
+ ]
+}

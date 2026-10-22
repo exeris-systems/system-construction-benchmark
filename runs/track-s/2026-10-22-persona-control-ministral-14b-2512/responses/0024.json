@@ -1,0 +1,29 @@
+{
+ "id": "0bd9ad80ee614932b8c4eb1568db1e5a",
+ "created": 1792690871,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1780,
+  "total_tokens": 1862,
+  "completion_tokens": 82,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We don’t use databases—just a single server running the service. The closures get entered straight into the system, and it updates in real time. No separate database, no backups, nothing fancy. If you’re building something new, you’d probably want a proper database, but right now, it’s all just one place. The IT team would know more about how it’s set up."
+   }
+  }
+ ]
+}

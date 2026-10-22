@@ -1,0 +1,29 @@
+{
+ "id": "6b4fdaccaf964404abc083666fbca734",
+ "created": 1792690842,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1927,
+  "total_tokens": 2125,
+  "completion_tokens": 198,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures are a nightmare because they’re *always* changing. One minute, the system says a zone’s closed until noon, and the next, it gets widened or the end time gets pushed back—sometimes while drones are already in the air.\n\nWe’ve had cases where a closure was supposed to lift at 14:00, but by 13:45, it got extended to 16:00. Or a sudden closure pops up because of a VIP event, and we’ve got to reroute *right now*. The worst part? The updates don’t always come in time, or the drones don’t report their position properly, so we’re playing catch-up half the time.\n\nWe just need to know *exactly* what’s closed, when, and where—no guesswork. If a drone’s already in a closing zone, we’ve got to pull it *before* it gets caught in it. No room for mistakes."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "ad2d64ff76544ae99f55726ba7a5f38c",
+ "created": 1792691623,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1180,
+  "total_tokens": 1226,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know the exact number, but each company in our service can run a few hundred drones. My job involves keeping those drones and their charging equipment working, so I deal with whatever number they have at any time."
+   }
+  }
+ ]
+}

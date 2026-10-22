@@ -1,0 +1,29 @@
+{
+ "id": "949d5d2ca31d43dc9d41170196cd04e7",
+ "created": 1792690864,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1515,
+  "total_tokens": 1587,
+  "completion_tokens": 72,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know—each company manages its own fleet, and we don’t track that. Our job is just the airspace, not how many drones are out there. If they want to know how many they’ve got flying, they’d check their own systems. We just make sure the airspace data is right so they can plan around it."
+   }
+  }
+ ]
+}

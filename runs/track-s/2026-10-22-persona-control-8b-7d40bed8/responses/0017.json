@@ -1,0 +1,29 @@
+{
+ "id": "fe075d5195a24b95b15ded86cd54efb0",
+ "created": 1792692531,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1063,
+  "total_tokens": 1156,
+  "completion_tokens": 93,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I keep the shared airspace information—like flight corridors, zones, and closures announced by the authorities—that all our customer companies need to operate. The airspace desk uses it to update the service and track how closures affect everyone, but we don’t look into any one company’s drones, jobs, or operations. The companies themselves use the service to see the airspace and avoid disruptions, but they don’t get reports or alerts from us."
+   }
+  }
+ ]
+}

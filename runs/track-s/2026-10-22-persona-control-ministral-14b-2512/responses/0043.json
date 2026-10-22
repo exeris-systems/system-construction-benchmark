@@ -1,0 +1,29 @@
+{
+ "id": "ee19dfb3e995481e9d11ea319732471d",
+ "created": 1792690926,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1275,
+  "total_tokens": 1419,
+  "completion_tokens": 144,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Mostly, they’re either **planned**—like a temporary no-fly zone for a big event or construction—and they give us a start and end time. Sometimes those get changed midday, like if the area gets bigger or the end time gets pushed back.\n\nThen there are **sudden closures**—those come in without warning, like if a drone spots something unsafe or the weather turns bad. Those are the worst because drones might already be in the air when they happen.\n\nWe also get **permanent zones**—areas where drones just aren’t allowed at all, like near airports or military sites. Those don’t change, but we still keep them updated in case the rules shift."
+   }
+  }
+ ]
+}

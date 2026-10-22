@@ -1,0 +1,29 @@
+{
+ "id": "6a5764ef9308422dad447d890de6b109",
+ "created": 1792691527,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1345,
+  "total_tokens": 1400,
+  "completion_tokens": 55,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "When a drone restarts in flight after a software fault, it usually keeps flying on its autopilot and carries on with the job as planned. I don’t know what happens to the data or instructions it receives during that restart, but the drone itself just continues."
+   }
+  }
+ ]
+}

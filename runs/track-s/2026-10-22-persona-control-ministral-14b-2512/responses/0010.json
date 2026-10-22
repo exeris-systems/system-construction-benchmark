@@ -1,0 +1,29 @@
+{
+ "id": "9e4e7655199b4575ae53b4fc57640f73",
+ "created": 1792690836,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1582,
+  "total_tokens": 1744,
+  "completion_tokens": 162,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Hell no. That’s my neck on the line if something goes wrong. The software can *suggest*—like, \"Hey, this drone’s here, it’s got the right sensors, and it’s not booked yet\"—but the final call is mine. I’ve had cases where a drone looked perfect on paper, but the battery was dodgy or the wind was worse than forecast, and I had to pull it last minute. If the system just picked drones for me, I’d be flying blind.\n\nWhat we *do* want is a way to quickly see which drones are actually *available*—not just where they’re supposed to be, but where they *really* are, accounting for radio drops, restarts, and all that. Right now, we’re guessing half the time."
+   }
+  }
+ ]
+}

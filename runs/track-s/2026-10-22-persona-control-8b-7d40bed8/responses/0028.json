@@ -1,0 +1,29 @@
+{
+ "id": "7bf9e80eb56b49e9a93cf245bb6974c6",
+ "created": 1792692552,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1478,
+  "total_tokens": 1540,
+  "completion_tokens": 62,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a drone restarts in flight after a software fault, it usually just keeps flying on its autopilot. I don’t control it directly, but I worry that the restart might cause unexpected behavior, like delays in reporting or missed waypoints, depending on how the autopilot handles the reset."
+   }
+  }
+ ]
+}

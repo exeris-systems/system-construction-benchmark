@@ -1,0 +1,29 @@
+{
+ "id": "d3e8bc31868a42a6beb5a6b34881f630",
+ "created": 1792690916,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2837,
+  "total_tokens": 3105,
+  "completion_tokens": 268,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the system works under the hood—it’s not my job to worry about that. But I *do* know what matters to me as a dispatcher: the system needs to show me the **actual** route a drone is supposed to take, not just a list of waypoints.\n\nSometimes the system glitches and shows a route that doesn’t match what the drone’s actually flying. Last week, one of our inspection drones was supposed to go around a restricted zone, but the route it got was the old one—so it flew straight into a closure before we caught it. That’s why I always double-check the route *before* signing off, but if the system’s down or lagging, I can’t rely on it.\n\nAll I care about is that when I pull up a flight, I see:\n- The **start and end points** (sites).\n- The **exact path** it’s supposed to take (not just a list of points).\n- Any **restrictions** along the way (closures, no-fly zones).\n\nIf the system stores it in a way that makes that hard to see or update, it’s just going to cause problems. And if it’s not fast—like when the system’s restarting or the network’s slow—it’s useless."
+   }
+  }
+ ]
+}

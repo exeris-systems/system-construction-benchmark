@@ -1,0 +1,29 @@
+{
+ "id": "008fdbb45c8e4c1983db71e2b091a36a",
+ "created": 1792692617,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1660,
+  "total_tokens": 1715,
+  "completion_tokens": 55,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures can be amended during the day, like when an area gets bigger or a planned end time moves. That means I have to keep checking for updates while drones are already flying, and I might need to call off or reroute flights if a closure affects them."
+   }
+  }
+ ]
+}

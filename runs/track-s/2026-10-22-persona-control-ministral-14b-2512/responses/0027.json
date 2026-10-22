@@ -1,0 +1,29 @@
+{
+ "id": "8a26020056ad411c8da7b9f6c6bd1c4d",
+ "created": 1792690878,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1475,
+  "total_tokens": 1576,
+  "completion_tokens": 101,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not at all. Each company’s pads are locked to their own drones and their own sites. We don’t share charging equipment between companies—it’s all kept separate. If one of our drones ends up at the wrong site by accident, it won’t charge unless it’s the right pad for that drone’s connector. And even then, we’d have to ask the other company first, which never happens. The rules say we’ve got to keep our own stuff in our own places."
+   }
+  }
+ ]
+}

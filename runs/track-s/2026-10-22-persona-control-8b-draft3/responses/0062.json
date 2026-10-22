@@ -1,0 +1,29 @@
+{
+ "id": "f77898aca103488891197e8eaea03b7a",
+ "created": 1792691649,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1715,
+  "total_tokens": 1741,
+  "completion_tokens": 26,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know which connector types are used. The platform company would know, but I don’t have details on that."
+   }
+  }
+ ]
+}

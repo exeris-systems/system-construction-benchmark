@@ -1,0 +1,29 @@
+{
+ "id": "dc124a9967894a9a811a7939755d210b",
+ "created": 1792692603,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1568,
+  "total_tokens": 1634,
+  "completion_tokens": 66,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, reports from drones don’t always reach me on time, in order, or even at all. The radio coverage is unreliable, especially near ports or in bad weather, so messages can arrive late, get lost, or come more than once. I just have to deal with whatever data I get when it shows up."
+   }
+  }
+ ]
+}

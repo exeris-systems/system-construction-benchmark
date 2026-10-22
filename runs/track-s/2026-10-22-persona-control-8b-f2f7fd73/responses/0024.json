@@ -1,0 +1,29 @@
+{
+ "id": "8b31f0bc9b514af49aa79de1fb1850bd",
+ "created": 1792691896,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1514,
+  "total_tokens": 1558,
+  "completion_tokens": 44,
+  "prompt_tokens_details": {
+   "cached_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know which database keeps the closures—that’s a technical detail I don’t handle. The airspace desk just needs the closures to be available and up to date for the shared airspace information."
+   }
+  }
+ ]
+}

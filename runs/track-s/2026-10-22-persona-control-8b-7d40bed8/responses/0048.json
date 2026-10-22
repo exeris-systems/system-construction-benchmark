@@ -1,0 +1,29 @@
+{
+ "id": "ad11a667645343e68d6eb62d6fc209df",
+ "created": 1792692592,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1464,
+  "total_tokens": 1512,
+  "completion_tokens": 48,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk only needs to manage and track closures for the shared service, not how or where the data is stored. Someone on the platform’s technical team would know which database holds the closures."
+   }
+  }
+ ]
+}

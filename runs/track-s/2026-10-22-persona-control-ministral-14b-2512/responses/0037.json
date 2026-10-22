@@ -1,0 +1,29 @@
+{
+ "id": "01545f8812dd4cd18339d90397c1abef",
+ "created": 1792690906,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2206,
+  "total_tokens": 2428,
+  "completion_tokens": 222,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure drops while drones are already up, it’s a scramble. The rules say we can’t fly through restricted zones, so if a drone’s inside one when it gets announced, we’ve got to act fast.\n\nSometimes we can reroute it—if there’s another way out that’s clear. Other times, if it’s a sudden closure and the drone’s too close to turn around safely, we might have to call it back to land early. That’s a pain, especially for inspections or deliveries where timing matters. And if the closure’s near a site, we might have to hold off takeoffs until it’s gone.\n\nThe worst part? The system doesn’t always tell us *exactly* what’s changing—just that a new zone’s there. So we’ve got to double-check the official updates to make sure we’re not missing anything. And if the radio’s patchy, like it often is near ports, we might not even hear the drone’s status in time to react. That’s why we keep a close eye on the ones near risky areas."
+   }
+  }
+ ]
+}

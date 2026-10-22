@@ -1,0 +1,29 @@
+{
+ "id": "5a46fc629c3a418f99eb53e2b1b01ee2",
+ "created": 1792690948,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1575,
+  "total_tokens": 1775,
+  "completion_tokens": 200,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s one of those moments where you just hold your breath. If a drone restarts mid-flight—usually after some kind of software glitch—it’ll try to carry on with whatever it was doing. Most of the time, it’ll just keep flying the same route, like nothing happened. But sometimes, if it loses its position lock or the autopilot gets confused, it might drift off course or even land unexpectedly.\n\nWe’ve had a few close calls where a drone restarted near a busy area and had to be redirected manually. The platform usually flags it in the system, but since radio coverage is patchy, we don’t always get real-time updates. If it’s a delivery, the package might end up somewhere it shouldn’t, or if it’s an inspection, the data could be incomplete. We just have to hope the drone stays stable and lands safely. If it doesn’t, well… that’s when you start praying the regulators don’t come knocking."
+   }
+  }
+ ]
+}

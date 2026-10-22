@@ -1,0 +1,29 @@
+{
+ "id": "e389474803bb42c8be47dde32b6108a8",
+ "created": 1792692637,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1381,
+  "total_tokens": 1430,
+  "completion_tokens": 49,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk doesn’t handle drone faults or maintenance—it only manages the shared airspace data for all customers. Someone from the customer companies or their own technical teams would deal with drones that return with faults."
+   }
+  }
+ ]
+}
