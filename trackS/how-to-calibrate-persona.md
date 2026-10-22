@@ -9,7 +9,9 @@ last-verified: 2026-10-22
 
 # How to calibrate the Track S persona
 
-Run from the repository root. The key comes from the environment and is never written to the output.
+Covers the persona instrument only; the judge and the subjects have procedures of their own. Run
+from the repository root. The key comes from the environment and is never written to the output.
+Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute limits.
 
 1. Check the inputs without calling anything:
 
