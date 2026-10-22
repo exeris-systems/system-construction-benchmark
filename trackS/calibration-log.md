@@ -138,4 +138,3 @@ limits.
 Below the threshold of 65, and no `fact` answer contradicts its slice outright. Counting every
 borderline answer as passing (HT1, HD4, HT6, HA8) gives at most 61. Against 66 of 72 on the control
 set, the prompt kept its gains on the questions it was revised against and lost them on new ones.
-
