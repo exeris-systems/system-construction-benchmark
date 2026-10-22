@@ -408,7 +408,7 @@ Two series, never compared with each other. **Script series**: one harness, the 
 | --- | --- | --- | --- |
 | Persona | `ministral-8b-2512` | Mistral API, free tier | small and consistent suffices; 625K tokens per minute and 3 requests per second cover every subject; open weights (`mistralai/Ministral-3-8B-Instruct-2512`, Apache 2.0) let the persona be reproduced at another host, marked as a fence |
 | Judge, script series | Gemini 3.8 Flash, exact identifier | Gemini API, free tier | outside the family of every script-series subject; one request per run, so 20 requests a day suffice |
-| Judge, native series | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | Mistral API, free tier | outside the family of both native-series subjects; 250K tokens per minute holds one large request per run; the dated identifier is pinned, unlike `mistral-large-4` |
+| Judge, native series | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | Mistral API, free tier | outside the family of every native-series subject; 250K tokens per minute holds one large request per run; the dated identifier is pinned, unlike `mistral-large-4` |
 
 Calibration before the first subject: **persona control** — a fixed, scripted set of questions per role, run several times; answers must not contradict the slice and must be consistent across repetitions. **Judge mutants** — derived contracts of known recall and precision (the reference requirements with items removed, with invented items added, with items reworded); the judge must report exactly the removed and the invented items, and an empty contract judged as covering anything fails it (as M-16).
 
@@ -418,10 +418,11 @@ Calibration before the first subject: **persona control** — a fixed, scripted 
 | Script | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | Mistral API, free tier — shares a vendor with the persona, disclosed in every report |
 | Native | Claude Code, Phase 4 model (Sonnet) | Claude Code + `ask_user` |
 | Native | Antigravity, Gemini 3.8 Flash | Antigravity + `ask_user` |
+| Native | Antigravity, Gemini 4 Argon | Antigravity + `ask_user` — access on this account is limited; an exhausted quota is an infrastructure error (§9.1), as for every subject |
 
 Each series has its own judge, outside the family of every subject in it; the series are never compared, so their judges need not be the same.
 
-Matrix: script series 4 subjects × 2 variants × 3 runs = 24; native series 2 harnesses × S-naive × 3 runs = 6.
+Matrix: script series 4 subjects × 2 variants × 3 runs = 24; native series 3 subjects in 2 harnesses × S-naive × 3 runs = 9.
 
 Considered and rejected: Gemini 3.5 Flash Lite as a subject (no longer offered in the vendor's own agent harness, Antigravity, as of 2026-10-22, though still served by the Gemini API; a subject its vendor has begun withdrawing may disappear before the matrix is done or replicated); Gemini 3.8 Flash as a script-series subject (20 requests a day against about 75 per subject run — it is the script-series judge and a native-series subject instead); one judge for both series (no model is outside the families of the subjects of both); `mistral-large-4` as a judge (20K tokens per minute, and no version in its name); Groq in any role (8K tokens per minute is less than one analyst or judge request); OpenRouter free models (50 requests a day); Hugging Face serverless (cold starts and queueing add noise to an instrument); the native series for S-instructed (it would measure the harness's tool handling more than elicitation).
 

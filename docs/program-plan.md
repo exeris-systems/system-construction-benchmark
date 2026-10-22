@@ -905,7 +905,7 @@ The matrix is fixed here and in the preregistration, before any scored run; it i
 | Off-vendor series | Gemini Flash (Antigravity) × 3 full arms × L1 × 3 | 9 | separate table; no comparison with Claude runs |
 | Phase 7 | Changes 3, 4, 5 × 3 full arms × 3, Phase 4 model | 27 change sessions | H2, H4 |
 | Track S, script series | 4 subjects × 2 variants × 3 | 24 | Track S (D-48) |
-| Track S, native series | 2 harnesses × S-naive × 3 | 6 | Track S (D-48) |
+| Track S, native series | 3 subjects in 2 harnesses × S-naive × 3 | 9 | Track S (D-48) |
 
 Total: 45 construction runs on Claude Code, 9 in the off-vendor series, and 27 change sessions. Track S runs through vendor APIs with fixed instruments; exhausted daily or monthly quota is an infrastructure error, as in §9.1.
 
