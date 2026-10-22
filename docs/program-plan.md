@@ -1,3 +1,12 @@
+---
+title: "System Construction Benchmark — program plan"
+type: methodology
+visibility: public
+owning-repo: system-construction-benchmark
+status: active
+last-verified: 2026-10-22
+---
+
 # System Construction Benchmark — program plan
 
 Version: **1.0**
@@ -68,7 +77,7 @@ Everything the oracle does not check is optimised downwards by the agent. When e
 ```
 
 | Axis | What it measures | Status |
-|---|---|---|
+| --- | --- | --- |
 | **Construction cost** | USD, time, turns, tool calls, tokens (broken down) | gated |
 | **Evolution cost** | cost of one domain change + regressions | gated |
 | **Runtime cost** | CPU, RSS, IO, startup, latency | **descriptive_only** |
@@ -169,7 +178,7 @@ Listed in `contract/anti-requirements.md`, split into user-visible items (kept i
 ### 3.6 Gated scope
 
 | Area | Gated | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Domain model | yes | entities, relations, constraints, enumerations, lifecycle |
 | CRUD | yes | |
 | Query | yes | filtering, sorting, pagination (including page boundaries) |
@@ -336,14 +345,14 @@ The oracle is hidden until the agent's first "done" declaration; from then on th
 
 3. **Four states:**
 
-```text
-[PASS]                     met
-[FAIL]                     not met
-[UNKNOWN]                  the instrument cannot judge reliably
-[UNREACHABLE_IN_PARADIGM]  gate outside the arm's paradigm (§5A.2)
-```
+   ```text
+   [PASS]                     met
+   [FAIL]                     not met
+   [UNKNOWN]                  the instrument cannot judge reliably
+   [UNREACHABLE_IN_PARADIGM]  gate outside the arm's paradigm (§5A.2)
+   ```
 
-`UNKNOWN` counts as `FAIL`. `UNREACHABLE_IN_PARADIGM` does **not** — it goes to the separate `paradigm_coverage` metric.
+   `UNKNOWN` counts as `FAIL`. `UNREACHABLE_IN_PARADIGM` does **not** — it goes to the separate `paradigm_coverage` metric.
 
 4. **A verdict may not merge disjoint behaviours.** A rule like `still_nonterminal > 0 → stranded` gives the same verdict for 71% and for 0% resumption. Every aggregate gate publishes the distribution behind it next to the verdict.
 
@@ -509,7 +518,7 @@ arms:
 ### 5A.3 Full arms (campaign 1)
 
 | Arm | Role | Rationale |
-|---|---|---|
+| --- | --- | --- |
 | **Spring Boot vanilla** | prior baseline | what the model does by default; the reference point for WSS |
 | **JHipster** (9.0.0, March 2026) | code-gen control | the agent writes JDL, not code — the sharpest test of SDC and change cost; closes the "generator vs hand-written" objection |
 | **Exeris** | arm under study | |
@@ -519,7 +528,7 @@ On JHipster, because there is a temptation to dismiss it as "a faster Spring": *
 ### 5A.4 Subset arms — durable execution and operational complexity
 
 | Arm | Processes besides the application | Proximity | Role |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Spring + Restate** | 2 | engine design | closest contemporary engine counterpart; continuity with the existing saga corpus |
 | **Spring + DBOS Transact Java** | 0 (library, backend = PostgreSQL) | deployment shape | **control for the single-process thesis (H5)** |
 | **Spring + Axon embedded (JDBC)** | 0 (no Axon Server) | none | **continuity arm**, optional — see below |
@@ -547,7 +556,7 @@ See §3.10. `arms.yaml` declares the maturity of the surfaces each arm's gates r
 ### 5A.6 Arms considered and rejected — with reasons
 
 | Arm | Decision | Reason |
-|---|---|---|
+| --- | --- | --- |
 | **Temporal** | deferred behind Restate | same cell (2 processes); Restate is closer in engine design and comparable with the existing corpus. Enters as the cell's second arm if budget allows, answering the default-market-choice question |
 | **Jmix** (3.0) | rejected | its advantage sits in Studio (an IDE plugin) unavailable to the agent — it would measure the IDE, not the platform |
 | **Apache Causeway** | deferred to campaign 2 | closes a methodological objection (a second low-prior arm), not a product one |
@@ -561,7 +570,7 @@ This table is published with the contract. An exclusion without an entry here is
 ## 6. Agent knowledge levels
 
 | Level | Input | What it measures |
-|---|---|---|
+| --- | --- | --- |
 | **L0** | agent brief only (§3.11) | the model's prior mass (not the platform) |
 | **L1** | + official docs | value of documentation |
 | **L2** | + source repository | value of access to the implementation |
@@ -773,7 +782,7 @@ The metric favours code-generating platforms by definition — it is a thesis, n
 Three classes for scored runs, all on one harness (Claude Code):
 
 | Class | Model | Role |
-|---|---|---|
+| --- | --- | --- |
 | fast | Claude Haiku | model matrix; H3 at L3 |
 | balanced | Claude Sonnet | Phase 4 model — baseline, 4b, L-ablation, L0, changes |
 | deep | Claude Opus | model matrix; H3 reference at L1 |
@@ -884,7 +893,7 @@ Results before a fence are not deleted — they are marked. Placing them next to
 The matrix is fixed here and in the preregistration, before any scored run; it is never trimmed during the campaign. Subscription throughput is the binding resource, and a shorter campaign also shortens the window in which a pinned model version can be withdrawn (§9.4).
 
 | Stage | Configuration | Runs | Serves |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Phase 4 | Sonnet × 3 full arms × L1 × 3 | 9 | H1; publication #1 (false-DONE) uses these runs |
 | Phase 4b | Restate, DBOS × durable gates × 3, Phase 4 model | 6 | H5a, H5b |
 | Phase 5 | Exeris × L2, L3 × 3, Phase 4 model | 6 | L-ablation (§6.3) |
@@ -900,7 +909,7 @@ Total: 45 construction runs on Claude Code, 9 in the off-vendor series, and 27 c
 Configurations not run in Campaign 1, each with its reason:
 
 | Configuration | Reason |
-|---|---|
+| --- | --- |
 | L0–L3 on Spring vanilla and JHipster | §6.3 defines the L-ablation on one arm; cross-arm L3 needs symmetric tooling (§16) |
 | Model matrix at L0, L2, L3 | budget; L1 is the level of the arm comparison |
 | L0 with 3 runs | L0 is descriptive and outside the comparison table; one run per arm suffices |
@@ -1055,7 +1064,7 @@ The drone simulator, charging service, and event sink are instrument, not infras
 ## 14. Phases
 
 | Phase | Content | Exit condition |
-|---|---|---|
+| --- | --- | --- |
 | **1** | Contract (names included) + agent brief + oracle + mutation suite + reference implementations on Exeris and Spring vanilla + neutrality audit + coverage declaration | oracle catches 100% of mutants and agrees on both references; audit published |
 | **2** | Harness: prepare → launch → execute → test → collect → DOD → archive, with per-gate and per-turn stage records | full run artifact generated automatically |
 | **3** | Preregistration of hypotheses + `arms.yaml` + rejected-arms table, published with a hash | published before the first scored run |
@@ -1114,7 +1123,7 @@ No "efficiency frontier" chart is drawn before the data exist.
 ## 16. Deliberately out of scope
 
 | Excluded | Reason | Where it goes |
-|---|---|---|
+| --- | --- | --- |
 | Contributor benchmark (CAP / SKU / template) | no comparison arm — a product test, not a comparison | separate *Exeris Extensibility Test* |
 | Planner / executor / verifier roles beyond Track S | multiplies the matrix by 3 roles × N models | separate publication |
 | Cross-arm L3 comparison | needs symmetric tooling | later decision, §6.3 |

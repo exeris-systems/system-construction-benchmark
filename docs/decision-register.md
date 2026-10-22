@@ -1,3 +1,12 @@
+---
+title: "Decision register"
+type: reference
+visibility: public
+owning-repo: system-construction-benchmark
+status: active
+last-verified: 2026-10-22
+---
+
 # Pre-Phase-1 decision register
 
 | ID | Decision | Why it blocks / affects the work | Owner | Status |
@@ -82,7 +91,7 @@ Impact: program plan §7.8; `contract/arms.yaml`.
 
 ### D-07 — Domain B runs in Campaign 2, frozen in Campaign 1
 
-Domain B runs in Campaign 2, but its contract is frozen and hashed in the Campaign 1 preregistration, before any Domain A result exists, so it cannot be chosen after seeing the first numbers. The Campaign 1 report is labelled "Domain A only; Domain B frozen on <date>, runs in Campaign 2". Domain B remains held out (D-13).
+Domain B runs in Campaign 2, but its contract is frozen and hashed in the Campaign 1 preregistration, before any Domain A result exists, so it cannot be chosen after seeing the first numbers. The Campaign 1 report is labelled "Domain A only; Domain B frozen on YYYY-MM-DD, runs in Campaign 2". Domain B remains held out (D-13).
 
 Impact: preregistration; program plan §5, §14.
 
