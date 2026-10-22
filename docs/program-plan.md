@@ -920,9 +920,10 @@ Configurations not run in Campaign 1, each with its reason:
 | Axon embedded | optional continuity arm; first to go under budget (§5A.4) |
 | Temporal | §5A.6 |
 | Gemini 3.8 Flash as a Track S script-series subject | 20 requests a day on the free tier against about 75 per subject run; it is the script-series judge and a native-series subject instead (D-48) |
+| Gemini 3.5 Flash Lite as a Track S subject | no longer offered in the vendor's own agent harness, Antigravity, though still served by the Gemini API; a subject its vendor has begun withdrawing may disappear before the matrix is done or replicated (D-48) |
 | S-instructed in the Track S native series | an instructed interview in an agent harness measures the harness's tool handling more than elicitation; the script series measures it (D-48) |
 
-Track S instrument and host options considered and rejected are listed in D-48.
+Track S instrument, judge and host options considered and rejected are listed in D-48.
 
 The harness asserts, on every turn, that the model reported by the vendor matches `env.lock`; a mismatch is an infrastructure error.
 
