@@ -56,6 +56,7 @@ Conversation with the founder happens in Polish.
 | `preregistration/` | frozen sets with their timestamps; hypotheses before a campaign |
 | `oracle/`, `mutants/`, `harness/`, `prompts/` | the instrument as it is built |
 | `runs/` | raw run records, committed unedited |
+| `tools/` | repository checks the review reads (`repo-checks`): append-only runs, frozen sets, credentials, agent material |
 
 ## `.agents/` — the canonical agent material
 
