@@ -48,5 +48,5 @@ was measured identical to what was published.
 1. **A construction agent sees the agent brief and nothing else of the instrument** (D-09):
    never the oracle, mutants, reference implementations, `arms.yaml`, the coverage declaration,
    the neutrality audit, the preregistration, or the sealed change scenarios.
-2. **The seeding declaration never reaches a role that produces stories** (D-36), and a story
-   model never takes part in Track S.
+2. **The seeding declaration never reaches a persona or a Track S subject** (D-47), and a model
+   that serves as a Track S instrument is never a Track S subject (D-48).

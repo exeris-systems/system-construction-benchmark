@@ -21,7 +21,7 @@ from encoding one platform's shape.
    meet is a platform requirement and leaves the gates (§3.2).
 3. **No hidden scope.** A property not in the requirements is not a `PASS` criterion. Anything a
    reader could take as required but is not belongs in `contract/anti-requirements.md`; a
-   user-visible anti-requirement is mirrored in brief §8 (D-37).
+   user-visible anti-requirement is mirrored in brief §8 (D-47).
 4. **Synchronised artefacts change together.** A change to `world-brief.md` changes
    `brief-slices.yaml` and `brief-seeding.md` in the same pull request, and is a new frozen
    version of the user-story procedure. A change to the requirements' parameters respects
