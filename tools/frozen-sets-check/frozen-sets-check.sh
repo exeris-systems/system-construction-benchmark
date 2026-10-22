@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# A frozen set is not edited in place (docs/repo-review-rules.md B1). Everything under trackS/ — and,
-# for the versions frozen before it moved, contract/user-stories/ — belongs to the Track S procedure;
-# a change to an existing file there is allowed only together with a new version line in its
-# procedure.md.
+# A frozen set is not edited in place (docs/repo-review-rules.md B1). It guards both frozen-set
+# locations listed in preregistration/frozen-sets.md, trackS/ and contract/user-stories/: a change to
+# an existing file there is allowed only together with a new version line in the procedure.md of
+# either location.
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
 . tools/base-ref.sh

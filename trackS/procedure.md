@@ -1,4 +1,16 @@
+---
+title: "Track S procedure"
+type: reference
+visibility: public
+owning-repo: system-construction-benchmark
+status: draft
+last-verified: 2026-10-22
+---
+
 # Track S procedure
+
+The reference for running Track S. Its sections are the instruments, their calibration with the
+commands that run it, the tests of the script, the run record, and the rules every run follows.
 
 Version: 3 (draft)
 Decision register: D-45 to D-48. Versions 1 and 2 (the user-story procedure under
