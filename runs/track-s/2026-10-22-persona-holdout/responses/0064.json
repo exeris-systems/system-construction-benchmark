@@ -1,0 +1,29 @@
+{
+ "id": "ff8011b5ca174ff4bc5bce3f5c87e3c9",
+ "created": 1792694501,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 2095,
+  "total_tokens": 2163,
+  "completion_tokens": 68,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service notifies me about new airspace closures through updates in the system, but I have to actively check for changes since the platform doesn’t send alerts directly to me. The closures can be amended during the day, so I need to stay informed about any shifts in restricted zones or times to adjust my flight plans accordingly."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "d561e113ca3b45b38e7a428f831e96fc",
+ "created": 1792692596,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1349,
+  "total_tokens": 1404,
+  "completion_tokens": 55,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the charging pads are specific to each company, and they’re not interchangeable. Each company uses its own pads, and we don’t lend or share them. The drones also have different charging connectors, so they only charge on the pads that match their model."
+   }
+  }
+ ]
+}

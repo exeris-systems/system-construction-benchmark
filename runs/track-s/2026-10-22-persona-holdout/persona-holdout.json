@@ -1,0 +1,557 @@
+{
+ "technician": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "HT1",
+     "kind": "fact",
+     "question": "Who carries out repairs and servicing on your drones?",
+     "expect": "the technicians (3.b3)",
+     "answer": "Repairs and servicing on our drones are carried out by technicians. I don’t do it myself—I just make sure drones are ready for work by setting them up, taking them out of service for repairs, and sending them to charge. The technicians handle the actual maintenance and repairs."
+    },
+    {
+     "id": "HT2",
+     "kind": "fact",
+     "question": "Can anyone outside your company ask how your drones have been looked after?",
+     "expect": "yes — regulators can ask the company to show it (3.b3)",
+     "answer": "Regulators can ask us to show how our drones have been looked after. I don’t deal with regulators directly, but I make sure the drones are properly maintained so we can prove their upkeep if needed."
+    },
+    {
+     "id": "HT3",
+     "kind": "fact",
+     "question": "How many charging pads does your company have, and where are they?",
+     "expect": "a few dozen, at the company's own sites (3.b2)",
+     "answer": "We have a few dozen charging pads, but they’re all at our own sites—each company keeps its own pads. I set them up at the sites where our drones operate, but I don’t track how many there are in total."
+    },
+    {
+     "id": "HT4",
+     "kind": "fact",
+     "question": "When you send an instruction to a charging pad, do you know whether it arrived?",
+     "expect": "not always — the link is unreliable, an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)",
+     "answer": "I often don’t know if the first instruction got through. Sometimes it arrives twice, and I can’t always tell which attempt succeeded. The links are unreliable, so I just keep trying until I get a response."
+    },
+    {
+     "id": "HT5",
+     "kind": "fact",
+     "question": "Do your drones' batteries last as long as planned?",
+     "expect": "no — they drain faster than planned in cold and wind (6.b4)",
+     "answer": "No, batteries don’t always last as long as planned. They drain faster in cold or windy conditions than expected, so I have to plan extra charging time or check battery levels more often."
+    },
+    {
+     "id": "HT6",
+     "kind": "outside",
+     "question": "How many deliveries does the hospital logistics firm fly each day?",
+     "expect": "does not know (another company's operations; no such figure in the technician slice)",
+     "answer": "I don’t know. I only work with drones and their maintenance, not with job planning or counts of deliveries. The hospital logistics firm handles its own deliveries and jobs."
+    },
+    {
+     "id": "HT7",
+     "kind": "outside",
+     "question": "Which areas have the authorities closed to drones this week?",
+     "expect": "does not know, or refers to the authorities or the airspace desk (5.b1 is not in the technician slice)",
+     "answer": "I don’t know. The platform shares airspace information from the authorities, but I don’t track which zones are closed or when. I focus on keeping our drones and charging equipment working, not on airspace rules."
+    },
+    {
+     "id": "HT8",
+     "kind": "no-design",
+     "question": "How should the new service keep the record of a drone's repairs?",
+     "expect": "describes needs and worries, proposes no records, screens, features or mechanisms",
+     "answer": "I don’t know. The platform handles the service, but I don’t deal with software or records. The technicians who do the repairs would know what information needs to be kept."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "HT1",
+     "kind": "fact",
+     "question": "Who carries out repairs and servicing on your drones?",
+     "expect": "the technicians (3.b3)",
+     "answer": "Repairs and servicing on our drones are carried out by technicians. I don’t do that work myself—I just make sure drones are ready to fly by managing their maintenance schedules, charging, and repairs. The regulators might ask us to show how we’ve looked after our fleet, so keeping good records matters."
+    },
+    {
+     "id": "HT2",
+     "kind": "fact",
+     "question": "Can anyone outside your company ask how your drones have been looked after?",
+     "expect": "yes — regulators can ask the company to show it (3.b3)",
+     "answer": "I don’t know. I only handle the day-to-day work of keeping drones and charging equipment in working order, not compliance or regulatory checks. Someone in the company’s compliance or legal team would know if outside parties can ask about how drones have been maintained."
+    },
+    {
+     "id": "HT3",
+     "kind": "fact",
+     "question": "How many charging pads does your company have, and where are they?",
+     "expect": "a few dozen, at the company's own sites (3.b2)",
+     "answer": "Our company has a few dozen charging pads, but they’re all at our own sites—never shared with other companies. Each drone has a home site, and the pads are set up there to keep the fleet charged and ready for work."
+    },
+    {
+     "id": "HT4",
+     "kind": "fact",
+     "question": "When you send an instruction to a charging pad, do you know whether it arrived?",
+     "expect": "not always — the link is unreliable, an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)",
+     "answer": "No, I don’t know. The links to the charging equipment are unreliable, so an instruction might get through twice or not at all, and I can’t always tell if the first one arrived. I just send the commands and hope they work."
+    },
+    {
+     "id": "HT5",
+     "kind": "fact",
+     "question": "Do your drones' batteries last as long as planned?",
+     "expect": "no — they drain faster than planned in cold and wind (6.b4)",
+     "answer": "No, they don’t always. Batteries drain faster than planned in cold or windy conditions, so I have to keep an eye on them and make sure they’re charged before sending drones out. This means I sometimes have to adjust schedules or send drones to charge earlier than expected."
+    },
+    {
+     "id": "HT6",
+     "kind": "outside",
+     "question": "How many deliveries does the hospital logistics firm fly each day?",
+     "expect": "does not know (another company's operations; no such figure in the technician slice)",
+     "answer": "I don’t know. I only manage the drones and charging equipment for my company’s fleet, not the number of jobs or deliveries each customer does. Someone in the logistics team or operations would know that."
+    },
+    {
+     "id": "HT7",
+     "kind": "outside",
+     "question": "Which areas have the authorities closed to drones this week?",
+     "expect": "does not know, or refers to the authorities or the airspace desk (5.b1 is not in the technician slice)",
+     "answer": "I don’t know. I focus on keeping our drones and charging equipment running smoothly, not tracking airspace restrictions. The platform shares airspace info from the authorities, but I don’t check which zones are closed—I just make sure our fleet is ready to fly where we’re allowed."
+    },
+    {
+     "id": "HT8",
+     "kind": "no-design",
+     "question": "How should the new service keep the record of a drone's repairs?",
+     "expect": "describes needs and worries, proposes no records, screens, features or mechanisms",
+     "answer": "I don’t know how the software should work—I just do the work. I’d need records of repairs to keep track of when drones are out of service and when they’re ready to fly again. The system should let me log repairs, note when a drone is taken out of service, and mark it as back in operation after maintenance. It should also record who did the work and when, so we can show regulators how we’ve looked after our fleet."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "HT1",
+     "kind": "fact",
+     "question": "Who carries out repairs and servicing on your drones?",
+     "expect": "the technicians (3.b3)",
+     "answer": "Repairs and servicing on our drones are carried out by technicians. I don’t do it myself—I just make sure drones are sent to them when they need attention, like after a fault or when they’re due for maintenance. The regulators also expect us to keep records of how we’ve looked after the drones."
+    },
+    {
+     "id": "HT2",
+     "kind": "fact",
+     "question": "Can anyone outside your company ask how your drones have been looked after?",
+     "expect": "yes — regulators can ask the company to show it (3.b3)",
+     "answer": "I don’t know. The platform company handles how we share information with regulators or anyone else, but I don’t deal with that part. I just make sure drones are serviced and charged properly."
+    },
+    {
+     "id": "HT3",
+     "kind": "fact",
+     "question": "How many charging pads does your company have, and where are they?",
+     "expect": "a few dozen, at the company's own sites (3.b2)",
+     "answer": "Our company has a few dozen charging pads, but they’re all set up at our own sites—each pad belongs to us and isn’t shared with anyone else. I set them up when we add new sites or drones, and I send drones to charge when their batteries are low."
+    },
+    {
+     "id": "HT4",
+     "kind": "fact",
+     "question": "When you send an instruction to a charging pad, do you know whether it arrived?",
+     "expect": "not always — the link is unreliable, an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)",
+     "answer": "No, I don’t know. The links to the charging equipment are unreliable, so I often can’t tell if the first instruction got through or if it arrived twice. I just keep trying until I think it’s done."
+    },
+    {
+     "id": "HT5",
+     "kind": "fact",
+     "question": "Do your drones' batteries last as long as planned?",
+     "expect": "no — they drain faster than planned in cold and wind (6.b4)",
+     "answer": "No, they don’t always. Batteries drain faster than planned in cold or windy conditions, so I have to keep an eye on them and send drones to charge more often than expected."
+    },
+    {
+     "id": "HT6",
+     "kind": "outside",
+     "question": "How many deliveries does the hospital logistics firm fly each day?",
+     "expect": "does not know (another company's operations; no such figure in the technician slice)",
+     "answer": "I don’t know. I only deal with keeping the drones and charging equipment working, not with how many jobs each company flies. The companies handle their own deliveries and inspections."
+    },
+    {
+     "id": "HT7",
+     "kind": "outside",
+     "question": "Which areas have the authorities closed to drones this week?",
+     "expect": "does not know, or refers to the authorities or the airspace desk (5.b1 is not in the technician slice)",
+     "answer": "I don’t know. The platform company shares airspace information with everyone, but I don’t track which zones are closed or when. I just make sure our drones are ready to fly when they’re needed."
+    },
+    {
+     "id": "HT8",
+     "kind": "no-design",
+     "question": "How should the new service keep the record of a drone's repairs?",
+     "expect": "describes needs and worries, proposes no records, screens, features or mechanisms",
+     "answer": "I don’t know. The platform company handles how records are kept and shared, but I just make sure drones are sent to technicians for repairs when they’re needed. I don’t deal with storing or managing those records."
+    }
+   ]
+  }
+ ],
+ "dispatcher": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "HD1",
+     "kind": "fact",
+     "question": "Is anyone else planning flights at the same time as you?",
+     "expect": "yes — several dispatchers plan at once, often for the same busy sites and the same popular drones (4.b5)",
+     "answer": "Yes, several dispatchers plan flights at the same time, often for the same busy sites and popular drones. This means we all need to coordinate carefully to avoid conflicts and ensure smooth operations, especially when multiple drones or locations are in high demand."
+    },
+    {
+     "id": "HD2",
+     "kind": "fact",
+     "question": "What does an inspection flight involve?",
+     "expect": "a drone with the right sensors visits a list of points in a set order and returns to where the inspection started (4.b2)",
+     "answer": "An inspection flight takes a drone with the right sensors—like cameras, thermal cameras, or laser scanners—to a list of specific points in a set order, then brings it back to where the inspection started. The dispatcher decides which drone and route to use, but the drone flies on its own autopilot while I supervise."
+    },
+    {
+     "id": "HD3",
+     "kind": "fact",
+     "question": "Once a flight is signed off, can it still be stopped?",
+     "expect": "yes — a dispatcher can call off a flight (2.b2)",
+     "answer": "Yes, I can call off a flight even after it’s signed off, if something changes or if I decide it’s no longer safe or necessary. The flight doesn’t automatically proceed once approved—my responsibility is to ensure it’s still the right call at every step."
+    },
+    {
+     "id": "HD4",
+     "kind": "fact",
+     "question": "Who tells you that a load is ready or that a drone has arrived?",
+     "expect": "people and devices outside the company (4.b6)",
+     "answer": "People and devices outside my company report when a load is ready or when a drone arrives—these updates come through the service, but they’re not controlled by me. Sometimes the reports are delayed, missing, or duplicated, so I have to double-check before acting."
+    },
+    {
+     "id": "HD5",
+     "kind": "fact",
+     "question": "Do you keep an eye on each of your drones all the time?",
+     "expect": "no — nobody watches every drone at every moment; one person may be responsible for hundreds (6.b5)",
+     "answer": "No, I don’t watch every drone constantly—I’m responsible for hundreds at once. I rely on updates from drones and ground systems to stay aware, but since radio coverage is patchy and reports can be unreliable, I have to stay alert for delays or missing information."
+    },
+    {
+     "id": "HD6",
+     "kind": "outside",
+     "question": "How often do the technicians service a drone?",
+     "expect": "does not know, or refers to the technicians (3.b3 is not in the dispatcher slice)",
+     "answer": "I don’t know. That’s the job of the drone maintenance team, not dispatchers. I only see the drones when they’re ready for a flight or when there’s a problem."
+    },
+    {
+     "id": "HD7",
+     "kind": "outside",
+     "question": "What does the platform's airspace desk do after it enters a closure?",
+     "expect": "does not know, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "answer": "I don’t know. The airspace desk is a separate team that handles closures and airspace rules, not dispatchers. They likely update the system and inform us when relevant changes happen, but I don’t manage those details myself."
+    },
+    {
+     "id": "HD8",
+     "kind": "no-design",
+     "question": "How should the new service warn you about a new closure?",
+     "expect": "describes what it needs to know and how soon, proposes no alerts, screens, features or mechanisms",
+     "answer": "The service should notify me automatically when a new closure is announced, so I can see it in the system alongside the drones and jobs I’m managing. Since closures can change often, I need to be able to check them quickly without extra steps."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "HD1",
+     "kind": "fact",
+     "question": "Is anyone else planning flights at the same time as you?",
+     "expect": "yes — several dispatchers plan at once, often for the same busy sites and the same popular drones (4.b5)",
+     "answer": "Yes, several dispatchers plan flights at the same time, often for the same busy sites and popular drones. This means we all have to coordinate carefully to avoid conflicts, especially when multiple drones need to use the same takeoff or landing spots or when there are limited drones available for a particular job. It can get quite busy, and we have to make sure we’re all aware of each other’s plans to keep things running smoothly."
+    },
+    {
+     "id": "HD2",
+     "kind": "fact",
+     "question": "What does an inspection flight involve?",
+     "expect": "a drone with the right sensors visits a list of points in a set order and returns to where the inspection started (4.b2)",
+     "answer": "An inspection flight takes a drone with the right sensors—like cameras or laser scanners—to a list of points in a set order and brings it back to where the inspection started. The dispatcher decides which drone and route to use, but they rely on the drone’s autopilot to fly along the pre-planned waypoints. The drone reports back when it reaches each point, and the dispatcher checks that everything went as planned."
+    },
+    {
+     "id": "HD3",
+     "kind": "fact",
+     "question": "Once a flight is signed off, can it still be stopped?",
+     "expect": "yes — a dispatcher can call off a flight (2.b2)",
+     "answer": "Yes, I can still call off a flight even after it’s signed off. The dispatcher is always responsible and can cancel a flight if something changes—like a problem with the drone, a delay in the load, or a sudden airspace closure. The system doesn’t automatically stop flights, so I have to make sure to override or cancel it if needed."
+    },
+    {
+     "id": "HD4",
+     "kind": "fact",
+     "question": "Who tells you that a load is ready or that a drone has arrived?",
+     "expect": "people and devices outside the company (4.b6)",
+     "answer": "People and devices outside my company report when a load is ready or when a drone arrives—like ground crew, site managers, or automated sensors. These reports come through the service, but they might arrive late, out of order, or not at all, so I always double-check before finalizing a flight."
+    },
+    {
+     "id": "HD5",
+     "kind": "fact",
+     "question": "Do you keep an eye on each of your drones all the time?",
+     "expect": "no — nobody watches every drone at every moment; one person may be responsible for hundreds (6.b5)",
+     "answer": "No, I don’t watch every drone at every moment—I’m responsible for hundreds at once. I rely on reports from drones, relay stations, and ground staff to stay updated, but since radio coverage is patchy and messages can be delayed or lost, I have to stay alert for unexpected issues."
+    },
+    {
+     "id": "HD6",
+     "kind": "outside",
+     "question": "How often do the technicians service a drone?",
+     "expect": "does not know, or refers to the technicians (3.b3 is not in the dispatcher slice)",
+     "answer": "I don’t know. The maintenance schedule is handled by the drone operating company’s own technicians, not by the platform. They decide how often drones are serviced based on their own policies and rules."
+    },
+    {
+     "id": "HD7",
+     "kind": "outside",
+     "question": "What does the platform's airspace desk do after it enters a closure?",
+     "expect": "does not know, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "answer": "I don’t know. The airspace desk is part of the platform company’s operations, not my dispatcher role. They handle closures and airspace rules, but I rely on their updates to my system so I can adjust flight plans accordingly."
+    },
+    {
+     "id": "HD8",
+     "kind": "no-design",
+     "question": "How should the new service warn you about a new closure?",
+     "expect": "describes what it needs to know and how soon, proposes no alerts, screens, features or mechanisms",
+     "answer": "The platform company’s system should notify me when a new airspace closure is announced, so I can see it in the service and adjust my flight plans. The updates come in automatically, but since the service can crash or restart during the day, I have to check for changes regularly to make sure I’m aware of any new restrictions."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "HD1",
+     "kind": "fact",
+     "question": "Is anyone else planning flights at the same time as you?",
+     "expect": "yes — several dispatchers plan at once, often for the same busy sites and the same popular drones (4.b5)",
+     "answer": "Yes, several dispatchers plan flights at the same time, often for the same busy sites and popular drones. This means we all have to coordinate carefully to avoid conflicts, especially when multiple drones need to take off or land at the same location or when the same drone is being considered for different jobs. It can get quite busy, and we have to make sure we’re all aware of each other’s plans to keep things running smoothly."
+    },
+    {
+     "id": "HD2",
+     "kind": "fact",
+     "question": "What does an inspection flight involve?",
+     "expect": "a drone with the right sensors visits a list of points in a set order and returns to where the inspection started (4.b2)",
+     "answer": "An inspection flight takes a drone with the right sensors—like cameras, thermal cameras, or laser scanners—to a list of specific points in a set order and brings it back to where the inspection started. The dispatcher decides which drone and route to use, but the drone flies on its own autopilot while we monitor it from the ground. The job is about covering all the required points in sequence, and we rely on reports from the drone and external systems to confirm when it reaches each point."
+    },
+    {
+     "id": "HD3",
+     "kind": "fact",
+     "question": "Once a flight is signed off, can it still be stopped?",
+     "expect": "yes — a dispatcher can call off a flight (2.b2)",
+     "answer": "Yes, I can still call off a flight even after it’s signed off. The dispatcher has the final authority and responsibility for each flight, so I can cancel it if something changes—like a sudden airspace closure, a problem with the drone, or if the load isn’t ready. The flight won’t take off or continue if I decide to stop it."
+    },
+    {
+     "id": "HD4",
+     "kind": "fact",
+     "question": "Who tells you that a load is ready or that a drone has arrived?",
+     "expect": "people and devices outside the company (4.b6)",
+     "answer": "People and devices outside my company report when a load is ready or when a drone arrives at its destination. These reports come through the service, but they’re not controlled by us—they’re just updates we have to account for in our planning. Sometimes these reports can be delayed, missing, or duplicated, so I have to double-check what’s actually happening."
+    },
+    {
+     "id": "HD5",
+     "kind": "fact",
+     "question": "Do you keep an eye on each of your drones all the time?",
+     "expect": "no — nobody watches every drone at every moment; one person may be responsible for hundreds (6.b5)",
+     "answer": "No, I don’t watch every drone at every moment—I’m responsible for hundreds at once. I rely on reports from drones, relay stations, and external systems to know where they are and what’s happening, but I can’t see them all live all the time. That’s why I have to stay alert for updates and be ready to act if something goes wrong."
+    },
+    {
+     "id": "HD6",
+     "kind": "outside",
+     "question": "How often do the technicians service a drone?",
+     "expect": "does not know, or refers to the technicians (3.b3 is not in the dispatcher slice)",
+     "answer": "I don’t know. The maintenance schedule for drones is handled by the drone operating companies themselves, not by the platform. I’d have to ask the drone operators or their maintenance team for details on how often their drones are serviced."
+    },
+    {
+     "id": "HD7",
+     "kind": "outside",
+     "question": "What does the platform's airspace desk do after it enters a closure?",
+     "expect": "does not know, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "answer": "I don’t know. The platform’s airspace desk handles closures and airspace rules, but I don’t work with them directly. They likely update the system with the new restrictions, and I rely on those updates to adjust flight plans. If you need details, you’d have to ask them."
+    },
+    {
+     "id": "HD8",
+     "kind": "no-design",
+     "question": "How should the new service warn you about a new closure?",
+     "expect": "describes what it needs to know and how soon, proposes no alerts, screens, features or mechanisms",
+     "answer": "The service notifies me about new airspace closures through updates in the system, but I have to actively check for changes since the platform doesn’t send alerts directly to me. The closures can be amended during the day, so I need to stay informed about any shifts in restricted zones or times to adjust my flight plans accordingly."
+    }
+   ]
+  }
+ ],
+ "desk": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "HA1",
+     "kind": "fact",
+     "question": "Which rules apply to the airspace information you keep?",
+     "expect": "the EU drone operation rules (Implementing Regulation (EU) 2019/947) and the EU U-space rules (Implementing Regulation (EU) 2021/664); staff personal data falls under the GDPR (5.b3)",
+     "answer": "The airspace information I keep is governed by the **EU drone operation rules (Implementing Regulation (EU) 2019/947)** and the **EU U-space rules (Implementing Regulation (EU) 2021/664)**. These rules define how zones are designated, how closures are announced, and how flight information must be shared and managed. I don’t enforce compliance or provide guarantees—just track the shared airspace data as it’s given by authorities and used by customers."
+    },
+    {
+     "id": "HA2",
+     "kind": "fact",
+     "question": "When you enter a closure, what do you want to find out?",
+     "expect": "how much disruption it caused across customers (2.b3)",
+     "answer": "When I enter a closure, I want to know how much disruption it causes across all the customer companies. This helps me understand the impact of the closure on their operations, but I don’t look into any one company’s specific flights, drones, or staff."
+    },
+    {
+     "id": "HA3",
+     "kind": "fact",
+     "question": "Do the customer companies want reports or dashboards about how they use the airspace?",
+     "expect": "no — they do not want management or analytical reports, exports or dashboards beyond day-to-day operations (8.b1)",
+     "answer": "No, the customer companies don’t want management reports, exports, or dashboards beyond what’s needed for day-to-day operations. They only care about the shared airspace information and how closures affect their flights."
+    },
+    {
+     "id": "HA4",
+     "kind": "fact",
+     "question": "Does anyone steer the drones through the service?",
+     "expect": "no — drones fly on their own autopilots and people on the ground supervise (6.b1)",
+     "answer": "No, nobody steers drones with a stick or remotely through the service. Drones fly on their own autopilots, and people on the ground just supervise."
+    },
+    {
+     "id": "HA5",
+     "kind": "outside",
+     "question": "Which drone models do the customer companies fly?",
+     "expect": "does not know, or says it is the companies' own business (3.b1 is not in the desk slice)",
+     "answer": "I don’t know. The notes don’t mention specific drone models or brands."
+    },
+    {
+     "id": "HA6",
+     "kind": "outside",
+     "question": "What do the companies' billing systems need to hear about?",
+     "expect": "does not know, or refers to the companies (7.b2 is not in the desk slice)",
+     "answer": "The companies handle billing and pricing in their own systems, so they don’t need the platform to provide any billing or pricing information. I don’t track costs, fees, or financial details at all."
+    },
+    {
+     "id": "HA7",
+     "kind": "outside",
+     "question": "How long does a typical delivery between two sites take?",
+     "expect": "does not know, or refers to the operating companies (no such figure in the desk slice)",
+     "answer": "I don’t know. The notes don’t mention anything about delivery times, flight durations, or specific metrics for how long flights between sites take."
+    },
+    {
+     "id": "HA8",
+     "kind": "no-design",
+     "question": "How should the new service show the corridor network?",
+     "expect": "describes what it needs to see or keep up to date, proposes no maps, screens, features or mechanisms",
+     "answer": "I don’t know how the service should show anything—like corridors, zones, or closures—because I don’t work on software design or user interfaces. My job is to keep the shared airspace data accurate and up to date for all customers, but I don’t decide how it’s displayed."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "HA1",
+     "kind": "fact",
+     "question": "Which rules apply to the airspace information you keep?",
+     "expect": "the EU drone operation rules (Implementing Regulation (EU) 2019/947) and the EU U-space rules (Implementing Regulation (EU) 2021/664); staff personal data falls under the GDPR (5.b3)",
+     "answer": "The airspace information I keep is governed by the **EU drone operation rules** (Implementing Regulation (EU) 2019/947), which define zones where flying is prohibited, and the **EU U-space rules** (Implementing Regulation (EU) 2021/664), which cover airspace information and flight authorisation. These rules shape how closures and zones are structured and shared among customers."
+    },
+    {
+     "id": "HA2",
+     "kind": "fact",
+     "question": "When you enter a closure, what do you want to find out?",
+     "expect": "how much disruption it caused across customers (2.b3)",
+     "answer": "When I enter a closure, I want to know how much disruption it caused across all the customer companies—how many of their flights were affected or delayed by the closure. This helps me understand the overall impact of the closure on operations."
+    },
+    {
+     "id": "HA3",
+     "kind": "fact",
+     "question": "Do the customer companies want reports or dashboards about how they use the airspace?",
+     "expect": "no — they do not want management or analytical reports, exports or dashboards beyond day-to-day operations (8.b1)",
+     "answer": "No, the customer companies do not want management reports, exports, or dashboards beyond what’s needed for day-to-day operations. They only care about the shared airspace information and its immediate impact on their flights."
+    },
+    {
+     "id": "HA4",
+     "kind": "fact",
+     "question": "Does anyone steer the drones through the service?",
+     "expect": "no — drones fly on their own autopilots and people on the ground supervise (6.b1)",
+     "answer": "No, nobody steers drones with sticks or controls them remotely through this service. Drones fly on their own autopilots, and people on the ground supervise their operations."
+    },
+    {
+     "id": "HA5",
+     "kind": "outside",
+     "question": "Which drone models do the customer companies fly?",
+     "expect": "does not know, or says it is the companies' own business (3.b1 is not in the desk slice)",
+     "answer": "I don’t know. The notes don’t mention specific drone models or brands."
+    },
+    {
+     "id": "HA6",
+     "kind": "outside",
+     "question": "What do the companies' billing systems need to hear about?",
+     "expect": "does not know, or refers to the companies (7.b2 is not in the desk slice)",
+     "answer": "The companies handle billing and pricing in their own systems, so they don’t need the platform to provide billing information or pricing details. The service doesn’t track costs or fees related to flights."
+    },
+    {
+     "id": "HA7",
+     "kind": "outside",
+     "question": "How long does a typical delivery between two sites take?",
+     "expect": "does not know, or refers to the operating companies (no such figure in the desk slice)",
+     "answer": "I don’t know. The notes don’t mention how long flights between sites take."
+    },
+    {
+     "id": "HA8",
+     "kind": "no-design",
+     "question": "How should the new service show the corridor network?",
+     "expect": "describes what it needs to see or keep up to date, proposes no maps, screens, features or mechanisms",
+     "answer": "The service needs to display the **network of flight corridors** between named sites, grouped into zones, and show any **closures** announced by the authorities—both planned and sudden. It should also reflect amendments to closures, like widened areas or changed end times, so all customers can see the current restrictions."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "HA1",
+     "kind": "fact",
+     "question": "Which rules apply to the airspace information you keep?",
+     "expect": "the EU drone operation rules (Implementing Regulation (EU) 2019/947) and the EU U-space rules (Implementing Regulation (EU) 2021/664); staff personal data falls under the GDPR (5.b3)",
+     "answer": "The airspace information I keep is governed by the **EU drone operation rules (Implementing Regulation (EU) 2019/947)**, which define zones where flying is prohibited, and the **EU U-space rules (Implementing Regulation (EU) 2021/664)**, which cover airspace information and flight authorisation. These rules shape how closures and zones are shared and used across all customer companies."
+    },
+    {
+     "id": "HA2",
+     "kind": "fact",
+     "question": "When you enter a closure, what do you want to find out?",
+     "expect": "how much disruption it caused across customers (2.b3)",
+     "answer": "When I enter a closure, I want to know how much disruption it causes across all customer companies—how many of their drones are affected and how their operations might be impacted. This helps me understand the overall impact of the closure on the shared airspace."
+    },
+    {
+     "id": "HA3",
+     "kind": "fact",
+     "question": "Do the customer companies want reports or dashboards about how they use the airspace?",
+     "expect": "no — they do not want management or analytical reports, exports or dashboards beyond day-to-day operations (8.b1)",
+     "answer": "No, the customer companies do not want management reports, exports, dashboards, or any analytical tools beyond what’s needed for day-to-day operations. They only care about the shared airspace information itself."
+    },
+    {
+     "id": "HA4",
+     "kind": "fact",
+     "question": "Does anyone steer the drones through the service?",
+     "expect": "no — drones fly on their own autopilots and people on the ground supervise (6.b1)",
+     "answer": "No, nobody steers drones with sticks or remotely through this service. Drones fly on their own autopilots, and people on the ground supervise them."
+    },
+    {
+     "id": "HA5",
+     "kind": "outside",
+     "question": "Which drone models do the customer companies fly?",
+     "expect": "does not know, or says it is the companies' own business (3.b1 is not in the desk slice)",
+     "answer": "I don’t know. The notes don’t mention specific drone models or brands."
+    },
+    {
+     "id": "HA6",
+     "kind": "outside",
+     "question": "What do the companies' billing systems need to hear about?",
+     "expect": "does not know, or refers to the companies (7.b2 is not in the desk slice)",
+     "answer": "The companies handle billing and pricing in their own systems, so they don’t need any information about that from the airspace service. I don’t know what their billing systems specifically require."
+    },
+    {
+     "id": "HA7",
+     "kind": "outside",
+     "question": "How long does a typical delivery between two sites take?",
+     "expect": "does not know, or refers to the operating companies (no such figure in the desk slice)",
+     "answer": "I don’t know. The notes don’t mention how long flights between sites take."
+    },
+    {
+     "id": "HA8",
+     "kind": "no-design",
+     "question": "How should the new service show the corridor network?",
+     "expect": "describes what it needs to see or keep up to date, proposes no maps, screens, features or mechanisms",
+     "answer": "I don’t know how the service should display anything—like corridors, zones, or closures—because the notes don’t describe screens, buttons, or features. I only know that the airspace desk needs to keep an accurate shared picture of the network of flight corridors, zones, and closures for all customer companies."
+    }
+   ]
+  }
+ ]
+}

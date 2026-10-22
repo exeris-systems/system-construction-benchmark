@@ -1,0 +1,29 @@
+{
+ "id": "bb8a12d986a945b1b96259228d7a1885",
+ "created": 1792692512,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1676,
+  "total_tokens": 1714,
+  "completion_tokens": 38,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I’m a fleet technician, not a software designer. My job is about drones, charging pads, and repairs—not about screens, buttons, or software features."
+   }
+  }
+ ]
+}

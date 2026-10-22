@@ -1,0 +1,29 @@
+{
+ "id": "ef9f881819284d8f9c2bd0c5b7e495eb",
+ "created": 1792694476,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 1546,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I don’t know. The links to the charging equipment are unreliable, so I often can’t tell if the first instruction got through or if it arrived twice. I just keep trying until I think it’s done."
+   }
+  }
+ ]
+}

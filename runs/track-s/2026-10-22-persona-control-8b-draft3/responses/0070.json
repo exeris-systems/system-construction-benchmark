@@ -1,0 +1,29 @@
+{
+ "id": "012a7ade0a30428c9cc62a16d0f66bf7",
+ "created": 1792691665,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1268,
+  "total_tokens": 1314,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk only handles airspace information and closures, not the technical maintenance or faults of individual drones. For that, you’d need to ask the customer companies or their own technical teams."
+   }
+  }
+ ]
+}

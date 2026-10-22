@@ -1,0 +1,29 @@
+{
+ "id": "591d327677b04eb1bb648b72517d8089",
+ "created": 1792694444,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1764,
+  "total_tokens": 1827,
+  "completion_tokens": 63,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "People and devices outside my company report when a load is ready or when a drone arrives—like ground crew, site managers, or automated sensors. These reports come through the service, but they might arrive late, out of order, or not at all, so I always double-check before finalizing a flight."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "d4db9454dc564c38b9990048f02d7f62",
+ "created": 1792692605,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1649,
+  "total_tokens": 1692,
+  "completion_tokens": 43,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. That’s not my job—I only keep drones and charging equipment working. The airspace desk handles flight authorisations and airspace closures, so they’d know how long those last."
+   }
+  }
+ ]
+}

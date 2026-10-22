@@ -1,0 +1,29 @@
+{
+ "id": "c76cf719c5f140bb94488845434f60b2",
+ "created": 1792694470,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1286,
+  "total_tokens": 1350,
+  "completion_tokens": 64,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Repairs and servicing on our drones are carried out by technicians. I don’t do it myself—I just make sure drones are sent to them when they need attention, like after a fault or when they’re due for maintenance. The regulators also expect us to keep records of how we’ve looked after the drones."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "2fd6121f28344b5c8758c01ec8b6b430",
+ "created": 1792694406,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1062,
+  "total_tokens": 1173,
+  "completion_tokens": 111,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The airspace information I keep is governed by the **EU drone operation rules (Implementing Regulation (EU) 2019/947)** and the **EU U-space rules (Implementing Regulation (EU) 2021/664)**. These rules define how zones are designated, how closures are announced, and how flight information must be shared and managed. I don’t enforce compliance or provide guarantees—just track the shared airspace data as it’s given by authorities and used by customers."
+   }
+  }
+ ]
+}

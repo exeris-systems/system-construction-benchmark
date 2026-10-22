@@ -438,3 +438,13 @@ Until version 3 of the Track S procedure is tagged, each revision of its files i
 Draft 2 revises `persona-prompt.md` after the persona's first calibration (`runs/track-s/2026-10-22-persona-control`, 47 of 72 answers passing; `trackS/calibration-log.md`): the persona speaks for its own organisation only, says it does not know a number, name, type or frequency its notes do not give, and says nothing about how a system works or keeps information. If the revised persona still fails, the next draft changes the persona model, which amends D-48.
 
 Impact: `trackS/procedure.md`, `trackS/persona-prompt.md`, `trackS/calibration-log.md`.
+
+### D-50 — The persona prompt is frozen, and a held-out set decides
+
+Draft 3 of the Track S procedure revises `persona-prompt.md` and keeps `ministral-8b-2512` as the persona model; D-48 stands. Across the calibration runs on the control set (`trackS/calibration-log.md`), the revisions raised the persona from 47 to between 66 and 69 of 72 passing answers, and `ministral-14b-2512` did no better than `ministral-8b-2512` on the same prompt. The remaining failures differ from run to run, and the last revision did not remove the one that repeats. Revising further against the same 24 questions would fit the prompt to them.
+
+The prompt is frozen at its last revision, SHA-256 `7d40bed8…0c0`, rather than at the run that scored highest, because 66 and 69 differ by less than one run differs from the next. `trackS/persona-holdout.yaml` holds 24 new questions with the same kinds; it was written after the prompt was frozen, by the author of the prompt's revisions. It is run once, and its verdict decides: the persona passes when no `fact` answer contradicts its slice and at least 65 of the 72 answers pass. The threshold is fixed before that run, and replaces the control set's criterion of no failing answer.
+
+Within one pull request, successive revisions of a file are told apart by the SHA-256 that every run records and `trackS/calibration-log.md` cites; a new draft version is declared for each change that reaches `main` (D-49).
+
+Impact: `trackS/procedure.md`, `trackS/persona-prompt.md`, `trackS/persona-holdout.yaml`, `trackS/run-track-s.py`, `trackS/calibration-log.md`, `trackS/how-to-calibrate-persona.md`.

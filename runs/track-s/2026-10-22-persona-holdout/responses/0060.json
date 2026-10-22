@@ -1,0 +1,29 @@
+{
+ "id": "550b07ad9c1b40dda6b5b36b737db3c2",
+ "created": 1792694492,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1779,
+  "total_tokens": 1852,
+  "completion_tokens": 73,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "People and devices outside my company report when a load is ready or when a drone arrives at its destination. These reports come through the service, but they’re not controlled by us—they’re just updates we have to account for in our planning. Sometimes these reports can be delayed, missing, or duplicated, so I have to double-check what’s actually happening."
+   }
+  }
+ ]
+}

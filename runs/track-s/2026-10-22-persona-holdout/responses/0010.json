@@ -1,0 +1,29 @@
+{
+ "id": "2126c29c181446b2a0c11cac59260859",
+ "created": 1792694392,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1534,
+  "total_tokens": 1602,
+  "completion_tokens": 68,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "An inspection flight takes a drone with the right sensors—like cameras, thermal cameras, or laser scanners—to a list of specific points in a set order, then brings it back to where the inspection started. The dispatcher decides which drone and route to use, but the drone flies on its own autopilot while I supervise."
+   }
+  }
+ ]
+}

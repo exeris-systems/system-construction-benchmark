@@ -1,0 +1,29 @@
+{
+ "id": "34365ef33b3c4ac6a7c90d8c911ec5fd",
+ "created": 1792690827,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2286,
+  "total_tokens": 2458,
+  "completion_tokens": 172,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We don’t pick the drone—that’s all handled by the customer’s own systems. Our job is just to make sure the drones are charged, working, and ready to go when they’re assigned a job. The dispatcher at the customer’s end decides which drone gets which delivery based on their own rules—maybe it’s the closest one, or the one with the right battery life, or just whatever’s free at the time.\n\nAs for the corridor? That’s all pre-set in the system based on the airspace rules and the customer’s usual routes. The drones follow the approved flight paths automatically—no manual steering involved. If there’s a change, like a new restriction or a better route, the customer’s got to update their own systems, and we just make sure the drones follow along. We don’t mess with the flight plans ourselves."
+   }
+  }
+ ]
+}

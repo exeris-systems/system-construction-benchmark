@@ -1,0 +1,29 @@
+{
+ "id": "4ad136c107b447c8b1e9f1c09acc5184",
+ "created": 1792690847,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2357,
+  "total_tokens": 2545,
+  "completion_tokens": 188,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s a mess—we’ve got at least three different types in use right now. Some drones use the old-style MagSafe, others need the newer USB-C, and a few stubborn ones still have that proprietary plug from the manufacturer. The worst part? You can’t just swap them out—if a drone’s got a MagSafe connector, it *has* to go on a MagSafe pad, or it won’t charge at all.\n\nWe’ve had drones sitting there for hours because the wrong pad was booked, or the pad was down, or the connection just wouldn’t stick. And if a drone’s battery’s low, that’s a real problem. So we’ve got to keep track of which pads match which drones, and that’s another thing the system could help with—just a quick check to say, *\"Hey, this drone’s here, but the pad it needs is busy.\"* No surprises."
+   }
+  }
+ ]
+}

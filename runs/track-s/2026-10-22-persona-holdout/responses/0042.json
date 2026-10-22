@@ -1,0 +1,29 @@
+{
+ "id": "b8d42d4ac1714c01b2a12fed5666725b",
+ "created": 1792694456,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1172,
+  "total_tokens": 1220,
+  "completion_tokens": 48,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "When I enter a closure, I want to know how much disruption it caused across all the customer companies—how many of their flights were affected or delayed by the closure. This helps me understand the overall impact of the closure on operations."
+   }
+  }
+ ]
+}

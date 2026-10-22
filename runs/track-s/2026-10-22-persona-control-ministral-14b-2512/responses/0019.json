@@ -1,0 +1,29 @@
+{
+ "id": "c4c22396f6cd437aa99946766fa99d1d",
+ "created": 1792690859,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1251,
+  "total_tokens": 1397,
+  "completion_tokens": 146,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Mostly the ones that affect a big chunk of airspace at once—like temporary no-fly zones for events, military exercises, or unexpected hazards. Sometimes they’re planned, like a closure for a week during a festival, and sometimes they’re sudden, like a last-minute restriction because of a fire or a missing aircraft.\n\nThey can also tweak them midday—widen the area, push back the end time, or even cancel it. And sometimes they’re just small tweaks, like a corridor getting blocked for a few hours. The tricky ones are the ones that come in while drones are already in the air. You’ve got to update the system fast, but you can’t just shut everything down."
+   }
+  }
+ ]
+}

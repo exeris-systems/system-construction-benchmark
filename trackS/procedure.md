@@ -14,8 +14,8 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 3 (draft 2)
-Decision register: D-45 to D-49. Versions 1 and 2 (the user-story procedure under
+Version: 3 (draft 3)
+Decision register: D-45 to D-50. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
 
@@ -37,22 +37,29 @@ run.
 | --- | --- |
 | `world-brief.md`, `brief-slices.yaml` | the world and each persona's slice of it |
 | `brief-seeding.md` | the brief sentences that are constraints or seeded needs; used to read derived contracts |
-| `persona-prompt.md`, `persona-control.yaml` | the persona instrument and its calibration questions |
+| `persona-prompt.md` | the persona instrument |
+| `persona-control.yaml`, `persona-holdout.yaml` | the persona's calibration questions: the set the prompt is revised against, and the held-out set that decides |
 | `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 3, and replaced by subject prompts before the first subject runs |
 | `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
 | `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
 
 ## Persona calibration — runs first
 
-`persona-control.yaml` holds fixed questions per role, each with what the role's slice supports
-(`fact`), a question the slice cannot answer (`outside`), or a question that invites software design
-(`no-design`). The script asks each role its questions in one conversation, three times.
+Two question sets of the same shape hold fixed questions per role, each with what the role's slice
+supports (`fact`), a question the slice cannot answer (`outside`), or a question that invites
+software design (`no-design`). The script asks each role its questions in one conversation, three
+times: `persona-control` asks `persona-control.yaml`, `persona-holdout` asks `persona-holdout.yaml`.
 
-The persona passes when no answer contradicts its slice, answers to the same question agree across
-the three repetitions, `outside` questions get "I don't know" or a referral, and `no-design`
-questions get needs rather than features. A persona that fails is revised, and calibrated again,
-before the set is tagged. The rate-limit headers recorded on every call show the provider's limits,
-from which the subject runs are scheduled.
+Each answer is graded against its question's `expect`. A `fact` answer passes when it agrees with the
+cited unit and adds nothing its slice does not give; an `outside` answer passes with "I don't know"
+or a referral its slice supports; a `no-design` answer passes when it describes needs rather than
+features or mechanisms. The verdict, and every failing answer, is recorded in `calibration-log.md`.
+
+The persona prompt is revised against the control set only. With the prompt frozen, the held-out set
+is run once, and decides: the persona passes when no `fact` answer contradicts its slice and at
+least 65 of the 72 answers pass. A persona that fails the held-out set is not revised against it; a
+new prompt or model is a new draft, with a new held-out set. The rate-limit headers recorded on every
+call show the provider's limits, from which the subject runs are scheduled.
 
 The calibration establishes only that the persona keeps to its slice. It says nothing about how any
 subject interviews or derives a contract.

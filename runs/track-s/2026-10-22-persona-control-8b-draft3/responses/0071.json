@@ -1,0 +1,29 @@
+{
+ "id": "0a7983733f654f93a37f1e06af3fe793",
+ "created": 1792691667,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1330,
+  "total_tokens": 1384,
+  "completion_tokens": 54,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk doesn’t handle drones’ reports or their delivery to companies—we only manage the shared airspace data. If reports are late or out of order, that would be something the companies or their systems would need to address."
+   }
+  }
+ ]
+}

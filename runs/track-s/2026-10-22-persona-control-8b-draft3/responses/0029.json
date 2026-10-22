@@ -1,0 +1,29 @@
+{
+ "id": "a17d83ad044d426285f23c34e493967f",
+ "created": 1792691583,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1412,
+  "total_tokens": 1477,
+  "completion_tokens": 65,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, reports from drones don’t always reach us, and they don’t always arrive in order. The radio coverage is patchy, so reports can come late, out of order, more than once, or not at all. I have to double-check the data to make sure it’s correct before acting on it."
+   }
+  }
+ ]
+}

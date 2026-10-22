@@ -1,0 +1,29 @@
+{
+ "id": "92b04cc28ad442618adca148db5225ae",
+ "created": 1792692565,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1555,
+  "total_tokens": 1615,
+  "completion_tokens": 60,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I don’t want software to pick the drone for me. It’s my legal responsibility to decide which drone flies, and the company’s policy is that software never chooses a drone or a route. I just need help finding out which of my drones could get to where a job starts."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "4a596e18e6874d2d9a7b4a7039342c98",
+ "created": 1792691605,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1826,
+  "total_tokens": 1882,
+  "completion_tokens": 56,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the system stores anything internally. I only know that I need the system to show me the corridors between named sites, so I can plan flights along those routes. The system should let me see which drones can reach where and which sites have landing spots."
+   }
+  }
+ ]
+}

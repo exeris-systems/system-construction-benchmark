@@ -1,0 +1,29 @@
+{
+ "id": "4df6960bec8f43f1936dd55ac26577cc",
+ "created": 1792690876,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1332,
+  "total_tokens": 1457,
+  "completion_tokens": 125,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No way—absolutely not. Each drone has its own charging connector type, and the pads at every site are wired for specific ones. If you mix them up, you either get no charge at all or—worse—you fry the drone’s battery trying to force it.\n\nWe’ve had a few close calls where a tech grabbed the wrong connector for a site, but luckily we’ve got a checklist now. Still, it’s a pain when a new drone comes in with a different plug than what we’ve got set up. Sometimes we’ve got to swap out a whole pad just to charge it."
+   }
+  }
+ ]
+}

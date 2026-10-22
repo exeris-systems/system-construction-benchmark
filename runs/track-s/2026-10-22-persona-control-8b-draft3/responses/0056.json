@@ -1,0 +1,29 @@
+{
+ "id": "acfa4c73090b43a3b6f86a59a1fd8a07",
+ "created": 1792691637,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1667,
+  "total_tokens": 1833,
+  "completion_tokens": 166,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I need screens and buttons to:\n\n- **View and assign drones** to jobs or charging, showing their status (in flight, charging, out of service) and which sites they’re at.\n- **Start and stop charging** for drones at our pads, with buttons to send instructions—even if they sometimes fail or repeat.\n- **Mark drones as out of service** for repairs and put them back when fixed, so dispatchers don’t use them.\n- **Add new drones** to the fleet and retire old ones, updating their home sites and connectors.\n- **See which pads are free** at our sites so I can send drones there to charge without mixing up connectors.\n- **Check reports from drones** even if they’re late, missing, or duplicated, to confirm they arrived safely and data is valid."
+   }
+  }
+ ]
+}

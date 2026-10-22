@@ -1,0 +1,29 @@
+{
+ "id": "884ef9bb84014747b887feee949232a7",
+ "created": 1792694394,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1617,
+  "total_tokens": 1672,
+  "completion_tokens": 55,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Yes, I can call off a flight even after it’s signed off, if something changes or if I decide it’s no longer safe or necessary. The flight doesn’t automatically proceed once approved—my responsibility is to ensure it’s still the right call at every step."
+   }
+  }
+ ]
+}

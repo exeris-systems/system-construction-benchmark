@@ -1,0 +1,29 @@
+{
+ "id": "f8bca5f948424e299a90b27fd49190b2",
+ "created": 1792690844,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2141,
+  "total_tokens": 2346,
+  "completion_tokens": 205,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure happens while drones are already up, it’s a scramble. The rules say we’ve got to get them out *before* they hit the restricted zone—or at least make sure they avoid it. But it’s not always that simple.\n\nSometimes the drone’s still in radio range, and we can tell it to turn back or go around. Other times, the signal cuts out, and we’re just hoping it keeps flying its original path. We’ve had drones that restarted mid-flight and lost their way, or ones that drained their battery faster than expected because of wind—then the closure hits, and we’re stuck.\n\nThe worst part? We can’t just pause and wait. If a drone’s in the middle of an inspection, we can’t abort it halfway unless it’s an emergency. So we’ve got to plan *now*—like, if a closure’s coming up in an hour, we need to know which drones are at risk and get them out early. No second chances."
+   }
+  }
+ ]
+}

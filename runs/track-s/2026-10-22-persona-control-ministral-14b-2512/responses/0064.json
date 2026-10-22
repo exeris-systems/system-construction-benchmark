@@ -1,0 +1,29 @@
+{
+ "id": "502c63004ab44e93afa6f6e5f7ed94fc",
+ "created": 1792690980,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2635,
+  "total_tokens": 2796,
+  "completion_tokens": 161,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the system works under the hood—you’d have to ask the tech team about that. But here’s what *we* need to see:\n\nThe route has to include the start and end sites, any waypoints in between, and whether it’s a straight line or a detour. If there’s a closure or a no-fly zone in the way, we need to know that *before* we sign off on it. And if the drone’s battery’s low, the system should flag whether it can make it back safely.\n\nBut again—we’re not asking the system to *pick* the route. It just needs to show us the options, the risks, and let *us* decide. If it stores it wrong, we might miss something critical."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "790c598061174ff4a700d9e65620f901",
+ "created": 1792690884,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1803,
+  "total_tokens": 1993,
+  "completion_tokens": 190,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not even close. Reports come in all over the place—sometimes they’re late, sometimes they’re duplicated, and sometimes they just don’t show up at all. If you’re lucky, they come through in order, but more often than not, they’re all mixed up.\n\nRadio coverage is the biggest issue, especially near ports, industrial sites, or in bad weather. The drones send their updates through relay stations, but those can drop signals or get jammed. We’ve had drones finish a job and still not report back for hours—or never at all. And if a drone restarts in the air, it might send a whole new set of reports that overlap with the old ones.\n\nWe just have to check everything carefully and cross-reference with the flight logs. If something’s missing, we might have to send someone out to the site to figure it out. It’s a pain, but it’s part of the job."
+   }
+  }
+ ]
+}

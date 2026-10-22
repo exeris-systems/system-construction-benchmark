@@ -1,0 +1,29 @@
+{
+ "id": "238c311bd4904099bae715ffc34fa1d7",
+ "created": 1792694516,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1453,
+  "total_tokens": 1519,
+  "completion_tokens": 66,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the service should display anything—like corridors, zones, or closures—because the notes don’t describe screens, buttons, or features. I only know that the airspace desk needs to keep an accurate shared picture of the network of flight corridors, zones, and closures for all customer companies."
+   }
+  }
+ ]
+}

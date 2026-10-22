@@ -1,0 +1,29 @@
+{
+ "id": "3143e571607840bd93e35813e23a2b82",
+ "created": 1792692510,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1617,
+  "total_tokens": 1664,
+  "completion_tokens": 47,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company doesn’t pick drones or plan routes for deliveries. Each company handles that in its own systems. My job is to keep the drones and charging equipment working, not to assign them to jobs."
+   }
+  }
+ ]
+}

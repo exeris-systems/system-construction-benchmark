@@ -1,0 +1,29 @@
+{
+ "id": "9c040b3e5e5c430e879cf0ac92221c82",
+ "created": 1792690967,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1705,
+  "total_tokens": 1824,
+  "completion_tokens": 119,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not really. Each site has a limited number of spots where drones can take off and land safely at the same time. If too many try to launch at once, they’ll just queue up or get held back until a slot opens.\n\nWe’ve had cases where dispatchers from different companies accidentally scheduled flights for the same spot at the same time—then we had to scramble to reschedule. That’s why we always double-check the site’s capacity before signing off a flight. The software should at least warn us if we’re trying to stack too many in one spot."
+   }
+  }
+ ]
+}

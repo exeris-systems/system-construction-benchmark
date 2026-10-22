@@ -1,0 +1,29 @@
+{
+ "id": "093ff668915e41ae9fafc4b57d775a33",
+ "created": 1792694388,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1707,
+  "total_tokens": 1744,
+  "completion_tokens": 37,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform handles the service, but I don’t deal with software or records. The technicians who do the repairs would know what information needs to be kept."
+   }
+  }
+ ]
+}

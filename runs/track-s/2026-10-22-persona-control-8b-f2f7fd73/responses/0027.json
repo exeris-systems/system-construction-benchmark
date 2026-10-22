@@ -1,0 +1,29 @@
+{
+ "id": "9d92e76e30fd4a0588dc69f659701aa0",
+ "created": 1792691902,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1379,
+  "total_tokens": 1409,
+  "completion_tokens": 30,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, we never use charging pads at another company’s sites—they only use their own pads. Each company keeps its own charging equipment separate."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "911d9e25efe34367b3fb7fb9471ca55c",
+ "created": 1792691635,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1600,
+  "total_tokens": 1655,
+  "completion_tokens": 55,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The dispatcher picks the drone and corridor—they’re not my job. I just make sure the drones and charging equipment are working when they’re needed. The dispatchers handle matching drones to jobs based on where they are and what they can carry."
+   }
+  }
+ ]
+}

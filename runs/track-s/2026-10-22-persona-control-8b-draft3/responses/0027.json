@@ -1,0 +1,29 @@
+{
+ "id": "7f2db1467743430b84096071e7c49e53",
+ "created": 1792691579,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1298,
+  "total_tokens": 1333,
+  "completion_tokens": 35,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, we can’t use charging pads at another company’s sites. Each company owns and manages its own pads, and they’re never shared or lent to other companies."
+   }
+  }
+ ]
+}

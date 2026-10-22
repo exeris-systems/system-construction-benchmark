@@ -1,0 +1,29 @@
+{
+ "id": "95268b939d3b4471b962d1c85dff1c99",
+ "created": 1792690822,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2087,
+  "total_tokens": 2269,
+  "completion_tokens": 182,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s not my call—that’s the airspace team’s job, and they follow the rules straight up. If there’s a no-fly zone or a temporary restriction, they check the EU regulations and the U-space updates to see how long it’s supposed to last. Sometimes it’s fixed—like a permanent exclusion zone near an airport—and sometimes it’s time-based, like a closure during a big event.\n\nWe get the updates pushed through the system, and if a closure’s in place, the drones just won’t take off or land in that area. But honestly, the tricky part is when the system glitches or the data’s delayed. You might get a closure notice after the drones are already in the air, and then you’ve got to scramble to get them out before they hit a restricted zone. That’s when you really hope the pilots are paying attention."
+   }
+  }
+ ]
+}

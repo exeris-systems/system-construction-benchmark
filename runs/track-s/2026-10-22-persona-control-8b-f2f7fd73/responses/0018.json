@@ -1,0 +1,29 @@
+{
+ "id": "b66019c3baf04526a270a38d854d049d",
+ "created": 1792691884,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1147,
+  "total_tokens": 1216,
+  "completion_tokens": 69,
+  "prompt_tokens_details": {
+   "cached_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t look into any one company’s flights or operations—the airspace desk only manages the shared airspace data for everyone. If a closure happens, I check how it affects the whole network of corridors and zones, but I don’t track individual companies’ drones or jobs. The companies themselves handle their own flight data and disruptions."
+   }
+  }
+ ]
+}

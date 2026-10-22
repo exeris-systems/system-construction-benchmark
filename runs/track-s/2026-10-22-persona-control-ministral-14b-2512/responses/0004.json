@@ -1,0 +1,29 @@
+{
+ "id": "753d811289234230938e509d7de0cada",
+ "created": 1792690815,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1655,
+  "total_tokens": 1849,
+  "completion_tokens": 194,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s one of those moments where you just hold your breath. If a drone restarts mid-flight, it usually just keeps going—autopilot kicks back in and it finishes its job if it can. But sometimes it’s a problem.\n\nIf it’s a delivery, it might land where it is and wait for someone to check it. If it’s an inspection, it could mess up the whole route—maybe skip a point or loop back wrong. And if it’s over a tricky area, like near a port or in bad weather, we might lose track of it for a while.\n\nThe worst part is we don’t always get a clear report. The logs might say it restarted, but the data could be garbled or delayed. You just hope the drone’s still flying straight and the battery holds out. If it’s a repeat offender, we pull it for a full check—could be a software glitch or a failing battery."
+   }
+  }
+ ]
+}

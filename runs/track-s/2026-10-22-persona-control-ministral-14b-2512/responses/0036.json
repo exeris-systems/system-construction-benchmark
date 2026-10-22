@@ -1,0 +1,29 @@
+{
+ "id": "526fe5030d3c48da8f7a5ea34f31453a",
+ "created": 1792690902,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1963,
+  "total_tokens": 2190,
+  "completion_tokens": 227,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures are a nightmare because they *never* stay the same. One minute you’ve got a nice little restricted zone near the airport, and the next—*boom*—the authorities widen it, push back the end time, or even add a new one out of nowhere. It happens all day, especially around ports, construction sites, or when some VIP’s flying overhead.\n\nI’ve seen closures get amended three or four times in an hour. Sometimes it’s a text update, sometimes it’s a full new notice, and sometimes the system just glitches and doesn’t show the latest version right away. That’s why I’ve got a separate window open with the official airspace feeds—just in case the platform’s system lags. If a drone’s already in the air when a closure drops, we’ve got minutes to decide: do we reroute, call it back, or let it finish? And if it’s a sudden one, like a military exercise popping up, we might not even get warning. That’s why we keep a buffer—never let drones get too close to risky areas."
+   }
+  }
+ ]
+}

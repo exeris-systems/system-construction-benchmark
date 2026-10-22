@@ -1,0 +1,29 @@
+{
+ "id": "a9dc17627e654a1ea9f3563a425a375d",
+ "created": 1792694404,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1944,
+  "total_tokens": 1995,
+  "completion_tokens": 51,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service should notify me automatically when a new closure is announced, so I can see it in the system alongside the drones and jobs I’m managing. Since closures can change often, I need to be able to check them quickly without extra steps."
+   }
+  }
+ ]
+}

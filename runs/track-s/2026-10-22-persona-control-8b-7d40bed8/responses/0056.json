@@ -1,0 +1,29 @@
+{
+ "id": "0d54343aa2624fefa63a35d36461058d",
+ "created": 1792692609,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1767,
+  "total_tokens": 1831,
+  "completion_tokens": 64,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I don’t design software or screens—I just keep drones and charging equipment working. I can tell you what I need to do my job, like seeing which drones are available, which are charging, and which need repairs. But I can’t say what buttons or screens would make that happen."
+   }
+  }
+ ]
+}

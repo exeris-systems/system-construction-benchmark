@@ -1,0 +1,29 @@
+{
+ "id": "e9fb317c29b9444a98426ac4cd6766ef",
+ "created": 1792694482,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1662,
+  "total_tokens": 1705,
+  "completion_tokens": 43,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company shares airspace information with everyone, but I don’t track which zones are closed or when. I just make sure our drones are ready to fly when they’re needed."
+   }
+  }
+ ]
+}

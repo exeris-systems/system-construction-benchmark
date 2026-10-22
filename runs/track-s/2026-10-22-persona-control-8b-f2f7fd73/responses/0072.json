@@ -1,0 +1,29 @@
+{
+ "id": "bf603d4341c64e5b80a2835509d35981",
+ "created": 1792691999,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1478,
+  "total_tokens": 1535,
+  "completion_tokens": 57,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk needs a way to store and update closures so everyone can see them, but my notes don’t specify which system or database handles that. If you need details on storage, you’d need to ask the platform company’s technical team."
+   }
+  }
+ ]
+}

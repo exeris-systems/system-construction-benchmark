@@ -1,0 +1,29 @@
+{
+ "id": "99a6f1acd1e0455f9bc897b7ee212670",
+ "created": 1792690945,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1461,
+  "total_tokens": 1561,
+  "completion_tokens": 100,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Nope, not at all. Each company’s got its own charging pads at its own sites—we don’t share those. The rules say we’ve got to keep our equipment at our own locations, and the pads are tied to where we operate. If we needed extra capacity, we’d have to set up our own pads at our own sites. Never heard of one company lending pads to another. That’d be a whole logistical nightmare, and I doubt the regulators would like it."
+   }
+  }
+ ]
+}

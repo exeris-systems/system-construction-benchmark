@@ -1,0 +1,29 @@
+{
+ "id": "9cd209277fa3452c854a1e6fa945d77d",
+ "created": 1792694496,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1954,
+  "total_tokens": 2002,
+  "completion_tokens": 48,
+  "prompt_tokens_details": {
+   "cached_tokens": 1920
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The maintenance schedule for drones is handled by the drone operating companies themselves, not by the platform. I’d have to ask the drone operators or their maintenance team for details on how often their drones are serviced."
+   }
+  }
+ ]
+}

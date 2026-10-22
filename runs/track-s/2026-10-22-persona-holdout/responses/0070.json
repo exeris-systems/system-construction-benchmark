@@ -1,0 +1,29 @@
+{
+ "id": "7bf6ef3509a2450c9aac7892dc8a2982",
+ "created": 1792694512,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1372,
+  "total_tokens": 1410,
+  "completion_tokens": 38,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The companies handle billing and pricing in their own systems, so they don’t need any information about that from the airspace service. I don’t know what their billing systems specifically require."
+   }
+  }
+ ]
+}

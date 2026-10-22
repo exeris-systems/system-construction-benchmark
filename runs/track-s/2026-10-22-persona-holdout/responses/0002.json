@@ -1,0 +1,29 @@
+{
+ "id": "35792fda28274415aa3444e91e78db87",
+ "created": 1792694376,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1360,
+  "total_tokens": 1403,
+  "completion_tokens": 43,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Regulators can ask us to show how our drones have been looked after. I don’t deal with regulators directly, but I make sure the drones are properly maintained so we can prove their upkeep if needed."
+   }
+  }
+ ]
+}

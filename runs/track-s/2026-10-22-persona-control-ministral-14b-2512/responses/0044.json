@@ -1,0 +1,29 @@
+{
+ "id": "d80b7d61a2ba40bd9115ba59a273807c",
+ "created": 1792690929,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1432,
+  "total_tokens": 1526,
+  "completion_tokens": 94,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, it’s not great—maybe once or twice a week, sometimes more if something goes wrong. We just get a notice that it’s going down for a few minutes while they update it. The companies know to expect it, so they usually handle it fine. The worst part is when it crashes unexpectedly, but that’s rare. Still, it’s annoying because you’re always waiting for it to come back up, especially if a closure just got updated."
+   }
+  }
+ ]
+}

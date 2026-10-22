@@ -1,0 +1,29 @@
+{
+ "id": "804d8102b29a4b61b4cf083681caad3e",
+ "created": 1792692574,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1876,
+  "total_tokens": 1917,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only work for my own company and track its drones and flights. The platform company would need to gather data from all the operating companies to see how closures affected everyone."
+   }
+  }
+ ]
+}

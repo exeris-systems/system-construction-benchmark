@@ -1,0 +1,29 @@
+{
+ "id": "f7351b7956a74f08baa34c32901e809e",
+ "created": 1792690854,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1012,
+  "total_tokens": 1130,
+  "completion_tokens": 118,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We keep the airspace information that the authorities publish—like zones where drones can’t fly, and closures that pop up during the day. That’s it. No customer data, no flight plans, no drone details—just the airspace itself.\n\nThe customers use it to see if their drones can still fly where they need to. They don’t log in; they just pull the data into their own systems. We don’t send alerts or anything—it’s up to them to check and decide what to do. Our job is just to keep that picture up to date."
+   }
+  }
+ ]
+}

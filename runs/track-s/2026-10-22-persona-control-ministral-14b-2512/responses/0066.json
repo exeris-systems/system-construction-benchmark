@@ -1,0 +1,29 @@
+{
+ "id": "95666d6b10a64678818c23361de8e328",
+ "created": 1792690985,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1146,
+  "total_tokens": 1232,
+  "completion_tokens": 86,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, we don’t look at any company’s flights—our job is just the airspace itself. If a closure happens, we see how many corridors or sites it blocks, but we don’t track which company’s drones were flying where.\n\nThe companies handle their own operations and tell us nothing about their flights. If they want to know how a closure hit them, they’d have to ask their own systems—not us."
+   }
+  }
+ ]
+}

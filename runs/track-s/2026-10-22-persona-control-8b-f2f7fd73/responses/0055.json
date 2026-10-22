@@ -1,0 +1,29 @@
+{
+ "id": "c0f90dc4d9d145c1bde4ba5c029b5a26",
+ "created": 1792691965,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1618,
+  "total_tokens": 1664,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. Dispatchers pick drones and routes based on their own systems and rules, not through the platform service. My job is just to keep the drones and charging equipment working, not to assign them to jobs."
+   }
+  }
+ ]
+}

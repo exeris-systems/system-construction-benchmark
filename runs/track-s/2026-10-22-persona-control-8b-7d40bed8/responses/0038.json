@@ -1,0 +1,29 @@
+{
+ "id": "3b16710c8a6747179a6fb44690c36c19",
+ "created": 1792692572,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1826,
+  "total_tokens": 1861,
+  "completion_tokens": 35,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company handles the charging infrastructure and equipment details for all the operating companies. You’d need to ask the platform’s technical team about that."
+   }
+  }
+ ]
+}
