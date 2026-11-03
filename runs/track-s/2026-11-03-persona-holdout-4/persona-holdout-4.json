@@ -1,0 +1,557 @@
+{
+ "technician": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "LT1",
+     "kind": "fact",
+     "question": "Do all your drones use the same charging connector?",
+     "expect": "no — several connector types are in use, and they are not interchangeable (3.b1)",
+     "answer": "We have several drone models from different manufacturers, and they use several connector types that are not interchangeable. Each company has its own charging pads at its own sites, a few dozen of them. I keep drones and charging equipment in working order, and pads are never lent to another company."
+    },
+    {
+     "id": "LT2",
+     "kind": "fact",
+     "question": "Who sets up the charging pads at your company's sites?",
+     "expect": "the fleet technicians (2.b1)",
+     "answer": "I add new drones to the fleet, retire old ones, set up charging pads at my company's sites, and take drones out of service for repairs and put them back. I also send drones to charge and keep them and the charging equipment in working order."
+    },
+    {
+     "id": "LT3",
+     "kind": "fact",
+     "question": "Does anyone watch every drone all the time?",
+     "expect": "no — nobody watches every drone at every moment; one person may be responsible for hundreds (6.b5)",
+     "answer": "Nobody watches every drone at every moment, and one person may be responsible for hundreds. Drones fly on their own autopilots while people on the ground supervise."
+    },
+    {
+     "id": "LT4",
+     "kind": "fact",
+     "question": "Do the companies want the service to guarantee that they meet the regulations?",
+     "expect": "no — they want no guarantee of meeting regulations and no compliance audit (8.b4)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LT5",
+     "kind": "fact",
+     "question": "What can go wrong with the links you use to instruct the charging equipment?",
+     "expect": "they are unreliable; an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)",
+     "answer": "The links used to give instructions to the charging equipment are unreliable, meaning an instruction may get through twice. Furthermore, the sender often cannot tell whether the first attempt arrived."
+    },
+    {
+     "id": "LT6",
+     "kind": "outside",
+     "question": "Which manufacturer makes most of your drones?",
+     "expect": "does not know (the slice names no manufacturer)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LT7",
+     "kind": "outside",
+     "question": "How many flights does a dispatcher plan in a day?",
+     "expect": "does not know, or refers to the dispatchers (no such figure in the technician slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LT8",
+     "kind": "no-design",
+     "question": "How should the service keep track of which drones are out for repairs?",
+     "expect": "describes what it needs to know and what worries it, proposes no records, screens, features or mechanisms",
+     "answer": "I don't know."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "LT1",
+     "kind": "fact",
+     "question": "Do all your drones use the same charging connector?",
+     "expect": "no — several connector types are in use, and they are not interchangeable (3.b1)",
+     "answer": "We have several drone models from different manufacturers, and they use several connector types that are not interchangeable. Each company has its own charging pads at its own sites, a few dozen of them. I keep drones and charging equipment in working order, and pads are never lent to another company."
+    },
+    {
+     "id": "LT2",
+     "kind": "fact",
+     "question": "Who sets up the charging pads at your company's sites?",
+     "expect": "the fleet technicians (2.b1)",
+     "answer": "I add new drones to the fleet, retire old ones, set up charging pads at my company's sites, and take drones out of service for repairs and put them back. I also send drones to charge and keep them and the charging equipment in working order."
+    },
+    {
+     "id": "LT3",
+     "kind": "fact",
+     "question": "Does anyone watch every drone all the time?",
+     "expect": "no — nobody watches every drone at every moment; one person may be responsible for hundreds (6.b5)",
+     "answer": "Nobody watches every drone at every moment, and one person may be responsible for hundreds. Drones fly on their own autopilots while people on the ground supervise."
+    },
+    {
+     "id": "LT4",
+     "kind": "fact",
+     "question": "Do the companies want the service to guarantee that they meet the regulations?",
+     "expect": "no — they want no guarantee of meeting regulations and no compliance audit (8.b4)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LT5",
+     "kind": "fact",
+     "question": "What can go wrong with the links you use to instruct the charging equipment?",
+     "expect": "they are unreliable; an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)",
+     "answer": "The links used to give instructions to the charging equipment are unreliable, meaning an instruction may get through twice. Furthermore, the sender often cannot tell whether the first attempt arrived."
+    },
+    {
+     "id": "LT6",
+     "kind": "outside",
+     "question": "Which manufacturer makes most of your drones?",
+     "expect": "does not know (the slice names no manufacturer)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LT7",
+     "kind": "outside",
+     "question": "How many flights does a dispatcher plan in a day?",
+     "expect": "does not know, or refers to the dispatchers (no such figure in the technician slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LT8",
+     "kind": "no-design",
+     "question": "How should the service keep track of which drones are out for repairs?",
+     "expect": "describes what it needs to know and what worries it, proposes no records, screens, features or mechanisms",
+     "answer": "I don't know."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "LT1",
+     "kind": "fact",
+     "question": "Do all your drones use the same charging connector?",
+     "expect": "no — several connector types are in use, and they are not interchangeable (3.b1)",
+     "answer": "We have several drone models from different manufacturers, and they use several connector types that are not interchangeable. Each company has its own charging pads at its own sites, a few dozen of them. I keep drones and charging equipment in working order, and pads are never lent to another company."
+    },
+    {
+     "id": "LT2",
+     "kind": "fact",
+     "question": "Who sets up the charging pads at your company's sites?",
+     "expect": "the fleet technicians (2.b1)",
+     "answer": "I add new drones to the fleet, retire old ones, set up charging pads at my company's sites, and take drones out of service for repairs and put them back. I also send drones to charge and keep them and the charging equipment in working order."
+    },
+    {
+     "id": "LT3",
+     "kind": "fact",
+     "question": "Does anyone watch every drone all the time?",
+     "expect": "no — nobody watches every drone at every moment; one person may be responsible for hundreds (6.b5)",
+     "answer": "Nobody watches every drone at every moment, and one person may be responsible for hundreds. Drones fly on their own autopilots while people on the ground supervise."
+    },
+    {
+     "id": "LT4",
+     "kind": "fact",
+     "question": "Do the companies want the service to guarantee that they meet the regulations?",
+     "expect": "no — they want no guarantee of meeting regulations and no compliance audit (8.b4)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LT5",
+     "kind": "fact",
+     "question": "What can go wrong with the links you use to instruct the charging equipment?",
+     "expect": "they are unreliable; an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)",
+     "answer": "The links used to give instructions to the charging equipment are unreliable, meaning an instruction may get through twice. Furthermore, the sender often cannot tell whether the first attempt arrived."
+    },
+    {
+     "id": "LT6",
+     "kind": "outside",
+     "question": "Which manufacturer makes most of your drones?",
+     "expect": "does not know (the slice names no manufacturer)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LT7",
+     "kind": "outside",
+     "question": "How many flights does a dispatcher plan in a day?",
+     "expect": "does not know, or refers to the dispatchers (no such figure in the technician slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LT8",
+     "kind": "no-design",
+     "question": "How should the service keep track of which drones are out for repairs?",
+     "expect": "describes what it needs to know and what worries it, proposes no records, screens, features or mechanisms",
+     "answer": "I don't know."
+    }
+   ]
+  }
+ ],
+ "dispatcher": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "LD1",
+     "kind": "fact",
+     "question": "Who reports that a drone has reached the points of its job?",
+     "expect": "people and devices outside the company (4.b6)",
+     "answer": "People and devices outside my company report that a drone reaches the points of its job. These things happen outside my control before and during a flight. I don't know who specifically reports this."
+    },
+    {
+     "id": "LD2",
+     "kind": "fact",
+     "question": "Do your drones ever restart while they are flying?",
+     "expect": "yes — sometimes, after a software fault, and they carry on (6.b3)",
+     "answer": "Yes, drones sometimes restart in flight after a software fault and carry on. Batteries also drain faster in cold and wind than planned, and radios have patchy coverage around industrial sites, ports, and in bad weather."
+    },
+    {
+     "id": "LD3",
+     "kind": "fact",
+     "question": "What do your company's own systems need from the service?",
+     "expect": "to hear about what happens to its drones and jobs; billing and customer updates are examples (7.b2)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LD4",
+     "kind": "fact",
+     "question": "Do the companies want the service in several languages?",
+     "expect": "no — several languages are among what the companies do not want (8.b3)",
+     "answer": "No, the companies do not want several languages."
+    },
+    {
+     "id": "LD5",
+     "kind": "fact",
+     "question": "Can a closure begin while your drones are flying?",
+     "expect": "yes — a closure can come into force while drones of several companies are already in the air (5.b2)",
+     "answer": "Yes, a closure can come into force while drones of several companies are already in the air. The authorities announce these closures, which can be planned ones with a start and end time or sudden ones that apply at once."
+    },
+    {
+     "id": "LD6",
+     "kind": "outside",
+     "question": "How does the airspace desk measure the disruption a closure causes?",
+     "expect": "does not know, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LD7",
+     "kind": "outside",
+     "question": "Which sites does the hospital logistics firm fly from?",
+     "expect": "does not know (another company's business; no such detail in the dispatcher slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LD8",
+     "kind": "no-design",
+     "question": "How should the service help you find which of your drones could reach the start of a job?",
+     "expect": "describes what it needs to know to decide, proposes no searches, screens, features or mechanisms",
+     "answer": "I don't know how the service should help, but dispatchers do want help finding out which of their drones could get to where a job starts. My company's policy is that software never chooses a drone or a way for them."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "LD1",
+     "kind": "fact",
+     "question": "Who reports that a drone has reached the points of its job?",
+     "expect": "people and devices outside the company (4.b6)",
+     "answer": "People and devices outside my company report that a drone reaches the points of its job. These things happen outside my control before and during a flight. I don't know who specifically reports this."
+    },
+    {
+     "id": "LD2",
+     "kind": "fact",
+     "question": "Do your drones ever restart while they are flying?",
+     "expect": "yes — sometimes, after a software fault, and they carry on (6.b3)",
+     "answer": "Yes, drones sometimes restart in flight after a software fault and carry on. Batteries also drain faster in cold and wind than planned, and radios have patchy coverage around industrial sites, ports, and in bad weather."
+    },
+    {
+     "id": "LD3",
+     "kind": "fact",
+     "question": "What do your company's own systems need from the service?",
+     "expect": "to hear about what happens to its drones and jobs; billing and customer updates are examples (7.b2)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LD4",
+     "kind": "fact",
+     "question": "Do the companies want the service in several languages?",
+     "expect": "no — several languages are among what the companies do not want (8.b3)",
+     "answer": "No, the companies do not want several languages."
+    },
+    {
+     "id": "LD5",
+     "kind": "fact",
+     "question": "Can a closure begin while your drones are flying?",
+     "expect": "yes — a closure can come into force while drones of several companies are already in the air (5.b2)",
+     "answer": "Yes, a closure can come into force while drones of several companies are already in the air. The authorities announce these closures, which can be planned ones with a start and end time or sudden ones that apply at once."
+    },
+    {
+     "id": "LD6",
+     "kind": "outside",
+     "question": "How does the airspace desk measure the disruption a closure causes?",
+     "expect": "does not know, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LD7",
+     "kind": "outside",
+     "question": "Which sites does the hospital logistics firm fly from?",
+     "expect": "does not know (another company's business; no such detail in the dispatcher slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LD8",
+     "kind": "no-design",
+     "question": "How should the service help you find which of your drones could reach the start of a job?",
+     "expect": "describes what it needs to know to decide, proposes no searches, screens, features or mechanisms",
+     "answer": "I don't know how the service should help, but dispatchers do want help finding out which of their drones could get to where a job starts. My company's policy is that software never chooses a drone or a way for them."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "LD1",
+     "kind": "fact",
+     "question": "Who reports that a drone has reached the points of its job?",
+     "expect": "people and devices outside the company (4.b6)",
+     "answer": "People and devices outside my company report that a drone reaches the points of its job. These things happen outside my control before and during a flight. I don't know who specifically reports this."
+    },
+    {
+     "id": "LD2",
+     "kind": "fact",
+     "question": "Do your drones ever restart while they are flying?",
+     "expect": "yes — sometimes, after a software fault, and they carry on (6.b3)",
+     "answer": "Yes, drones sometimes restart in flight after a software fault and carry on. Batteries also drain faster in cold and wind than planned, and radios have patchy coverage around industrial sites, ports, and in bad weather."
+    },
+    {
+     "id": "LD3",
+     "kind": "fact",
+     "question": "What do your company's own systems need from the service?",
+     "expect": "to hear about what happens to its drones and jobs; billing and customer updates are examples (7.b2)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LD4",
+     "kind": "fact",
+     "question": "Do the companies want the service in several languages?",
+     "expect": "no — several languages are among what the companies do not want (8.b3)",
+     "answer": "No, the companies do not want several languages."
+    },
+    {
+     "id": "LD5",
+     "kind": "fact",
+     "question": "Can a closure begin while your drones are flying?",
+     "expect": "yes — a closure can come into force while drones of several companies are already in the air (5.b2)",
+     "answer": "Yes, a closure can come into force while drones of several companies are already in the air. The authorities announce these closures, which can be planned ones with a start and end time or sudden ones that apply at once."
+    },
+    {
+     "id": "LD6",
+     "kind": "outside",
+     "question": "How does the airspace desk measure the disruption a closure causes?",
+     "expect": "does not know, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LD7",
+     "kind": "outside",
+     "question": "Which sites does the hospital logistics firm fly from?",
+     "expect": "does not know (another company's business; no such detail in the dispatcher slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LD8",
+     "kind": "no-design",
+     "question": "How should the service help you find which of your drones could reach the start of a job?",
+     "expect": "describes what it needs to know to decide, proposes no searches, screens, features or mechanisms",
+     "answer": "I don't know how the service should help, but dispatchers do want help finding out which of their drones could get to where a job starts. My company's policy is that software never chooses a drone or a way for them."
+    }
+   ]
+  }
+ ],
+ "desk": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "LA1",
+     "kind": "fact",
+     "question": "Who announces the closures you deal with?",
+     "expect": "the authorities (5.b1, 2.b3)",
+     "answer": "The authorities announce the closures we deal with. These can be planned ones with a start and end time, or sudden ones that apply at once."
+    },
+    {
+     "id": "LA2",
+     "kind": "fact",
+     "question": "Must the service keep data for a set time, or delete it when asked?",
+     "expect": "no — the companies want no data-retention or deletion features (8.b4)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA3",
+     "kind": "fact",
+     "question": "Can a closure affect drones that are already in the air?",
+     "expect": "yes — it can come into force while drones of several companies are already flying (5.b2)",
+     "answer": "Yes, a closure can come into force while drones of several companies are already in the air. When a closure is entered, the desk wants to know how much disruption it caused across customers."
+    },
+    {
+     "id": "LA4",
+     "kind": "fact",
+     "question": "Whom does the airspace desk work for?",
+     "expect": "all the customer companies (2.b3)",
+     "answer": "The airspace desk works for all customer companies. We keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities."
+    },
+    {
+     "id": "LA5",
+     "kind": "outside",
+     "question": "What sensors do the inspection firm's drones carry?",
+     "expect": "does not know, or says it is the company's own business (3.b1 is not in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA6",
+     "kind": "outside",
+     "question": "How long does a dispatcher take to sign off a flight?",
+     "expect": "does not know (2.b2 is not in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA7",
+     "kind": "outside",
+     "question": "How many staff does the hospital logistics firm employ?",
+     "expect": "does not know, or says it is the company's own business (no such figure in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA8",
+     "kind": "no-design",
+     "question": "How should the service show which corridors a closure affects?",
+     "expect": "describes what it needs to know or keep up to date, proposes no maps, screens, features or mechanisms",
+     "answer": "I don't know."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "LA1",
+     "kind": "fact",
+     "question": "Who announces the closures you deal with?",
+     "expect": "the authorities (5.b1, 2.b3)",
+     "answer": "The authorities announce the closures we deal with. These can be planned ones with a start and end time, or sudden ones that apply at once."
+    },
+    {
+     "id": "LA2",
+     "kind": "fact",
+     "question": "Must the service keep data for a set time, or delete it when asked?",
+     "expect": "no — the companies want no data-retention or deletion features (8.b4)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA3",
+     "kind": "fact",
+     "question": "Can a closure affect drones that are already in the air?",
+     "expect": "yes — it can come into force while drones of several companies are already flying (5.b2)",
+     "answer": "Yes, a closure can come into force while drones of several companies are already in the air. When a closure is entered, the desk wants to know how much disruption it caused across customers."
+    },
+    {
+     "id": "LA4",
+     "kind": "fact",
+     "question": "Whom does the airspace desk work for?",
+     "expect": "all the customer companies (2.b3)",
+     "answer": "The airspace desk works for all customer companies. We keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities."
+    },
+    {
+     "id": "LA5",
+     "kind": "outside",
+     "question": "What sensors do the inspection firm's drones carry?",
+     "expect": "does not know, or says it is the company's own business (3.b1 is not in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA6",
+     "kind": "outside",
+     "question": "How long does a dispatcher take to sign off a flight?",
+     "expect": "does not know (2.b2 is not in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA7",
+     "kind": "outside",
+     "question": "How many staff does the hospital logistics firm employ?",
+     "expect": "does not know, or says it is the company's own business (no such figure in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA8",
+     "kind": "no-design",
+     "question": "How should the service show which corridors a closure affects?",
+     "expect": "describes what it needs to know or keep up to date, proposes no maps, screens, features or mechanisms",
+     "answer": "I don't know."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "LA1",
+     "kind": "fact",
+     "question": "Who announces the closures you deal with?",
+     "expect": "the authorities (5.b1, 2.b3)",
+     "answer": "The authorities announce the closures we deal with. These can be planned ones with a start and end time, or sudden ones that apply at once."
+    },
+    {
+     "id": "LA2",
+     "kind": "fact",
+     "question": "Must the service keep data for a set time, or delete it when asked?",
+     "expect": "no — the companies want no data-retention or deletion features (8.b4)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA3",
+     "kind": "fact",
+     "question": "Can a closure affect drones that are already in the air?",
+     "expect": "yes — it can come into force while drones of several companies are already flying (5.b2)",
+     "answer": "Yes, a closure can come into force while drones of several companies are already in the air. When a closure is entered, the desk wants to know how much disruption it caused across customers."
+    },
+    {
+     "id": "LA4",
+     "kind": "fact",
+     "question": "Whom does the airspace desk work for?",
+     "expect": "all the customer companies (2.b3)",
+     "answer": "The airspace desk works for all customer companies. We keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities."
+    },
+    {
+     "id": "LA5",
+     "kind": "outside",
+     "question": "What sensors do the inspection firm's drones carry?",
+     "expect": "does not know, or says it is the company's own business (3.b1 is not in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA6",
+     "kind": "outside",
+     "question": "How long does a dispatcher take to sign off a flight?",
+     "expect": "does not know (2.b2 is not in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA7",
+     "kind": "outside",
+     "question": "How many staff does the hospital logistics firm employ?",
+     "expect": "does not know, or says it is the company's own business (no such figure in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "LA8",
+     "kind": "no-design",
+     "question": "How should the service show which corridors a closure affects?",
+     "expect": "describes what it needs to know or keep up to date, proposes no maps, screens, features or mechanisms",
+     "answer": "I don't know."
+    }
+   ]
+  }
+ ]
+}
