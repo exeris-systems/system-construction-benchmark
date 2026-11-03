@@ -439,8 +439,9 @@ def check(persona, prompt, role, notes, session, question, draft):
     sentences = split_sentences(draft)
     system = prompt.replace("{{ROLE}}", ROLES[role]).replace("{{NOTES}}", notes)
     listed = "\n".join(f"{i}. {s}" for i, s in enumerate(sentences, 1))
-    reply = persona.call(f"{session}/check", system, [("user", f"Question: {question}\n\nAnswer:\n{listed}")],
-                         json_reply=True)
+    asked = (f"Question: {question}\n\nThe answer has {len(sentences)} sentences:\n{listed}\n\n"
+             f"Reply with exactly {len(sentences)} entries.")
+    reply = persona.call(f"{session}/check", system, [("user", asked)], json_reply=True)
     items = parse_check(reply, len(sentences))
     if items is None:
         raise RunFailed(f"{session}/check: the reply is not one verdict and source for each of {len(sentences)} sentences")

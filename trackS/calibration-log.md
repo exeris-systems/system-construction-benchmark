@@ -28,6 +28,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-holdout-2` (held-out set 2 `616089c9…`) | `ministral-14b-2512`, temperature 0, seed 1 | `7d40bed8…0c0` (draft 4) | **fail** |
 | `runs/track-s/2026-11-03-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | 68 of 72, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-holdout-3` (held-out set 3 `e3c5ca02…`) | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5, frozen) | **fail** |
+| `runs/track-s/2026-11-03-persona-control-sourced` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `084a1335…` (draft 6) | **run failed** — check reply of the wrong shape |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -222,6 +223,15 @@ HT1 and HD4 were, by what they add rather than what they get right. Every `outsi
 KA5, and every `no-design` failure but KT8, of the earlier held-out runs is absent: the check
 dropped the referrals, guesses and designs. What remains is what the check kept — an added
 consequence or duty inside a sentence that is otherwise in the notes, and one design.
+
+### `2026-11-03-persona-control-sourced` — run failed
+
+Draft 6's first control run, with the check that gives sources. The first check reply copied the
+prompt's example instead of following it: four entries for two sentences, wrapped in a list, and a
+source that began with the example's placeholder text. The run failed on that reply, as the
+procedure sets out. Revised: the check prompt describes the reply in words instead of showing an
+example, and the script states in each request how many sentences there are and asks for exactly
+that many entries.
 
 ## Grader
 

@@ -21,5 +21,4 @@ DROP a sentence when any part of it has no source. In particular, DROP it when a
 
 A sentence that is partly in the notes and partly not is DROPPED. When you are not sure, DROP.
 
-Reply with JSON only, one entry per sentence, in order:
-{"sentences": [{"verdict": "KEEP", "source": "words copied from the notes"}, {"verdict": "KEEP", "source": "DONT_KNOW"}, {"verdict": "DROP", "source": null}]}
+Reply with JSON only: an object with the one key "sentences", whose value is a list with exactly one entry for each numbered sentence, in the same order and no more. Each entry is an object with two keys. "verdict" is "KEEP" or "DROP". "source" is, for a kept sentence, the words themselves copied from the notes and nothing else, or DONT_KNOW, or FEELING; for a dropped sentence it is null.
