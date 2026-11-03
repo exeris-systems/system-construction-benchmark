@@ -144,7 +144,7 @@ def parse_control(text, name=CONTROL_FILE):
 
 # --- providers ------------------------------------------------------------------------------------
 
-def role_problem(role, provider, model, rpm, max_tokens):
+def role_problem(role, provider, model, rpm, max_tokens, temperature=None):
     """Why a role's settings cannot run, or None. Checked before a run directory exists."""
     if provider not in PROVIDERS:
         return f"{role}: unknown provider {provider!r}; known: {sorted(PROVIDERS)}"
@@ -154,6 +154,8 @@ def role_problem(role, provider, model, rpm, max_tokens):
         return f"{role}: calls per minute must be positive, got {rpm}"
     if max_tokens <= 0:
         return f"{role}: max output tokens must be positive, got {max_tokens}"
+    if temperature is not None and temperature < 0:
+        return f"{role}: temperature must not be negative, got {temperature}"
     if not os.environ.get(PROVIDERS[provider]["key"]):
         return f"{role}: {PROVIDERS[provider]['key']} is not set"
     return None
@@ -162,11 +164,12 @@ def role_problem(role, provider, model, rpm, max_tokens):
 class Client:
     """One provider and model for one role, paced below its per-minute limit."""
 
-    def __init__(self, role, provider, model, rpm, max_tokens, recorder):
-        problem = role_problem(role, provider, model, rpm, max_tokens)
+    def __init__(self, role, provider, model, rpm, max_tokens, recorder, temperature=None, seed=None):
+        problem = role_problem(role, provider, model, rpm, max_tokens, temperature)
         if problem:
             raise RunFailed(problem)
         self.role, self.provider, self.model = role, provider, model
+        self.temperature, self.seed = temperature, seed
         self.spec = PROVIDERS[provider]
         self.interval, self.max_tokens, self.recorder = 60 / rpm, max_tokens, recorder
         self.key = os.environ[self.spec["key"]]
@@ -207,11 +210,14 @@ class Client:
         if self.spec["kind"] == "openai":
             messages = [{"role": "system", "content": system}]
             messages += [{"role": "assistant" if r == "model" else "user", "content": t} for r, t in turns]
-            return {"model": self.model, "messages": messages, "max_tokens": self.max_tokens}
+            body = {"model": self.model, "messages": messages, "max_tokens": self.max_tokens}
+            sampling = {"temperature": self.temperature, "random_seed": self.seed}
+            return {**body, **{k: v for k, v in sampling.items() if v is not None}}
+        config = {"maxOutputTokens": self.max_tokens, "temperature": self.temperature, "seed": self.seed}
         return {
             "systemInstruction": {"parts": [{"text": system}]},
             "contents": [{"role": r, "parts": [{"text": t}]} for r, t in turns],
-            "generationConfig": {"maxOutputTokens": self.max_tokens},
+            "generationConfig": {k: v for k, v in config.items() if v is not None},
         }
 
     def _url(self):
@@ -222,7 +228,11 @@ class Client:
     def _parse(self, payload):
         if self.spec["kind"] == "openai":
             choice = (payload.get("choices") or [{}])[0]
-            return ((choice.get("message") or {}).get("content") or "", choice.get("finish_reason"),
+            content = (choice.get("message") or {}).get("content") or ""
+            # A reasoning model answers in chunks; only its text chunks are the answer, never its thinking.
+            if isinstance(content, list):
+                content = "".join(c.get("text", "") for c in content if isinstance(c, dict) and c.get("type") == "text")
+            return (content, choice.get("finish_reason"),
                     payload.get("id"), payload.get("model"), payload.get("usage"))
         candidate = (payload.get("candidates") or [{}])[0]
         text = "".join(p.get("text", "") for p in (candidate.get("content") or {}).get("parts", []))
@@ -265,8 +275,9 @@ class Client:
         raise RunFailed(f"{session}: no response")
 
     def call(self, session, system, turns):
-        # Temperature and similar settings are never sent: the provider default is the one value
-        # nobody can suspect of being chosen.
+        # A subject runs on the provider's defaults, the one setting nobody can suspect of being chosen.
+        # An instrument's temperature and seed are fixed by the procedure and sent, so its answers do
+        # not depend on a default the provider may change.
         body = json.dumps(self._body(system, turns), ensure_ascii=False, indent=1).encode()
         number = self.recorder.request(body)
         headers, payload = self._send(session, number, body)
@@ -317,7 +328,7 @@ def persona_control(args, files, notes, out, run):
     control = parse_control(files[set_file], set_file)
     recorder = Recorder(out)
     persona = Client("persona", args.persona_provider, args.persona_model, args.persona_rpm,
-                     args.persona_max_tokens, recorder)
+                     args.persona_max_tokens, recorder, args.persona_temperature, args.persona_seed)
     run["instruments"] = {"persona": {"provider": persona.provider, "model": persona.model,
                                       "description": persona.describe()}}
     transcript = {}
@@ -341,6 +352,8 @@ def main():
     parser.add_argument("--persona-model", required=True, help="exact model identifier")
     parser.add_argument("--persona-rpm", type=float, default=30)
     parser.add_argument("--persona-max-tokens", type=int, default=2048)
+    parser.add_argument("--persona-temperature", type=float, help="sent when given; else the provider default")
+    parser.add_argument("--persona-seed", type=int, help="sent when given; else none")
     parser.add_argument("--repetitions", type=int, default=3)
     parser.add_argument("--out", type=pathlib.Path, help="output directory (must not exist)")
     parser.add_argument("--dry-run", action="store_true", help="check inputs and print hashes; call nothing")
@@ -376,7 +389,7 @@ def main():
     # Everything that can stop the run before its first call is checked before its directory exists,
     # so a kept run directory always holds a run that started.
     problem = role_problem("persona", args.persona_provider, args.persona_model, args.persona_rpm,
-                           args.persona_max_tokens)
+                           args.persona_max_tokens, args.persona_temperature)
     if problem:
         sys.exit(problem)
     if args.repetitions <= 0:

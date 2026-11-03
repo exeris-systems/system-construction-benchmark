@@ -93,6 +93,24 @@ class ClientTest(unittest.TestCase):
         self.assertTrue((self.out / "requests" / "0001.json").exists())
         self.assertTrue((self.out / "responses" / "0001.json").exists())
 
+    def test_reasoning_chunks_yield_only_the_text(self):
+        reply = answer([{"type": "thinking", "thinking": [{"type": "text", "text": "hidden"}]},
+                        {"type": "text", "text": "the answer"}], "stop")
+        self.replies = [Reply(reply, headers())]
+        self.assertEqual(self.client.call("s", "system", [("user", "q")]), "the answer")
+
+    def test_sampling_is_sent_only_when_set(self):
+        sent = []
+        self.replies = [Reply(answer("a", "stop"), headers()), Reply(answer("b", "stop"), headers())]
+        next_reply = self._next
+        ts.urllib.request.urlopen = lambda request, timeout=0: (sent.append(json.loads(request.data)), next_reply(request))[1]
+        self.client.call("s", "system", [("user", "q")])
+        fixed = ts.Client("persona", "mistral", "m", 60_000, 100, self.recorder, temperature=0.0, seed=7)
+        fixed.call("s", "system", [("user", "q")])
+        self.assertNotIn("temperature", sent[0])
+        self.assertNotIn("random_seed", sent[0])
+        self.assertEqual((sent[1]["temperature"], sent[1]["random_seed"]), (0.0, 7))
+
     def test_non_natural_finish_fails_the_run(self):
         self.replies = [Reply(answer("cut", "length"), headers())]
         with self.assertRaises(ts.RunFailed):
@@ -167,7 +185,8 @@ class ModeTest(unittest.TestCase):
         for mode, set_file in ts.QUESTION_SETS.items():
             out = pathlib.Path(tempfile.mkdtemp())
             args = argparse.Namespace(mode=mode, persona_provider="mistral", persona_model="m",
-                                      persona_rpm=60_000, persona_max_tokens=100, repetitions=1)
+                                      persona_rpm=60_000, persona_max_tokens=100, repetitions=1,
+                                      persona_temperature=0.0, persona_seed=1)
             files = {name: (HERE / name).read_text() for name in ("persona-prompt.md", set_file)}
             ts.persona_control(args, files, {role: "notes" for role in ts.ROLES}, out, {})
             written = sorted(p.name for p in out.glob("*.json"))
@@ -236,7 +255,8 @@ class InputTest(unittest.TestCase):
                  ["--persona-model", "m", "--persona-rpm", "-5"],
                  ["--persona-model", "mistral-small-latest"],
                  ["--persona-model", "m", "--persona-provider", "nobody"],
-                 ["--persona-model", "m", "--repetitions", "0"]]
+                 ["--persona-model", "m", "--repetitions", "0"],
+                 ["--persona-model", "m", "--persona-temperature", "-0.1"]]
         for i, extra in enumerate(cases):
             out = HERE.parent / "runs" / "track-s" / f"test-invalid-settings-{i}-should-not-exist"
             result = subprocess.run([sys.executable, "-I", str(SCRIPT), "persona-control", *extra, "--out", str(out)],
