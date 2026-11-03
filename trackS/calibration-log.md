@@ -37,6 +37,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-control-flash-lite-check`, graded in `runs/track-s/2026-11-03-grade-persona-control-flash-lite-check` | `gemini-3.5-flash-lite`, temperature 0, seed 1, sourced check | `a097ba45…`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-holdout-4` (held-out set 4 `377c6e99…`), graded in `runs/track-s/2026-11-03-grade-persona-holdout-4` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `a097ba45…` (draft 6, frozen) | **fail** — 63 of 72 by the grader |
 | `runs/track-s/2026-11-03-persona-control-8e49283b`, graded in `runs/track-s/2026-11-03-grade-persona-control-8e49283b` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `8e49283b…` (draft 7) | 69 of 72 by the grader, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-holdout-5` (held-out set 5 `08aeb8cb…`), graded in `runs/track-s/2026-11-03-grade-persona-holdout-5` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `8e49283b…` (draft 7, frozen) | **pass** — 69 of 72 by the grader |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -350,6 +351,21 @@ runs completed without error, every response `STOP`.
 
 No answer contradicts its slice. T3 is answered in all three repetitions with "Pads are never lent
 to another company.", and no answer speaks for another company. D6 fails as it did under draft 6.
+
+### `2026-11-03-persona-holdout-5` — pass, 69 of 72 by the grader
+
+Draft 7's deciding run: the fifth held-out set, run once with the persona frozen, graded by the
+calibrated grader. Both runs completed without error, every response `STOP`.
+
+| Kind | Answers passing | Failing answers, with the grader's reason |
+| --- | --- | --- |
+| `fact` (14 questions) | 39 of 42 | MT2 ×3: "I don't know.", where the notes list billing among what the companies do not want (8.b11). |
+| `outside` (7 questions) | 21 of 21 | |
+| `no-design` (3 questions) | 9 of 9 | |
+| total | 69 of 72 | |
+
+Four above the threshold of 65, with no `fact` answer contradicting its slice; the grader's verdict
+is pass. The persona of draft 7 is calibrated.
 
 ## Grader
 
