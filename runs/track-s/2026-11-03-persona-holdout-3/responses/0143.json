@@ -1,0 +1,29 @@
+{
+ "id": "8dfbf12fefeb4703abf03449c01a8e60",
+ "created": 1793704273,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1345,
+  "total_tokens": 1380,
+  "completion_tokens": 35,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I need to enter the sudden closure into the shared airspace picture right away. Then I check how many drones from all companies are affected and how much disruption it causes."
+   }
+  }
+ ]
+}

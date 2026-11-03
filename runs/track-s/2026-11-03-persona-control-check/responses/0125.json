@@ -1,0 +1,29 @@
+{
+ "id": "b99532390c0c48a1b5681029d823fa97",
+ "created": 1793703488,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1778,
+  "total_tokens": 1804,
+  "completion_tokens": 26,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company would have to look at all the companies’ flights to see how many were affected."
+   }
+  }
+ ]
+}

@@ -6,6 +6,10 @@ Modes:
                     conversation per role, several times, and record every exchange
   persona-holdout   the same, with the held-out questions (persona-holdout.yaml)
   persona-holdout-2 the same, with the second held-out set (persona-holdout-2.yaml)
+  persona-holdout-3 the same, with the third held-out set (persona-holdout-3.yaml)
+
+With --persona-check, each answer is checked sentence by sentence against the persona's notes
+(persona-check-prompt.md) by the same model, and only the sentences it keeps are the answer.
 
 Each role names a provider and a model. Every request and response is written to the output
 directory verbatim, with every response header that reports a rate limit and the body of every 429,
@@ -32,9 +36,12 @@ HERE = pathlib.Path(__file__).resolve().parent
 RUNS = HERE.parent / "runs" / "track-s"
 CONTROL_FILE = "persona-control.yaml"
 HOLDOUT_FILE = "persona-holdout.yaml"
+CHECK_FILE = "persona-check-prompt.md"
+# What the persona says when the check drops every sentence of its answer.
+NOTHING_LEFT = "I don't know."
 # Each persona mode asks the questions of one set file and writes its answers under the mode's name.
 QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FILE,
-                 "persona-holdout-2": "persona-holdout-2.yaml"}
+                 "persona-holdout-2": "persona-holdout-2.yaml", "persona-holdout-3": "persona-holdout-3.yaml"}
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
 
@@ -107,6 +114,26 @@ def parse_slices(text):
         if m:
             slices[m.group(1)] = [r.strip() for r in m.group(2).split(",") if r.strip()]
     return slices, interviewer
+
+
+def split_sentences(text):
+    """The answer's sentences, in order: each non-empty line, split after a full stop, ! or ?."""
+    sentences = []
+    for line in text.splitlines():
+        sentences += [s for s in re.split(r"(?<=[.!?])\s+", line.strip()) if s]
+    return sentences
+
+
+def parse_verdicts(text, count):
+    """The check's KEEP or DROP for each of count sentences, or None if the reply is not exactly that."""
+    try:
+        verdicts = json.loads(text).get("verdicts")
+    except (ValueError, AttributeError):
+        return None
+    if not isinstance(verdicts, list) or len(verdicts) != count:
+        return None
+    verdicts = [v.strip().upper() if isinstance(v, str) else v for v in verdicts]
+    return verdicts if all(v in ("KEEP", "DROP") for v in verdicts) else None
 
 
 def render(units, ids):
@@ -274,11 +301,16 @@ class Client:
             time.sleep(min(5 * 2 ** (attempt - 1), 300))
         raise RunFailed(f"{session}: no response")
 
-    def call(self, session, system, turns):
+    def call(self, session, system, turns, json_reply=False):
         # A subject runs on the provider's defaults, the one setting nobody can suspect of being chosen.
         # An instrument's temperature and seed are fixed by the procedure and sent, so its answers do
         # not depend on a default the provider may change.
-        body = json.dumps(self._body(system, turns), ensure_ascii=False, indent=1).encode()
+        request = self._body(system, turns)
+        if json_reply and self.spec["kind"] == "openai":
+            request["response_format"] = {"type": "json_object"}
+        elif json_reply:
+            request["generationConfig"]["responseMimeType"] = "application/json"
+        body = json.dumps(request, ensure_ascii=False, indent=1).encode()
         number = self.recorder.request(body)
         headers, payload = self._send(session, number, body)
         self.recorder.response(number, payload)
@@ -337,12 +369,32 @@ def persona_control(args, files, notes, out, run):
             system = files["persona-prompt.md"].replace("{{ROLE}}", ROLES[role]).replace("{{NOTES}}", notes[role])
             turns, answers = [], []
             for q in questions:
+                session = f"{role}/{repetition}/{q['id']}"
                 turns.append(("user", q["question"]))
-                answer = persona.call(f"{role}/{repetition}/{q['id']}", system, turns)
-                turns.append(("model", answer))
-                answers.append({**q, "answer": answer})
+                answer = persona.call(session, system, turns)
+                record = {**q, "answer": answer}
+                if args.persona_check:
+                    record = {**q, **check(persona, files[CHECK_FILE], role, notes[role], session, q["question"], answer)}
+                # The persona's history holds the answers the subject would hear, checked or not.
+                turns.append(("model", record["answer"]))
+                answers.append(record)
             transcript.setdefault(role, []).append({"repetition": repetition, "answers": answers})
     (out / f"{args.mode}.json").write_text(json.dumps(transcript, ensure_ascii=False, indent=1) + "\n")
+
+
+def check(persona, prompt, role, notes, session, question, draft):
+    """Keep only the sentences of the draft that the check finds in the notes; it never rewrites one."""
+    sentences = split_sentences(draft)
+    system = prompt.replace("{{ROLE}}", ROLES[role]).replace("{{NOTES}}", notes)
+    listed = "\n".join(f"{i}. {s}" for i, s in enumerate(sentences, 1))
+    reply = persona.call(f"{session}/check", system, [("user", f"Question: {question}\n\nAnswer:\n{listed}")],
+                         json_reply=True)
+    verdicts = parse_verdicts(reply, len(sentences))
+    if verdicts is None:
+        raise RunFailed(f"{session}/check: the reply is not one KEEP or DROP for each of {len(sentences)} sentences")
+    kept = [s for s, v in zip(sentences, verdicts) if v == "KEEP"]
+    return {"draft": draft, "sentences": sentences, "verdicts": verdicts,
+            "answer": " ".join(kept) if kept else NOTHING_LEFT}
 
 
 def main():
@@ -354,6 +406,7 @@ def main():
     parser.add_argument("--persona-max-tokens", type=int, default=2048)
     parser.add_argument("--persona-temperature", type=float, help="sent when given; else the provider default")
     parser.add_argument("--persona-seed", type=int, help="sent when given; else none")
+    parser.add_argument("--persona-check", action="store_true", help=f"check each answer against the notes ({CHECK_FILE})")
     parser.add_argument("--repetitions", type=int, default=3)
     parser.add_argument("--out", type=pathlib.Path, help="output directory (must not exist)")
     parser.add_argument("--dry-run", action="store_true", help="check inputs and print hashes; call nothing")
@@ -361,6 +414,8 @@ def main():
 
     set_file = QUESTION_SETS[args.mode]
     names = ["world-brief.md", "brief-slices.yaml", "persona-prompt.md", set_file]
+    if args.persona_check:
+        names.append(CHECK_FILE)
     files = {name: (HERE / name).read_text() for name in names}
     files["run-track-s.py"] = pathlib.Path(__file__).read_text()
 
@@ -378,7 +433,7 @@ def main():
     if args.dry_run:
         print(json.dumps({"inputSha256": hashes,
                           "controlQuestions": {r: len(q) for r, q in control.items()},
-                          "calls": sum(len(q) for q in control.values()) * args.repetitions}, indent=2))
+                          "calls": sum(len(q) for q in control.values()) * args.repetitions * (2 if args.persona_check else 1)}, indent=2))
         return
     if not args.out:
         sys.exit("--out is required unless --dry-run")

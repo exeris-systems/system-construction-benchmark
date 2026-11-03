@@ -1,0 +1,29 @@
+{
+ "id": "c830194675cc472791a2fca10555c23d",
+ "created": 1793704146,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1180,
+  "total_tokens": 1208,
+  "completion_tokens": 28,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the companies do not want backups or high availability—the service runs on a single server, and they accept occasional interruptions."
+   }
+  }
+ ]
+}

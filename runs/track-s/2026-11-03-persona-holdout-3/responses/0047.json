@@ -1,0 +1,29 @@
+{
+ "id": "960bb47d49eb48f9b82b5b6228fc4bd3",
+ "created": 1793704069,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1385,
+  "total_tokens": 1434,
+  "completion_tokens": 49,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "When the authorities announce a sudden closure, the service must update the shared airspace data immediately to reflect the new restriction. I need to know how much disruption it causes across all customers, so the service should log the change and its impact."
+   }
+  }
+ ]
+}

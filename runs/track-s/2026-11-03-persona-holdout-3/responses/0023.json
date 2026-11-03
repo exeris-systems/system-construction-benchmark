@@ -1,0 +1,29 @@
+{
+ "id": "18d0bc087d5f4112bec724c943ba7954",
+ "created": 1793704020,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1647,
+  "total_tokens": 1693,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the companies do not want the service to plan routes for them. The dispatchers are responsible for choosing the way a drone flies, and the companies’ policy is that software never picks a route or drone for them."
+   }
+  }
+ ]
+}

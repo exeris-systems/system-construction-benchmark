@@ -1,0 +1,29 @@
+{
+ "id": "b05e2bc48ca94d7aba82fa65ddc7d02d",
+ "created": 1793703264,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1607,
+  "total_tokens": 1664,
+  "completion_tokens": 57,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I just need the service to let me add drones to the fleet, take them out for repairs, send them to charge, and put them back in service. It should also let me see which drones are available and which pads are free at our sites."
+   }
+  }
+ ]
+}

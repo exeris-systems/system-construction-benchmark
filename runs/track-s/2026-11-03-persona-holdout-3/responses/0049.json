@@ -1,0 +1,29 @@
+{
+ "id": "f07a1105fb294befa1ed92088efe8d24",
+ "created": 1793704073,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1290,
+  "total_tokens": 1346,
+  "completion_tokens": 56,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Yes, I can take a drone out of service for repairs or maintenance and later put it back in service when it’s fixed. I do this by updating the system to mark the drone as unavailable for jobs and then re-enabling it once it’s ready to fly again."
+   }
+  }
+ ]
+}

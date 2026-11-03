@@ -1,0 +1,29 @@
+{
+ "id": "92ec87235c444a9abc1a04f2a717433d",
+ "created": 1793704178,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1386,
+  "total_tokens": 1419,
+  "completion_tokens": 33,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The drones fly on their own autopilots—I don’t steer them with a stick. I just monitor their status and make sure they’re ready for jobs."
+   }
+  }
+ ]
+}

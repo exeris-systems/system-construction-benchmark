@@ -30,10 +30,16 @@ Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute
 3. Commit the output directory unedited, and record the verdict against the criteria of
    [`procedure.md`](procedure.md) in [`calibration-log.md`](calibration-log.md).
 
-4. With the persona prompt and model frozen, run the current draft's held-out set once, the same
-   way; its verdict decides. For draft 4 that is `persona-holdout-2` on `ministral-14b-2512` at the
-   persona's temperature and seed, at 25 requests per minute for the model's limit of 30.
+   For draft 5, every run takes the persona's model, temperature, seed and check pass, and makes 144
+   calls:
 
    ```sh
-   python3 -I trackS/run-track-s.py persona-holdout-2 --persona-model ministral-14b-2512 --persona-temperature 0 --persona-seed 1 --persona-rpm 25 --out runs/track-s/YYYY-MM-DD-persona-holdout-2
+   python3 -I trackS/run-track-s.py persona-control --persona-model ministral-8b-2512 --persona-temperature 0 --persona-seed 1 --persona-check --out runs/track-s/YYYY-MM-DD-persona-control-check
+   ```
+
+4. With the persona's prompts and model frozen, run the current draft's held-out set once, the same
+   way; its verdict decides. For draft 5 that is `persona-holdout-3`.
+
+   ```sh
+   python3 -I trackS/run-track-s.py persona-holdout-3 --persona-model ministral-8b-2512 --persona-temperature 0 --persona-seed 1 --persona-check --out runs/track-s/YYYY-MM-DD-persona-holdout-3
    ```

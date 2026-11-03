@@ -1,0 +1,29 @@
+{
+ "id": "29f280a46a1a45ca9d8f6fb95aca23d8",
+ "created": 1793704008,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1474,
+  "total_tokens": 1553,
+  "completion_tokens": 79,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Before a flight leaves, I have to decide which drone can do the job and sign off on the flight plan. I need to make sure the drone’s battery, sensors, and charging connector match what the job requires, and that the drone isn’t already booked or stuck somewhere else. I also check that the airspace is clear and that no closures or restrictions would block the route."
+   }
+  }
+ ]
+}

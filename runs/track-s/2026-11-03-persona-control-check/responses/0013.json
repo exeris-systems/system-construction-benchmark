@@ -1,0 +1,29 @@
+{
+ "id": "1fa009567364471e8548ae4571456924",
+ "created": 1793703260,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1589,
+  "total_tokens": 1622,
+  "completion_tokens": 33,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform doesn’t pick drones or plan routes—I just make sure the drones and charging equipment are ready when the dispatchers need them."
+   }
+  }
+ ]
+}

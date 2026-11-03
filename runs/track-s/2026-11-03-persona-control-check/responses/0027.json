@@ -1,0 +1,29 @@
+{
+ "id": "66e96ab09d68411e9b7a95ae64f23742",
+ "created": 1793703288,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1743,
+  "total_tokens": 1771,
+  "completion_tokens": 28,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company handles the charging equipment, and I don’t manage the technical details of the drones or pads."
+   }
+  }
+ ]
+}

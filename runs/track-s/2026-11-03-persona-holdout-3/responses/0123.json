@@ -1,0 +1,29 @@
+{
+ "id": "3556527feada4060a49f0e75b0624da4",
+ "created": 1793704231,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1711,
+  "total_tokens": 1739,
+  "completion_tokens": 28,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know who the infrastructure inspection firm’s clients are. I only know that it is one of the companies using the service."
+   }
+  }
+ ]
+}

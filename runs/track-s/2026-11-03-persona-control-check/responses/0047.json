@@ -1,0 +1,29 @@
+{
+ "id": "7d30f5dcfbfd40f3963674a97c6f786d",
+ "created": 1793703328,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1372,
+  "total_tokens": 1401,
+  "completion_tokens": 29,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only work with the airspace desk’s shared service, which handles closures and updates them for all customers."
+   }
+  }
+ ]
+}

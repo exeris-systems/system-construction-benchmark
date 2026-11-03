@@ -1,0 +1,29 @@
+{
+ "id": "33283a1df65d46d1a03e8a3da49650ad",
+ "created": 1793704197,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1558,
+  "total_tokens": 1572,
+  "completion_tokens": 14,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk would know that."
+   }
+  }
+ ]
+}

@@ -458,3 +458,13 @@ The persona also stops running on the provider's defaults. Mistral documents its
 `trackS/persona-holdout-2.yaml` holds 24 questions with the same mix of kinds, sharing none with the control set or the first held-out set, which has been seen. It is run once with the draft 4 prompt and model, under the threshold of D-50. The provider reports 937,500 tokens and 30 requests per minute for this model, against 625,000 tokens and 188 requests for `ministral-8b-2512`; the subject runs are scheduled from the limits recorded in its calibration.
 
 Impact: `trackS/procedure.md`, `trackS/persona-holdout-2.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `trackS/calibration-log.md`.
+
+### D-52 — The persona checks its own answers against its notes
+
+Draft 5 of the Track S procedure gives the persona a second pass. The frozen draft 3 prompt failed both held-out sets on two models: `ministral-8b-2512` passed 57 of 72 and `ministral-14b-2512` 43 of 72 (`trackS/calibration-log.md`). In both, the failing answers add to what the notes give — a referral, a rule, a consequence — or describe what the service should do; the larger model added more. Asked to answer, the model does not hold itself to the notes. Asked whether a given sentence is in the notes, it has a narrower task.
+
+The persona model returns to `ministral-8b-2512`, the model with the highest limits, at temperature 0 and random seed 1 (D-51), for both passes; D-48 is amended for the persona again. The answering pass is unchanged (`persona-prompt.md` at `7d40bed8…0c0`). The check pass (`trackS/persona-check-prompt.md`) receives the persona's slice, the question and the answer's numbered sentences, and returns KEEP or DROP for each; it cannot add or reword. The answer is the kept sentences, and "I don't know." when none is kept. The check doubles the calls of a run, to 144 for a calibration, within the model's limit of 188 requests per minute.
+
+The check prompt is new, so it may be revised against the control set like the persona prompt, each run recorded. With both prompts frozen, `trackS/persona-holdout-3.yaml` — 24 questions with the same mix of kinds, sharing none with the earlier sets — is run once and decides, under the threshold of D-50.
+
+Impact: `trackS/procedure.md`, `trackS/persona-check-prompt.md`, `trackS/persona-holdout-3.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `preregistration/frozen-sets.md`.

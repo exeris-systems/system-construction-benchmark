@@ -1,0 +1,29 @@
+{
+ "id": "f6c8aaf6f2bb4f679ff98f51935d65c7",
+ "created": 1793704004,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1532,
+  "total_tokens": 1557,
+  "completion_tokens": 25,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service should tell me that a charging pad is offline or not responding, so I can check it or replace it."
+   }
+  }
+ ]
+}

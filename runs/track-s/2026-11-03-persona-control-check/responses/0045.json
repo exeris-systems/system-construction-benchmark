@@ -1,0 +1,29 @@
+{
+ "id": "55cea6879e9940d49fd7ab77b120f9f6",
+ "created": 1793703324,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1356,
+  "total_tokens": 1386,
+  "completion_tokens": 30,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only handle the shared airspace data and closures, not the drones’ individual reports or how companies receive them."
+   }
+  }
+ ]
+}

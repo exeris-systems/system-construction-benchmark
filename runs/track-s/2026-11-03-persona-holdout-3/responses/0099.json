@@ -1,0 +1,29 @@
+{
+ "id": "dab7d8ebbeeb434eb049a6ff3f977500",
+ "created": 1793704174,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1323,
+  "total_tokens": 1373,
+  "completion_tokens": 50,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Each drone has a **home site**, which is where it’s normally based and where it’s expected to return after jobs. I don’t move drones between companies’ sites—I only work with the drones and charging pads assigned to my own company."
+   }
+  }
+ ]
+}

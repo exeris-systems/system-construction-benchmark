@@ -1,0 +1,29 @@
+{
+ "id": "eeaa4390341e4d3c8bcda9f77c74440a",
+ "created": 1793704213,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1585,
+  "total_tokens": 1620,
+  "completion_tokens": 35,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Radio coverage is worst around ports, industrial sites, and in bad weather. Reports from drones can arrive late, out of order, or not at all in those areas."
+   }
+  }
+ ]
+}

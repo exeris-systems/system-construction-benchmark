@@ -1,0 +1,29 @@
+{
+ "id": "d2113ebc4a07422aa76f57c2dce1c813",
+ "created": 1793703992,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1453,
+  "total_tokens": 1481,
+  "completion_tokens": 28,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the companies don’t want alerts sent by e-mail, text, or phone—they handle reaching staff through their own systems."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "21fefc86659f47e8958269ce35de127c",
+ "created": 1793704209,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1540,
+  "total_tokens": 1574,
+  "completion_tokens": 34,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "An inspection drone visits its points in the order listed in the job’s instructions. After it finishes all the points, it returns to the site where the inspection started."
+   }
+  }
+ ]
+}

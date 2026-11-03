@@ -1,0 +1,29 @@
+{
+ "id": "73b1ae3051da48e9b2354221ac6e1db4",
+ "created": 1793704158,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1267,
+  "total_tokens": 1294,
+  "completion_tokens": 27,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk only tracks airspace information, not the physical infrastructure like charging pads or landing spots."
+   }
+  }
+ ]
+}

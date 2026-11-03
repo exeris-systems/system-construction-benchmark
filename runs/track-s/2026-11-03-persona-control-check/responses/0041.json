@@ -1,0 +1,29 @@
+{
+ "id": "f9d1eb8c03d94fc3bcee3cf3a5dbbc49",
+ "created": 1793703316,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1282,
+  "total_tokens": 1319,
+  "completion_tokens": 37,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only track the shared airspace information—like corridors, zones, and closures—that applies to all customers, not how many drones each company operates."
+   }
+  }
+ ]
+}

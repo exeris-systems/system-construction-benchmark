@@ -1,0 +1,29 @@
+{
+ "id": "8637ac027c0441dc8bab192df45cda21",
+ "created": 1793703980,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1323,
+  "total_tokens": 1353,
+  "completion_tokens": 30,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Each drone has a specific **home site** assigned to it. That’s where it’s usually based and where it returns when not in use."
+   }
+  }
+ ]
+}
