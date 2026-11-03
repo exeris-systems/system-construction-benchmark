@@ -27,6 +27,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-10-22-persona-holdout-2` (held-out set 2 `616089c9…`) | `mistral-small-2603` | `7d40bed8…0c0` (draft 4) | **run failed** — no answer |
 | `runs/track-s/2026-11-03-persona-holdout-2` (held-out set 2 `616089c9…`) | `ministral-14b-2512`, temperature 0, seed 1 | `7d40bed8…0c0` (draft 4) | **fail** |
 | `runs/track-s/2026-11-03-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | 68 of 72, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-holdout-3` (held-out set 3 `e3c5ca02…`) | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5, frozen) | **fail** |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -200,3 +201,24 @@ the slice supports: the places where radio coverage is patchy (T5), the connecto
 several and not interchangeable (D6), and in D5 the closure coming into force while drones fly,
 leaving answers that are vague but not wrong. It keeps what it is told to keep, so a sentence that
 says the speaker does not know passes even when it misplaces who runs the drones (T1).
+
+### `2026-11-03-persona-holdout-3` — fail
+
+Draft 5's deciding run: the third held-out set, run once with both prompts frozen. 144 calls, no
+error or retry, every answer and check finished with `stop`, and every check reply had one verdict
+per sentence. The check dropped 45 of 152 sentences. Graded on the answers after the check, under
+the same rules as every earlier run.
+
+| Kind | Answers passing | Failing answers |
+| --- | --- | --- |
+| `fact` (14 questions) | 38 of 42 | KT2 ×2: a drone returns to its home site when not in use or after jobs. KD1 ×2: adds checks the dispatcher makes before a flight — battery, sensors, connector, the load being ready — that the slice does not give. |
+| `outside` (7 questions) | 19 of 21 | KA5 ×2: "I don't know", then says the platform company does not track or manage individual drones; the slice says only that the desk has no business looking into one company's operations. |
+| `no-design` (3 questions) | 7 of 9 | KT8 ×2: "the service should tell me that a charging pad is offline", kept by the check against its own rule. |
+| total | 64 of 72 | |
+
+One answer below the threshold of 65; no `fact` answer contradicts its slice. The verdict rests on
+judgement in a few answers, and they were graded as their like was in earlier runs: KT2 and KD1 as
+HT1 and HD4 were, by what they add rather than what they get right. Every `outside` failure but
+KA5, and every `no-design` failure but KT8, of the earlier held-out runs is absent: the check
+dropped the referrals, guesses and designs. What remains is what the check kept — an added
+consequence or duty inside a sentence that is otherwise in the notes, and one design.
