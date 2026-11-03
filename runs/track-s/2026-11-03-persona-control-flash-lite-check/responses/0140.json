@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"DONT_KNOW\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TA/1aaZD7AYROiZuQ3BZTlEsD1mjm6Qi2HQu6zuRIvfjb4GGiFTb3VgP0WwWBfDRY+XjwIdSw2tRkSUpp+2xmDQpfEcDEiUVYoHYAj9/gXv7MNxQhjx9zeOM="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1178,
+  "candidatesTokenCount": 38,
+  "totalTokenCount": 1216,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1178
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "2erpapeKGION3boPtevl8AY"
+}

@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"Drones sometimes restart in flight after a software fault and carry on.\"\n    },\n    {\n      \"verdict\": \"DROP\",\n      \"source\": null\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TUQsLaA48Yo3NEYUzioUGj7sw6kmRGBWMb1PGSQw9B0fWeAIB8gbPmvoOXshRIJty3dUI1006i31yUADgfmaZB71R/ock5O+m42UqWr057Yd95u54wkY6ilo="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1453,
+  "candidatesTokenCount": 68,
+  "totalTokenCount": 1521,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1453
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "Aerpaua9H8uQ3boPvOejsAQ"
+}

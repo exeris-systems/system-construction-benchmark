@@ -1,0 +1,58 @@
+{
+  "track": "S",
+  "mode": "persona-control",
+  "status": "completed",
+  "started": "2026-11-03T13:54:30.693143+00:00",
+  "parameters": {
+    "mode": "persona-control",
+    "persona_provider": "gemini",
+    "persona_model": "gemini-3.5-flash-lite",
+    "persona_rpm": 10.0,
+    "persona_max_tokens": 8192,
+    "persona_temperature": 0.0,
+    "persona_seed": 1,
+    "persona_check": true,
+    "grader_provider": "mistral",
+    "grader_model": null,
+    "grader_rpm": 20,
+    "grader_max_tokens": 1024,
+    "grader_temperature": null,
+    "grader_seed": null,
+    "graded": null,
+    "repetitions": 3
+  },
+  "inputSha256": {
+    "world-brief.md": "dfb0de323972b2ead2811e441914d27f6fa1f98410e7c433010e8dcd057f130e",
+    "brief-slices.yaml": "7c417a65224604ea834574e457e0b285dafb79b476821cb3315b58eed8169125",
+    "persona-prompt.md": "a097ba453edb6ba9e711cbea0cb49bd12600adcf96b6e8cc2b33bdad60d83460",
+    "persona-control.yaml": "1f9e8364ebd9410cdac17b844d275de082e5ca6cfcc8edd121ddcb3df8229089",
+    "persona-check-prompt.md": "d660c0faba2c7f92c863c1bd15585353365c6a2a8b92392f938e36b8dd928cdb",
+    "run-track-s.py": "6465c46bbfd82701c45c5505121861b85199fd97e79edb6a2089406a95908ffd"
+  },
+  "instruments": {
+    "persona": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "description": {
+        "name": "models/gemini-3.5-flash-lite",
+        "version": "3.5-flash-lite-07-2026",
+        "displayName": "Gemini 3.5 Flash Lite",
+        "description": "Gemini 3.5 Flash Lite",
+        "inputTokenLimit": 1048576,
+        "outputTokenLimit": 65536,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "createCachedContent",
+          "batchGenerateContent"
+        ],
+        "temperature": 1,
+        "topP": 0.95,
+        "topK": 64,
+        "maxTemperature": 2,
+        "thinking": true
+      }
+    }
+  },
+  "finished": "2026-11-03T14:08:50.178477+00:00"
+}

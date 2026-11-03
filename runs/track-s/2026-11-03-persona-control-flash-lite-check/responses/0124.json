@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"Several connector types are in use and they are not interchangeable.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TZXDhUAsPHpHXBZgIH32NoQEDHSK03UlE6G8LLpyGcD5ub9nwdJXTPlYcQtkd4jKO/ft+pinONnm1GgksqKLdGaBj0wXX8GYD5/muXsSeWaIHChNR5dkieeE="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1601,
+  "candidatesTokenCount": 45,
+  "totalTokenCount": 1646,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1601
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "eerpar6CGYflnsEP1-2HqAU"
+}

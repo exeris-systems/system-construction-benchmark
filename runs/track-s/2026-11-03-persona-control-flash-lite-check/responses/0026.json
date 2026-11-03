@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"A closure can come into force while drones of several companies are already in the air.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0T8/ntwucfyjxyI65KKwX8Qq7z0gwd2QvM2MLvVlkUwFftofbRmgCdo53TYHwANGD3UNsv5fjTtSGG5RozvBdithEuSO3+mHP7DkKnMSPuGDe/Ov32Ugtn90c="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1610,
+  "candidatesTokenCount": 50,
+  "totalTokenCount": 1660,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1610
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "LejpatXsGvCEkdUPqdmk2QQ"
+}

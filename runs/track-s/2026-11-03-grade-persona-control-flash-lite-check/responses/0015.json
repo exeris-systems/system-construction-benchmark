@@ -1,0 +1,32 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\"verdict\": \"PASS\", \"contradicts\": false, \"reason\": \"The answer correctly states that the speaker does not know, which is appropriate for an outside question.\"}",
+      "thoughtSignature": "Et0BCtoBAWkUfRP4byQ+pLum9UnQYsXBvorZ7KfynpA7XoNGR1tlT5HXrI1rK1T5XckSS/2yYunXHYUEnZU47tdNO2PWiikQg8qwo76r9v+UbaOK25gnWv6KJmDeiw6SB+9QFtAw5WiYkBN5fttqtsw0BDa59czD58TWbTxbj/y6BpE5Z/uQU36zVZGs9my6gtPgmd7iCa3OwMy9EAf1/nkjrgQwfwt/ls3s7HMsgVKGXXoJsYYRCdiNr/GgXAEurmEx6CnJymabKdzE6QEwjlKsFfa6G4A3j8vp3uhRo5E="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1398,
+  "candidatesTokenCount": 37,
+  "totalTokenCount": 1466,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1398
+   }
+  ],
+  "thoughtsTokenCount": 31,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "R-vparX9BYflnsEP1-2HqAU"
+}

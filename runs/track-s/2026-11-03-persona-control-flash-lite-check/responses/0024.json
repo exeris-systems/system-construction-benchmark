@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"Closures are often amended during the day, for example when an area is widened or an end time moves.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TiRLANbZluLf7vsYb96X+fKGR3ff6oPUvV93onkfd6DnIRW0Aoef5oeKrBZOT+2DRqnd605tWj+pSIfoLBemgMQGDhcqG4i1716tfDPlHo63K5OT2JSuomPk="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1610,
+  "candidatesTokenCount": 55,
+  "totalTokenCount": 1665,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1610
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "IejpatCsHIq6nsEPg5fEwQQ"
+}

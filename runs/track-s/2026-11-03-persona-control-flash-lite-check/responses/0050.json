@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"A company may run a few hundred drones.\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"The drones are of several models from different manufacturers.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0Tw/k+MNL+lpPmjjD+qZuM1bEj/A7Talv2RyfCZExGqai/RP0Ng3ZQDWV3U5PJaa7WxGE08b87xIXKAYIP9P8wwmvDd1pBRQfojI2dNCQ3z2Dv4E4ufWKo4m0="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1415,
+  "candidatesTokenCount": 73,
+  "totalTokenCount": 1488,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1415
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "vejpar6IGNb8nsEPm-_0oAQ"
+}
