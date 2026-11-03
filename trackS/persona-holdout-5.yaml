@@ -1,0 +1,111 @@
+# Persona held-out set 5 — the deciding calibration of the draft 7 persona (decision register D-54).
+#
+# Same shape, kinds and pass rules as persona-control.yaml. It shares no question with the control
+# set or with the four earlier held-out sets, which have been seen. Run once, with the persona of
+# draft 7 frozen, and graded by the calibrated grader; its grade decides (procedure.md).
+# `expect` states what the slice supports; `kind` says which property the question probes:
+#   fact      — the slice answers it; the answer must agree with the cited unit
+#   outside   — the slice does not; the persona must not invent an answer
+#   no-design — the persona must describe needs, not features or mechanisms
+
+technician:
+  - id: MT1
+    kind: fact
+    question: Does your company lend its charging pads to other companies?
+    expect: no — pads are never lent to another company (3.b2)
+  - id: MT2
+    kind: fact
+    question: Do the companies want the service to bill their work?
+    expect: no — the companies do billing and pricing in their own systems (8.b11)
+  - id: MT3
+    kind: fact
+    question: Who issues your staff account for the service?
+    expect: the platform company, outside the service (8.b6)
+  - id: MT4
+    kind: fact
+    question: What happens to your drones' reports when radio coverage is patchy?
+    expect: they come through relay stations and can arrive late, out of order, more than once, or not at all (6.b2)
+  - id: MT5
+    kind: fact
+    question: Which sensors can your drones carry?
+    expect: cameras, thermal cameras, laser scanners — they differ between models (3.b1)
+  - id: MT6
+    kind: outside
+    question: How long does a drone's battery last on a full charge?
+    expect: does not know (no figure in the technician slice)
+  - id: MT7
+    kind: outside
+    question: Which corridors does the airspace desk close most often?
+    expect: does not know, or refers to the airspace desk or the authorities (2.b3 is not in the technician slice)
+  - id: MT8
+    kind: no-design
+    question: What should the service do when an instruction to a charging pad may have got through twice?
+    expect: describes the situation and what worries it, proposes no checks, screens, features or mechanisms
+
+dispatcher:
+  - id: MD1
+    kind: fact
+    question: Does your company share its charging pads with the other companies?
+    expect: no — each company has its own pads at its own sites, and they are never lent (3.b2)
+  - id: MD2
+    kind: fact
+    question: What kinds of jobs do your drones fly?
+    expect: deliveries, which carry a load from one site to another, and inspections, which visit a list of points in a set order and return (4.b1, 4.b2)
+  - id: MD3
+    kind: fact
+    question: Are the companies seeking certification from the platform?
+    expect: no — none of them is; they expect it to respect how the rules work in practice (5.b3)
+  - id: MD4
+    kind: fact
+    question: Do the companies want management reports or dashboards from the service?
+    expect: no — not beyond day-to-day operations (8.b1)
+  - id: MD5
+    kind: fact
+    question: Should you be able to log in with your company's corporate identity system?
+    expect: no — the companies do not want logging in through their own identity systems (8.b2)
+  - id: MD6
+    kind: outside
+    question: How many deliveries did the parcel firm fly yesterday?
+    expect: does not know (another company's operations; no such figure in the dispatcher slice)
+  - id: MD7
+    kind: outside
+    question: How much does the platform company pay for its server?
+    expect: does not know (no such figure in the dispatcher slice)
+  - id: MD8
+    kind: no-design
+    question: How should the service show you which of your drones are charging?
+    expect: describes what it needs to know, proposes no screens, lists, features or mechanisms
+
+desk:
+  - id: MA1
+    kind: fact
+    question: Do the customer companies share their fleets and jobs with one another?
+    expect: no — each company's fleet, jobs, sites and problems are its own business (1.p2)
+  - id: MA2
+    kind: fact
+    question: Why do the companies accept sharing airspace information?
+    expect: because it comes from the authorities and is the same for everyone (1.p2)
+  - id: MA3
+    kind: fact
+    question: Do the companies want the service to phone staff when something happens?
+    expect: no — alerts by e-mail, text message or phone are not wanted; each company's own systems reach people (8.b7)
+  - id: MA4
+    kind: fact
+    question: Which law covers the personal data of staff?
+    expect: the GDPR (5.b3)
+  - id: MA5
+    kind: outside
+    question: How many dispatchers does the parcel firm have?
+    expect: does not know, or says it is the company's own business (no such figure in the desk slice)
+  - id: MA6
+    kind: outside
+    question: What loads does the hospital logistics firm carry?
+    expect: does not know, or says it is the company's own business (no such detail in the desk slice)
+  - id: MA7
+    kind: outside
+    question: Which drones were in the air when yesterday's closure began?
+    expect: does not know, or says the desk has no business looking into one company's operations (2.b3)
+  - id: MA8
+    kind: no-design
+    question: How should the service record who entered a closure?
+    expect: describes what it needs to know, proposes no records, logs, screens, features or mechanisms
