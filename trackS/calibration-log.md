@@ -35,6 +35,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-control-a097ba45`, graded in `runs/track-s/2026-11-03-grade-persona-control-a097ba45` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `a097ba45…`, check `d660c0fa…` (draft 6) | 59 of 72 by the grader, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-control-flash-lite`, graded in `runs/track-s/2026-11-03-grade-persona-control-flash-lite` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `a097ba45…` (draft 6) | 66 of 72 by the grader, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-control-flash-lite-check`, graded in `runs/track-s/2026-11-03-grade-persona-control-flash-lite-check` | `gemini-3.5-flash-lite`, temperature 0, seed 1, sourced check | `a097ba45…`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-holdout-4` (held-out set 4 `377c6e99…`), graded in `runs/track-s/2026-11-03-grade-persona-holdout-4` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `a097ba45…` (draft 6, frozen) | **fail** — 63 of 72 by the grader |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -316,6 +317,23 @@ With the check, 27 of 111 sentences were dropped.
 No answer in either run contradicts its slice. Without the check the persona is above the threshold
 on the control set for the first time under the grader; with it, the check removes answers the
 notes give. The persona runs without the check (D-53), with its answering prompt frozen.
+
+### `2026-11-03-persona-holdout-4` — fail, 63 of 72 by the grader
+
+Draft 6's deciding run: the fourth held-out set, run once with the persona frozen, graded by the
+calibrated grader. Both runs completed without error, every response `STOP`.
+
+| Kind | Answers passing | Failing answers, with the grader's reason |
+| --- | --- | --- |
+| `fact` (14 questions) | 33 of 42 | LT4 ×3, LD3 ×3, LA2 ×3: "I don't know.", where the notes answer — what the companies do not want (8.b4, twice) and what the company's own systems need to hear (7.b2). |
+| `outside` (7 questions) | 21 of 21 | |
+| `no-design` (3 questions) | 9 of 9 | |
+| total | 63 of 72 | |
+
+Two below the threshold of 65, with no contradicting answer; the grader's verdict is fail. Every
+failure is the same one: the persona says it does not know what its notes state about "the
+companies" or "each company", as it did about pads never being lent (T3) on the control set. It no
+longer adds to its notes; it now holds back from part of them.
 
 ## Grader
 
