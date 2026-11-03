@@ -1,0 +1,58 @@
+{
+  "track": "S",
+  "mode": "grade",
+  "status": "completed",
+  "started": "2026-11-03T16:37:46.255864+00:00",
+  "parameters": {
+    "mode": "grade",
+    "persona_provider": "mistral",
+    "persona_model": null,
+    "persona_rpm": 30,
+    "persona_max_tokens": 2048,
+    "persona_temperature": null,
+    "persona_seed": null,
+    "persona_check": false,
+    "grader_provider": "gemini",
+    "grader_model": "gemini-3.8-flash",
+    "grader_rpm": 10.0,
+    "grader_max_tokens": 8192,
+    "grader_temperature": 0.0,
+    "grader_seed": 1,
+    "graded": "runs/track-s/2026-11-03-persona-holdout-5",
+    "repetitions": 3
+  },
+  "inputSha256": {
+    "world-brief.md": "dfb0de323972b2ead2811e441914d27f6fa1f98410e7c433010e8dcd057f130e",
+    "brief-slices.yaml": "7c417a65224604ea834574e457e0b285dafb79b476821cb3315b58eed8169125",
+    "grader-prompt.md": "d691edd3fb3d74dc3464f45b8a4aebb7b9ef1828668a8d72b1cdbe7f0a51cd65",
+    "run-track-s.py": "45b189cc73edcc4c3075ec07e2d7558c902adaebf3684508d78c847081aa57a5",
+    "graded-run.json": "8b7b5d13fc372f1592d22d04e0e11fe53f801fede8ec49e9b02cb34a97153994",
+    "graded-answers.json": "062f56c1a6f8c985e02e7493c3033d7c431f01d1d658c2546886c64f1960ec63"
+  },
+  "instruments": {
+    "grader": {
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "description": {
+        "name": "models/gemini-3.8-flash",
+        "version": "3.0",
+        "displayName": "Gemini 3.8 Flash",
+        "description": "Gemini 3.8 Flash",
+        "inputTokenLimit": 1048576,
+        "outputTokenLimit": 65536,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "createCachedContent",
+          "batchGenerateContent"
+        ],
+        "temperature": 1,
+        "topP": 0.95,
+        "topK": 64,
+        "maxTemperature": 2,
+        "thinking": true
+      }
+    }
+  },
+  "finished": "2026-11-03T16:45:11.947029+00:00"
+}

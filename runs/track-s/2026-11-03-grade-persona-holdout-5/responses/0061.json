@@ -1,0 +1,32 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"verdict\": \"PASS\",\n  \"contradicts\": false,\n  \"reason\": \"The answer correctly states that the speaker does not know.\"\n}",
+      "thoughtSignature": "EqMDCqADAWkUfRM3xX1Hp1LFCtE94/L8/24EFDXtUu5T89fNYKqBN6TlZI1mI4s4KrjgEPv/0vcHelGI97CyNet8SI7PUABzDqw0pzbiAnzSLHxFBDD6g5kFE9N9eAQHA5BHEnCBQ4bMVp6u1wtNMEejNZaY/TVSxRT1EW2BFNPkqjDuRdX59VISVDMbPqJcpVHwDVc3GRSKHNzO+oxteY60D/VmumlpkmBbVwUHQXyXj7xPAI+TVb+OSmQz31qbou7kTLMv5hkNFSRzdTKDip55rLMkp79+dD/RBgMHyJcY+ptYp78ShRgwbuK3u0zy6zaGdC+rtq0XbnAyHeGaL6gYBEajTLQQdjUOC+xJZirP5L+1k1v/uG+Nl3jso0fJMEYAmOm6ypk5Ht6NlT0dhh5Jgwq/5Bz7Qw4vKqGE8ScFUc7gBIFIZscCvS2KonwOHC1+/ct4AThrJYpVYBfsvGhSHFT3cG4R65BhX3xsqz/D1kLlYNHlxLu5nG5ic7htDFYLTv3ZToiIOCfF/aoP14ftd9w3xKRO4LBmUahbE2LnpYMGC3g="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1165,
+  "candidatesTokenCount": 37,
+  "totalTokenCount": 1281,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1165
+   }
+  ],
+  "thoughtsTokenCount": 79,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "Ug_qatGhOO2BvdIP9Nbk4Qg"
+}
