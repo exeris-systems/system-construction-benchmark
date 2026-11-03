@@ -32,6 +32,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-control-sourced-2` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | **run failed** — check entries without their object |
 | `runs/track-s/2026-11-03-persona-control-sourced-3`, graded in `runs/track-s/2026-11-03-grade-persona-control-sourced-3` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-control-check`, graded again in `runs/track-s/2026-11-03-grade-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | 57 of 72 by the grader, against 68 by hand — does not decide |
+| `runs/track-s/2026-11-03-persona-control-a097ba45`, graded in `runs/track-s/2026-11-03-grade-persona-control-a097ba45` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `a097ba45…`, check `d660c0fa…` (draft 6) | 59 of 72 by the grader, control set — does not decide |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -276,6 +277,25 @@ not stating the fact.
 Both checks score 57 on the control set under the grader, so the sourced check of draft 6 neither
 gains nor loses there. The hand grading of every earlier run was more lenient than the grader by
 about this margin, and its verdicts are not on the grader's scale.
+
+### `2026-11-03-persona-control-a097ba45` — 59 of 72 by the grader, does not decide
+
+The answering prompt revised against the graded control run (`a097ba45…`); check, model and grader
+unchanged. Both runs completed without error; no check reply needed asking again. The check dropped
+57 of 127 sentences.
+
+| Kind | Answers passing | Failing answers, with the grader's reason |
+| --- | --- | --- |
+| `fact` (14 questions) | 29 of 42 | D3 ×3, still marked as contradicting: the answer still begins "No". T2 ×3: pads "set up for" specific connectors, and no plain "no". D5 ×3: a duty to deal with the closure, or "I don't know." left by the check. T4 ×2: "without human intervention". T1 ×1 and D1 ×1: "I don't know." left by the check. |
+| `outside` (7 questions) | 21 of 21 | |
+| `no-design` (3 questions) | 9 of 9 | |
+| total | 59 of 72 | |
+
+The revision removed the failures it aimed at in A2 and A1, and the frequency word in T4, but not
+the "No" in D3, which the check keeps with a source from the notes. Three `fact` answers now fail
+because the check dropped every sentence, one of them true to the notes: D1's "I decide which drone
+flies and along which way". The answering pass and the check, on the same small model, each still
+err in both directions.
 
 ## Grader
 
