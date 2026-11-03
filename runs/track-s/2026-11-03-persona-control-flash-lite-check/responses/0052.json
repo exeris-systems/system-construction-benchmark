@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"Several connector types are in use and they are not interchangeable.\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"Each company has its own charging pads at its own sites, a few dozen of them. Pads are never lent to another company.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0T+ByaOVs7hacjwX1cfDCEyitj7qX7j0BvmaEZkm4Gey9fr3NfOI5DfM6X9U5qaOcXvVkffWsaniD6lqw5Jod8GZccanOKPIhDoH5bQBFyAFFxsThRZjnYrVU="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1437,
+  "candidatesTokenCount": 92,
+  "totalTokenCount": 1529,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1437
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "yejpatawGrGukdUP5ojFcQ"
+}

@@ -1,0 +1,29 @@
+{
+ "id": "ab0a40454d56420b95cbc80f15d3e95a",
+ "created": 1793711608,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1414,
+  "total_tokens": 1444,
+  "completion_tokens": 30,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"Pads are never lent to another company.\"\n    }\n]"
+   }
+  }
+ ]
+}

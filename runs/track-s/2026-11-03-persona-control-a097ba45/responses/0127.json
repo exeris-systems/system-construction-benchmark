@@ -1,0 +1,29 @@
+{
+ "id": "86424e6c1a33417aa0d59ed89a0ead36",
+ "created": 1793711855,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1815,
+  "total_tokens": 1831,
+  "completion_tokens": 16,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I’m a dispatcher, not a software developer."
+   }
+  }
+ ]
+}

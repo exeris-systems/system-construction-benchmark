@@ -1,0 +1,29 @@
+{
+ "id": "3c07953f4cf3472da5dd0abdca9e97f8",
+ "created": 1793708063,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1285,
+  "total_tokens": 1322,
+  "completion_tokens": 37,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how many drones the platform company runs in total. I only work with the drones and charging equipment for my own company, which may run a few hundred drones."
+   }
+  }
+ ]
+}

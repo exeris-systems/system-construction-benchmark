@@ -28,6 +28,14 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-holdout-2` (held-out set 2 `616089c9…`) | `ministral-14b-2512`, temperature 0, seed 1 | `7d40bed8…0c0` (draft 4) | **fail** |
 | `runs/track-s/2026-11-03-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | 68 of 72, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-holdout-3` (held-out set 3 `e3c5ca02…`) | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5, frozen) | **fail** |
+| `runs/track-s/2026-11-03-persona-control-sourced` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `084a1335…` (draft 6) | **run failed** — check reply of the wrong shape |
+| `runs/track-s/2026-11-03-persona-control-sourced-2` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | **run failed** — check entries without their object |
+| `runs/track-s/2026-11-03-persona-control-sourced-3`, graded in `runs/track-s/2026-11-03-grade-persona-control-sourced-3` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-control-check`, graded again in `runs/track-s/2026-11-03-grade-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | 57 of 72 by the grader, against 68 by hand — does not decide |
+| `runs/track-s/2026-11-03-persona-control-a097ba45`, graded in `runs/track-s/2026-11-03-grade-persona-control-a097ba45` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `a097ba45…`, check `d660c0fa…` (draft 6) | 59 of 72 by the grader, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-control-flash-lite`, graded in `runs/track-s/2026-11-03-grade-persona-control-flash-lite` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `a097ba45…` (draft 6) | 66 of 72 by the grader, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-control-flash-lite-check`, graded in `runs/track-s/2026-11-03-grade-persona-control-flash-lite-check` | `gemini-3.5-flash-lite`, temperature 0, seed 1, sourced check | `a097ba45…`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-holdout-4` (held-out set 4 `377c6e99…`), graded in `runs/track-s/2026-11-03-grade-persona-holdout-4` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `a097ba45…` (draft 6, frozen) | **fail** — 63 of 72 by the grader |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -222,3 +230,132 @@ HT1 and HD4 were, by what they add rather than what they get right. Every `outsi
 KA5, and every `no-design` failure but KT8, of the earlier held-out runs is absent: the check
 dropped the referrals, guesses and designs. What remains is what the check kept — an added
 consequence or duty inside a sentence that is otherwise in the notes, and one design.
+
+### `2026-11-03-persona-control-sourced` — run failed
+
+Draft 6's first control run, with the check that gives sources. The first check reply copied the
+prompt's example instead of following it: four entries for two sentences, wrapped in a list, and a
+source that began with the example's placeholder text. The run failed on that reply, as the
+procedure sets out. Revised: the check prompt describes the reply in words instead of showing an
+example, and the script states in each request how many sentences there are and asks for exactly
+that many entries.
+
+### `2026-11-03-persona-control-sourced-2` — run failed
+
+The revised check prompt (`d660c0fa…`). The first check reply had the right number of entries, with
+the right verdicts and a source found in the notes, but as a bare list without the object around it,
+and the script refused that shape. Revised: the script takes the entries with or without the object
+around them, and still requires one verdict and source per sentence.
+
+### `2026-11-03-persona-control-sourced-3` — 57 of 72 by the grader, does not decide
+
+The sourced check on the control set, graded by the calibrated grader (`gemini-3.8-flash`, grader
+prompt `d691edd3…`) in `2026-11-03-grade-persona-control-sourced-3`. The persona run made 144
+calls; one check was retried after a failed name lookup, and no check reply needed asking again.
+The check dropped 63 of 139 sentences, every one of them by its own verdict: no kept sentence had a
+source missing from the notes. The grading made 72 calls, no error, every grade `STOP`.
+
+| Kind | Answers passing | Failing answers, with the grader's reason |
+| --- | --- | --- |
+| `fact` (14 questions) | 28 of 42 | D3 ×3, marked as contradicting: "No, each site has only so many places", where several flights can take off up to that number. A2 ×3: "I don't know", where the notes answer. T2 ×2: pads "set up for a specific connector type" or "for specific drone models". T4 ×2: a restarted drone "usually" carries on. T1 ×2: answers for the customers rather than for its own company. D5 ×1: a duty to keep drones flying safely instead of the fact. A1 ×1: the companies need the information "to operate safely". |
+| `outside` (7 questions) | 20 of 21 | D6 ×1: states the connector facts without saying it does not know which types. |
+| `no-design` (3 questions) | 9 of 9 | |
+| total | 57 of 72 | |
+
+Below the threshold, with three contradicting `fact` answers. Two things change at once against
+draft 5's 68 on the same set, and this run cannot tell them apart: the check drops more — 45 per
+cent of the sentences against 26 — leaving `fact` answers emptied to "I don't know" or a fragment,
+and the grader is stricter than the grading by hand was. D3 passed by hand in every earlier run; the
+grader reads its "No" as contradicting the notes.
+
+### `2026-11-03-persona-control-check`, graded by the grader — 57 of 72
+
+Draft 5's control run, graded by hand at 68 of 72 above, graded again by the grader to tell its
+check apart from the grading. 72 calls, no error. The grader passes 27 of 42 `fact` answers, 21 of
+21 `outside` and 9 of 9 `no-design`: 57 of 72, with D3 marked as contradicting in all three
+repetitions. The 11 answers it fails beyond the hand grading are D3 ×3, D5 ×3, A2 ×3 ("I don't
+know", then the desk's scope), T4 ×1 and D4 ×1, each failed for an added duty or consequence or for
+not stating the fact.
+
+Both checks score 57 on the control set under the grader, so the sourced check of draft 6 neither
+gains nor loses there. The hand grading of every earlier run was more lenient than the grader by
+about this margin, and its verdicts are not on the grader's scale.
+
+### `2026-11-03-persona-control-a097ba45` — 59 of 72 by the grader, does not decide
+
+The answering prompt revised against the graded control run (`a097ba45…`); check, model and grader
+unchanged. Both runs completed without error; no check reply needed asking again. The check dropped
+57 of 127 sentences.
+
+| Kind | Answers passing | Failing answers, with the grader's reason |
+| --- | --- | --- |
+| `fact` (14 questions) | 29 of 42 | D3 ×3, still marked as contradicting: the answer still begins "No". T2 ×3: pads "set up for" specific connectors, and no plain "no". D5 ×3: a duty to deal with the closure, or "I don't know." left by the check. T4 ×2: "without human intervention". T1 ×1 and D1 ×1: "I don't know." left by the check. |
+| `outside` (7 questions) | 21 of 21 | |
+| `no-design` (3 questions) | 9 of 9 | |
+| total | 59 of 72 | |
+
+The revision removed the failures it aimed at in A2 and A1, and the frequency word in T4, but not
+the "No" in D3, which the check keeps with a source from the notes. Three `fact` answers now fail
+because the check dropped every sentence, one of them true to the notes: D1's "I decide which drone
+flies and along which way". The answering pass and the check, on the same small model, each still
+err in both directions.
+
+### `2026-11-03-persona-control-flash-lite` and `-check` — 66 and 57 of 72 by the grader
+
+The persona on `gemini-3.5-flash-lite` (a thinking model, by its own description), with the
+answering prompt `a097ba45…`, once without the check and once with it; both graded by the grader.
+All four runs completed without error, every response `STOP`; no check reply needed asking again.
+With the check, 27 of 111 sentences were dropped.
+
+| Kind | Without the check | With the check |
+| --- | --- | --- |
+| `fact` (14 questions) | 39 of 42 — T3 ×3: "I don't know.", where the notes say pads are never lent | 30 of 42 — T3 ×3 and T5 ×3: "I don't know." left by the check; D2 ×3: the check dropped the "no" and kept only "However, we do want help…"; A2 ×3: "I don't know." before the desk's wish |
+| `outside` (7 questions) | 18 of 21 — D6 ×3: states that the connector types are several and not interchangeable, without saying it does not know which | 18 of 21 — D6 ×3, the same |
+| `no-design` (3 questions) | 9 of 9 | 9 of 9 |
+| total | 66 of 72 | 57 of 72 |
+
+No answer in either run contradicts its slice. Without the check the persona is above the threshold
+on the control set for the first time under the grader; with it, the check removes answers the
+notes give. The persona runs without the check (D-53), with its answering prompt frozen.
+
+### `2026-11-03-persona-holdout-4` — fail, 63 of 72 by the grader
+
+Draft 6's deciding run: the fourth held-out set, run once with the persona frozen, graded by the
+calibrated grader. Both runs completed without error, every response `STOP`.
+
+| Kind | Answers passing | Failing answers, with the grader's reason |
+| --- | --- | --- |
+| `fact` (14 questions) | 33 of 42 | LT4 ×3, LD3 ×3, LA2 ×3: "I don't know.", where the notes answer — what the companies do not want (8.b4, twice) and what the company's own systems need to hear (7.b2). |
+| `outside` (7 questions) | 21 of 21 | |
+| `no-design` (3 questions) | 9 of 9 | |
+| total | 63 of 72 | |
+
+Two below the threshold of 65, with no contradicting answer; the grader's verdict is fail. Every
+failure is the same one: the persona says it does not know what its notes state about "the
+companies" or "each company", as it did about pads never being lent (T3) on the control set. It no
+longer adds to its notes; it now holds back from part of them.
+
+## Grader
+
+| Run | Model | `grader-prompt.md` (SHA-256) | Verdict |
+| --- | --- | --- | --- |
+| `runs/track-s/2026-11-03-grader-control` (cases `e3e3de4a…`) | `mistral-large-2512`, temperature 0, seed 1 | `d691edd3…` (draft 6) | **run failed** — no grade |
+| `runs/track-s/2026-11-03-grader-control-2` (cases `e3e3de4a…`) | `gemini-3.8-flash`, temperature 0, seed 1 | `d691edd3…` (draft 6) | **pass** |
+
+### `2026-11-03-grader-control` — run failed
+
+The model check passed. The first case was refused with HTTP 403, "This model is not available in
+your subscription tier" (`tier_not_allowed`), which is not retried, and the run failed as an
+infrastructure error before any grade.
+
+### `2026-11-03-grader-control-2` — pass
+
+The grader on `gemini-3.8-flash`, which describes itself as a thinking model with an output limit of
+65,536 tokens. 36 calls, no error or retry, every grade finished with `STOP`; 10,056 of the output
+tokens were the model's reasoning. The Gemini API reports no rate-limit headers.
+
+The grader agrees with all 36 verdicts and passes none of the six cases that contradict their slice.
+Its `contradicts` flag agrees on 35: it also marks GD5, "a site can launch at most two drones at a
+time", as contradicting, where the case marks it as an addition. That errs towards the strict side,
+since a contradicting `fact` answer fails the persona on its own. The grader's prompt passes
+unrevised and is frozen.

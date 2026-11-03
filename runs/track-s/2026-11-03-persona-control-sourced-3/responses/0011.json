@@ -1,0 +1,29 @@
+{
+ "id": "3b89b09f985f43e09cdbeeb52dcf46b6",
+ "created": 1793708083,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1479,
+  "total_tokens": 1508,
+  "completion_tokens": 29,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace rules are set by the EU and handled by the platform’s airspace team, not by me."
+   }
+  }
+ ]
+}

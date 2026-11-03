@@ -1,0 +1,29 @@
+{
+ "id": "516210dbac5f4a7190093a7ae003d118",
+ "created": 1793711740,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1751,
+  "total_tokens": 1789,
+  "completion_tokens": 38,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures can be amended during the day, such as when an area is widened or an end time moves. This means the airspace restrictions may change while drones are already in flight."
+   }
+  }
+ ]
+}

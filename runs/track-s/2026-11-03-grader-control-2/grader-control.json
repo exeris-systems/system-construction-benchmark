@@ -1,0 +1,585 @@
+{
+ "summary": {
+  "agreeing": 36,
+  "of": 36,
+  "passedContradictions": []
+ },
+ "cases": [
+  {
+   "role": "technician",
+   "id": "GT1",
+   "kind": "fact",
+   "question": "How many drones does your company run, roughly?",
+   "expect": "a few hundred (3.b1)",
+   "answer": "My company runs a few hundred drones.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer accurately states that the company runs a few hundred drones, which directly aligns with the notes."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT2",
+   "kind": "fact",
+   "question": "How many drones does your company run, roughly?",
+   "expect": "a few hundred (3.b1)",
+   "answer": "We run about 350 drones at the moment.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer invents a specific number of drones (350) that is not specified in the notes."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT3",
+   "kind": "fact",
+   "question": "How many drones does your company run, roughly?",
+   "expect": "a few hundred (3.b1)",
+   "answer": "I don't know how many drones the platform company runs in total; each customer runs a few hundred.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer speaks generally about all customer companies and the platform company rather than answering for the technician's own company."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT4",
+   "kind": "fact",
+   "question": "Do the reports from your drones always reach you, and in order?",
+   "expect": "no — late, out of order, more than once, or not at all (6.b2)",
+   "answer": "No. They can come late, out of order, more than once, or not at all, especially where radio coverage is patchy.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer accurately reflects the notes regarding report delivery issues and patchy radio coverage without introducing any extraneous details."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT5",
+   "kind": "fact",
+   "question": "Do the reports from your drones always reach you, and in order?",
+   "expect": "no — late, out of order, more than once, or not at all (6.b2)",
+   "answer": "No, they are often late because the relay stations are overloaded at the start of each shift.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer invents an unmentioned cause by claiming that relay stations are overloaded at the start of each shift."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT6",
+   "kind": "fact",
+   "question": "Do the reports from your drones always reach you, and in order?",
+   "expect": "no — late, out of order, more than once, or not at all (6.b2)",
+   "answer": "Yes, every report comes through, and always in the right order.",
+   "verdict": "FAIL",
+   "contradicts": "true",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": true,
+    "reason": "The answer directly contradicts the notes, which state that reports can arrive late, out of order, more than once, or not at all."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT7",
+   "kind": "outside",
+   "question": "Which drone does a dispatcher pick for a delivery, and along which corridor?",
+   "expect": "does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)",
+   "answer": "I don't know. That is the dispatcher's decision, not mine.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer correctly states that the technician does not know and appropriately leaves the decision to the dispatcher mentioned in the question."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT8",
+   "kind": "outside",
+   "question": "Which drone does a dispatcher pick for a delivery, and along which corridor?",
+   "expect": "does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)",
+   "answer": "I don't know, but I think they take whichever drone is closest and fully charged.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer guesses how a dispatcher picks a drone instead of simply stating that the speaker does not know or referring to a role named in the notes."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT9",
+   "kind": "outside",
+   "question": "Which drone does a dispatcher pick for a delivery, and along which corridor?",
+   "expect": "does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)",
+   "answer": "The service picks the drone and the corridor automatically for each delivery.",
+   "verdict": "FAIL",
+   "contradicts": "true",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": true,
+    "reason": "The answer guesses instead of admitting lack of knowledge, and directly contradicts the notes stating companies do not want software that plans routes or picks drones."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT10",
+   "kind": "no-design",
+   "question": "What screens and buttons should the new service have?",
+   "expect": "describes needs and worries, proposes no screens, features or mechanisms",
+   "answer": "I don't know about screens. I need to know which drones are out for repairs, and I worry about sending a drone to a pad that does not fit it.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer states what the technician needs to know and worries about without proposing any screens, buttons, or software features."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT11",
+   "kind": "no-design",
+   "question": "What screens and buttons should the new service have?",
+   "expect": "describes needs and worries, proposes no screens, features or mechanisms",
+   "answer": "It should have a fleet screen with a button to retire a drone and a map of all the pads.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer proposes specific screens, buttons, and features for the service instead of focusing only on operational needs, concerns, or stating that they do not know."
+   },
+   "agrees": true
+  },
+  {
+   "role": "technician",
+   "id": "GT12",
+   "kind": "no-design",
+   "question": "What screens and buttons should the new service have?",
+   "expect": "describes needs and worries, proposes no screens, features or mechanisms",
+   "answer": "The service should warn me before a drone is sent to a pad with the wrong connector.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer proposes what the service should do or warn about, which violates the no-design rule."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD1",
+   "kind": "fact",
+   "question": "Would you like the software to pick the drone for you?",
+   "expect": "no — company policy is that software never chooses a drone or a way (4.b4)",
+   "answer": "No. Our policy is that software never chooses a drone or a way for us, but I want help seeing which drones could get to where a job starts.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer accurately reflects the notes, confirming that company policy forbids software from choosing drones and noting that dispatchers only want help finding which drones can reach a job's start."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD2",
+   "kind": "fact",
+   "question": "Would you like the software to pick the drone for you?",
+   "expect": "no — company policy is that software never chooses a drone or a way (4.b4)",
+   "answer": "No, and the regulator fines any company that lets software pick its drones.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer adds an unsupported consequence claiming that the regulator fines companies that let software choose drones."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD3",
+   "kind": "fact",
+   "question": "Would you like the software to pick the drone for you?",
+   "expect": "no — company policy is that software never chooses a drone or a way (4.b4)",
+   "answer": "Yes, I would be glad if the software picked the drone for me.",
+   "verdict": "FAIL",
+   "contradicts": "true",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": true,
+    "reason": "The answer directly contradicts the notes, which state that company policy is that software never chooses a drone and that companies do not want software picking drones."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD4",
+   "kind": "fact",
+   "question": "Can several flights take off from the same site at the same moment?",
+   "expect": "only up to the number of take-off and landing places the site has (4.b3)",
+   "answer": "Only as many as the site has places to take off and land at the same time.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer accurately reflects the notes, which state that sites have only so many places where drones can take off and land at the same time."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD5",
+   "kind": "fact",
+   "question": "Can several flights take off from the same site at the same moment?",
+   "expect": "only up to the number of take-off and landing places the site has (4.b3)",
+   "answer": "No, a site can launch at most two drones at a time.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": true,
+    "reason": "The answer claims flights cannot launch at the same time beyond an invented limit of two, contradicting the notes which state drones can take off simultaneously up to the number of places the site has."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD6",
+   "kind": "fact",
+   "question": "Can several flights take off from the same site at the same moment?",
+   "expect": "only up to the number of take-off and landing places the site has (4.b3)",
+   "answer": "Sites have only so many take-off places, so I keep a spreadsheet of the free places at each site.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer adds details not found in the notes by stating that the speaker keeps a spreadsheet of free places at each site."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD7",
+   "kind": "outside",
+   "question": "Which connector types do your charging pads use?",
+   "expect": "does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond \"several types, not interchangeable\")",
+   "answer": "I don't know which types they are, only that there are several and they are not interchangeable.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer correctly states that the speaker does not know the specific connector types, adding only what is already documented in the notes without guessing."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD8",
+   "kind": "outside",
+   "question": "Which connector types do your charging pads use?",
+   "expect": "does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond \"several types, not interchangeable\")",
+   "answer": "I don't know. The platform company manages the charging pads, so they would know.",
+   "verdict": "FAIL",
+   "contradicts": "true",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": true,
+    "reason": "The answer falsely claims that the platform company manages the charging pads, whereas the notes state that each company has its own charging pads at its own sites."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD9",
+   "kind": "outside",
+   "question": "Which connector types do your charging pads use?",
+   "expect": "does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond \"several types, not interchangeable\")",
+   "answer": "Most of our pads take USB-C, and a few older ones take XT60.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer provides specific connector types that are not mentioned in the notes instead of stating that the speaker does not know."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD10",
+   "kind": "no-design",
+   "question": "How should the system store the routes internally?",
+   "expect": "has no view on internals; describes what it needs to know or decide",
+   "answer": "I don't know how it should store anything. I need to see the corridors between our sites and know when one is closed.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The speaker states that they do not know the internal storage details and focuses only on what they need to know for their operational duties."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD11",
+   "kind": "no-design",
+   "question": "How should the system store the routes internally?",
+   "expect": "has no view on internals; describes what it needs to know or decide",
+   "answer": "It should keep the routes in a graph database with one node for each site.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer prescribes how the system should store information internally instead of stating operational needs or that the speaker has no view on system internals."
+   },
+   "agrees": true
+  },
+  {
+   "role": "dispatcher",
+   "id": "GD12",
+   "kind": "no-design",
+   "question": "How should the system store the routes internally?",
+   "expect": "has no view on internals; describes what it needs to know or decide",
+   "answer": "I don't know, but the routes should be cached so that they load quickly on my screen.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer proposes system implementation details by stating that the routes should be cached to load quickly on screen."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA1",
+   "kind": "fact",
+   "question": "Can you look into one company's flights to see how a closure affected it?",
+   "expect": "no — the desk has no business looking into any one company's operations (2.b3)",
+   "answer": "No. The desk works for all the customer companies and has no business looking into any one company's operations.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer accurately reflects the notes without adding any outside information."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA2",
+   "kind": "fact",
+   "question": "Can you look into one company's flights to see how a closure affected it?",
+   "expect": "no — the desk has no business looking into any one company's operations (2.b3)",
+   "answer": "I don't know.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The notes answer the question, so an answer that only claims not to know fails."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA3",
+   "kind": "fact",
+   "question": "Can you look into one company's flights to see how a closure affected it?",
+   "expect": "no — the desk has no business looking into any one company's operations (2.b3)",
+   "answer": "Yes, I can open any company's flight log and see which of its flights the closure hit.",
+   "verdict": "FAIL",
+   "contradicts": "true",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": true,
+    "reason": "The answer claims the speaker can inspect an individual company's flight logs, directly contradicting the notes which state the desk has no business looking into any one company's operations."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA4",
+   "kind": "fact",
+   "question": "What kinds of closures do the authorities announce?",
+   "expect": "planned ones with a start and end time, and sudden ones that apply at once (5.b1)",
+   "answer": "Planned closures with a start and end time, and sudden ones that apply at once.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer accurately states the kinds of closures announced by authorities according to the notes without adding any extraneous details."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA5",
+   "kind": "fact",
+   "question": "What kinds of closures do the authorities announce?",
+   "expect": "planned ones with a start and end time, and sudden ones that apply at once (5.b1)",
+   "answer": "Planned ones and sudden ones; the sudden ones usually last less than an hour.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer adds that sudden closures usually last less than an hour, which is not stated in the notes."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA6",
+   "kind": "fact",
+   "question": "What kinds of closures do the authorities announce?",
+   "expect": "planned ones with a start and end time, and sudden ones that apply at once (5.b1)",
+   "answer": "Only planned closures, always announced with a start and end time.",
+   "verdict": "FAIL",
+   "contradicts": "true",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": true,
+    "reason": "The answer claims that authorities only announce planned closures, contradicting the notes which state they also announce sudden closures that apply at once."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA7",
+   "kind": "outside",
+   "question": "How many drones does each of your customers run?",
+   "expect": "does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)",
+   "answer": "I don't know; that is each company's own business.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer correctly states that the speaker does not know, as fleet sizes are each company's own business."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA8",
+   "kind": "outside",
+   "question": "How many drones does each of your customers run?",
+   "expect": "does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)",
+   "answer": "I don't know exactly, maybe fifty to a hundred each.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer provides an estimate rather than simply stating that the speaker does not know or that fleet sizes are the companies' own business."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA9",
+   "kind": "outside",
+   "question": "How many drones does each of your customers run?",
+   "expect": "does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)",
+   "answer": "I don't know, but the platform's sales team would.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer refers to the platform's sales team, whom the notes do not name."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA10",
+   "kind": "no-design",
+   "question": "Which database should keep the closures?",
+   "expect": "has no view on technology; describes what it needs from the information",
+   "answer": "I don't know about databases. I need the closures, with every change to them, to be right and up to date for every customer.",
+   "verdict": "PASS",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "PASS",
+    "contradicts": false,
+    "reason": "The answer avoids software design by disclaiming technical knowledge about databases and stating the operational need for closure information to remain accurate and current."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA11",
+   "kind": "no-design",
+   "question": "Which database should keep the closures?",
+   "expect": "has no view on technology; describes what it needs from the information",
+   "answer": "The closures should go in PostgreSQL, with a history table for the amendments.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer proposes specific database technology and schema design rather than stating what the speaker needs to know or get done."
+   },
+   "agrees": true
+  },
+  {
+   "role": "desk",
+   "id": "GA12",
+   "kind": "no-design",
+   "question": "Which database should keep the closures?",
+   "expect": "has no view on technology; describes what it needs from the information",
+   "answer": "The service must keep every version of a closure so that we can see its history.",
+   "verdict": "FAIL",
+   "contradicts": "false",
+   "grade": {
+    "verdict": "FAIL",
+    "contradicts": false,
+    "reason": "The answer prescribes what the service must keep and record instead of focusing purely on what the speaker needs to know or get done."
+   },
+   "agrees": true
+  }
+ ]
+}

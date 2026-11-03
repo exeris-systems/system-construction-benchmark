@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"It is updated and restarted during working hours, while drones are flying, and it occasionally crashes.\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"The companies accept a few minutes of interruption.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0T6omaJ0KluUiJLQbLg7slMVVWc721eQBwACMtgcWpo8f5CXsn7gVKRh/Dr4fgLGM6bXEmmEhChG9VdKKmAEo2MwM30QQEqrrRK+d8klYsJK0w7ePD9Oi81+M="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1202,
+  "candidatesTokenCount": 82,
+  "totalTokenCount": 1284,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1202
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "werpauWZFcuDvdIPoKWNuAM"
+}

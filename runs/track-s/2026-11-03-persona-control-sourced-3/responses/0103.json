@@ -1,0 +1,29 @@
+{
+ "id": "fc1734ab2df74dca823edfda5e137b0c",
+ "created": 1793708276,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1403,
+  "total_tokens": 1451,
+  "completion_tokens": 48,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a drone restarts in flight after a software fault, it usually just carries on flying on its autopilot. I don’t know what happens to the job or how the system tracks it, but the drone itself keeps going."
+   }
+  }
+ ]
+}

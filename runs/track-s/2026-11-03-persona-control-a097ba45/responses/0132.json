@@ -1,0 +1,29 @@
+{
+ "id": "c97139baa329448095a2513fd59c9cf4",
+ "created": 1793711866,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1202,
+  "total_tokens": 1266,
+  "completion_tokens": 64,
+  "prompt_tokens_details": {
+   "cached_tokens": 1124
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"The desk works for all customer companies and has no business looking into any one company's operations.\"\n    },\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"DONT_KNOW\"\n    }\n]"
+   }
+  }
+ ]
+}

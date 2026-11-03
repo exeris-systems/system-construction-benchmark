@@ -1,0 +1,29 @@
+{
+ "id": "50ad96859b004ccd879d8c22d7824dd0",
+ "created": 1793711880,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1370,
+  "total_tokens": 1385,
+  "completion_tokens": 15,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company’s technical team would know."
+   }
+  }
+ ]
+}

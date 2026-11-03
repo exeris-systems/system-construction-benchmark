@@ -1,0 +1,29 @@
+{
+ "id": "ed874fcc54f8404c8cc1a7a416182323",
+ "created": 1793707535,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1377,
+  "total_tokens": 1485,
+  "completion_tokens": 108,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"sentences\": [\n            {\n                \"verdict\": \"DROP\",\n                \"source\": null\n            },\n            {\n                \"verdict\": \"KEEP\",\n                \"source\": \"words copied from the notes (\\\"A company may run a few hundred drones.\\\")\"\n            },\n            {\n                \"verdict\": \"DROP\",\n                \"source\": null\n            },\n            {\n                \"verdict\": \"DROP\",\n                \"source\": null\n            }\n        ]\n    }\n]"
+   }
+  }
+ ]
+}

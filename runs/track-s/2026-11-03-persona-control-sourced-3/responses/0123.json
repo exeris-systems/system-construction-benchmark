@@ -1,0 +1,29 @@
+{
+ "id": "d744479c382544d5a2732ac8163d1a71",
+ "created": 1793708321,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1671,
+  "total_tokens": 1696,
+  "completion_tokens": 25,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company handles the charging equipment, so they would know which connector types are in use."
+   }
+  }
+ ]
+}

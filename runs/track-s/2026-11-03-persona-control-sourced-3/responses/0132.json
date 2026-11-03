@@ -1,0 +1,29 @@
+{
+ "id": "b47b6acab6b6485db63c6bd5d6759d7e",
+ "created": 1793708340,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1218,
+  "total_tokens": 1337,
+  "completion_tokens": 119,
+  "prompt_tokens_details": {
+   "cached_tokens": 1124
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"DONT_KNOW\"\n    },\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"The airspace desk keeps the shared picture of the airspace: the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The desk works for all customer companies and has no business looking into any one company's operations.\"\n    },\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    }\n]"
+   }
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"DROP\",\n      \"source\": null\n    },\n    {\n      \"verdict\": \"DROP\",\n      \"source\": null\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0T2nZT2Vn8jZ7HVFHJ2q7h/XYZyp8DeNPnTsxoUNBYNMbl0+sGdDZWP59+R/QyfrQdEfFZ6KNPy8qd3hzRqP0M0EJ3AGz8zkQDgYGSDOU1KAsSU/HxMJEJygM="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1447,
+  "candidatesTokenCount": 54,
+  "totalTokenCount": 1501,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1447
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "DerpasnGHpaZkdUPvtuG4QQ"
+}

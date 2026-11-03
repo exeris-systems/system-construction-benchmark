@@ -1,0 +1,29 @@
+{
+ "id": "a6b6e1199bbf4e42a538472a7c7cf2d1",
+ "created": 1793711835,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1670,
+  "total_tokens": 1705,
+  "completion_tokens": 35,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, sites have only so many places where drones can take off and land at the same time, so not all flights can take off from the same site at once."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "1043891a93af4b5d8a17e6ccbc08744a",
+ "created": 1793708252,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1225,
+  "total_tokens": 1231,
+  "completion_tokens": 6,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know."
+   }
+  }
+ ]
+}

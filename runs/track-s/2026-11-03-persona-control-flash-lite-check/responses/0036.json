@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"DONT_KNOW\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"The airspace desk works for all customer companies and has no business looking into any one company's operations.\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"When a closure is entered, the desk wants to know how much disruption it caused across customers.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TOjByJGgG9csIQ2FdamOZpTmMgq2i+eEw1d79XDayZy+Tde+sIeVoOIlp8XyVOueTRlAY7rYpbIy8yCFpY/3J3pFd6kK18dEc20fbsXRo280GIS//AcxpyUk="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1228,
+  "candidatesTokenCount": 120,
+  "totalTokenCount": 1348,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1228
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "aejpaqeEHOOwvdIP2LazsQY"
+}

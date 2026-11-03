@@ -1,0 +1,29 @@
+{
+ "id": "9628940ad6f14a75831cf7348e4ea40c",
+ "created": 1793711744,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1790,
+  "total_tokens": 1842,
+  "completion_tokens": 52,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure comes into force while drones are already flying, those drones may have to change their route or land, depending on the rules and the type of closure. I have to make sure the drones follow the correct path and stay within allowed airspace."
+   }
+  }
+ ]
+}

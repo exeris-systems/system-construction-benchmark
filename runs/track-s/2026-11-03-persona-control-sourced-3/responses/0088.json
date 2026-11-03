@@ -1,0 +1,29 @@
+{
+ "id": "44a21895954444fbbcc7e091d84bc83d",
+ "created": 1793708246,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1174,
+  "total_tokens": 1225,
+  "completion_tokens": 51,
+  "prompt_tokens_details": {
+   "cached_tokens": 1124
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"The service runs on a single server. It is updated and restarted during working hours, while drones are flying\"\n    }\n  ]\n}"
+   }
+  }
+ ]
+}

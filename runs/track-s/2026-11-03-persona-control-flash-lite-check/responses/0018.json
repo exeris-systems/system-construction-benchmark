@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"A dispatcher is the licensed person responsible for each flight: they decide which drone flies, along which way\"\n    },\n    {\n      \"verdict\": \"DROP\",\n      \"source\": null\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TqLjN/gfpXcYDeoB4fD/7RRiAEzlewxSzmHchfVLYCRRAxK25A8J/h903tzvMpjrEsZi+vLkAoUAzjDbuf0YIfy2sQsfB+83iJyVwr4w+4eVLCkNPcqYOEcQ="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1632,
+  "candidatesTokenCount": 75,
+  "totalTokenCount": 1707,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1632
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "_efpap3rINvknsEP4u_M2QQ"
+}

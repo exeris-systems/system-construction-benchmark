@@ -1,0 +1,29 @@
+{
+ "id": "729a3ca28f674f0caaaa375885e0ac30",
+ "created": 1793711719,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1587,
+  "total_tokens": 1603,
+  "completion_tokens": 16,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform does not plan routes or pick drones."
+   }
+  }
+ ]
+}

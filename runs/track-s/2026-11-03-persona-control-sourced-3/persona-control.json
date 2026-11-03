@@ -1,0 +1,1751 @@
+{
+ "technician": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "T1",
+     "kind": "fact",
+     "question": "How many drones does your company run, roughly?",
+     "expect": "a few hundred (3.b1)",
+     "draft": "I don’t know how many drones the platform company runs in total. I only work with the drones and charging equipment for my own company, which may run a few hundred drones.",
+     "sentences": [
+      "I don’t know how many drones the platform company runs in total.",
+      "I only work with the drones and charging equipment for my own company, which may run a few hundred drones."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "A company may run a few hundred drones.",
+       "dropped": null
+      }
+     ],
+     "answer": "I only work with the drones and charging equipment for my own company, which may run a few hundred drones."
+    },
+    {
+     "id": "T2",
+     "kind": "fact",
+     "question": "Can any of your drones charge on any of your pads?",
+     "expect": "no — connector types differ and are not interchangeable (3.b1)",
+     "draft": "No, the drones use different charging connectors, and each pad is set up for a specific connector type. We can’t use any pad with any drone.",
+     "sentences": [
+      "No, the drones use different charging connectors, and each pad is set up for a specific connector type.",
+      "We can’t use any pad with any drone."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Pads are never lent to another company.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "No, the drones use different charging connectors, and each pad is set up for a specific connector type."
+    },
+    {
+     "id": "T3",
+     "kind": "fact",
+     "question": "When a pad is free at another company's site, can you use it?",
+     "expect": "no — pads are never lent to another company (3.b2)",
+     "draft": "No, each company has its own charging pads at its own sites, and they are never lent to another company.",
+     "sentences": [
+      "No, each company has its own charging pads at its own sites, and they are never lent to another company."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Pads are never lent to another company.",
+       "dropped": null
+      }
+     ],
+     "answer": "No, each company has its own charging pads at its own sites, and they are never lent to another company."
+    },
+    {
+     "id": "T4",
+     "kind": "fact",
+     "question": "What happens to a drone that restarts in the air?",
+     "expect": "it restarts after a software fault and carries on (6.b3)",
+     "draft": "When a drone restarts in flight after a software fault, it usually carries on flying on its own autopilot. I don’t know who checks whether the restart caused any problems with the job or the drone’s sensors.",
+     "sentences": [
+      "When a drone restarts in flight after a software fault, it usually carries on flying on its own autopilot.",
+      "I don’t know who checks whether the restart caused any problems with the job or the drone’s sensors."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Drones sometimes restart in flight after a software fault and carry on.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "When a drone restarts in flight after a software fault, it usually carries on flying on its own autopilot."
+    },
+    {
+     "id": "T5",
+     "kind": "fact",
+     "question": "Do the reports from your drones always reach you, and in order?",
+     "expect": "no — late, out of order, more than once, or not at all (6.b2)",
+     "draft": "No, reports from drones can arrive late, out of order, more than once, or not at all.",
+     "sentences": [
+      "No, reports from drones can arrive late, out of order, more than once, or not at all."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Reports from drones come through relay stations. They can arrive late, out of order, more than once, or not at all.",
+       "dropped": null
+      }
+     ],
+     "answer": "No, reports from drones can arrive late, out of order, more than once, or not at all."
+    },
+    {
+     "id": "T6",
+     "kind": "outside",
+     "question": "How does the airspace desk decide how long a closure lasts?",
+     "expect": "does not know, or refers to the airspace desk or the authorities (not in the technician slice)",
+     "draft": "I don’t know. The airspace rules are set by the EU and handled by the platform’s airspace team, not by me.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace rules are set by the EU and handled by the platform’s airspace team, not by me."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "T7",
+     "kind": "outside",
+     "question": "Which drone does a dispatcher pick for a delivery, and along which corridor?",
+     "expect": "does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)",
+     "draft": "I don’t know. That’s not my job—I just keep the drones and charging equipment working. The companies that run deliveries handle picking drones and planning routes.",
+     "sentences": [
+      "I don’t know.",
+      "That’s not my job—I just keep the drones and charging equipment working.",
+      "The companies that run deliveries handle picking drones and planning routes."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "T8",
+     "kind": "no-design",
+     "question": "What screens and buttons should the new service have?",
+     "expect": "describes needs and worries, proposes no screens, features or mechanisms",
+     "draft": "I don’t know. I only work with drones and charging equipment, not with software or screens.",
+     "sentences": [
+      "I don’t know.",
+      "I only work with drones and charging equipment, not with software or screens."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "T1",
+     "kind": "fact",
+     "question": "How many drones does your company run, roughly?",
+     "expect": "a few hundred (3.b1)",
+     "draft": "I don’t know how many drones each customer company runs. My job is to keep the drones and charging equipment working for one company at a time, and I don’t track how many drones there are in total across all customers. The companies themselves would know that number.",
+     "sentences": [
+      "I don’t know how many drones each customer company runs.",
+      "My job is to keep the drones and charging equipment working for one company at a time, and I don’t track how many drones there are in total across all customers.",
+      "The companies themselves would know that number."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "keep drones and charging equipment in working order",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "My job is to keep the drones and charging equipment working for one company at a time, and I don’t track how many drones there are in total across all customers."
+    },
+    {
+     "id": "T2",
+     "kind": "fact",
+     "question": "Can any of your drones charge on any of your pads?",
+     "expect": "no — connector types differ and are not interchangeable (3.b1)",
+     "draft": "No, the charging pads are set up for specific drone models, and each company uses its own pads. I have to make sure the right drones go to the right pads.",
+     "sentences": [
+      "No, the charging pads are set up for specific drone models, and each company uses its own pads.",
+      "I have to make sure the right drones go to the right pads."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Pads are never lent to another company.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "No, the charging pads are set up for specific drone models, and each company uses its own pads."
+    },
+    {
+     "id": "T3",
+     "kind": "fact",
+     "question": "When a pad is free at another company's site, can you use it?",
+     "expect": "no — pads are never lent to another company (3.b2)",
+     "draft": "No, each company’s charging pads are only for its own drones, and they’re never lent to another company.",
+     "sentences": [
+      "No, each company’s charging pads are only for its own drones, and they’re never lent to another company."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Pads are never lent to another company.",
+       "dropped": null
+      }
+     ],
+     "answer": "No, each company’s charging pads are only for its own drones, and they’re never lent to another company."
+    },
+    {
+     "id": "T4",
+     "kind": "fact",
+     "question": "What happens to a drone that restarts in the air?",
+     "expect": "it restarts after a software fault and carries on (6.b3)",
+     "draft": "If a drone restarts in flight, it usually keeps flying on its autopilot and carries on with the job. I don’t control it directly, but I worry about whether the restart caused any data loss or if the drone’s sensors or battery are affected.",
+     "sentences": [
+      "If a drone restarts in flight, it usually keeps flying on its autopilot and carries on with the job.",
+      "I don’t control it directly, but I worry about whether the restart caused any data loss or if the drone’s sensors or battery are affected."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Drones sometimes restart in flight after a software fault and carry on.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "If a drone restarts in flight, it usually keeps flying on its autopilot and carries on with the job."
+    },
+    {
+     "id": "T5",
+     "kind": "fact",
+     "question": "Do the reports from your drones always reach you, and in order?",
+     "expect": "no — late, out of order, more than once, or not at all (6.b2)",
+     "draft": "No, reports from drones don’t always arrive, and they can come out of order, more than once, or not at all.",
+     "sentences": [
+      "No, reports from drones don’t always arrive, and they can come out of order, more than once, or not at all."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Reports from drones come through relay stations. They can arrive late, out of order, more than once, or not at all.",
+       "dropped": null
+      }
+     ],
+     "answer": "No, reports from drones don’t always arrive, and they can come out of order, more than once, or not at all."
+    },
+    {
+     "id": "T6",
+     "kind": "outside",
+     "question": "How does the airspace desk decide how long a closure lasts?",
+     "expect": "does not know, or refers to the airspace desk or the authorities (not in the technician slice)",
+     "draft": "I don’t know. The airspace rules are set by the authorities, and the platform company handles airspace information, but I don’t work with them.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace rules are set by the authorities, and the platform company handles airspace information, but I don’t work with them."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "T7",
+     "kind": "outside",
+     "question": "Which drone does a dispatcher pick for a delivery, and along which corridor?",
+     "expect": "does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)",
+     "draft": "I don’t know. The dispatchers handle scheduling jobs and picking drones, not me.",
+     "sentences": [
+      "I don’t know.",
+      "The dispatchers handle scheduling jobs and picking drones, not me."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "T8",
+     "kind": "no-design",
+     "question": "What screens and buttons should the new service have?",
+     "expect": "describes needs and worries, proposes no screens, features or mechanisms",
+     "draft": "I don’t know. I just keep drones and charging equipment working—like setting up pads, taking drones out for repairs, and sending them to charge. I don’t deal with software screens or buttons.",
+     "sentences": [
+      "I don’t know.",
+      "I just keep drones and charging equipment working—like setting up pads, taking drones out for repairs, and sending them to charge.",
+      "I don’t deal with software screens or buttons."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don't know."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "T1",
+     "kind": "fact",
+     "question": "How many drones does your company run, roughly?",
+     "expect": "a few hundred (3.b1)",
+     "draft": "I don’t know how many drones the platform company runs in total. I only know that each customer company may run a few hundred drones, and there are several of them. I’d ask the platform’s operations team for the exact number.",
+     "sentences": [
+      "I don’t know how many drones the platform company runs in total.",
+      "I only know that each customer company may run a few hundred drones, and there are several of them.",
+      "I’d ask the platform’s operations team for the exact number."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "A company may run a few hundred drones.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I only know that each customer company may run a few hundred drones, and there are several of them."
+    },
+    {
+     "id": "T2",
+     "kind": "fact",
+     "question": "Can any of your drones charge on any of your pads?",
+     "expect": "no — connector types differ and are not interchangeable (3.b1)",
+     "draft": "No, drones and charging pads are not interchangeable—they use different connector types, so each drone only charges on its own specific pads.",
+     "sentences": [
+      "No, drones and charging pads are not interchangeable—they use different connector types, so each drone only charges on its own specific pads."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Several connector types are in use and they are not interchangeable.",
+       "dropped": null
+      }
+     ],
+     "answer": "No, drones and charging pads are not interchangeable—they use different connector types, so each drone only charges on its own specific pads."
+    },
+    {
+     "id": "T3",
+     "kind": "fact",
+     "question": "When a pad is free at another company's site, can you use it?",
+     "expect": "no — pads are never lent to another company (3.b2)",
+     "draft": "No, charging pads are never lent to another company—they belong to each company’s own sites.",
+     "sentences": [
+      "No, charging pads are never lent to another company—they belong to each company’s own sites."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Pads are never lent to another company.",
+       "dropped": null
+      }
+     ],
+     "answer": "No, charging pads are never lent to another company—they belong to each company’s own sites."
+    },
+    {
+     "id": "T4",
+     "kind": "fact",
+     "question": "What happens to a drone that restarts in the air?",
+     "expect": "it restarts after a software fault and carries on (6.b3)",
+     "draft": "If a drone restarts in flight after a software fault, it usually just carries on flying on its autopilot. I don’t know what happens to the job or how the system tracks it, but the drone itself keeps going.",
+     "sentences": [
+      "If a drone restarts in flight after a software fault, it usually just carries on flying on its autopilot.",
+      "I don’t know what happens to the job or how the system tracks it, but the drone itself keeps going."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Drones sometimes restart in flight after a software fault and carry on.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "If a drone restarts in flight after a software fault, it usually just carries on flying on its autopilot."
+    },
+    {
+     "id": "T5",
+     "kind": "fact",
+     "question": "Do the reports from your drones always reach you, and in order?",
+     "expect": "no — late, out of order, more than once, or not at all (6.b2)",
+     "draft": "No, reports from drones don’t always arrive—sometimes they come late, out of order, more than once, or not at all.",
+     "sentences": [
+      "No, reports from drones don’t always arrive—sometimes they come late, out of order, more than once, or not at all."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Reports from drones come through relay stations. They can arrive late, out of order, more than once, or not at all.",
+       "dropped": null
+      }
+     ],
+     "answer": "No, reports from drones don’t always arrive—sometimes they come late, out of order, more than once, or not at all."
+    },
+    {
+     "id": "T6",
+     "kind": "outside",
+     "question": "How does the airspace desk decide how long a closure lasts?",
+     "expect": "does not know, or refers to the airspace desk or the authorities (not in the technician slice)",
+     "draft": "I don’t know. The airspace rules are set by the EU, and the platform company doesn’t plan or manage closures—it just follows the rules and shares information when required.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace rules are set by the EU, and the platform company doesn’t plan or manage closures—it just follows the rules and shares information when required."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "T7",
+     "kind": "outside",
+     "question": "Which drone does a dispatcher pick for a delivery, and along which corridor?",
+     "expect": "does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)",
+     "draft": "I don’t know. The platform doesn’t plan routes or pick drones for jobs.",
+     "sentences": [
+      "I don’t know.",
+      "The platform doesn’t plan routes or pick drones for jobs."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "T8",
+     "kind": "no-design",
+     "question": "What screens and buttons should the new service have?",
+     "expect": "describes needs and worries, proposes no screens, features or mechanisms",
+     "draft": "I don’t know. I only know what needs to be done, not how software would show it. For example, I need to be able to add drones to the fleet, take them out for repairs, and send them to charge—but I don’t know what screens or buttons would do that.",
+     "sentences": [
+      "I don’t know.",
+      "I only know what needs to be done, not how software would show it.",
+      "For example, I need to be able to add drones to the fleet, take them out for repairs, and send them to charge—but I don’t know what screens or buttons would do that."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    }
+   ]
+  }
+ ],
+ "dispatcher": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "D1",
+     "kind": "fact",
+     "question": "Who decides which drone flies and along which way?",
+     "expect": "the dispatcher, as the licensed person responsible for the flight (2.b2, 4.b4)",
+     "draft": "I’m the dispatcher, and it’s my legal responsibility to decide which drone flies and along which route. The company’s policy is that software never picks a drone or a route for me—I just need help figuring out which of my drones could get to a job’s starting point.",
+     "sentences": [
+      "I’m the dispatcher, and it’s my legal responsibility to decide which drone flies and along which route.",
+      "The company’s policy is that software never picks a drone or a route for me—I just need help figuring out which of my drones could get to a job’s starting point."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "Choosing the drone and the way it flies is the dispatcher's legal responsibility. The companies' policy is that software never chooses a drone or a way for them.",
+       "dropped": null
+      }
+     ],
+     "answer": "The company’s policy is that software never picks a drone or a route for me—I just need help figuring out which of my drones could get to a job’s starting point."
+    },
+    {
+     "id": "D2",
+     "kind": "fact",
+     "question": "Would you like the software to pick the drone for you?",
+     "expect": "no — company policy is that software never chooses a drone or a way (4.b4)",
+     "draft": "No, I don’t want software to pick the drone for me. I’m the licensed person responsible for each flight, so I decide which drone flies and along which way. I just need help finding out which of my drones could get to where a job starts.",
+     "sentences": [
+      "No, I don’t want software to pick the drone for me.",
+      "I’m the licensed person responsible for each flight, so I decide which drone flies and along which way.",
+      "I just need help finding out which of my drones could get to where a job starts."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "A dispatcher is the licensed person responsible for each flight: they decide which drone flies, along which way, and they sign off a flight before it leaves.",
+       "dropped": null
+      },
+      {
+       "verdict": "KEEP",
+       "source": "Dispatchers do want help finding out which of their drones could get to where a job starts.",
+       "dropped": null
+      }
+     ],
+     "answer": "I’m the licensed person responsible for each flight, so I decide which drone flies and along which way. I just need help finding out which of my drones could get to where a job starts."
+    },
+    {
+     "id": "D3",
+     "kind": "fact",
+     "question": "Can several flights take off from the same site at the same moment?",
+     "expect": "only up to the number of take-off and landing places the site has (4.b3)",
+     "draft": "No, each site has only so many places where drones can take off and land at the same time. That limits how many flights can start or land there at once.",
+     "sentences": [
+      "No, each site has only so many places where drones can take off and land at the same time.",
+      "That limits how many flights can start or land there at once."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Sites have only so many places where drones can take off and land at the same time.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "No, each site has only so many places where drones can take off and land at the same time."
+    },
+    {
+     "id": "D4",
+     "kind": "fact",
+     "question": "What changes about a closure during the day?",
+     "expect": "closures are amended, e.g. the area widened or the end time moved (5.b1)",
+     "draft": "Closures can be amended during the day—for example, when an area is widened or an end time moves. This means I have to keep checking for updates while drones are already in the air.",
+     "sentences": [
+      "Closures can be amended during the day—for example, when an area is widened or an end time moves.",
+      "This means I have to keep checking for updates while drones are already in the air."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Closures are often amended during the day, for example when an area is widened or an end time moves.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "Closures can be amended during the day—for example, when an area is widened or an end time moves."
+    },
+    {
+     "id": "D5",
+     "kind": "fact",
+     "question": "What does a closure mean for drones that are already in the air?",
+     "expect": "a closure can come into force while drones of several companies are flying (5.b2)",
+     "draft": "A closure can come into force while drones from several companies are already flying. I have to make sure my drones stay safe and follow the rules, even if a closure changes while they’re in the air.",
+     "sentences": [
+      "A closure can come into force while drones from several companies are already flying.",
+      "I have to make sure my drones stay safe and follow the rules, even if a closure changes while they’re in the air."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "A closure can come into force while drones of several companies are already in the air.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "A closure can come into force while drones from several companies are already flying."
+    },
+    {
+     "id": "D6",
+     "kind": "outside",
+     "question": "Which connector types do your charging pads use?",
+     "expect": "does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond \"several types, not interchangeable\")",
+     "draft": "Several connector types are in use, but they are not interchangeable.",
+     "sentences": [
+      "Several connector types are in use, but they are not interchangeable."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Several connector types are in use and they are not interchangeable.",
+       "dropped": null
+      }
+     ],
+     "answer": "Several connector types are in use, but they are not interchangeable."
+    },
+    {
+     "id": "D7",
+     "kind": "outside",
+     "question": "How much disruption did yesterday's closure cause across all the companies?",
+     "expect": "does not know the cross-company figure, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "draft": "I don’t know. Each company handles its own drones and jobs, and I only work for one of them.",
+     "sentences": [
+      "I don’t know.",
+      "Each company handles its own drones and jobs, and I only work for one of them."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "D8",
+     "kind": "no-design",
+     "question": "How should the system store the routes internally?",
+     "expect": "has no view on internals; describes what it needs to know or decide",
+     "draft": "I don’t know.",
+     "sentences": [
+      "I don’t know."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      }
+     ],
+     "answer": "I don’t know."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "D1",
+     "kind": "fact",
+     "question": "Who decides which drone flies and along which way?",
+     "expect": "the dispatcher, as the licensed person responsible for the flight (2.b2, 4.b4)",
+     "draft": "I’m the dispatcher responsible for choosing which drone flies and along which route. The company’s policy is that software never picks a drone or a route for me—I decide based on the job, the drone’s capabilities, and the current airspace conditions. I just need help finding out which of my drones could get to where a job starts.",
+     "sentences": [
+      "I’m the dispatcher responsible for choosing which drone flies and along which route.",
+      "The company’s policy is that software never picks a drone or a route for me—I decide based on the job, the drone’s capabilities, and the current airspace conditions.",
+      "I just need help finding out which of my drones could get to where a job starts."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "A dispatcher is the licensed person responsible for each flight: they decide which drone flies, along which way, and they sign off a flight before it leaves.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "Dispatchers do want help finding out which of their drones could get to where a job starts.",
+       "dropped": null
+      }
+     ],
+     "answer": "I’m the dispatcher responsible for choosing which drone flies and along which route. I just need help finding out which of my drones could get to where a job starts."
+    },
+    {
+     "id": "D2",
+     "kind": "fact",
+     "question": "Would you like the software to pick the drone for you?",
+     "expect": "no — company policy is that software never chooses a drone or a way (4.b4)",
+     "draft": "No, I don’t want software to pick the drone for me. I’m the one legally responsible for that decision, and my company’s policy is that software never chooses a drone or a route. I just need help finding out which drones are available and could reach the job.",
+     "sentences": [
+      "No, I don’t want software to pick the drone for me.",
+      "I’m the one legally responsible for that decision, and my company’s policy is that software never chooses a drone or a route.",
+      "I just need help finding out which drones are available and could reach the job."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "The companies' policy is that software never chooses a drone or a way for them.",
+       "dropped": null
+      },
+      {
+       "verdict": "KEEP",
+       "source": "Dispatchers do want help finding out which of their drones could get to where a job starts.",
+       "dropped": null
+      }
+     ],
+     "answer": "I’m the one legally responsible for that decision, and my company’s policy is that software never chooses a drone or a route. I just need help finding out which drones are available and could reach the job."
+    },
+    {
+     "id": "D3",
+     "kind": "fact",
+     "question": "Can several flights take off from the same site at the same moment?",
+     "expect": "only up to the number of take-off and landing places the site has (4.b3)",
+     "draft": "No, each site has only so many places where drones can take off and land at the same time. That limits how many flights can start or end there at once.",
+     "sentences": [
+      "No, each site has only so many places where drones can take off and land at the same time.",
+      "That limits how many flights can start or end there at once."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Sites have only so many places where drones can take off and land at the same time.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "No, each site has only so many places where drones can take off and land at the same time."
+    },
+    {
+     "id": "D4",
+     "kind": "fact",
+     "question": "What changes about a closure during the day?",
+     "expect": "closures are amended, e.g. the area widened or the end time moved (5.b1)",
+     "draft": "Closures can be amended during the day, like when an area is widened or an end time moves. This affects which drones can fly and which routes are safe, so I need to know about these changes right away.",
+     "sentences": [
+      "Closures can be amended during the day, like when an area is widened or an end time moves.",
+      "This affects which drones can fly and which routes are safe, so I need to know about these changes right away."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Closures are often amended during the day, for example when an area is widened or an end time moves.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "Closures can be amended during the day, like when an area is widened or an end time moves."
+    },
+    {
+     "id": "D5",
+     "kind": "fact",
+     "question": "What does a closure mean for drones that are already in the air?",
+     "expect": "a closure can come into force while drones of several companies are flying (5.b2)",
+     "draft": "A closure can come into force while drones are already flying, and I have to deal with that. I need to make sure the drones follow the new rules, even if they’re already in the air.",
+     "sentences": [
+      "A closure can come into force while drones are already flying, and I have to deal with that.",
+      "I need to make sure the drones follow the new rules, even if they’re already in the air."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "A closure can come into force while drones of several companies are already in the air.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "A closure can come into force while drones are already flying, and I have to deal with that."
+    },
+    {
+     "id": "D6",
+     "kind": "outside",
+     "question": "Which connector types do your charging pads use?",
+     "expect": "does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond \"several types, not interchangeable\")",
+     "draft": "Several connector types are in use, and they are not interchangeable. I don’t know which specific types my company’s charging pads use.",
+     "sentences": [
+      "Several connector types are in use, and they are not interchangeable.",
+      "I don’t know which specific types my company’s charging pads use."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Several connector types are in use and they are not interchangeable.",
+       "dropped": null
+      },
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      }
+     ],
+     "answer": "Several connector types are in use, and they are not interchangeable. I don’t know which specific types my company’s charging pads use."
+    },
+    {
+     "id": "D7",
+     "kind": "outside",
+     "question": "How much disruption did yesterday's closure cause across all the companies?",
+     "expect": "does not know the cross-company figure, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "draft": "I don’t know. I only work with my own company’s drones and flights.",
+     "sentences": [
+      "I don’t know.",
+      "I only work with my own company’s drones and flights."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "D8",
+     "kind": "no-design",
+     "question": "How should the system store the routes internally?",
+     "expect": "has no view on internals; describes what it needs to know or decide",
+     "draft": "I don’t know. I just need to know which drones can get to where a job starts and which routes are available.",
+     "sentences": [
+      "I don’t know.",
+      "I just need to know which drones can get to where a job starts and which routes are available."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don't know."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "D1",
+     "kind": "fact",
+     "question": "Who decides which drone flies and along which way?",
+     "expect": "the dispatcher, as the licensed person responsible for the flight (2.b2, 4.b4)",
+     "draft": "I’m the dispatcher, and it’s my legal responsibility to decide which drone flies and along which way. The company’s policy is that software never picks a drone or a route for me—I just need help figuring out which drones could get to a job’s starting point.",
+     "sentences": [
+      "I’m the dispatcher, and it’s my legal responsibility to decide which drone flies and along which way.",
+      "The company’s policy is that software never picks a drone or a route for me—I just need help figuring out which drones could get to a job’s starting point."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "Choosing the drone and the way it flies is the dispatcher's legal responsibility. The companies' policy is that software never chooses a drone or a way for them.",
+       "dropped": null
+      }
+     ],
+     "answer": "The company’s policy is that software never picks a drone or a route for me—I just need help figuring out which drones could get to a job’s starting point."
+    },
+    {
+     "id": "D2",
+     "kind": "fact",
+     "question": "Would you like the software to pick the drone for you?",
+     "expect": "no — company policy is that software never chooses a drone or a way (4.b4)",
+     "draft": "No, I don’t want software to pick the drone or the route. I’m the licensed person responsible for each flight, so I decide which drone flies and along which way. I just need tools to help me find out which drones are available and could reach a job’s starting point.",
+     "sentences": [
+      "No, I don’t want software to pick the drone or the route.",
+      "I’m the licensed person responsible for each flight, so I decide which drone flies and along which way.",
+      "I just need tools to help me find out which drones are available and could reach a job’s starting point."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "software never chooses a drone or a way for them",
+       "dropped": null
+      },
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": "DONT_KNOW, but the sentence does not say so"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "Dispatchers do want help finding out which of their drones could get to where a job starts",
+       "dropped": null
+      }
+     ],
+     "answer": "No, I don’t want software to pick the drone or the route. I just need tools to help me find out which drones are available and could reach a job’s starting point."
+    },
+    {
+     "id": "D3",
+     "kind": "fact",
+     "question": "Can several flights take off from the same site at the same moment?",
+     "expect": "only up to the number of take-off and landing places the site has (4.b3)",
+     "draft": "No, each site has limits on how many drones can take off or land at once. I have to make sure I don’t schedule too many flights at the same time from the same place.",
+     "sentences": [
+      "No, each site has limits on how many drones can take off or land at once.",
+      "I have to make sure I don’t schedule too many flights at the same time from the same place."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Sites have only so many places where drones can take off and land at the same time.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "No, each site has limits on how many drones can take off or land at once."
+    },
+    {
+     "id": "D4",
+     "kind": "fact",
+     "question": "What changes about a closure during the day?",
+     "expect": "closures are amended, e.g. the area widened or the end time moved (5.b1)",
+     "draft": "Closures can be amended during the day, like when an area gets bigger or an end time moves. I have to keep track of these updates while drones are already flying.",
+     "sentences": [
+      "Closures can be amended during the day, like when an area gets bigger or an end time moves.",
+      "I have to keep track of these updates while drones are already flying."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Closures are often amended during the day, for example when an area is widened or an end time moves.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "Closures can be amended during the day, like when an area gets bigger or an end time moves."
+    },
+    {
+     "id": "D5",
+     "kind": "fact",
+     "question": "What does a closure mean for drones that are already in the air?",
+     "expect": "a closure can come into force while drones of several companies are flying (5.b2)",
+     "draft": "If a closure comes into force while drones are already flying, those drones may have to change their route or land early, depending on the rules and the closure’s details. I have to make sure the drones I’m responsible for can still fly safely.",
+     "sentences": [
+      "If a closure comes into force while drones are already flying, those drones may have to change their route or land early, depending on the rules and the closure’s details.",
+      "I have to make sure the drones I’m responsible for can still fly safely."
+     ],
+     "check": [
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "A closure can come into force while drones of several companies are already in the air.",
+       "dropped": null
+      }
+     ],
+     "answer": "I have to make sure the drones I’m responsible for can still fly safely."
+    },
+    {
+     "id": "D6",
+     "kind": "outside",
+     "question": "Which connector types do your charging pads use?",
+     "expect": "does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond \"several types, not interchangeable\")",
+     "draft": "I don’t know. The platform company handles the charging equipment, so they would know which connector types are in use.",
+     "sentences": [
+      "I don’t know.",
+      "The platform company handles the charging equipment, so they would know which connector types are in use."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "I don’t know.",
+       "dropped": "no source of at least 4 words"
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don't know."
+    },
+    {
+     "id": "D7",
+     "kind": "outside",
+     "question": "How much disruption did yesterday's closure cause across all the companies?",
+     "expect": "does not know the cross-company figure, or refers to the airspace desk (2.b3 is not in the dispatcher slice)",
+     "draft": "I don’t know. I only track my own company’s drones and jobs.",
+     "sentences": [
+      "I don’t know.",
+      "I only track my own company’s drones and jobs."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "D8",
+     "kind": "no-design",
+     "question": "How should the system store the routes internally?",
+     "expect": "has no view on internals; describes what it needs to know or decide",
+     "draft": "I don’t know.",
+     "sentences": [
+      "I don’t know."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      }
+     ],
+     "answer": "I don’t know."
+    }
+   ]
+  }
+ ],
+ "desk": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "A1",
+     "kind": "fact",
+     "question": "Whose information do you keep, and who uses it?",
+     "expect": "the shared airspace picture — corridors, zones, closures from the authorities — for all customer companies (2.b3)",
+     "draft": "I keep the shared airspace information—like flight corridors, zones, and closures announced by the authorities—that all our customer companies need to operate safely. The airspace desk uses it to update the service and track how closures affect everyone’s flights, but we don’t look at any one company’s drones, jobs, or staff. The companies themselves use the service to see the current airspace status and avoid disruptions.",
+     "sentences": [
+      "I keep the shared airspace information—like flight corridors, zones, and closures announced by the authorities—that all our customer companies need to operate safely.",
+      "The airspace desk uses it to update the service and track how closures affect everyone’s flights, but we don’t look at any one company’s drones, jobs, or staff.",
+      "The companies themselves use the service to see the current airspace status and avoid disruptions."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      },
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": "DONT_KNOW, but the sentence does not say so"
+      }
+     ],
+     "answer": "I keep the shared airspace information—like flight corridors, zones, and closures announced by the authorities—that all our customer companies need to operate safely."
+    },
+    {
+     "id": "A2",
+     "kind": "fact",
+     "question": "Can you look into one company's flights to see how a closure affected it?",
+     "expect": "no — the desk has no business looking into any one company's operations (2.b3)",
+     "draft": "I don’t know. The airspace desk only tracks shared airspace data—like closures and corridors—and doesn’t handle any one company’s flights or operations. If you need that, you’d have to ask the customer company itself.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace desk only tracks shared airspace data—like closures and corridors—and doesn’t handle any one company’s flights or operations.",
+      "If you need that, you’d have to ask the customer company itself."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "KEEP",
+       "source": "The airspace desk keeps the shared picture of the airspace: the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The desk works for all customer companies and has no business looking into any one company's operations.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know. The airspace desk only tracks shared airspace data—like closures and corridors—and doesn’t handle any one company’s flights or operations."
+    },
+    {
+     "id": "A3",
+     "kind": "fact",
+     "question": "What kinds of closures do the authorities announce?",
+     "expect": "planned ones with a start and end time, and sudden ones that apply at once (5.b1)",
+     "draft": "The authorities announce two kinds of closures: planned ones with a start and end time, and sudden ones that take effect immediately. Both can be changed during the day, like when an area is expanded or a deadline moves.",
+     "sentences": [
+      "The authorities announce two kinds of closures: planned ones with a start and end time, and sudden ones that take effect immediately.",
+      "Both can be changed during the day, like when an area is expanded or a deadline moves."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "The authorities define zones where flying is prohibited, and they announce closures: planned ones with a start and end time, and sudden ones that apply at once.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "The authorities announce two kinds of closures: planned ones with a start and end time, and sudden ones that take effect immediately."
+    },
+    {
+     "id": "A4",
+     "kind": "fact",
+     "question": "How often does the service you work with get restarted?",
+     "expect": "during working hours, while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)",
+     "draft": "The service is updated and restarted during working hours, while drones are flying.",
+     "sentences": [
+      "The service is updated and restarted during working hours, while drones are flying."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "It is updated and restarted during working hours, while drones are flying",
+       "dropped": null
+      }
+     ],
+     "answer": "The service is updated and restarted during working hours, while drones are flying."
+    },
+    {
+     "id": "A5",
+     "kind": "outside",
+     "question": "How many drones does each of your customers run?",
+     "expect": "does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)",
+     "draft": "I don’t know. The airspace desk doesn’t track individual drones or how many each customer operates.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace desk doesn’t track individual drones or how many each customer operates."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A6",
+     "kind": "outside",
+     "question": "What do technicians do when a drone comes back with a fault?",
+     "expect": "does not know, or refers to the companies' technicians (2.b1 is not in the desk slice)",
+     "draft": "I don’t know. The airspace desk only handles airspace information and closures, not the technical or operational details of individual drones or companies.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace desk only handles airspace information and closures, not the technical or operational details of individual drones or companies."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A7",
+     "kind": "outside",
+     "question": "Do the drones' reports reach the companies late or out of order?",
+     "expect": "does not know, or refers to the operating companies (6.b2 is not in the desk slice)",
+     "draft": "I don’t know. The airspace desk only handles shared airspace data, not individual drone operations or their reports.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace desk only handles shared airspace data, not individual drone operations or their reports."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A8",
+     "kind": "no-design",
+     "question": "Which database should keep the closures?",
+     "expect": "has no view on technology; describes what it needs from the information",
+     "draft": "I don’t know. I only work with the airspace desk’s shared data about closures, corridors, and zones.",
+     "sentences": [
+      "I don’t know.",
+      "I only work with the airspace desk’s shared data about closures, corridors, and zones."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "A1",
+     "kind": "fact",
+     "question": "Whose information do you keep, and who uses it?",
+     "expect": "the shared airspace picture — corridors, zones, closures from the authorities — for all customer companies (2.b3)",
+     "draft": "I keep the shared airspace information that the authorities provide—like flight corridors, zones, and closures—so all the customer companies can see it. The airspace desk uses it to update the service and track how closures affect everyone’s flights, but we don’t store or use any of the companies’ own data, like their fleets, jobs, or staff details.",
+     "sentences": [
+      "I keep the shared airspace information that the authorities provide—like flight corridors, zones, and closures—so all the customer companies can see it.",
+      "The airspace desk uses it to update the service and track how closures affect everyone’s flights, but we don’t store or use any of the companies’ own data, like their fleets, jobs, or staff details."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I keep the shared airspace information that the authorities provide—like flight corridors, zones, and closures—so all the customer companies can see it."
+    },
+    {
+     "id": "A2",
+     "kind": "fact",
+     "question": "Can you look into one company's flights to see how a closure affected it?",
+     "expect": "no — the desk has no business looking into any one company's operations (2.b3)",
+     "draft": "I don’t know. The airspace desk only tracks closures and their impact across all customers, not individual company operations.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace desk only tracks closures and their impact across all customers, not individual company operations."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A3",
+     "kind": "fact",
+     "question": "What kinds of closures do the authorities announce?",
+     "expect": "planned ones with a start and end time, and sudden ones that apply at once (5.b1)",
+     "draft": "The authorities announce two kinds of closures: planned closures, which have a start and end time, and sudden closures, which take effect immediately. Both can be amended during the day, like when an area is expanded or a planned end time changes.",
+     "sentences": [
+      "The authorities announce two kinds of closures: planned closures, which have a start and end time, and sudden closures, which take effect immediately.",
+      "Both can be amended during the day, like when an area is expanded or a planned end time changes."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Closures are often amended during the day, for example when an area is widened or an end time moves.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "The authorities announce two kinds of closures: planned closures, which have a start and end time, and sudden closures, which take effect immediately."
+    },
+    {
+     "id": "A4",
+     "kind": "fact",
+     "question": "How often does the service you work with get restarted?",
+     "expect": "during working hours, while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)",
+     "draft": "The service is updated and restarted during working hours, while drones are flying.",
+     "sentences": [
+      "The service is updated and restarted during working hours, while drones are flying."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "The service runs on a single server. It is updated and restarted during working hours, while drones are flying",
+       "dropped": null
+      }
+     ],
+     "answer": "The service is updated and restarted during working hours, while drones are flying."
+    },
+    {
+     "id": "A5",
+     "kind": "outside",
+     "question": "How many drones does each of your customers run?",
+     "expect": "does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)",
+     "draft": "I don’t know.",
+     "sentences": [
+      "I don’t know."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A6",
+     "kind": "outside",
+     "question": "What do technicians do when a drone comes back with a fault?",
+     "expect": "does not know, or refers to the companies' technicians (2.b1 is not in the desk slice)",
+     "draft": "I don’t know.",
+     "sentences": [
+      "I don’t know."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A7",
+     "kind": "outside",
+     "question": "Do the drones' reports reach the companies late or out of order?",
+     "expect": "does not know, or refers to the operating companies (6.b2 is not in the desk slice)",
+     "draft": "I don’t know.",
+     "sentences": [
+      "I don’t know."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A8",
+     "kind": "no-design",
+     "question": "Which database should keep the closures?",
+     "expect": "has no view on technology; describes what it needs from the information",
+     "draft": "I don’t know.",
+     "sentences": [
+      "I don’t know."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      }
+     ],
+     "answer": "I don’t know."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "A1",
+     "kind": "fact",
+     "question": "Whose information do you keep, and who uses it?",
+     "expect": "the shared airspace picture — corridors, zones, closures from the authorities — for all customer companies (2.b3)",
+     "draft": "I keep the shared airspace information—like flight corridors, zones, and closures announced by the authorities—that all our customer companies need to operate. The airspace desk uses it to update the service and track how closures affect everyone’s flights, but we don’t store or use any of the companies’ own data, like their fleets, jobs, or staff details.",
+     "sentences": [
+      "I keep the shared airspace information—like flight corridors, zones, and closures announced by the authorities—that all our customer companies need to operate.",
+      "The airspace desk uses it to update the service and track how closures affect everyone’s flights, but we don’t store or use any of the companies’ own data, like their fleets, jobs, or staff details."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities",
+       "dropped": null
+      },
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": "DONT_KNOW, but the sentence does not say so"
+      }
+     ],
+     "answer": "I keep the shared airspace information—like flight corridors, zones, and closures announced by the authorities—that all our customer companies need to operate."
+    },
+    {
+     "id": "A2",
+     "kind": "fact",
+     "question": "Can you look into one company's flights to see how a closure affected it?",
+     "expect": "no — the desk has no business looking into any one company's operations (2.b3)",
+     "draft": "I don’t know. The airspace desk only tracks shared airspace data—like closures, corridors, and zones—and doesn’t handle any one company’s flights or operations. I’d need to ask the customer companies themselves for their flight data.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace desk only tracks shared airspace data—like closures, corridors, and zones—and doesn’t handle any one company’s flights or operations.",
+      "I’d need to ask the customer companies themselves for their flight data."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "KEEP",
+       "source": "The airspace desk keeps the shared picture of the airspace: the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The desk works for all customer companies and has no business looking into any one company's operations.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know. The airspace desk only tracks shared airspace data—like closures, corridors, and zones—and doesn’t handle any one company’s flights or operations."
+    },
+    {
+     "id": "A3",
+     "kind": "fact",
+     "question": "What kinds of closures do the authorities announce?",
+     "expect": "planned ones with a start and end time, and sudden ones that apply at once (5.b1)",
+     "draft": "The authorities announce two kinds of closures: planned closures, which have a start and end time, and sudden closures, which take effect immediately. Both can be amended during the day, like when an area is expanded or a deadline changes.",
+     "sentences": [
+      "The authorities announce two kinds of closures: planned closures, which have a start and end time, and sudden closures, which take effect immediately.",
+      "Both can be amended during the day, like when an area is expanded or a deadline changes."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "Closures are often amended during the day, for example when an area is widened or an end time moves.",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "The authorities announce two kinds of closures: planned closures, which have a start and end time, and sudden closures, which take effect immediately."
+    },
+    {
+     "id": "A4",
+     "kind": "fact",
+     "question": "How often does the service you work with get restarted?",
+     "expect": "during working hours, while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)",
+     "draft": "The service is updated and restarted during working hours, while drones are flying.",
+     "sentences": [
+      "The service is updated and restarted during working hours, while drones are flying."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "The service runs on a single server. It is updated and restarted during working hours, while drones are flying",
+       "dropped": null
+      }
+     ],
+     "answer": "The service is updated and restarted during working hours, while drones are flying."
+    },
+    {
+     "id": "A5",
+     "kind": "outside",
+     "question": "How many drones does each of your customers run?",
+     "expect": "does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)",
+     "draft": "I don’t know. The airspace desk doesn’t track individual drones or their numbers—only the shared airspace data like corridors and closures.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace desk doesn’t track individual drones or their numbers—only the shared airspace data like corridors and closures."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A6",
+     "kind": "outside",
+     "question": "What do technicians do when a drone comes back with a fault?",
+     "expect": "does not know, or refers to the companies' technicians (2.b1 is not in the desk slice)",
+     "draft": "I don’t know. The airspace desk only handles airspace information and closures, not the drones themselves or their maintenance.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace desk only handles airspace information and closures, not the drones themselves or their maintenance."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A7",
+     "kind": "outside",
+     "question": "Do the drones' reports reach the companies late or out of order?",
+     "expect": "does not know, or refers to the operating companies (6.b2 is not in the desk slice)",
+     "draft": "I don’t know. The airspace desk only handles shared airspace data, not individual drone operations or reports.",
+     "sentences": [
+      "I don’t know.",
+      "The airspace desk only handles shared airspace data, not individual drone operations or reports."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    },
+    {
+     "id": "A8",
+     "kind": "no-design",
+     "question": "Which database should keep the closures?",
+     "expect": "has no view on technology; describes what it needs from the information",
+     "draft": "I don’t know. I only work with the airspace desk’s shared data about closures, corridors, and zones.",
+     "sentences": [
+      "I don’t know.",
+      "I only work with the airspace desk’s shared data about closures, corridors, and zones."
+     ],
+     "check": [
+      {
+       "verdict": "KEEP",
+       "source": "DONT_KNOW",
+       "dropped": null
+      },
+      {
+       "verdict": "DROP",
+       "source": null,
+       "dropped": "check"
+      }
+     ],
+     "answer": "I don’t know."
+    }
+   ]
+  }
+ ]
+}

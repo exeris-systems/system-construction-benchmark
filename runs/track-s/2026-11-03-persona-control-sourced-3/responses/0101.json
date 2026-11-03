@@ -1,0 +1,29 @@
+{
+ "id": "299ce8f15b714a78ae53717555339c3d",
+ "created": 1793708272,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1368,
+  "total_tokens": 1389,
+  "completion_tokens": 21,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, charging pads are never lent to another company—they belong to each company’s own sites."
+   }
+  }
+ ]
+}

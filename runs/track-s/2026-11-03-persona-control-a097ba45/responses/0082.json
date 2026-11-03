@@ -1,0 +1,29 @@
+{
+ "id": "f09938a61a054cd3b936c9a7b746aa36",
+ "created": 1793711764,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1240,
+  "total_tokens": 1335,
+  "completion_tokens": 95,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"DONT_KNOW\"\n    },\n    {\n      \"verdict\": \"DROP\",\n      \"source\": null\n    }\n  ]\n}"
+   }
+  }
+ ]
+}

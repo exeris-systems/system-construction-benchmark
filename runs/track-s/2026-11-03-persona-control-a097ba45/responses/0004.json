@@ -1,0 +1,29 @@
+{
+ "id": "db9796d5eb7648aa829f53109ca95f4b",
+ "created": 1793711604,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1424,
+  "total_tokens": 1498,
+  "completion_tokens": 74,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    },\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"Each drone has a home site. Each company has its own charging pads at its own sites, a few dozen of them. Pads are never lent to another company.\"\n    }\n]"
+   }
+  }
+ ]
+}

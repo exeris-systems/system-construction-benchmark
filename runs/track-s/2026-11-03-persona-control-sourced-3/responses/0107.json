@@ -1,0 +1,29 @@
+{
+ "id": "437d704c494442e0937e6b364b595eef",
+ "created": 1793708289,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1488,
+  "total_tokens": 1527,
+  "completion_tokens": 39,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace rules are set by the EU, and the platform company doesn’t plan or manage closures—it just follows the rules and shares information when required."
+   }
+  }
+ ]
+}

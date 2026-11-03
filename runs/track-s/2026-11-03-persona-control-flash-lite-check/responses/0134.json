@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"planned ones with a start and end time, and sudden ones that apply at once\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"Closures are often amended during the day, for example when an area is widened or an end time moves.\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"A closure can come into force while drones of several companies are already in the air.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TEJFJJPhbQV+dRIyA5QkX6bn+KA4MbUOXf+NUFepCJ8wf803qFeYVyMMxRlbTJBy1lcbEcXHPU1yXamiJJENe+IJE+E4S8GFFfj3G/yUvVwmUJZYIiEa+yOw="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1236,
+  "candidatesTokenCount": 131,
+  "totalTokenCount": 1367,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1236
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "terpapmaHPrcvdIPjPmEoAc"
+}

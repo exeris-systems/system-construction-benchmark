@@ -1,0 +1,604 @@
+{
+ "graded": {
+  "run": "runs/track-s/2026-11-03-persona-holdout-4",
+  "mode": "persona-holdout-4"
+ },
+ "summary": {
+  "byKind": {
+   "fact": {
+    "passing": 33,
+    "of": 42
+   },
+   "outside": {
+    "passing": 21,
+    "of": 21
+   },
+   "no-design": {
+    "passing": 9,
+    "of": 9
+   }
+  },
+  "passing": 63,
+  "of": 72,
+  "contradictingFact": [],
+  "passes": false
+ },
+ "grades": [
+  {
+   "session": "technician/1/LT1",
+   "id": "LT1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that multiple non-interchangeable connector types are used, and adds no outside information."
+  },
+  {
+   "session": "technician/1/LT2",
+   "id": "LT2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that the speaker, as a fleet technician, sets up the charging pads and adds only other responsibilities explicitly listed in the notes."
+  },
+  {
+   "session": "technician/1/LT3",
+   "id": "LT3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes and adds no outside information."
+  },
+  {
+   "session": "technician/1/LT4",
+   "id": "LT4",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes explicitly answer the question, so answering 'I don't know' fails for a fact question."
+  },
+  {
+   "session": "technician/1/LT5",
+   "id": "LT5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "technician/1/LT6",
+   "id": "LT6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and adds no extraneous information."
+  },
+  {
+   "session": "technician/1/LT7",
+   "id": "LT7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, adding nothing beyond that."
+  },
+  {
+   "session": "technician/1/LT8",
+   "id": "LT8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know, which is an acceptable response for a no-design question."
+  },
+  {
+   "session": "technician/2/LT1",
+   "id": "LT1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that multiple non-interchangeable connector types are used, and adds no outside information."
+  },
+  {
+   "session": "technician/2/LT2",
+   "id": "LT2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that the speaker, as a fleet technician, sets up the charging pads and adds only other responsibilities explicitly listed in the notes."
+  },
+  {
+   "session": "technician/2/LT3",
+   "id": "LT3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes and adds no outside information."
+  },
+  {
+   "session": "technician/2/LT4",
+   "id": "LT4",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes explicitly answer the question, so answering 'I don't know' fails for a fact question."
+  },
+  {
+   "session": "technician/2/LT5",
+   "id": "LT5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "technician/2/LT6",
+   "id": "LT6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which aligns with the notes not naming any manufacturers."
+  },
+  {
+   "session": "technician/2/LT7",
+   "id": "LT7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the notes."
+  },
+  {
+   "session": "technician/2/LT8",
+   "id": "LT8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know, which is an acceptable response for a no-design question."
+  },
+  {
+   "session": "technician/3/LT1",
+   "id": "LT1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that multiple non-interchangeable connector types are used, and adds no outside information."
+  },
+  {
+   "session": "technician/3/LT2",
+   "id": "LT2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that the speaker, as a fleet technician, sets up the charging pads and adds only other responsibilities explicitly listed in the notes."
+  },
+  {
+   "session": "technician/3/LT3",
+   "id": "LT3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes and adds no outside information."
+  },
+  {
+   "session": "technician/3/LT4",
+   "id": "LT4",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer claims not to know, but the notes directly address this question."
+  },
+  {
+   "session": "technician/3/LT5",
+   "id": "LT5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "technician/3/LT6",
+   "id": "LT6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and adds no extraneous information."
+  },
+  {
+   "session": "technician/3/LT7",
+   "id": "LT7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, adding nothing beyond that."
+  },
+  {
+   "session": "technician/3/LT8",
+   "id": "LT8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know, which is an acceptable response for a no-design question."
+  },
+  {
+   "session": "dispatcher/1/LD1",
+   "id": "LD1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that people and devices outside the company report this, matching the speaker's notes without adding extraneous information."
+  },
+  {
+   "session": "dispatcher/1/LD2",
+   "id": "LD2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding in-flight restarts and includes only facts directly supported by the notes."
+  },
+  {
+   "session": "dispatcher/1/LD3",
+   "id": "LD3",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes answer what the company's systems need from the service, so an answer claiming not to know fails."
+  },
+  {
+   "session": "dispatcher/1/LD4",
+   "id": "LD4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that the companies do not want several languages, in accordance with the notes, and adds no outside information."
+  },
+  {
+   "session": "dispatcher/1/LD5",
+   "id": "LD5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately confirms that closures can take effect while drones are in the air and adds only facts directly supported by the notes."
+  },
+  {
+   "session": "dispatcher/1/LD6",
+   "id": "LD6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The speaker correctly states that they do not know, as the information is outside the provided notes."
+  },
+  {
+   "session": "dispatcher/1/LD7",
+   "id": "LD7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which aligns with the requirements for an outside question."
+  },
+  {
+   "session": "dispatcher/1/LD8",
+   "id": "LD8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states what the dispatcher needs help with without proposing any software features, screens, or system mechanisms."
+  },
+  {
+   "session": "dispatcher/2/LD1",
+   "id": "LD1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that people and devices outside the company report this, matching the speaker's notes without adding extraneous information."
+  },
+  {
+   "session": "dispatcher/2/LD2",
+   "id": "LD2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding in-flight restarts and includes only facts directly supported by the notes."
+  },
+  {
+   "session": "dispatcher/2/LD3",
+   "id": "LD3",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes answer what the company's systems need from the service, so an answer claiming not to know fails."
+  },
+  {
+   "session": "dispatcher/2/LD4",
+   "id": "LD4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that the companies do not want several languages, in accordance with the notes, and adds no outside information."
+  },
+  {
+   "session": "dispatcher/2/LD5",
+   "id": "LD5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately confirms that closures can take effect while drones are in the air and adds only facts directly supported by the notes."
+  },
+  {
+   "session": "dispatcher/2/LD6",
+   "id": "LD6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The speaker correctly states that they do not know, as the information is outside the provided notes."
+  },
+  {
+   "session": "dispatcher/2/LD7",
+   "id": "LD7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which aligns with the requirements for an outside question."
+  },
+  {
+   "session": "dispatcher/2/LD8",
+   "id": "LD8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states what the dispatcher needs help with without proposing any software features, screens, or system mechanisms."
+  },
+  {
+   "session": "dispatcher/3/LD1",
+   "id": "LD1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that people and devices outside the company report this, matching the speaker's notes without adding extraneous information."
+  },
+  {
+   "session": "dispatcher/3/LD2",
+   "id": "LD2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding in-flight restarts and includes only facts directly supported by the notes."
+  },
+  {
+   "session": "dispatcher/3/LD3",
+   "id": "LD3",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes answer what the company's systems need from the service, so an answer claiming not to know fails."
+  },
+  {
+   "session": "dispatcher/3/LD4",
+   "id": "LD4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that the companies do not want several languages, in accordance with the notes, and adds no outside information."
+  },
+  {
+   "session": "dispatcher/3/LD5",
+   "id": "LD5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately confirms that closures can take effect while drones are in the air and adds only facts directly supported by the notes."
+  },
+  {
+   "session": "dispatcher/3/LD6",
+   "id": "LD6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The speaker correctly states that they do not know, as the information is outside the provided notes."
+  },
+  {
+   "session": "dispatcher/3/LD7",
+   "id": "LD7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which aligns with the requirements for an outside question."
+  },
+  {
+   "session": "dispatcher/3/LD8",
+   "id": "LD8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states what the dispatcher needs help with without proposing any software features, screens, or system mechanisms."
+  },
+  {
+   "session": "desk/1/LA1",
+   "id": "LA1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that the authorities announce the closures and includes details on planned and sudden closures directly supported by the notes."
+  },
+  {
+   "session": "desk/1/LA2",
+   "id": "LA2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes state that the companies do not want data-retention or deletion features, so saying 'I don't know' fails."
+  },
+  {
+   "session": "desk/1/LA3",
+   "id": "LA3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes and adds no outside information."
+  },
+  {
+   "session": "desk/1/LA4",
+   "id": "LA4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming the airspace desk works for all customer companies and maintaining the shared airspace picture without adding outside information."
+  },
+  {
+   "session": "desk/1/LA5",
+   "id": "LA5",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the provided notes."
+  },
+  {
+   "session": "desk/1/LA6",
+   "id": "LA6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the speaker's notes."
+  },
+  {
+   "session": "desk/1/LA7",
+   "id": "LA7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the notes."
+  },
+  {
+   "session": "desk/1/LA8",
+   "id": "LA8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer simply states that the speaker does not know, which is an acceptable response for a no-design question."
+  },
+  {
+   "session": "desk/2/LA1",
+   "id": "LA1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that the authorities announce the closures and includes details on planned and sudden closures directly supported by the notes."
+  },
+  {
+   "session": "desk/2/LA2",
+   "id": "LA2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes state that the companies do not want data-retention or deletion features, so saying 'I don't know' fails."
+  },
+  {
+   "session": "desk/2/LA3",
+   "id": "LA3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes and adds no outside information."
+  },
+  {
+   "session": "desk/2/LA4",
+   "id": "LA4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming the airspace desk works for all customer companies and maintaining the shared airspace picture without adding outside information."
+  },
+  {
+   "session": "desk/2/LA5",
+   "id": "LA5",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the provided notes."
+  },
+  {
+   "session": "desk/2/LA6",
+   "id": "LA6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the speaker's notes."
+  },
+  {
+   "session": "desk/2/LA7",
+   "id": "LA7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the notes."
+  },
+  {
+   "session": "desk/2/LA8",
+   "id": "LA8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer simply states that the speaker does not know, which is an acceptable response for a no-design question."
+  },
+  {
+   "session": "desk/3/LA1",
+   "id": "LA1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that the authorities announce the closures and includes details on planned and sudden closures directly supported by the notes."
+  },
+  {
+   "session": "desk/3/LA2",
+   "id": "LA2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes state that the companies do not want data-retention or deletion features, so saying 'I don't know' fails."
+  },
+  {
+   "session": "desk/3/LA3",
+   "id": "LA3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes and adds no outside information."
+  },
+  {
+   "session": "desk/3/LA4",
+   "id": "LA4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming the airspace desk works for all customer companies and maintaining the shared airspace picture without adding outside information."
+  },
+  {
+   "session": "desk/3/LA5",
+   "id": "LA5",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the provided notes."
+  },
+  {
+   "session": "desk/3/LA6",
+   "id": "LA6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the speaker's notes."
+  },
+  {
+   "session": "desk/3/LA7",
+   "id": "LA7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the notes."
+  },
+  {
+   "session": "desk/3/LA8",
+   "id": "LA8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer simply states that the speaker does not know, which is an acceptable response for a no-design question."
+  }
+ ]
+}

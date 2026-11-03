@@ -1,0 +1,29 @@
+{
+ "id": "742d8de078eb47a0bb732589c077417d",
+ "created": 1793708309,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1575,
+  "total_tokens": 1615,
+  "completion_tokens": 40,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, each site has limits on how many drones can take off or land at once. I have to make sure I don’t schedule too many flights at the same time from the same place."
+   }
+  }
+ ]
+}

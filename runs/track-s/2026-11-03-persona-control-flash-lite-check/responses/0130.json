@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"that information comes from the authorities and is the same for everyone\"\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TrHmrWYG6lfSlIm5D+dr5BC//ohTWhUMnKDJzKN3pjf3tW5KQgEUrAwELbuJaCDMY9dWq0eK4FgABAEIiK+j2CV/2UA+ZX4TD5KyTxda1+zGEmUtFAEbFDSM="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1260,
+  "candidatesTokenCount": 126,
+  "totalTokenCount": 1386,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1260
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "nerpaoaoHIuW3boP5cW-mAE"
+}

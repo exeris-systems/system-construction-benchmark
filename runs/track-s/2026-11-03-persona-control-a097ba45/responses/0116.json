@@ -1,0 +1,29 @@
+{
+ "id": "7ba4853fb5a7412399058fa9e5b0bd5d",
+ "created": 1793711833,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1643,
+  "total_tokens": 1736,
+  "completion_tokens": 93,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"software never chooses a drone or a way for them\"\n    },\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"DONT_KNOW\"\n    },\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"Dispatchers do want help finding out which of their drones could get to where a job starts.\"\n    }\n]"
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "fba4f7af02e64eeda410c1e2943fd292",
+ "created": 1793708164,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1334,
+  "total_tokens": 1370,
+  "completion_tokens": 36,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the charging pads are set up for specific drone models, and each company uses its own pads. I have to make sure the right drones go to the right pads."
+   }
+  }
+ ]
+}

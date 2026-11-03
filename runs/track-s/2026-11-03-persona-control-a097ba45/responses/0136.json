@@ -1,0 +1,29 @@
+{
+ "id": "202b5e0345b34294b966f8e2382ffa51",
+ "created": 1793711874,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1174,
+  "total_tokens": 1217,
+  "completion_tokens": 43,
+  "prompt_tokens_details": {
+   "cached_tokens": 1124
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"It is updated and restarted during working hours, while drones are flying\"\n    }\n  ]\n}"
+   }
+  }
+ ]
+}

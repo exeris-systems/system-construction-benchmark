@@ -1,0 +1,29 @@
+{
+ "id": "7a523de9bcb14832b2ed8f8cdfc68a9a",
+ "created": 1793708072,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1362,
+  "total_tokens": 1386,
+  "completion_tokens": 24,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, each company has its own charging pads at its own sites, and they are never lent to another company."
+   }
+  }
+ ]
+}

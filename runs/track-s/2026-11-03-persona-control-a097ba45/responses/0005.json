@@ -1,0 +1,29 @@
+{
+ "id": "fc49c7e2cb6241da9f8f53ef7499bd47",
+ "created": 1793711607,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1490,
+  "total_tokens": 1517,
+  "completion_tokens": 27,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, our company’s charging pads are only set up at our own sites and are never lent to or used by other companies."
+   }
+  }
+ ]
+}

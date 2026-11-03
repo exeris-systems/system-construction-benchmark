@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"Sites have only so many places where drones can take off and land at the same time.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TfkTaaAhu2ySRV/BngXWskkkEAWN6K2Y8i3pfYRHVzIfEP2ND+ATGO0hDHt2o8/bRZ/Wfg6/lZmVGm2VIoNyDtI6S7BtrJma0y7F6zW96bYC34+kY/86GNKs="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1611,
+  "candidatesTokenCount": 51,
+  "totalTokenCount": 1662,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1611
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "FejpavzRGtmL7M8Pke_SiQI"
+}

@@ -1,0 +1,29 @@
+{
+ "id": "8157ec8587074ef48452e04d72e9da88",
+ "created": 1793708176,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1453,
+  "total_tokens": 1481,
+  "completion_tokens": 28,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, reports from drones don’t always arrive, and they can come out of order, more than once, or not at all."
+   }
+  }
+ ]
+}

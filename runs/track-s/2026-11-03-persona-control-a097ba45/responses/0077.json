@@ -1,0 +1,29 @@
+{
+ "id": "40c9112159cf409b8ca8de0c1bbec235",
+ "created": 1793711752,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1841,
+  "total_tokens": 1864,
+  "completion_tokens": 23,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only track my own company’s drones and jobs, not those of other companies."
+   }
+  }
+ ]
+}

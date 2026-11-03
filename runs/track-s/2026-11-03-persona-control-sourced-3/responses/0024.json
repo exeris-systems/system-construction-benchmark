@@ -1,0 +1,29 @@
+{
+ "id": "f554095ef8f84a78bc89bfcc04c26f4d",
+ "created": 1793708109,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1610,
+  "total_tokens": 1672,
+  "completion_tokens": 62,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"Closures are often amended during the day, for example when an area is widened or an end time moves.\"\n    },\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    }\n]"
+   }
+  }
+ ]
+}

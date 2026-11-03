@@ -1,0 +1,29 @@
+{
+ "id": "3364704eb2914f51adee1bb823caa785",
+ "created": 1793708244,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1176,
+  "total_tokens": 1192,
+  "completion_tokens": 16,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service is updated and restarted during working hours, while drones are flying."
+   }
+  }
+ ]
+}

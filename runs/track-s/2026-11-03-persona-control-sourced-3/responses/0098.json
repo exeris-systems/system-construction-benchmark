@@ -1,0 +1,29 @@
+{
+ "id": "676081e32a4746ce81e794351bb350d7",
+ "created": 1793708266,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1434,
+  "total_tokens": 1502,
+  "completion_tokens": 68,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    },\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"A company may run a few hundred drones.\"\n    },\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    }\n]"
+   }
+  }
+ ]
+}

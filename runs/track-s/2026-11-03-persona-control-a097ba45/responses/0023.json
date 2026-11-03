@@ -1,0 +1,29 @@
+{
+ "id": "c9f0343256b345c1bf29b9685dd3ac95",
+ "created": 1793711643,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1714,
+  "total_tokens": 1737,
+  "completion_tokens": 23,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures can be amended during the day, such as when an area is widened or an end time moves."
+   }
+  }
+ ]
+}

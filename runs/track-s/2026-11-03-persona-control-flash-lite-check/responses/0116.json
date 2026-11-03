@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"DROP\",\n      \"source\": null\n    },\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"Dispatchers do want help finding out which of their drones could get to where a job starts.\"\n    }\n  ]\n}",
+      "thoughtSignature": "EmAKXgFpFH0TK6eVU/bcvETr6wmc1/OVLBRZ0f5ZzPMTlNuYEeXoPqAY03+PdMJn+uQkiOMcbdhLS9uNF/55IcNZ4CQ7Yp7ojxIUfgGe+kObyN3WUjMby/fgHJLleSQf5XE="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1648,
+  "candidatesTokenCount": 73,
+  "totalTokenCount": 1721,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1648
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "SerpapS2JuCCkdUPzYi4qAQ"
+}
