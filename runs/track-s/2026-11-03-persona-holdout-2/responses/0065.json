@@ -1,0 +1,29 @@
+{
+ "id": "d4428c101eb24a43b80ea8b3753b55cf",
+ "created": 1793702474,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1058,
+  "total_tokens": 1111,
+  "completion_tokens": 53,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Today, the platform serves a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. These companies are independent and compete with each other or work for clients who do. I don’t know who else might use the service in the future."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "f29f9fd5b3c44bbfafe3261b9b103be7",
+ "created": 1793702422,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1756,
+  "total_tokens": 1805,
+  "completion_tokens": 49,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, we don’t log in with our company’s own staff accounts. The platform company issues our accounts outside the service, so we use those instead. There’s no logging in through corporate identity systems—just the accounts we’re given."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "d78343b06080422a87d86f4a935903f3",
+ "created": 1793702389,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1209,
+  "total_tokens": 1230,
+  "completion_tokens": 21,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, new companies do not sign up through the service. The platform company handles that process itself."
+   }
+  }
+ ]
+}

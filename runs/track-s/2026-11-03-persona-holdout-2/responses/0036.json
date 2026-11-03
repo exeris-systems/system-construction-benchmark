@@ -1,0 +1,29 @@
+{
+ "id": "5037526cf0a941d0a23c7bf7694018a9",
+ "created": 1793702360,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1823,
+  "total_tokens": 1904,
+  "completion_tokens": 81,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I can’t be sure. The links used to give instructions to drones are unreliable—an instruction might get through twice, or not at all. I often can’t even tell if the first attempt arrived, so I have to assume it might not have worked. That’s why I always check the drone’s status and confirm it’s following the right plan before I sign off on a flight."
+   }
+  }
+ ]
+}

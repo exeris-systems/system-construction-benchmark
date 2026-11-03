@@ -1,0 +1,29 @@
+{
+ "id": "1933717b9ef94cc09ad9434f6b5fb673",
+ "created": 1793702314,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1645,
+  "total_tokens": 1720,
+  "completion_tokens": 75,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Each company we work with runs its own systems—like billing, customer updates, and operations—that need to know what’s happening with their drones and jobs. Those systems handle reaching the right people, so we don’t send alerts directly by email, text, or phone. The platform just makes sure the data gets to their own tools so they can manage it their way."
+   }
+  }
+ ]
+}

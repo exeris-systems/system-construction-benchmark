@@ -1,0 +1,29 @@
+{
+ "id": "93702760bb854a69af1227a0eb35227b",
+ "created": 1793702324,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1799,
+  "total_tokens": 1840,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how long a planned closure lasts—I don’t know who decides that. I just know the service gets updated or restarted during working hours, and it’s usually only a few minutes."
+   }
+  }
+ ]
+}

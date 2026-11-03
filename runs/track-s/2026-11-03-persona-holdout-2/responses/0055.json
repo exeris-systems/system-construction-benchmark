@@ -1,0 +1,29 @@
+{
+ "id": "e0b19944bcb04712983a14c88f324fd1",
+ "created": 1793702432,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1878,
+  "total_tokens": 1900,
+  "completion_tokens": 22,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how many dispatchers there are. I’m a fleet technician, not a dispatcher."
+   }
+  }
+ ]
+}

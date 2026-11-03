@@ -1,0 +1,29 @@
+{
+ "id": "df8fd62b697d4d40b2cf02db6830bcdc",
+ "created": 1793702230,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1695,
+  "total_tokens": 1788,
+  "completion_tokens": 93,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Yes, weather affects how far a drone can fly. Batteries drain faster in cold and wind than planned, so a drone might not reach its destination if I don’t account for that. I have to be careful when planning flights in bad conditions, because the drone could run out of power before it gets where it’s supposed to go. I don’t get weather updates through the service, though—I just have to think about it based on what I know."
+   }
+  }
+ ]
+}

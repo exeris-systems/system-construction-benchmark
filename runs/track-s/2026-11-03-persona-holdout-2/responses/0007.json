@@ -1,0 +1,29 @@
+{
+ "id": "8a7d3b883f6f40b7a42308a987754552",
+ "created": 1793702219,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1845,
+  "total_tokens": 1879,
+  "completion_tokens": 34,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how many dispatchers my company has. I’m a fleet technician, and my job is keeping drones and charging equipment working—not managing staff numbers."
+   }
+  }
+ ]
+}

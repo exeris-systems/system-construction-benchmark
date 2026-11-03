@@ -1,0 +1,29 @@
+{
+ "id": "d42618ed903740bb85aa266d5c9549f0",
+ "created": 1793702227,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1595,
+  "total_tokens": 1683,
+  "completion_tokens": 88,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Drones fly along corridors between named sites. Each site has only so many places where drones can take off and land at the same time. I have to make sure that when I plan a flight, the start and end sites have space available for the drone to land or take off without blocking other flights. The exact number of landing spots isn’t something I track—I just know that sites get busy, and I have to avoid conflicts."
+   }
+  }
+ ]
+}

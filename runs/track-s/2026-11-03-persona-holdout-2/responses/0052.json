@@ -1,0 +1,29 @@
+{
+ "id": "7e95a46d60de4bf5b0fd5e61f44dd2df",
+ "created": 1793702420,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1673,
+  "total_tokens": 1739,
+  "completion_tokens": 66,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Each company runs its own systems for billing, customer updates, and operations, so those systems need to hear about what happens to their drones and jobs. The platform doesn’t handle billing or pricing—those are managed separately by each company. I don’t know how they get the information, but their own systems must stay updated."
+   }
+  }
+ ]
+}

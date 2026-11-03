@@ -1,0 +1,29 @@
+{
+ "id": "b45cac4e2e564910b204ebe9081a12e4",
+ "created": 1793702350,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1583,
+  "total_tokens": 1690,
+  "completion_tokens": 107,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Drones fly along corridors between named sites. Each site has only so many places where drones can take off and land at the same time, so I have to check that there’s space before I send a drone. The authorities also define zones where flying is prohibited, and they can announce closures—either planned ones with a start and end time or sudden ones that apply right away. I have to make sure no drone flies through those zones or during closures, even if it’s already in the air when a closure happens."
+   }
+  }
+ ]
+}

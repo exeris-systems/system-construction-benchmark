@@ -1,0 +1,29 @@
+{
+ "id": "dcdb5046263c45ed809f9d4466c8742f",
+ "created": 1793702270,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1127,
+  "total_tokens": 1213,
+  "completion_tokens": 86,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The authorities define **geographical zones** where flying is restricted or prohibited, as well as the **rules for drone operations** under the EU drone operation rules (Implementing Regulation (EU) 2019/947). These zones and rules apply to all drone operators using the platform, but we don’t get involved in how each company follows them—only in keeping track of the airspace itself."
+   }
+  }
+ ]
+}

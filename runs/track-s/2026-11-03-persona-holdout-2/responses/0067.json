@@ -1,0 +1,29 @@
+{
+ "id": "6e0b9066ae104f19a45517c561b840c2",
+ "created": 1793702489,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1174,
+  "total_tokens": 1214,
+  "completion_tokens": 40,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service runs on a single server. It is updated and restarted during working hours, which can cause a few minutes of interruption. It also occasionally crashes, but the companies accept these interruptions."
+   }
+  }
+ ]
+}

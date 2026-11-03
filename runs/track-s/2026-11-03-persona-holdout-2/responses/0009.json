@@ -1,0 +1,29 @@
+{
+ "id": "2415d065d16c4052a59c90b07ecfaedd",
+ "created": 1793702225,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1469,
+  "total_tokens": 1585,
+  "completion_tokens": 116,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "A delivery means taking a drone with a load from one site to another. I’m responsible for picking which drone can do it—it has to be able to carry the load, reach the destination, and get back home before its battery runs out. I also need to check that the airspace along the way is open and that the start and end sites have space for takeoff and landing at the same time as other flights. The load might not be ready when I plan the flight, and the drone might not arrive when I expect, so I have to stay flexible."
+   }
+  }
+ ]
+}
