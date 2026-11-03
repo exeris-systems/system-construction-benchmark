@@ -1,0 +1,266 @@
+# Grader control set — the calibration of the Track S grader (decision register D-53).
+#
+# Each case is an answer written for a question of persona-control.yaml, with the verdict the rules
+# of procedure.md give it. The grader sees the case's role's slice, kind, question and expect, and the
+# answer; never `verdict` or `contradicts`. It passes when it agrees with at least 33 of the 36
+# verdicts and passes no case marked `contradicts: true`. Per question: one answer that passes, and
+# two that fail for the reasons the persona's runs failed — an addition, a guess or referral, a
+# design, a claim for another organisation, or a contradiction.
+
+technician:
+  - id: GT1
+    kind: fact
+    question: How many drones does your company run, roughly?
+    expect: a few hundred (3.b1)
+    answer: My company runs a few hundred drones.
+    verdict: PASS
+    contradicts: false
+  - id: GT2
+    kind: fact
+    question: How many drones does your company run, roughly?
+    expect: a few hundred (3.b1)
+    answer: We run about 350 drones at the moment.
+    verdict: FAIL
+    contradicts: false
+  - id: GT3
+    kind: fact
+    question: How many drones does your company run, roughly?
+    expect: a few hundred (3.b1)
+    answer: I don't know how many drones the platform company runs in total; each customer runs a few hundred.
+    verdict: FAIL
+    contradicts: false
+  - id: GT4
+    kind: fact
+    question: Do the reports from your drones always reach you, and in order?
+    expect: no — late, out of order, more than once, or not at all (6.b2)
+    answer: No. They can come late, out of order, more than once, or not at all, especially where radio coverage is patchy.
+    verdict: PASS
+    contradicts: false
+  - id: GT5
+    kind: fact
+    question: Do the reports from your drones always reach you, and in order?
+    expect: no — late, out of order, more than once, or not at all (6.b2)
+    answer: No, they are often late because the relay stations are overloaded at the start of each shift.
+    verdict: FAIL
+    contradicts: false
+  - id: GT6
+    kind: fact
+    question: Do the reports from your drones always reach you, and in order?
+    expect: no — late, out of order, more than once, or not at all (6.b2)
+    answer: Yes, every report comes through, and always in the right order.
+    verdict: FAIL
+    contradicts: true
+  - id: GT7
+    kind: outside
+    question: Which drone does a dispatcher pick for a delivery, and along which corridor?
+    expect: does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)
+    answer: I don't know. That is the dispatcher's decision, not mine.
+    verdict: PASS
+    contradicts: false
+  - id: GT8
+    kind: outside
+    question: Which drone does a dispatcher pick for a delivery, and along which corridor?
+    expect: does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)
+    answer: I don't know, but I think they take whichever drone is closest and fully charged.
+    verdict: FAIL
+    contradicts: false
+  - id: GT9
+    kind: outside
+    question: Which drone does a dispatcher pick for a delivery, and along which corridor?
+    expect: does not know the dispatcher's choice, or refers to the dispatcher (2.b2 is not in the technician slice)
+    answer: The service picks the drone and the corridor automatically for each delivery.
+    verdict: FAIL
+    contradicts: true
+  - id: GT10
+    kind: no-design
+    question: What screens and buttons should the new service have?
+    expect: describes needs and worries, proposes no screens, features or mechanisms
+    answer: I don't know about screens. I need to know which drones are out for repairs, and I worry about sending a drone to a pad that does not fit it.
+    verdict: PASS
+    contradicts: false
+  - id: GT11
+    kind: no-design
+    question: What screens and buttons should the new service have?
+    expect: describes needs and worries, proposes no screens, features or mechanisms
+    answer: It should have a fleet screen with a button to retire a drone and a map of all the pads.
+    verdict: FAIL
+    contradicts: false
+  - id: GT12
+    kind: no-design
+    question: What screens and buttons should the new service have?
+    expect: describes needs and worries, proposes no screens, features or mechanisms
+    answer: The service should warn me before a drone is sent to a pad with the wrong connector.
+    verdict: FAIL
+    contradicts: false
+
+dispatcher:
+  - id: GD1
+    kind: fact
+    question: Would you like the software to pick the drone for you?
+    expect: no — company policy is that software never chooses a drone or a way (4.b4)
+    answer: No. Our policy is that software never chooses a drone or a way for us, but I want help seeing which drones could get to where a job starts.
+    verdict: PASS
+    contradicts: false
+  - id: GD2
+    kind: fact
+    question: Would you like the software to pick the drone for you?
+    expect: no — company policy is that software never chooses a drone or a way (4.b4)
+    answer: No, and the regulator fines any company that lets software pick its drones.
+    verdict: FAIL
+    contradicts: false
+  - id: GD3
+    kind: fact
+    question: Would you like the software to pick the drone for you?
+    expect: no — company policy is that software never chooses a drone or a way (4.b4)
+    answer: Yes, I would be glad if the software picked the drone for me.
+    verdict: FAIL
+    contradicts: true
+  - id: GD4
+    kind: fact
+    question: Can several flights take off from the same site at the same moment?
+    expect: only up to the number of take-off and landing places the site has (4.b3)
+    answer: Only as many as the site has places to take off and land at the same time.
+    verdict: PASS
+    contradicts: false
+  - id: GD5
+    kind: fact
+    question: Can several flights take off from the same site at the same moment?
+    expect: only up to the number of take-off and landing places the site has (4.b3)
+    answer: No, a site can launch at most two drones at a time.
+    verdict: FAIL
+    contradicts: false
+  - id: GD6
+    kind: fact
+    question: Can several flights take off from the same site at the same moment?
+    expect: only up to the number of take-off and landing places the site has (4.b3)
+    answer: Sites have only so many take-off places, so I keep a spreadsheet of the free places at each site.
+    verdict: FAIL
+    contradicts: false
+  - id: GD7
+    kind: outside
+    question: Which connector types do your charging pads use?
+    expect: does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond "several types, not interchangeable")
+    answer: I don't know which types they are, only that there are several and they are not interchangeable.
+    verdict: PASS
+    contradicts: false
+  - id: GD8
+    kind: outside
+    question: Which connector types do your charging pads use?
+    expect: does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond "several types, not interchangeable")
+    answer: I don't know. The platform company manages the charging pads, so they would know.
+    verdict: FAIL
+    contradicts: true
+  - id: GD9
+    kind: outside
+    question: Which connector types do your charging pads use?
+    expect: does not know the connector types, or refers to the technicians (connector detail is not in the dispatcher slice beyond "several types, not interchangeable")
+    answer: Most of our pads take USB-C, and a few older ones take XT60.
+    verdict: FAIL
+    contradicts: false
+  - id: GD10
+    kind: no-design
+    question: How should the system store the routes internally?
+    expect: has no view on internals; describes what it needs to know or decide
+    answer: I don't know how it should store anything. I need to see the corridors between our sites and know when one is closed.
+    verdict: PASS
+    contradicts: false
+  - id: GD11
+    kind: no-design
+    question: How should the system store the routes internally?
+    expect: has no view on internals; describes what it needs to know or decide
+    answer: It should keep the routes in a graph database with one node for each site.
+    verdict: FAIL
+    contradicts: false
+  - id: GD12
+    kind: no-design
+    question: How should the system store the routes internally?
+    expect: has no view on internals; describes what it needs to know or decide
+    answer: I don't know, but the routes should be cached so that they load quickly on my screen.
+    verdict: FAIL
+    contradicts: false
+
+desk:
+  - id: GA1
+    kind: fact
+    question: Can you look into one company's flights to see how a closure affected it?
+    expect: no — the desk has no business looking into any one company's operations (2.b3)
+    answer: No. The desk works for all the customer companies and has no business looking into any one company's operations.
+    verdict: PASS
+    contradicts: false
+  - id: GA2
+    kind: fact
+    question: Can you look into one company's flights to see how a closure affected it?
+    expect: no — the desk has no business looking into any one company's operations (2.b3)
+    answer: I don't know.
+    verdict: FAIL
+    contradicts: false
+  - id: GA3
+    kind: fact
+    question: Can you look into one company's flights to see how a closure affected it?
+    expect: no — the desk has no business looking into any one company's operations (2.b3)
+    answer: Yes, I can open any company's flight log and see which of its flights the closure hit.
+    verdict: FAIL
+    contradicts: true
+  - id: GA4
+    kind: fact
+    question: What kinds of closures do the authorities announce?
+    expect: planned ones with a start and end time, and sudden ones that apply at once (5.b1)
+    answer: Planned closures with a start and end time, and sudden ones that apply at once.
+    verdict: PASS
+    contradicts: false
+  - id: GA5
+    kind: fact
+    question: What kinds of closures do the authorities announce?
+    expect: planned ones with a start and end time, and sudden ones that apply at once (5.b1)
+    answer: Planned ones and sudden ones; the sudden ones usually last less than an hour.
+    verdict: FAIL
+    contradicts: false
+  - id: GA6
+    kind: fact
+    question: What kinds of closures do the authorities announce?
+    expect: planned ones with a start and end time, and sudden ones that apply at once (5.b1)
+    answer: Only planned closures, always announced with a start and end time.
+    verdict: FAIL
+    contradicts: true
+  - id: GA7
+    kind: outside
+    question: How many drones does each of your customers run?
+    expect: does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)
+    answer: I don't know; that is each company's own business.
+    verdict: PASS
+    contradicts: false
+  - id: GA8
+    kind: outside
+    question: How many drones does each of your customers run?
+    expect: does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)
+    answer: I don't know exactly, maybe fifty to a hundred each.
+    verdict: FAIL
+    contradicts: false
+  - id: GA9
+    kind: outside
+    question: How many drones does each of your customers run?
+    expect: does not know, or says it is the companies' own business (fleet sizes are not in the desk slice)
+    answer: I don't know, but the platform's sales team would.
+    verdict: FAIL
+    contradicts: false
+  - id: GA10
+    kind: no-design
+    question: Which database should keep the closures?
+    expect: has no view on technology; describes what it needs from the information
+    answer: I don't know about databases. I need the closures, with every change to them, to be right and up to date for every customer.
+    verdict: PASS
+    contradicts: false
+  - id: GA11
+    kind: no-design
+    question: Which database should keep the closures?
+    expect: has no view on technology; describes what it needs from the information
+    answer: The closures should go in PostgreSQL, with a history table for the amendments.
+    verdict: FAIL
+    contradicts: false
+  - id: GA12
+    kind: no-design
+    question: Which database should keep the closures?
+    expect: has no view on technology; describes what it needs from the information
+    answer: The service must keep every version of a closure so that we can see its history.
+    verdict: FAIL
+    contradicts: false

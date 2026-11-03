@@ -119,24 +119,60 @@ class ClientTest(unittest.TestCase):
         self.client.call("s", "system", [("user", "q")], json_reply=True)
         self.assertEqual(sent[0]["response_format"], {"type": "json_object"})
 
-    def test_check_keeps_only_the_kept_sentences(self):
-        self.replies = [Reply(answer('{"verdicts": ["KEEP", "DROP", "keep"]}', "stop"), headers())]
-        result = ts.check(self.client, "{{ROLE}} {{NOTES}}", "technician", "notes", "s", "q",
-                          "We have pads. The platform owns them.\nI worry about that.")
-        self.assertEqual(result["sentences"], ["We have pads.", "The platform owns them.", "I worry about that."])
-        self.assertEqual(result["answer"], "We have pads. I worry about that.")
-        self.assertEqual(result["draft"], "We have pads. The platform owns them.\nI worry about that.")
+    def check_reply(self, *items):
+        return Reply(answer(json.dumps({"sentences": [{"verdict": v, "source": src} for v, src in items]}), "stop"), headers())
+
+    def test_check_keeps_only_kept_sentences_whose_source_holds(self):
+        notes = "Each company has its own charging pads at its own sites."
+        self.replies = [self.check_reply(("KEEP", "its own charging pads at"), ("DROP", None),
+                                         ("KEEP", "FEELING"), ("KEEP", "pads are lent to anyone"))]
+        result = ts.check(self.client, "{{ROLE}} {{NOTES}}", "technician", notes, "s", "q",
+                          "We have our own pads. The platform owns them.\nI worry about that. Pads are lent to anyone.")
+        self.assertEqual(result["answer"], "We have our own pads. I worry about that.")
+        self.assertEqual([i["dropped"] for i in result["check"]],
+                         [None, "check", None, "the source is not in the notes"])
+
+    def test_source_must_be_long_enough_and_dont_know_must_say_so(self):
+        notes = "Pads are never lent to another company."
+        self.assertIsNone(ts.source_holds("x", "Pads are NEVER lent, to another", notes))
+        self.assertEqual(ts.source_holds("x", "never lent", notes), "no source of at least 4 words")
+        self.assertEqual(ts.source_holds("x", None, notes), "no source of at least 4 words")
+        self.assertIsNone(ts.source_holds("I don\u2019t know.", "DONT_KNOW", notes))
+        self.assertIsNotNone(ts.source_holds("The platform handles it.", "DONT_KNOW", notes))
 
     def test_check_that_drops_everything_leaves_i_do_not_know(self):
-        self.replies = [Reply(answer('{"verdicts": ["DROP"]}', "stop"), headers())]
+        self.replies = [self.check_reply(("DROP", None))]
         result = ts.check(self.client, "{{ROLE}} {{NOTES}}", "desk", "notes", "s", "q", "It keeps versions.")
         self.assertEqual(result["answer"], ts.NOTHING_LEFT)
 
     def test_check_reply_of_the_wrong_shape_fails_the_run(self):
-        for reply in ('{"verdicts": ["KEEP"]}', '{"verdicts": ["KEEP", "MAYBE"]}', "KEEP KEEP", '["KEEP", "KEEP"]'):
+        bad = ('{"sentences": [{"verdict": "KEEP", "source": "a b c d"}]}',
+               '{"sentences": [{"verdict": "MAYBE"}, {"verdict": "KEEP"}]}',
+               '{"verdicts": ["KEEP", "KEEP"]}', "KEEP KEEP", '[1, 2]')
+        for reply in bad:
             self.replies = [Reply(answer(reply, "stop"), headers())]
             with self.assertRaises(ts.RunFailed, msg=reply):
                 ts.check(self.client, "{{ROLE}} {{NOTES}}", "desk", "notes", "s", "q", "One. Two.")
+
+    def test_grade_reply_is_parsed_or_refused(self):
+        self.assertEqual(ts.parse_grade('{"verdict": "pass", "contradicts": false, "reason": "r"}'),
+                         {"verdict": "PASS", "contradicts": False, "reason": "r"})
+        for reply in ('{"verdict": "PASS"}', '{"verdict": "OK", "contradicts": false}',
+                      '{"verdict": "FAIL", "contradicts": "no"}', "PASS", "[]"):
+            self.assertIsNone(ts.parse_grade(reply), reply)
+
+    def test_summary_passes_only_at_the_threshold_without_contradiction(self):
+        grades = [{"session": f"s{i}", "kind": "fact", "verdict": "PASS", "contradicts": False} for i in range(72)]
+        self.assertTrue(ts.summarize(grades)["passes"])
+        for g in grades[:8]:
+            g["verdict"] = "FAIL"
+        self.assertFalse(ts.summarize(grades)["passes"])
+        self.assertEqual(ts.summarize(grades)["passing"], 64)
+        grades[0].update(verdict="FAIL", contradicts=True)
+        for g in grades[1:8]:
+            g["verdict"] = "PASS"
+        self.assertEqual(ts.summarize(grades)["contradictingFact"], ["s0"])
+        self.assertFalse(ts.summarize(grades)["passes"])
 
     def test_non_natural_finish_fails_the_run(self):
         self.replies = [Reply(answer("cut", "length"), headers())]
@@ -227,7 +263,8 @@ class ModeTest(unittest.TestCase):
     def test_checked_mode_records_draft_and_verdicts(self):
         def reply(request, timeout=0):
             checking = "response_format" in json.loads(request.data)
-            return Reply(answer('{"verdicts": ["KEEP"]}' if checking else "I don't know.", "stop"), headers())
+            check = json.dumps({"sentences": [{"verdict": "KEEP", "source": "DONT_KNOW"}]})
+            return Reply(answer(check if checking else "I don't know.", "stop"), headers())
         ts.urllib.request.urlopen = reply
         out = pathlib.Path(tempfile.mkdtemp())
         args = argparse.Namespace(mode="persona-holdout-3", persona_provider="mistral", persona_model="m",
@@ -237,8 +274,34 @@ class ModeTest(unittest.TestCase):
         files = {name: (HERE / name).read_text() for name in names}
         ts.persona_control(args, files, {role: "notes" for role in ts.ROLES}, out, {})
         first = json.loads((out / "persona-holdout-3.json").read_text())["technician"][0]["answers"][0]
-        self.assertEqual((first["draft"], first["verdicts"], first["answer"]), ("I don't know.", ["KEEP"], "I don't know."))
+        self.assertEqual((first["draft"], first["check"][0]["dropped"], first["answer"]), ("I don't know.", None, "I don't know."))
         self.assertEqual(len((out / "calls.jsonl").read_text().splitlines()), 2 * 24)
+
+
+    def test_grader_control_counts_agreement(self):
+        ts.urllib.request.urlopen = lambda request, timeout=0: Reply(
+            answer('{"verdict": "FAIL", "contradicts": false, "reason": "r"}', "stop"), headers())
+        out = pathlib.Path(tempfile.mkdtemp())
+        files = {name: (HERE / name).read_text() for name in (ts.GRADER_FILE, ts.GRADER_CONTROL_FILE)}
+        grader = ts.Client("grader", "mistral", "g", 60_000, 100, ts.Recorder(out), 0.0, 1)
+        ts.grader_control(None, files, {role: "notes" for role in ts.ROLES}, out, {}, grader)
+        summary = json.loads((out / "grader-control.json").read_text())["summary"]
+        self.assertEqual((summary["agreeing"], summary["of"]), (24, 36))
+        self.assertEqual(summary["passedContradictions"], [])
+
+    def test_grade_run_grades_every_answer_of_the_run(self):
+        ts.urllib.request.urlopen = lambda request, timeout=0: Reply(
+            answer('{"verdict": "PASS", "contradicts": false, "reason": "r"}', "stop"), headers())
+        answers = {role: [{"repetition": 1, "answers": [{"id": "X1", "kind": "fact", "question": "q", "expect": "e",
+                                                         "answer": "a"}]}] for role in ts.ROLES}
+        files = {ts.GRADER_FILE: (HERE / ts.GRADER_FILE).read_text(),
+                 "graded-run.json": json.dumps({"mode": "persona-holdout-4"}), "graded-answers.json": json.dumps(answers)}
+        out = pathlib.Path(tempfile.mkdtemp())
+        grader = ts.Client("grader", "mistral", "g", 60_000, 100, ts.Recorder(out), 0.0, 1)
+        ts.grade_run(argparse.Namespace(graded="r"), files, {role: "notes" for role in ts.ROLES}, out, {}, grader)
+        result = json.loads((out / "grades.json").read_text())
+        self.assertEqual(len(result["grades"]), 3)
+        self.assertFalse(result["summary"]["passes"])  # three answers are not a deciding run of 72
 
 
 class InputTest(unittest.TestCase):
@@ -286,6 +349,18 @@ class InputTest(unittest.TestCase):
             capture_output=True, text=True, env=env)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("MISTRAL_API_KEY", result.stderr)
+        self.assertFalse(out.exists())
+
+    def test_grade_refuses_a_run_that_is_not_a_completed_persona_run(self):
+        env = {**os.environ, "MISTRAL_API_KEY": "test-key"}
+        graded = pathlib.Path(tempfile.mkdtemp())
+        (graded / "run.json").write_text(json.dumps({"mode": "persona-control", "status": "failed", "inputSha256": {}}))
+        (graded / "persona-control.json").write_text("{}")
+        out = HERE.parent / "runs" / "track-s" / "test-grade-should-not-exist"
+        result = subprocess.run([sys.executable, "-I", str(SCRIPT), "grade", "--grader-model", "g",
+                                 "--graded", str(graded), "--out", str(out)], capture_output=True, text=True, env=env)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("only a completed persona run is graded", result.stderr)
         self.assertFalse(out.exists())
 
     def test_non_positive_rate_is_refused(self):

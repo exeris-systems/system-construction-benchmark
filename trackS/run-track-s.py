@@ -7,9 +7,14 @@ Modes:
   persona-holdout   the same, with the held-out questions (persona-holdout.yaml)
   persona-holdout-2 the same, with the second held-out set (persona-holdout-2.yaml)
   persona-holdout-3 the same, with the third held-out set (persona-holdout-3.yaml)
+  persona-holdout-4 the same, with the fourth held-out set (persona-holdout-4.yaml)
 
 With --persona-check, each answer is checked sentence by sentence against the persona's notes
-(persona-check-prompt.md) by the same model, and only the sentences it keeps are the answer.
+(persona-check-prompt.md) by the same model: a sentence stays only when the check keeps it and its
+quoted source is found in the notes.
+
+  grader-control    ask the grader to grade the cases of grader-control.yaml, whose verdicts are known
+  grade             grade every answer of a completed persona run (--graded) with the grader
 
 Each role names a provider and a model. Every request and response is written to the output
 directory verbatim, with every response header that reports a rate limit and the body of every 429,
@@ -37,11 +42,19 @@ RUNS = HERE.parent / "runs" / "track-s"
 CONTROL_FILE = "persona-control.yaml"
 HOLDOUT_FILE = "persona-holdout.yaml"
 CHECK_FILE = "persona-check-prompt.md"
+GRADER_FILE = "grader-prompt.md"
+GRADER_CONTROL_FILE = "grader-control.yaml"
+# The persona passes a deciding run at this many passing answers of 72, with no contradiction (D-50).
+PASS_AT = 65
+# A quoted source shorter than this matches too much of any notes to show where a sentence comes from.
+MIN_SOURCE_WORDS = 4
 # What the persona says when the check drops every sentence of its answer.
 NOTHING_LEFT = "I don't know."
 # Each persona mode asks the questions of one set file and writes its answers under the mode's name.
 QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FILE,
-                 "persona-holdout-2": "persona-holdout-2.yaml", "persona-holdout-3": "persona-holdout-3.yaml"}
+                 "persona-holdout-2": "persona-holdout-2.yaml", "persona-holdout-3": "persona-holdout-3.yaml",
+                 "persona-holdout-4": "persona-holdout-4.yaml"}
+GRADE_MODES = ("grader-control", "grade")
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
 
@@ -124,16 +137,55 @@ def split_sentences(text):
     return sentences
 
 
-def parse_verdicts(text, count):
-    """The check's KEEP or DROP for each of count sentences, or None if the reply is not exactly that."""
+def parse_check(text, count):
+    """The check's {verdict, source} for each of count sentences, or None if the reply is not exactly that."""
     try:
-        verdicts = json.loads(text).get("verdicts")
+        items = json.loads(text).get("sentences")
     except (ValueError, AttributeError):
         return None
-    if not isinstance(verdicts, list) or len(verdicts) != count:
+    if not isinstance(items, list) or len(items) != count:
         return None
-    verdicts = [v.strip().upper() if isinstance(v, str) else v for v in verdicts]
-    return verdicts if all(v in ("KEEP", "DROP") for v in verdicts) else None
+    parsed = []
+    for item in items:
+        if not isinstance(item, dict) or not isinstance(item.get("verdict"), str):
+            return None
+        verdict, source = item["verdict"].strip().upper(), item.get("source")
+        if verdict not in ("KEEP", "DROP") or not isinstance(source, (str, type(None))):
+            return None
+        parsed.append({"verdict": verdict, "source": source})
+    return parsed
+
+
+def normalize(text):
+    """Lower case, letters and digits only, single spaces: a quote matches however it is punctuated."""
+    text = text.lower().replace("\u2019", "'").replace("\u2018", "'")
+    return " ".join(re.sub(r"[^a-z0-9']+", " ", text).split())
+
+
+def source_holds(sentence, source, notes):
+    """Why a kept sentence's source does not hold, or None when it does."""
+    if source == "DONT_KNOW":
+        said = normalize(sentence)
+        return None if ("don't know" in said or "do not know" in said) else "DONT_KNOW, but the sentence does not say so"
+    if source == "FEELING":
+        return None
+    if not source or len(normalize(source).split()) < MIN_SOURCE_WORDS:
+        return f"no source of at least {MIN_SOURCE_WORDS} words"
+    return None if normalize(source) in normalize(notes) else "the source is not in the notes"
+
+
+def parse_grade(text):
+    """The grader's {verdict, contradicts, reason}, or None if the reply is not exactly that."""
+    try:
+        grade = json.loads(text)
+    except ValueError:
+        return None
+    if not isinstance(grade, dict) or not isinstance(grade.get("verdict"), str):
+        return None
+    verdict = grade["verdict"].strip().upper()
+    if verdict not in ("PASS", "FAIL") or not isinstance(grade.get("contradicts"), bool):
+        return None
+    return {"verdict": verdict, "contradicts": grade["contradicts"], "reason": str(grade.get("reason", ""))}
 
 
 def render(units, ids):
@@ -383,39 +435,109 @@ def persona_control(args, files, notes, out, run):
 
 
 def check(persona, prompt, role, notes, session, question, draft):
-    """Keep only the sentences of the draft that the check finds in the notes; it never rewrites one."""
+    """Keep only the sentences of the draft that the check keeps and grounds in the notes; never rewrite one."""
     sentences = split_sentences(draft)
     system = prompt.replace("{{ROLE}}", ROLES[role]).replace("{{NOTES}}", notes)
     listed = "\n".join(f"{i}. {s}" for i, s in enumerate(sentences, 1))
     reply = persona.call(f"{session}/check", system, [("user", f"Question: {question}\n\nAnswer:\n{listed}")],
                          json_reply=True)
-    verdicts = parse_verdicts(reply, len(sentences))
-    if verdicts is None:
-        raise RunFailed(f"{session}/check: the reply is not one KEEP or DROP for each of {len(sentences)} sentences")
-    kept = [s for s, v in zip(sentences, verdicts) if v == "KEEP"]
-    return {"draft": draft, "sentences": sentences, "verdicts": verdicts,
+    items = parse_check(reply, len(sentences))
+    if items is None:
+        raise RunFailed(f"{session}/check: the reply is not one verdict and source for each of {len(sentences)} sentences")
+    kept = []
+    for sentence, item in zip(sentences, items):
+        # A sentence the check keeps still goes when its source is not where the check says it is:
+        # the quote is tested against the notes by the script, not taken on the check's word.
+        item["dropped"] = None if item["verdict"] == "KEEP" else "check"
+        if item["verdict"] == "KEEP":
+            item["dropped"] = source_holds(sentence, item["source"], notes)
+        if item["dropped"] is None:
+            kept.append(sentence)
+    return {"draft": draft, "sentences": sentences, "check": items,
             "answer": " ".join(kept) if kept else NOTHING_LEFT}
+
+
+def grade_one(grader, prompt, role, notes, session, item, answer):
+    system = prompt.replace("{{ROLE}}", ROLES[role]).replace("{{NOTES}}", notes)
+    asked = (f"Kind: {item['kind']}\nQuestion: {item['question']}\nWhat the notes support: {item['expect']}\n\n"
+             f"Answer:\n{answer}")
+    grade = parse_grade(grader.call(session, system, [("user", asked)], json_reply=True))
+    if grade is None:
+        raise RunFailed(f"{session}: the grade is not a verdict, a contradicts flag and a reason")
+    return grade
+
+
+def summarize(grades):
+    """Passing answers by kind, contradicting fact answers, and whether the persona passes (D-50)."""
+    kinds = {}
+    for g in grades:
+        k = kinds.setdefault(g["kind"], {"passing": 0, "of": 0})
+        k["of"] += 1
+        k["passing"] += g["verdict"] == "PASS"
+    passing = sum(k["passing"] for k in kinds.values())
+    contradicting = [g["session"] for g in grades if g["kind"] == "fact" and g["contradicts"]]
+    return {"byKind": kinds, "passing": passing, "of": len(grades), "contradictingFact": contradicting,
+            "passes": len(grades) == 72 and passing >= PASS_AT and not contradicting}
+
+
+def grader_control(args, files, notes, out, run, grader):
+    cases = parse_control(files[GRADER_CONTROL_FILE], GRADER_CONTROL_FILE)
+    results = []
+    for role, items in cases.items():
+        for case in items:
+            grade = grade_one(grader, files[GRADER_FILE], role, notes[role], f"{role}/{case['id']}", case, case["answer"])
+            results.append({"role": role, **case, "grade": grade,
+                            "agrees": grade["verdict"] == case["verdict"].upper()})
+    agreeing = sum(r["agrees"] for r in results)
+    passed_contradiction = [r["id"] for r in results if r.get("contradicts") == "true" and r["grade"]["verdict"] == "PASS"]
+    summary = {"agreeing": agreeing, "of": len(results), "passedContradictions": passed_contradiction}
+    (out / "grader-control.json").write_text(json.dumps({"summary": summary, "cases": results},
+                                                        ensure_ascii=False, indent=1) + "\n")
+
+
+def grade_run(args, files, notes, out, run, grader):
+    graded = json.loads(files["graded-run.json"])
+    answers = json.loads(files["graded-answers.json"])
+    grades = []
+    for role, reps in answers.items():
+        for rep in reps:
+            for item in rep["answers"]:
+                session = f"{role}/{rep['repetition']}/{item['id']}"
+                grade = grade_one(grader, files[GRADER_FILE], role, notes[role], session, item, item["answer"])
+                grades.append({"session": session, "id": item["id"], "kind": item["kind"], **grade})
+    result = {"graded": {"run": str(args.graded), "mode": graded["mode"]}, "summary": summarize(grades),
+              "grades": grades}
+    (out / "grades.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("mode", choices=sorted(QUESTION_SETS))
+    parser.add_argument("mode", choices=sorted(QUESTION_SETS) + list(GRADE_MODES))
     parser.add_argument("--persona-provider", default="mistral")
-    parser.add_argument("--persona-model", required=True, help="exact model identifier")
+    parser.add_argument("--persona-model", help="exact model identifier; required by the persona modes")
     parser.add_argument("--persona-rpm", type=float, default=30)
     parser.add_argument("--persona-max-tokens", type=int, default=2048)
     parser.add_argument("--persona-temperature", type=float, help="sent when given; else the provider default")
     parser.add_argument("--persona-seed", type=int, help="sent when given; else none")
     parser.add_argument("--persona-check", action="store_true", help=f"check each answer against the notes ({CHECK_FILE})")
+    parser.add_argument("--grader-provider", default="mistral")
+    parser.add_argument("--grader-model", help="exact model identifier; required by the grading modes")
+    parser.add_argument("--grader-rpm", type=float, default=20)
+    parser.add_argument("--grader-max-tokens", type=int, default=1024)
+    parser.add_argument("--grader-temperature", type=float, help="sent when given; else the provider default")
+    parser.add_argument("--grader-seed", type=int, help="sent when given; else none")
+    parser.add_argument("--graded", type=pathlib.Path, help="the completed persona run that mode grade grades")
     parser.add_argument("--repetitions", type=int, default=3)
     parser.add_argument("--out", type=pathlib.Path, help="output directory (must not exist)")
     parser.add_argument("--dry-run", action="store_true", help="check inputs and print hashes; call nothing")
     args = parser.parse_args()
+    grading = args.mode in GRADE_MODES
 
-    set_file = QUESTION_SETS[args.mode]
-    names = ["world-brief.md", "brief-slices.yaml", "persona-prompt.md", set_file]
-    if args.persona_check:
-        names.append(CHECK_FILE)
+    names = ["world-brief.md", "brief-slices.yaml"]
+    if grading:
+        names += [GRADER_FILE] + ([GRADER_CONTROL_FILE] if args.mode == "grader-control" else [])
+    else:
+        names += ["persona-prompt.md", QUESTION_SETS[args.mode]] + ([CHECK_FILE] if args.persona_check else [])
     files = {name: (HERE / name).read_text() for name in names}
     files["run-track-s.py"] = pathlib.Path(__file__).read_text()
 
@@ -425,15 +547,46 @@ def main():
     if missing or unknown:
         sys.exit(f"brief-slices.yaml does not match the brief: missing={missing} unknown={unknown}")
     notes = {role: render(units, [u for u in units if role in slices[u]]) for role in ROLES}
+
+    if args.mode == "grade":
+        if not args.graded:
+            sys.exit("--graded is required by mode grade")
+        graded_dir = args.graded.resolve()
+        try:
+            files["graded-run.json"] = (graded_dir / "run.json").read_text()
+            graded = json.loads(files["graded-run.json"])
+            files["graded-answers.json"] = (graded_dir / f"{graded['mode']}.json").read_text()
+        except (OSError, ValueError, KeyError) as e:
+            sys.exit(f"--graded {args.graded}: not a persona run record: {e}")
+        if graded.get("status") != "completed" or graded.get("mode") not in QUESTION_SETS:
+            sys.exit(f"--graded {args.graded}: only a completed persona run is graded")
+        # The grader reads the notes the persona had; a changed brief would grade against other notes.
+        for name in ("world-brief.md", "brief-slices.yaml"):
+            if graded["inputSha256"].get(name) != sha256(files[name]):
+                sys.exit(f"--graded {args.graded}: {name} has changed since that run")
     hashes = {name: sha256(text) for name, text in files.items()}
-    control = parse_control(files[set_file], set_file)
-    if set(control) != set(ROLES):
-        sys.exit(f"{set_file} roles {sorted(control)} do not match {sorted(ROLES)}")
+
+    if grading:
+        role, settings = "grader", (args.grader_provider, args.grader_model, args.grader_rpm,
+                                    args.grader_max_tokens, args.grader_temperature)
+        if args.mode == "grader-control":
+            cases = parse_control(files[GRADER_CONTROL_FILE], GRADER_CONTROL_FILE)
+            calls = sum(len(c) for c in cases.values())
+        else:
+            calls = sum(len(rep["answers"]) for reps in json.loads(files["graded-answers.json"]).values() for rep in reps)
+        plan = {"calls": calls}
+    else:
+        role, settings = "persona", (args.persona_provider, args.persona_model, args.persona_rpm,
+                                     args.persona_max_tokens, args.persona_temperature)
+        set_file = QUESTION_SETS[args.mode]
+        control = parse_control(files[set_file], set_file)
+        if set(control) != set(ROLES):
+            sys.exit(f"{set_file} roles {sorted(control)} do not match {sorted(ROLES)}")
+        plan = {"controlQuestions": {r: len(q) for r, q in control.items()},
+                "calls": sum(len(q) for q in control.values()) * args.repetitions * (2 if args.persona_check else 1)}
 
     if args.dry_run:
-        print(json.dumps({"inputSha256": hashes,
-                          "controlQuestions": {r: len(q) for r, q in control.items()},
-                          "calls": sum(len(q) for q in control.values()) * args.repetitions * (2 if args.persona_check else 1)}, indent=2))
+        print(json.dumps({"inputSha256": hashes, **plan}, indent=2))
         return
     if not args.out:
         sys.exit("--out is required unless --dry-run")
@@ -443,8 +596,9 @@ def main():
         sys.exit(f"--out must be a new directory under {RUNS}")
     # Everything that can stop the run before its first call is checked before its directory exists,
     # so a kept run directory always holds a run that started.
-    problem = role_problem("persona", args.persona_provider, args.persona_model, args.persona_rpm,
-                           args.persona_max_tokens, args.persona_temperature)
+    if settings[1] is None:
+        sys.exit(f"--{role}-model is required by mode {args.mode}")
+    problem = role_problem(role, *settings)
     if problem:
         sys.exit(problem)
     if args.repetitions <= 0:
@@ -455,7 +609,15 @@ def main():
            "parameters": {k: v for k, v in vars(args).items() if k not in ("out", "dry_run")},
            "inputSha256": hashes}
     try:
-        persona_control(args, files, notes, args.out, run)
+        if grading:
+            recorder = Recorder(out)
+            grader = Client("grader", args.grader_provider, args.grader_model, args.grader_rpm,
+                            args.grader_max_tokens, recorder, args.grader_temperature, args.grader_seed)
+            run["instruments"] = {"grader": {"provider": grader.provider, "model": grader.model,
+                                             "description": grader.describe()}}
+            (grader_control if args.mode == "grader-control" else grade_run)(args, files, notes, out, run, grader)
+        else:
+            persona_control(args, files, notes, args.out, run)
         run["status"] = "completed"
     except RunFailed as e:
         run["status"], run["failure"] = "failed", str(e)
