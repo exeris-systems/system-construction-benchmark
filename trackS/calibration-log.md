@@ -29,6 +29,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | 68 of 72, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-holdout-3` (held-out set 3 `e3c5ca02…`) | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5, frozen) | **fail** |
 | `runs/track-s/2026-11-03-persona-control-sourced` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `084a1335…` (draft 6) | **run failed** — check reply of the wrong shape |
+| `runs/track-s/2026-11-03-persona-control-sourced-2` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | **run failed** — check entries without their object |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -232,6 +233,13 @@ source that began with the example's placeholder text. The run failed on that re
 procedure sets out. Revised: the check prompt describes the reply in words instead of showing an
 example, and the script states in each request how many sentences there are and asks for exactly
 that many entries.
+
+### `2026-11-03-persona-control-sourced-2` — run failed
+
+The revised check prompt (`d660c0fa…`). The first check reply had the right number of entries, with
+the right verdicts and a source found in the notes, but as a bare list without the object around it,
+and the script refused that shape. Revised: the script takes the entries with or without the object
+around them, and still requires one verdict and source per sentence.
 
 ## Grader
 

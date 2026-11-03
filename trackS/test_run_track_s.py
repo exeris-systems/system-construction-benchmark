@@ -140,6 +140,12 @@ class ClientTest(unittest.TestCase):
         self.assertIsNone(ts.source_holds("I don\u2019t know.", "DONT_KNOW", notes))
         self.assertIsNotNone(ts.source_holds("The platform handles it.", "DONT_KNOW", notes))
 
+    def test_check_accepts_the_entries_without_the_object_around_them(self):
+        self.replies = [Reply(answer('[{"verdict": "KEEP", "source": "DONT_KNOW"}, {"verdict": "DROP", "source": null}]',
+                                     "stop"), headers())]
+        result = ts.check(self.client, "{{ROLE}} {{NOTES}}", "desk", "notes", "s", "q", "I don't know. It keeps versions.")
+        self.assertEqual(result["answer"], "I don't know.")
+
     def test_check_that_drops_everything_leaves_i_do_not_know(self):
         self.replies = [self.check_reply(("DROP", None))]
         result = ts.check(self.client, "{{ROLE}} {{NOTES}}", "desk", "notes", "s", "q", "It keeps versions.")
@@ -148,7 +154,8 @@ class ClientTest(unittest.TestCase):
     def test_check_reply_of_the_wrong_shape_fails_the_run(self):
         bad = ('{"sentences": [{"verdict": "KEEP", "source": "a b c d"}]}',
                '{"sentences": [{"verdict": "MAYBE"}, {"verdict": "KEEP"}]}',
-               '{"verdicts": ["KEEP", "KEEP"]}', "KEEP KEEP", '[1, 2]')
+               '{"verdicts": ["KEEP", "KEEP"]}', "KEEP KEEP", '[1, 2]',
+               '[{"sentences": [{"verdict": "DROP", "source": null}, {"verdict": "DROP", "source": null}]}]')
         for reply in bad:
             self.replies = [Reply(answer(reply, "stop"), headers())]
             with self.assertRaises(ts.RunFailed, msg=reply):

@@ -140,9 +140,11 @@ def split_sentences(text):
 def parse_check(text, count):
     """The check's {verdict, source} for each of count sentences, or None if the reply is not exactly that."""
     try:
-        items = json.loads(text).get("sentences")
-    except (ValueError, AttributeError):
+        reply = json.loads(text)
+    except ValueError:
         return None
+    # The entries may come bare, without the object around them; what is checked is the entries.
+    items = reply.get("sentences") if isinstance(reply, dict) else reply
     if not isinstance(items, list) or len(items) != count:
         return None
     parsed = []
