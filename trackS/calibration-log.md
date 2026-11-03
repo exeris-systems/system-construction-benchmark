@@ -222,3 +222,15 @@ HT1 and HD4 were, by what they add rather than what they get right. Every `outsi
 KA5, and every `no-design` failure but KT8, of the earlier held-out runs is absent: the check
 dropped the referrals, guesses and designs. What remains is what the check kept — an added
 consequence or duty inside a sentence that is otherwise in the notes, and one design.
+
+## Grader
+
+| Run | Model | `grader-prompt.md` (SHA-256) | Verdict |
+| --- | --- | --- | --- |
+| `runs/track-s/2026-11-03-grader-control` (cases `e3e3de4a…`) | `mistral-large-2512`, temperature 0, seed 1 | `d691edd3…` (draft 6) | **run failed** — no grade |
+
+### `2026-11-03-grader-control` — run failed
+
+The model check passed. The first case was refused with HTTP 403, "This model is not available in
+your subscription tier" (`tier_not_allowed`), which is not retried, and the run failed as an
+infrastructure error before any grade.
