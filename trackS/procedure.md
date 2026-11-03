@@ -14,8 +14,8 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 3 (draft 4)
-Decision register: D-45 to D-51. Versions 1 and 2 (the user-story procedure under
+Version: 3 (draft 5)
+Decision register: D-45 to D-52. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
 
@@ -23,7 +23,7 @@ Track S pilots (D-46).
 
 | Instrument | Provider | Model | Sees |
 | --- | --- | --- | --- |
-| Persona — fleet technician, dispatcher, airspace desk | Mistral API | `ministral-14b-2512` (open weights: `mistralai/Ministral-3-14B-Instruct-2512`, Apache 2.0), temperature 0, random seed 1 | `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`) |
+| Persona — fleet technician, dispatcher, airspace desk | Mistral API | `ministral-8b-2512` (open weights: `mistralai/Ministral-3-8B-Instruct-2512`, Apache 2.0), temperature 0, random seed 1, for both passes | answering: `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`); checking: `persona-check-prompt.md` + the same slice, the question and the answer's sentences |
 | Judge, script series | Gemini API | Gemini 3.8 Flash, exact identifier fixed before its calibration | the derived contract + the reference requirements |
 | Judge, native series | Mistral API | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | the derived contract + the reference requirements |
 
@@ -37,19 +37,29 @@ run.
 | --- | --- |
 | `world-brief.md`, `brief-slices.yaml` | the world and each persona's slice of it |
 | `brief-seeding.md` | the brief sentences that are constraints or seeded needs; used to read derived contracts |
-| `persona-prompt.md` | the persona instrument |
-| `persona-control.yaml`, `persona-holdout.yaml`, `persona-holdout-2.yaml` | the persona's calibration questions: the set the prompt is revised against, the held-out set that decided draft 3, and the held-out set that decides draft 4 |
+| `persona-prompt.md`, `persona-check-prompt.md` | the persona instrument: the answering pass and the check pass |
+| `persona-control.yaml`, `persona-holdout.yaml`, `persona-holdout-2.yaml`, `persona-holdout-3.yaml` | the persona's calibration questions: the set the prompts are revised against, the held-out sets that decided drafts 3 and 4, and the held-out set that decides draft 5 |
 | `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 3, and replaced by subject prompts before the first subject runs |
 | `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
 | `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
 
+## The persona's two passes
+
+The persona answers each question in two passes of the same model. The answering pass writes the
+answer from the persona prompt and its slice. The check pass receives the same slice, the question,
+and the answer split into numbered sentences, and returns KEEP or DROP for each sentence; it never
+rewrites one. The persona's answer is its kept sentences, in order, and "I don't know." when none is
+kept. The persona's conversation, and the subject, receive only that answer; the run record keeps
+the draft, its sentences and the verdicts as well. A check reply that is not one KEEP or DROP per
+sentence fails the run.
+
 ## Persona calibration — runs first
 
-Two question sets of the same shape hold fixed questions per role, each with what the role's slice
+Question sets of the same shape hold fixed questions per role, each with what the role's slice
 supports (`fact`), a question the slice cannot answer (`outside`), or a question that invites
 software design (`no-design`). The script asks each role its questions in one conversation, three
-times: `persona-control` asks `persona-control.yaml`, and `persona-holdout` and `persona-holdout-2`
-ask the two held-out sets.
+times: `persona-control` asks `persona-control.yaml`, and `persona-holdout`, `persona-holdout-2` and
+`persona-holdout-3` ask the held-out sets.
 
 Each answer is graded against its question's `expect`, each repetition by itself; agreement across
 repetitions is not a criterion of its own (D-50). A `fact` answer passes when it agrees with the
@@ -57,8 +67,8 @@ cited unit and adds nothing its slice does not give; an `outside` answer passes 
 or a referral its slice supports; a `no-design` answer passes when it describes needs rather than
 features or mechanisms. The verdict, and every failing answer, is recorded in `calibration-log.md`.
 
-The persona prompt is revised against the control set only. With the prompt frozen, the held-out set
-is run once, and decides: the persona passes when no `fact` answer contradicts its slice and at
+The persona's prompts are revised against the control set only. With them frozen, the current
+draft's held-out set is run once, and decides: the persona passes when no `fact` answer contradicts its slice and at
 least 65 of the 72 answers pass. A persona that fails the held-out set is not revised against it; a
 new prompt or model is a new draft, with a new held-out set. The rate-limit headers recorded on every
 call show the provider's limits, from which the subject runs are scheduled.
