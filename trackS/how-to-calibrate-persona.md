@@ -30,11 +30,12 @@ Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute
 3. Commit the output directory unedited, and record the verdict against the criteria of
    [`procedure.md`](procedure.md) in [`calibration-log.md`](calibration-log.md).
 
-   For draft 5 and later, every run takes the persona's model, temperature, seed and check pass, and
-   makes 144 calls:
+   From draft 6, every run takes the persona's provider, model, temperature, seed and output limit,
+   which leaves room for a thinking model's reasoning tokens; with the check pass it makes 144 calls,
+   without it 72:
 
    ```sh
-   python3 -I trackS/run-track-s.py persona-control --persona-model ministral-8b-2512 --persona-temperature 0 --persona-seed 1 --persona-check --out runs/track-s/YYYY-MM-DD-persona-control-check
+   python3 -I trackS/run-track-s.py persona-control --persona-provider gemini --persona-model gemini-3.5-flash-lite --persona-temperature 0 --persona-seed 1 --persona-max-tokens 8192 --persona-rpm 10 --persona-check --out runs/track-s/YYYY-MM-DD-persona-control-check
    ```
 
    From draft 6, a persona run is graded by the grader, not by hand, into a run of its own:
@@ -54,6 +55,6 @@ Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute
    `persona-holdout-4`.
 
    ```sh
-   python3 -I trackS/run-track-s.py persona-holdout-4 --persona-model ministral-8b-2512 --persona-temperature 0 --persona-seed 1 --persona-check --out runs/track-s/YYYY-MM-DD-persona-holdout-4
+   python3 -I trackS/run-track-s.py persona-holdout-4 --persona-provider gemini --persona-model gemini-3.5-flash-lite --persona-temperature 0 --persona-seed 1 --persona-max-tokens 8192 --persona-rpm 10 --persona-check --out runs/track-s/YYYY-MM-DD-persona-holdout-4
    python3 -I trackS/run-track-s.py grade --graded runs/track-s/YYYY-MM-DD-persona-holdout-4 --grader-provider gemini --grader-model gemini-3.8-flash --grader-temperature 0 --grader-seed 1 --grader-max-tokens 8192 --grader-rpm 10 --out runs/track-s/YYYY-MM-DD-grade-persona-holdout-4
    ```

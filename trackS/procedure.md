@@ -23,7 +23,7 @@ Track S pilots (D-46).
 
 | Instrument | Provider | Model | Sees |
 | --- | --- | --- | --- |
-| Persona — fleet technician, dispatcher, airspace desk | Mistral API | `ministral-8b-2512` (open weights: `mistralai/Ministral-3-8B-Instruct-2512`, Apache 2.0), temperature 0, random seed 1, for both passes | answering: `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`); checking: `persona-check-prompt.md` + the same slice, the question and the answer's sentences |
+| Persona — fleet technician, dispatcher, airspace desk | Gemini API | `gemini-3.5-flash-lite`, temperature 0, random seed 1, for both passes; whether the check pass runs is settled on the control set and fixed before the held-out run | answering: `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`); checking: `persona-check-prompt.md` + the same slice, the question and the answer's sentences |
 | Grader — of the persona's calibration answers | Gemini API | `gemini-3.8-flash`, temperature 0, random seed 1 | `grader-prompt.md` + the answering role's slice, the question, its kind and `expect`, and the answer |
 | Judge, script series | Gemini API | Gemini 3.8 Flash, exact identifier fixed before its calibration | the derived contract + the reference requirements |
 | Judge, native series | Mistral API | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | the derived contract + the reference requirements |
