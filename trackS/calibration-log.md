@@ -30,6 +30,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-holdout-3` (held-out set 3 `e3c5ca02…`) | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5, frozen) | **fail** |
 | `runs/track-s/2026-11-03-persona-control-sourced` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `084a1335…` (draft 6) | **run failed** — check reply of the wrong shape |
 | `runs/track-s/2026-11-03-persona-control-sourced-2` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | **run failed** — check entries without their object |
+| `runs/track-s/2026-11-03-persona-control-sourced-3`, graded in `runs/track-s/2026-11-03-grade-persona-control-sourced-3` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -240,6 +241,27 @@ The revised check prompt (`d660c0fa…`). The first check reply had the right nu
 the right verdicts and a source found in the notes, but as a bare list without the object around it,
 and the script refused that shape. Revised: the script takes the entries with or without the object
 around them, and still requires one verdict and source per sentence.
+
+### `2026-11-03-persona-control-sourced-3` — 57 of 72 by the grader, does not decide
+
+The sourced check on the control set, graded by the calibrated grader (`gemini-3.8-flash`, grader
+prompt `d691edd3…`) in `2026-11-03-grade-persona-control-sourced-3`. The persona run made 144
+calls; one check was retried after a failed name lookup, and no check reply needed asking again.
+The check dropped 63 of 139 sentences, every one of them by its own verdict: no kept sentence had a
+source missing from the notes. The grading made 72 calls, no error, every grade `STOP`.
+
+| Kind | Answers passing | Failing answers, with the grader's reason |
+| --- | --- | --- |
+| `fact` (14 questions) | 28 of 42 | D3 ×3, marked as contradicting: "No, each site has only so many places", where several flights can take off up to that number. A2 ×3: "I don't know", where the notes answer. T2 ×2: pads "set up for a specific connector type" or "for specific drone models". T4 ×2: a restarted drone "usually" carries on. T1 ×2: answers for the customers rather than for its own company. D5 ×1: a duty to keep drones flying safely instead of the fact. A1 ×1: the companies need the information "to operate safely". |
+| `outside` (7 questions) | 20 of 21 | D6 ×1: states the connector facts without saying it does not know which types. |
+| `no-design` (3 questions) | 9 of 9 | |
+| total | 57 of 72 | |
+
+Below the threshold, with three contradicting `fact` answers. Two things change at once against
+draft 5's 68 on the same set, and this run cannot tell them apart: the check drops more — 45 per
+cent of the sentences against 26 — leaving `fact` answers emptied to "I don't know" or a fragment,
+and the grader is stricter than the grading by hand was. D3 passed by hand in every earlier run; the
+grader reads its "No" as contradicting the notes.
 
 ## Grader
 
