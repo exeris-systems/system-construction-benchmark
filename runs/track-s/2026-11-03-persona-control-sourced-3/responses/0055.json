@@ -1,0 +1,29 @@
+{
+ "id": "2f96376774474128b7b48ed372aad392",
+ "created": 1793708172,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1412,
+  "total_tokens": 1466,
+  "completion_tokens": 54,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a drone restarts in flight, it usually keeps flying on its autopilot and carries on with the job. I don’t control it directly, but I worry about whether the restart caused any data loss or if the drone’s sensors or battery are affected."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "6133126698794aa9a76735e65da068d3",
+ "created": 1793708184,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1519,
+  "total_tokens": 1538,
+  "completion_tokens": 19,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The dispatchers handle scheduling jobs and picking drones, not me."
+   }
+  }
+ ]
+}

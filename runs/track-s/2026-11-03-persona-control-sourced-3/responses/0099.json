@@ -1,0 +1,29 @@
+{
+ "id": "fc173498de5b40ca923076eb8ca68e04",
+ "created": 1793708268,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1321,
+  "total_tokens": 1350,
+  "completion_tokens": 29,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, drones and charging pads are not interchangeable—they use different connector types, so each drone only charges on its own specific pads."
+   }
+  }
+ ]
+}

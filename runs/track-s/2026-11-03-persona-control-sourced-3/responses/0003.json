@@ -1,0 +1,29 @@
+{
+ "id": "e522dac9da824e7c9cfd890e5601fba8",
+ "created": 1793708067,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1322,
+  "total_tokens": 1354,
+  "completion_tokens": 32,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the drones use different charging connectors, and each pad is set up for a specific connector type. We can’t use any pad with any drone."
+   }
+  }
+ ]
+}

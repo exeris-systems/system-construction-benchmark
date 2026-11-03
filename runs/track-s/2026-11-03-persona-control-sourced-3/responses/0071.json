@@ -1,0 +1,29 @@
+{
+ "id": "f4e8585e2b724eb6af6a224bf1dbc07b",
+ "created": 1793708205,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1613,
+  "total_tokens": 1658,
+  "completion_tokens": 45,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures can be amended during the day, like when an area is widened or an end time moves. This affects which drones can fly and which routes are safe, so I need to know about these changes right away."
+   }
+  }
+ ]
+}

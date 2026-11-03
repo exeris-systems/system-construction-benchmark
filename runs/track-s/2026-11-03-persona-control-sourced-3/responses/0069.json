@@ -1,0 +1,29 @@
+{
+ "id": "fd8f82f80f524a11b72c151c411b9273",
+ "created": 1793708201,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1580,
+  "total_tokens": 1615,
+  "completion_tokens": 35,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, each site has only so many places where drones can take off and land at the same time. That limits how many flights can start or end there at once."
+   }
+  }
+ ]
+}

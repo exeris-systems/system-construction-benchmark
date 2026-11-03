@@ -1,0 +1,29 @@
+{
+ "id": "6c406f2044c64ae6bbe2ac09c8bb0ad2",
+ "created": 1793708215,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1599,
+  "total_tokens": 1657,
+  "completion_tokens": 58,
+  "prompt_tokens_details": {
+   "cached_tokens": 1508
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"Several connector types are in use and they are not interchangeable.\"\n    },\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"DONT_KNOW\"\n    }\n]"
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "99625799117a4de5b43d5e44fe68a2e4",
+ "created": 1793708297,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1529,
+  "total_tokens": 1590,
+  "completion_tokens": 61,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only know what needs to be done, not how software would show it. For example, I need to be able to add drones to the fleet, take them out for repairs, and send them to charge—but I don’t know what screens or buttons would do that."
+   }
+  }
+ ]
+}

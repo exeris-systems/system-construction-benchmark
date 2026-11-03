@@ -1,0 +1,29 @@
+{
+ "id": "ab0a29a8ca1f4e8e839a458c462df2da",
+ "created": 1793708112,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1651,
+  "total_tokens": 1693,
+  "completion_tokens": 42,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "A closure can come into force while drones from several companies are already flying. I have to make sure my drones stay safe and follow the rules, even if a closure changes while they’re in the air."
+   }
+  }
+ ]
+}

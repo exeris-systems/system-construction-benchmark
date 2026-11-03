@@ -1,0 +1,29 @@
+{
+ "id": "9a42aa4510564e768fd3384263bd67ba",
+ "created": 1793708162,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1440,
+  "total_tokens": 1508,
+  "completion_tokens": 68,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    },\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"keep drones and charging equipment in working order\"\n    },\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    }\n]"
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "161b215408d24a079d8abb6373115786",
+ "created": 1793708105,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1610,
+  "total_tokens": 1669,
+  "completion_tokens": 59,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"Sites have only so many places where drones can take off and land at the same time.\"\n    },\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    }\n]"
+   }
+  }
+ ]
+}

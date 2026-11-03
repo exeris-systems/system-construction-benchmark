@@ -1,0 +1,29 @@
+{
+ "id": "a57df39cb1be4ab5b6f66486a6dc2475",
+ "created": 1793708319,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1626,
+  "total_tokens": 1683,
+  "completion_tokens": 57,
+  "prompt_tokens_details": {
+   "cached_tokens": 1508
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    },\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"A closure can come into force while drones of several companies are already in the air.\"\n    }\n]"
+   }
+  }
+ ]
+}

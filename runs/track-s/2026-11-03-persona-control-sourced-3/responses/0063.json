@@ -1,0 +1,29 @@
+{
+ "id": "b0d1d8b62e004e6490c66cd9509dd227",
+ "created": 1793708188,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1537,
+  "total_tokens": 1579,
+  "completion_tokens": 42,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I just keep drones and charging equipment working—like setting up pads, taking drones out for repairs, and sending them to charge. I don’t deal with software screens or buttons."
+   }
+  }
+ ]
+}
