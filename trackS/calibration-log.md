@@ -31,6 +31,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-control-sourced` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `084a1335…` (draft 6) | **run failed** — check reply of the wrong shape |
 | `runs/track-s/2026-11-03-persona-control-sourced-2` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | **run failed** — check entries without their object |
 | `runs/track-s/2026-11-03-persona-control-sourced-3`, graded in `runs/track-s/2026-11-03-grade-persona-control-sourced-3` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-control-check`, graded again in `runs/track-s/2026-11-03-grade-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | 57 of 72 by the grader, against 68 by hand — does not decide |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -262,6 +263,19 @@ draft 5's 68 on the same set, and this run cannot tell them apart: the check dro
 cent of the sentences against 26 — leaving `fact` answers emptied to "I don't know" or a fragment,
 and the grader is stricter than the grading by hand was. D3 passed by hand in every earlier run; the
 grader reads its "No" as contradicting the notes.
+
+### `2026-11-03-persona-control-check`, graded by the grader — 57 of 72
+
+Draft 5's control run, graded by hand at 68 of 72 above, graded again by the grader to tell its
+check apart from the grading. 72 calls, no error. The grader passes 27 of 42 `fact` answers, 21 of
+21 `outside` and 9 of 9 `no-design`: 57 of 72, with D3 marked as contradicting in all three
+repetitions. The 11 answers it fails beyond the hand grading are D3 ×3, D5 ×3, A2 ×3 ("I don't
+know", then the desk's scope), T4 ×1 and D4 ×1, each failed for an added duty or consequence or for
+not stating the fact.
+
+Both checks score 57 on the control set under the grader, so the sourced check of draft 6 neither
+gains nor loses there. The hand grading of every earlier run was more lenient than the grader by
+about this margin, and its verdicts are not on the grader's scale.
 
 ## Grader
 
