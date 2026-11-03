@@ -111,6 +111,33 @@ class ClientTest(unittest.TestCase):
         self.assertNotIn("random_seed", sent[0])
         self.assertEqual((sent[1]["temperature"], sent[1]["random_seed"]), (0.0, 7))
 
+    def test_json_reply_asks_for_a_json_object(self):
+        sent = []
+        next_reply = self._next
+        ts.urllib.request.urlopen = lambda request, timeout=0: (sent.append(json.loads(request.data)), next_reply(request))[1]
+        self.replies = [Reply(answer('{"verdicts": []}', "stop"), headers())]
+        self.client.call("s", "system", [("user", "q")], json_reply=True)
+        self.assertEqual(sent[0]["response_format"], {"type": "json_object"})
+
+    def test_check_keeps_only_the_kept_sentences(self):
+        self.replies = [Reply(answer('{"verdicts": ["KEEP", "DROP", "keep"]}', "stop"), headers())]
+        result = ts.check(self.client, "{{ROLE}} {{NOTES}}", "technician", "notes", "s", "q",
+                          "We have pads. The platform owns them.\nI worry about that.")
+        self.assertEqual(result["sentences"], ["We have pads.", "The platform owns them.", "I worry about that."])
+        self.assertEqual(result["answer"], "We have pads. I worry about that.")
+        self.assertEqual(result["draft"], "We have pads. The platform owns them.\nI worry about that.")
+
+    def test_check_that_drops_everything_leaves_i_do_not_know(self):
+        self.replies = [Reply(answer('{"verdicts": ["DROP"]}', "stop"), headers())]
+        result = ts.check(self.client, "{{ROLE}} {{NOTES}}", "desk", "notes", "s", "q", "It keeps versions.")
+        self.assertEqual(result["answer"], ts.NOTHING_LEFT)
+
+    def test_check_reply_of_the_wrong_shape_fails_the_run(self):
+        for reply in ('{"verdicts": ["KEEP"]}', '{"verdicts": ["KEEP", "MAYBE"]}', "KEEP KEEP", '["KEEP", "KEEP"]'):
+            self.replies = [Reply(answer(reply, "stop"), headers())]
+            with self.assertRaises(ts.RunFailed, msg=reply):
+                ts.check(self.client, "{{ROLE}} {{NOTES}}", "desk", "notes", "s", "q", "One. Two.")
+
     def test_non_natural_finish_fails_the_run(self):
         self.replies = [Reply(answer("cut", "length"), headers())]
         with self.assertRaises(ts.RunFailed):
@@ -186,7 +213,7 @@ class ModeTest(unittest.TestCase):
             out = pathlib.Path(tempfile.mkdtemp())
             args = argparse.Namespace(mode=mode, persona_provider="mistral", persona_model="m",
                                       persona_rpm=60_000, persona_max_tokens=100, repetitions=1,
-                                      persona_temperature=0.0, persona_seed=1)
+                                      persona_temperature=0.0, persona_seed=1, persona_check=False)
             files = {name: (HERE / name).read_text() for name in ("persona-prompt.md", set_file)}
             ts.persona_control(args, files, {role: "notes" for role in ts.ROLES}, out, {})
             written = sorted(p.name for p in out.glob("*.json"))
@@ -195,6 +222,23 @@ class ModeTest(unittest.TestCase):
             expected = ts.parse_control(files[set_file], set_file)
             self.assertEqual({r: [a["id"] for a in reps[0]["answers"]] for r, reps in asked.items()},
                              {r: [q["id"] for q in qs] for r, qs in expected.items()}, mode)
+
+
+    def test_checked_mode_records_draft_and_verdicts(self):
+        def reply(request, timeout=0):
+            checking = "response_format" in json.loads(request.data)
+            return Reply(answer('{"verdicts": ["KEEP"]}' if checking else "I don't know.", "stop"), headers())
+        ts.urllib.request.urlopen = reply
+        out = pathlib.Path(tempfile.mkdtemp())
+        args = argparse.Namespace(mode="persona-holdout-3", persona_provider="mistral", persona_model="m",
+                                  persona_rpm=60_000, persona_max_tokens=100, repetitions=1,
+                                  persona_temperature=0.0, persona_seed=1, persona_check=True)
+        names = ("persona-prompt.md", "persona-holdout-3.yaml", ts.CHECK_FILE)
+        files = {name: (HERE / name).read_text() for name in names}
+        ts.persona_control(args, files, {role: "notes" for role in ts.ROLES}, out, {})
+        first = json.loads((out / "persona-holdout-3.json").read_text())["technician"][0]["answers"][0]
+        self.assertEqual((first["draft"], first["verdicts"], first["answer"]), ("I don't know.", ["KEEP"], "I don't know."))
+        self.assertEqual(len((out / "calls.jsonl").read_text().splitlines()), 2 * 24)
 
 
 class InputTest(unittest.TestCase):
