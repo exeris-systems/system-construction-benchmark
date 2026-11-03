@@ -56,7 +56,7 @@ and its source holds: a quote is found in the slice, `DONT_KNOW` marks a sentenc
 speaker does not know, and `FEELING` is taken on the check's word. The persona's answer is its kept
 sentences, in order, and "I don't know." when none is kept. The persona's conversation, and the subject, receive only that answer; the run record keeps
 the draft, its sentences and the verdicts as well. A check reply that is not one verdict and source
-per sentence fails the run.
+per sentence is asked for once more, with the same request; a second such reply fails the run.
 
 ## Persona calibration — runs first
 

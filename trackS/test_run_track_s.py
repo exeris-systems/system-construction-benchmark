@@ -140,6 +140,13 @@ class ClientTest(unittest.TestCase):
         self.assertIsNone(ts.source_holds("I don\u2019t know.", "DONT_KNOW", notes))
         self.assertIsNotNone(ts.source_holds("The platform handles it.", "DONT_KNOW", notes))
 
+    def test_check_asks_once_more_after_a_reply_of_the_wrong_shape(self):
+        self.replies = [Reply(answer("KEEP", "stop"), headers()),
+                        Reply(answer('{"sentences": [{"verdict": "KEEP", "source": "DONT_KNOW"}]}', "stop"), headers())]
+        result = ts.check(self.client, "{{ROLE}} {{NOTES}}", "desk", "notes", "s", "q", "I don't know.")
+        self.assertEqual(result["answer"], "I don't know.")
+        self.assertEqual([c["session"] for c in self.calls()], ["s/check", "s/check-again"])
+
     def test_check_accepts_the_entries_without_the_object_around_them(self):
         self.replies = [Reply(answer('[{"verdict": "KEEP", "source": "DONT_KNOW"}, {"verdict": "DROP", "source": null}]',
                                      "stop"), headers())]
@@ -157,7 +164,7 @@ class ClientTest(unittest.TestCase):
                '{"verdicts": ["KEEP", "KEEP"]}', "KEEP KEEP", '[1, 2]',
                '[{"sentences": [{"verdict": "DROP", "source": null}, {"verdict": "DROP", "source": null}]}]')
         for reply in bad:
-            self.replies = [Reply(answer(reply, "stop"), headers())]
+            self.replies = [Reply(answer(reply, "stop"), headers()), Reply(answer(reply, "stop"), headers())]
             with self.assertRaises(ts.RunFailed, msg=reply):
                 ts.check(self.client, "{{ROLE}} {{NOTES}}", "desk", "notes", "s", "q", "One. Two.")
 

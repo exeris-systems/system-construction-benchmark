@@ -443,8 +443,13 @@ def check(persona, prompt, role, notes, session, question, draft):
     listed = "\n".join(f"{i}. {s}" for i, s in enumerate(sentences, 1))
     asked = (f"Question: {question}\n\nThe answer has {len(sentences)} sentences:\n{listed}\n\n"
              f"Reply with exactly {len(sentences)} entries.")
-    reply = persona.call(f"{session}/check", system, [("user", asked)], json_reply=True)
-    items = parse_check(reply, len(sentences))
+    # A reply of the wrong shape is asked for once more, as the same request; both are recorded.
+    items = None
+    for attempt in ("check", "check-again"):
+        reply = persona.call(f"{session}/{attempt}", system, [("user", asked)], json_reply=True)
+        items = parse_check(reply, len(sentences))
+        if items is not None:
+            break
     if items is None:
         raise RunFailed(f"{session}/check: the reply is not one verdict and source for each of {len(sentences)} sentences")
     kept = []
