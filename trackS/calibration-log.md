@@ -36,6 +36,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-control-flash-lite`, graded in `runs/track-s/2026-11-03-grade-persona-control-flash-lite` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `a097ba45…` (draft 6) | 66 of 72 by the grader, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-control-flash-lite-check`, graded in `runs/track-s/2026-11-03-grade-persona-control-flash-lite-check` | `gemini-3.5-flash-lite`, temperature 0, seed 1, sourced check | `a097ba45…`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-holdout-4` (held-out set 4 `377c6e99…`), graded in `runs/track-s/2026-11-03-grade-persona-holdout-4` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `a097ba45…` (draft 6, frozen) | **fail** — 63 of 72 by the grader |
+| `runs/track-s/2026-11-03-persona-control-8e49283b`, graded in `runs/track-s/2026-11-03-grade-persona-control-8e49283b` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `8e49283b…` (draft 7) | 69 of 72 by the grader, control set — does not decide |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -334,6 +335,21 @@ Two below the threshold of 65, with no contradicting answer; the grader's verdic
 failure is the same one: the persona says it does not know what its notes state about "the
 companies" or "each company", as it did about pads never being lent (T3) on the control set. It no
 longer adds to its notes; it now holds back from part of them.
+
+### `2026-11-03-persona-control-8e49283b` — 69 of 72 by the grader, does not decide
+
+The persona of draft 7, with rule 3 revised (D-54), on the control set, graded by the grader. Both
+runs completed without error, every response `STOP`.
+
+| Kind | Answers passing | Failing answers, with the grader's reason |
+| --- | --- | --- |
+| `fact` (14 questions) | 42 of 42 | |
+| `outside` (7 questions) | 18 of 21 | D6 ×3: states that the connector types are several and not interchangeable, and that pads are never lent, without saying it does not know which types. |
+| `no-design` (3 questions) | 9 of 9 | |
+| total | 69 of 72 | |
+
+No answer contradicts its slice. T3 is answered in all three repetitions with "Pads are never lent
+to another company.", and no answer speaks for another company. D6 fails as it did under draft 6.
 
 ## Grader
 
