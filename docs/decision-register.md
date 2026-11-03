@@ -468,3 +468,15 @@ The persona model returns to `ministral-8b-2512`, the model with the highest lim
 The check prompt is new, so it may be revised against the control set like the persona prompt, each run recorded. With both prompts frozen, `trackS/persona-holdout-3.yaml` — 24 questions with the same mix of kinds, sharing none with the earlier sets — is run once and decides, under the threshold of D-50.
 
 Impact: `trackS/procedure.md`, `trackS/persona-check-prompt.md`, `trackS/persona-holdout-3.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `preregistration/frozen-sets.md`.
+
+### D-53 — The check quotes its sources, and a calibrated grader grades the persona
+
+Draft 6 of the Track S procedure changes the persona's check pass and takes the grading of the persona's calibration out of the hands of the author of its prompts. Draft 5 passed 64 of 72 answers on the third held-out set, one below the threshold of 65 (`trackS/calibration-log.md`). Its remaining failures sit in sentences the check kept: an added duty or consequence inside a sentence otherwise in the notes, a claim after "I don't know", and one design. The verdict also rested on judgement in a few answers, made by the author of the prompts being judged.
+
+The check now gives a source for every sentence it keeps: words copied from the slice, at least four long, or `DONT_KNOW` or `FEELING`. The script keeps a sentence only when its quote is found in the slice, or when a sentence marked `DONT_KNOW` says the speaker does not know; `FEELING` is taken on the check's word. A sentence that is partly in the notes and partly not is dropped. The persona's model, temperature, seed and answering prompt stay as in D-52; the check prompt is new and may be revised against the control set.
+
+Every calibration answer of the persona from draft 6 on is graded by a grader, `mistral-large-2512` at temperature 0 and random seed 1, under `trackS/grader-prompt.md`, which states the grading rules of the procedure. Before it grades, the grader is calibrated on the 36 cases of `trackS/grader-control.yaml` — answers written for control questions with the verdicts the rules give them — and passes when it agrees with at least 33 and passes no case that contradicts its slice. The grader is the same model as the native-series judge; it grades the persona's answers only, never a subject's contract.
+
+With the persona's prompts and the grader's prompt frozen, `trackS/persona-holdout-4.yaml` — 24 questions with the same mix of kinds, sharing none with the earlier sets — is run once and graded, and the grade decides under the threshold of D-50.
+
+Impact: `trackS/procedure.md`, `trackS/persona-check-prompt.md`, `trackS/grader-prompt.md`, `trackS/grader-control.yaml`, `trackS/persona-holdout-4.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `preregistration/frozen-sets.md`.
