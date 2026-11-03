@@ -1,0 +1,604 @@
+{
+ "graded": {
+  "run": "runs/track-s/2026-11-03-persona-holdout-5",
+  "mode": "persona-holdout-5"
+ },
+ "summary": {
+  "byKind": {
+   "fact": {
+    "passing": 39,
+    "of": 42
+   },
+   "outside": {
+    "passing": 21,
+    "of": 21
+   },
+   "no-design": {
+    "passing": 9,
+    "of": 9
+   }
+  },
+  "passing": 69,
+  "of": 72,
+  "contradictingFact": [],
+  "passes": true
+ },
+ "grades": [
+  {
+   "session": "technician/1/MT1",
+   "id": "MT1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly reflects the notes without adding any unsupported facts."
+  },
+  {
+   "session": "technician/1/MT2",
+   "id": "MT2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes answer this question in the list of things the companies do not want, so an answer of 'I don't know' fails."
+  },
+  {
+   "session": "technician/1/MT3",
+   "id": "MT3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that staff accounts are issued by the platform company outside the service without introducing extraneous details."
+  },
+  {
+   "session": "technician/1/MT4",
+   "id": "MT4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "technician/1/MT5",
+   "id": "MT5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately lists the sensors and differences between drone models as described in the notes without adding any unsupported details."
+  },
+  {
+   "session": "technician/1/MT6",
+   "id": "MT6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is the required response for an outside question."
+  },
+  {
+   "session": "technician/1/MT7",
+   "id": "MT7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is appropriate for an outside question."
+  },
+  {
+   "session": "technician/1/MT8",
+   "id": "MT8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know how the service should handle the situation, describes the underlying operational condition from the notes, and proposes no system design or features."
+  },
+  {
+   "session": "technician/2/MT1",
+   "id": "MT1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly reflects the notes without adding any unsupported facts."
+  },
+  {
+   "session": "technician/2/MT2",
+   "id": "MT2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes answer this question in the list of things the companies do not want, so an answer of 'I don't know' fails."
+  },
+  {
+   "session": "technician/2/MT3",
+   "id": "MT3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that staff accounts are issued by the platform company outside the service without introducing extraneous details."
+  },
+  {
+   "session": "technician/2/MT4",
+   "id": "MT4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "technician/2/MT5",
+   "id": "MT5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately lists the sensors and differences between drone models as described in the notes without adding any unsupported details."
+  },
+  {
+   "session": "technician/2/MT6",
+   "id": "MT6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is the required response for an outside question."
+  },
+  {
+   "session": "technician/2/MT7",
+   "id": "MT7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is appropriate for an outside question."
+  },
+  {
+   "session": "technician/2/MT8",
+   "id": "MT8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know how the service should handle the situation, describes the underlying operational condition from the notes, and proposes no system design or features."
+  },
+  {
+   "session": "technician/3/MT1",
+   "id": "MT1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly reflects the notes without adding any unsupported facts."
+  },
+  {
+   "session": "technician/3/MT2",
+   "id": "MT2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The notes answer this question in the list of things the companies do not want, so an answer of 'I don't know' fails."
+  },
+  {
+   "session": "technician/3/MT3",
+   "id": "MT3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that staff accounts are issued by the platform company outside the service without introducing extraneous details."
+  },
+  {
+   "session": "technician/3/MT4",
+   "id": "MT4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "technician/3/MT5",
+   "id": "MT5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately lists the sensors mentioned in the notes and adds only details directly supported by the notes."
+  },
+  {
+   "session": "technician/3/MT6",
+   "id": "MT6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is the required response for an outside question."
+  },
+  {
+   "session": "technician/3/MT7",
+   "id": "MT7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is appropriate for an outside question."
+  },
+  {
+   "session": "technician/3/MT8",
+   "id": "MT8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know how the service should handle the situation, describes the underlying operational condition from the notes, and proposes no system design or features."
+  },
+  {
+   "session": "dispatcher/1/MD1",
+   "id": "MD1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that the company has its own charging pads at its own sites and never lends them to other companies."
+  },
+  {
+   "session": "dispatcher/1/MD2",
+   "id": "MD2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states the two kinds of jobs supported by the notes without adding any outside details."
+  },
+  {
+   "session": "dispatcher/1/MD3",
+   "id": "MD3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that none of the companies seek certification and expect the platform to respect the applicable EU rules in practice."
+  },
+  {
+   "session": "dispatcher/1/MD4",
+   "id": "MD4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "dispatcher/1/MD5",
+   "id": "MD5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that companies do not want to log in through their corporate identity systems and correctly references how staff accounts are handled based on the notes."
+  },
+  {
+   "session": "dispatcher/1/MD6",
+   "id": "MD6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the provided notes."
+  },
+  {
+   "session": "dispatcher/1/MD7",
+   "id": "MD7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The speaker correctly states that they do not know, as server costs are not mentioned in the notes."
+  },
+  {
+   "session": "dispatcher/1/MD8",
+   "id": "MD8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know, which is an acceptable response for a no-design question."
+  },
+  {
+   "session": "dispatcher/2/MD1",
+   "id": "MD1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that the company has its own charging pads at its own sites and never lends them to other companies."
+  },
+  {
+   "session": "dispatcher/2/MD2",
+   "id": "MD2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states the two kinds of jobs supported by the notes without adding any outside details."
+  },
+  {
+   "session": "dispatcher/2/MD3",
+   "id": "MD3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any unsupported facts or contradicting the text."
+  },
+  {
+   "session": "dispatcher/2/MD4",
+   "id": "MD4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "dispatcher/2/MD5",
+   "id": "MD5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that companies do not want to log in through their corporate identity systems and correctly references how staff accounts are handled based on the notes."
+  },
+  {
+   "session": "dispatcher/2/MD6",
+   "id": "MD6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the provided notes."
+  },
+  {
+   "session": "dispatcher/2/MD7",
+   "id": "MD7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The speaker correctly states that they do not know, as server costs are not mentioned in the notes."
+  },
+  {
+   "session": "dispatcher/2/MD8",
+   "id": "MD8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know, which is an acceptable response for a no-design question."
+  },
+  {
+   "session": "dispatcher/3/MD1",
+   "id": "MD1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that the company has its own charging pads at its own sites and never lends them to other companies."
+  },
+  {
+   "session": "dispatcher/3/MD2",
+   "id": "MD2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states the two kinds of jobs supported by the notes without adding any outside details."
+  },
+  {
+   "session": "dispatcher/3/MD3",
+   "id": "MD3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that none of the companies seek certification and expect the platform to respect the applicable EU rules in practice."
+  },
+  {
+   "session": "dispatcher/3/MD4",
+   "id": "MD4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "dispatcher/3/MD5",
+   "id": "MD5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that companies do not want to log in through their corporate identity systems and correctly references how staff accounts are handled based on the notes."
+  },
+  {
+   "session": "dispatcher/3/MD6",
+   "id": "MD6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the information is outside the provided notes."
+  },
+  {
+   "session": "dispatcher/3/MD7",
+   "id": "MD7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The speaker correctly states that they do not know, as server costs are not mentioned in the notes."
+  },
+  {
+   "session": "dispatcher/3/MD8",
+   "id": "MD8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know, which is an acceptable response for a no-design question."
+  },
+  {
+   "session": "desk/1/MA1",
+   "id": "MA1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly reflects what the notes state and adds no extraneous information."
+  },
+  {
+   "session": "desk/1/MA2",
+   "id": "MA2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes and adds no outside information."
+  },
+  {
+   "session": "desk/1/MA3",
+   "id": "MA3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that phone alerts are not wanted and that companies handle reaching staff themselves."
+  },
+  {
+   "session": "desk/1/MA4",
+   "id": "MA4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that personal data of staff is covered by the GDPR, exactly matching the notes."
+  },
+  {
+   "session": "desk/1/MA5",
+   "id": "MA5",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know."
+  },
+  {
+   "session": "desk/1/MA6",
+   "id": "MA6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is appropriate for a question outside the notes."
+  },
+  {
+   "session": "desk/1/MA7",
+   "id": "MA7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and adds nothing extraneous."
+  },
+  {
+   "session": "desk/1/MA8",
+   "id": "MA8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know and avoids proposing any system design or recording mechanisms."
+  },
+  {
+   "session": "desk/2/MA1",
+   "id": "MA1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly reflects what the notes state and adds no extraneous information."
+  },
+  {
+   "session": "desk/2/MA2",
+   "id": "MA2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes and adds no outside information."
+  },
+  {
+   "session": "desk/2/MA3",
+   "id": "MA3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that phone alerts are not wanted and that companies handle reaching staff themselves."
+  },
+  {
+   "session": "desk/2/MA4",
+   "id": "MA4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that personal data of staff is covered by the GDPR, exactly matching the notes."
+  },
+  {
+   "session": "desk/2/MA5",
+   "id": "MA5",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know."
+  },
+  {
+   "session": "desk/2/MA6",
+   "id": "MA6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is appropriate for a question outside the notes."
+  },
+  {
+   "session": "desk/2/MA7",
+   "id": "MA7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and adds nothing extraneous."
+  },
+  {
+   "session": "desk/2/MA8",
+   "id": "MA8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer properly states that the speaker does not know, avoiding any software design or feature proposals."
+  },
+  {
+   "session": "desk/3/MA1",
+   "id": "MA1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly reflects what the notes state and adds no extraneous information."
+  },
+  {
+   "session": "desk/3/MA2",
+   "id": "MA2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes and adds no outside information."
+  },
+  {
+   "session": "desk/3/MA3",
+   "id": "MA3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that phone alerts are not wanted and that companies handle reaching staff themselves."
+  },
+  {
+   "session": "desk/3/MA4",
+   "id": "MA4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly reflects the notes by stating that staff personal data is covered by the GDPR."
+  },
+  {
+   "session": "desk/3/MA5",
+   "id": "MA5",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know."
+  },
+  {
+   "session": "desk/3/MA6",
+   "id": "MA6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is appropriate for a question outside the notes."
+  },
+  {
+   "session": "desk/3/MA7",
+   "id": "MA7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and adds nothing extraneous."
+  },
+  {
+   "session": "desk/3/MA8",
+   "id": "MA8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer properly states that the speaker does not know, avoiding any software design or feature proposals."
+  }
+ ]
+}

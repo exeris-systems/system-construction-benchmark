@@ -8,6 +8,7 @@ Modes:
   persona-holdout-2 the same, with the second held-out set (persona-holdout-2.yaml)
   persona-holdout-3 the same, with the third held-out set (persona-holdout-3.yaml)
   persona-holdout-4 the same, with the fourth held-out set (persona-holdout-4.yaml)
+  persona-holdout-5 the same, with the fifth held-out set (persona-holdout-5.yaml)
 
 With --persona-check, each answer is checked sentence by sentence against the persona's notes
 (persona-check-prompt.md) by the same model: a sentence stays only when the check keeps it and its
@@ -53,7 +54,7 @@ NOTHING_LEFT = "I don't know."
 # Each persona mode asks the questions of one set file and writes its answers under the mode's name.
 QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FILE,
                  "persona-holdout-2": "persona-holdout-2.yaml", "persona-holdout-3": "persona-holdout-3.yaml",
-                 "persona-holdout-4": "persona-holdout-4.yaml"}
+                 "persona-holdout-4": "persona-holdout-4.yaml", "persona-holdout-5": "persona-holdout-5.yaml"}
 GRADE_MODES = ("grader-control", "grade")
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8

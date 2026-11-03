@@ -14,8 +14,8 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 3 (draft 6)
-Decision register: D-45 to D-53. Versions 1 and 2 (the user-story procedure under
+Version: 3 (draft 7)
+Decision register: D-45 to D-54. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
 
@@ -40,7 +40,7 @@ run.
 | `brief-seeding.md` | the brief sentences that are constraints or seeded needs; used to read derived contracts |
 | `persona-prompt.md`, `persona-check-prompt.md` | the persona instrument: the answering pass and the check pass |
 | `grader-prompt.md`, `grader-control.yaml` | the grader of the persona's calibration and the cases it is calibrated on |
-| `persona-control.yaml`, `persona-holdout.yaml` to `persona-holdout-4.yaml` | the persona's calibration questions: the set the prompts are revised against, the held-out sets that decided drafts 3 to 5, and the held-out set that decides draft 6 |
+| `persona-control.yaml`, `persona-holdout.yaml` to `persona-holdout-5.yaml` | the persona's calibration questions: the set the prompts are revised against, the held-out sets that decided drafts 3 to 6, and the held-out set that decides draft 7 |
 | `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 3, and replaced by subject prompts before the first subject runs |
 | `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
 | `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
@@ -66,7 +66,7 @@ per sentence is asked for once more, with the same request; a second such reply 
 Question sets of the same shape hold fixed questions per role, each with what the role's slice
 supports (`fact`), a question the slice cannot answer (`outside`), or a question that invites
 software design (`no-design`). The script asks each role its questions in one conversation, three
-times: `persona-control` asks `persona-control.yaml`, and `persona-holdout` to `persona-holdout-4`
+times: `persona-control` asks `persona-control.yaml`, and `persona-holdout` to `persona-holdout-5`
 ask the held-out sets.
 
 Each answer is graded against its question's `expect`, each repetition by itself; agreement across
