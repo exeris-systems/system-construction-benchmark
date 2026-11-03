@@ -21,4 +21,4 @@ jobs:
       - run: python3 -I trackS/run-track-s.py persona-holdout-2 --persona-model ministral-14b-2512 --dry-run
       - run: python3 -I trackS/run-track-s.py persona-holdout-3 --persona-model ministral-8b-2512 --persona-check --dry-run
       - run: python3 -I trackS/run-track-s.py persona-holdout-4 --persona-model ministral-8b-2512 --persona-check --dry-run
-      - run: python3 -I trackS/run-track-s.py grader-control --grader-model mistral-large-2512 --dry-run
+      - run: python3 -I trackS/run-track-s.py grader-control --grader-provider gemini --grader-model gemini-3.8-flash --dry-run

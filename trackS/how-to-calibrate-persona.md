@@ -40,13 +40,13 @@ Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute
    From draft 6, a persona run is graded by the grader, not by hand, into a run of its own:
 
    ```sh
-   python3 -I trackS/run-track-s.py grade --graded runs/track-s/YYYY-MM-DD-persona-control-check --grader-model mistral-large-2512 --grader-temperature 0 --grader-seed 1 --out runs/track-s/YYYY-MM-DD-grade-persona-control-check
+   python3 -I trackS/run-track-s.py grade --graded runs/track-s/YYYY-MM-DD-persona-control-check --grader-provider gemini --grader-model gemini-3.8-flash --grader-temperature 0 --grader-seed 1 --grader-max-tokens 8192 --grader-rpm 10 --out runs/track-s/YYYY-MM-DD-grade-persona-control-check
    ```
 
    The grader is calibrated before it grades anything, 36 calls:
 
    ```sh
-   python3 -I trackS/run-track-s.py grader-control --grader-model mistral-large-2512 --grader-temperature 0 --grader-seed 1 --out runs/track-s/YYYY-MM-DD-grader-control
+   python3 -I trackS/run-track-s.py grader-control --grader-provider gemini --grader-model gemini-3.8-flash --grader-temperature 0 --grader-seed 1 --grader-max-tokens 8192 --grader-rpm 10 --out runs/track-s/YYYY-MM-DD-grader-control
    ```
 
 4. With the persona's prompts and model and the grader's prompt frozen, run the current draft's
@@ -55,5 +55,5 @@ Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute
 
    ```sh
    python3 -I trackS/run-track-s.py persona-holdout-4 --persona-model ministral-8b-2512 --persona-temperature 0 --persona-seed 1 --persona-check --out runs/track-s/YYYY-MM-DD-persona-holdout-4
-   python3 -I trackS/run-track-s.py grade --graded runs/track-s/YYYY-MM-DD-persona-holdout-4 --grader-model mistral-large-2512 --grader-temperature 0 --grader-seed 1 --out runs/track-s/YYYY-MM-DD-grade-persona-holdout-4
+   python3 -I trackS/run-track-s.py grade --graded runs/track-s/YYYY-MM-DD-persona-holdout-4 --grader-provider gemini --grader-model gemini-3.8-flash --grader-temperature 0 --grader-seed 1 --grader-max-tokens 8192 --grader-rpm 10 --out runs/track-s/YYYY-MM-DD-grade-persona-holdout-4
    ```
