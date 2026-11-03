@@ -1,0 +1,74 @@
+{
+  "track": "S",
+  "mode": "grader-control",
+  "status": "failed",
+  "started": "2026-11-03T11:23:47.198764+00:00",
+  "parameters": {
+    "mode": "grader-control",
+    "persona_provider": "mistral",
+    "persona_model": null,
+    "persona_rpm": 30,
+    "persona_max_tokens": 2048,
+    "persona_temperature": null,
+    "persona_seed": null,
+    "persona_check": false,
+    "grader_provider": "mistral",
+    "grader_model": "mistral-large-2512",
+    "grader_rpm": 20,
+    "grader_max_tokens": 1024,
+    "grader_temperature": 0.0,
+    "grader_seed": 1,
+    "graded": null,
+    "repetitions": 3
+  },
+  "inputSha256": {
+    "world-brief.md": "dfb0de323972b2ead2811e441914d27f6fa1f98410e7c433010e8dcd057f130e",
+    "brief-slices.yaml": "7c417a65224604ea834574e457e0b285dafb79b476821cb3315b58eed8169125",
+    "grader-prompt.md": "d691edd3fb3d74dc3464f45b8a4aebb7b9ef1828668a8d72b1cdbe7f0a51cd65",
+    "grader-control.yaml": "e3e3de4a43564ef0c325259fe53c407d8401f31c429418260ece7ab1750190fe",
+    "run-track-s.py": "d3912268f9c29fdc2bed80b42d106976583350aaf2febecc005f970a66d34a3a"
+  },
+  "instruments": {
+    "grader": {
+      "provider": "mistral",
+      "model": "mistral-large-2512",
+      "description": {
+        "id": "mistral-large-2512",
+        "object": "model",
+        "created": 1793705027,
+        "owned_by": "mistralai",
+        "capabilities": {
+          "completion_chat": true,
+          "function_calling": true,
+          "reasoning": false,
+          "completion_fim": false,
+          "fine_tuning": true,
+          "vision": true,
+          "ocr": false,
+          "classification": false,
+          "moderation": false,
+          "audio": false,
+          "audio_transcription": false,
+          "audio_transcription_realtime": false,
+          "audio_speech": false,
+          "unified_resources": false
+        },
+        "name": "mistral-large-2512",
+        "description": "Release candidate for ml3.",
+        "max_context_length": 262144,
+        "aliases": [
+          "mistral-large-latest"
+        ],
+        "deprecation": null,
+        "deprecation_replacement_model": null,
+        "default_model_temperature": 0.3,
+        "billing_model_name": "mistral-large-2512",
+        "type": "base",
+        "audio_transcription_capabilities": null,
+        "audio_speech_capabilities": null
+      }
+    }
+  },
+  "failure": "technician/GT1: HTTP 403: {\"object\":\"error\",\"message\":\"This model is not available in your subscription tier\",\"type\":\"tier_not_allowed\",\"param\":null,\"code\":\"1910\",\"raw_status_code\":403}",
+  "finished": "2026-11-03T11:23:48.311409+00:00"
+}
