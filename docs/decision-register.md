@@ -453,6 +453,8 @@ Impact: `trackS/procedure.md`, `trackS/persona-prompt.md`, `trackS/persona-holdo
 
 Draft 4 of the Track S procedure changes the persona model from `ministral-8b-2512` to `mistral-small-2603` (open weights `mistralai/Mistral-Small-4-119B-2603`, Apache 2.0), and amends D-48 for the persona only. The frozen draft 3 prompt passed 57 of 72 answers on the held-out set against a threshold of 65 (`trackS/calibration-log.md`); the prompt stays at `7d40bed8…0c0`, so the change tests whether the model, rather than the wording, keeps the persona to its slice.
 
+The persona also stops running on the provider's defaults. Mistral documents its default temperature only as varying by model, so an instrument left on it depends on a value nobody published and the provider may change. The persona runs at temperature 0 with random seed 1, sent with every call and recorded in `run.json`; subjects keep the provider's defaults, which is what they are measured on. At temperature 0 the three repetitions of a question should agree by construction, so their agreement no longer tests the persona, and an answer that fails, fails in every repetition.
+
 `trackS/persona-holdout-2.yaml` holds 24 questions with the same mix of kinds, sharing none with the control set or the first held-out set, which has been seen. It is run once with the draft 4 prompt and model, under the threshold of D-50. The provider reports 20,000 tokens and one request per second for this model, against 625,000 tokens for `ministral-8b-2512`; the subject runs are scheduled from the limits recorded in its calibration.
 
-Impact: `trackS/procedure.md`, `trackS/persona-holdout-2.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`.
+Impact: `trackS/procedure.md`, `trackS/persona-holdout-2.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `trackS/calibration-log.md`.

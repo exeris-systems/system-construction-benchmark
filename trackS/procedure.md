@@ -23,7 +23,7 @@ Track S pilots (D-46).
 
 | Instrument | Provider | Model | Sees |
 | --- | --- | --- | --- |
-| Persona — fleet technician, dispatcher, airspace desk | Mistral API | `mistral-small-2603` (open weights: `mistralai/Mistral-Small-4-119B-2603`, Apache 2.0) | `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`) |
+| Persona — fleet technician, dispatcher, airspace desk | Mistral API | `mistral-small-2603` (open weights: `mistralai/Mistral-Small-4-119B-2603`, Apache 2.0), temperature 0, random seed 1 | `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`) |
 | Judge, script series | Gemini API | Gemini 3.8 Flash, exact identifier fixed before its calibration | the derived contract + the reference requirements |
 | Judge, native series | Mistral API | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | the derived contract + the reference requirements |
 
@@ -85,7 +85,9 @@ The output directory is committed unedited:
 ## Rules
 
 - **No human in the loop.** Nobody reads, edits or steers between calls.
-- **Provider defaults.** No temperature or similar setting is sent.
+- **Sampling.** A subject runs on the provider's defaults: no temperature or similar setting is
+  sent. The persona runs at temperature 0 with random seed 1, sent with every call and recorded in
+  `run.json`, so its answers do not depend on a default the provider may change.
 - **Errors.** Network failures, timeouts, rate limits and server errors are retried with the same
   request and logged. An exhausted daily or monthly quota fails the run as an infrastructure error
   (program plan §9.1), never as a subject's failure. A response whose finish reason is not a natural
