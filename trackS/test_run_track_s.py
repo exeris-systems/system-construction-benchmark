@@ -155,12 +155,24 @@ class InputTest(unittest.TestCase):
         slices, _ = ts.parse_slices((HERE / "brief-slices.yaml").read_text())
         self.assertEqual(set(units), set(slices))
 
-    def test_control_set_covers_every_role(self):
-        control = ts.parse_control((HERE / ts.CONTROL_FILE).read_text())
-        self.assertEqual(set(control), set(ts.ROLES))
-        for questions in control.values():
-            for q in questions:
-                self.assertEqual(set(q), {"id", "kind", "question", "expect"})
+    def test_question_sets_cover_every_role(self):
+        for name in ts.QUESTION_SETS.values():
+            control = ts.parse_control((HERE / name).read_text(), name)
+            self.assertEqual(set(control), set(ts.ROLES), name)
+            for questions in control.values():
+                for q in questions:
+                    self.assertEqual(set(q), {"id", "kind", "question", "expect"}, name)
+                    self.assertIn(q["kind"], {"fact", "outside", "no-design"}, name)
+
+    def test_held_out_set_shares_no_question_with_the_control_set(self):
+        def questions(name):
+            sets = ts.parse_control((HERE / name).read_text(), name)
+            return [q for qs in sets.values() for q in qs]
+        control, holdout = questions(ts.CONTROL_FILE), questions(ts.HOLDOUT_FILE)
+        self.assertFalse({q["id"] for q in control} & {q["id"] for q in holdout})
+        self.assertFalse({q["question"] for q in control} & {q["question"] for q in holdout})
+        kinds = lambda qs: sorted(q["kind"] for q in qs)
+        self.assertEqual(kinds(control), kinds(holdout))
 
     def test_out_outside_runs_track_s_is_refused(self):
         env = {**os.environ, "MISTRAL_API_KEY": "test-key"}

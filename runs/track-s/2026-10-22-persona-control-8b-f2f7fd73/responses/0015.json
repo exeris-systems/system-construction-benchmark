@@ -1,0 +1,29 @@
+{
+ "id": "73789d3adb2d41f9986404cf5b119adc",
+ "created": 1792691878,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1838,
+  "total_tokens": 1873,
+  "completion_tokens": 35,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only work for one company, and I don’t track how closures affect other companies. My focus is on my own flights and drones."
+   }
+  }
+ ]
+}

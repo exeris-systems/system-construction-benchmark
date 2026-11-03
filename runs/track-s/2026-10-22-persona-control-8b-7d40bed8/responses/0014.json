@@ -1,0 +1,29 @@
+{
+ "id": "f3df89144ac645d294b6943a7c855a59",
+ "created": 1792692524,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1847,
+  "total_tokens": 1887,
+  "completion_tokens": 40,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The drones have different charging connectors, but I don’t track which types my company’s charging pads use. The platform company handles the charging equipment, so they would know."
+   }
+  }
+ ]
+}

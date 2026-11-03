@@ -1,0 +1,29 @@
+{
+ "id": "1949442a879342e6b12a57a0979d17dc",
+ "created": 1792691533,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1545,
+  "total_tokens": 1585,
+  "completion_tokens": 40,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know—my job is keeping drones and charging equipment working, not picking drones or planning routes. The companies I work for don’t use the platform for route planning or drone selection."
+   }
+  }
+ ]
+}

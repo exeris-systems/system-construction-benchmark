@@ -1,0 +1,29 @@
+{
+ "id": "f68fe51298b142f19304215c06b72cc0",
+ "created": 1792692554,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1556,
+  "total_tokens": 1619,
+  "completion_tokens": 63,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, reports from drones don’t always reach me, and they don’t always arrive in order. The radio coverage is patchy, so reports can come late, out of order, more than once, or not at all. I have to deal with missing or delayed data when checking on drones and jobs."
+   }
+  }
+ ]
+}

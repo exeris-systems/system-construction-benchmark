@@ -1,0 +1,29 @@
+{
+ "id": "bb6ba52148924e5493d67a901fe85788",
+ "created": 1792694383,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1544,
+  "total_tokens": 1584,
+  "completion_tokens": 40,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, batteries don’t always last as long as planned. They drain faster in cold or windy conditions than expected, so I have to plan extra charging time or check battery levels more often."
+   }
+  }
+ ]
+}

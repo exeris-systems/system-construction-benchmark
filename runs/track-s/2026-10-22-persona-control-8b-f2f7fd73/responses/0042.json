@@ -1,0 +1,29 @@
+{
+ "id": "eadd346ff2674756a373d1266d28ba17",
+ "created": 1792691932,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1129,
+  "total_tokens": 1180,
+  "completion_tokens": 51,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk only tracks shared airspace data—like closures and corridors—and doesn’t have access to any one company’s flights or operations. If you need that, you’d have to ask the customer company itself."
+   }
+  }
+ ]
+}

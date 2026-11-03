@@ -1,0 +1,29 @@
+{
+ "id": "8ab63a76a428473fb30944f785bab54c",
+ "created": 1792692638,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1446,
+  "total_tokens": 1488,
+  "completion_tokens": 42,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk only handles airspace information and closures, not how drones report back to their operating companies. The companies manage their own systems for receiving and processing drone reports."
+   }
+  }
+ ]
+}

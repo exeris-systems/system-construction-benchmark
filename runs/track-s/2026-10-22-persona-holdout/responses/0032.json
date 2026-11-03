@@ -1,0 +1,29 @@
+{
+ "id": "9b0cb90f2f384e45b34b1bd97865fd0f",
+ "created": 1792694436,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1767,
+  "total_tokens": 1860,
+  "completion_tokens": 93,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how the software should work—I just do the work. I’d need records of repairs to keep track of when drones are out of service and when they’re ready to fly again. The system should let me log repairs, note when a drone is taken out of service, and mark it as back in operation after maintenance. It should also record who did the work and when, so we can show regulators how we’ve looked after our fleet."
+   }
+  }
+ ]
+}

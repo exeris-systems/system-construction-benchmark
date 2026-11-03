@@ -1,0 +1,29 @@
+{
+ "id": "fb38f0e9631c455c9d12a6ffb6308c30",
+ "created": 1792692570,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1746,
+  "total_tokens": 1815,
+  "completion_tokens": 69,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure comes into force while drones are already flying, I have to make sure those drones stay safe and legal. The rules say I’m responsible for each flight, so I might have to call off a drone or change its route if the closure affects it. The platform needs to tell me about these changes quickly so I can act."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "6f7d74182ed248f5b82327e90a00ced0",
+ "created": 1792692527,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1902,
+  "total_tokens": 1951,
+  "completion_tokens": 49,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only work for one company, and I only see the disruptions that affect my flights and drones. The platform company would have to look at all the companies’ data to see the total disruption from a closure."
+   }
+  }
+ ]
+}

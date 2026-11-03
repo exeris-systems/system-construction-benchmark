@@ -1,0 +1,29 @@
+{
+ "id": "7a66ee55e5c54ac29cce00f92b3ba075",
+ "created": 1792694424,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1365,
+  "total_tokens": 1418,
+  "completion_tokens": 53,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only handle the day-to-day work of keeping drones and charging equipment in working order, not compliance or regulatory checks. Someone in the company’s compliance or legal team would know if outside parties can ask about how drones have been maintained."
+   }
+  }
+ ]
+}

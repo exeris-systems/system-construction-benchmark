@@ -1,0 +1,29 @@
+{
+ "id": "f267ab1a0ba14afc9d33ae3d11fba140",
+ "created": 1792691983,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1921,
+  "total_tokens": 1966,
+  "completion_tokens": 45,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I’m a dispatcher who plans flights and doesn’t deal with how the system stores information. I just need the system to show me the corridors between sites and any closures that affect my work."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "ef3746417df847d49e6c659b5edb6a8c",
+ "created": 1792691621,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1395,
+  "total_tokens": 1459,
+  "completion_tokens": 64,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk needs a way to store and update closures—both planned and sudden ones—as well as any amendments. The system should handle frequent changes and allow tracking of how closures affect operations across all customers. But I don’t specify the database or how it’s set up."
+   }
+  }
+ ]
+}

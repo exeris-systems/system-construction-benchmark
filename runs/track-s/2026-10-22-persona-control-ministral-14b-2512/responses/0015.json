@@ -1,0 +1,29 @@
+{
+ "id": "5d6022f2bf8240209ffe93a399607df6",
+ "created": 1792690849,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2560,
+  "total_tokens": 2728,
+  "completion_tokens": 168,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know the full picture—each company handles its own disruptions. But from what I saw, it was bad. A few drones got stuck in the air because the closure expanded while they were still flying, and we had to reroute them. One of our inspection jobs got delayed because the zone where the client’s infrastructure was got shut down for an hour longer than planned.\n\nThe worst part was the radio drops—some drones lost contact for a while, and we didn’t know if they’d made it out of the zone or not. We had to assume the worst and pull others early just to be safe. But like I said, it’s not my job to track how much it messed up for everyone—just to make sure *my* drones stay out of trouble. The companies handle the fallout themselves."
+   }
+  }
+ ]
+}

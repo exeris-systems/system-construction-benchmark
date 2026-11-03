@@ -1,0 +1,29 @@
+{
+ "id": "102fb1f2960a4b4bbdc5b982d59df5fc",
+ "created": 1792690921,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1012,
+  "total_tokens": 1146,
+  "completion_tokens": 134,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We keep the airspace information that the authorities publish—like zones where drones can’t fly, and closures that pop up during the day. That’s it. We don’t store anything about the companies’ fleets, jobs, or sites; that’s all their own business.\n\nThe companies use this info to decide whether their drones can fly safely. They check our shared picture to see if their routes are clear, and if a closure comes up, they figure out how to reroute or delay flights. We don’t push alerts to them—our job is just to keep the airspace data up to date, and they pull it when they need it."
+   }
+  }
+ ]
+}

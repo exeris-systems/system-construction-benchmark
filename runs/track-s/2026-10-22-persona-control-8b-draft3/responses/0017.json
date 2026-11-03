@@ -1,0 +1,29 @@
+{
+ "id": "574ef2427e2041bf90acece19a06f8b3",
+ "created": 1792691553,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 958,
+  "total_tokens": 1034,
+  "completion_tokens": 76,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I keep information about the shared airspace—like flight corridors, zones, and closures announced by the authorities. This information is the same for all customer companies, so I don’t track any one company’s drones, jobs, or staff. The companies use it to see what’s open or closed for their own flights, but I don’t manage or analyze their operations."
+   }
+  }
+ ]
+}

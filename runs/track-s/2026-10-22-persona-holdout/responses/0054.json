@@ -1,0 +1,29 @@
+{
+ "id": "16b56af5779e4cabb6d6a8d4bd2f5f53",
+ "created": 1792694480,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1613,
+  "total_tokens": 1649,
+  "completion_tokens": 36,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only deal with keeping the drones and charging equipment working, not with how many jobs each company flies. The companies handle their own deliveries and inspections."
+   }
+  }
+ ]
+}

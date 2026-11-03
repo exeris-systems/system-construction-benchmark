@@ -1,0 +1,29 @@
+{
+ "id": "7c2692a8edb146c2a5e24f176f103eeb",
+ "created": 1792694490,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1688,
+  "total_tokens": 1762,
+  "completion_tokens": 74,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Yes, I can still call off a flight even after it’s signed off. The dispatcher has the final authority and responsibility for each flight, so I can cancel it if something changes—like a sudden airspace closure, a problem with the drone, or if the load isn’t ready. The flight won’t take off or continue if I decide to stop it."
+   }
+  }
+ ]
+}

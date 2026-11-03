@@ -1,0 +1,63 @@
+{
+  "track": "S",
+  "mode": "persona-control",
+  "status": "completed",
+  "started": "2026-10-22T17:52:00.885010+00:00",
+  "parameters": {
+    "mode": "persona-control",
+    "persona_provider": "mistral",
+    "persona_model": "ministral-8b-2512",
+    "persona_rpm": 30,
+    "persona_max_tokens": 2048,
+    "repetitions": 3
+  },
+  "inputSha256": {
+    "world-brief.md": "dfb0de323972b2ead2811e441914d27f6fa1f98410e7c433010e8dcd057f130e",
+    "brief-slices.yaml": "7c417a65224604ea834574e457e0b285dafb79b476821cb3315b58eed8169125",
+    "persona-prompt.md": "47c4d4fde155cd0512ab5f2e5529743021f73630bea6c84a09ce77a6c03c5f4c",
+    "persona-control.yaml": "1f9e8364ebd9410cdac17b844d275de082e5ca6cfcc8edd121ddcb3df8229089",
+    "run-track-s.py": "05433ec9ebda44dfaf041fe0d9127759a7d28b79acd5f21b7b750753d4e5f1f3"
+  },
+  "instruments": {
+    "persona": {
+      "provider": "mistral",
+      "model": "ministral-8b-2512",
+      "description": {
+        "id": "ministral-8b-2512",
+        "object": "model",
+        "created": 1792691521,
+        "owned_by": "mistralai",
+        "capabilities": {
+          "completion_chat": true,
+          "function_calling": true,
+          "reasoning": false,
+          "completion_fim": false,
+          "fine_tuning": true,
+          "vision": true,
+          "ocr": false,
+          "classification": false,
+          "moderation": false,
+          "audio": false,
+          "audio_transcription": false,
+          "audio_transcription_realtime": false,
+          "audio_speech": false,
+          "unified_resources": false
+        },
+        "name": "ministral-8b-2512",
+        "description": "Ministral 3 (a.k.a. Tinystral) 8B Instruct.",
+        "max_context_length": 262144,
+        "aliases": [
+          "ministral-8b-latest"
+        ],
+        "deprecation": null,
+        "deprecation_replacement_model": null,
+        "default_model_temperature": 0.3,
+        "billing_model_name": "ministral-8b-2512",
+        "type": "base",
+        "audio_transcription_capabilities": null,
+        "audio_speech_capabilities": null
+      }
+    }
+  },
+  "finished": "2026-10-22T17:54:30.237869+00:00"
+}

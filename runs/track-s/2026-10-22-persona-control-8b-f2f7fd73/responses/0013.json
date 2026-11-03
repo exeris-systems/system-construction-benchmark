@@ -1,0 +1,29 @@
+{
+ "id": "a09c99ebb9ff486f9482a7c48715ff59",
+ "created": 1792691874,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1724,
+  "total_tokens": 1784,
+  "completion_tokens": 60,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure comes into force while my drones are already flying, I have to make sure they don’t enter the restricted area. The rules say I’m responsible for keeping my drones safe, so I need to know about closures right away and possibly call off or reroute flights if needed."
+   }
+  }
+ ]
+}

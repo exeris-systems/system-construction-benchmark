@@ -1,0 +1,29 @@
+{
+ "id": "5908b19bb408437d8d7636dbe5efd011",
+ "created": 1792694474,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1423,
+  "total_tokens": 1481,
+  "completion_tokens": 58,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Our company has a few dozen charging pads, but they’re all set up at our own sites—each pad belongs to us and isn’t shared with anyone else. I set them up when we add new sites or drones, and I send drones to charge when their batteries are low."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "2c7e6384c38f4cb6b4fe97c183351359",
+ "created": 1792691942,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1400,
+  "total_tokens": 1444,
+  "completion_tokens": 44,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk doesn’t handle drone reports, flights, or operations—only shared airspace information like closures and corridors. For that, you’d have to ask the customer companies."
+   }
+  }
+ ]
+}

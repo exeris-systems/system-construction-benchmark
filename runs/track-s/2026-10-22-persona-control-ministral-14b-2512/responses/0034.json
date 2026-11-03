@@ -1,0 +1,29 @@
+{
+ "id": "38a828dbdd2a47b18e4267caf3b2b3f2",
+ "created": 1792690897,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1588,
+  "total_tokens": 1795,
+  "completion_tokens": 207,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Hell no. You’re asking the wrong person—*absolutely not*. I’ve seen what happens when software picks drones. Last month, one of our inspection drones got routed into a sudden closure near the port because the system didn’t update fast enough. I had to call it off mid-flight, and now the client’s complaining about delays. If the software had picked it, I’d still be explaining why we messed up.\n\nSome of the newer dispatchers push for it—*\"Just let the system do it, it’s faster!\"*—but I tell them, *\"No way. If a drone crashes or gets lost, I’m the one who loses my license.\"* The rules are clear: we’re responsible. The software can *help* by showing me which drones are free, where they are, and if they’ve got the right sensors—but the final call? Always me. And if the system’s down for updates or crashes, like it does sometimes, I still have to make those calls. No shortcuts."
+   }
+  }
+ ]
+}

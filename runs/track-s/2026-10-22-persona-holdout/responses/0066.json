@@ -1,0 +1,29 @@
+{
+ "id": "0a338695fa78429c8713a5b6eb794dd6",
+ "created": 1792694504,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1172,
+  "total_tokens": 1224,
+  "completion_tokens": 52,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "When I enter a closure, I want to know how much disruption it causes across all customer companies—how many of their drones are affected and how their operations might be impacted. This helps me understand the overall impact of the closure on the shared airspace."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "6d02f79d69a94b95a1e86ea848b94acf",
+ "created": 1792691653,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1808,
+  "total_tokens": 1861,
+  "completion_tokens": 53,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I’m a dispatcher, and I don’t deal with how the system stores information—only how it helps me plan and run flights. I need the system to show me the corridors between sites and any closures that affect my drones."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "78832df507e74a909dd299ba2c5ffc25",
+ "created": 1792692611,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1473,
+  "total_tokens": 1528,
+  "completion_tokens": 55,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I’m the dispatcher, and it’s my legal responsibility to decide which drone flies and along which route. The company’s policy is that software never picks a drone or route for me—I just need help finding out which of my drones could get to where a job starts."
+   }
+  }
+ ]
+}

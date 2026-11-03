@@ -1,0 +1,29 @@
+{
+ "id": "4db8e441448e4e67b607b4cd07c051db",
+ "created": 1792691627,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1314,
+  "total_tokens": 1359,
+  "completion_tokens": 45,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, we can’t use charging pads at another company’s sites. Each company has its own pads, and they’re never shared or lent out. I have to make sure our drones only charge at our own pads."
+   }
+  }
+ ]
+}

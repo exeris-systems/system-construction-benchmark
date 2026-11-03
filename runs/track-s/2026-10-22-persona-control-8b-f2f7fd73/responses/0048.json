@@ -1,0 +1,29 @@
+{
+ "id": "1d45c4959cb44509b59eca268371a703",
+ "created": 1792691944,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1454,
+  "total_tokens": 1493,
+  "completion_tokens": 39,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk just needs to track closures and their impact on shared airspace, but I don’t decide or know about databases or how data is stored."
+   }
+  }
+ ]
+}

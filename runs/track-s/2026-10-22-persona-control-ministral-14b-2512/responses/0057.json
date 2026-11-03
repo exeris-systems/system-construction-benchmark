@@ -1,0 +1,29 @@
+{
+ "id": "6ba4015db1ce4ceca013854be047c51b",
+ "created": 1792690962,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1422,
+  "total_tokens": 1581,
+  "completion_tokens": 159,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "That’s all on the dispatcher—it’s their license and their responsibility. The software can show us which drones are available, where they are, and what sensors they’ve got, but we pick the one that fits the job. Sometimes it’s the closest one, sometimes it’s the one with the right camera, sometimes it’s the only one that can get there before the battery dies.\n\nWe also decide the route—whether to go direct or take a detour if there’s a closure or bad weather. The software might flag if we’re breaking rules, but it doesn’t tell us what to do. If a drone’s battery’s low or the wind’s picking up, we might call it off or send it back early. No way we’re letting some algorithm make those calls."
+   }
+  }
+ ]
+}

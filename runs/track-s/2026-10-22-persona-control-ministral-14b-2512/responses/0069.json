@@ -1,0 +1,29 @@
+{
+ "id": "3c62e60377e14d5b955ec5b811cbfd3c",
+ "created": 1792690992,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1515,
+  "total_tokens": 1629,
+  "completion_tokens": 114,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know the exact numbers—each company keeps that to themselves. But from what I’ve seen, some have just a handful, while others might have dozens flying at once, depending on the job.\n\nThe big thing for us isn’t how many drones they have, but how many *corridors* or *sites* they use. If a closure blocks a key route, that can mess with a lot of flights, no matter how many drones are out there. But again, we don’t track that per company—just the airspace itself."
+   }
+  }
+ ]
+}

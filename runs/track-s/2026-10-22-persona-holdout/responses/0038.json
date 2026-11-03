@@ -1,0 +1,29 @@
+{
+ "id": "08b476a766ef4154ad75f5d671f9d99d",
+ "created": 1792694448,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1915,
+  "total_tokens": 1956,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The maintenance schedule is handled by the drone operating company’s own technicians, not by the platform. They decide how often drones are serviced based on their own policies and rules."
+   }
+  }
+ ]
+}

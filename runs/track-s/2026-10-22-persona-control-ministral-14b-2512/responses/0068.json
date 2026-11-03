@@ -1,0 +1,29 @@
+{
+ "id": "3a4421ccaeee4e3f9c169af81aaba5a6",
+ "created": 1792690990,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1377,
+  "total_tokens": 1503,
+  "completion_tokens": 126,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, it happens a few times a week, usually during the day while drones are flying. We get a heads-up when it’s coming, so we can finish what we’re doing and save any changes. Most of the time, it’s just a quick restart—maybe a minute or two of downtime—but sometimes it takes a bit longer if something goes wrong.\n\nThe companies know it happens, so they don’t complain too much. As long as it’s not too often, they’re okay with it. But yeah, it’s annoying when you’re in the middle of updating a closure and suddenly everything goes dark."
+   }
+  }
+ ]
+}

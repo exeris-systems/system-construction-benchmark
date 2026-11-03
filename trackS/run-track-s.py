@@ -4,6 +4,7 @@
 Modes:
   persona-control   ask each persona its fixed control questions (persona-control.yaml), in one
                     conversation per role, several times, and record every exchange
+  persona-holdout   the same, with the held-out questions (persona-holdout.yaml)
 
 Each role names a provider and a model. Every request and response is written to the output
 directory verbatim, with every response header that reports a rate limit and the body of every 429,
@@ -29,6 +30,9 @@ import urllib.request
 HERE = pathlib.Path(__file__).resolve().parent
 RUNS = HERE.parent / "runs" / "track-s"
 CONTROL_FILE = "persona-control.yaml"
+HOLDOUT_FILE = "persona-holdout.yaml"
+# Each persona mode asks the questions of one set file and writes its answers under the mode's name.
+QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FILE}
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
 
@@ -114,8 +118,8 @@ def render(units, ids):
     return "\n".join(out)
 
 
-def parse_control(text):
-    """Read the restricted YAML of persona-control.yaml: role -> [{id, kind, question, expect}]."""
+def parse_control(text, name=CONTROL_FILE):
+    """Read the restricted YAML of a question set file: role -> [{id, kind, question, expect}]."""
     roles, role, item = {}, None, None
     for raw in text.splitlines():
         if raw.lstrip().startswith("#") or not raw.strip():
@@ -131,7 +135,7 @@ def parse_control(text):
             entry = entry[2:]
         key, sep, value = entry.partition(":")
         if role is None or item is None or not sep or not key.isidentifier():
-            sys.exit(f"{CONTROL_FILE}: cannot read line: {raw!r}")
+            sys.exit(f"{name}: cannot read line: {raw!r}")
         item[key] = value.strip()
     return roles
 
@@ -307,7 +311,8 @@ class Recorder:
 # --- modes ----------------------------------------------------------------------------------------
 
 def persona_control(args, files, notes, out, run):
-    control = parse_control(files[CONTROL_FILE])
+    set_file = QUESTION_SETS[args.mode]
+    control = parse_control(files[set_file], set_file)
     recorder = Recorder(out)
     persona = Client("persona", args.persona_provider, args.persona_model, args.persona_rpm,
                      args.persona_max_tokens, recorder)
@@ -324,12 +329,12 @@ def persona_control(args, files, notes, out, run):
                 turns.append(("model", answer))
                 answers.append({**q, "answer": answer})
             transcript.setdefault(role, []).append({"repetition": repetition, "answers": answers})
-    (out / "persona-control.json").write_text(json.dumps(transcript, ensure_ascii=False, indent=1) + "\n")
+    (out / f"{args.mode}.json").write_text(json.dumps(transcript, ensure_ascii=False, indent=1) + "\n")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("mode", choices=["persona-control"])
+    parser.add_argument("mode", choices=sorted(QUESTION_SETS))
     parser.add_argument("--persona-provider", default="mistral")
     parser.add_argument("--persona-model", required=True, help="exact model identifier")
     parser.add_argument("--persona-rpm", type=float, default=30)
@@ -339,7 +344,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="check inputs and print hashes; call nothing")
     args = parser.parse_args()
 
-    names = ["world-brief.md", "brief-slices.yaml", "persona-prompt.md", CONTROL_FILE]
+    set_file = QUESTION_SETS[args.mode]
+    names = ["world-brief.md", "brief-slices.yaml", "persona-prompt.md", set_file]
     files = {name: (HERE / name).read_text() for name in names}
     files["run-track-s.py"] = pathlib.Path(__file__).read_text()
 
@@ -350,9 +356,9 @@ def main():
         sys.exit(f"brief-slices.yaml does not match the brief: missing={missing} unknown={unknown}")
     notes = {role: render(units, [u for u in units if role in slices[u]]) for role in ROLES}
     hashes = {name: sha256(text) for name, text in files.items()}
-    control = parse_control(files[CONTROL_FILE])
+    control = parse_control(files[set_file], set_file)
     if set(control) != set(ROLES):
-        sys.exit(f"{CONTROL_FILE} roles {sorted(control)} do not match {sorted(ROLES)}")
+        sys.exit(f"{set_file} roles {sorted(control)} do not match {sorted(ROLES)}")
 
     if args.dry_run:
         print(json.dumps({"inputSha256": hashes,

@@ -1,0 +1,29 @@
+{
+ "id": "87fd491f252b4315a7d777ce47ef7814",
+ "created": 1792690950,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1791,
+  "total_tokens": 1964,
+  "completion_tokens": 173,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Hah, wish I could say yes! Reports from drones are about as reliable as a radio signal in a storm. Sometimes they come through fine, but more often than not, they’re delayed, out of order, or just don’t show up at all—especially near ports or industrial sites where the coverage is garbage. We’ve had drones send the same report twice, or skip a whole chunk of the flight, or send it hours late. And if a drone restarts in the air? Forget it—you might get nothing until it lands.\n\nWe just have to work with what we’ve got. If a report’s missing, we might have to send someone out to check the drone or the site manually. It’s part of the job—you learn to read between the lines. The platform does its best, but the system’s not perfect."
+   }
+  }
+ ]
+}

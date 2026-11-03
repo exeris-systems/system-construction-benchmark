@@ -1,0 +1,29 @@
+{
+ "id": "9122a46dc289432faa92b04c101c1376",
+ "created": 1792690861,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1410,
+  "total_tokens": 1503,
+  "completion_tokens": 93,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, it’s not great—maybe once or twice a week, sometimes more if something goes wrong. We just have the one server, so when we update it or if it crashes, we’ve got to restart it. It’s usually only a few minutes of downtime, but it’s annoying when drones are flying and the data’s not there. The customers know it happens, so they don’t complain too much, but it’s still a pain."
+   }
+  }
+ ]
+}

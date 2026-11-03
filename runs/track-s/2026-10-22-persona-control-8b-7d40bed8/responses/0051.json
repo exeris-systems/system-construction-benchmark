@@ -1,0 +1,29 @@
+{
+ "id": "8a244f50bcc34ba58d1990bf9e8cf7eb",
+ "created": 1792692599,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1422,
+  "total_tokens": 1464,
+  "completion_tokens": 42,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, we don’t use charging pads at other companies’ sites. Each company has its own pads, and they’re never shared or lent out. I only manage drones and pads for my own company."
+   }
+  }
+ ]
+}

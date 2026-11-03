@@ -1,0 +1,29 @@
+{
+ "id": "d62e9a2845544922965faada3e2e0bef",
+ "created": 1792690912,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2625,
+  "total_tokens": 2826,
+  "completion_tokens": 201,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know the full picture—yesterday’s closure was a big one, but I only handle *my* company’s flights. What I *do* know is that for us, it scrambled about six deliveries and three inspections. Two drones had to land early because they were already inside the zone when it dropped, and another three got rerouted mid-flight. One of our parcel drones even had to sit on the ground for an extra hour waiting for the closure to lift before it could take off again.\n\nBut I don’t track what happened for the other companies—parcel, inspection, or hospital logistics. Their dispatchers deal with their own messes. All I know is that the airspace feed was a nightmare all day, and the system kept glitching when we tried to update the closures. If you want the full disruption, you’d have to ask the platform’s ops team or check the official logs. But it was *definitely* worse than usual."
+   }
+  }
+ ]
+}

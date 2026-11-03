@@ -1,0 +1,29 @@
+{
+ "id": "d35c5dd408044aff8ef4ce9388f42c6e",
+ "created": 1792694402,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1881,
+  "total_tokens": 1930,
+  "completion_tokens": 49,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk is a separate team that handles closures and airspace rules, not dispatchers. They likely update the system and inform us when relevant changes happen, but I don’t manage those details myself."
+   }
+  }
+ ]
+}

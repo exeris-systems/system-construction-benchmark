@@ -1,0 +1,29 @@
+{
+ "id": "65d252480c174bdfb1bb24759d89de8c",
+ "created": 1792690953,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1979,
+  "total_tokens": 2201,
+  "completion_tokens": 222,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s not something I deal with directly—airspace closures are handled by the platform’s operations team, not the fleet techs. But from what I’ve heard, they look at the rules, the weather, and any reports from drones or ground staff about where things are risky. If there’s a storm moving in or a no-fly zone popping up, they’ll adjust the closure based on how long the hazard’s expected to last.\n\nSometimes it’s just a few minutes, like if a drone’s battery’s low and it needs to land fast. Other times, it’s hours—like if a big weather front’s rolling through. The platform’s got to follow the EU rules, so they can’t just guess. If they mess up and let a drone fly where it shouldn’t, that’s on them, not us. We just get the updates and try to reroute or ground drones as needed. But honestly? The system’s not always great at keeping everyone in sync, especially when radio’s spotty. You just hope the desk’s got their head on straight."
+   }
+  }
+ ]
+}

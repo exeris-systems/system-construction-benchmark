@@ -1,0 +1,29 @@
+{
+ "id": "595da45534324bddb26bebacd8643464",
+ "created": 1792690909,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2439,
+  "total_tokens": 2610,
+  "completion_tokens": 171,
+  "prompt_tokens_details": {
+   "cached_tokens": 2176
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s a mess—we’ve got at least three or four different connector types floating around. Some of the older drones use the old-style plug, others have the newer snap-in ones, and a few of the inspection models have that weird proprietary port that only fits their own chargers.\n\nThe problem is, we can’t just swap them out. The pads are hardwired to the sites, and if a drone shows up with the wrong connector, it just sits there until we can get the right adapter—or until the battery dies. And since the pads are company-specific, we can’t even borrow one from another operator if we’re in a pinch.\n\nIt’s one of those things that causes headaches when we’re short on time. You’d think by now they’d standardize, but no—every manufacturer does their own thing."
+   }
+  }
+ ]
+}

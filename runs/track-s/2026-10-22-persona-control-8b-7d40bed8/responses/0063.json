@@ -1,0 +1,29 @@
+{
+ "id": "10a04dba60724946a6b346d95b094fef",
+ "created": 1792692623,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1858,
+  "total_tokens": 1905,
+  "completion_tokens": 47,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only work with my own company’s drones and flights, and I don’t track how closures affect other companies. My focus is on my own operations and making sure my flights stay legal and safe."
+   }
+  }
+ ]
+}

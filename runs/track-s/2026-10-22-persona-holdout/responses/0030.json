@@ -1,0 +1,29 @@
+{
+ "id": "e6257f1ef41d4b6da6203f7a0dda71a1",
+ "created": 1792694432,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1638,
+  "total_tokens": 1680,
+  "completion_tokens": 42,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only manage the drones and charging equipment for my company’s fleet, not the number of jobs or deliveries each customer does. Someone in the logistics team or operations would know that."
+   }
+  }
+ ]
+}

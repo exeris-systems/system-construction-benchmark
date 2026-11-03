@@ -1,0 +1,29 @@
+{
+ "id": "6d137f10034a4914b5c23964c5e3639a",
+ "created": 1792692607,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1709,
+  "total_tokens": 1755,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. Dispatchers handle scheduling jobs and assigning drones, so they’d decide which drone to use for a delivery and which route to take. My job is just keeping the drones and charging equipment ready for work."
+   }
+  }
+ ]
+}

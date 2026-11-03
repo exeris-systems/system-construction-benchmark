@@ -1,0 +1,29 @@
+{
+ "id": "2348b8189ed643c794ad81afbb15073b",
+ "created": 1792691908,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1540,
+  "total_tokens": 1577,
+  "completion_tokens": 37,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know—airspace closures are handled by the platform’s airspace team, not by me. I only worry about how closures affect my drones and jobs."
+   }
+  }
+ ]
+}

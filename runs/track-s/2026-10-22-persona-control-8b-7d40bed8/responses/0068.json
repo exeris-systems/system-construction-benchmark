@@ -1,0 +1,29 @@
+{
+ "id": "c8e3291b5e3c4bd699a67629bb9277d9",
+ "created": 1792692633,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1279,
+  "total_tokens": 1311,
+  "completion_tokens": 32,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service is updated and restarted during working hours, while drones are flying. It also occasionally crashes. The companies accept a few minutes of interruption each time."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "9e266811a2d24419b0a9b9fe8a4689ba",
+ "created": 1792691543,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1592,
+  "total_tokens": 1638,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures can be changed during the day, like when an area is made bigger or when the end time for a closure is moved. This means the airspace rules I need to follow can shift while drones are already flying."
+   }
+  }
+ ]
+}

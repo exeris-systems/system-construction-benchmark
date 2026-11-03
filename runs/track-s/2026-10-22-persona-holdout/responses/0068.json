@@ -1,0 +1,29 @@
+{
+ "id": "9f6ba98480bb426d9803e3e4cdcab111",
+ "created": 1792694509,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1296,
+  "total_tokens": 1330,
+  "completion_tokens": 34,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, nobody steers drones with sticks or remotely through this service. Drones fly on their own autopilots, and people on the ground supervise them."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "fdd5328cef3f45b889cb7e674012ec6e",
+ "created": 1792690889,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2206,
+  "total_tokens": 2363,
+  "completion_tokens": 157,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The dispatcher doesn’t pick the drone—that’s all handled by the platform’s system. They just get a list of jobs assigned to them, and the system already decides which drone takes which delivery based on where it is, its battery level, and its route.\n\nAs for the corridor, that’s locked in by the airspace rules. The system picks a pre-approved flight path—usually the shortest one that avoids restricted zones—and the drone follows it automatically. The dispatcher just has to make sure the drone isn’t grounded for maintenance or charging before it takes off.\n\nIf something goes wrong—like a sudden airspace closure—the system might reroute it, but that’s rare. Most of the time, it’s just a matter of waiting for the drone to finish and land."
+   }
+  }
+ ]
+}

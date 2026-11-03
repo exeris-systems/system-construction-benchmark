@@ -1,0 +1,29 @@
+{
+ "id": "77a4ccda48194afcb02a8fb64704d36c",
+ "created": 1792690943,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1319,
+  "total_tokens": 1443,
+  "completion_tokens": 124,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No way—absolutely not. Each drone has its own charging connector type, and the pads at our sites are set up for specific ones. We’ve got a few different types in use, and they’re not interchangeable. If a drone’s connector doesn’t match the pad, it won’t charge. That’s why we’ve got to be careful when we send drones out—gotta make sure they’re going to a site with the right pad. Sometimes we’ve had to swap connectors in a hurry if a drone’s battery was running low and the wrong pad was at the site. Messy business."
+   }
+  }
+ ]
+}

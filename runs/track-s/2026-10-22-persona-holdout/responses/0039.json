@@ -1,0 +1,29 @@
+{
+ "id": "2f2f8c915e724f1d9a4d2ebd4823a9ff",
+ "created": 1792694450,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1973,
+  "total_tokens": 2023,
+  "completion_tokens": 50,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk is part of the platform company’s operations, not my dispatcher role. They handle closures and airspace rules, but I rely on their updates to my system so I can adjust flight plans accordingly."
+   }
+  }
+ ]
+}

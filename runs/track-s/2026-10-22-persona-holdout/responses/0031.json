@@ -1,0 +1,29 @@
+{
+ "id": "b61975be993d408a97d8b50f61142536",
+ "created": 1792694434,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1693,
+  "total_tokens": 1751,
+  "completion_tokens": 58,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I focus on keeping our drones and charging equipment running smoothly, not tracking airspace restrictions. The platform shares airspace info from the authorities, but I don’t check which zones are closed—I just make sure our fleet is ready to fly where we’re allowed."
+   }
+  }
+ ]
+}

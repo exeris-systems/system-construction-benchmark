@@ -1,0 +1,29 @@
+{
+ "id": "41dacb82f18e4b618f3657766d9ba913",
+ "created": 1792690811,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1366,
+  "total_tokens": 1506,
+  "completion_tokens": 140,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No way—absolutely not. Each drone’s got its own charging connector type, and the pads are wired for specific ones. If you mix ‘em up, you’re looking at a dead drone or a fried pad. We’ve got a few different connector types floating around—some older models use the old-style plug, while the newer ones need the newer ones. You can’t just swap ‘em out; they’re not universal like phone chargers.\n\nWe keep track of which pad goes with which connector, but it’s still a pain when a new drone comes in with a different type. Sometimes we’ve got to order a whole new batch of pads just for one customer’s fleet."
+   }
+  }
+ ]
+}

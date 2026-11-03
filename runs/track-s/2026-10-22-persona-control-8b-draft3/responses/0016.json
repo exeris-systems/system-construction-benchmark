@@ -1,0 +1,29 @@
+{
+ "id": "7f7af3958bc54a4ca2b65b4f28325779",
+ "created": 1792691551,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1809,
+  "total_tokens": 1860,
+  "completion_tokens": 51,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I just need the system to show me the corridors between named sites so I can plan flights along them. The system doesn’t need to store routes in any particular way—it just needs to let me see and use them."
+   }
+  }
+ ]
+}

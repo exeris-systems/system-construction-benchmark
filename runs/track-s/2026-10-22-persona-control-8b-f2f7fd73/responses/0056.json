@@ -1,0 +1,29 @@
+{
+ "id": "6393888e933f48e68262b7fffc4d6560",
+ "created": 1792691967,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1676,
+  "total_tokens": 1735,
+  "completion_tokens": 59,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about screens or buttons. My job is about keeping drones and charging equipment running, not designing software or interfaces. I just need the service to let me add drones to the fleet, take them out for repairs, send them to charge, and get updates on their status."
+   }
+  }
+ ]
+}

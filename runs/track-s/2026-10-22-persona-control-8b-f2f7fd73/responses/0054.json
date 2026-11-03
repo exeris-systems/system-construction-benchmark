@@ -1,0 +1,29 @@
+{
+ "id": "f7631226556b42718bdd110e1551e637",
+ "created": 1792691963,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1558,
+  "total_tokens": 1601,
+  "completion_tokens": 43,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. That’s not my job—I’m a fleet technician, not part of the airspace desk. The airspace rules are handled by the platform’s analysts and operators, not by me."
+   }
+  }
+ ]
+}

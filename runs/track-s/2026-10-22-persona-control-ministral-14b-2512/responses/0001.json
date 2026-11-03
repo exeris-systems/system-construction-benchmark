@@ -1,0 +1,29 @@
+{
+ "id": "b0c55079e2194c70bad73f3ae03ef18e",
+ "created": 1792690808,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1234,
+  "total_tokens": 1352,
+  "completion_tokens": 118,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that varies by customer. The parcel delivery firm’s got a few hundred—maybe around 300 or so, spread across their hubs. The inspection company’s smaller, maybe 50 or 60, but they’re heavier-duty drones with all the sensors. And the hospital logistics one’s got maybe 80 or so, but they’re all the same model since they’re just moving supplies between buildings.\n\nWhy, you asking for a specific one? I can check the exact numbers if you need ‘em—just let me know which customer."
+   }
+  }
+ ]
+}

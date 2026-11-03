@@ -1,0 +1,29 @@
+{
+ "id": "3756a1ec2e73475da5c4329499396ff8",
+ "created": 1792692514,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1473,
+  "total_tokens": 1537,
+  "completion_tokens": 64,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I decide which drone flies and along which way. My job is to plan and run the flights, and I’m the licensed person responsible for each one. The companies’ policy is that software never picks a drone or a route for me—I just need help figuring out which drones could get to where a job starts."
+   }
+  }
+ ]
+}

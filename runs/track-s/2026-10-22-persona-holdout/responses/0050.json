@@ -1,0 +1,29 @@
+{
+ "id": "4ebf99ac0b5641a88f1ca017695e3558",
+ "created": 1792694472,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1366,
+  "total_tokens": 1407,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company handles how we share information with regulators or anyone else, but I don’t deal with that part. I just make sure drones are serviced and charged properly."
+   }
+  }
+ ]
+}

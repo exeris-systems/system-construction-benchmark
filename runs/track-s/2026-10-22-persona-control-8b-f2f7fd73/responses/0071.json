@@ -1,0 +1,29 @@
+{
+ "id": "38af316def9c430c804a6ada6a1e0560",
+ "created": 1792691997,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1416,
+  "total_tokens": 1468,
+  "completion_tokens": 52,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk only handles airspace information and closures, not how drones report back to their own companies. If you’re asking about delays or order issues in drone reports, that would be for the customer companies to address."
+   }
+  }
+ ]
+}

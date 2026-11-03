@@ -1,0 +1,29 @@
+{
+ "id": "4d6d5325645a4333b24aceac39c2bdda",
+ "created": 1792690941,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1234,
+  "total_tokens": 1305,
+  "completion_tokens": 71,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, we’re not the biggest player—probably around 200 drones in our fleet right now. Mostly a mix of models, some for deliveries, some for inspections. The exact number changes when we retire old ones or add new ones, but it’s always a few hundred at most. Why, you asking for the software project?"
+   }
+  }
+ ]
+}

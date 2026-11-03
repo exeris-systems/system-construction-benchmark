@@ -1,0 +1,29 @@
+{
+ "id": "9fb1c3346f684eff945d76c1d8044bf2",
+ "created": 1792691906,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1484,
+  "total_tokens": 1525,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, reports from drones don’t always arrive on time, in order, or even at all. Sometimes they come late, out of sequence, or multiple times, especially when radio coverage is poor."
+   }
+  }
+ ]
+}

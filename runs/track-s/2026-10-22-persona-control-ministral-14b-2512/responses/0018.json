@@ -1,0 +1,29 @@
+{
+ "id": "7dac6d6078d640fbbd163eb54dbbe704",
+ "created": 1792690857,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1148,
+  "total_tokens": 1239,
+  "completion_tokens": 91,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I can’t do that. The airspace desk only handles the shared airspace data—closures, zones, corridors—that applies to all customers. We don’t track individual flights, drones, or which company they belong to. If a customer wants to know how a closure hit their operations, they’d have to look at their own systems. We might tell them *when* a closure happened, but not how it played out for them."
+   }
+  }
+ ]
+}

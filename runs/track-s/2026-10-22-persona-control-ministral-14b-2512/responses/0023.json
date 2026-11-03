@@ -1,0 +1,29 @@
+{
+ "id": "42df352939ec407ca81f73b9df3d8aba",
+ "created": 1792690869,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1690,
+  "total_tokens": 1770,
+  "completion_tokens": 80,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know anything about drone reports—they’re not part of our system. We just push out the airspace updates, like closures and zones, and the companies pull that data into their own tools. If their drones’ reports are late or mixed up, that’s something they’d have to ask their own tech teams about. Our job is just keeping the airspace picture straight."
+   }
+  }
+ ]
+}

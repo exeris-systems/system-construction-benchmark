@@ -1,0 +1,29 @@
+{
+ "id": "e2a0acdbf54444019b5a301c6095d9ed",
+ "created": 1792691535,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1597,
+  "total_tokens": 1711,
+  "completion_tokens": 114,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know what screens or buttons the new service should have—my job is about keeping drones and charging equipment running, not designing software. But I can tell you what the service needs to handle correctly:\n\n- It must track which drones are at which sites and which charging pads are free.\n- It needs to send drones to charge and take them out of service for repairs.\n- It must handle unreliable instructions and reports from drones, especially when radio coverage is bad.\n- It should let me see which drones are available for jobs and which are out of service."
+   }
+  }
+ ]
+}

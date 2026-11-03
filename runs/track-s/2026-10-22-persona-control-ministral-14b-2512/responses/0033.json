@@ -1,0 +1,29 @@
+{
+ "id": "e1ac9c912e7c4430b89834c215281ea8",
+ "created": 1792690894,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1422,
+  "total_tokens": 1574,
+  "completion_tokens": 152,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "That’s my job as a dispatcher—it’s my legal responsibility. The software can *suggest* which drones are available and where they are, but I’m the one who picks the drone, checks the battery, the weather (if I have to), and the route. The company’s policy is clear: no software picks drones or routes for us. We’ve had too many close calls where the software missed something—like a sudden airspace closure or a drone that wasn’t fully charged—that only a human would catch.\n\nSometimes it’s a pain, especially when we’re short-staffed and the system’s down for updates, but it’s non-negotiable. If something goes wrong, I’m the one who has to explain it."
+   }
+  }
+ ]
+}

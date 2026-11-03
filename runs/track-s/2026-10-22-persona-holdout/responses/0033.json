@@ -1,0 +1,29 @@
+{
+ "id": "6e802e5779a2433f850596caf49a4b97",
+ "created": 1792694438,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1475,
+  "total_tokens": 1563,
+  "completion_tokens": 88,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Yes, several dispatchers plan flights at the same time, often for the same busy sites and popular drones. This means we all have to coordinate carefully to avoid conflicts, especially when multiple drones need to use the same takeoff or landing spots or when there are limited drones available for a particular job. It can get quite busy, and we have to make sure we’re all aware of each other’s plans to keep things running smoothly."
+   }
+  }
+ ]
+}

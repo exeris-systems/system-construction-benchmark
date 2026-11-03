@@ -1,0 +1,29 @@
+{
+ "id": "5d8d3c62b1a44b30826b9dcce1231c2e",
+ "created": 1792691619,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1334,
+  "total_tokens": 1385,
+  "completion_tokens": 51,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk doesn’t receive or handle drones’ reports—only the shared airspace data from authorities. If reports are delayed or out of order, that would be a matter for the companies themselves or their own systems."
+   }
+  }
+ ]
+}

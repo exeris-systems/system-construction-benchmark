@@ -1,0 +1,29 @@
+{
+ "id": "0f1336789df64ec8a2e778845513d7ff",
+ "created": 1792690969,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1835,
+  "total_tokens": 2026,
+  "completion_tokens": 191,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Closures are *constantly* changing. One minute you’ve got a closure over a port, and the next it’s been widened because of a ship moving or a sudden event. Sometimes the end time gets pushed back—like if a protest turns into a bigger thing than expected.\n\nWe’ve had drones already in the air when a closure drops, and suddenly they’re in no-fly zone. That’s when we’ve got to scramble—reroute, call them back, or land them early if it’s safer. The worst part? The updates don’t always come through right away, or they get mixed up. By the time we see it, a drone might already be halfway through.\n\nAnd don’t even get me started on sudden closures—no warning at all. One second you’re good to go, the next you’ve got to abort everything. That’s why we’ve got to check those updates *constantly*."
+   }
+  }
+ ]
+}

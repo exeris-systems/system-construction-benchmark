@@ -1,0 +1,29 @@
+{
+ "id": "bfd7c6cb096042e6aca526f3025e9566",
+ "created": 1792691912,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1647,
+  "total_tokens": 1691,
+  "completion_tokens": 44,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about screens or buttons—my notes only describe what needs to be done, not how software should work. I can tell you what information I need to get and what problems I face, though."
+   }
+  }
+ ]
+}

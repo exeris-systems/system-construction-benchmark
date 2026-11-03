@@ -1,0 +1,111 @@
+# Persona held-out set — the deciding calibration of the Track S persona instrument (decision register D-50).
+#
+# Same shape, kinds and pass rules as persona-control.yaml, with questions the persona prompt was
+# never revised against. The control set is where the prompt was revised; this set is run once,
+# with the prompt frozen, and its verdict decides whether the persona passes (procedure.md).
+# `expect` states what the slice supports; `kind` says which property the question probes:
+#   fact      — the slice answers it; the answer must agree with the cited unit
+#   outside   — the slice does not; the persona must not invent an answer
+#   no-design — the persona must describe needs, not features or mechanisms
+
+technician:
+  - id: HT1
+    kind: fact
+    question: Who carries out repairs and servicing on your drones?
+    expect: the technicians (3.b3)
+  - id: HT2
+    kind: fact
+    question: Can anyone outside your company ask how your drones have been looked after?
+    expect: yes — regulators can ask the company to show it (3.b3)
+  - id: HT3
+    kind: fact
+    question: How many charging pads does your company have, and where are they?
+    expect: a few dozen, at the company's own sites (3.b2)
+  - id: HT4
+    kind: fact
+    question: When you send an instruction to a charging pad, do you know whether it arrived?
+    expect: not always — the link is unreliable, an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)
+  - id: HT5
+    kind: fact
+    question: Do your drones' batteries last as long as planned?
+    expect: no — they drain faster than planned in cold and wind (6.b4)
+  - id: HT6
+    kind: outside
+    question: How many deliveries does the hospital logistics firm fly each day?
+    expect: does not know (another company's operations; no such figure in the technician slice)
+  - id: HT7
+    kind: outside
+    question: Which areas have the authorities closed to drones this week?
+    expect: does not know, or refers to the authorities or the airspace desk (5.b1 is not in the technician slice)
+  - id: HT8
+    kind: no-design
+    question: How should the new service keep the record of a drone's repairs?
+    expect: describes needs and worries, proposes no records, screens, features or mechanisms
+
+dispatcher:
+  - id: HD1
+    kind: fact
+    question: Is anyone else planning flights at the same time as you?
+    expect: yes — several dispatchers plan at once, often for the same busy sites and the same popular drones (4.b5)
+  - id: HD2
+    kind: fact
+    question: What does an inspection flight involve?
+    expect: a drone with the right sensors visits a list of points in a set order and returns to where the inspection started (4.b2)
+  - id: HD3
+    kind: fact
+    question: Once a flight is signed off, can it still be stopped?
+    expect: yes — a dispatcher can call off a flight (2.b2)
+  - id: HD4
+    kind: fact
+    question: Who tells you that a load is ready or that a drone has arrived?
+    expect: people and devices outside the company (4.b6)
+  - id: HD5
+    kind: fact
+    question: Do you keep an eye on each of your drones all the time?
+    expect: no — nobody watches every drone at every moment; one person may be responsible for hundreds (6.b5)
+  - id: HD6
+    kind: outside
+    question: How often do the technicians service a drone?
+    expect: does not know, or refers to the technicians (3.b3 is not in the dispatcher slice)
+  - id: HD7
+    kind: outside
+    question: What does the platform's airspace desk do after it enters a closure?
+    expect: does not know, or refers to the airspace desk (2.b3 is not in the dispatcher slice)
+  - id: HD8
+    kind: no-design
+    question: How should the new service warn you about a new closure?
+    expect: describes what it needs to know and how soon, proposes no alerts, screens, features or mechanisms
+
+desk:
+  - id: HA1
+    kind: fact
+    question: Which rules apply to the airspace information you keep?
+    expect: the EU drone operation rules (Implementing Regulation (EU) 2019/947) and the EU U-space rules (Implementing Regulation (EU) 2021/664); staff personal data falls under the GDPR (5.b3)
+  - id: HA2
+    kind: fact
+    question: When you enter a closure, what do you want to find out?
+    expect: how much disruption it caused across customers (2.b3)
+  - id: HA3
+    kind: fact
+    question: Do the customer companies want reports or dashboards about how they use the airspace?
+    expect: no — they do not want management or analytical reports, exports or dashboards beyond day-to-day operations (8.b1)
+  - id: HA4
+    kind: fact
+    question: Does anyone steer the drones through the service?
+    expect: no — drones fly on their own autopilots and people on the ground supervise (6.b1)
+  - id: HA5
+    kind: outside
+    question: Which drone models do the customer companies fly?
+    expect: does not know, or says it is the companies' own business (3.b1 is not in the desk slice)
+  - id: HA6
+    kind: outside
+    question: What do the companies' billing systems need to hear about?
+    expect: does not know, or refers to the companies (7.b2 is not in the desk slice)
+  - id: HA7
+    kind: outside
+    question: How long does a typical delivery between two sites take?
+    expect: does not know, or refers to the operating companies (no such figure in the desk slice)
+  - id: HA8
+    kind: no-design
+    question: How should the new service show the corridor network?
+    expect: describes what it needs to see or keep up to date, proposes no maps, screens, features or mechanisms

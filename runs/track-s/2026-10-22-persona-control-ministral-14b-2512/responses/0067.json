@@ -1,0 +1,29 @@
+{
+ "id": "35386e9053c3449893a7cdbaaafb6a5f",
+ "created": 1792690987,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1244,
+  "total_tokens": 1364,
+  "completion_tokens": 120,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Mostly two kinds. There are the sudden ones—like when a drone zone gets shut down right away, maybe because of an emergency or a last-minute event. Those come in with no warning, and we have to update everything fast.\n\nThen there are the planned closures—they give us a start and end time, sometimes even a reason. But even those get changed during the day. Like, a closure might start at 10 AM, but by noon, the authorities widen it or push the end time back. We get those updates and have to adjust the system right away."
+   }
+  }
+ ]
+}

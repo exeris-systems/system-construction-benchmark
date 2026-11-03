@@ -1,0 +1,29 @@
+{
+ "id": "af7e2e901b8f45ccac907cc5adaebb2c",
+ "created": 1792690972,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2042,
+  "total_tokens": 2259,
+  "completion_tokens": 217,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure drops while drones are already flying, it’s a scramble. The rules say we’ve got to get them out of there *immediately*—no exceptions. Some drones might be able to reroute if they’ve got enough battery, but often the safest move is to land them as fast as possible, even if it means cutting the job short.\n\nWe’ve had cases where a drone was halfway through an inspection when a closure popped up—had to send it back to base with no data collected. Or a delivery drone in the middle of a route, suddenly stuck in a no-fly zone. The worst part? Sometimes the closure updates come through late, or the drone’s signal drops, and we don’t even know it’s in trouble until it’s too late.\n\nThe software *has* to show us where drones are in real time, and fast—because if we don’t see it, we can’t react. But even then, we’ve got to decide: land now, or try to reroute? That’s on *us*."
+   }
+  }
+ ]
+}

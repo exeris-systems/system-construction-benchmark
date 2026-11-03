@@ -1,0 +1,29 @@
+{
+ "id": "40549357303a4be196b50ab0d06dc17f",
+ "created": 1792692542,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1440,
+  "total_tokens": 1472,
+  "completion_tokens": 32,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk doesn’t handle reports from drones or how companies receive them. That’s managed by each company’s own systems."
+   }
+  }
+ ]
+}

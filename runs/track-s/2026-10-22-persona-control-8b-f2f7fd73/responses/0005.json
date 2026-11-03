@@ -1,0 +1,29 @@
+{
+ "id": "c001028cd7694e1b8194ec10ddb59259",
+ "created": 1792691858,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1498,
+  "total_tokens": 1537,
+  "completion_tokens": 39,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, reports from drones don’t always come through, and they don’t always arrive in order. They can be late, duplicated, or missing, especially in places with poor radio coverage."
+   }
+  }
+ ]
+}

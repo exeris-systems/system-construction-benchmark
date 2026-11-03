@@ -1,0 +1,29 @@
+{
+ "id": "cba3c4f00fe940ae88b3b274e640e762",
+ "created": 1792691850,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1270,
+  "total_tokens": 1313,
+  "completion_tokens": 43,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know the exact number, but my company can run a few hundred drones at once. The exact count depends on how many jobs are active and how many are out of service for repairs or charging."
+   }
+  }
+ ]
+}

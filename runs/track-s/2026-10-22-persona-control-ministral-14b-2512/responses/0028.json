@@ -1,0 +1,29 @@
+{
+ "id": "126b32d396ae42e89e5fb06702d6034a",
+ "created": 1792690881,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1590,
+  "total_tokens": 1787,
+  "completion_tokens": 197,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Oh, that’s one of those moments where you just hold your breath. If a drone reboots mid-flight, it usually picks up where it left off—like if it was doing an inspection, it’ll keep going to the next point. But sometimes it drops the job entirely and just heads back to its home site.\n\nThe worst part is, you don’t always know it happened right away. The reports might come in late, or not at all, depending on the radio coverage. If it’s a delivery, the package could be sitting out there somewhere until the drone lands. And if it’s an inspection? Well, you might miss part of the data unless you send it back out again.\n\nWe’ve had a few times where a drone restarted right over a port or industrial zone—terrible radio coverage—and we didn’t even know it was still flying until it landed. Then we’ve got to check the logs to see if it finished the job or not."
+   }
+  }
+ ]
+}

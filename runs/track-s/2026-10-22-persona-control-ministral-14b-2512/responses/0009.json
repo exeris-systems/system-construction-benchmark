@@ -1,0 +1,29 @@
+{
+ "id": "f6d9efde66cd426fa58686f6ecf42380",
+ "created": 1792690834,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1422,
+  "total_tokens": 1568,
+  "completion_tokens": 146,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "That’s all on the dispatcher—it’s their license and their responsibility. The software can show us which drones are available, where they are, and what sensors they’ve got, but we’re the ones who pick which one goes where and how it gets there. We don’t want the system making those calls for us, not with the rules and the risks involved.\n\nSometimes we’ve got a job that needs a thermal camera, and only three drones in the whole fleet have one—two are charging, and one’s already out on a job. Then we’ve got to decide whether to hold off, send the one that’s out back early, or find another way. The software can’t do that thinking for us."
+   }
+  }
+ ]
+}

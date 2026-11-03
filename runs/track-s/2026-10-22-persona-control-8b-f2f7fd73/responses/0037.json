@@ -1,0 +1,29 @@
+{
+ "id": "5a7084db99544c919e5189700b7e224b",
+ "created": 1792691922,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1755,
+  "total_tokens": 1836,
+  "completion_tokens": 81,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "If a closure comes into force while my drones are already flying, I have to make sure they stay safe and follow the new rules. The drones fly on their own, but I need to know about the closure right away so I can call off a flight or change its route if needed. The service has to tell me about these changes quickly, even if it’s while drones are in the air."
+   }
+  }
+ ]
+}

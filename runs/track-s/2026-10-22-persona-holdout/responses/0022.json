@@ -1,0 +1,29 @@
+{
+ "id": "c8b84746152241bc89195d0e15256ad5",
+ "created": 1792694416,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1393,
+  "total_tokens": 1434,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The companies handle billing and pricing in their own systems, so they don’t need the platform to provide any billing or pricing information. I don’t track costs, fees, or financial details at all."
+   }
+  }
+ ]
+}

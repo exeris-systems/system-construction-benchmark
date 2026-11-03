@@ -1,0 +1,29 @@
+{
+ "id": "560030fc70b94008b83e005e65af3e77",
+ "created": 1792692601,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1478,
+  "total_tokens": 1552,
+  "completion_tokens": 74,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "When a drone restarts in flight after a software fault, it usually just keeps flying on its autopilot. I don’t control it directly, but I’ve seen them carry on with their job as if nothing happened. Sometimes the drone reports back late or not at all, which can be confusing because I don’t always know if it’s still working properly."
+   }
+  }
+ ]
+}

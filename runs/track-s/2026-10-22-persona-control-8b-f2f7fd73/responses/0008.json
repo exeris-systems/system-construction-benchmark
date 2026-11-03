@@ -1,0 +1,29 @@
+{
+ "id": "e1dbdbcb4da7458c9cc0465cb2dec2ff",
+ "created": 1792691864,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1655,
+  "total_tokens": 1710,
+  "completion_tokens": 55,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know about screens or buttons—my job is about keeping drones and charging equipment running, not designing software. I can only say what needs to happen in practice: drones need to be ready for jobs, charging pads must work, and repairs must be tracked."
+   }
+  }
+ ]
+}

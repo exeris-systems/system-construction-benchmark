@@ -1,0 +1,29 @@
+{
+ "id": "b372493f235246d5bfb23b7e0b6dd7ec",
+ "created": 1792690999,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1860,
+  "total_tokens": 1955,
+  "completion_tokens": 95,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "We don’t use databases—it’s all just the one service running on that single server. The closures get stored right there, along with the zones and corridors, and everything updates in real time as we get new info from the authorities.\n\nIf you’re asking where the data lives technically, I couldn’t tell you—it’s all handled by the platform’s IT team. Our job is just to keep the airspace picture accurate and push updates when something changes."
+   }
+  }
+ ]
+}

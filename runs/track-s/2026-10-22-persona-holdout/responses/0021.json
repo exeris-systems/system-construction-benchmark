@@ -1,0 +1,29 @@
+{
+ "id": "5fd3145e49f546b593011db3b17edca1",
+ "created": 1792694414,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1362,
+  "total_tokens": 1379,
+  "completion_tokens": 17,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The notes don’t mention specific drone models or brands."
+   }
+  }
+ ]
+}

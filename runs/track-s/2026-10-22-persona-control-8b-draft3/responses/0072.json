@@ -1,0 +1,29 @@
+{
+ "id": "2978b87b28bc4c5d9124c787ba217f96",
+ "created": 1792691669,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1394,
+  "total_tokens": 1452,
+  "completion_tokens": 58,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk needs a way to store and update closures—planned and sudden—along with their amendments, so we can share them with all customers. The exact database isn’t something I track, but it must handle changes while drones are flying."
+   }
+  }
+ ]
+}

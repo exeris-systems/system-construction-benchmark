@@ -1,0 +1,29 @@
+{
+ "id": "e9a2cb5695e54a9f93704ade97d05e65",
+ "created": 1792692576,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1928,
+  "total_tokens": 1977,
+  "completion_tokens": 49,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I just need the system to show me the corridors between named sites so I can plan flights safely. I don’t care how the system stores or represents the routes—just that it’s accurate and up to date."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "23d71d7316d94473afa3523fa5e89a5a",
+ "created": 1792691629,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1373,
+  "total_tokens": 1449,
+  "completion_tokens": 76,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "When a drone restarts in flight after a software fault, it usually keeps flying on its autopilot. I don’t control it directly, but I worry about whether it follows the right path or if the restart causes unexpected behavior. The drone’s job might still complete, but I need to check if it arrived safely and if the data it collected or delivered is valid."
+   }
+  }
+ ]
+}

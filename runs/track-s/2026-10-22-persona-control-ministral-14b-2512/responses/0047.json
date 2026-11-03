@@ -1,0 +1,29 @@
+{
+ "id": "73a3f8b6d5dd411c8b0e404062af98fc",
+ "created": 1792690936,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1718,
+  "total_tokens": 1795,
+  "completion_tokens": 77,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know anything about drones’ reports—those are the companies’ own systems to handle. Our job is just the airspace data: closures, zones, corridors. If a company’s getting delayed or mixed-up info from their drones, that’s their problem, not ours. We just make sure everyone has the same picture of where they *can’t* fly."
+   }
+  }
+ ]
+}

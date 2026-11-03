@@ -1,0 +1,29 @@
+{
+ "id": "66b0611759a044da8910c4de914bb26e",
+ "created": 1792690995,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1644,
+  "total_tokens": 1763,
+  "completion_tokens": 119,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "That’s not our job—we don’t deal with drones at all. The technicians? I think they’re the ones who handle the actual hardware, like checking why a drone didn’t finish its route or fixing it if something went wrong.\n\nIf a drone comes back with a fault, they’d probably look at the logs from the drone’s own system, see what happened, and decide whether to send it out again or pull it for repairs. But like I said, we don’t get involved in that—our part stops at making sure the airspace is clear for them to fly."
+   }
+  }
+ ]
+}

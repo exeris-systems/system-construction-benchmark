@@ -1,0 +1,29 @@
+{
+ "id": "b0c29c16fca54072854b7353c21dbf78",
+ "created": 1792691866,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1458,
+  "total_tokens": 1522,
+  "completion_tokens": 64,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I’m the dispatcher responsible for choosing which drone flies and along which route. The company’s policy is that software never picks a drone or route for me—I decide, and I sign off on each flight before it takes off. I just need help figuring out which of my drones could reach a job’s starting point."
+   }
+  }
+ ]
+}

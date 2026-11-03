@@ -1,0 +1,29 @@
+{
+ "id": "2c187d7495794e94b58f3fba00b3760e",
+ "created": 1792690900,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1811,
+  "total_tokens": 1952,
+  "completion_tokens": 141,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not at the same moment—sites have limits on how many drones can take off or land at once. Each site has a few spots where drones can launch or return, and if too many try at the same time, they’ll just sit there waiting. It’s part of the dispatcher’s job to check that before signing off a flight.\n\nSometimes we get rushed—like when a parcel delivery needs to go out *now*—and we might have to delay another drone that’s ready. But if we don’t, the system just blocks the takeoff and tells us to wait. It’s one of those things that’s easy to forget when you’re juggling a hundred flights at once."
+   }
+  }
+ ]
+}

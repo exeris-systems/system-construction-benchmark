@@ -1,0 +1,29 @@
+{
+ "id": "00d3e5bb18e0456291f5ef5d41cb92b5",
+ "created": 1792691651,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1756,
+  "total_tokens": 1797,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only track my own company’s drones and jobs, not what happens across all companies. My focus is on keeping my flights safe and legal, not on measuring overall disruption."
+   }
+  }
+ ]
+}

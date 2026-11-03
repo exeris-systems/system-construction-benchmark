@@ -1,0 +1,29 @@
+{
+ "id": "89bb2b13b025437296e100818c4deeb4",
+ "created": 1792690839,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1760,
+  "total_tokens": 1916,
+  "completion_tokens": 156,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, not at the same exact moment—but sites have limits on how many drones can be in the air at once. Each site has a few spots where drones can take off or land safely, and if too many try to leave together, they’ll block each other. We’ve got to space them out, even if the jobs are urgent.\n\nSometimes the software shows a site as \"free,\" but in reality, a drone’s still sitting there because its last job got delayed, or the charging pad’s stuck. We’ve had to cancel flights because we thought a spot was clear, but it wasn’t. So we need to know *for sure* how many drones are actually on the ground and ready to go—not just what the system *thinks* it knows."
+   }
+  }
+ ]
+}

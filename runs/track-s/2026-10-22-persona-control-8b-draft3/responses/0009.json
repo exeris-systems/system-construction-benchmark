@@ -1,0 +1,29 @@
+{
+ "id": "944b8918c53844398e956fe0e19e216f",
+ "created": 1792691537,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1368,
+  "total_tokens": 1442,
+  "completion_tokens": 74,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I’m the dispatcher who decides which drone flies and along which route. My job is to pick the right drone and plan the flight path, and I always sign off on the flight before it takes off. The companies’ policy is that software never picks the drone or route for me—I just need help finding which of my drones could get to where a job starts."
+   }
+  }
+ ]
+}

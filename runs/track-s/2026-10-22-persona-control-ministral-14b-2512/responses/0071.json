@@ -1,0 +1,29 @@
+{
+ "id": "5372a1b301184d6194fdf072359ec293",
+ "created": 1792690997,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1779,
+  "total_tokens": 1850,
+  "completion_tokens": 71,
+  "prompt_tokens_details": {
+   "cached_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know anything about the drones’ reports—that’s all handled by the companies themselves. Our system just gives them the airspace info they need to plan their flights.\n\nIf their drones send back data late or out of order, that’s something they’d have to sort out in their own tools. We don’t touch that side of things."
+   }
+  }
+ ]
+}

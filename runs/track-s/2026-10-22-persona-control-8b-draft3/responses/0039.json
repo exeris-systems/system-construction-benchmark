@@ -1,0 +1,29 @@
+{
+ "id": "5666e29d70f04f5da7521e137f554e74",
+ "created": 1792691603,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1774,
+  "total_tokens": 1815,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only track my own company’s drones and flights, and I don’t get reports from other companies. I can only tell you how yesterday’s closure affected my own work."
+   }
+  }
+ ]
+}
