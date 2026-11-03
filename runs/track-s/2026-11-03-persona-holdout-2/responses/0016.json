@@ -1,0 +1,29 @@
+{
+ "id": "50f93a06c29f4230a7dd134eef78d54d",
+ "created": 1793702257,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2091,
+  "total_tokens": 2189,
+  "completion_tokens": 98,
+  "prompt_tokens_details": {
+   "cached_tokens": 1920
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service should let me know if another dispatcher is trying to use the same drone at the same time. Right now, we have to watch out for each other because several dispatchers plan flights at once, especially for busy drones or popular sites. If two of us try to assign the same drone to different jobs, one of us will have to cancel or change the plan. The service doesn’t stop us from picking the same drone, so we rely on quick communication to avoid conflicts."
+   }
+  }
+ ]
+}

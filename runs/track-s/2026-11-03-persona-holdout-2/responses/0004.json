@@ -1,0 +1,29 @@
+{
+ "id": "32b2f2411b954a0f9dab6bb8255868c1",
+ "created": 1793702209,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1625,
+  "total_tokens": 1706,
+  "completion_tokens": 81,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The platform service needs to know what happens to our drones and jobs so it can keep track of them. Beyond that, our own systems—like billing and customer updates—also need to hear about drone status, job progress, and any issues. That’s how we keep everything running in our own operations. The platform doesn’t handle billing or customer updates, though; we take care of that ourselves."
+   }
+  }
+ ]
+}

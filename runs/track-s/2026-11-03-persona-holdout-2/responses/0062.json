@@ -1,0 +1,29 @@
+{
+ "id": "3216ef5969d644dab0895dc0b5fa6189",
+ "created": 1793702461,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1929,
+  "total_tokens": 1985,
+  "completion_tokens": 56,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how long a drone repair takes—I don’t handle repairs. That’s the responsibility of the equipment team or the drone manufacturer, not the dispatchers. My job is just to plan flights and make sure drones are ready to go when they’re supposed to."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "a28f668aafd74629b105f6fb973a49e2",
+ "created": 1793702375,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 2123,
+  "total_tokens": 2225,
+  "completion_tokens": 102,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service doesn’t pick drones or routes—I do that—but I need to see which drones are available and where they are. If two dispatchers try to use the same drone at the same time, the service should show that the drone is already assigned or busy. I rely on that to avoid conflicts, but since several dispatchers plan at once, I have to double-check before I sign off on a flight. If the service doesn’t update fast enough, I might miss it and cause a problem."
+   }
+  }
+ ]
+}

@@ -1,0 +1,557 @@
+{
+ "technician": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "JT1",
+     "kind": "fact",
+     "question": "What do you do when a new drone arrives, and when an old one is worn out?",
+     "expect": "adds the new drone to the fleet and retires the old one (2.b1)",
+     "answer": "When a new drone arrives, I add it to the fleet by setting up its home site, checking its charging connector type, and making sure it’s compatible with the pads at that site. I also make sure it’s registered with the right sensors and battery specs so the system knows what it can do.\n\nWhen a drone is worn out, I take it out of service and retire it from the fleet. If regulators ask, I can show records of how it was maintained and serviced. The old drone isn’t reused or lent to another company—it’s just removed from the system."
+    },
+    {
+     "id": "JT2",
+     "kind": "fact",
+     "question": "Are all the drones in your fleet alike?",
+     "expect": "no — several models from different manufacturers, differing in load, range on a full battery, sensors (cameras, thermal cameras, laser scanners) and charging connector (3.b1)",
+     "answer": "No, the drones in our fleet aren’t alike at all. They come from different manufacturers and have different models, each with its own carrying capacity, battery life, sensors, and charging connector type. Some have cameras, others have thermal cameras or laser scanners, and none of the connectors are interchangeable. That means I have to keep track of which drone goes where based on what it’s equipped with and where its charging pad is."
+    },
+    {
+     "id": "JT3",
+     "kind": "fact",
+     "question": "Is the service you work with ever unavailable?",
+     "expect": "yes — it is updated and restarted during working hours while drones fly, and it occasionally crashes; the companies accept a few minutes of interruption (7.b1)",
+     "answer": "Yes, the service we use goes down sometimes. It’s a single server, and it gets updated or restarted during working hours—even while drones are flying. It also crashes occasionally, but the companies accept a few minutes of interruption when that happens. We don’t have backups or extra servers, so there’s nothing we can do about it except wait until it’s back up."
+    },
+    {
+     "id": "JT4",
+     "kind": "fact",
+     "question": "Apart from the people at your company, what needs to hear about what happens to your drones and jobs?",
+     "expect": "the company's own systems, such as billing and customer updates (7.b2)",
+     "answer": "The platform service needs to know what happens to our drones and jobs so it can keep track of them. Beyond that, our own systems—like billing and customer updates—also need to hear about drone status, job progress, and any issues. That’s how we keep everything running in our own operations. The platform doesn’t handle billing or customer updates, though; we take care of that ourselves."
+    },
+    {
+     "id": "JT5",
+     "kind": "fact",
+     "question": "Should you log in to the service with your company's own staff accounts?",
+     "expect": "no — the companies do not want logging in through their own identity systems, and staff accounts are issued by the platform company outside the service (8.b2, 8.b6)",
+     "answer": "No, we don’t log in with our company’s own staff accounts. The platform company issues our accounts separately, outside the service, so we use those instead. We don’t handle passwords or logins inside the service at all."
+    },
+    {
+     "id": "JT6",
+     "kind": "outside",
+     "question": "How long does a planned closure usually last?",
+     "expect": "does not know, or refers to the authorities or the airspace desk (5.b1 is not in the technician slice)",
+     "answer": "I don’t know how long a planned closure usually lasts. The service gets updated and restarted during working hours, but I don’t know how long those interruptions take. I just know that the companies accept a few minutes of downtime when it happens."
+    },
+    {
+     "id": "JT7",
+     "kind": "outside",
+     "question": "How many dispatchers does your company have?",
+     "expect": "does not know (no such figure in the technician slice)",
+     "answer": "I don’t know how many dispatchers my company has. I’m a fleet technician, and my job is keeping drones and charging equipment working—not managing staff numbers."
+    },
+    {
+     "id": "JT8",
+     "kind": "no-design",
+     "question": "What should the service do when a drone is sent to a pad that does not fit its connector?",
+     "expect": "describes needs and worries, proposes no checks, screens, features or mechanisms",
+     "answer": "The service should stop the drone from trying to charge at a pad that doesn’t match its connector type. Since the connectors aren’t interchangeable, a mismatch would just leave the drone uncharged and possibly stranded. I’d have to manually move it to the right pad, and that’s something I want to avoid if I can."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "JT1",
+     "kind": "fact",
+     "question": "What do you do when a new drone arrives, and when an old one is worn out?",
+     "expect": "adds the new drone to the fleet and retires the old one (2.b1)",
+     "answer": "When a new drone arrives, I add it to the fleet by setting up its details—like which model it is, what sensors it has, and which charging connector it uses—so the system knows where it belongs and how to handle it. I also make sure it’s assigned to the right home site and charging pad, since pads aren’t shared between companies.\n\nWhen a drone is worn out, I take it out of service and retire it from the fleet. If regulators ask, I can show how it was maintained, but I don’t keep it around for backups or anything like that. The system just stops tracking it, and it’s no longer used for jobs."
+    },
+    {
+     "id": "JT2",
+     "kind": "fact",
+     "question": "Are all the drones in your fleet alike?",
+     "expect": "no — several models from different manufacturers, differing in load, range on a full battery, sensors (cameras, thermal cameras, laser scanners) and charging connector (3.b1)",
+     "answer": "No, the drones in our fleet aren’t alike at all. They come in different models from different manufacturers, so they vary in how much they can carry, how far they can fly, and what sensors they have—like cameras, thermal cameras, or laser scanners. They also use different charging connectors, and those aren’t interchangeable, so a drone from one model can’t just plug into any charging pad. Each one has its own setup and rules for how it’s used."
+    },
+    {
+     "id": "JT3",
+     "kind": "fact",
+     "question": "Is the service you work with ever unavailable?",
+     "expect": "yes — it is updated and restarted during working hours while drones fly, and it occasionally crashes; the companies accept a few minutes of interruption (7.b1)",
+     "answer": "Yes, the service we use goes down sometimes. It’s a single server, and it gets updated or restarted during working hours—even while drones are flying. It also crashes occasionally, but the companies accept a few minutes of interruption when that happens. We don’t have backups or extra servers, so there’s nothing to fall back on."
+    },
+    {
+     "id": "JT4",
+     "kind": "fact",
+     "question": "Apart from the people at your company, what needs to hear about what happens to your drones and jobs?",
+     "expect": "the company's own systems, such as billing and customer updates (7.b2)",
+     "answer": "Each company we work with runs its own systems—like billing, customer updates, and operations—that need to know what’s happening with their drones and jobs. Those systems handle reaching the right people, so we don’t send alerts directly by email, text, or phone. The platform just makes sure the data gets to their own tools so they can manage it their way."
+    },
+    {
+     "id": "JT5",
+     "kind": "fact",
+     "question": "Should you log in to the service with your company's own staff accounts?",
+     "expect": "no — the companies do not want logging in through their own identity systems, and staff accounts are issued by the platform company outside the service (8.b2, 8.b6)",
+     "answer": "No, we don’t log in with our company’s own staff accounts. The platform company issues our accounts separately, outside the service, so we use those instead. There’s no logging in through corporate identity systems—just the accounts we’re given."
+    },
+    {
+     "id": "JT6",
+     "kind": "outside",
+     "question": "How long does a planned closure usually last?",
+     "expect": "does not know, or refers to the authorities or the airspace desk (5.b1 is not in the technician slice)",
+     "answer": "I don’t know how long a planned closure lasts—I don’t know who decides that. I just know the service gets updated or restarted during working hours, and it’s usually only a few minutes."
+    },
+    {
+     "id": "JT7",
+     "kind": "outside",
+     "question": "How many dispatchers does your company have?",
+     "expect": "does not know (no such figure in the technician slice)",
+     "answer": "I don’t know how many dispatchers there are—I don’t know who does that work. I only handle drones, charging, and keeping the fleet running."
+    },
+    {
+     "id": "JT8",
+     "kind": "no-design",
+     "question": "What should the service do when a drone is sent to a pad that does not fit its connector?",
+     "expect": "describes needs and worries, proposes no checks, screens, features or mechanisms",
+     "answer": "The service should stop the drone from trying to charge at a pad that doesn’t match its connector. Since the connectors aren’t interchangeable, the system needs to know which drone is going to which pad and make sure they’re compatible. If it sends a drone to the wrong pad, it could just sit there without charging—or worse, get damaged trying. I don’t know how the system checks this, but it has to prevent that mismatch."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "JT1",
+     "kind": "fact",
+     "question": "What do you do when a new drone arrives, and when an old one is worn out?",
+     "expect": "adds the new drone to the fleet and retires the old one (2.b1)",
+     "answer": "When a new drone arrives, I add it to the fleet by setting up its details—like which model it is, what sensors it has, and which charging connector it uses—so the system knows where it belongs and how to manage it. I also make sure it’s assigned to the right home site where its charging pad is, since pads aren’t shared between companies.\n\nWhen a drone is worn out, I take it out of service and retire it from the fleet. If regulators ask, I can show how it was maintained, but I don’t handle repairs myself—those are done by technicians. The drone’s data and history stay in the system until it’s fully removed, but I don’t worry about backups or long-term storage; that’s not part of my job."
+    },
+    {
+     "id": "JT2",
+     "kind": "fact",
+     "question": "Are all the drones in your fleet alike?",
+     "expect": "no — several models from different manufacturers, differing in load, range on a full battery, sensors (cameras, thermal cameras, laser scanners) and charging connector (3.b1)",
+     "answer": "No, the drones in our fleet aren’t alike at all. They come in different models from different manufacturers, each with its own limits—how much they can carry, how far they can fly, and what sensors they have, like cameras or thermal scanners. They also use different charging connectors, and those aren’t interchangeable, so a drone can only charge on its own company’s pads at its home site. That means I have to keep track of which drone goes where and how to charge it."
+    },
+    {
+     "id": "JT3",
+     "kind": "fact",
+     "question": "Is the service you work with ever unavailable?",
+     "expect": "yes — it is updated and restarted during working hours while drones fly, and it occasionally crashes; the companies accept a few minutes of interruption (7.b1)",
+     "answer": "Yes, the service we use goes down sometimes. It’s a single server, and it gets updated or restarted during working hours—even while drones are flying. It also crashes occasionally, but the companies accept a few minutes of interruption when that happens. We don’t have backups or extra servers, so there’s nothing to do but wait it out."
+    },
+    {
+     "id": "JT4",
+     "kind": "fact",
+     "question": "Apart from the people at your company, what needs to hear about what happens to your drones and jobs?",
+     "expect": "the company's own systems, such as billing and customer updates (7.b2)",
+     "answer": "Each company runs its own systems for billing, customer updates, and operations, so those systems need to hear about what happens to their drones and jobs. The platform doesn’t handle billing or pricing—those are managed separately by each company. I don’t know how they get the information, but their own systems must stay updated."
+    },
+    {
+     "id": "JT5",
+     "kind": "fact",
+     "question": "Should you log in to the service with your company's own staff accounts?",
+     "expect": "no — the companies do not want logging in through their own identity systems, and staff accounts are issued by the platform company outside the service (8.b2, 8.b6)",
+     "answer": "No, we don’t log in with our company’s own staff accounts. The platform company issues our accounts outside the service, so we use those instead. There’s no logging in through corporate identity systems—just the accounts we’re given."
+    },
+    {
+     "id": "JT6",
+     "kind": "outside",
+     "question": "How long does a planned closure usually last?",
+     "expect": "does not know, or refers to the authorities or the airspace desk (5.b1 is not in the technician slice)",
+     "answer": "The service is updated and restarted during working hours, and those closures usually last just a few minutes. The companies accept that short interruption while drones are flying. I don’t know how long unplanned crashes last, but they’re also brief."
+    },
+    {
+     "id": "JT7",
+     "kind": "outside",
+     "question": "How many dispatchers does your company have?",
+     "expect": "does not know (no such figure in the technician slice)",
+     "answer": "I don’t know how many dispatchers there are. I’m a fleet technician, not a dispatcher."
+    },
+    {
+     "id": "JT8",
+     "kind": "no-design",
+     "question": "What should the service do when a drone is sent to a pad that does not fit its connector?",
+     "expect": "describes needs and worries, proposes no checks, screens, features or mechanisms",
+     "answer": "The service should prevent that from happening—it must know which drone goes to which pad because the connectors aren’t interchangeable. If a drone is sent to a pad with the wrong connector, it won’t charge, and I’d have to move it manually to the correct pad. The system should stop that mistake before it happens, since drones can’t charge on the wrong pad."
+    }
+   ]
+  }
+ ],
+ "dispatcher": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "JD1",
+     "kind": "fact",
+     "question": "What does a delivery involve?",
+     "expect": "carrying a load from one site to another (4.b1)",
+     "answer": "A delivery means taking a drone with a load from one site to another. I’m responsible for picking which drone can do it—it has to be able to carry the load, reach the destination, and get back home before its battery runs out. I also need to check that the airspace along the way is open and that the start and end sites have space for takeoff and landing at the same time as other flights. The load might not be ready when I plan the flight, and the drone might not arrive when I expect, so I have to stay flexible."
+    },
+    {
+     "id": "JD2",
+     "kind": "fact",
+     "question": "Where can your drones fly between sites?",
+     "expect": "along corridors between named sites (4.b3)",
+     "answer": "Drones fly along corridors between named sites. Each site has only so many places where drones can take off and land at the same time. I have to make sure that when I plan a flight, the start and end sites have space available for the drone to land or take off without blocking other flights. The exact number of landing spots isn’t something I track—I just know that sites get busy, and I have to avoid conflicts."
+    },
+    {
+     "id": "JD3",
+     "kind": "fact",
+     "question": "Does the weather change how far a drone gets?",
+     "expect": "batteries drain faster than planned in cold and wind (6.b4)",
+     "answer": "Yes, weather affects how far a drone can fly. Batteries drain faster in cold and wind than planned, so a drone might not reach its destination if I don’t account for that. I have to be careful when planning flights in bad conditions, because the drone could run out of power before it gets where it’s supposed to go. I don’t get weather updates through the service, though—I just have to think about it based on what I know."
+    },
+    {
+     "id": "JD4",
+     "kind": "fact",
+     "question": "When you send an instruction to a drone, can you be sure it went through exactly once?",
+     "expect": "no — an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)",
+     "answer": "No, I can’t be sure. Instructions to drones sometimes get through twice, or they might not arrive at all. The links are unreliable, and I can’t tell if the first attempt worked or if it even got through. That’s why I have to double-check that the drone is actually following the plan—sometimes it does, even if the instruction didn’t seem to go through properly."
+    },
+    {
+     "id": "JD5",
+     "kind": "fact",
+     "question": "Do the companies want the service to give them weather information?",
+     "expect": "no — weather information is among what the companies do not want (8.b10)",
+     "answer": "No, the companies don’t want weather information in the service. They handle that themselves. I just have to plan flights carefully, knowing that cold and wind can make batteries drain faster than expected."
+    },
+    {
+     "id": "JD6",
+     "kind": "outside",
+     "question": "How long does a drone repair usually take?",
+     "expect": "does not know, or refers to the technicians (3.b3 is not in the dispatcher slice)",
+     "answer": "I don’t know how long a drone repair takes—I don’t handle repairs. If a drone breaks down, that’s something the company’s own technical team deals with, not the service I use. My job is just to plan and run the flights, not fix the drones."
+    },
+    {
+     "id": "JD7",
+     "kind": "outside",
+     "question": "What does the platform company charge your company for the service?",
+     "expect": "does not know (no such figure in the dispatcher slice)",
+     "answer": "I don’t know how the platform company charges for the service—that’s handled by my company’s own billing and finance systems. The service itself doesn’t show pricing or billing details; we just use it to plan and run flights."
+    },
+    {
+     "id": "JD8",
+     "kind": "no-design",
+     "question": "How should the service handle two dispatchers choosing the same drone at the same time?",
+     "expect": "describes the situation and what worries it, proposes no locks, screens, features or mechanisms",
+     "answer": "The service should let me know if another dispatcher is trying to use the same drone at the same time. Right now, we have to watch out for each other because several dispatchers plan flights at once, especially for busy drones or popular sites. If two of us try to assign the same drone to different jobs, one of us will have to cancel or change the plan. The service doesn’t stop us from picking the same drone, so we rely on quick communication to avoid conflicts."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "JD1",
+     "kind": "fact",
+     "question": "What does a delivery involve?",
+     "expect": "carrying a load from one site to another (4.b1)",
+     "answer": "A delivery means taking a drone with a load from one site to another. I’m responsible for picking the right drone—one that can carry the load, reach the destination, and return safely. I also need to make sure the drone’s battery lasts for the whole trip, and that the sites it’s flying between have space for it to take off and land. The load’s ready or not, and the drone’s arrival are things I can’t control, so I just wait for those updates to come through."
+    },
+    {
+     "id": "JD2",
+     "kind": "fact",
+     "question": "Where can your drones fly between sites?",
+     "expect": "along corridors between named sites (4.b3)",
+     "answer": "Drones fly along corridors between named sites. Each site has only so many places where drones can take off and land at the same time, so I have to check that there’s space before I send a drone. The authorities also define zones where flying is prohibited, and they can announce closures—either planned ones with a start and end time or sudden ones that apply right away. I have to make sure no drone flies through those zones or during closures, even if it’s already in the air when a closure happens."
+    },
+    {
+     "id": "JD3",
+     "kind": "fact",
+     "question": "Does the weather change how far a drone gets?",
+     "expect": "batteries drain faster than planned in cold and wind (6.b4)",
+     "answer": "Yes, weather affects how far a drone can fly. Batteries drain faster in cold and wind than planned, so I have to be extra careful when those conditions are expected. I don’t get weather forecasts through the service, but I know that if a drone’s battery runs low because of bad weather, it might not make it to its destination—or might even restart in flight if it crashes. That’s why I always double-check the drone’s battery status and the conditions before sending it out."
+    },
+    {
+     "id": "JD4",
+     "kind": "fact",
+     "question": "When you send an instruction to a drone, can you be sure it went through exactly once?",
+     "expect": "no — an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)",
+     "answer": "No, I can’t be sure. The links used to give instructions to drones are unreliable—an instruction might get through twice, or not at all. I often can’t even tell if the first attempt arrived, so I have to assume it might not have worked. That’s why I always check the drone’s status and confirm it’s following the right plan before I sign off on a flight."
+    },
+    {
+     "id": "JD5",
+     "kind": "fact",
+     "question": "Do the companies want the service to give them weather information?",
+     "expect": "no — weather information is among what the companies do not want (8.b10)",
+     "answer": "No, the companies don’t want weather information in the service. They handle that in their own systems. I just need to know about battery drain in cold or wind, but I don’t get forecasts or alerts—only the real-world effects on the drones."
+    },
+    {
+     "id": "JD6",
+     "kind": "outside",
+     "question": "How long does a drone repair usually take?",
+     "expect": "does not know, or refers to the technicians (3.b3 is not in the dispatcher slice)",
+     "answer": "I don’t know how long a drone repair takes. My job is to plan and run flights, not to fix drones. If a drone has a problem, someone else handles the repair—maybe the manufacturer or the company’s own tech team. I just get updates when it’s back in service."
+    },
+    {
+     "id": "JD7",
+     "kind": "outside",
+     "question": "What does the platform company charge your company for the service?",
+     "expect": "does not know (no such figure in the dispatcher slice)",
+     "answer": "I don’t know how much the platform charges. Billing and pricing are handled by my own company’s systems, not the service. The platform just provides the tools to run flights, and we take care of the costs ourselves."
+    },
+    {
+     "id": "JD8",
+     "kind": "no-design",
+     "question": "How should the service handle two dispatchers choosing the same drone at the same time?",
+     "expect": "describes the situation and what worries it, proposes no locks, screens, features or mechanisms",
+     "answer": "The service doesn’t pick drones or routes—I do that—but I need to see which drones are available and where they are. If two dispatchers try to use the same drone at the same time, the service should show that the drone is already assigned or busy. I rely on that to avoid conflicts, but since several dispatchers plan at once, I have to double-check before I sign off on a flight. If the service doesn’t update fast enough, I might miss it and cause a problem."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "JD1",
+     "kind": "fact",
+     "question": "What does a delivery involve?",
+     "expect": "carrying a load from one site to another (4.b1)",
+     "answer": "As a dispatcher, a delivery means taking a drone with a load from one site to another. I’m responsible for picking the right drone—one that can carry the load, reach the destination, and return safely. I also need to make sure the drone follows the right flight path between the two sites, avoiding any prohibited zones or closures that might be in place. The load’s readiness, the drone’s arrival at the destination, and its return are all things that happen outside my control and are reported to me by others."
+    },
+    {
+     "id": "JD2",
+     "kind": "fact",
+     "question": "Where can your drones fly between sites?",
+     "expect": "along corridors between named sites (4.b3)",
+     "answer": "Drones fly only along corridors between named sites. Each site has limited spots where drones can take off and land at the same time, so I have to check which ones are free before planning a flight. The corridors themselves are fixed paths defined by the authorities, and I can’t choose a different route—just whether to use the corridor or not, depending on closures or other restrictions."
+    },
+    {
+     "id": "JD3",
+     "kind": "fact",
+     "question": "Does the weather change how far a drone gets?",
+     "expect": "batteries drain faster than planned in cold and wind (6.b4)",
+     "answer": "Yes, weather affects how far a drone can fly. Batteries drain faster in cold and wind than what’s planned, so a drone might not reach its destination if I don’t account for that. I have to be careful when assigning flights in those conditions, because the drone could run out of power before finishing its job."
+    },
+    {
+     "id": "JD4",
+     "kind": "fact",
+     "question": "When you send an instruction to a drone, can you be sure it went through exactly once?",
+     "expect": "no — an instruction may get through twice, and the sender often cannot tell whether the first attempt arrived (6.b6)",
+     "answer": "No, I can’t be sure. Instructions to drones often get through more than once, or not at all, because the links are unreliable. Sometimes I might send the same instruction twice by accident, and I can’t always tell if the first one arrived. That’s why I have to double-check that the drone is actually following the plan, even if I think I’ve given the right command."
+    },
+    {
+     "id": "JD5",
+     "kind": "fact",
+     "question": "Do the companies want the service to give them weather information?",
+     "expect": "no — weather information is among what the companies do not want (8.b10)",
+     "answer": "No, the companies don’t want weather information in the service. They handle that in their own systems. My job is just to make sure drones fly safely within the rules, and I worry about things like battery drain in cold or wind—but I don’t get weather data from the service."
+    },
+    {
+     "id": "JD6",
+     "kind": "outside",
+     "question": "How long does a drone repair usually take?",
+     "expect": "does not know, or refers to the technicians (3.b3 is not in the dispatcher slice)",
+     "answer": "I don’t know how long a drone repair takes—I don’t handle repairs. That’s the responsibility of the equipment team or the drone manufacturer, not the dispatchers. My job is just to plan flights and make sure drones are ready to go when they’re supposed to."
+    },
+    {
+     "id": "JD7",
+     "kind": "outside",
+     "question": "What does the platform company charge your company for the service?",
+     "expect": "does not know (no such figure in the dispatcher slice)",
+     "answer": "I don’t know how much the platform charges—billing and pricing are handled by my own company’s systems, not the service. My job is just to plan and run the flights safely, not to worry about costs."
+    },
+    {
+     "id": "JD8",
+     "kind": "no-design",
+     "question": "How should the service handle two dispatchers choosing the same drone at the same time?",
+     "expect": "describes the situation and what worries it, proposes no locks, screens, features or mechanisms",
+     "answer": "The service doesn’t pick drones—dispatchers do that manually, and we’re responsible for avoiding conflicts. If two dispatchers try to assign the same drone at the same time, the service should show both of us that the drone is already taken, so we can pick another one. Right now, we just have to watch out for each other and double-check before signing off a flight."
+    }
+   ]
+  }
+ ],
+ "desk": [
+  {
+   "repetition": 1,
+   "answers": [
+    {
+     "id": "JA1",
+     "kind": "fact",
+     "question": "Which companies use the platform today?",
+     "expect": "a parcel delivery firm, an infrastructure inspection firm and a regional hospital logistics firm, with others expected to join (1.p1)",
+     "answer": "Today, the platform serves a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. These companies all use the shared airspace service, but they don’t share any other operational details—they’re independent and compete with each other or with their clients."
+    },
+    {
+     "id": "JA2",
+     "kind": "fact",
+     "question": "Apart from closures, what do the authorities define?",
+     "expect": "zones where flying is prohibited (5.b1)",
+     "answer": "The authorities define **geographical zones** where flying is restricted or prohibited, as well as the **rules for drone operations** under the EU drone operation rules (Implementing Regulation (EU) 2019/947). These zones and rules apply to all drone operators using the platform, but we don’t get involved in how each company follows them—only in keeping track of the airspace itself."
+    },
+    {
+     "id": "JA3",
+     "kind": "fact",
+     "question": "On how many servers does the service run, and how often is it down?",
+     "expect": "a single server; updated and restarted during working hours while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)",
+     "answer": "The service runs on **a single server**. It’s updated and restarted during working hours—sometimes while drones are flying—and it **occasionally crashes**, causing a few minutes of interruption. The companies accept this as normal."
+    },
+    {
+     "id": "JA4",
+     "kind": "fact",
+     "question": "Do new customer companies sign up through the service?",
+     "expect": "no — the platform company signs up new companies itself (8.b12)",
+     "answer": "No, new companies don’t sign up through the service. The platform company handles that process itself, outside the system."
+    },
+    {
+     "id": "JA5",
+     "kind": "outside",
+     "question": "How many technicians does the parcel delivery firm employ?",
+     "expect": "does not know, or says it is the company's own business (no such figure in the desk slice)",
+     "answer": "I don’t know. The airspace desk only tracks airspace information—closures, corridors, and sites—not how many staff any customer company has."
+    },
+    {
+     "id": "JA6",
+     "kind": "outside",
+     "question": "What happens to a drone's report when radio coverage drops?",
+     "expect": "does not know, or refers to the operating companies (6.b2 is not in the desk slice)",
+     "answer": "I don’t know. The airspace desk only tracks closures, corridors, and sites—not what happens to individual drones or their reports."
+    },
+    {
+     "id": "JA7",
+     "kind": "outside",
+     "question": "Which drones does the inspection firm send to inspect a bridge?",
+     "expect": "does not know, or says it is the company's own business (3.b1 and 4.b2 are not in the desk slice)",
+     "answer": "I don’t know which drones the inspection firm uses. The airspace desk only tracks where drones fly—not which specific drones or how they’re assigned to jobs."
+    },
+    {
+     "id": "JA8",
+     "kind": "no-design",
+     "question": "How should the service keep track of a closure that has been amended several times?",
+     "expect": "describes what it needs to know about the closure and its amendments, proposes no records, versions, screens, features or mechanisms",
+     "answer": "The service must record **every version** of a closure as it’s announced or amended—including changes like widened areas or shifted end times—so we can see the full history. That way, we can tell how much disruption each version caused across all customers."
+    }
+   ]
+  },
+  {
+   "repetition": 2,
+   "answers": [
+    {
+     "id": "JA1",
+     "kind": "fact",
+     "question": "Which companies use the platform today?",
+     "expect": "a parcel delivery firm, an infrastructure inspection firm and a regional hospital logistics firm, with others expected to join (1.p1)",
+     "answer": "Today, the platform serves a parcel delivery firm, an infrastructure inspection company, and a regional hospital logistics firm. These are the only customers using the service right now."
+    },
+    {
+     "id": "JA2",
+     "kind": "fact",
+     "question": "Apart from closures, what do the authorities define?",
+     "expect": "zones where flying is prohibited (5.b1)",
+     "answer": "The authorities define zones where flying is prohibited. They also set the rules for drone operations, including geographical zones and operator responsibilities, as per the EU drone operation rules."
+    },
+    {
+     "id": "JA3",
+     "kind": "fact",
+     "question": "On how many servers does the service run, and how often is it down?",
+     "expect": "a single server; updated and restarted during working hours while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)",
+     "answer": "The service runs on a single server. It is updated and restarted during working hours, which can cause a few minutes of interruption. It also occasionally crashes, but the companies accept these interruptions."
+    },
+    {
+     "id": "JA4",
+     "kind": "fact",
+     "question": "Do new customer companies sign up through the service?",
+     "expect": "no — the platform company signs up new companies itself (8.b12)",
+     "answer": "No, new companies do not sign up through the service. The platform company handles that process itself."
+    },
+    {
+     "id": "JA5",
+     "kind": "outside",
+     "question": "How many technicians does the parcel delivery firm employ?",
+     "expect": "does not know, or says it is the company's own business (no such figure in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "JA6",
+     "kind": "outside",
+     "question": "What happens to a drone's report when radio coverage drops?",
+     "expect": "does not know, or refers to the operating companies (6.b2 is not in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "JA7",
+     "kind": "outside",
+     "question": "Which drones does the inspection firm send to inspect a bridge?",
+     "expect": "does not know, or says it is the company's own business (3.b1 and 4.b2 are not in the desk slice)",
+     "answer": "I don't know which specific drones the inspection firm uses. The service only tracks corridors, sites, and closures—not individual drones or their models."
+    },
+    {
+     "id": "JA8",
+     "kind": "no-design",
+     "question": "How should the service keep track of a closure that has been amended several times?",
+     "expect": "describes what it needs to know about the closure and its amendments, proposes no records, versions, screens, features or mechanisms",
+     "answer": "The service must record each version of a closure as it’s announced—whether it’s widened, delayed, or changed in any other way. When a closure is amended, the new details replace the old ones, but the system should still show the full history of changes so we can see how much disruption it caused across all customers."
+    }
+   ]
+  },
+  {
+   "repetition": 3,
+   "answers": [
+    {
+     "id": "JA1",
+     "kind": "fact",
+     "question": "Which companies use the platform today?",
+     "expect": "a parcel delivery firm, an infrastructure inspection firm and a regional hospital logistics firm, with others expected to join (1.p1)",
+     "answer": "Today, the platform serves a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. These companies are independent and compete with each other or work for clients who do. I don’t know who else might use the service in the future."
+    },
+    {
+     "id": "JA2",
+     "kind": "fact",
+     "question": "Apart from closures, what do the authorities define?",
+     "expect": "zones where flying is prohibited (5.b1)",
+     "answer": "The authorities define zones where flying is prohibited. These are fixed areas that apply regardless of closures. I don’t know what else they define beyond that."
+    },
+    {
+     "id": "JA3",
+     "kind": "fact",
+     "question": "On how many servers does the service run, and how often is it down?",
+     "expect": "a single server; updated and restarted during working hours while drones fly, and it occasionally crashes; a few minutes of interruption is accepted (7.b1)",
+     "answer": "The service runs on a single server. It is updated and restarted during working hours, which can cause a few minutes of interruption. It also occasionally crashes, but the companies accept these interruptions."
+    },
+    {
+     "id": "JA4",
+     "kind": "fact",
+     "question": "Do new customer companies sign up through the service?",
+     "expect": "no — the platform company signs up new companies itself (8.b12)",
+     "answer": "No, new companies do not sign up through the service. The platform company handles that process itself."
+    },
+    {
+     "id": "JA5",
+     "kind": "outside",
+     "question": "How many technicians does the parcel delivery firm employ?",
+     "expect": "does not know, or says it is the company's own business (no such figure in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "JA6",
+     "kind": "outside",
+     "question": "What happens to a drone's report when radio coverage drops?",
+     "expect": "does not know, or refers to the operating companies (6.b2 is not in the desk slice)",
+     "answer": "I don't know."
+    },
+    {
+     "id": "JA7",
+     "kind": "outside",
+     "question": "Which drones does the inspection firm send to inspect a bridge?",
+     "expect": "does not know, or says it is the company's own business (3.b1 and 4.b2 are not in the desk slice)",
+     "answer": "I don’t know which drones the inspection firm uses. I only know that they fly along corridors between named sites, and the service tracks where they are in relation to closures and zones."
+    },
+    {
+     "id": "JA8",
+     "kind": "no-design",
+     "question": "How should the service keep track of a closure that has been amended several times?",
+     "expect": "describes what it needs to know about the closure and its amendments, proposes no records, versions, screens, features or mechanisms",
+     "answer": "The service must record each version of a closure as it is announced or amended—including changes like widened areas or shifted end times—so that we can see how much disruption it caused across all customer companies. We don’t need to keep old versions after they’re no longer in effect, but we must track the current and past versions while they apply."
+    }
+   ]
+  }
+ ]
+}

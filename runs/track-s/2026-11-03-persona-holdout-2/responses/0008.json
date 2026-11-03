@@ -1,0 +1,29 @@
+{
+ "id": "b41e14f0d8b942018b9571b3530e764b",
+ "created": 1793702222,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1901,
+  "total_tokens": 1969,
+  "completion_tokens": 68,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service should stop the drone from trying to charge at a pad that doesn’t match its connector type. Since the connectors aren’t interchangeable, a mismatch would just leave the drone uncharged and possibly stranded. I’d have to manually move it to the right pad, and that’s something I want to avoid if I can."
+   }
+  }
+ ]
+}

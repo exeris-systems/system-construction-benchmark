@@ -1,0 +1,29 @@
+{
+ "id": "c00a5f63e994487eb85cc0ae72f3c6e0",
+ "created": 1793702399,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1331,
+  "total_tokens": 1398,
+  "completion_tokens": 67,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service must record each version of a closure as it’s announced—whether it’s widened, delayed, or changed in any other way. When a closure is amended, the new details replace the old ones, but the system should still show the full history of changes so we can see how much disruption it caused across all customers."
+   }
+  }
+ ]
+}

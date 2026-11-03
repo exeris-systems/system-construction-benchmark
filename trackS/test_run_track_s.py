@@ -4,6 +4,7 @@
 Run from the repository root: python3 -I trackS/test_run_track_s.py
 """
 
+import argparse
 import email.message
 import importlib.util
 import io
@@ -92,6 +93,24 @@ class ClientTest(unittest.TestCase):
         self.assertTrue((self.out / "requests" / "0001.json").exists())
         self.assertTrue((self.out / "responses" / "0001.json").exists())
 
+    def test_reasoning_chunks_yield_only_the_text(self):
+        reply = answer([{"type": "thinking", "thinking": [{"type": "text", "text": "hidden"}]},
+                        {"type": "text", "text": "the answer"}], "stop")
+        self.replies = [Reply(reply, headers())]
+        self.assertEqual(self.client.call("s", "system", [("user", "q")]), "the answer")
+
+    def test_sampling_is_sent_only_when_set(self):
+        sent = []
+        self.replies = [Reply(answer("a", "stop"), headers()), Reply(answer("b", "stop"), headers())]
+        next_reply = self._next
+        ts.urllib.request.urlopen = lambda request, timeout=0: (sent.append(json.loads(request.data)), next_reply(request))[1]
+        self.client.call("s", "system", [("user", "q")])
+        fixed = ts.Client("persona", "mistral", "m", 60_000, 100, self.recorder, temperature=0.0, seed=7)
+        fixed.call("s", "system", [("user", "q")])
+        self.assertNotIn("temperature", sent[0])
+        self.assertNotIn("random_seed", sent[0])
+        self.assertEqual((sent[1]["temperature"], sent[1]["random_seed"]), (0.0, 7))
+
     def test_non_natural_finish_fails_the_run(self):
         self.replies = [Reply(answer("cut", "length"), headers())]
         with self.assertRaises(ts.RunFailed):
@@ -149,6 +168,35 @@ class ClientTest(unittest.TestCase):
             self.client.describe()
 
 
+class ModeTest(unittest.TestCase):
+    """Each persona mode asks every question of its own set and writes its answers under its name."""
+
+    def setUp(self):
+        os.environ["MISTRAL_API_KEY"] = "test-key"
+        self._urlopen, self._sleep, self._describe = ts.urllib.request.urlopen, ts.time.sleep, ts.Client.describe
+        ts.urllib.request.urlopen = lambda request, timeout=0: Reply(answer("I don't know.", "stop"), headers())
+        ts.time.sleep = lambda seconds: None
+        ts.Client.describe = lambda client: {"id": client.model}
+
+    def tearDown(self):
+        ts.urllib.request.urlopen, ts.time.sleep, ts.Client.describe = self._urlopen, self._sleep, self._describe
+
+    def test_each_mode_writes_its_own_answers(self):
+        for mode, set_file in ts.QUESTION_SETS.items():
+            out = pathlib.Path(tempfile.mkdtemp())
+            args = argparse.Namespace(mode=mode, persona_provider="mistral", persona_model="m",
+                                      persona_rpm=60_000, persona_max_tokens=100, repetitions=1,
+                                      persona_temperature=0.0, persona_seed=1)
+            files = {name: (HERE / name).read_text() for name in ("persona-prompt.md", set_file)}
+            ts.persona_control(args, files, {role: "notes" for role in ts.ROLES}, out, {})
+            written = sorted(p.name for p in out.glob("*.json"))
+            self.assertEqual(written, [f"{mode}.json"], mode)
+            asked = json.loads((out / f"{mode}.json").read_text())
+            expected = ts.parse_control(files[set_file], set_file)
+            self.assertEqual({r: [a["id"] for a in reps[0]["answers"]] for r, reps in asked.items()},
+                             {r: [q["id"] for q in qs] for r, qs in expected.items()}, mode)
+
+
 class InputTest(unittest.TestCase):
     def test_every_brief_unit_has_a_slice(self):
         units = ts.parse_brief((HERE / "world-brief.md").read_text())
@@ -164,15 +212,18 @@ class InputTest(unittest.TestCase):
                     self.assertEqual(set(q), {"id", "kind", "question", "expect"}, name)
                     self.assertIn(q["kind"], {"fact", "outside", "no-design"}, name)
 
-    def test_held_out_set_shares_no_question_with_the_control_set(self):
+    def test_question_sets_share_no_question(self):
         def questions(name):
             sets = ts.parse_control((HERE / name).read_text(), name)
             return [q for qs in sets.values() for q in qs]
-        control, holdout = questions(ts.CONTROL_FILE), questions(ts.HOLDOUT_FILE)
-        self.assertFalse({q["id"] for q in control} & {q["id"] for q in holdout})
-        self.assertFalse({q["question"] for q in control} & {q["question"] for q in holdout})
+        names = sorted(ts.QUESTION_SETS.values())
         kinds = lambda qs: sorted(q["kind"] for q in qs)
-        self.assertEqual(kinds(control), kinds(holdout))
+        for i, a in enumerate(names):
+            for b in names[i + 1:]:
+                qa, qb = questions(a), questions(b)
+                self.assertFalse({q["id"] for q in qa} & {q["id"] for q in qb}, (a, b))
+                self.assertFalse({q["question"] for q in qa} & {q["question"] for q in qb}, (a, b))
+                self.assertEqual(kinds(qa), kinds(qb), (a, b))
 
     def test_out_outside_runs_track_s_is_refused(self):
         env = {**os.environ, "MISTRAL_API_KEY": "test-key"}
@@ -204,7 +255,8 @@ class InputTest(unittest.TestCase):
                  ["--persona-model", "m", "--persona-rpm", "-5"],
                  ["--persona-model", "mistral-small-latest"],
                  ["--persona-model", "m", "--persona-provider", "nobody"],
-                 ["--persona-model", "m", "--repetitions", "0"]]
+                 ["--persona-model", "m", "--repetitions", "0"],
+                 ["--persona-model", "m", "--persona-temperature", "-0.1"]]
         for i, extra in enumerate(cases):
             out = HERE.parent / "runs" / "track-s" / f"test-invalid-settings-{i}-should-not-exist"
             result = subprocess.run([sys.executable, "-I", str(SCRIPT), "persona-control", *extra, "--out", str(out)],

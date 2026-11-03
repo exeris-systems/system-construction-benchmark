@@ -1,0 +1,29 @@
+{
+ "id": "791796e974894c19be84808a10ae6ff4",
+ "created": 1793702290,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1464,
+  "total_tokens": 1517,
+  "completion_tokens": 53,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service must record **every version** of a closure as it’s announced or amended—including changes like widened areas or shifted end times—so we can see the full history. That way, we can tell how much disruption each version caused across all customers."
+   }
+  }
+ ]
+}

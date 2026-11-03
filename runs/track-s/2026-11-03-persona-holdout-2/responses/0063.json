@@ -1,0 +1,29 @@
+{
+ "id": "88115679dd8c45bfa7a36a63d7349f2f",
+ "created": 1793702464,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1999,
+  "total_tokens": 2045,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how much the platform charges—billing and pricing are handled by my own company’s systems, not the service. My job is just to plan and run the flights safely, not to worry about costs."
+   }
+  }
+ ]
+}

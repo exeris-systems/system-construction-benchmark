@@ -1,0 +1,29 @@
+{
+ "id": "d5de273563834eec9f4769c0498c5df4",
+ "created": 1793702292,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1294,
+  "total_tokens": 1431,
+  "completion_tokens": 137,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "When a new drone arrives, I add it to the fleet by setting up its details—like which model it is, what sensors it has, and which charging connector it uses—so the system knows where it belongs and how to handle it. I also make sure it’s assigned to the right home site and charging pad, since pads aren’t shared between companies.\n\nWhen a drone is worn out, I take it out of service and retire it from the fleet. If regulators ask, I can show how it was maintained, but I don’t keep it around for backups or anything like that. The system just stops tracking it, and it’s no longer used for jobs."
+   }
+  }
+ ]
+}

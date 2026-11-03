@@ -1,0 +1,29 @@
+{
+ "id": "50783a6a99054cc3ae2bac6b08839118",
+ "created": 1793702437,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1469,
+  "total_tokens": 1576,
+  "completion_tokens": 107,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "As a dispatcher, a delivery means taking a drone with a load from one site to another. I’m responsible for picking the right drone—one that can carry the load, reach the destination, and return safely. I also need to make sure the drone follows the right flight path between the two sites, avoiding any prohibited zones or closures that might be in place. The load’s readiness, the drone’s arrival at the destination, and its return are all things that happen outside my control and are reported to me by others."
+   }
+  }
+ ]
+}

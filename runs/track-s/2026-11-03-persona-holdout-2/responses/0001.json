@@ -1,0 +1,29 @@
+{
+ "id": "32bafb5243a242a9bb596c973be1ea17",
+ "created": 1793702195,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1294,
+  "total_tokens": 1413,
+  "completion_tokens": 119,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "When a new drone arrives, I add it to the fleet by setting up its home site, checking its charging connector type, and making sure it’s compatible with the pads at that site. I also make sure it’s registered with the right sensors and battery specs so the system knows what it can do.\n\nWhen a drone is worn out, I take it out of service and retire it from the fleet. If regulators ask, I can show records of how it was maintained and serviced. The old drone isn’t reused or lent to another company—it’s just removed from the system."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "b4eb002dc2b9446285daa879198ee279",
+ "created": 1793702217,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1782,
+  "total_tokens": 1834,
+  "completion_tokens": 52,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know how long a planned closure usually lasts. The service gets updated and restarted during working hours, but I don’t know how long those interruptions take. I just know that the companies accept a few minutes of downtime when it happens."
+   }
+  }
+ ]
+}

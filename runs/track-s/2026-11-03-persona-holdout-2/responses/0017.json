@@ -1,0 +1,29 @@
+{
+ "id": "370d1dafede647a28bcb3c69f7e0e0b6",
+ "created": 1793702265,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1058,
+  "total_tokens": 1114,
+  "completion_tokens": 56,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Today, the platform serves a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. These companies all use the shared airspace service, but they don’t share any other operational details—they’re independent and compete with each other or with their clients."
+   }
+  }
+ ]
+}

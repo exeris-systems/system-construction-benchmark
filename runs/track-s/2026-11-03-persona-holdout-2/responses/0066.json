@@ -1,0 +1,29 @@
+{
+ "id": "a617cbcfedac44ef85dfc6182bc5b5d6",
+ "created": 1793702479,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1124,
+  "total_tokens": 1156,
+  "completion_tokens": 32,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The authorities define zones where flying is prohibited. These are fixed areas that apply regardless of closures. I don’t know what else they define beyond that."
+   }
+  }
+ ]
+}

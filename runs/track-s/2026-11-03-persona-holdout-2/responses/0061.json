@@ -1,0 +1,29 @@
+{
+ "id": "06d87fedd4534b3b88a9ffd62060b125",
+ "created": 1793702459,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1859,
+  "total_tokens": 1918,
+  "completion_tokens": 59,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the companies don’t want weather information in the service. They handle that in their own systems. My job is just to make sure drones fly safely within the rules, and I worry about things like battery drain in cold or wind—but I don’t get weather data from the service."
+   }
+  }
+ ]
+}

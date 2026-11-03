@@ -1,0 +1,29 @@
+{
+ "id": "c8d8d6f4f0aa4febb73f8d5b65a7fba6",
+ "created": 1793702240,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1809,
+  "total_tokens": 1889,
+  "completion_tokens": 80,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I can’t be sure. Instructions to drones sometimes get through twice, or they might not arrive at all. The links are unreliable, and I can’t tell if the first attempt worked or if it even got through. That’s why I have to double-check that the drone is actually following the plan—sometimes it does, even if the instruction didn’t seem to go through properly."
+   }
+  }
+ ]
+}

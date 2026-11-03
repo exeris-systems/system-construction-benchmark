@@ -1,0 +1,29 @@
+{
+ "id": "0e105ec10bc0478e940fadbc81662d93",
+ "created": 1793702456,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1764,
+  "total_tokens": 1845,
+  "completion_tokens": 81,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, I can’t be sure. Instructions to drones often get through more than once, or not at all, because the links are unreliable. Sometimes I might send the same instruction twice by accident, and I can’t always tell if the first one arrived. That’s why I have to double-check that the drone is actually following the plan, even if I think I’ve given the right command."
+   }
+  }
+ ]
+}

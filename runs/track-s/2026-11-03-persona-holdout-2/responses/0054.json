@@ -1,0 +1,29 @@
+{
+ "id": "14c8426f0c4e4a0689d1b4e5cfea5dc5",
+ "created": 1793702426,
+ "model": "ministral-14b-2512",
+ "usage": {
+  "prompt_tokens": 1816,
+  "total_tokens": 1867,
+  "completion_tokens": 51,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service is updated and restarted during working hours, and those closures usually last just a few minutes. The companies accept that short interruption while drones are flying. I don’t know how long unplanned crashes last, but they’re also brief."
+   }
+  }
+ ]
+}
