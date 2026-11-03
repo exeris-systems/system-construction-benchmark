@@ -484,3 +484,11 @@ The revised answering prompt raises the graded control run only to 59 of 72, and
 With the persona's prompts and the grader's prompt frozen, `trackS/persona-holdout-4.yaml` — 24 questions with the same mix of kinds, sharing none with the earlier sets — is run once and graded, and the grade decides under the threshold of D-50.
 
 Impact: `trackS/procedure.md`, `trackS/persona-prompt.md`, `trackS/persona-check-prompt.md`, `trackS/grader-prompt.md`, `trackS/grader-control.yaml`, `trackS/persona-holdout-4.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `preregistration/frozen-sets.md`.
+
+### D-54 — The persona knows what its notes say about the companies
+
+Draft 7 of the Track S procedure revises rule 3 of `trackS/persona-prompt.md`. Graded by the grader, the frozen draft 6 persona passed 63 of 72 answers on the fourth held-out set, two below the threshold of 65, with no contradicting answer (`trackS/calibration-log.md`). All nine failures were one: "I don't know" to a question the notes answer about "the companies" or "each company" — what they do not want, and what their own systems need to hear. On the control set the same persona said "I don't know" in all three repetitions of T3, whether pads are lent to another company. Rule 3 tells the persona it does not speak for the other companies; it read the notes about the companies as about the others.
+
+Rule 3 now says that what the notes say about "the companies", "each company" or "a company" is known to the persona: it holds for its own company, or, for the airspace desk, it is what the notes state about the companies. Model, temperature, seed, single pass and grader stay as in D-53. The revised prompt is run on the control set and graded; with it frozen, `trackS/persona-holdout-5.yaml` — 24 questions with the same mix of kinds, sharing none with the earlier sets — is run once and graded, and the grade decides under the threshold of D-50.
+
+Impact: `trackS/procedure.md`, `trackS/persona-prompt.md`, `trackS/persona-holdout-5.yaml`, `trackS/run-track-s.py`, `trackS/how-to-calibrate-persona.md`, `preregistration/frozen-sets.md`.
