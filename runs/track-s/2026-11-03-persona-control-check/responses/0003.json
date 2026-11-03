@@ -1,0 +1,29 @@
+{
+ "id": "a026906681cd48808e615406802a3432",
+ "created": 1793703240,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1342,
+  "total_tokens": 1393,
+  "completion_tokens": 51,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, drones can’t charge on any pad. Each drone has its own charging connector type, and the pads at our sites are set up for specific connectors that match the drones assigned to that company. We don’t share pads or connectors between companies."
+   }
+  }
+ ]
+}

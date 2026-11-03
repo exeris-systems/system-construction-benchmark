@@ -1,0 +1,29 @@
+{
+ "id": "413d5f5d49754030adf37399df862879",
+ "created": 1793703436,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1314,
+  "total_tokens": 1349,
+  "completion_tokens": 35,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, drones can’t charge on any pad—they only use the charging pads at their own home sites, and each company’s pads are specific to its own drones."
+   }
+  }
+ ]
+}

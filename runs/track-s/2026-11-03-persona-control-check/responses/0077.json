@@ -1,0 +1,29 @@
+{
+ "id": "8855cc5d4129447e9211a2343a686063",
+ "created": 1793703391,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1822,
+  "total_tokens": 1851,
+  "completion_tokens": 29,
+  "prompt_tokens_details": {
+   "cached_tokens": 1664
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company handles closures for all of us, but I only track my own company’s flights and drones."
+   }
+  }
+ ]
+}

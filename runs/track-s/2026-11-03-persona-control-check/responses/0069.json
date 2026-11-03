@@ -1,0 +1,29 @@
+{
+ "id": "1b5a0812ac7c4f2f83e657606af0c93b",
+ "created": 1793703374,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1620,
+  "total_tokens": 1662,
+  "completion_tokens": 42,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, each site has only so many places where drones can take off and land at the same time, so not all flights can leave or arrive there at once. I have to plan around those limits."
+   }
+  }
+ ]
+}

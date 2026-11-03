@@ -1,0 +1,29 @@
+{
+ "id": "5de564007f5447f0b57e3da1aabad895",
+ "created": 1793703387,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1801,
+  "total_tokens": 1830,
+  "completion_tokens": 29,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company handles the charging infrastructure, and I don’t have details about which connector types the charging pads use."
+   }
+  }
+ ]
+}

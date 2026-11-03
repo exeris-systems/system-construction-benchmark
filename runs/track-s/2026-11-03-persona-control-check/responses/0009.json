@@ -1,0 +1,29 @@
+{
+ "id": "4c968155746b462398918df3882f7214",
+ "created": 1793703251,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1529,
+  "total_tokens": 1578,
+  "completion_tokens": 49,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, reports from drones don’t always reach us on time, in order, or even at all. The radio coverage is unreliable, especially in places like ports or industrial sites, so we often get delayed, missing, or duplicate reports."
+   }
+  }
+ ]
+}

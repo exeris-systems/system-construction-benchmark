@@ -1,0 +1,29 @@
+{
+ "id": "56e18002103d430caf67fd61cc6e1633",
+ "created": 1793703361,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1636,
+  "total_tokens": 1686,
+  "completion_tokens": 50,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I don’t design software or screens. I just need the service to let me add drones to the fleet, take them out for repairs, send them to charge, and keep track of which drones are at which sites."
+   }
+  }
+ ]
+}

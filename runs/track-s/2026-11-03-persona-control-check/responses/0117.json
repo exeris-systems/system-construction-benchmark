@@ -1,0 +1,29 @@
+{
+ "id": "96404c3fbc574303bcf1eb2747fdcb1e",
+ "created": 1793703472,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1642,
+  "total_tokens": 1698,
+  "completion_tokens": 56,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, each site has only so many places where drones can take off and land at the same time. So several flights can’t all leave from the same site at once unless they’re spaced out or use different landing spots. I have to plan around that to avoid conflicts."
+   }
+  }
+ ]
+}

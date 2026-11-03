@@ -1,0 +1,29 @@
+{
+ "id": "ec649e6aed514d21b90b25b63fb2cd5f",
+ "created": 1793703416,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1287,
+  "total_tokens": 1321,
+  "completion_tokens": 34,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk doesn’t track how many drones each customer operates—we only manage the shared airspace information and its impact on flights."
+   }
+  }
+ ]
+}

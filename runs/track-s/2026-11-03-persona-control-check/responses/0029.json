@@ -1,0 +1,29 @@
+{
+ "id": "472b3bbd767c4b298722138023d7632f",
+ "created": 1793703292,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1764,
+  "total_tokens": 1784,
+  "completion_tokens": 20,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company would have to ask all the dispatchers and companies."
+   }
+  }
+ ]
+}

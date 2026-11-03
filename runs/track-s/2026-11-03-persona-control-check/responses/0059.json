@@ -1,0 +1,29 @@
+{
+ "id": "dbd9575fdb034db6bec96a1cc005440e",
+ "created": 1793703353,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1565,
+  "total_tokens": 1608,
+  "completion_tokens": 43,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace rules are handled by the platform company’s airspace desk, and they deal with the authorities about closures. I don’t have any say in how long they last."
+   }
+  }
+ ]
+}

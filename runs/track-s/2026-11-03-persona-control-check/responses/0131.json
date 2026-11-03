@@ -1,0 +1,29 @@
+{
+ "id": "0502843ff552447595ab05137afb5bc0",
+ "created": 1793703500,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1157,
+  "total_tokens": 1202,
+  "completion_tokens": 45,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace desk only tracks closures and their impact across all customers, not individual company operations. If you need details about a specific company’s flights, you’d have to ask them directly."
+   }
+  }
+ ]
+}

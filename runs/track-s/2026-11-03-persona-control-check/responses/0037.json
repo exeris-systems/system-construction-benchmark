@@ -1,0 +1,29 @@
+{
+ "id": "763193340cc44ccbb25aa1c50b9954b3",
+ "created": 1793703308,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1188,
+  "total_tokens": 1236,
+  "completion_tokens": 48,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The authorities announce two kinds of closures: planned ones with a start and end time, and sudden closures that take effect immediately. Both can be changed during the day, like when an area is expanded or a deadline is moved."
+   }
+  }
+ ]
+}

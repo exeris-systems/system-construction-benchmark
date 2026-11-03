@@ -1,0 +1,29 @@
+{
+ "id": "32b88363b6d0403d9a50f012bc357a4f",
+ "created": 1793703357,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1600,
+  "total_tokens": 1641,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I don’t pick drones or plan routes—I just keep the drones and charging equipment working. The companies that use our service handle picking drones and planning deliveries in their own systems."
+   }
+  }
+ ]
+}
