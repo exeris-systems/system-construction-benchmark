@@ -1,0 +1,608 @@
+{
+ "graded": {
+  "run": "runs/track-s/2026-11-03-persona-control-check",
+  "mode": "persona-control"
+ },
+ "summary": {
+  "byKind": {
+   "fact": {
+    "passing": 27,
+    "of": 42
+   },
+   "outside": {
+    "passing": 21,
+    "of": 21
+   },
+   "no-design": {
+    "passing": 9,
+    "of": 9
+   }
+  },
+  "passing": 57,
+  "of": 72,
+  "contradictingFact": [
+   "dispatcher/1/D3",
+   "dispatcher/2/D3",
+   "dispatcher/3/D3"
+  ],
+  "passes": false
+ },
+ "grades": [
+  {
+   "session": "technician/1/T1",
+   "id": "T1",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer fails to state clearly how many drones the speaker's own company runs, deflecting instead to what the platform company runs."
+  },
+  {
+   "session": "technician/1/T2",
+   "id": "T2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer adds details not found in the notes regarding how charging pads are set up to match drones and refers to 'that company' rather than sticking strictly to what the notes state."
+  },
+  {
+   "session": "technician/1/T3",
+   "id": "T3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any unsupported details or contradicting the text."
+  },
+  {
+   "session": "technician/1/T4",
+   "id": "T4",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer adds details not found in the notes regarding technician duties and procedures when a drone lands after a restart."
+  },
+  {
+   "session": "technician/1/T5",
+   "id": "T5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that reports can arrive late, out of order, or not at all, without introducing outside information."
+  },
+  {
+   "session": "technician/1/T6",
+   "id": "T6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and adds nothing else."
+  },
+  {
+   "session": "technician/1/T7",
+   "id": "T7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and adds nothing else."
+  },
+  {
+   "session": "technician/1/T8",
+   "id": "T8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The speaker states that they do not know and describes what they need to get done without proposing any screens, buttons, or software features."
+  },
+  {
+   "session": "technician/2/T1",
+   "id": "T1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the company may run a few hundred drones and adds no unsupported facts."
+  },
+  {
+   "session": "technician/2/T2",
+   "id": "T2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that drones cannot charge on any pad because charging connectors vary and pads must match the drone's connector, without adding unsupported information."
+  },
+  {
+   "session": "technician/2/T3",
+   "id": "T3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly agrees with the notes, stating that each company has its own pads and they are never shared, without adding extraneous information."
+  },
+  {
+   "session": "technician/2/T4",
+   "id": "T4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes that drones restart after a software fault and carry on flying on autopilot, without introducing unsupported facts."
+  },
+  {
+   "session": "technician/2/T5",
+   "id": "T5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly reflects the notes regarding report delivery and reliability issues without adding outside information."
+  },
+  {
+   "session": "technician/2/T6",
+   "id": "T6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and does not add any unsupported claims or guesses."
+  },
+  {
+   "session": "technician/2/T7",
+   "id": "T7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and accurately reflects their role without guessing or inventing external details."
+  },
+  {
+   "session": "technician/2/T8",
+   "id": "T8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know, focuses only on the tasks they need to get done, and does not propose any screens, buttons, or system design."
+  },
+  {
+   "session": "technician/3/T1",
+   "id": "T1",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer does not state how many drones the company runs, claiming ignorance instead of providing the figure supported by the notes."
+  },
+  {
+   "session": "technician/3/T2",
+   "id": "T2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer invents a rule that drones only charge at their home sites, which is not stated in the notes."
+  },
+  {
+   "session": "technician/3/T3",
+   "id": "T3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that charging pads are never lent out to other companies and adds no unsupported information."
+  },
+  {
+   "session": "technician/3/T4",
+   "id": "T4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, which state that drones fly on autopilot and carry on after restarting in flight following a software fault."
+  },
+  {
+   "session": "technician/3/T5",
+   "id": "T5",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer directly matches the notes regarding drone reports arriving late, out of order, repeatedly, or not at all, without adding any outside information."
+  },
+  {
+   "session": "technician/3/T6",
+   "id": "T6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and adds nothing else."
+  },
+  {
+   "session": "technician/3/T7",
+   "id": "T7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know and adds nothing else."
+  },
+  {
+   "session": "technician/3/T8",
+   "id": "T8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer states that the speaker does not know, which is an acceptable response for a no-design question."
+  },
+  {
+   "session": "dispatcher/1/D1",
+   "id": "D1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that deciding which drone flies and along which way is the dispatcher's legal responsibility without adding unsupported details."
+  },
+  {
+   "session": "dispatcher/1/D2",
+   "id": "D2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, which state that company policy prohibits software from choosing a drone or route and that dispatchers only want help finding which drones can reach the start."
+  },
+  {
+   "session": "dispatcher/1/D3",
+   "id": "D3",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": true,
+   "reason": "The answer says several flights cannot take off at the same moment, whereas the notes state sites have places where drones can take off and land at the same time."
+  },
+  {
+   "session": "dispatcher/1/D4",
+   "id": "D4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes without adding any outside information."
+  },
+  {
+   "session": "dispatcher/1/D5",
+   "id": "D5",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer does not convey what the notes support regarding closures and drones in flight, and instead introduces duties about keeping drones safe and legal that are not found in the notes."
+  },
+  {
+   "session": "dispatcher/1/D6",
+   "id": "D6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the specific connector types are not detailed in the notes."
+  },
+  {
+   "session": "dispatcher/1/D7",
+   "id": "D7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, without adding any unsupported information."
+  },
+  {
+   "session": "dispatcher/1/D8",
+   "id": "D8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer properly states that the speaker does not know instead of suggesting any system design."
+  },
+  {
+   "session": "dispatcher/2/D1",
+   "id": "D1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, confirming that deciding which drone flies and along which way is the dispatcher's legal responsibility without adding unsupported details."
+  },
+  {
+   "session": "dispatcher/2/D2",
+   "id": "D2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes, which state that company policy prohibits software from choosing a drone or route and that dispatchers only want help finding which drones can reach the start."
+  },
+  {
+   "session": "dispatcher/2/D3",
+   "id": "D3",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": true,
+   "reason": "The answer starts with 'No', contradicting the notes which state that sites have places for drones to take off and land at the same time."
+  },
+  {
+   "session": "dispatcher/2/D4",
+   "id": "D4",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer adds a duty about having to keep checking for updates, which is not mentioned in the notes."
+  },
+  {
+   "session": "dispatcher/2/D5",
+   "id": "D5",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer adds duties and consequences not specified in the notes, such as finding a way around the restricted area and needing to know about closures as soon as possible."
+  },
+  {
+   "session": "dispatcher/2/D6",
+   "id": "D6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the specific connector types are not detailed in the notes."
+  },
+  {
+   "session": "dispatcher/2/D7",
+   "id": "D7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, without adding any unsupported information."
+  },
+  {
+   "session": "dispatcher/2/D8",
+   "id": "D8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer properly states that the speaker does not know instead of suggesting any system design."
+  },
+  {
+   "session": "dispatcher/3/D1",
+   "id": "D1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly identifies the dispatcher as the person who decides, accurately reflecting the notes without adding any prohibited details."
+  },
+  {
+   "session": "dispatcher/3/D2",
+   "id": "D2",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states that software should not pick the drone based on legal responsibility and company policy, while matching the dispatcher's desire for help identifying eligible drones without adding outside information."
+  },
+  {
+   "session": "dispatcher/3/D3",
+   "id": "D3",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": true,
+   "reason": "The answer says no, which contradicts the notes showing that multiple drones can take off at the same time up to the number of available places at the site."
+  },
+  {
+   "session": "dispatcher/3/D4",
+   "id": "D4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding closures being amended during the day, such as an area being widened or an end time moving, without adding extraneous information."
+  },
+  {
+   "session": "dispatcher/3/D5",
+   "id": "D5",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer adds a duty about keeping flights legal when closures change that is not stated in the notes, and fails to state what the notes support regarding closures coming into force while drones are in the air."
+  },
+  {
+   "session": "dispatcher/3/D6",
+   "id": "D6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, as the specific connector types are not detailed in the notes."
+  },
+  {
+   "session": "dispatcher/3/D7",
+   "id": "D7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, without adding any unsupported information."
+  },
+  {
+   "session": "dispatcher/3/D8",
+   "id": "D8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer properly states that the speaker does not know instead of suggesting any system design."
+  },
+  {
+   "session": "desk/1/A1",
+   "id": "A1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding the shared airspace information kept by the desk and who uses it, without introducing outside facts."
+  },
+  {
+   "session": "desk/1/A2",
+   "id": "A2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer claims not to know, but the notes explicitly state that the airspace desk has no business looking into any one company's operations."
+  },
+  {
+   "session": "desk/1/A3",
+   "id": "A3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states both kinds of closures and amendments based entirely on the notes without adding unsupported details."
+  },
+  {
+   "session": "desk/1/A4",
+   "id": "A4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding restarts and crashes during working hours without adding outside details."
+  },
+  {
+   "session": "desk/1/A5",
+   "id": "A5",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know how many drones each company operates and adds no outside guesses or estimates."
+  },
+  {
+   "session": "desk/1/A6",
+   "id": "A6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The question is outside the speaker's notes, and the speaker correctly states that they do not know."
+  },
+  {
+   "session": "desk/1/A7",
+   "id": "A7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, adhering to the requirements for an outside question."
+  },
+  {
+   "session": "desk/1/A8",
+   "id": "A8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer simply states that the speaker does not know, which is acceptable for a no-design question."
+  },
+  {
+   "session": "desk/2/A1",
+   "id": "A1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes on the airspace information kept from the authorities and shared across customer companies without adding unsupported facts."
+  },
+  {
+   "session": "desk/2/A2",
+   "id": "A2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer starts with 'I don't know' instead of agreeing with the notes, which clearly establish that the desk has no business looking into individual companies' operations."
+  },
+  {
+   "session": "desk/2/A3",
+   "id": "A3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding planned and sudden closures and how they can be amended during the day, without introducing any outside information."
+  },
+  {
+   "session": "desk/2/A4",
+   "id": "A4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding restarts and crashes during working hours without adding outside details."
+  },
+  {
+   "session": "desk/2/A5",
+   "id": "A5",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is appropriate for a question outside the notes."
+  },
+  {
+   "session": "desk/2/A6",
+   "id": "A6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The question is outside the speaker's notes, and the speaker correctly states that they do not know."
+  },
+  {
+   "session": "desk/2/A7",
+   "id": "A7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, adhering to the requirements for an outside question."
+  },
+  {
+   "session": "desk/2/A8",
+   "id": "A8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer simply states that the speaker does not know, which is acceptable for a no-design question."
+  },
+  {
+   "session": "desk/3/A1",
+   "id": "A1",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding the shared airspace information kept and used for all customer companies without adding unsupported facts."
+  },
+  {
+   "session": "desk/3/A2",
+   "id": "A2",
+   "kind": "fact",
+   "verdict": "FAIL",
+   "contradicts": false,
+   "reason": "The answer begins by claiming not to know, which fails to agree with the notes' clear position that the desk has no business looking into individual company operations."
+  },
+  {
+   "session": "desk/3/A3",
+   "id": "A3",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately states both kinds of closures and amendments based entirely on the notes without adding unsupported details."
+  },
+  {
+   "session": "desk/3/A4",
+   "id": "A4",
+   "kind": "fact",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer accurately reflects the notes regarding restarts and crashes during working hours without adding outside details."
+  },
+  {
+   "session": "desk/3/A5",
+   "id": "A5",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, which is appropriate for a question outside the notes."
+  },
+  {
+   "session": "desk/3/A6",
+   "id": "A6",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The question is outside the speaker's notes, and the speaker correctly states that they do not know."
+  },
+  {
+   "session": "desk/3/A7",
+   "id": "A7",
+   "kind": "outside",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer correctly states that the speaker does not know, adhering to the requirements for an outside question."
+  },
+  {
+   "session": "desk/3/A8",
+   "id": "A8",
+   "kind": "no-design",
+   "verdict": "PASS",
+   "contradicts": false,
+   "reason": "The answer simply states that the speaker does not know, which is acceptable for a no-design question."
+  }
+ ]
+}
