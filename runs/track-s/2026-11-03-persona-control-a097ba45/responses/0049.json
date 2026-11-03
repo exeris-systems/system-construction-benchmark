@@ -1,0 +1,29 @@
+{
+ "id": "097b34023f024b059709398e35af5e47",
+ "created": 1793711696,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1402,
+  "total_tokens": 1444,
+  "completion_tokens": 42,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. My company runs a shared service for several independent drone operating companies, each of which may run a few hundred drones. I don’t track the total number of drones across all companies."
+   }
+  }
+ ]
+}

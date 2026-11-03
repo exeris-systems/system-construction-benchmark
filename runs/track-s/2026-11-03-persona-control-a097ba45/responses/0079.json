@@ -1,0 +1,29 @@
+{
+ "id": "583834f7febf40f6b6e0ab7a9643b6fc",
+ "created": 1793711758,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1858,
+  "total_tokens": 1883,
+  "completion_tokens": 25,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. I only work with the routes as they’re defined by the authorities and the companies’ sites."
+   }
+  }
+ ]
+}

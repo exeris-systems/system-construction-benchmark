@@ -1,0 +1,29 @@
+{
+ "id": "13f07acd8d6e4e5898bf2e78398477b8",
+ "created": 1793711633,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1625,
+  "total_tokens": 1696,
+  "completion_tokens": 71,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "[\n    {\n        \"verdict\": \"KEEP\",\n        \"source\": \"A dispatcher is the licensed person responsible for each flight: they decide which drone flies, along which way, and they sign off a flight before it leaves.\"\n    },\n    {\n        \"verdict\": \"DROP\",\n        \"source\": null\n    }\n]"
+   }
+  }
+ ]
+}

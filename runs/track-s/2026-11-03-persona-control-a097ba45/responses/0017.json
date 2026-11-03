@@ -1,0 +1,29 @@
+{
+ "id": "7f591f81d0b7487da0fba69ba41b14d3",
+ "created": 1793711631,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1590,
+  "total_tokens": 1644,
+  "completion_tokens": 54,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I decide which drone flies and along which way, but I do not let software choose for me. I use the service to find out which of my drones could get to where a job starts, and then I decide which one to use and how to fly it."
+   }
+  }
+ ]
+}

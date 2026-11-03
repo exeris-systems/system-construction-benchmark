@@ -1,0 +1,29 @@
+{
+ "id": "8e676c66c03a48f9b33b0dc2baf9796b",
+ "created": 1793711778,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1330,
+  "total_tokens": 1349,
+  "completion_tokens": 19,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company does not track how many drones each customer operates."
+   }
+  }
+ ]
+}

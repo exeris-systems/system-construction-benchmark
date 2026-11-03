@@ -1,0 +1,29 @@
+{
+ "id": "da4117cff9164493a63f894ca677ec19",
+ "created": 1793711863,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1230,
+  "total_tokens": 1267,
+  "completion_tokens": 37,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t look into any one company’s flights or operations. My job is to track closures and how they affect the shared airspace across all customers, not individual companies."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "5df6a534b3e448e4a31a8bd11d56b0a1",
+ "created": 1793711614,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1572,
+  "total_tokens": 1614,
+  "completion_tokens": 42,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Reports from drones do not always arrive on time, in order, or even at all. They may come late, out of sequence, multiple times, or not at all due to patchy radio coverage."
+   }
+  }
+ ]
+}

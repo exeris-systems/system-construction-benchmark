@@ -1,0 +1,29 @@
+{
+ "id": "9ceb2086d50348c3950e89c39b2c66e1",
+ "created": 1793711703,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1467,
+  "total_tokens": 1479,
+  "completion_tokens": 12,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, charging pads are never lent to another company."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "534b7a45a23447b28c8280b568be5f02",
+ "created": 1793711815,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1609,
+  "total_tokens": 1638,
+  "completion_tokens": 29,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The airspace rules are set by the authorities, and the platform company does not decide how long closures last."
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "f604f7c79bda4622bc0ae761186f81cf",
+ "created": 1793711786,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1373,
+  "total_tokens": 1399,
+  "completion_tokens": 26,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The companies’ own systems handle reaching people with alerts, so I don’t track delays in reports."
+   }
+  }
+ ]
+}

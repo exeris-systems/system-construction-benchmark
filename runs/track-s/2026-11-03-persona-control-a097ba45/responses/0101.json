@@ -1,0 +1,29 @@
+{
+ "id": "62b953d40be64791aa4657d249713ea0",
+ "created": 1793711803,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1486,
+  "total_tokens": 1511,
+  "completion_tokens": 25,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, each company’s charging pads are only for its own drones and are never lent to or used by another company."
+   }
+  }
+ ]
+}

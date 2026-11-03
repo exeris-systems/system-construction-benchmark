@@ -1,0 +1,29 @@
+{
+ "id": "0effe9794c214db8976835140b3df4ba",
+ "created": 1793711673,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1189,
+  "total_tokens": 1250,
+  "completion_tokens": 61,
+  "prompt_tokens_details": {
+   "cached_tokens": 1124
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "{\n  \"sentences\": [\n    {\n      \"verdict\": \"KEEP\",\n      \"source\": \"The authorities define zones where flying is prohibited, and they announce closures: planned ones with a start and end time, and sudden ones that apply at once.\"\n    }\n  ]\n}"
+   }
+  }
+ ]
+}

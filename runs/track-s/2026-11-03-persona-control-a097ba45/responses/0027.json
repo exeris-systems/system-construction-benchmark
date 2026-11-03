@@ -1,0 +1,29 @@
+{
+ "id": "5386ca630cc246c6935b73db0ee216eb",
+ "created": 1793711651,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1791,
+  "total_tokens": 1811,
+  "completion_tokens": 20,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "My notes do not say which connector types my charging pads use. The platform company would know."
+   }
+  }
+ ]
+}

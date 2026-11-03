@@ -1,0 +1,29 @@
+{
+ "id": "b007f7bc7d1a4be3828c8abb63b9cbf2",
+ "created": 1793711727,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1590,
+  "total_tokens": 1636,
+  "completion_tokens": 46,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I decide which drone flies and along which way, but I do not let software choose for me. I want help finding out which of my drones could get to where a job starts, but the final decision is always mine."
+   }
+  }
+ ]
+}
