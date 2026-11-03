@@ -1,0 +1,29 @@
+{
+ "id": "6212418fa19042b68d1507708e22c98f",
+ "created": 1793703996,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1491,
+  "total_tokens": 1507,
+  "completion_tokens": 16,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The companies manage their own budgets and drone purchases."
+   }
+  }
+ ]
+}

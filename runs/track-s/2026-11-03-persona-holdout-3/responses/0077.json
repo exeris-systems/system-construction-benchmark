@@ -1,0 +1,29 @@
+{
+ "id": "5598f375dc9a453abed86a9704eea597",
+ "created": 1793704130,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1684,
+  "total_tokens": 1714,
+  "completion_tokens": 30,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company handles the charging equipment, but I don’t know who sets up the pads or how long it takes."
+   }
+  }
+ ]
+}

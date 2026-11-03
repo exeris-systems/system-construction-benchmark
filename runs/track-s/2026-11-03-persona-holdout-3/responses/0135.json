@@ -1,0 +1,29 @@
+{
+ "id": "1ac8c1c482fd4a3489f3267de9951b0c",
+ "created": 1793704257,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1216,
+  "total_tokens": 1239,
+  "completion_tokens": 23,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The platform company issues staff accounts outside the service. The service itself does not have its own accounts or passwords."
+   }
+  }
+ ]
+}

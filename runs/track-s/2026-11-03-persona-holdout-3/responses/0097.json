@@ -1,0 +1,29 @@
+{
+ "id": "3956d4144d7947e6a7f5c4908af68018",
+ "created": 1793704171,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1290,
+  "total_tokens": 1359,
+  "completion_tokens": 69,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Yes, I can take a drone out of service for repairs and then put it back when it’s fixed. I do this when a drone needs maintenance or when its battery or sensors are faulty. I make sure to log the drone as unavailable while it’s being worked on and then re-enable it once it’s ready to fly again."
+   }
+  }
+ ]
+}

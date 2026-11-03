@@ -1,0 +1,29 @@
+{
+ "id": "73505374e6ee4bb986cfb0f7d74ab0d8",
+ "created": 1793704154,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1248,
+  "total_tokens": 1289,
+  "completion_tokens": 41,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company’s service runs on a single server and is updated and restarted during working hours, but I don’t track how often individual companies’ drones are affected by that."
+   }
+  }
+ ]
+}

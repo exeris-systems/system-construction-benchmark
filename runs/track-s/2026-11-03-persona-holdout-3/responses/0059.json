@@ -1,0 +1,29 @@
+{
+ "id": "02fd7a9e3c284ba5be2c1cf435f4b68c",
+ "created": 1793704094,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1532,
+  "total_tokens": 1550,
+  "completion_tokens": 18,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company doesn’t track or share pricing for drones."
+   }
+  }
+ ]
+}

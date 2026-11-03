@@ -1,0 +1,29 @@
+{
+ "id": "8c92af892ee248ec804f1bbfb7928aa5",
+ "created": 1793704260,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1241,
+  "total_tokens": 1273,
+  "completion_tokens": 32,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don't know. The platform company does not track or manage individual drones or their operations. My work is about airspace information shared across all customers."
+   }
+  }
+ ]
+}

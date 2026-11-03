@@ -1,0 +1,29 @@
+{
+ "id": "467c37ee023f4cb79364e0a103ab8179",
+ "created": 1793704036,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1801,
+  "total_tokens": 1820,
+  "completion_tokens": 19,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company’s team that handles airspace rules would know."
+   }
+  }
+ ]
+}

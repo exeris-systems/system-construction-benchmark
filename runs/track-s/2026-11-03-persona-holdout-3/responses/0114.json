@@ -1,0 +1,29 @@
+{
+ "id": "744d1a478f8f4e649fc79ab58a47a3cd",
+ "created": 1793704208,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1504,
+  "total_tokens": 1523,
+  "completion_tokens": 19,
+  "prompt_tokens_details": {
+   "cached_tokens": 1380
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "{\"verdicts\": [\"KEEP\", \"KEEP\", \"DROP\"]}"
+   }
+  }
+ ]
+}

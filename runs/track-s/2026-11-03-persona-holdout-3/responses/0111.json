@@ -1,0 +1,29 @@
+{
+ "id": "519c26ae909748919947750bb77e9383",
+ "created": 1793704201,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1579,
+  "total_tokens": 1624,
+  "completion_tokens": 45,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The service should tell me that a charging pad is offline or not responding, so I can check it or replace it. I worry about whether the pad is still working or if a drone is stuck trying to charge there."
+   }
+  }
+ ]
+}

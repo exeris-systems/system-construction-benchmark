@@ -1,0 +1,29 @@
+{
+ "id": "eb5608721cbd4cefb515c5eb3434d205",
+ "created": 1793704193,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1538,
+  "total_tokens": 1566,
+  "completion_tokens": 28,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company doesn’t track or set pricing for drones—I just manage them once they’re in the fleet."
+   }
+  }
+ ]
+}

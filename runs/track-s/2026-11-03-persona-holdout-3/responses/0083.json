@@ -1,0 +1,29 @@
+{
+ "id": "f69d4c72840c4581a5bcf0049c97265d",
+ "created": 1793704142,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1134,
+  "total_tokens": 1185,
+  "completion_tokens": 51,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Yes, closures can change after they’re announced. For example, an area might be widened or an end time might move during the day. When that happens, I update the shared airspace information right away so all companies can adjust their operations."
+   }
+  }
+ ]
+}

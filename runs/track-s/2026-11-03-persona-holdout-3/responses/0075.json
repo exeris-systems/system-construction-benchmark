@@ -1,0 +1,29 @@
+{
+ "id": "73fef17a74f84a268fed7803a89ea051",
+ "created": 1793704126,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1653,
+  "total_tokens": 1685,
+  "completion_tokens": 32,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know who the infrastructure inspection firm’s clients are. The platform company only knows that it is one of several drone operating companies using the service."
+   }
+  }
+ ]
+}

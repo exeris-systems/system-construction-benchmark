@@ -1,0 +1,29 @@
+{
+ "id": "d733f010fe0d40e7aa90248cb7abf6be",
+ "created": 1793704217,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1615,
+  "total_tokens": 1653,
+  "completion_tokens": 38,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the companies do not want the service to plan routes. Dispatchers are legally responsible for choosing the drone and the flight path, so the software never picks a route for them."
+   }
+  }
+ ]
+}

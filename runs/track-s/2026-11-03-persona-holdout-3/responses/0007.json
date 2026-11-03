@@ -1,0 +1,29 @@
+{
+ "id": "64b7862643e44ce698add5d565064b08",
+ "created": 1793703988,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1396,
+  "total_tokens": 1458,
+  "completion_tokens": 62,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "My work follows the **EU drone operation rules** (like flight zones and operator duties) and the **EU U-space rules** (about airspace info and flight authorisation). We also respect **GDPR** for staff data, but we don’t handle compliance audits or certifications ourselves."
+   }
+  }
+ ]
+}

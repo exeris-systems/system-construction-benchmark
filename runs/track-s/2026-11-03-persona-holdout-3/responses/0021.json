@@ -1,0 +1,29 @@
+{
+ "id": "6ed3bff006fd44e0951ddcad52dc2536",
+ "created": 1793704016,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1614,
+  "total_tokens": 1652,
+  "completion_tokens": 38,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Radio contact with the drones is worst around ports, industrial sites, and in bad weather. Reports from drones can arrive late, out of order, or not at all in those areas."
+   }
+  }
+ ]
+}

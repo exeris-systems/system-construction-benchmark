@@ -1,0 +1,29 @@
+{
+ "id": "a2bd9e8f4c48440b945d18e32934aada",
+ "created": 1793704053,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1230,
+  "total_tokens": 1260,
+  "completion_tokens": 30,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "The platform company issues staff accounts outside the service, not through it. Each company’s own systems handle reaching people with alerts, not the platform."
+   }
+  }
+ ]
+}

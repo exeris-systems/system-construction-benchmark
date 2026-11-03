@@ -1,0 +1,29 @@
+{
+ "id": "9f8b5d02712e4821ac844fe3c3db0903",
+ "created": 1793704090,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1494,
+  "total_tokens": 1533,
+  "completion_tokens": 39,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the companies don’t want alerts sent by e-mail, text, or phone—they handle reaching staff through their own systems. I just report what happens to the drones and jobs."
+   }
+  }
+ ]
+}

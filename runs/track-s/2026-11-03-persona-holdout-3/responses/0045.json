@@ -1,0 +1,29 @@
+{
+ "id": "8d676e9fa71049f082f465d071df0a29",
+ "created": 1793704065,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1333,
+  "total_tokens": 1370,
+  "completion_tokens": 37,
+  "prompt_tokens_details": {
+   "cached_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. My work is about the shared airspace—zones, closures, and corridors—but I don’t track which companies use which corridors or how often."
+   }
+  }
+ ]
+}

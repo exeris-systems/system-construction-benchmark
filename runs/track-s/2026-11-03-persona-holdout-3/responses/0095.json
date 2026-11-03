@@ -1,0 +1,29 @@
+{
+ "id": "2934fa1eb094444fbea024606c095a9f",
+ "created": 1793704166,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1307,
+  "total_tokens": 1350,
+  "completion_tokens": 43,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I need to update the shared airspace picture right away to reflect the sudden closure, so all customers see it immediately. I also want to know how much disruption it causes across the companies using that airspace."
+   }
+  }
+ ]
+}

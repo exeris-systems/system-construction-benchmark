@@ -1,0 +1,29 @@
+{
+ "id": "a44345be8a3a4c8fade16fec1aeded0d",
+ "created": 1793704012,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1573,
+  "total_tokens": 1632,
+  "completion_tokens": 59,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "An inspection drone visits its points in the exact order listed for the job. It starts and ends at the same site where the inspection was requested. The dispatcher confirms the list of points and the starting site before the flight, but the drone follows that order automatically on its own autopilot."
+   }
+  }
+ ]
+}

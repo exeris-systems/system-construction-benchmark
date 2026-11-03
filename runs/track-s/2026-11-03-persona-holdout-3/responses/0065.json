@@ -1,0 +1,29 @@
+{
+ "id": "797261091b884a709f3f17613c75993d",
+ "created": 1793704106,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1474,
+  "total_tokens": 1539,
+  "completion_tokens": 65,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Before a flight leaves, I have to decide which drone will do the job and sign off on the flight plan. I also need to make sure the drone’s battery is charged and the load is ready at the starting site. The system has to confirm that the drone’s sensors and charging connector match what the job needs."
+   }
+  }
+ ]
+}

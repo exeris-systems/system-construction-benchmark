@@ -1,0 +1,29 @@
+{
+ "id": "86f3160b58df47389b03027d4ad7d8db",
+ "created": 1793704134,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1711,
+  "total_tokens": 1733,
+  "completion_tokens": 22,
+  "prompt_tokens_details": {
+   "cached_tokens": 1408
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "I don’t know. The platform company’s airspace team handles closures and their effects on flights."
+   }
+  }
+ ]
+}

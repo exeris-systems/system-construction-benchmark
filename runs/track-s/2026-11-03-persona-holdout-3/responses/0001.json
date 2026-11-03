@@ -1,0 +1,29 @@
+{
+ "id": "cecca34de0d748488b530cd69232e89e",
+ "created": 1793703976,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1290,
+  "total_tokens": 1343,
+  "completion_tokens": 53,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "Yes, I can take a drone out of service for repairs and then put it back when it’s fixed. I do this when a drone needs maintenance or when a part is broken, and I make sure it’s working properly before returning it to the fleet."
+   }
+  }
+ ]
+}

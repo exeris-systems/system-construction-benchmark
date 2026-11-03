@@ -1,0 +1,29 @@
+{
+ "id": "a1b58a3d9f7b485a83b363946a00a1a7",
+ "created": 1793704041,
+ "model": "ministral-8b-2512",
+ "usage": {
+  "prompt_tokens": 1061,
+  "total_tokens": 1122,
+  "completion_tokens": 61,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "service_tier": "standard"
+ },
+ "object": "chat.completion",
+ "choices": [
+  {
+   "index": 0,
+   "finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "tool_calls": null,
+    "content": "No, the airspace information is the same for all companies. The platform collects and shares the same data about zones, closures, and corridors from the authorities, since it applies to everyone equally. My job is to keep that shared picture up to date and track how closures affect all customers."
+   }
+  }
+ ]
+}
