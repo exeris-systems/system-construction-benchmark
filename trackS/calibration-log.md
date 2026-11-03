@@ -26,7 +26,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-10-22-persona-holdout` (held-out set `c3160a5e…`) | `ministral-8b-2512` | `7d40bed8…0c0` (draft 3, frozen) | **fail** |
 | `runs/track-s/2026-10-22-persona-holdout-2` (held-out set 2 `616089c9…`) | `mistral-small-2603` | `7d40bed8…0c0` (draft 4) | **run failed** — no answer |
 | `runs/track-s/2026-11-03-persona-holdout-2` (held-out set 2 `616089c9…`) | `ministral-14b-2512`, temperature 0, seed 1 | `7d40bed8…0c0` (draft 4) | **fail** |
-| `runs/track-s/2026-11-03-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | **fail** |
+| `runs/track-s/2026-11-03-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | 68 of 72, control set — does not decide |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -179,7 +179,7 @@ is the same either way. The answers often run past four sentences. At temperatur
 seed, no question received the same answer in all three repetitions: the provider's sampling is not
 deterministic under these settings, so agreement across repetitions still tests the persona.
 
-### `2026-11-03-persona-control-check` — fail
+### `2026-11-03-persona-control-check` — 68 of 72, does not decide
 
 Draft 5 on the control set: the answering pass, then the check pass (`persona-check-prompt.md`,
 SHA-256 `9fd79962…`), both on `ministral-8b-2512` at temperature 0 and seed 1. 144 calls, no error
