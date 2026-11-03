@@ -25,6 +25,7 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-10-22-persona-control-8b-7d40bed8` | `ministral-8b-2512` | `7d40bed8…0c0` (draft 3, frozen) | **fail** |
 | `runs/track-s/2026-10-22-persona-holdout` (held-out set `c3160a5e…`) | `ministral-8b-2512` | `7d40bed8…0c0` (draft 3, frozen) | **fail** |
 | `runs/track-s/2026-10-22-persona-holdout-2` (held-out set 2 `616089c9…`) | `mistral-small-2603` | `7d40bed8…0c0` (draft 4) | **run failed** — no answer |
+| `runs/track-s/2026-11-03-persona-holdout-2` (held-out set 2 `616089c9…`) | `ministral-14b-2512`, temperature 0, seed 1 | `7d40bed8…0c0` (draft 4) | **fail** |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -151,3 +152,28 @@ Draft 4's deciding run. The model check passed: the provider describes `mistral-
 429 on every one of eight attempts over ten minutes, and the run failed as an infrastructure error.
 Each refusal reports `x-ratelimit-limit-req-minute: 0`: the key is allowed no requests to this
 model, so the run records no answer and no verdict.
+
+A second attempt on `mistral-small-2603` at temperature 0 and seed 1 met the same refusals, eight
+calls with no answer, and was interrupted by hand. Its directory was not kept. `mistral-medium-2604`
+answers with the same refusal and a limit of 0 requests per minute, so draft 4 moves to
+`ministral-14b-2512` (D-51).
+
+### `2026-11-03-persona-holdout-2` — fail
+
+Draft 4's deciding run: the second held-out set, run once at temperature 0 and random seed 1, both
+sent with every request. 72 calls; three were refused once with HTTP 429, "Not enough capacity
+available", and answered on retry; every answer finished with `stop`. The rate-limit headers report
+937,500 tokens and 30 requests per minute and no daily or monthly limit.
+
+| Kind | Answers passing | Failing answers |
+| --- | --- | --- |
+| `fact` (14 questions) | 31 of 42 | JT1 ×3: describes setting up a drone "so the system knows" its sensors and connector. JD1 ×3: adds that a delivery drone must return home. JT2 ×1: says a drone charges only at its home site. JT4 ×1: speaks of "each company we work with", as if working for the platform. JD2 ×1: says the authorities define the corridors. JD3 ×1: links a drained battery to a restart in flight. JA1 ×1: says these are the only customers. |
+| `outside` (7 questions) | 12 of 21 | JD6 ×3: "I don't know", then names a technical team, an equipment team or the manufacturer. JD7 ×3: "I don't know", then says the company's own billing systems handle the platform's charge. JA7 ×2: says the desk or the service tracks where drones fly. JT6 ×1: says closures last a few minutes, taking them for restarts of the service. |
+| `no-design` (3 questions) | 0 of 9 | JT8 ×3: the service should stop a drone going to the wrong pad. JD8 ×3: the service should show that a drone is taken. JA8 ×3: the service should record every version of a closure. |
+| total | 43 of 72 | |
+
+Below the threshold of 65; no `fact` answer contradicts its slice. JD5 ×3 also says the companies
+handle weather in their own systems, which the slice does not say; counted as passing, the verdict
+is the same either way. The answers often run past four sentences. At temperature 0 with a fixed
+seed, no question received the same answer in all three repetitions: the provider's sampling is not
+deterministic under these settings, so agreement across repetitions still tests the persona.
