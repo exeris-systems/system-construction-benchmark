@@ -1,0 +1,75 @@
+{
+  "track": "S",
+  "mode": "persona-control",
+  "status": "failed",
+  "started": "2026-11-03T12:09:21.015773+00:00",
+  "parameters": {
+    "mode": "persona-control",
+    "persona_provider": "mistral",
+    "persona_model": "ministral-8b-2512",
+    "persona_rpm": 30,
+    "persona_max_tokens": 2048,
+    "persona_temperature": 0.0,
+    "persona_seed": 1,
+    "persona_check": true,
+    "grader_provider": "mistral",
+    "grader_model": null,
+    "grader_rpm": 20,
+    "grader_max_tokens": 1024,
+    "grader_temperature": null,
+    "grader_seed": null,
+    "graded": null,
+    "repetitions": 3
+  },
+  "inputSha256": {
+    "world-brief.md": "dfb0de323972b2ead2811e441914d27f6fa1f98410e7c433010e8dcd057f130e",
+    "brief-slices.yaml": "7c417a65224604ea834574e457e0b285dafb79b476821cb3315b58eed8169125",
+    "persona-prompt.md": "7d40bed84f31bedc5958ad45dc28fc4957f92c971fe2ff6b27789688480250c0",
+    "persona-control.yaml": "1f9e8364ebd9410cdac17b844d275de082e5ca6cfcc8edd121ddcb3df8229089",
+    "persona-check-prompt.md": "d660c0faba2c7f92c863c1bd15585353365c6a2a8b92392f938e36b8dd928cdb",
+    "run-track-s.py": "81e74266ec313b24e2d8fd23a79dcce7125287d9889974ad81385cb030ff06c1"
+  },
+  "instruments": {
+    "persona": {
+      "provider": "mistral",
+      "model": "ministral-8b-2512",
+      "description": {
+        "id": "ministral-8b-2512",
+        "object": "model",
+        "created": 1793707761,
+        "owned_by": "mistralai",
+        "capabilities": {
+          "completion_chat": true,
+          "function_calling": true,
+          "reasoning": false,
+          "completion_fim": false,
+          "fine_tuning": true,
+          "vision": true,
+          "ocr": false,
+          "classification": false,
+          "moderation": false,
+          "audio": false,
+          "audio_transcription": false,
+          "audio_transcription_realtime": false,
+          "audio_speech": false,
+          "unified_resources": false
+        },
+        "name": "ministral-8b-2512",
+        "description": "Ministral 3 (a.k.a. Tinystral) 8B Instruct.",
+        "max_context_length": 262144,
+        "aliases": [
+          "ministral-8b-latest"
+        ],
+        "deprecation": null,
+        "deprecation_replacement_model": null,
+        "default_model_temperature": 0.3,
+        "billing_model_name": "ministral-8b-2512",
+        "type": "base",
+        "audio_transcription_capabilities": null,
+        "audio_speech_capabilities": null
+      }
+    }
+  },
+  "failure": "technician/1/T1/check: the reply is not one verdict and source for each of 2 sentences",
+  "finished": "2026-11-03T12:09:24.252141+00:00"
+}
