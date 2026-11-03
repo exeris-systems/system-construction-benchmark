@@ -50,7 +50,8 @@ supports (`fact`), a question the slice cannot answer (`outside`), or a question
 software design (`no-design`). The script asks each role its questions in one conversation, three
 times: `persona-control` asks `persona-control.yaml`, `persona-holdout` asks `persona-holdout.yaml`.
 
-Each answer is graded against its question's `expect`. A `fact` answer passes when it agrees with the
+Each answer is graded against its question's `expect`, each repetition by itself; agreement across
+repetitions is not a criterion of its own (D-50). A `fact` answer passes when it agrees with the
 cited unit and adds nothing its slice does not give; an `outside` answer passes with "I don't know"
 or a referral its slice supports; a `no-design` answer passes when it describes needs rather than
 features or mechanisms. The verdict, and every failing answer, is recorded in `calibration-log.md`.
