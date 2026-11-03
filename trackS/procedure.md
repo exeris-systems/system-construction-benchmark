@@ -23,7 +23,7 @@ Track S pilots (D-46).
 
 | Instrument | Provider | Model | Sees |
 | --- | --- | --- | --- |
-| Persona — fleet technician, dispatcher, airspace desk | Gemini API | `gemini-3.5-flash-lite`, temperature 0, random seed 1, for both passes; whether the check pass runs is settled on the control set and fixed before the held-out run | answering: `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`); checking: `persona-check-prompt.md` + the same slice, the question and the answer's sentences |
+| Persona — fleet technician, dispatcher, airspace desk | Gemini API | `gemini-3.5-flash-lite`, temperature 0, random seed 1; answering pass only | answering: `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`); checking: `persona-check-prompt.md` + the same slice, the question and the answer's sentences |
 | Grader — of the persona's calibration answers | Gemini API | `gemini-3.8-flash`, temperature 0, random seed 1 | `grader-prompt.md` + the answering role's slice, the question, its kind and `expect`, and the answer |
 | Judge, script series | Gemini API | Gemini 3.8 Flash, exact identifier fixed before its calibration | the derived contract + the reference requirements |
 | Judge, native series | Mistral API | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | the derived contract + the reference requirements |
@@ -45,9 +45,12 @@ run.
 | `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
 | `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
 
-## The persona's two passes
+## The persona's check pass
 
-The persona answers each question in two passes of the same model. The answering pass writes the
+The persona answers each question in one pass. A check pass was built for drafts 5 and 6 and is
+kept in the script behind `--persona-check`; on `gemini-3.5-flash-lite` it lowers the graded
+control run, and the persona runs without it (D-53). With it, each answer takes two passes of the
+same model. The answering pass writes the
 answer from the persona prompt and its slice. The check pass receives the same slice, the question,
 and the answer split into numbered sentences, and returns KEEP or DROP for each sentence, with the source of
 each sentence it keeps: words copied from the slice, at least four long, or `DONT_KNOW` or

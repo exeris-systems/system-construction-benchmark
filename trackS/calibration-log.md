@@ -33,6 +33,8 @@ runs. The run records themselves are under `runs/track-s/`, unedited.
 | `runs/track-s/2026-11-03-persona-control-sourced-3`, graded in `runs/track-s/2026-11-03-grade-persona-control-sourced-3` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `7d40bed8…0c0`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
 | `runs/track-s/2026-11-03-persona-control-check`, graded again in `runs/track-s/2026-11-03-grade-persona-control-check` | `ministral-8b-2512`, temperature 0, seed 1, check pass | `7d40bed8…0c0`, check `9fd79962…` (draft 5) | 57 of 72 by the grader, against 68 by hand — does not decide |
 | `runs/track-s/2026-11-03-persona-control-a097ba45`, graded in `runs/track-s/2026-11-03-grade-persona-control-a097ba45` | `ministral-8b-2512`, temperature 0, seed 1, sourced check | `a097ba45…`, check `d660c0fa…` (draft 6) | 59 of 72 by the grader, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-control-flash-lite`, graded in `runs/track-s/2026-11-03-grade-persona-control-flash-lite` | `gemini-3.5-flash-lite`, temperature 0, seed 1, no check | `a097ba45…` (draft 6) | 66 of 72 by the grader, control set — does not decide |
+| `runs/track-s/2026-11-03-persona-control-flash-lite-check`, graded in `runs/track-s/2026-11-03-grade-persona-control-flash-lite-check` | `gemini-3.5-flash-lite`, temperature 0, seed 1, sourced check | `a097ba45…`, check `d660c0fa…` (draft 6) | 57 of 72 by the grader, control set — does not decide |
 
 ### `2026-10-22-persona-control` — fail
 
@@ -296,6 +298,24 @@ the "No" in D3, which the check keeps with a source from the notes. Three `fact`
 because the check dropped every sentence, one of them true to the notes: D1's "I decide which drone
 flies and along which way". The answering pass and the check, on the same small model, each still
 err in both directions.
+
+### `2026-11-03-persona-control-flash-lite` and `-check` — 66 and 57 of 72 by the grader
+
+The persona on `gemini-3.5-flash-lite` (a thinking model, by its own description), with the
+answering prompt `a097ba45…`, once without the check and once with it; both graded by the grader.
+All four runs completed without error, every response `STOP`; no check reply needed asking again.
+With the check, 27 of 111 sentences were dropped.
+
+| Kind | Without the check | With the check |
+| --- | --- | --- |
+| `fact` (14 questions) | 39 of 42 — T3 ×3: "I don't know.", where the notes say pads are never lent | 30 of 42 — T3 ×3 and T5 ×3: "I don't know." left by the check; D2 ×3: the check dropped the "no" and kept only "However, we do want help…"; A2 ×3: "I don't know." before the desk's wish |
+| `outside` (7 questions) | 18 of 21 — D6 ×3: states that the connector types are several and not interchangeable, without saying it does not know which | 18 of 21 — D6 ×3, the same |
+| `no-design` (3 questions) | 9 of 9 | 9 of 9 |
+| total | 66 of 72 | 57 of 72 |
+
+No answer in either run contradicts its slice. Without the check the persona is above the threshold
+on the control set for the first time under the grader; with it, the check removes answers the
+notes give. The persona runs without the check (D-53), with its answering prompt frozen.
 
 ## Grader
 

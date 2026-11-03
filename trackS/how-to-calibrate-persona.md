@@ -55,6 +55,6 @@ Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute
    `persona-holdout-4`.
 
    ```sh
-   python3 -I trackS/run-track-s.py persona-holdout-4 --persona-provider gemini --persona-model gemini-3.5-flash-lite --persona-temperature 0 --persona-seed 1 --persona-max-tokens 8192 --persona-rpm 10 --persona-check --out runs/track-s/YYYY-MM-DD-persona-holdout-4
+   python3 -I trackS/run-track-s.py persona-holdout-4 --persona-provider gemini --persona-model gemini-3.5-flash-lite --persona-temperature 0 --persona-seed 1 --persona-max-tokens 8192 --persona-rpm 10 --out runs/track-s/YYYY-MM-DD-persona-holdout-4
    python3 -I trackS/run-track-s.py grade --graded runs/track-s/YYYY-MM-DD-persona-holdout-4 --grader-provider gemini --grader-model gemini-3.8-flash --grader-temperature 0 --grader-seed 1 --grader-max-tokens 8192 --grader-rpm 10 --out runs/track-s/YYYY-MM-DD-grade-persona-holdout-4
    ```
