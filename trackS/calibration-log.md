@@ -228,9 +228,22 @@ consequence or duty inside a sentence that is otherwise in the notes, and one de
 | Run | Model | `grader-prompt.md` (SHA-256) | Verdict |
 | --- | --- | --- | --- |
 | `runs/track-s/2026-11-03-grader-control` (cases `e3e3de4a…`) | `mistral-large-2512`, temperature 0, seed 1 | `d691edd3…` (draft 6) | **run failed** — no grade |
+| `runs/track-s/2026-11-03-grader-control-2` (cases `e3e3de4a…`) | `gemini-3.8-flash`, temperature 0, seed 1 | `d691edd3…` (draft 6) | **pass** |
 
 ### `2026-11-03-grader-control` — run failed
 
 The model check passed. The first case was refused with HTTP 403, "This model is not available in
 your subscription tier" (`tier_not_allowed`), which is not retried, and the run failed as an
 infrastructure error before any grade.
+
+### `2026-11-03-grader-control-2` — pass
+
+The grader on `gemini-3.8-flash`, which describes itself as a thinking model with an output limit of
+65,536 tokens. 36 calls, no error or retry, every grade finished with `STOP`; 10,056 of the output
+tokens were the model's reasoning. The Gemini API reports no rate-limit headers.
+
+The grader agrees with all 36 verdicts and passes none of the six cases that contradict their slice.
+Its `contradicts` flag agrees on 35: it also marks GD5, "a site can launch at most two drones at a
+time", as contradicting, where the case marks it as an addition. That errs towards the strict side,
+since a contradicting `fact` answer fails the persona on its own. The grader's prompt passes
+unrevised and is frozen.
