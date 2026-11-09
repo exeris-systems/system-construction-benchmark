@@ -492,3 +492,17 @@ Draft 7 of the Track S procedure revises rule 3 of `trackS/persona-prompt.md`. G
 Rule 3 now says that what the notes say about "the companies", "each company" or "a company" is known to the persona: it holds for its own company, or, for the airspace desk, it is what the notes state about the companies. Model, temperature, seed, single pass and grader stay as in D-53. Graded by the grader, the revised prompt passes 69 of 72 control answers with no contradicting answer, T3 in every repetition, and its answering prompt is frozen at `8e49283b…`. With it frozen, `trackS/persona-holdout-5.yaml` — 24 questions with the same mix of kinds, sharing none with the earlier sets — is run once and graded, and the grade decides under the threshold of D-50.
 
 Impact: `trackS/procedure.md`, `trackS/persona-prompt.md`, `trackS/persona-holdout-5.yaml`, `trackS/run-track-s.py`, `trackS/how-to-calibrate-persona.md`, `preregistration/frozen-sets.md`.
+
+### D-55 — Each subject is judged by the other vendor, and Gemini replaces Mistral in the script series
+
+D-48 gives each series one judge outside the family of every subject in it, and names `mistral-large-2512` both as a script-series subject and as the native-series judge. The key refuses `mistral-large-2512` with HTTP 403 `tier_not_allowed`, as it refuses `mistral-small-2603` and `mistral-medium-2604` with a limit of 0 requests per minute (D-51), and the account pays for the Gemini and Anthropic APIs only. Without Mistral, the subjects of each series come from Anthropic and Google, and no model is outside both families.
+
+In both series a subject is judged by the other vendor: a Claude subject by `gemini-4-argon` on the Gemini API, a Gemini subject by `claude-opus-5-5` on the Anthropic API. Both judges are calibrated on the same mutants (D-48) before either judges a subject, and each passes or fails on its own. The script series' subjects are Claude Haiku, Sonnet and Opus, `gemini-3.8-flash` and `gemini-4-argon`, all through the procedure script; `mistral-large-2512` leaves the matrix. The script series is 5 subjects × 2 variants × 3 runs = 30; the native series stays at 9.
+
+In the script series the judge differs between vendors, so a difference between vendors could come from the judge. Every script-series contract is therefore also judged by the judge of the subject's own family; that judgement is recorded and never scored. The report gives, per vendor, how often the two judges agree on each reference requirement and on each addition, and states every comparison across vendors together with it. The native series is never compared across harnesses (D-39), and has no second judgement.
+
+The persona (`gemini-3.5-flash-lite`, D-53) is of the Google subjects' family; every report discloses it, as it disclosed the vendor `mistral-large-2512` shared with the persona. `gemini-4-argon` is a subject and the judge of other subjects; its own contracts are scored by `claude-opus-5-5`. The Gemini subjects run on the account's Gemini credits, which removes the limit of 20 requests a day that kept `gemini-3.8-flash` out of the script series in D-48. Neither judge has open weights. Like `gemini-3.8-flash`, `gemini-4-argon` has no date in its identifier; the Gemini API lists no dated one, and every call records the model the response reports. The tag `us-procedure-v3` froze the persona's calibration, so the judges enter the procedure as version 4.
+
+This amends D-48 for the judges, the script series' subjects and the matrix.
+
+Impact: `trackS/procedure.md`, `docs/program-plan.md` §9.6.
