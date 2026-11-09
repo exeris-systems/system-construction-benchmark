@@ -4,7 +4,7 @@ type: reference
 visibility: public
 owning-repo: system-construction-benchmark
 status: draft
-last-verified: 2026-10-22
+last-verified: 2026-11-09
 ---
 
 # Track S procedure
@@ -42,7 +42,7 @@ S-naive and S-instructed tasks are added to this procedure before they run.
 | `grader-prompt.md`, `grader-control.yaml` | the grader of the persona's calibration and the cases it is calibrated on |
 | `judge-prompt.md`, `judge-control.yaml` | the judge, and the mutant contracts it is calibrated on |
 | `persona-control.yaml`, `persona-holdout.yaml` to `persona-holdout-5.yaml` | the persona's calibration questions: the set the prompts are revised against, the held-out sets that decided drafts 3 to 6, and the held-out set that decides draft 7 |
-| `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 3, and replaced by subject prompts before the first subject runs |
+| `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 4, and replaced by subject prompts before the first subject runs |
 | `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
 | `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
 
@@ -103,7 +103,8 @@ technical anti-requirements of `contract/anti-requirements.md`, and the contract
 each reference requirement, `covered`, `partial` or `missing`, with the items that state its
 obligations, and for each item its class: `reference`, with the requirements it states, or
 `user_visible`, `technical` or `other`. A reply that does not list every requirement and every item
-exactly once is asked for once more, with the same request; a second such reply fails the run.
+exactly once fails the run; it is never asked for again, since a second draw on the same contract
+could replace a judgement the calibration counts.
 
 From one judgement: `derived_recall` is the covered requirements over all of them, partial ones
 reported apart and never counted in it; `derived_precision` is the `reference` items over every item
@@ -139,8 +140,9 @@ The output directory is committed unedited:
 
 - **No human in the loop.** Nobody reads, edits or steers between calls.
 - **Sampling.** A subject runs on the provider's defaults: no temperature or similar setting is
-  sent. The persona runs at temperature 0 with random seed 1, sent with every call and recorded in
-  `run.json`, so its answers do not depend on a default the provider may change.
+  sent. The persona, the grader and the Gemini judge run at temperature 0 with random seed 1, and
+  the Anthropic judge at effort `high`, sent with every call and recorded in `run.json`, so their
+  answers do not depend on a default the provider may change.
 - **Errors.** Network failures, timeouts, rate limits and server errors are retried with the same
   request and logged. An exhausted daily or monthly quota fails the run as an infrastructure error
   (program plan §9.1), never as a subject's failure. A response whose finish reason is not a natural

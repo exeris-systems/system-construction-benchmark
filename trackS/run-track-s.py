@@ -664,11 +664,13 @@ def parse_judgement(text, requirement_ids, item_ids):
         return None
     requirements, items = {}, {}
     for r in reply["requirements"]:
-        if not isinstance(r, dict) or r.get("coverage") not in COVERAGE or not isinstance(r.get("items"), list):
+        if (not isinstance(r, dict) or not isinstance(r.get("id"), str) or r.get("coverage") not in COVERAGE
+                or not isinstance(r.get("items"), list)):
             return None
         requirements[r.get("id")] = {"coverage": r["coverage"], "items": [str(i) for i in r["items"]]}
     for i in reply["items"]:
-        if not isinstance(i, dict) or i.get("class") not in CLASSES or not isinstance(i.get("requirements"), list):
+        if (not isinstance(i, dict) or not isinstance(i.get("id"), str) or i.get("class") not in CLASSES
+                or not isinstance(i.get("requirements"), list)):
             return None
         items[i.get("id")] = {"class": i["class"], "requirements": [str(r) for r in i["requirements"]]}
     if (len(requirements) != len(reply["requirements"]) or set(requirements) != set(requirement_ids)
@@ -705,14 +707,13 @@ def disagreements(mutant, judgement):
 
 
 def judge_one(judge, system, session, requirement_ids, items):
-    """One judgement of one contract; a reply of the wrong shape is asked for once more, as the same request."""
-    for attempt in ("judge", "judge-again"):
-        reply = judge.call(f"{session}/{attempt}", system, [("user", contract_text(items))],
-                           json_reply=True, schema=JUDGEMENT_SCHEMA)
-        judgement = parse_judgement(reply, requirement_ids, [i["id"] for i in items])
-        if judgement is not None:
-            return judgement
-    raise RunFailed(f"{session}: the judgement does not list every requirement and every item exactly once")
+    """One judgement of one contract. A reply of the wrong shape fails the run; it is never asked for
+    again, since a second draw on the same contract could replace a judgement the calibration counts."""
+    reply = judge.call(session, system, [("user", contract_text(items))], json_reply=True, schema=JUDGEMENT_SCHEMA)
+    judgement = parse_judgement(reply, requirement_ids, [i["id"] for i in items])
+    if judgement is None:
+        raise RunFailed(f"{session}: the judgement does not list every requirement and every item exactly once")
+    return judgement
 
 
 def judge_control(args, files, out, run, judge):

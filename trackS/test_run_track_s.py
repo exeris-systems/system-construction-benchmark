@@ -357,6 +357,9 @@ class JudgeTest(unittest.TestCase):
         self.assertIsNone(ts.parse_judgement(reply(self.ids + self.ids[:1], item_ids), self.ids, item_ids))
         self.assertIsNone(ts.parse_judgement(reply(self.ids, item_ids[1:]), self.ids, item_ids))
         self.assertIsNone(ts.parse_judgement("not json", self.ids, item_ids))
+        unhashable = json.loads(reply(self.ids, item_ids))
+        unhashable["items"][0]["id"] = ["DR-01"]
+        self.assertIsNone(ts.parse_judgement(json.dumps(unhashable), self.ids, item_ids))
 
     def test_judge_control_passes_only_when_every_judgement_is_exact(self):
         os.environ["GEMINI_API_KEY"] = "test-key"
@@ -379,7 +382,7 @@ class JudgeTest(unittest.TestCase):
         summary = json.loads((out / "judge-control.json").read_text())["summary"]
         self.assertEqual(summary, {"exact": 2, "of": 12, "passes": False})
 
-    def test_judgement_of_the_wrong_shape_is_asked_for_once_more_then_fails(self):
+    def test_judgement_of_the_wrong_shape_fails_the_run_without_a_second_request(self):
         os.environ["GEMINI_API_KEY"] = "test-key"
         _urlopen, _sleep = ts.urllib.request.urlopen, ts.time.sleep
         calls = []
@@ -393,7 +396,7 @@ class JudgeTest(unittest.TestCase):
                 ts.judge_one(judge, "system", "M1/1", self.ids, self.mutants["M1"]["items"])
         finally:
             ts.urllib.request.urlopen, ts.time.sleep = _urlopen, _sleep
-        self.assertEqual(len(calls), 2)
+        self.assertEqual(len(calls), 1)
 
 
 class ModeTest(unittest.TestCase):
