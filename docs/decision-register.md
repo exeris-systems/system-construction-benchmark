@@ -505,4 +505,4 @@ The persona (`gemini-3.5-flash-lite`, D-53) is of the Google subjects' family; e
 
 This amends D-48 for the judges, the script series' subjects and the matrix.
 
-Impact: `trackS/procedure.md`, `docs/program-plan.md` §9.6.
+Impact: `trackS/procedure.md`, `docs/program-plan.md` §6.4 and §9.6, `preregistration/frozen-sets.md`.

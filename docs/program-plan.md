@@ -612,7 +612,7 @@ L3b — how many turns/tokens a concrete operation saves
 
 Track S measures whether and how well a model gathers requirements before it builds, and how well it derives a contract from what it gathered — a measured capability and input for routing the specification stage, never a source of the reference contract (decision register D-45, D-46). It is a separate track, never inside construction: mixing the two makes a `FAIL` ambiguous between a misread requirement and a broken build.
 
-- **Instruments:** personas (fleet technician, dispatcher, airspace desk), each knowing only its slice of the world brief, and a judge. Both are fixed across subjects and calibrated before the first one (D-48).
+- **Instruments:** personas (fleet technician, dispatcher, airspace desk), each knowing only its slice of the world brief, and two judges, each scoring the subjects of the other vendor. All are fixed across subjects and calibrated before the first one (D-48, D-55).
 - **Subject:** the model under test, as interviewer and analyst; the analyst stage sees only its own transcripts.
 - **Variants:** S-naive — a client request and a channel to the personas, with nothing telling the subject to use it; S-instructed — told to interview, then write requirements.
 - **Output:** a contract derived by the subject.
