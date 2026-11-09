@@ -399,6 +399,135 @@ class JudgeTest(unittest.TestCase):
         self.assertEqual(len(calls), 1)
 
 
+class SubjectTest(unittest.TestCase):
+    """The subject modes with a stubbed transport: an Anthropic subject, a Gemini persona and judge."""
+
+    CONTRACT = "```yaml\n- id: DR-01\n  requirement: >\n    The service keeps each drone's\n    battery level.\n```"
+
+    def setUp(self):
+        os.environ["ANTHROPIC_API_KEY"] = os.environ["GEMINI_API_KEY"] = "test-key"
+        self._urlopen, self._sleep, self._describe = ts.urllib.request.urlopen, ts.time.sleep, ts.Client.describe
+        ts.time.sleep = lambda seconds: None
+        ts.Client.describe = lambda client: {"id": client.model}
+        self.subject_replies, self.requests = [], []
+        ts.urllib.request.urlopen = self.urlopen
+        names = ["world-brief.md", "brief-slices.yaml", "persona-prompt.md", "subject-naive-prompt.md",
+                 "subject-interviewer-prompt.md", "subject-analyst-prompt.md"]
+        self.files = {name: (HERE / name).read_text() for name in names}
+        self.args = argparse.Namespace(subject_provider="anthropic", subject_model="s", subject_rpm=60_000,
+                                       subject_max_tokens=100, persona_provider="gemini", persona_model="p",
+                                       persona_rpm=60_000, persona_max_tokens=100, persona_temperature=0.0,
+                                       persona_seed=1)
+
+    def tearDown(self):
+        ts.urllib.request.urlopen, ts.time.sleep, ts.Client.describe = self._urlopen, self._sleep, self._describe
+
+    def urlopen(self, request, timeout=0):
+        body = json.loads(request.data)
+        self.requests.append((request.full_url, body))
+        if request.full_url.endswith("/messages"):
+            text = self.subject_replies.pop(0) if self.subject_replies else self.CONTRACT
+            return Reply({"content": [{"type": "thinking", "thinking": "", "signature": "sig"}, {"type": "text", "text": text}],
+                          "stop_reason": "end_turn", "id": "m", "model": "s"}, headers())
+        return Reply({"candidates": [{"content": {"parts": [{"text": "An answer."}]}, "finishReason": "STOP"}]}, headers())
+
+    def persona_calls(self):
+        return [b for url, b in self.requests if "generateContent" in url]
+
+    def run_mode(self, mode):
+        out = pathlib.Path(tempfile.mkdtemp())
+        (ts.subject_naive if mode == "subject-naive" else ts.subject_instructed)(
+            self.args, self.files, {role: "notes" for role in ts.ROLES}, out, {})
+        return json.loads((out / "subject.json").read_text())
+
+    def test_question_is_exactly_one_ask_line(self):
+        self.assertEqual(ts.question("ASK Technician: How do you start?"), ("technician", "How do you start?"))
+        self.assertIsNone(ts.question("Let me ask.\nASK technician: How do you start?"))
+        self.assertIsNone(ts.question("ASK technician:"))
+        self.assertIsNone(ts.question("- id: DR-01"))
+
+    def test_contract_is_read_from_its_yaml_block_or_the_whole_message(self):
+        self.assertEqual(ts.read_contract("Here it is:\n" + self.CONTRACT + "\nDone."),
+                         [{"id": "DR-01", "requirement": "The service keeps each drone's battery level."}])
+        inline = "- id: DR-01\n  requirement: \"Pads are never lent.\"\n- id: DR-02\n  note: no requirement"
+        self.assertEqual(ts.read_contract(inline), [{"id": "DR-01", "requirement": "Pads are never lent."}])
+        self.assertEqual(ts.read_contract("The service should manage drones."), [])
+
+    def test_business_is_brief_section_1_without_its_heading(self):
+        text = ts.business(self.files["world-brief.md"])
+        self.assertTrue(text.startswith("A platform company"))
+        self.assertNotIn("## ", text)
+
+    def test_naive_relays_questions_and_reads_the_contract(self):
+        self.subject_replies = ["ASK technician: What do you do first?", "ASK nobody: Hello?",
+                                "ASK desk: What is a closure?"]
+        result = self.run_mode("subject-naive")
+        self.assertEqual([e["role"] for e in result["exchanges"]], ["technician", "nobody", "desk"])
+        self.assertEqual(result["exchanges"][1]["answer"], ts.NAIVE_NO_ROLE)
+        self.assertEqual(len(self.persona_calls()), 2)
+        self.assertEqual(result["metrics"]["turns_before_first_artifact"], 3)
+        self.assertTrue(result["metrics"]["elicitation_initiated"])
+        self.assertEqual(len(result["items"]), 1)
+        subject_requests = [b for url, b in self.requests if url.endswith("/messages")]
+        # The subject's earlier turns go back with their thinking block unchanged.
+        self.assertEqual(subject_requests[1]["messages"][1]["content"][0]["type"], "thinking")
+        self.assertNotIn("temperature", subject_requests[0])
+        self.assertNotIn("output_config", subject_requests[0])
+        self.assertNotIn("{{", subject_requests[0]["system"])
+
+    def test_naive_without_a_question_has_not_elicited(self):
+        result = self.run_mode("subject-naive")
+        self.assertEqual((result["metrics"]["elicitation_initiated"], result["metrics"]["turns_before_first_artifact"]),
+                         (False, 0))
+
+    def test_naive_limit_ends_the_questions_and_a_further_one_is_the_last_message(self):
+        self.subject_replies = ["ASK dispatcher: And then?"] * (ts.MAX_QUESTIONS_NAIVE + 5)
+        result = self.run_mode("subject-naive")
+        self.assertEqual(len(self.persona_calls()), ts.MAX_QUESTIONS_NAIVE)
+        self.assertTrue(result["metrics"]["limitReached"])
+        self.assertTrue(result["unreadable"])
+        last_turn = [b for url, b in self.requests if url.endswith("/messages")][-1]["messages"][-1]["content"]
+        self.assertIn(ts.NAIVE_NO_MORE, last_turn)
+
+    def test_instructed_interviews_each_role_then_the_analyst_sees_only_transcripts(self):
+        self.subject_replies = ["What is your day like?", "Tell me more.", "END OF INTERVIEW"] * 3
+        result = self.run_mode("subject-instructed")
+        self.assertEqual(result["metrics"]["questions_per_interview"], {r: 2 for r in ts.ROLES})
+        self.assertEqual({i["ending"] for i in result["interviews"].values()}, {"ended_by_interviewer"})
+        analyst = [b for url, b in self.requests if url.endswith("/messages")][-1]
+        self.assertIn("Interviewee: An answer.", analyst["system"])
+        self.assertNotIn(ts.business(self.files["world-brief.md"]), analyst["system"])
+        self.assertEqual(analyst["messages"], [{"role": "user", "content": ts.ANALYST_START}])
+        self.assertEqual(len(result["items"]), 1)
+
+    def test_instructed_interview_ends_at_its_limit(self):
+        self.subject_replies = ["Another question?"] * (3 * ts.MAX_QUESTIONS_INTERVIEW)
+        result = self.run_mode("subject-instructed")
+        self.assertEqual(result["metrics"]["limitReached"], {r: True for r in ts.ROLES})
+        self.assertEqual(len(self.persona_calls()), 3 * ts.MAX_QUESTIONS_INTERVIEW)
+
+    def test_judge_scores_only_the_other_vendor_and_renumbers_the_items(self):
+        files = {name: (HERE / name).read_text() for name in (ts.JUDGE_FILE,)}
+        files.update({name: (HERE.parent / name).read_text() for name in (ts.REFERENCE_FILE, ts.ANTI_FILE)})
+        ids = [i for i, _ in ts.parse_reference(files[ts.REFERENCE_FILE])[1]]
+        files["judged-subject.json"] = json.dumps({"items": [{"id": "R-7", "requirement": "a"}, {"id": "R-7", "requirement": "b"}]})
+        files["judged-run.json"] = json.dumps({"mode": "subject-naive", "instruments": {"subject": {"provider": "anthropic", "model": "s"}}})
+        judgement = json.dumps({"requirements": [{"id": r, "coverage": "missing", "items": []} for r in ids],
+                                "items": [{"id": i, "class": "other", "requirements": []} for i in ("DR-01", "DR-02")]})
+        ts.urllib.request.urlopen = lambda request, timeout=0: Reply(
+            {"candidates": [{"content": {"parts": [{"text": judgement}]}, "finishReason": "STOP"}]}, headers())
+        for provider, scored in (("gemini", True), ("anthropic", False)):
+            if provider == "anthropic":
+                ts.urllib.request.urlopen = lambda request, timeout=0: Reply(
+                    {"content": [{"type": "text", "text": judgement}], "stop_reason": "end_turn", "id": "m", "model": "j"}, headers())
+            out = pathlib.Path(tempfile.mkdtemp())
+            judge = ts.Client("judge", provider, "j", 60_000, 100, ts.Recorder(out))
+            ts.judge_run(argparse.Namespace(judged="r"), files, out, {}, judge)
+            result = json.loads((out / "judgement.json").read_text())
+            self.assertEqual(result["scored"], scored)
+            self.assertEqual([(i["id"], i["read"]) for i in result["items"]], [("DR-01", "R-7"), ("DR-02", "R-7")])
+
+
 class ModeTest(unittest.TestCase):
     """Each persona mode asks every question of its own set and writes its answers under its name."""
 

@@ -20,6 +20,10 @@ quoted source is found in the notes.
   judge-control     ask a judge to judge the mutant contracts of judge-control.yaml, whose coverage of
                     the reference requirements is known, several times
 
+  subject-naive     run a subject in S-naive: one conversation in which it may ask the personas
+  subject-instructed run a subject in S-instructed: one interview per role, then the analyst
+  judge             judge the contract of a completed subject run (--judged) with one judge
+
 Each role names a provider and a model. Every request and response is written to the output
 directory verbatim, with every response header that reports a rate limit and the body of every 429,
 so the run record documents the quotas it ran under. The output is committed unedited.
@@ -53,6 +57,22 @@ JUDGE_CONTROL_FILE = "judge-control.yaml"
 # The judge's inputs from the contract, named by their path from the repository root.
 REFERENCE_FILE = "contract/system-requirements.yaml"
 ANTI_FILE = "contract/anti-requirements.md"
+SUBJECT_MODES = {"subject-naive": "subject-naive-prompt.md",
+                 "subject-instructed": ("subject-interviewer-prompt.md", "subject-analyst-prompt.md")}
+# The limits of D-57: they end the questioning, never the run.
+MAX_QUESTIONS_NAIVE = 90
+MAX_QUESTIONS_INTERVIEW = 30
+END_MARKER = "END OF INTERVIEW"
+ROLE_NAMES = "fleet technician, dispatcher, airspace desk"
+INTERVIEWEES = {"technician": "a fleet technician", "dispatcher": "a dispatcher",
+                "desk": "a member of the platform's airspace desk"}
+# The turns the script itself writes to a subject; each is part of what every subject receives.
+NAIVE_START = "Begin."
+NAIVE_NO_ROLE = "There is no such role. The roles are technician, dispatcher and desk."
+NAIVE_NO_MORE = "You cannot ask any more questions. Write the requirements now."
+INTERVIEW_START = "The interviewee is ready. Ask your first question."
+ANALYST_START = "Write the requirements."
+ASK_LINE = re.compile(r"ASK\s+([A-Za-z]+)\s*:\s*(\S.*)")
 COVERAGE = ("covered", "partial", "missing")
 CLASSES = ("reference", "user_visible", "technical", "other")
 # The persona passes a deciding run at this many passing answers of 72, with no contradiction (D-50).
@@ -66,7 +86,7 @@ QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FIL
                  "persona-holdout-2": "persona-holdout-2.yaml", "persona-holdout-3": "persona-holdout-3.yaml",
                  "persona-holdout-4": "persona-holdout-4.yaml", "persona-holdout-5": "persona-holdout-5.yaml"}
 GRADE_MODES = ("grader-control", "grade")
-JUDGE_MODES = ("judge-control",)
+JUDGE_MODES = ("judge-control", "judge")
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
 
@@ -312,12 +332,15 @@ class Client:
     def _body(self, system, turns):
         if self.spec["kind"] == "openai":
             messages = [{"role": "system", "content": system}]
-            messages += [{"role": "assistant" if r == "model" else "user", "content": t} for r, t in turns]
+            messages += [{"role": "assistant" if r == "model" else "user", "content": t} for r, t, *_ in turns]
             body = {"model": self.model, "messages": messages, "max_tokens": self.max_tokens}
             sampling = {"temperature": self.temperature, "random_seed": self.seed}
             return {**body, **{k: v for k, v in sampling.items() if v is not None}}
         if self.spec["kind"] == "anthropic":
-            messages = [{"role": "assistant" if r == "model" else "user", "content": t} for r, t in turns]
+            # A model turn goes back with every block the model returned, its thinking unchanged: the
+            # API reads a conversation whose earlier turns were edited as a different one.
+            messages = [{"role": "assistant" if r == "model" else "user", "content": raw[0] if raw else t}
+                        for r, t, *raw in turns]
             body = {"model": self.model, "max_tokens": self.max_tokens, "system": system, "messages": messages}
             if self.effort is not None:
                 body["output_config"] = {"effort": self.effort}
@@ -325,7 +348,7 @@ class Client:
         config = {"maxOutputTokens": self.max_tokens, "temperature": self.temperature, "seed": self.seed}
         return {
             "systemInstruction": {"parts": [{"text": system}]},
-            "contents": [{"role": r, "parts": [{"text": t}]} for r, t in turns],
+            "contents": [{"role": r, "parts": [{"text": t}]} for r, t, *_ in turns],
             "generationConfig": {k: v for k, v in config.items() if v is not None},
         }
 
@@ -389,6 +412,10 @@ class Client:
             time.sleep(min(5 * 2 ** (attempt - 1), 300))
         raise RunFailed(f"{session}: no response")
 
+    def turn(self, text):
+        """The model turn to append to a conversation after the last call, as the provider needs it back."""
+        return ("model", text, self.last_content) if self.last_content else ("model", text)
+
     def call(self, session, system, turns, json_reply=False, schema=None):
         # A subject runs on the provider's defaults, the one setting nobody can suspect of being chosen.
         # An instrument's temperature and seed are fixed by the procedure and sent, so its answers do
@@ -407,6 +434,7 @@ class Client:
         headers, payload = self._send(session, number, body)
         self.recorder.response(number, payload)
         text, finish, response_id, version, usage = self._parse(payload)
+        self.last_content = payload.get("content") if self.spec["kind"] == "anthropic" else None
         self.recorder.log(number, self, session, headers=headers, finish=finish,
                           responseId=response_id, modelVersion=version, usage=usage)
         if finish not in NATURAL_STOP[self.spec["kind"]]:
@@ -735,9 +763,166 @@ def judge_control(args, files, out, run, judge):
          "judgements": results}, ensure_ascii=False, indent=1) + "\n")
 
 
+# --- the subjects ---------------------------------------------------------------------------------
+
+def business(brief):
+    """Brief §1, the only part of the brief a subject receives (D-47), without its heading."""
+    match = re.search(r"^## 1\.[^\n]*\n(.*?)(?=^## )", brief, re.S | re.M)
+    if not match:
+        sys.exit("world-brief.md: no section 1")
+    return match.group(1).strip()
+
+
+def question(message):
+    """(role, question) when the message is exactly one ASK line; else None, and the message is not a question."""
+    match = ASK_LINE.fullmatch(message.strip())
+    return (match.group(1).lower(), match.group(2).strip()) if match and "\n" not in message.strip() else None
+
+
+def read_contract(message):
+    """The items of a requirements message: its yaml block if it has one, else the whole message.
+
+    Only entries with both an id and a requirement are items; nothing is repaired (D-57).
+    """
+    block = re.search(r"```ya?ml[ \t]*\n(.*?)```", message, re.S)
+    lines = (block.group(1) if block else message).splitlines()
+    items, current, field = [], None, None
+    for line in lines:
+        stripped, indent = line.strip(), len(line) - len(line.lstrip())
+        entry = re.fullmatch(r"-\s+id:\s*(.*)", stripped)
+        if entry:
+            current, field = {"id": entry.group(1).strip().strip("\"'"), "requirement": ""}, None
+            items.append(current)
+            continue
+        if current is None:
+            continue
+        key = re.fullmatch(r"([A-Za-z_]+):\s*(.*)", stripped)
+        if key and indent <= 4:
+            field = key.group(1) if key.group(1) == "requirement" else None
+            value = key.group(2).strip()
+            if field and value not in (">", "|", ">-", "|-"):
+                current["requirement"] = value.strip("\"'")
+        elif field and stripped:
+            current["requirement"] = (current["requirement"] + " " + stripped).strip()
+    return [i for i in items if i["id"] and i["requirement"]]
+
+
+def subject_client(args, recorder):
+    # A subject runs on its provider's defaults: no temperature, seed or effort is sent (Rules).
+    return Client("subject", args.subject_provider, args.subject_model, args.subject_rpm,
+                  args.subject_max_tokens, recorder)
+
+
+def persona_client(args, recorder):
+    return Client("persona", args.persona_provider, args.persona_model, args.persona_rpm,
+                  args.persona_max_tokens, recorder, args.persona_temperature, args.persona_seed)
+
+
+def persona_system(files, notes, role):
+    return files["persona-prompt.md"].replace("{{ROLE}}", ROLES[role]).replace("{{NOTES}}", notes[role])
+
+
+def describe(run, *clients):
+    run["instruments"] = {c.role: {"provider": c.provider, "model": c.model, "description": c.describe()}
+                          for c in clients}
+
+
+def subject_naive(args, files, notes, out, run):
+    recorder = Recorder(out)
+    subject, persona = subject_client(args, recorder), persona_client(args, recorder)
+    describe(run, subject, persona)
+    system = (files["subject-naive-prompt.md"].replace("{{BUSINESS}}", business(files["world-brief.md"]))
+              .replace("{{ROLES}}", ROLE_NAMES).replace("{{ROLE_KEYS}}", "`technician`, `dispatcher` or `desk`")
+              .replace("{{MAX_QUESTIONS}}", str(MAX_QUESTIONS_NAIVE)))
+    turns, conversations, exchanges, asked = [("user", NAIVE_START)], {r: [] for r in ROLES}, [], 0
+    while True:
+        message = subject.call(f"subject/{len(turns)}", system, turns)
+        turns.append(subject.turn(message))
+        ask = question(message)
+        # After the limit the subject has been told it can ask no more; a question then is its last
+        # message, read as its requirements like any other, so the run always ends.
+        if ask is None or asked >= MAX_QUESTIONS_NAIVE:
+            break
+        asked += 1
+        role, text = ask
+        if role in ROLES:
+            conversations[role].append(("user", text))
+            answer = persona.call(f"persona/{role}/{len(conversations[role]) // 2 + 1}",
+                                  persona_system(files, notes, role), conversations[role])
+            conversations[role].append(("model", answer))
+        else:
+            answer = NAIVE_NO_ROLE
+        exchanges.append({"role": role, "question": text, "answer": answer})
+        # Once the last question is answered, the subject is told it can ask no more.
+        turns.append(("user", answer if asked < MAX_QUESTIONS_NAIVE else f"{answer}\n\n{NAIVE_NO_MORE}"))
+    items = read_contract(message)
+    result = {"variant": "S-naive", "exchanges": exchanges, "requirements": message, "items": items,
+              "unreadable": not items,
+              "metrics": {"elicitation_initiated": asked > 0, "turns_before_first_artifact": asked,
+                          "questions": {r: sum(e["role"] == r for e in exchanges) for r in ROLES},
+                          "limitReached": asked >= MAX_QUESTIONS_NAIVE}}
+    (out / "subject.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
+
+
+def interview(subject, persona, system, persona_prompt, role):
+    turns, answering, transcript = [("user", INTERVIEW_START)], [], []
+    while len(transcript) < MAX_QUESTIONS_INTERVIEW:
+        message = subject.call(f"interviewer/{role}/{len(transcript) + 1}", system, turns)
+        if any(line.strip() == END_MARKER for line in message.splitlines()):
+            return transcript, "ended_by_interviewer", message
+        turns.append(subject.turn(message))
+        answering.append(("user", message))
+        answer = persona.call(f"persona/{role}/{len(transcript) + 1}", persona_prompt, answering)
+        answering.append(("model", answer))
+        turns.append(("user", answer))
+        transcript.append({"question": message, "answer": answer})
+    return transcript, "max_questions", None
+
+
+def subject_instructed(args, files, notes, out, run):
+    recorder = Recorder(out)
+    subject, persona = subject_client(args, recorder), persona_client(args, recorder)
+    describe(run, subject, persona)
+    interviewer, analyst = SUBJECT_MODES["subject-instructed"]
+    interviews, texts = {}, []
+    for role in ROLES:
+        system = (files[interviewer].replace("{{BUSINESS}}", business(files["world-brief.md"]))
+                  .replace("{{ROLES}}", ROLE_NAMES).replace("{{ROLE}}", INTERVIEWEES[role])
+                  .replace("{{MAX_QUESTIONS}}", str(MAX_QUESTIONS_INTERVIEW)))
+        transcript, ending, last = interview(subject, persona, system, persona_system(files, notes, role), role)
+        interviews[role] = {"transcript": transcript, "ending": ending, "endingMessage": last}
+        texts.append(f"# Interview — {INTERVIEWEES[role]}\n\n" + "\n\n".join(
+            f"Interviewer: {e['question']}\n\nInterviewee: {e['answer']}" for e in transcript))
+    # The analyst is a new session of the same subject and sees the transcripts and nothing else (D-45).
+    message = subject.call("analyst", files[analyst].replace("{{TRANSCRIPTS}}", "\n\n---\n\n".join(texts)),
+                           [("user", ANALYST_START)])
+    items = read_contract(message)
+    result = {"variant": "S-instructed", "interviews": interviews, "requirements": message, "items": items,
+              "unreadable": not items,
+              "metrics": {"questions_per_interview": {r: len(i["transcript"]) for r, i in interviews.items()},
+                          "limitReached": {r: i["ending"] == "max_questions" for r, i in interviews.items()}}}
+    (out / "subject.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
+
+
+def judge_run(args, files, out, run, judge):
+    """Judge one subject run's contract, its items numbered in their order as in the calibration."""
+    subject = json.loads(files["judged-subject.json"])
+    judged = json.loads(files["judged-run.json"])
+    items = [{"id": f"DR-{n:02d}", "requirement": i["requirement"], "read": i["id"]}
+             for n, i in enumerate(subject["items"], 1)]
+    requirement_ids = [i for i, _ in parse_reference(files[REFERENCE_FILE])[1]]
+    judgement = judge_one(judge, judge_system(files[JUDGE_FILE], files), "judge", requirement_ids, items)
+    vendor = judged["instruments"]["subject"]["provider"]
+    # The judge of the other vendor scores; the judge of the subject's own family only measures the
+    # judge effect, and its judgement is never scored (D-55).
+    result = {"judged": {"run": str(args.judged), "mode": judged["mode"], "subject": judged["instruments"]["subject"]},
+              "scored": judge.provider != vendor, "items": items, "score": score(judgement), "judgement": judgement}
+    (out / "judgement.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("mode", choices=sorted(QUESTION_SETS) + list(GRADE_MODES) + list(JUDGE_MODES))
+    parser.add_argument("mode", choices=sorted(QUESTION_SETS) + list(GRADE_MODES) + list(JUDGE_MODES) + list(SUBJECT_MODES))
     parser.add_argument("--persona-provider", default="mistral")
     parser.add_argument("--persona-model", help="exact model identifier; required by the persona modes")
     parser.add_argument("--persona-rpm", type=float, default=30)
@@ -758,16 +943,24 @@ def main():
     parser.add_argument("--judge-temperature", type=float, help="sent when given; else the provider default")
     parser.add_argument("--judge-seed", type=int, help="sent when given; else none")
     parser.add_argument("--judge-effort", help="anthropic only: the effort level, sent when given")
+    parser.add_argument("--subject-provider", default="anthropic")
+    parser.add_argument("--subject-model", help="exact model identifier; required by the subject modes")
+    parser.add_argument("--subject-rpm", type=float, default=10)
+    parser.add_argument("--subject-max-tokens", type=int, default=32000)
+    parser.add_argument("--judged", type=pathlib.Path, help="the completed subject run that mode judge judges")
     parser.add_argument("--graded", type=pathlib.Path, help="the completed persona run that mode grade grades")
     parser.add_argument("--repetitions", type=int, default=3)
     parser.add_argument("--out", type=pathlib.Path, help="output directory (must not exist)")
     parser.add_argument("--dry-run", action="store_true", help="check inputs and print hashes; call nothing")
     args = parser.parse_args()
-    grading, judging = args.mode in GRADE_MODES, args.mode in JUDGE_MODES
+    grading, judging, subjecting = args.mode in GRADE_MODES, args.mode in JUDGE_MODES, args.mode in SUBJECT_MODES
 
     names = ["world-brief.md", "brief-slices.yaml"]
-    if judging:
-        names += [JUDGE_FILE, JUDGE_CONTROL_FILE]
+    if subjecting:
+        prompts = SUBJECT_MODES[args.mode]
+        names += ["persona-prompt.md"] + ([prompts] if isinstance(prompts, str) else list(prompts))
+    elif judging:
+        names += [JUDGE_FILE] + ([JUDGE_CONTROL_FILE] if args.mode == "judge-control" else [])
     elif grading:
         names += [GRADER_FILE] + ([GRADER_CONTROL_FILE] if args.mode == "grader-control" else [])
     else:
@@ -800,18 +993,41 @@ def main():
         for name in ("world-brief.md", "brief-slices.yaml"):
             if graded["inputSha256"].get(name) != sha256(files[name]):
                 sys.exit(f"--graded {args.graded}: {name} has changed since that run")
+    if args.mode == "judge":
+        if not args.judged:
+            sys.exit("--judged is required by mode judge")
+        judged_dir = args.judged.resolve()
+        try:
+            files["judged-run.json"] = (judged_dir / "run.json").read_text()
+            files["judged-subject.json"] = (judged_dir / "subject.json").read_text()
+            judged = json.loads(files["judged-run.json"])
+        except (OSError, ValueError) as e:
+            sys.exit(f"--judged {args.judged}: not a subject run record: {e}")
+        if judged.get("status") != "completed" or judged.get("mode") not in SUBJECT_MODES:
+            sys.exit(f"--judged {args.judged}: only a completed subject run is judged")
     hashes = {name: sha256(text) for name, text in files.items()}
 
-    if judging:
-        role, settings = "judge", (args.judge_provider, args.judge_model, args.judge_rpm, args.judge_max_tokens,
-                                   args.judge_temperature, args.judge_seed, args.judge_effort)
+    judge_settings = (args.judge_provider, args.judge_model, args.judge_rpm, args.judge_max_tokens,
+                      args.judge_temperature, args.judge_seed, args.judge_effort)
+    persona_settings = (args.persona_provider, args.persona_model, args.persona_rpm, args.persona_max_tokens,
+                        args.persona_temperature, args.persona_seed, None)
+    if subjecting:
+        roles = [("subject", (args.subject_provider, args.subject_model, args.subject_rpm, args.subject_max_tokens,
+                              None, None, None)), ("persona", persona_settings)]
+        plan = {"limits": {"questions": MAX_QUESTIONS_NAIVE} if args.mode == "subject-naive"
+                else {"questionsPerInterview": MAX_QUESTIONS_INTERVIEW}}
+    elif args.mode == "judge":
+        roles = [("judge", judge_settings)]
+        plan = {"items": len(json.loads(files["judged-subject.json"])["items"]), "calls": 1}
+    elif judging:
+        roles = [("judge", judge_settings)]
         mutants = build_mutants(parse_control(files[JUDGE_CONTROL_FILE], JUDGE_CONTROL_FILE))
         plan = {"mutants": {m["id"]: {"items": len(m["items"]),
                                       **{c: list(m["coverage"].values()).count(c) for c in COVERAGE}} for m in mutants},
                 "calls": len(mutants) * args.repetitions}
     elif grading:
-        role, settings = "grader", (args.grader_provider, args.grader_model, args.grader_rpm,
-                                    args.grader_max_tokens, args.grader_temperature, args.grader_seed, None)
+        roles = [("grader", (args.grader_provider, args.grader_model, args.grader_rpm,
+                             args.grader_max_tokens, args.grader_temperature, args.grader_seed, None))]
         if args.mode == "grader-control":
             cases = parse_control(files[GRADER_CONTROL_FILE], GRADER_CONTROL_FILE)
             calls = sum(len(c) for c in cases.values())
@@ -819,8 +1035,7 @@ def main():
             calls = sum(len(rep["answers"]) for reps in json.loads(files["graded-answers.json"]).values() for rep in reps)
         plan = {"calls": calls}
     else:
-        role, settings = "persona", (args.persona_provider, args.persona_model, args.persona_rpm,
-                                     args.persona_max_tokens, args.persona_temperature, args.persona_seed, None)
+        roles = [("persona", persona_settings)]
         set_file = QUESTION_SETS[args.mode]
         control = parse_control(files[set_file], set_file)
         if set(control) != set(ROLES):
@@ -839,11 +1054,12 @@ def main():
         sys.exit(f"--out must be a new directory under {RUNS}")
     # Everything that can stop the run before its first call is checked before its directory exists,
     # so a kept run directory always holds a run that started.
-    if settings[1] is None:
-        sys.exit(f"--{role}-model is required by mode {args.mode}")
-    problem = role_problem(role, *settings)
-    if problem:
-        sys.exit(problem)
+    for role, settings in roles:
+        if settings[1] is None:
+            sys.exit(f"--{role}-model is required by mode {args.mode}")
+        problem = role_problem(role, *settings)
+        if problem:
+            sys.exit(problem)
     if args.repetitions <= 0:
         sys.exit(f"--repetitions must be positive, got {args.repetitions}")
     out.mkdir(parents=True, exist_ok=False)
@@ -852,13 +1068,15 @@ def main():
            "parameters": {k: v for k, v in vars(args).items() if k not in ("out", "dry_run")},
            "inputSha256": hashes}
     try:
-        if judging:
+        if subjecting:
+            (subject_naive if args.mode == "subject-naive" else subject_instructed)(args, files, notes, out, run)
+        elif judging:
             recorder = Recorder(out)
             judge = Client("judge", args.judge_provider, args.judge_model, args.judge_rpm, args.judge_max_tokens,
                            recorder, args.judge_temperature, args.judge_seed, args.judge_effort)
             run["instruments"] = {"judge": {"provider": judge.provider, "model": judge.model,
                                             "description": judge.describe()}}
-            judge_control(args, files, out, run, judge)
+            (judge_control if args.mode == "judge-control" else judge_run)(args, files, out, run, judge)
         elif grading:
             recorder = Recorder(out)
             grader = Client("grader", args.grader_provider, args.grader_model, args.grader_rpm,
