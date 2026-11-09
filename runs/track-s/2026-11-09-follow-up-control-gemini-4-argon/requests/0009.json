@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I start at six with the drones that charged overnight. I look at which ones are full and which pads are still in use, and I write down anything that looks off.\nThe question: What kind of thing looks off to you in the morning?\n\nQ3\nThe answer just before it: Mostly a pad that says it is charging when the drone on it has not gained anything. Sometimes a drone that should be full is at half.\nThe question: When a pad says it is charging but the drone gains nothing, what do you do?\n\nQ4\nThe answer just before it: I take the drone off and put it on another pad, and I mark the first pad for a check. It costs me a drone for the morning round.\nThe question: Who do you hand drones to once they are ready?\n\nQ5\nThe answer just before it: The dispatchers. They see what is ready and pick from it for their jobs.\nThe question: How do they know a drone is ready?\n\nQ6\nThe answer just before it: They ask me, or they look at the board in the hangar. The board is often an hour behind.\nThe question: Why is it behind?\n\nQ7\nThe answer just before it: Because I update it by hand between other work, and when something breaks I fix the drone first.\nThe question: Tell me about the worst day you had in the last few months.\n\nQ8\nThe answer just before it: A storm took out the relay on the hill and half the fleet went quiet in flight. We did not know which ones were still flying and which had landed somewhere.\nThe question: How did you find out where the quiet drones were?\n\nQ9\nThe answer just before it: We waited. Most of them came back on the radio within twenty minutes, and two we had to go and fetch.\nThe question: What do you check by hand today because you do not trust it?\n\nQ10\nThe answer just before it: The connector on each drone. The records say one thing, and sometimes the model was changed and nobody updated it.\nThe question: What happens when the records are wrong about the connector?\n\nQ11\nThe answer just before it: The drone gets sent to a pad it cannot use and just sits there. Someone has to notice.\nThe question: Is there anything else you would like to tell me?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}

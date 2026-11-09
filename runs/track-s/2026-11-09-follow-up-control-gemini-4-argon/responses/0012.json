@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\"questions\":[{\"id\":\"Q2\",\"follow_up\":true},{\"id\":\"Q3\",\"follow_up\":false},{\"id\":\"Q4\",\"follow_up\":false},{\"id\":\"Q5\",\"follow_up\":true},{\"id\":\"Q6\",\"follow_up\":true},{\"id\":\"Q7\",\"follow_up\":true},{\"id\":\"Q8\",\"follow_up\":false},{\"id\":\"Q9\",\"follow_up\":true},{\"id\":\"Q10\",\"follow_up\":false},{\"id\":\"Q11\",\"follow_up\":true}]}",
+      "thoughtSignature": "EmQKYgFpFH0Th4H3bl7fBBRPNvK2oGIdTIxpTQqZQq7pvfkpNMK0h06DElvaAz3QGAYQoXKe5ncmJxfSTUsGEPzhSmC4v9/G7pzxUGT7qaOeRSonFancvBsizE2COpg4yirltTOW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 773,
+  "candidatesTokenCount": 119,
+  "totalTokenCount": 892,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 773
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 119
+   }
+  ]
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "o63xat-CFdX7xN8Pm_7LgA4"
+}
