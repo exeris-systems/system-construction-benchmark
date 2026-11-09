@@ -1,0 +1,9109 @@
+{
+ "summary": {
+  "exact": 18,
+  "of": 18,
+  "passes": true
+ },
+ "mutants": [
+  {
+   "id": "M1",
+   "name": "reworded",
+   "items": [
+    {
+     "id": "DR-01",
+     "requirement": "People and devices outside an operating company can report to the service that a flight's load is ready, that its drone has got to one of the job's points, or that the drone has arrived; the service takes each such report and records it on the flight it concerns.",
+     "class": "reference",
+     "covers": "BR-25"
+    },
+    {
+     "id": "DR-02",
+     "requirement": "To plan a flight for a job, a dispatcher picks the drone and the way it flies, given as a sequence of corridors that run between named sites.",
+     "class": "reference",
+     "covers": "BR-15"
+    },
+    {
+     "id": "DR-03",
+     "requirement": "Several independent operating companies use the service side by side. A company's drones, drone models, sites, pads, jobs, flights and the history of all of these are visible and changeable to its own staff and to no one else.",
+     "class": "reference",
+     "covers": "BR-01"
+    },
+    {
+     "id": "DR-04",
+     "requirement": "Technicians can put a drone on charge; the service accepts only a pad with the same connector type as the drone's model and turns the request down for any other pad.",
+     "class": "reference",
+     "covers": "BR-11"
+    },
+    {
+     "id": "DR-05",
+     "requirement": "When a dispatcher asks, the service lists those of the dispatcher's own company's drones that are able to reach the place where a given job begins.",
+     "class": "reference",
+     "covers": "BR-17"
+    },
+    {
+     "id": "DR-06",
+     "requirement": "The desk can enter closures of two kinds: planned ones, with a start time and an end time, and sudden ones, in force immediately. It can change a closure after entering it, for instance by widening its area or moving its end time, and the change counts from the moment it is entered.",
+     "class": "reference",
+     "covers": "BR-31"
+    },
+    {
+     "id": "DR-07",
+     "requirement": "Sign-off is refused when the flight's way crosses a zone where flying is prohibited, or crosses a closure that is in force at any moment of the flight.",
+     "class": "reference",
+     "covers": "BR-21"
+    },
+    {
+     "id": "DR-08",
+     "requirement": "Technicians add drones to their company's fleet, each with its model. For every model the service keeps its carrying capacity, its range on a full battery, the sensors it carries and its charging connector type.",
+     "class": "reference",
+     "covers": "BR-05"
+    },
+    {
+     "id": "DR-09",
+     "requirement": "Every instruction the service gives a drone or charging equipment has its effect only once: also when the link delivers it twice, and when the service repeats it because it could not tell whether the first one got through.",
+     "class": "reference",
+     "covers": "BR-36"
+    },
+    {
+     "id": "DR-10",
+     "requirement": "Each member of staff has one role: fleet technician or dispatcher at an operating company, or the airspace desk at the platform company. An action is allowed only to the role these requirements assign it to.",
+     "class": "reference",
+     "covers": "BR-03"
+    },
+    {
+     "id": "DR-11",
+     "requirement": "If a report a flight expects, its arrival for instance, does not come when it should, the dispatchers of the flight's company get the flight flagged to them.",
+     "class": "reference",
+     "covers": "BR-28"
+    },
+    {
+     "id": "DR-12",
+     "requirement": "Dispatchers can enter a delivery job: a load that has to go from one site to another.",
+     "class": "reference",
+     "covers": "BR-13"
+    },
+    {
+     "id": "DR-13",
+     "requirement": "After a closure is entered, the desk can see the disruption it caused across all customers, as totals only, naming no company and showing no company's flights.",
+     "class": "reference",
+     "covers": "BR-34"
+    },
+    {
+     "id": "DR-14",
+     "requirement": "Technicians can set up a charging pad, with its connector type, at a site of their own company.",
+     "class": "reference",
+     "covers": "BR-09"
+    },
+    {
+     "id": "DR-15",
+     "requirement": "A flight is not signed off when its drone is not up to the job: the load weighs more than the drone's model can carry, the way is longer than the model's range, or an inspection needs a sensor the model lacks.",
+     "class": "reference",
+     "covers": "BR-20"
+    },
+    {
+     "id": "DR-16",
+     "requirement": "A technician can retire a drone. Once retired, it remains in the company's history but is never again given a flight or sent to charge.",
+     "class": "reference",
+     "covers": "BR-07"
+    },
+    {
+     "id": "DR-17",
+     "requirement": "If several dispatchers at once sign off flights that would put the same drone on overlapping times, exactly one sign-off goes through, and each of the others is refused with the reason.",
+     "class": "reference",
+     "covers": "BR-23"
+    },
+    {
+     "id": "DR-18",
+     "requirement": "There is no way to steer a drone through the service.",
+     "class": "reference",
+     "covers": "BR-38"
+    },
+    {
+     "id": "DR-19",
+     "requirement": "All companies share one airspace picture, made of the corridors between sites, the zones grouping them, the prohibited zones and the closures, and the staff of every company can see the whole of it.",
+     "class": "reference",
+     "covers": "BR-02"
+    },
+    {
+     "id": "DR-20",
+     "requirement": "On every new or amended closure, the dispatchers of each company are told which of their own flights it affects, those in the air included, and no company is told about another company's flights.",
+     "class": "reference",
+     "covers": "BR-32"
+    },
+    {
+     "id": "DR-21",
+     "requirement": "Reports are applied in the order the events happened, not the order in which they arrived, so a report that comes late or out of turn never undoes a later one.",
+     "class": "reference",
+     "covers": "BR-27"
+    },
+    {
+     "id": "DR-22",
+     "requirement": "Only drones of the company that owns a charging pad may use it.",
+     "class": "reference",
+     "covers": "BR-10"
+    },
+    {
+     "id": "DR-23",
+     "requirement": "Dispatchers can enter an inspection job: the sensors it needs and the points to visit in a fixed order, finishing where the inspection began.",
+     "class": "reference",
+     "covers": "BR-14"
+    },
+    {
+     "id": "DR-24",
+     "requirement": "The desk can record corridors running between named sites, zones made up of corridors, and the zones in which the authorities forbid flying.",
+     "class": "reference",
+     "covers": "BR-30"
+    },
+    {
+     "id": "DR-25",
+     "requirement": "A dispatcher can call off a flight.",
+     "class": "reference",
+     "covers": "BR-19"
+    },
+    {
+     "id": "DR-26",
+     "requirement": "The service may restart or crash while drones are in the air; when it is back, it continues from where it was, with nothing it had recorded lost and nothing applied a second time.",
+     "class": "reference",
+     "covers": "BR-35"
+    },
+    {
+     "id": "DR-27",
+     "requirement": "Every drone has a home site, which is one of its own company's sites.",
+     "class": "reference",
+     "covers": "BR-06"
+    },
+    {
+     "id": "DR-28",
+     "requirement": "In deciding whether a drone can fly a way, the service does not rely on the whole range of a full battery, because cold and wind drain batteries faster than planned.",
+     "class": "reference",
+     "covers": "BR-24"
+    },
+    {
+     "id": "DR-29",
+     "requirement": "For every drone the service records each time it was taken out of service, repaired or serviced, and returned to service, and who did it, so that its company can show a regulator how the drone was looked after.",
+     "class": "reference",
+     "covers": "BR-12"
+    },
+    {
+     "id": "DR-30",
+     "requirement": "A closure never leads the service to call off, reroute or otherwise change a flight on its own; only the dispatcher decides that.",
+     "class": "reference",
+     "covers": "BR-33"
+    },
+    {
+     "id": "DR-31",
+     "requirement": "No flight departs until a dispatcher has signed it off, and only a dispatcher's own action can sign a flight off.",
+     "class": "reference",
+     "covers": "BR-18"
+    },
+    {
+     "id": "DR-32",
+     "requirement": "The airspace desk has no view of any single company's drones, jobs or flights.",
+     "class": "reference",
+     "covers": "BR-04"
+    },
+    {
+     "id": "DR-33",
+     "requirement": "Each company's own systems are informed of what happens to that company's drones and jobs, and told nothing about any other company's.",
+     "class": "reference",
+     "covers": "BR-37"
+    },
+    {
+     "id": "DR-34",
+     "requirement": "At no time does a site have more drones taking off or landing than it has places for.",
+     "class": "reference",
+     "covers": "BR-22"
+    },
+    {
+     "id": "DR-35",
+     "requirement": "A technician can take a drone out of service for repair and return it to service; while it is out of service, the drone cannot be given a flight.",
+     "class": "reference",
+     "covers": "BR-08"
+    },
+    {
+     "id": "DR-36",
+     "requirement": "When a drone restarts in the air and carries on, it is still on the same flight, and the reports it sends after the restart count for that flight.",
+     "class": "reference",
+     "covers": "BR-29"
+    },
+    {
+     "id": "DR-37",
+     "requirement": "The service never picks a drone or a way for a flight, and never replaces the one the dispatcher chose.",
+     "class": "reference",
+     "covers": "BR-16"
+    },
+    {
+     "id": "DR-38",
+     "requirement": "A report received more than once takes effect only once.",
+     "class": "reference",
+     "covers": "BR-26"
+    }
+   ],
+   "coverage": {
+    "BR-25": "covered",
+    "BR-15": "covered",
+    "BR-01": "covered",
+    "BR-11": "covered",
+    "BR-17": "covered",
+    "BR-31": "covered",
+    "BR-21": "covered",
+    "BR-05": "covered",
+    "BR-36": "covered",
+    "BR-03": "covered",
+    "BR-28": "covered",
+    "BR-13": "covered",
+    "BR-34": "covered",
+    "BR-09": "covered",
+    "BR-20": "covered",
+    "BR-07": "covered",
+    "BR-23": "covered",
+    "BR-38": "covered",
+    "BR-02": "covered",
+    "BR-32": "covered",
+    "BR-27": "covered",
+    "BR-10": "covered",
+    "BR-14": "covered",
+    "BR-30": "covered",
+    "BR-19": "covered",
+    "BR-35": "covered",
+    "BR-06": "covered",
+    "BR-24": "covered",
+    "BR-12": "covered",
+    "BR-33": "covered",
+    "BR-18": "covered",
+    "BR-04": "covered",
+    "BR-37": "covered",
+    "BR-22": "covered",
+    "BR-08": "covered",
+    "BR-29": "covered",
+    "BR-16": "covered",
+    "BR-26": "covered"
+   }
+  },
+  {
+   "id": "M2",
+   "name": "removed",
+   "items": [
+    {
+     "id": "DR-01",
+     "requirement": "People and devices outside an operating company can report to the service that a flight's load is ready, that its drone has got to one of the job's points, or that the drone has arrived; the service takes each such report and records it on the flight it concerns.",
+     "class": "reference",
+     "covers": "BR-25"
+    },
+    {
+     "id": "DR-02",
+     "requirement": "To plan a flight for a job, a dispatcher picks the drone and the way it flies, given as a sequence of corridors that run between named sites.",
+     "class": "reference",
+     "covers": "BR-15"
+    },
+    {
+     "id": "DR-03",
+     "requirement": "Several independent operating companies use the service side by side. A company's drones, drone models, sites, pads, jobs, flights and the history of all of these are visible and changeable to its own staff and to no one else.",
+     "class": "reference",
+     "covers": "BR-01"
+    },
+    {
+     "id": "DR-04",
+     "requirement": "Technicians can put a drone on charge; the service accepts only a pad with the same connector type as the drone's model and turns the request down for any other pad.",
+     "class": "reference",
+     "covers": "BR-11"
+    },
+    {
+     "id": "DR-05",
+     "requirement": "The desk can enter closures of two kinds: planned ones, with a start time and an end time, and sudden ones, in force immediately. It can change a closure after entering it, for instance by widening its area or moving its end time, and the change counts from the moment it is entered.",
+     "class": "reference",
+     "covers": "BR-31"
+    },
+    {
+     "id": "DR-06",
+     "requirement": "Sign-off is refused when the flight's way crosses a zone where flying is prohibited, or crosses a closure that is in force at any moment of the flight.",
+     "class": "reference",
+     "covers": "BR-21"
+    },
+    {
+     "id": "DR-07",
+     "requirement": "Technicians add drones to their company's fleet, each with its model. For every model the service keeps its carrying capacity, its range on a full battery, the sensors it carries and its charging connector type.",
+     "class": "reference",
+     "covers": "BR-05"
+    },
+    {
+     "id": "DR-08",
+     "requirement": "Every instruction the service gives a drone or charging equipment has its effect only once: also when the link delivers it twice, and when the service repeats it because it could not tell whether the first one got through.",
+     "class": "reference",
+     "covers": "BR-36"
+    },
+    {
+     "id": "DR-09",
+     "requirement": "Each member of staff has one role: fleet technician or dispatcher at an operating company, or the airspace desk at the platform company. An action is allowed only to the role these requirements assign it to.",
+     "class": "reference",
+     "covers": "BR-03"
+    },
+    {
+     "id": "DR-10",
+     "requirement": "Technicians can set up a charging pad, with its connector type, at a site of their own company.",
+     "class": "reference",
+     "covers": "BR-09"
+    },
+    {
+     "id": "DR-11",
+     "requirement": "A flight is not signed off when its drone is not up to the job: the load weighs more than the drone's model can carry, the way is longer than the model's range, or an inspection needs a sensor the model lacks.",
+     "class": "reference",
+     "covers": "BR-20"
+    },
+    {
+     "id": "DR-12",
+     "requirement": "A technician can retire a drone. Once retired, it remains in the company's history but is never again given a flight or sent to charge.",
+     "class": "reference",
+     "covers": "BR-07"
+    },
+    {
+     "id": "DR-13",
+     "requirement": "There is no way to steer a drone through the service.",
+     "class": "reference",
+     "covers": "BR-38"
+    },
+    {
+     "id": "DR-14",
+     "requirement": "On every new or amended closure, the dispatchers of each company are told which of their own flights it affects, those in the air included, and no company is told about another company's flights.",
+     "class": "reference",
+     "covers": "BR-32"
+    },
+    {
+     "id": "DR-15",
+     "requirement": "Reports are applied in the order the events happened, not the order in which they arrived, so a report that comes late or out of turn never undoes a later one.",
+     "class": "reference",
+     "covers": "BR-27"
+    },
+    {
+     "id": "DR-16",
+     "requirement": "Only drones of the company that owns a charging pad may use it.",
+     "class": "reference",
+     "covers": "BR-10"
+    },
+    {
+     "id": "DR-17",
+     "requirement": "Dispatchers can enter an inspection job: the sensors it needs and the points to visit in a fixed order, finishing where the inspection began.",
+     "class": "reference",
+     "covers": "BR-14"
+    },
+    {
+     "id": "DR-18",
+     "requirement": "The desk can record corridors running between named sites, zones made up of corridors, and the zones in which the authorities forbid flying.",
+     "class": "reference",
+     "covers": "BR-30"
+    },
+    {
+     "id": "DR-19",
+     "requirement": "A dispatcher can call off a flight.",
+     "class": "reference",
+     "covers": "BR-19"
+    },
+    {
+     "id": "DR-20",
+     "requirement": "The service may restart or crash while drones are in the air; when it is back, it continues from where it was, with nothing it had recorded lost and nothing applied a second time.",
+     "class": "reference",
+     "covers": "BR-35"
+    },
+    {
+     "id": "DR-21",
+     "requirement": "Every drone has a home site, which is one of its own company's sites.",
+     "class": "reference",
+     "covers": "BR-06"
+    },
+    {
+     "id": "DR-22",
+     "requirement": "For every drone the service records each time it was taken out of service, repaired or serviced, and returned to service, and who did it, so that its company can show a regulator how the drone was looked after.",
+     "class": "reference",
+     "covers": "BR-12"
+    },
+    {
+     "id": "DR-23",
+     "requirement": "A closure never leads the service to call off, reroute or otherwise change a flight on its own; only the dispatcher decides that.",
+     "class": "reference",
+     "covers": "BR-33"
+    },
+    {
+     "id": "DR-24",
+     "requirement": "No flight departs until a dispatcher has signed it off, and only a dispatcher's own action can sign a flight off.",
+     "class": "reference",
+     "covers": "BR-18"
+    },
+    {
+     "id": "DR-25",
+     "requirement": "Each company's own systems are informed of what happens to that company's drones and jobs, and told nothing about any other company's.",
+     "class": "reference",
+     "covers": "BR-37"
+    },
+    {
+     "id": "DR-26",
+     "requirement": "At no time does a site have more drones taking off or landing than it has places for.",
+     "class": "reference",
+     "covers": "BR-22"
+    },
+    {
+     "id": "DR-27",
+     "requirement": "A technician can take a drone out of service for repair and return it to service; while it is out of service, the drone cannot be given a flight.",
+     "class": "reference",
+     "covers": "BR-08"
+    },
+    {
+     "id": "DR-28",
+     "requirement": "When a drone restarts in the air and carries on, it is still on the same flight, and the reports it sends after the restart count for that flight.",
+     "class": "reference",
+     "covers": "BR-29"
+    },
+    {
+     "id": "DR-29",
+     "requirement": "The service never picks a drone or a way for a flight, and never replaces the one the dispatcher chose.",
+     "class": "reference",
+     "covers": "BR-16"
+    },
+    {
+     "id": "DR-30",
+     "requirement": "A report received more than once takes effect only once.",
+     "class": "reference",
+     "covers": "BR-26"
+    }
+   ],
+   "coverage": {
+    "BR-25": "covered",
+    "BR-15": "covered",
+    "BR-01": "covered",
+    "BR-11": "covered",
+    "BR-17": "missing",
+    "BR-31": "covered",
+    "BR-21": "covered",
+    "BR-05": "covered",
+    "BR-36": "covered",
+    "BR-03": "covered",
+    "BR-28": "missing",
+    "BR-13": "missing",
+    "BR-34": "missing",
+    "BR-09": "covered",
+    "BR-20": "covered",
+    "BR-07": "covered",
+    "BR-23": "missing",
+    "BR-38": "covered",
+    "BR-02": "missing",
+    "BR-32": "covered",
+    "BR-27": "covered",
+    "BR-10": "covered",
+    "BR-14": "covered",
+    "BR-30": "covered",
+    "BR-19": "covered",
+    "BR-35": "covered",
+    "BR-06": "covered",
+    "BR-24": "missing",
+    "BR-12": "covered",
+    "BR-33": "covered",
+    "BR-18": "covered",
+    "BR-04": "missing",
+    "BR-37": "covered",
+    "BR-22": "covered",
+    "BR-08": "covered",
+    "BR-29": "covered",
+    "BR-16": "covered",
+    "BR-26": "covered"
+   }
+  },
+  {
+   "id": "M3",
+   "name": "invented",
+   "items": [
+    {
+     "id": "DR-01",
+     "requirement": "People and devices outside an operating company can report to the service that a flight's load is ready, that its drone has got to one of the job's points, or that the drone has arrived; the service takes each such report and records it on the flight it concerns.",
+     "class": "reference",
+     "covers": "BR-25"
+    },
+    {
+     "id": "DR-02",
+     "requirement": "To plan a flight for a job, a dispatcher picks the drone and the way it flies, given as a sequence of corridors that run between named sites.",
+     "class": "reference",
+     "covers": "BR-15"
+    },
+    {
+     "id": "DR-03",
+     "requirement": "A dispatcher gives each job one of three priorities, shown beside it in every list of jobs.",
+     "class": "other",
+     "covers": null
+    },
+    {
+     "id": "DR-04",
+     "requirement": "Several independent operating companies use the service side by side. A company's drones, drone models, sites, pads, jobs, flights and the history of all of these are visible and changeable to its own staff and to no one else.",
+     "class": "reference",
+     "covers": "BR-01"
+    },
+    {
+     "id": "DR-05",
+     "requirement": "Technicians can put a drone on charge; the service accepts only a pad with the same connector type as the drone's model and turns the request down for any other pad.",
+     "class": "reference",
+     "covers": "BR-11"
+    },
+    {
+     "id": "DR-06",
+     "requirement": "When a dispatcher asks, the service lists those of the dispatcher's own company's drones that are able to reach the place where a given job begins.",
+     "class": "reference",
+     "covers": "BR-17"
+    },
+    {
+     "id": "DR-07",
+     "requirement": "The desk can enter closures of two kinds: planned ones, with a start time and an end time, and sudden ones, in force immediately. It can change a closure after entering it, for instance by widening its area or moving its end time, and the change counts from the moment it is entered.",
+     "class": "reference",
+     "covers": "BR-31"
+    },
+    {
+     "id": "DR-08",
+     "requirement": "Sign-off is refused when the flight's way crosses a zone where flying is prohibited, or crosses a closure that is in force at any moment of the flight.",
+     "class": "reference",
+     "covers": "BR-21"
+    },
+    {
+     "id": "DR-09",
+     "requirement": "Technicians add drones to their company's fleet, each with its model. For every model the service keeps its carrying capacity, its range on a full battery, the sensors it carries and its charging connector type.",
+     "class": "reference",
+     "covers": "BR-05"
+    },
+    {
+     "id": "DR-10",
+     "requirement": "The service keeps each drone's firmware version and refuses to sign off a flight for a drone whose firmware is older than the minimum its model requires.",
+     "class": "other",
+     "covers": null
+    },
+    {
+     "id": "DR-11",
+     "requirement": "Every instruction the service gives a drone or charging equipment has its effect only once: also when the link delivers it twice, and when the service repeats it because it could not tell whether the first one got through.",
+     "class": "reference",
+     "covers": "BR-36"
+    },
+    {
+     "id": "DR-12",
+     "requirement": "Each member of staff has one role: fleet technician or dispatcher at an operating company, or the airspace desk at the platform company. An action is allowed only to the role these requirements assign it to.",
+     "class": "reference",
+     "covers": "BR-03"
+    },
+    {
+     "id": "DR-13",
+     "requirement": "If a report a flight expects, its arrival for instance, does not come when it should, the dispatchers of the flight's company get the flight flagged to them.",
+     "class": "reference",
+     "covers": "BR-28"
+    },
+    {
+     "id": "DR-14",
+     "requirement": "Dispatchers can enter a delivery job: a load that has to go from one site to another.",
+     "class": "reference",
+     "covers": "BR-13"
+    },
+    {
+     "id": "DR-15",
+     "requirement": "After a closure is entered, the desk can see the disruption it caused across all customers, as totals only, naming no company and showing no company's flights.",
+     "class": "reference",
+     "covers": "BR-34"
+    },
+    {
+     "id": "DR-16",
+     "requirement": "Technicians can set up a charging pad, with its connector type, at a site of their own company.",
+     "class": "reference",
+     "covers": "BR-09"
+    },
+    {
+     "id": "DR-17",
+     "requirement": "Each charging pad counts the charge cycles it has delivered, and its record shows it as due for maintenance once it passes 5,000 cycles.",
+     "class": "other",
+     "covers": null
+    },
+    {
+     "id": "DR-18",
+     "requirement": "A flight is not signed off when its drone is not up to the job: the load weighs more than the drone's model can carry, the way is longer than the model's range, or an inspection needs a sensor the model lacks.",
+     "class": "reference",
+     "covers": "BR-20"
+    },
+    {
+     "id": "DR-19",
+     "requirement": "A technician can retire a drone. Once retired, it remains in the company's history but is never again given a flight or sent to charge.",
+     "class": "reference",
+     "covers": "BR-07"
+    },
+    {
+     "id": "DR-20",
+     "requirement": "If several dispatchers at once sign off flights that would put the same drone on overlapping times, exactly one sign-off goes through, and each of the others is refused with the reason.",
+     "class": "reference",
+     "covers": "BR-23"
+    },
+    {
+     "id": "DR-21",
+     "requirement": "There is no way to steer a drone through the service.",
+     "class": "reference",
+     "covers": "BR-38"
+    },
+    {
+     "id": "DR-22",
+     "requirement": "All companies share one airspace picture, made of the corridors between sites, the zones grouping them, the prohibited zones and the closures, and the staff of every company can see the whole of it.",
+     "class": "reference",
+     "covers": "BR-02"
+    },
+    {
+     "id": "DR-23",
+     "requirement": "On every new or amended closure, the dispatchers of each company are told which of their own flights it affects, those in the air included, and no company is told about another company's flights.",
+     "class": "reference",
+     "covers": "BR-32"
+    },
+    {
+     "id": "DR-24",
+     "requirement": "Reports are applied in the order the events happened, not the order in which they arrived, so a report that comes late or out of turn never undoes a later one.",
+     "class": "reference",
+     "covers": "BR-27"
+    },
+    {
+     "id": "DR-25",
+     "requirement": "Only drones of the company that owns a charging pad may use it.",
+     "class": "reference",
+     "covers": "BR-10"
+    },
+    {
+     "id": "DR-26",
+     "requirement": "Dispatchers can enter an inspection job: the sensors it needs and the points to visit in a fixed order, finishing where the inspection began.",
+     "class": "reference",
+     "covers": "BR-14"
+    },
+    {
+     "id": "DR-27",
+     "requirement": "A flight that has waited more than 24 hours for sign-off is called off automatically.",
+     "class": "other",
+     "covers": null
+    },
+    {
+     "id": "DR-28",
+     "requirement": "The desk can record corridors running between named sites, zones made up of corridors, and the zones in which the authorities forbid flying.",
+     "class": "reference",
+     "covers": "BR-30"
+    },
+    {
+     "id": "DR-29",
+     "requirement": "A dispatcher can call off a flight.",
+     "class": "reference",
+     "covers": "BR-19"
+    },
+    {
+     "id": "DR-30",
+     "requirement": "The service may restart or crash while drones are in the air; when it is back, it continues from where it was, with nothing it had recorded lost and nothing applied a second time.",
+     "class": "reference",
+     "covers": "BR-35"
+    },
+    {
+     "id": "DR-31",
+     "requirement": "Every drone has a home site, which is one of its own company's sites.",
+     "class": "reference",
+     "covers": "BR-06"
+    },
+    {
+     "id": "DR-32",
+     "requirement": "In deciding whether a drone can fly a way, the service does not rely on the whole range of a full battery, because cold and wind drain batteries faster than planned.",
+     "class": "reference",
+     "covers": "BR-24"
+    },
+    {
+     "id": "DR-33",
+     "requirement": "For every drone the service records each time it was taken out of service, repaired or serviced, and returned to service, and who did it, so that its company can show a regulator how the drone was looked after.",
+     "class": "reference",
+     "covers": "BR-12"
+    },
+    {
+     "id": "DR-34",
+     "requirement": "A closure never leads the service to call off, reroute or otherwise change a flight on its own; only the dispatcher decides that.",
+     "class": "reference",
+     "covers": "BR-33"
+    },
+    {
+     "id": "DR-35",
+     "requirement": "The service must be reliable and easy to use.",
+     "class": "other",
+     "covers": null
+    },
+    {
+     "id": "DR-36",
+     "requirement": "No flight departs until a dispatcher has signed it off, and only a dispatcher's own action can sign a flight off.",
+     "class": "reference",
+     "covers": "BR-18"
+    },
+    {
+     "id": "DR-37",
+     "requirement": "The airspace desk has no view of any single company's drones, jobs or flights.",
+     "class": "reference",
+     "covers": "BR-04"
+    },
+    {
+     "id": "DR-38",
+     "requirement": "Each company's own systems are informed of what happens to that company's drones and jobs, and told nothing about any other company's.",
+     "class": "reference",
+     "covers": "BR-37"
+    },
+    {
+     "id": "DR-39",
+     "requirement": "At no time does a site have more drones taking off or landing than it has places for.",
+     "class": "reference",
+     "covers": "BR-22"
+    },
+    {
+     "id": "DR-40",
+     "requirement": "A technician can take a drone out of service for repair and return it to service; while it is out of service, the drone cannot be given a flight.",
+     "class": "reference",
+     "covers": "BR-08"
+    },
+    {
+     "id": "DR-41",
+     "requirement": "When a drone restarts in the air and carries on, it is still on the same flight, and the reports it sends after the restart count for that flight.",
+     "class": "reference",
+     "covers": "BR-29"
+    },
+    {
+     "id": "DR-42",
+     "requirement": "The service must handle every situation correctly and keep the companies satisfied.",
+     "class": "other",
+     "covers": null
+    },
+    {
+     "id": "DR-43",
+     "requirement": "The service never picks a drone or a way for a flight, and never replaces the one the dispatcher chose.",
+     "class": "reference",
+     "covers": "BR-16"
+    },
+    {
+     "id": "DR-44",
+     "requirement": "A report received more than once takes effect only once.",
+     "class": "reference",
+     "covers": "BR-26"
+    }
+   ],
+   "coverage": {
+    "BR-25": "covered",
+    "BR-15": "covered",
+    "BR-01": "covered",
+    "BR-11": "covered",
+    "BR-17": "covered",
+    "BR-31": "covered",
+    "BR-21": "covered",
+    "BR-05": "covered",
+    "BR-36": "covered",
+    "BR-03": "covered",
+    "BR-28": "covered",
+    "BR-13": "covered",
+    "BR-34": "covered",
+    "BR-09": "covered",
+    "BR-20": "covered",
+    "BR-07": "covered",
+    "BR-23": "covered",
+    "BR-38": "covered",
+    "BR-02": "covered",
+    "BR-32": "covered",
+    "BR-27": "covered",
+    "BR-10": "covered",
+    "BR-14": "covered",
+    "BR-30": "covered",
+    "BR-19": "covered",
+    "BR-35": "covered",
+    "BR-06": "covered",
+    "BR-24": "covered",
+    "BR-12": "covered",
+    "BR-33": "covered",
+    "BR-18": "covered",
+    "BR-04": "covered",
+    "BR-37": "covered",
+    "BR-22": "covered",
+    "BR-08": "covered",
+    "BR-29": "covered",
+    "BR-16": "covered",
+    "BR-26": "covered"
+   }
+  },
+  {
+   "id": "M4",
+   "name": "out-of-scope",
+   "items": [
+    {
+     "id": "DR-01",
+     "requirement": "People and devices outside an operating company can report to the service that a flight's load is ready, that its drone has got to one of the job's points, or that the drone has arrived; the service takes each such report and records it on the flight it concerns.",
+     "class": "reference",
+     "covers": "BR-25"
+    },
+    {
+     "id": "DR-02",
+     "requirement": "To plan a flight for a job, a dispatcher picks the drone and the way it flies, given as a sequence of corridors that run between named sites.",
+     "class": "reference",
+     "covers": "BR-15"
+    },
+    {
+     "id": "DR-03",
+     "requirement": "Several independent operating companies use the service side by side. A company's drones, drone models, sites, pads, jobs, flights and the history of all of these are visible and changeable to its own staff and to no one else.",
+     "class": "reference",
+     "covers": "BR-01"
+    },
+    {
+     "id": "DR-04",
+     "requirement": "Technicians can put a drone on charge; the service accepts only a pad with the same connector type as the drone's model and turns the request down for any other pad.",
+     "class": "reference",
+     "covers": "BR-11"
+    },
+    {
+     "id": "DR-05",
+     "requirement": "When a dispatcher asks, the service lists those of the dispatcher's own company's drones that are able to reach the place where a given job begins.",
+     "class": "reference",
+     "covers": "BR-17"
+    },
+    {
+     "id": "DR-06",
+     "requirement": "At the end of each month the service produces, for each company's management, a report of the flights its drones made.",
+     "class": "user_visible",
+     "covers": null
+    },
+    {
+     "id": "DR-07",
+     "requirement": "The desk can enter closures of two kinds: planned ones, with a start time and an end time, and sudden ones, in force immediately. It can change a closure after entering it, for instance by widening its area or moving its end time, and the change counts from the moment it is entered.",
+     "class": "reference",
+     "covers": "BR-31"
+    },
+    {
+     "id": "DR-08",
+     "requirement": "Sign-off is refused when the flight's way crosses a zone where flying is prohibited, or crosses a closure that is in force at any moment of the flight.",
+     "class": "reference",
+     "covers": "BR-21"
+    },
+    {
+     "id": "DR-09",
+     "requirement": "Technicians add drones to their company's fleet, each with its model. For every model the service keeps its carrying capacity, its range on a full battery, the sensors it carries and its charging connector type.",
+     "class": "reference",
+     "covers": "BR-05"
+    },
+    {
+     "id": "DR-10",
+     "requirement": "Every instruction the service gives a drone or charging equipment has its effect only once: also when the link delivers it twice, and when the service repeats it because it could not tell whether the first one got through.",
+     "class": "reference",
+     "covers": "BR-36"
+    },
+    {
+     "id": "DR-11",
+     "requirement": "Each member of staff has one role: fleet technician or dispatcher at an operating company, or the airspace desk at the platform company. An action is allowed only to the role these requirements assign it to.",
+     "class": "reference",
+     "covers": "BR-03"
+    },
+    {
+     "id": "DR-12",
+     "requirement": "The service adds instances automatically when the load of incoming reports rises.",
+     "class": "technical",
+     "covers": null
+    },
+    {
+     "id": "DR-13",
+     "requirement": "If a report a flight expects, its arrival for instance, does not come when it should, the dispatchers of the flight's company get the flight flagged to them.",
+     "class": "reference",
+     "covers": "BR-28"
+    },
+    {
+     "id": "DR-14",
+     "requirement": "Dispatchers can enter a delivery job: a load that has to go from one site to another.",
+     "class": "reference",
+     "covers": "BR-13"
+    },
+    {
+     "id": "DR-15",
+     "requirement": "After a closure is entered, the desk can see the disruption it caused across all customers, as totals only, naming no company and showing no company's flights.",
+     "class": "reference",
+     "covers": "BR-34"
+    },
+    {
+     "id": "DR-16",
+     "requirement": "Technicians can set up a charging pad, with its connector type, at a site of their own company.",
+     "class": "reference",
+     "covers": "BR-09"
+    },
+    {
+     "id": "DR-17",
+     "requirement": "A flight is not signed off when its drone is not up to the job: the load weighs more than the drone's model can carry, the way is longer than the model's range, or an inspection needs a sensor the model lacks.",
+     "class": "reference",
+     "covers": "BR-20"
+    },
+    {
+     "id": "DR-18",
+     "requirement": "A technician can retire a drone. Once retired, it remains in the company's history but is never again given a flight or sent to charge.",
+     "class": "reference",
+     "covers": "BR-07"
+    },
+    {
+     "id": "DR-19",
+     "requirement": "If several dispatchers at once sign off flights that would put the same drone on overlapping times, exactly one sign-off goes through, and each of the others is refused with the reason.",
+     "class": "reference",
+     "covers": "BR-23"
+    },
+    {
+     "id": "DR-20",
+     "requirement": "The parts of the service exchange their events through a message broker.",
+     "class": "technical",
+     "covers": null
+    },
+    {
+     "id": "DR-21",
+     "requirement": "There is no way to steer a drone through the service.",
+     "class": "reference",
+     "covers": "BR-38"
+    },
+    {
+     "id": "DR-22",
+     "requirement": "All companies share one airspace picture, made of the corridors between sites, the zones grouping them, the prohibited zones and the closures, and the staff of every company can see the whole of it.",
+     "class": "reference",
+     "covers": "BR-02"
+    },
+    {
+     "id": "DR-23",
+     "requirement": "On every new or amended closure, the dispatchers of each company are told which of their own flights it affects, those in the air included, and no company is told about another company's flights.",
+     "class": "reference",
+     "covers": "BR-32"
+    },
+    {
+     "id": "DR-24",
+     "requirement": "Reports are applied in the order the events happened, not the order in which they arrived, so a report that comes late or out of turn never undoes a later one.",
+     "class": "reference",
+     "covers": "BR-27"
+    },
+    {
+     "id": "DR-25",
+     "requirement": "When a drone's battery runs low, the service sends a text message to the dispatcher on duty.",
+     "class": "user_visible",
+     "covers": null
+    },
+    {
+     "id": "DR-26",
+     "requirement": "Only drones of the company that owns a charging pad may use it.",
+     "class": "reference",
+     "covers": "BR-10"
+    },
+    {
+     "id": "DR-27",
+     "requirement": "Dispatchers can enter an inspection job: the sensors it needs and the points to visit in a fixed order, finishing where the inspection began.",
+     "class": "reference",
+     "covers": "BR-14"
+    },
+    {
+     "id": "DR-28",
+     "requirement": "The desk can record corridors running between named sites, zones made up of corridors, and the zones in which the authorities forbid flying.",
+     "class": "reference",
+     "covers": "BR-30"
+    },
+    {
+     "id": "DR-29",
+     "requirement": "Staff log in through their own company's identity provider.",
+     "class": "user_visible",
+     "covers": null
+    },
+    {
+     "id": "DR-30",
+     "requirement": "A dispatcher can call off a flight.",
+     "class": "reference",
+     "covers": "BR-19"
+    },
+    {
+     "id": "DR-31",
+     "requirement": "The service may restart or crash while drones are in the air; when it is back, it continues from where it was, with nothing it had recorded lost and nothing applied a second time.",
+     "class": "reference",
+     "covers": "BR-35"
+    },
+    {
+     "id": "DR-32",
+     "requirement": "Every drone has a home site, which is one of its own company's sites.",
+     "class": "reference",
+     "covers": "BR-06"
+    },
+    {
+     "id": "DR-33",
+     "requirement": "In deciding whether a drone can fly a way, the service does not rely on the whole range of a full battery, because cold and wind drain batteries faster than planned.",
+     "class": "reference",
+     "covers": "BR-24"
+    },
+    {
+     "id": "DR-34",
+     "requirement": "For every drone the service records each time it was taken out of service, repaired or serviced, and returned to service, and who did it, so that its company can show a regulator how the drone was looked after.",
+     "class": "reference",
+     "covers": "BR-12"
+    },
+    {
+     "id": "DR-35",
+     "requirement": "The current state of each drone is held in a second-level cache in front of the store.",
+     "class": "technical",
+     "covers": null
+    },
+    {
+     "id": "DR-36",
+     "requirement": "A closure never leads the service to call off, reroute or otherwise change a flight on its own; only the dispatcher decides that.",
+     "class": "reference",
+     "covers": "BR-33"
+    },
+    {
+     "id": "DR-37",
+     "requirement": "No flight departs until a dispatcher has signed it off, and only a dispatcher's own action can sign a flight off.",
+     "class": "reference",
+     "covers": "BR-18"
+    },
+    {
+     "id": "DR-38",
+     "requirement": "The airspace desk has no view of any single company's drones, jobs or flights.",
+     "class": "reference",
+     "covers": "BR-04"
+    },
+    {
+     "id": "DR-39",
+     "requirement": "Each company's own systems are informed of what happens to that company's drones and jobs, and told nothing about any other company's.",
+     "class": "reference",
+     "covers": "BR-37"
+    },
+    {
+     "id": "DR-40",
+     "requirement": "At no time does a site have more drones taking off or landing than it has places for.",
+     "class": "reference",
+     "covers": "BR-22"
+    },
+    {
+     "id": "DR-41",
+     "requirement": "A technician can take a drone out of service for repair and return it to service; while it is out of service, the drone cannot be given a flight.",
+     "class": "reference",
+     "covers": "BR-08"
+    },
+    {
+     "id": "DR-42",
+     "requirement": "The service invoices each company every month for the deliveries and inspections its drones flew.",
+     "class": "user_visible",
+     "covers": null
+    },
+    {
+     "id": "DR-43",
+     "requirement": "When a drone restarts in the air and carries on, it is still on the same flight, and the reports it sends after the restart count for that flight.",
+     "class": "reference",
+     "covers": "BR-29"
+    },
+    {
+     "id": "DR-44",
+     "requirement": "The service never picks a drone or a way for a flight, and never replaces the one the dispatcher chose.",
+     "class": "reference",
+     "covers": "BR-16"
+    },
+    {
+     "id": "DR-45",
+     "requirement": "A report received more than once takes effect only once.",
+     "class": "reference",
+     "covers": "BR-26"
+    }
+   ],
+   "coverage": {
+    "BR-25": "covered",
+    "BR-15": "covered",
+    "BR-01": "covered",
+    "BR-11": "covered",
+    "BR-17": "covered",
+    "BR-31": "covered",
+    "BR-21": "covered",
+    "BR-05": "covered",
+    "BR-36": "covered",
+    "BR-03": "covered",
+    "BR-28": "covered",
+    "BR-13": "covered",
+    "BR-34": "covered",
+    "BR-09": "covered",
+    "BR-20": "covered",
+    "BR-07": "covered",
+    "BR-23": "covered",
+    "BR-38": "covered",
+    "BR-02": "covered",
+    "BR-32": "covered",
+    "BR-27": "covered",
+    "BR-10": "covered",
+    "BR-14": "covered",
+    "BR-30": "covered",
+    "BR-19": "covered",
+    "BR-35": "covered",
+    "BR-06": "covered",
+    "BR-24": "covered",
+    "BR-12": "covered",
+    "BR-33": "covered",
+    "BR-18": "covered",
+    "BR-04": "covered",
+    "BR-37": "covered",
+    "BR-22": "covered",
+    "BR-08": "covered",
+    "BR-29": "covered",
+    "BR-16": "covered",
+    "BR-26": "covered"
+   }
+  },
+  {
+   "id": "M5",
+   "name": "partial",
+   "items": [
+    {
+     "id": "DR-01",
+     "requirement": "People and devices outside an operating company can report to the service that a flight's load is ready or that its drone has got to one of the job's points; the service takes each such report and records it on the flight it concerns.",
+     "class": "reference",
+     "covers": "BR-25"
+    },
+    {
+     "id": "DR-02",
+     "requirement": "To plan a flight for a job, a dispatcher picks the drone that flies it.",
+     "class": "reference",
+     "covers": "BR-15"
+    },
+    {
+     "id": "DR-03",
+     "requirement": "Several independent operating companies use the service side by side. A company's drones, drone models, sites, pads, jobs, flights and the history of all of these are visible and changeable to its own staff and to no one else.",
+     "class": "reference",
+     "covers": "BR-01"
+    },
+    {
+     "id": "DR-04",
+     "requirement": "Technicians can put a drone on charge; the service accepts only a pad with the same connector type as the drone's model and turns the request down for any other pad.",
+     "class": "reference",
+     "covers": "BR-11"
+    },
+    {
+     "id": "DR-05",
+     "requirement": "When a dispatcher asks, the service lists those of the dispatcher's own company's drones that are able to reach the place where a given job begins.",
+     "class": "reference",
+     "covers": "BR-17"
+    },
+    {
+     "id": "DR-06",
+     "requirement": "The desk can enter closures of two kinds: planned ones, with a start time and an end time, and sudden ones, in force immediately.",
+     "class": "reference",
+     "covers": "BR-31"
+    },
+    {
+     "id": "DR-07",
+     "requirement": "Sign-off is refused when the flight's way crosses a zone where flying is prohibited, or crosses a closure that is in force at any moment of the flight.",
+     "class": "reference",
+     "covers": "BR-21"
+    },
+    {
+     "id": "DR-08",
+     "requirement": "Technicians add drones to their company's fleet, each with its model. For every model the service keeps its carrying capacity, its range on a full battery and the sensors it carries.",
+     "class": "reference",
+     "covers": "BR-05"
+    },
+    {
+     "id": "DR-09",
+     "requirement": "Every instruction the service gives a drone or charging equipment has its effect only once: also when the link delivers it twice, and when the service repeats it because it could not tell whether the first one got through.",
+     "class": "reference",
+     "covers": "BR-36"
+    },
+    {
+     "id": "DR-10",
+     "requirement": "Each member of staff has one role: fleet technician or dispatcher at an operating company, or the airspace desk at the platform company. An action is allowed only to the role these requirements assign it to.",
+     "class": "reference",
+     "covers": "BR-03"
+    },
+    {
+     "id": "DR-11",
+     "requirement": "If a report a flight expects, its arrival for instance, does not come when it should, the dispatchers of the flight's company get the flight flagged to them.",
+     "class": "reference",
+     "covers": "BR-28"
+    },
+    {
+     "id": "DR-12",
+     "requirement": "Dispatchers can enter a delivery job: a load that has to go from one site to another.",
+     "class": "reference",
+     "covers": "BR-13"
+    },
+    {
+     "id": "DR-13",
+     "requirement": "After a closure is entered, the desk can see the disruption it caused across all customers, as totals only, naming no company and showing no company's flights.",
+     "class": "reference",
+     "covers": "BR-34"
+    },
+    {
+     "id": "DR-14",
+     "requirement": "Technicians can set up a charging pad, with its connector type, at a site of their own company.",
+     "class": "reference",
+     "covers": "BR-09"
+    },
+    {
+     "id": "DR-15",
+     "requirement": "A flight is not signed off when its drone is not up to the job: the load weighs more than the drone's model can carry, or the way is longer than the model's range.",
+     "class": "reference",
+     "covers": "BR-20"
+    },
+    {
+     "id": "DR-16",
+     "requirement": "A technician can retire a drone. Once retired, it remains in the company's history but is never again given a flight or sent to charge.",
+     "class": "reference",
+     "covers": "BR-07"
+    },
+    {
+     "id": "DR-17",
+     "requirement": "If several dispatchers at once sign off flights that would put the same drone on overlapping times, exactly one sign-off goes through, and each of the others is refused with the reason.",
+     "class": "reference",
+     "covers": "BR-23"
+    },
+    {
+     "id": "DR-18",
+     "requirement": "There is no way to steer a drone through the service.",
+     "class": "reference",
+     "covers": "BR-38"
+    },
+    {
+     "id": "DR-19",
+     "requirement": "All companies share one airspace picture, made of the corridors between sites, the zones grouping them, the prohibited zones and the closures, and the staff of every company can see the whole of it.",
+     "class": "reference",
+     "covers": "BR-02"
+    },
+    {
+     "id": "DR-20",
+     "requirement": "On every new or amended closure, the dispatchers of each company are told which of their own flights it affects, those in the air included, and no company is told about another company's flights.",
+     "class": "reference",
+     "covers": "BR-32"
+    },
+    {
+     "id": "DR-21",
+     "requirement": "Reports are applied in the order the events happened, not the order in which they arrived, so a report that comes late or out of turn never undoes a later one.",
+     "class": "reference",
+     "covers": "BR-27"
+    },
+    {
+     "id": "DR-22",
+     "requirement": "Only drones of the company that owns a charging pad may use it.",
+     "class": "reference",
+     "covers": "BR-10"
+    },
+    {
+     "id": "DR-23",
+     "requirement": "Dispatchers can enter an inspection job: the sensors it needs and the points to visit in a fixed order, finishing where the inspection began.",
+     "class": "reference",
+     "covers": "BR-14"
+    },
+    {
+     "id": "DR-24",
+     "requirement": "The desk can record corridors running between named sites, zones made up of corridors, and the zones in which the authorities forbid flying.",
+     "class": "reference",
+     "covers": "BR-30"
+    },
+    {
+     "id": "DR-25",
+     "requirement": "A dispatcher can call off a flight.",
+     "class": "reference",
+     "covers": "BR-19"
+    },
+    {
+     "id": "DR-26",
+     "requirement": "The service may restart or crash while drones are in the air; when it is back, it continues from where it was, with nothing it had recorded lost and nothing applied a second time.",
+     "class": "reference",
+     "covers": "BR-35"
+    },
+    {
+     "id": "DR-27",
+     "requirement": "Every drone has a home site, which is one of its own company's sites.",
+     "class": "reference",
+     "covers": "BR-06"
+    },
+    {
+     "id": "DR-28",
+     "requirement": "In deciding whether a drone can fly a way, the service does not rely on the whole range of a full battery, because cold and wind drain batteries faster than planned.",
+     "class": "reference",
+     "covers": "BR-24"
+    },
+    {
+     "id": "DR-29",
+     "requirement": "For every drone the service records each time it was taken out of service, repaired or serviced, and returned to service, and who did it, so that its company can show a regulator how the drone was looked after.",
+     "class": "reference",
+     "covers": "BR-12"
+    },
+    {
+     "id": "DR-30",
+     "requirement": "A closure never leads the service to call off, reroute or otherwise change a flight on its own; only the dispatcher decides that.",
+     "class": "reference",
+     "covers": "BR-33"
+    },
+    {
+     "id": "DR-31",
+     "requirement": "No flight departs until a dispatcher has signed it off, and only a dispatcher's own action can sign a flight off.",
+     "class": "reference",
+     "covers": "BR-18"
+    },
+    {
+     "id": "DR-32",
+     "requirement": "The airspace desk has no view of any single company's drones, jobs or flights.",
+     "class": "reference",
+     "covers": "BR-04"
+    },
+    {
+     "id": "DR-33",
+     "requirement": "Each company's own systems are informed of what happens to that company's drones and jobs, and told nothing about any other company's.",
+     "class": "reference",
+     "covers": "BR-37"
+    },
+    {
+     "id": "DR-34",
+     "requirement": "At no time does a site have more drones taking off or landing than it has places for.",
+     "class": "reference",
+     "covers": "BR-22"
+    },
+    {
+     "id": "DR-35",
+     "requirement": "A technician can take a drone out of service for repair and return it to service.",
+     "class": "reference",
+     "covers": "BR-08"
+    },
+    {
+     "id": "DR-36",
+     "requirement": "When a drone restarts in the air and carries on, it is still on the same flight, and the reports it sends after the restart count for that flight.",
+     "class": "reference",
+     "covers": "BR-29"
+    },
+    {
+     "id": "DR-37",
+     "requirement": "The service never picks a drone or a way for a flight, and never replaces the one the dispatcher chose.",
+     "class": "reference",
+     "covers": "BR-16"
+    },
+    {
+     "id": "DR-38",
+     "requirement": "A report received more than once takes effect only once.",
+     "class": "reference",
+     "covers": "BR-26"
+    }
+   ],
+   "coverage": {
+    "BR-25": "partial",
+    "BR-15": "partial",
+    "BR-01": "covered",
+    "BR-11": "covered",
+    "BR-17": "covered",
+    "BR-31": "partial",
+    "BR-21": "covered",
+    "BR-05": "partial",
+    "BR-36": "covered",
+    "BR-03": "covered",
+    "BR-28": "covered",
+    "BR-13": "covered",
+    "BR-34": "covered",
+    "BR-09": "covered",
+    "BR-20": "partial",
+    "BR-07": "covered",
+    "BR-23": "covered",
+    "BR-38": "covered",
+    "BR-02": "covered",
+    "BR-32": "covered",
+    "BR-27": "covered",
+    "BR-10": "covered",
+    "BR-14": "covered",
+    "BR-30": "covered",
+    "BR-19": "covered",
+    "BR-35": "covered",
+    "BR-06": "covered",
+    "BR-24": "covered",
+    "BR-12": "covered",
+    "BR-33": "covered",
+    "BR-18": "covered",
+    "BR-04": "covered",
+    "BR-37": "covered",
+    "BR-22": "covered",
+    "BR-08": "partial",
+    "BR-29": "covered",
+    "BR-16": "covered",
+    "BR-26": "covered"
+   }
+  },
+  {
+   "id": "M6",
+   "name": "empty",
+   "items": [],
+   "coverage": {
+    "BR-25": "missing",
+    "BR-15": "missing",
+    "BR-01": "missing",
+    "BR-11": "missing",
+    "BR-17": "missing",
+    "BR-31": "missing",
+    "BR-21": "missing",
+    "BR-05": "missing",
+    "BR-36": "missing",
+    "BR-03": "missing",
+    "BR-28": "missing",
+    "BR-13": "missing",
+    "BR-34": "missing",
+    "BR-09": "missing",
+    "BR-20": "missing",
+    "BR-07": "missing",
+    "BR-23": "missing",
+    "BR-38": "missing",
+    "BR-02": "missing",
+    "BR-32": "missing",
+    "BR-27": "missing",
+    "BR-10": "missing",
+    "BR-14": "missing",
+    "BR-30": "missing",
+    "BR-19": "missing",
+    "BR-35": "missing",
+    "BR-06": "missing",
+    "BR-24": "missing",
+    "BR-12": "missing",
+    "BR-33": "missing",
+    "BR-18": "missing",
+    "BR-04": "missing",
+    "BR-37": "missing",
+    "BR-22": "missing",
+    "BR-08": "missing",
+    "BR-29": "missing",
+    "BR-16": "missing",
+    "BR-26": "missing"
+   }
+  }
+ ],
+ "judgements": [
+  {
+   "mutant": "M1",
+   "name": "reworded",
+   "repetition": 1,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 38,
+    "partial": 0,
+    "of": 38,
+    "recall": 1.0,
+    "precision": 1.0,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-35"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-35": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M2",
+   "name": "removed",
+   "repetition": 1,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 30,
+    "partial": 0,
+    "of": 38,
+    "recall": 0.7894736842105263,
+    "precision": 1.0,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-13": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-17": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-23": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-24": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-28": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-34": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M3",
+   "name": "invented",
+   "repetition": 1,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 38,
+    "partial": 0,
+    "of": 38,
+    "recall": 1.0,
+    "precision": 0.8636363636363636,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-40"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-43"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-39"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-44"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-41"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-10": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-17": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-27": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-35": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-39": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-40": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-41": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-42": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-43": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-44": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M4",
+   "name": "out-of-scope",
+   "repetition": 1,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 38,
+    "partial": 0,
+    "of": 38,
+    "recall": 1.0,
+    "precision": 0.9047619047619048,
+    "outOfScope": 4,
+    "technical": 3
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-41"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-44"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-40"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-45"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-43"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-39"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-06": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-12": {
+      "class": "technical",
+      "requirements": []
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-20": {
+      "class": "technical",
+      "requirements": []
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-25": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-29": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-35": {
+      "class": "technical",
+      "requirements": []
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-39": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-40": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-41": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-42": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-43": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-44": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-45": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M5",
+   "name": "partial",
+   "repetition": 1,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 32,
+    "partial": 6,
+    "of": 38,
+    "recall": 0.8421052631578947,
+    "precision": 1.0,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-05": {
+      "coverage": "partial",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-08": {
+      "coverage": "partial",
+      "items": [
+       "DR-35"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-15": {
+      "coverage": "partial",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-20": {
+      "coverage": "partial",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-25": {
+      "coverage": "partial",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-31": {
+      "coverage": "partial",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-35": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M6",
+   "name": "empty",
+   "repetition": 1,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 0,
+    "partial": 0,
+    "of": 38,
+    "recall": 0.0,
+    "precision": null,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-05": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-06": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-07": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-08": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-09": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-10": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-11": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-12": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-13": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-14": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-15": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-16": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-17": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-18": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-19": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-20": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-21": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-22": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-23": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-24": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-25": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-26": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-27": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-28": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-29": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-30": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-31": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-32": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-33": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-34": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-35": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-36": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-37": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-38": {
+      "coverage": "missing",
+      "items": []
+     }
+    },
+    "items": {}
+   }
+  },
+  {
+   "mutant": "M1",
+   "name": "reworded",
+   "repetition": 2,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 38,
+    "partial": 0,
+    "of": 38,
+    "recall": 1.0,
+    "precision": 1.0,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-35"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-35": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M2",
+   "name": "removed",
+   "repetition": 2,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 30,
+    "partial": 0,
+    "of": 38,
+    "recall": 0.7894736842105263,
+    "precision": 1.0,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-13": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-17": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-23": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-24": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-28": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-34": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M3",
+   "name": "invented",
+   "repetition": 2,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 38,
+    "partial": 0,
+    "of": 38,
+    "recall": 1.0,
+    "precision": 0.8636363636363636,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-40"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-43"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-39"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-44"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-41"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-10": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-17": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-27": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-35": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-39": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-40": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-41": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-42": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-43": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-44": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M4",
+   "name": "out-of-scope",
+   "repetition": 2,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 38,
+    "partial": 0,
+    "of": 38,
+    "recall": 1.0,
+    "precision": 0.9047619047619048,
+    "outOfScope": 4,
+    "technical": 3
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-41"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-44"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-40"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-45"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-43"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-39"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-06": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-12": {
+      "class": "technical",
+      "requirements": []
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-20": {
+      "class": "technical",
+      "requirements": []
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-25": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-29": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-35": {
+      "class": "technical",
+      "requirements": []
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-39": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-40": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-41": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-42": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-43": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-44": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-45": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M5",
+   "name": "partial",
+   "repetition": 2,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 32,
+    "partial": 6,
+    "of": 38,
+    "recall": 0.8421052631578947,
+    "precision": 1.0,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-05": {
+      "coverage": "partial",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-08": {
+      "coverage": "partial",
+      "items": [
+       "DR-35"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-15": {
+      "coverage": "partial",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-20": {
+      "coverage": "partial",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-25": {
+      "coverage": "partial",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-31": {
+      "coverage": "partial",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-35": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M6",
+   "name": "empty",
+   "repetition": 2,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 0,
+    "partial": 0,
+    "of": 38,
+    "recall": 0.0,
+    "precision": null,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-05": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-06": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-07": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-08": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-09": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-10": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-11": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-12": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-13": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-14": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-15": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-16": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-17": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-18": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-19": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-20": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-21": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-22": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-23": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-24": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-25": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-26": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-27": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-28": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-29": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-30": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-31": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-32": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-33": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-34": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-35": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-36": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-37": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-38": {
+      "coverage": "missing",
+      "items": []
+     }
+    },
+    "items": {}
+   }
+  },
+  {
+   "mutant": "M1",
+   "name": "reworded",
+   "repetition": 3,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 38,
+    "partial": 0,
+    "of": 38,
+    "recall": 1.0,
+    "precision": 1.0,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-35"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-35": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M2",
+   "name": "removed",
+   "repetition": 3,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 30,
+    "partial": 0,
+    "of": 38,
+    "recall": 0.7894736842105263,
+    "precision": 1.0,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-13": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-17": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-23": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-24": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-28": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-34": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M3",
+   "name": "invented",
+   "repetition": 3,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 38,
+    "partial": 0,
+    "of": 38,
+    "recall": 1.0,
+    "precision": 0.8636363636363636,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-40"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-43"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-39"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-44"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-41"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-10": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-17": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-27": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-35": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-39": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-40": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-41": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-42": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-43": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-44": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M4",
+   "name": "out-of-scope",
+   "repetition": 3,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 38,
+    "partial": 0,
+    "of": 38,
+    "recall": 1.0,
+    "precision": 0.9047619047619048,
+    "outOfScope": 4,
+    "technical": 3
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-05": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     },
+     "BR-08": {
+      "coverage": "covered",
+      "items": [
+       "DR-41"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-15": {
+      "coverage": "covered",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-44"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-20": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-40"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-25": {
+      "coverage": "covered",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-45"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-43"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-31": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-39"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-06": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-12": {
+      "class": "technical",
+      "requirements": []
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-20": {
+      "class": "technical",
+      "requirements": []
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-25": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-29": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-35": {
+      "class": "technical",
+      "requirements": []
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-39": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-40": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-41": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-42": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-43": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-44": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-45": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M5",
+   "name": "partial",
+   "repetition": 3,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 32,
+    "partial": 6,
+    "of": 38,
+    "recall": 0.8421052631578947,
+    "precision": 1.0,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "covered",
+      "items": [
+       "DR-03"
+      ]
+     },
+     "BR-02": {
+      "coverage": "covered",
+      "items": [
+       "DR-19"
+      ]
+     },
+     "BR-03": {
+      "coverage": "covered",
+      "items": [
+       "DR-10"
+      ]
+     },
+     "BR-04": {
+      "coverage": "covered",
+      "items": [
+       "DR-32"
+      ]
+     },
+     "BR-05": {
+      "coverage": "partial",
+      "items": [
+       "DR-08"
+      ]
+     },
+     "BR-06": {
+      "coverage": "covered",
+      "items": [
+       "DR-27"
+      ]
+     },
+     "BR-07": {
+      "coverage": "covered",
+      "items": [
+       "DR-16"
+      ]
+     },
+     "BR-08": {
+      "coverage": "partial",
+      "items": [
+       "DR-35"
+      ]
+     },
+     "BR-09": {
+      "coverage": "covered",
+      "items": [
+       "DR-14"
+      ]
+     },
+     "BR-10": {
+      "coverage": "covered",
+      "items": [
+       "DR-22"
+      ]
+     },
+     "BR-11": {
+      "coverage": "covered",
+      "items": [
+       "DR-04"
+      ]
+     },
+     "BR-12": {
+      "coverage": "covered",
+      "items": [
+       "DR-29"
+      ]
+     },
+     "BR-13": {
+      "coverage": "covered",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "BR-14": {
+      "coverage": "covered",
+      "items": [
+       "DR-23"
+      ]
+     },
+     "BR-15": {
+      "coverage": "partial",
+      "items": [
+       "DR-02"
+      ]
+     },
+     "BR-16": {
+      "coverage": "covered",
+      "items": [
+       "DR-37"
+      ]
+     },
+     "BR-17": {
+      "coverage": "covered",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "BR-18": {
+      "coverage": "covered",
+      "items": [
+       "DR-31"
+      ]
+     },
+     "BR-19": {
+      "coverage": "covered",
+      "items": [
+       "DR-25"
+      ]
+     },
+     "BR-20": {
+      "coverage": "partial",
+      "items": [
+       "DR-15"
+      ]
+     },
+     "BR-21": {
+      "coverage": "covered",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "BR-22": {
+      "coverage": "covered",
+      "items": [
+       "DR-34"
+      ]
+     },
+     "BR-23": {
+      "coverage": "covered",
+      "items": [
+       "DR-17"
+      ]
+     },
+     "BR-24": {
+      "coverage": "covered",
+      "items": [
+       "DR-28"
+      ]
+     },
+     "BR-25": {
+      "coverage": "partial",
+      "items": [
+       "DR-01"
+      ]
+     },
+     "BR-26": {
+      "coverage": "covered",
+      "items": [
+       "DR-38"
+      ]
+     },
+     "BR-27": {
+      "coverage": "covered",
+      "items": [
+       "DR-21"
+      ]
+     },
+     "BR-28": {
+      "coverage": "covered",
+      "items": [
+       "DR-11"
+      ]
+     },
+     "BR-29": {
+      "coverage": "covered",
+      "items": [
+       "DR-36"
+      ]
+     },
+     "BR-30": {
+      "coverage": "covered",
+      "items": [
+       "DR-24"
+      ]
+     },
+     "BR-31": {
+      "coverage": "partial",
+      "items": [
+       "DR-06"
+      ]
+     },
+     "BR-32": {
+      "coverage": "covered",
+      "items": [
+       "DR-20"
+      ]
+     },
+     "BR-33": {
+      "coverage": "covered",
+      "items": [
+       "DR-30"
+      ]
+     },
+     "BR-34": {
+      "coverage": "covered",
+      "items": [
+       "DR-13"
+      ]
+     },
+     "BR-35": {
+      "coverage": "covered",
+      "items": [
+       "DR-26"
+      ]
+     },
+     "BR-36": {
+      "coverage": "covered",
+      "items": [
+       "DR-09"
+      ]
+     },
+     "BR-37": {
+      "coverage": "covered",
+      "items": [
+       "DR-33"
+      ]
+     },
+     "BR-38": {
+      "coverage": "covered",
+      "items": [
+       "DR-18"
+      ]
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "reference",
+      "requirements": [
+       "BR-25"
+      ]
+     },
+     "DR-02": {
+      "class": "reference",
+      "requirements": [
+       "BR-15"
+      ]
+     },
+     "DR-03": {
+      "class": "reference",
+      "requirements": [
+       "BR-01"
+      ]
+     },
+     "DR-04": {
+      "class": "reference",
+      "requirements": [
+       "BR-11"
+      ]
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "BR-17"
+      ]
+     },
+     "DR-06": {
+      "class": "reference",
+      "requirements": [
+       "BR-31"
+      ]
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "BR-21"
+      ]
+     },
+     "DR-08": {
+      "class": "reference",
+      "requirements": [
+       "BR-05"
+      ]
+     },
+     "DR-09": {
+      "class": "reference",
+      "requirements": [
+       "BR-36"
+      ]
+     },
+     "DR-10": {
+      "class": "reference",
+      "requirements": [
+       "BR-03"
+      ]
+     },
+     "DR-11": {
+      "class": "reference",
+      "requirements": [
+       "BR-28"
+      ]
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "BR-13"
+      ]
+     },
+     "DR-13": {
+      "class": "reference",
+      "requirements": [
+       "BR-34"
+      ]
+     },
+     "DR-14": {
+      "class": "reference",
+      "requirements": [
+       "BR-09"
+      ]
+     },
+     "DR-15": {
+      "class": "reference",
+      "requirements": [
+       "BR-20"
+      ]
+     },
+     "DR-16": {
+      "class": "reference",
+      "requirements": [
+       "BR-07"
+      ]
+     },
+     "DR-17": {
+      "class": "reference",
+      "requirements": [
+       "BR-23"
+      ]
+     },
+     "DR-18": {
+      "class": "reference",
+      "requirements": [
+       "BR-38"
+      ]
+     },
+     "DR-19": {
+      "class": "reference",
+      "requirements": [
+       "BR-02"
+      ]
+     },
+     "DR-20": {
+      "class": "reference",
+      "requirements": [
+       "BR-32"
+      ]
+     },
+     "DR-21": {
+      "class": "reference",
+      "requirements": [
+       "BR-27"
+      ]
+     },
+     "DR-22": {
+      "class": "reference",
+      "requirements": [
+       "BR-10"
+      ]
+     },
+     "DR-23": {
+      "class": "reference",
+      "requirements": [
+       "BR-14"
+      ]
+     },
+     "DR-24": {
+      "class": "reference",
+      "requirements": [
+       "BR-30"
+      ]
+     },
+     "DR-25": {
+      "class": "reference",
+      "requirements": [
+       "BR-19"
+      ]
+     },
+     "DR-26": {
+      "class": "reference",
+      "requirements": [
+       "BR-35"
+      ]
+     },
+     "DR-27": {
+      "class": "reference",
+      "requirements": [
+       "BR-06"
+      ]
+     },
+     "DR-28": {
+      "class": "reference",
+      "requirements": [
+       "BR-24"
+      ]
+     },
+     "DR-29": {
+      "class": "reference",
+      "requirements": [
+       "BR-12"
+      ]
+     },
+     "DR-30": {
+      "class": "reference",
+      "requirements": [
+       "BR-33"
+      ]
+     },
+     "DR-31": {
+      "class": "reference",
+      "requirements": [
+       "BR-18"
+      ]
+     },
+     "DR-32": {
+      "class": "reference",
+      "requirements": [
+       "BR-04"
+      ]
+     },
+     "DR-33": {
+      "class": "reference",
+      "requirements": [
+       "BR-37"
+      ]
+     },
+     "DR-34": {
+      "class": "reference",
+      "requirements": [
+       "BR-22"
+      ]
+     },
+     "DR-35": {
+      "class": "reference",
+      "requirements": [
+       "BR-08"
+      ]
+     },
+     "DR-36": {
+      "class": "reference",
+      "requirements": [
+       "BR-29"
+      ]
+     },
+     "DR-37": {
+      "class": "reference",
+      "requirements": [
+       "BR-16"
+      ]
+     },
+     "DR-38": {
+      "class": "reference",
+      "requirements": [
+       "BR-26"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mutant": "M6",
+   "name": "empty",
+   "repetition": 3,
+   "exact": true,
+   "disagreements": [],
+   "score": {
+    "covered": 0,
+    "partial": 0,
+    "of": 38,
+    "recall": 0.0,
+    "precision": null,
+    "outOfScope": 0,
+    "technical": 0
+   },
+   "judgement": {
+    "requirements": {
+     "BR-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-05": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-06": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-07": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-08": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-09": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-10": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-11": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-12": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-13": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-14": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-15": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-16": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-17": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-18": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-19": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-20": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-21": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-22": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-23": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-24": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-25": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-26": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-27": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-28": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-29": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-30": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-31": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-32": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-33": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-34": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-35": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-36": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-37": {
+      "coverage": "missing",
+      "items": []
+     },
+     "BR-38": {
+      "coverage": "missing",
+      "items": []
+     }
+    },
+    "items": {}
+   }
+  }
+ ]
+}
