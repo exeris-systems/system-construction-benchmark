@@ -515,4 +515,6 @@ Each judge is calibrated on its own, as D-48 sets out, on six contracts built fr
 
 The mutant contracts were written with Claude Code, on Claude Opus 5.5, the family of one of the two judges. Wording close to a model's own may be easier for it to match; both judges are held to the same exact criterion on the same contracts, and every report states who wrote them.
 
+Both judges pass, each with all 18 judgements exact (`runs/track-s/2026-11-09-judge-control-gemini-4-argon`, `runs/track-s/2026-11-09-judge-control-claude-opus-5-5`, `trackS/calibration-log.md`), and the judge prompt is frozen at `40baece8…`. The procedure records the verdict as version 4, draft 3, with no instrument changed. Neither judge missed a difference the mutants hold, so the calibration shows that both judges meet the criterion, not where either one's limit lies.
+
 Impact: `trackS/procedure.md`, `trackS/judge-prompt.md`, `trackS/judge-control.yaml`, `trackS/run-track-s.py`, `trackS/how-to-calibrate-persona.md`, `trackS/calibration-log.md`, `preregistration/frozen-sets.md`.

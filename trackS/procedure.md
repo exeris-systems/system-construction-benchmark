@@ -14,7 +14,7 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 4 (draft 2)
+Version: 4 (draft 3)
 Decision register: D-45 to D-56. Version 3, whose persona calibration this version keeps, is frozen at
 tag `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
@@ -118,7 +118,8 @@ order. Each contract is judged three times, 18 judgements in all. A judge passes
 them gives every requirement the coverage its contract was built with, every item its class, and
 every reworded item the requirement it was reworded from; a single difference fails it. Each judge
 is calibrated on its own, and its prompt is frozen before it judges a subject; a revision is a new
-draft.
+draft. Draft 3 records both judges passing, 18 of 18 judgements exact, on the prompt and mutants of
+draft 2, which it leaves unchanged (`calibration-log.md`).
 
 ## Tests
 
