@@ -616,8 +616,8 @@ Track S measures whether and how well a model gathers requirements before it bui
 - **Subject:** the model under test, as interviewer and analyst; the analyst stage sees only its own transcripts.
 - **Variants:** S-naive — a client request and a channel to the personas, with nothing telling the subject to use it; S-instructed — told to interview, then write requirements.
 - **Output:** a contract derived by the subject.
-- **Scoring:** the judge compares it with the reference requirements — recall, precision, and additions excluded by user-visible anti-requirements; S-naive also records whether elicitation started before the first artefact. Technical anti-requirements, which the brief never states, are not counted against a subject (D-47).
-- **Ceiling:** some reference requirements cannot be derived from the brief. The ceiling is the same for every subject, estimated once — both judges judge the whole brief as a contract (D-60) — and reported separately, never used to rescale scores.
+- **Scoring:** the judge compares it with the Track S reference requirements, written at the level of the brief (D-61) — recall, precision, and additions excluded by user-visible anti-requirements; S-naive also records whether elicitation started before the first artefact. Technical anti-requirements, which the brief never states, are not counted against a subject (D-47).
+- **Ceiling:** every Track S reference requirement rests on units of the brief, so a subject can derive all of them; the construction track's requirements, written at the oracle's level of detail, are not used for Track S (D-61).
 - **Series:** a script series, in which every subject runs through the same harness, so subjects may be compared across vendors; and a native-harness series (S-naive only), each harness reported on its own (D-48).
 
 A chained track (S → construction on the agent's own contract → reference oracle) is permitted as a descriptive end-to-end result only. It never replaces the construction track and is not used for arm comparisons.
