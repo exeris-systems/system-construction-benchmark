@@ -14,7 +14,7 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 6 (draft 1)
+Version: 6 (draft 2)
 Decision register: D-45 to D-60. Version 5, whose instruments, subjects and calibration this version
 keeps, is frozen at tag `us-procedure-v5`; version 4, at `us-procedure-v4`; version 3, at `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
@@ -195,6 +195,12 @@ reply that does not list every requirement and every unit exactly once fails the
 The ceiling is reported beside every `derived_recall`: the covered requirements of each judgement of
 the brief, and how many requirements kept one coverage in all three. It is never used to rescale a
 score. It reads no subject run, and no subject run reads it.
+
+Draft 2 records both judges' judgements of the brief: neither finds a reference requirement the brief
+covers, and they give 1 to 12 a partial coverage. The judge prompt counts only what the service must
+or must not do, and the brief describes the users' world, so the method gives a lower bound on what a
+subject can derive, not the ceiling (`calibration-log.md`, D-60). The instruments of draft 1 are
+unchanged.
 
 ## Tests
 

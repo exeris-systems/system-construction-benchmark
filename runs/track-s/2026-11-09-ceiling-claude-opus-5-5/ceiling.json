@@ -1,0 +1,1372 @@
+{
+ "summary": {
+  "repetitions": [
+   {
+    "covered": 0,
+    "partial": 2,
+    "missing": 37
+   },
+   {
+    "covered": 0,
+    "partial": 3,
+    "missing": 36
+   },
+   {
+    "covered": 0,
+    "partial": 1,
+    "missing": 38
+   }
+  ],
+  "of": 39,
+  "sameInEveryRepetition": 37
+ },
+ "requirements": {
+  "SR-REG-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-QRY-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-VAL-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEN-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEN-02": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEN-03": [
+   "partial",
+   "partial",
+   "missing"
+  ],
+  "SR-TEN-04": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-INV-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-INV-02": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-INV-03": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-INV-04": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-INV-05": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEL-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEL-02": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEL-03a": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEL-03b": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEL-04a": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEL-04b": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-TEL-05": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-CHARGE-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-CHARGE-02": [
+   "missing",
+   "partial",
+   "missing"
+  ],
+  "SR-CHARGE-03": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-CHARGE-04": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-MIS-01": [
+   "partial",
+   "partial",
+   "partial"
+  ],
+  "SR-OVR-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-ROUTE-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-ROUTE-02": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-ROUTE-03a": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-ROUTE-03b": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-AIR-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-SAGA-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-SAGA-02": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-SAGA-03": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-REC-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-X-01": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-X-02": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-X-03": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-X-04": [
+   "missing",
+   "missing",
+   "missing"
+  ],
+  "SR-X-05": [
+   "missing",
+   "missing",
+   "missing"
+  ]
+ },
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "A platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.",
+   "unit": "1.p1"
+  },
+  {
+   "id": "DR-02",
+   "requirement": "The customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.",
+   "unit": "1.p2"
+  },
+  {
+   "id": "DR-03",
+   "requirement": "**Fleet technicians** keep drones and charging equipment in working order. They add new drones to the fleet, retire old ones, set up charging pads at the company's sites, take drones out of service for repairs and put them back, and send drones to charge.",
+   "unit": "2.b1"
+  },
+  {
+   "id": "DR-04",
+   "requirement": "**Dispatchers** plan and run the flights. A dispatcher is the licensed person responsible for each flight: they decide which drone flies, along which way, and they sign off a flight before it leaves. A dispatcher can call off a flight.",
+   "unit": "2.b2"
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The **airspace desk** keeps the shared picture of the airspace: the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The desk works for all customer companies and has no business looking into any one company's operations. When a closure is entered, the desk wants to know how much disruption it caused across customers.",
+   "unit": "2.b3"
+  },
+  {
+   "id": "DR-06",
+   "requirement": "A company may run a few hundred drones. The drones are of several models from different manufacturers. They differ in how much they can carry, how far they can fly on a full battery, which sensors they carry (cameras, thermal cameras, laser scanners), and which charging connector they use. Several connector types are in use and they are not interchangeable.",
+   "unit": "3.b1"
+  },
+  {
+   "id": "DR-07",
+   "requirement": "Each drone has a home site. Each company has its own charging pads at its own sites, a few dozen of them. Pads are never lent to another company.",
+   "unit": "3.b2"
+  },
+  {
+   "id": "DR-08",
+   "requirement": "Repairs and servicing are carried out by technicians. Regulators can ask a company to show how its drones have been looked after.",
+   "unit": "3.b3"
+  },
+  {
+   "id": "DR-09",
+   "requirement": "**Deliveries** carry a load from one site to another.",
+   "unit": "4.b1"
+  },
+  {
+   "id": "DR-10",
+   "requirement": "**Inspections** take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started.",
+   "unit": "4.b2"
+  },
+  {
+   "id": "DR-11",
+   "requirement": "Drones fly along corridors between named sites. Sites have only so many places where drones can take off and land at the same time.",
+   "unit": "4.b3"
+  },
+  {
+   "id": "DR-12",
+   "requirement": "Choosing the drone and the way it flies is the dispatcher's legal responsibility. The companies' policy is that software never chooses a drone or a way for them. Dispatchers do want help finding out which of their drones could get to where a job starts.",
+   "unit": "4.b4"
+  },
+  {
+   "id": "DR-13",
+   "requirement": "Several dispatchers plan at the same time, often for the same busy sites and the same popular drones.",
+   "unit": "4.b5"
+  },
+  {
+   "id": "DR-14",
+   "requirement": "Before and during a flight, things happen outside the company's control: the load is ready or not, the drone reaches the points of its job, and the drone arrives. People and devices outside the company report these things.",
+   "unit": "4.b6"
+  },
+  {
+   "id": "DR-15",
+   "requirement": "The authorities define zones where flying is prohibited, and they announce closures: planned ones with a start and end time, and sudden ones that apply at once. Closures are often amended during the day, for example when an area is widened or an end time moves.",
+   "unit": "5.b1"
+  },
+  {
+   "id": "DR-16",
+   "requirement": "A closure can come into force while drones of several companies are already in the air.",
+   "unit": "5.b2"
+  },
+  {
+   "id": "DR-17",
+   "requirement": "The relevant rules are the EU drone operation rules (Implementing Regulation (EU) 2019/947, including geographical zones and operator responsibilities) and the EU U-space rules (Implementing Regulation (EU) 2021/664, including airspace information and flight authorisation). Personal data of staff is covered by the GDPR. None of the companies is seeking certification from the platform; they expect it to respect how these rules work in practice.",
+   "unit": "5.b3"
+  },
+  {
+   "id": "DR-18",
+   "requirement": "Drones fly on their own autopilots. People on the ground supervise; nobody steers a drone with a stick through this service.",
+   "unit": "6.b1"
+  },
+  {
+   "id": "DR-19",
+   "requirement": "Radio coverage is patchy, especially around ports, industrial sites, and in bad weather. Reports from drones come through relay stations. They can arrive late, out of order, more than once, or not at all.",
+   "unit": "6.b2"
+  },
+  {
+   "id": "DR-20",
+   "requirement": "Drones sometimes restart in flight after a software fault and carry on.",
+   "unit": "6.b3"
+  },
+  {
+   "id": "DR-21",
+   "requirement": "Batteries drain faster in cold and wind than planned.",
+   "unit": "6.b4"
+  },
+  {
+   "id": "DR-22",
+   "requirement": "Nobody watches every drone at every moment; one person may be responsible for hundreds.",
+   "unit": "6.b5"
+  },
+  {
+   "id": "DR-23",
+   "requirement": "The links used to give instructions to drones and to the charging equipment are unreliable too. An instruction may get through twice, and the sender often cannot tell whether the first attempt arrived.",
+   "unit": "6.b6"
+  },
+  {
+   "id": "DR-24",
+   "requirement": "The platform company is small. The service runs on a single server. It is updated and restarted during working hours, while drones are flying, and it occasionally crashes. The companies accept a few minutes of interruption.",
+   "unit": "7.b1"
+  },
+  {
+   "id": "DR-25",
+   "requirement": "Each company runs its own systems, such as billing and customer updates, that need to hear about what happens to its drones and jobs.",
+   "unit": "7.b2"
+  },
+  {
+   "id": "DR-26",
+   "requirement": "Management or analytical reports, exports, and dashboards beyond day-to-day operations.",
+   "unit": "8.b1"
+  },
+  {
+   "id": "DR-27",
+   "requirement": "Logging in through their own corporate identity systems.",
+   "unit": "8.b2"
+  },
+  {
+   "id": "DR-28",
+   "requirement": "Several languages.",
+   "unit": "8.b3"
+  },
+  {
+   "id": "DR-29",
+   "requirement": "Any guarantee of meeting regulations, any compliance audit, or any data-retention or deletion features.",
+   "unit": "8.b4"
+  },
+  {
+   "id": "DR-30",
+   "requirement": "Backups, high availability, or spreading the service over several servers.",
+   "unit": "8.b5"
+  },
+  {
+   "id": "DR-31",
+   "requirement": "Accounts and passwords inside the service: staff accounts are issued by the platform company outside it.",
+   "unit": "8.b6"
+  },
+  {
+   "id": "DR-32",
+   "requirement": "Alerts to staff by e-mail, text message, or phone; each company's own systems take care of reaching people.",
+   "unit": "8.b7"
+  },
+  {
+   "id": "DR-33",
+   "requirement": "Software that plans routes or picks drones.",
+   "unit": "8.b8"
+  },
+  {
+   "id": "DR-34",
+   "requirement": "Flying drones remotely through the service.",
+   "unit": "8.b9"
+  },
+  {
+   "id": "DR-35",
+   "requirement": "Weather information.",
+   "unit": "8.b10"
+  },
+  {
+   "id": "DR-36",
+   "requirement": "Billing or pricing of the work; companies do that in their own systems.",
+   "unit": "8.b11"
+  },
+  {
+   "id": "DR-37",
+   "requirement": "Signing up new companies through the service; the platform company does that itself.",
+   "unit": "8.b12"
+  }
+ ],
+ "judgements": [
+  {
+   "repetition": 1,
+   "judgement": {
+    "requirements": {
+     "SR-REG-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-QRY-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-VAL-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-03": {
+      "coverage": "partial",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "SR-TEN-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-05": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-03a": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-03b": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-04a": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-04b": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-05": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-MIS-01": {
+      "coverage": "partial",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "SR-OVR-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-03a": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-03b": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-AIR-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-SAGA-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-SAGA-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-SAGA-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-REC-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-05": {
+      "coverage": "missing",
+      "items": []
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-02": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-03": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-04": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "SR-TEN-03"
+      ]
+     },
+     "DR-06": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-07": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-08": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-09": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-10": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-11": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "SR-MIS-01"
+      ]
+     },
+     "DR-13": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-14": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-15": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-16": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-17": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-18": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-19": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-20": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-21": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-22": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-23": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-24": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-25": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-26": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-27": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-28": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-29": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-30": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-31": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-32": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-33": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-34": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-35": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-36": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-37": {
+      "class": "user_visible",
+      "requirements": []
+     }
+    }
+   }
+  },
+  {
+   "repetition": 2,
+   "judgement": {
+    "requirements": {
+     "SR-REG-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-QRY-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-VAL-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-03": {
+      "coverage": "partial",
+      "items": [
+       "DR-05"
+      ]
+     },
+     "SR-TEN-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-05": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-03a": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-03b": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-04a": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-04b": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-05": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-02": {
+      "coverage": "partial",
+      "items": [
+       "DR-07"
+      ]
+     },
+     "SR-CHARGE-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-MIS-01": {
+      "coverage": "partial",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "SR-OVR-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-03a": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-03b": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-AIR-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-SAGA-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-SAGA-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-SAGA-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-REC-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-05": {
+      "coverage": "missing",
+      "items": []
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-02": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-03": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-04": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-05": {
+      "class": "reference",
+      "requirements": [
+       "SR-TEN-03"
+      ]
+     },
+     "DR-06": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-07": {
+      "class": "reference",
+      "requirements": [
+       "SR-CHARGE-02"
+      ]
+     },
+     "DR-08": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-09": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-10": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-11": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "SR-MIS-01"
+      ]
+     },
+     "DR-13": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-14": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-15": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-16": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-17": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-18": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-19": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-20": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-21": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-22": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-23": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-24": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-25": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-26": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-27": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-28": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-29": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-30": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-31": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-32": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-33": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-34": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-35": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-36": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-37": {
+      "class": "user_visible",
+      "requirements": []
+     }
+    }
+   }
+  },
+  {
+   "repetition": 3,
+   "judgement": {
+    "requirements": {
+     "SR-REG-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-QRY-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-VAL-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEN-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-INV-05": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-03a": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-03b": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-04a": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-04b": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-TEL-05": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-CHARGE-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-MIS-01": {
+      "coverage": "partial",
+      "items": [
+       "DR-12"
+      ]
+     },
+     "SR-OVR-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-03a": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-ROUTE-03b": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-AIR-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-SAGA-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-SAGA-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-SAGA-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-REC-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-01": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-02": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-03": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-04": {
+      "coverage": "missing",
+      "items": []
+     },
+     "SR-X-05": {
+      "coverage": "missing",
+      "items": []
+     }
+    },
+    "items": {
+     "DR-01": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-02": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-03": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-04": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-05": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-06": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-07": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-08": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-09": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-10": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-11": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-12": {
+      "class": "reference",
+      "requirements": [
+       "SR-MIS-01"
+      ]
+     },
+     "DR-13": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-14": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-15": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-16": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-17": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-18": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-19": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-20": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-21": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-22": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-23": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-24": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-25": {
+      "class": "other",
+      "requirements": []
+     },
+     "DR-26": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-27": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-28": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-29": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-30": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-31": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-32": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-33": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-34": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-35": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-36": {
+      "class": "user_visible",
+      "requirements": []
+     },
+     "DR-37": {
+      "class": "user_visible",
+      "requirements": []
+     }
+    }
+   }
+  }
+ ]
+}
