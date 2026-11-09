@@ -518,3 +518,17 @@ The mutant contracts were written with Claude Code, on Claude Opus 5.5, the fami
 Both judges pass, each with all 18 judgements exact (`runs/track-s/2026-11-09-judge-control-gemini-4-argon`, `runs/track-s/2026-11-09-judge-control-claude-opus-5-5`, `trackS/calibration-log.md`), and the judge prompt is frozen at `40baece8…`. The procedure records the verdict as version 4, draft 3, with no instrument changed. Neither judge missed a difference the mutants hold, so the calibration shows that both judges meet the criterion, not where either one's limit lies.
 
 Impact: `trackS/procedure.md`, `trackS/judge-prompt.md`, `trackS/judge-control.yaml`, `trackS/run-track-s.py`, `trackS/how-to-calibrate-persona.md`, `trackS/calibration-log.md`, `preregistration/frozen-sets.md`.
+
+### D-57 — The subjects' prompts and their channel to the personas
+
+Version 5 of the Track S procedure adds the subjects' prompts; the instruments and their calibration are those of version 4, unchanged. A subject receives brief §1 and the role names (D-47) and writes the requirements as a derived contract in the shape of D-56: a YAML list of items with an `id` and a `requirement`. `trackS/subject-naive-prompt.md` asks for the requirements in that shape, as a client would; `trackS/subject-analyst-prompt.md` asks the same of the analyst.
+
+In S-naive the subject reaches the personas through a line of text, `ASK <role>: <question>`. The script series compares vendors, so its channel must work alike for every subject; a native tool call would be handled differently by each provider's API, and that difference would enter the comparison. The prompt describes the line as a way to reach the users and does not suggest using it, so that whether the subject asks is what S-naive measures (D-45). In the native series the harness's `ask_user` tool takes the line's place, and one sentence of the prompt says so instead.
+
+S-instructed keeps the shape of procedure v2's pilots: one interview per role with `trackS/subject-interviewer-prompt.md`, ended by `END OF INTERVIEW`, then a separate analyst session that sees only the three transcripts (D-45). The interviewer prompt is v2's, with the question limit stated; the analyst prompt asks for the contract instead of user stories, and no longer receives brief §1, which D-45 leaves out of the analyst's input. The prompts of v2, `interviewer-prompt.md` and `analyst-prompt.md`, leave `trackS/`; they stay at tag `us-procedure-v2`.
+
+An interview ends after 30 questions, and S-naive after 90 questions in all, the same total over the three roles. A limit ends the questioning, never the run: the subject then writes its requirements. The limits keep a run within the account's credits, about 2,700 persona calls over the 30 script-series runs at most; a subject that reaches one is recorded as having reached it.
+
+A requirements message from which no item can be read is the empty contract, recorded as unreadable, and is never repaired or asked for again: reading the shape it was asked for is part of what is measured.
+
+Impact: `trackS/procedure.md`, `trackS/subject-naive-prompt.md`, `trackS/subject-interviewer-prompt.md`, `trackS/subject-analyst-prompt.md`, `preregistration/frozen-sets.md`.
