@@ -427,3 +427,27 @@ the threshold being 37: the questions that return to an earlier answer, the gene
 the follow-ups in other words are all labelled as the set labels them. The pairs were written with
 Claude Code, on Claude Opus 5.5 (D-59). As with the mutants, neither judge missed a label, so the
 calibration shows both meet the threshold, not where either one's limit lies.
+
+## Ceiling
+
+| Run | Model | `judge-prompt.md` (SHA-256) | Covered, partial, missing per repetition | Verdict |
+| --- | --- | --- | --- | --- |
+| `runs/track-s/2026-11-09-ceiling-gemini-4-argon` | `gemini-4-argon`, temperature 0, seed 1 | `40baece8…` (version 4, draft 2) | 0, 12, 27 in each of three; 35 of 39 the same in all | **no estimate** — a lower bound |
+| `runs/track-s/2026-11-09-ceiling-claude-opus-5-5` | `claude-opus-5-5`, effort `high` | `40baece8…` (version 4, draft 2) | 0, 2, 37; 0, 3, 36; 0, 1, 38; 37 of 39 the same in all | **no estimate** — a lower bound |
+
+### `2026-11-09-ceiling-gemini-4-argon` and `-claude-opus-5-5` — no estimate
+
+Both runs completed without error or retry, three judgements each, every response a natural stop
+(`STOP`, `end_turn`). Neither judge finds one reference requirement the brief covers. The judges
+differ on what it covers in part: Argon gives 12 requirements a partial coverage, among them
+registration, tenancy, routing, restrictions and the mission flow; Opus gives at most three.
+
+The judge prompt counts an item only where it says what the service must do or must not do. The
+brief describes the users' world and states almost no obligation of the service, so the judges
+find little in it to count, and a contract that turns the same descriptions into obligations can
+cover more than the brief does. Judged this way, the brief gives a lower bound on what a subject
+can derive, not the ceiling D-45 asks for, and mode `ceiling` does not estimate it (D-60).
+
+Twenty-five requirements are missing in every judgement of both judges: SR-QRY-01, SR-VAL-01,
+SR-INV-01 to SR-INV-04, the seven SR-TEL requirements, SR-CHARGE-03, SR-CHARGE-04, SR-OVR-01,
+SR-ROUTE-03a, SR-ROUTE-03b, SR-SAGA-01, SR-SAGA-02 and SR-X-01 to SR-X-05.
