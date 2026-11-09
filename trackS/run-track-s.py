@@ -17,12 +17,15 @@ quoted source is found in the notes.
   grader-control    ask the grader to grade the cases of grader-control.yaml, whose verdicts are known
   grade             grade every answer of a completed persona run (--graded) with the grader
 
+  judge-control     ask a judge to judge the mutant contracts of judge-control.yaml, whose coverage of
+                    the reference requirements is known, several times
+
 Each role names a provider and a model. Every request and response is written to the output
 directory verbatim, with every response header that reports a rate limit and the body of every 429,
 so the run record documents the quotas it ran under. The output is committed unedited.
 
 Requires only the Python standard library. API keys are read from the environment
-(MISTRAL_API_KEY, GEMINI_API_KEY) and are never written to the output.
+(MISTRAL_API_KEY, GEMINI_API_KEY, ANTHROPIC_API_KEY) and are never written to the output.
 """
 
 import argparse
@@ -45,6 +48,13 @@ HOLDOUT_FILE = "persona-holdout.yaml"
 CHECK_FILE = "persona-check-prompt.md"
 GRADER_FILE = "grader-prompt.md"
 GRADER_CONTROL_FILE = "grader-control.yaml"
+JUDGE_FILE = "judge-prompt.md"
+JUDGE_CONTROL_FILE = "judge-control.yaml"
+# The judge's inputs from the contract, named by their path from the repository root.
+REFERENCE_FILE = "contract/system-requirements.yaml"
+ANTI_FILE = "contract/anti-requirements.md"
+COVERAGE = ("covered", "partial", "missing")
+CLASSES = ("reference", "user_visible", "technical", "other")
 # The persona passes a deciding run at this many passing answers of 72, with no contradiction (D-50).
 PASS_AT = 65
 # A quoted source shorter than this matches too much of any notes to show where a sentence comes from.
@@ -56,6 +66,7 @@ QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FIL
                  "persona-holdout-2": "persona-holdout-2.yaml", "persona-holdout-3": "persona-holdout-3.yaml",
                  "persona-holdout-4": "persona-holdout-4.yaml", "persona-holdout-5": "persona-holdout-5.yaml"}
 GRADE_MODES = ("grader-control", "grade")
+JUDGE_MODES = ("judge-control",)
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
 
@@ -63,10 +74,14 @@ PROVIDERS = {
     "mistral": {"kind": "openai", "base": "https://api.mistral.ai/v1", "key": "MISTRAL_API_KEY"},
     "gemini": {"kind": "gemini", "base": "https://generativelanguage.googleapis.com/v1beta",
                "key": "GEMINI_API_KEY"},
+    "anthropic": {"kind": "anthropic", "base": "https://api.anthropic.com/v1", "key": "ANTHROPIC_API_KEY"},
 }
+ANTHROPIC_VERSION = "2026-10-21"
+# Sampling settings the provider refuses for every current model; depth is set by effort instead.
+NO_SAMPLING = {"anthropic"}
 # The finish reasons that mean the model stopped on its own. Anything else — a token limit, a
 # safety block — is a truncated or altered answer, and a run that accepted one would carry it.
-NATURAL_STOP = {"openai": {"stop"}, "gemini": {"STOP"}}
+NATURAL_STOP = {"openai": {"stop"}, "gemini": {"STOP"}, "anthropic": {"end_turn"}}
 
 ROLES = {
     "technician": "a fleet technician at one of the drone operating companies",
@@ -226,7 +241,7 @@ def parse_control(text, name=CONTROL_FILE):
 
 # --- providers ------------------------------------------------------------------------------------
 
-def role_problem(role, provider, model, rpm, max_tokens, temperature=None):
+def role_problem(role, provider, model, rpm, max_tokens, temperature=None, seed=None, effort=None):
     """Why a role's settings cannot run, or None. Checked before a run directory exists."""
     if provider not in PROVIDERS:
         return f"{role}: unknown provider {provider!r}; known: {sorted(PROVIDERS)}"
@@ -238,6 +253,10 @@ def role_problem(role, provider, model, rpm, max_tokens, temperature=None):
         return f"{role}: max output tokens must be positive, got {max_tokens}"
     if temperature is not None and temperature < 0:
         return f"{role}: temperature must not be negative, got {temperature}"
+    if PROVIDERS[provider]["kind"] in NO_SAMPLING and (temperature is not None or seed is not None):
+        return f"{role}: {provider} takes no temperature or seed; set its effort instead"
+    if effort is not None and PROVIDERS[provider]["kind"] != "anthropic":
+        return f"{role}: effort is an {sorted(NO_SAMPLING)} setting, not one of {provider}"
     if not os.environ.get(PROVIDERS[provider]["key"]):
         return f"{role}: {PROVIDERS[provider]['key']} is not set"
     return None
@@ -246,12 +265,12 @@ def role_problem(role, provider, model, rpm, max_tokens, temperature=None):
 class Client:
     """One provider and model for one role, paced below its per-minute limit."""
 
-    def __init__(self, role, provider, model, rpm, max_tokens, recorder, temperature=None, seed=None):
-        problem = role_problem(role, provider, model, rpm, max_tokens, temperature)
+    def __init__(self, role, provider, model, rpm, max_tokens, recorder, temperature=None, seed=None, effort=None):
+        problem = role_problem(role, provider, model, rpm, max_tokens, temperature, seed, effort)
         if problem:
             raise RunFailed(problem)
         self.role, self.provider, self.model = role, provider, model
-        self.temperature, self.seed = temperature, seed
+        self.temperature, self.seed, self.effort = temperature, seed, effort
         self.spec = PROVIDERS[provider]
         self.interval, self.max_tokens, self.recorder = 60 / rpm, max_tokens, recorder
         self.key = os.environ[self.spec["key"]]
@@ -260,6 +279,8 @@ class Client:
     def _headers(self):
         if self.spec["kind"] == "openai":
             return {"Content-Type": "application/json", "Authorization": f"Bearer {self.key}"}
+        if self.spec["kind"] == "anthropic":
+            return {"Content-Type": "application/json", "x-api-key": self.key, "anthropic-version": ANTHROPIC_VERSION}
         return {"Content-Type": "application/json", "x-goog-api-key": self.key}
 
     def describe(self):
@@ -295,6 +316,12 @@ class Client:
             body = {"model": self.model, "messages": messages, "max_tokens": self.max_tokens}
             sampling = {"temperature": self.temperature, "random_seed": self.seed}
             return {**body, **{k: v for k, v in sampling.items() if v is not None}}
+        if self.spec["kind"] == "anthropic":
+            messages = [{"role": "assistant" if r == "model" else "user", "content": t} for r, t in turns]
+            body = {"model": self.model, "max_tokens": self.max_tokens, "system": system, "messages": messages}
+            if self.effort is not None:
+                body["output_config"] = {"effort": self.effort}
+            return body
         config = {"maxOutputTokens": self.max_tokens, "temperature": self.temperature, "seed": self.seed}
         return {
             "systemInstruction": {"parts": [{"text": system}]},
@@ -305,6 +332,8 @@ class Client:
     def _url(self):
         if self.spec["kind"] == "openai":
             return f"{self.spec['base']}/chat/completions"
+        if self.spec["kind"] == "anthropic":
+            return f"{self.spec['base']}/messages"
         return f"{self.spec['base']}/models/{self.model}:generateContent"
 
     def _parse(self, payload):
@@ -316,6 +345,10 @@ class Client:
                 content = "".join(c.get("text", "") for c in content if isinstance(c, dict) and c.get("type") == "text")
             return (content, choice.get("finish_reason"),
                     payload.get("id"), payload.get("model"), payload.get("usage"))
+        if self.spec["kind"] == "anthropic":
+            # Thinking blocks are the model's reasoning, never its answer; only text blocks are kept.
+            text = "".join(b.get("text", "") for b in payload.get("content") or [] if b.get("type") == "text")
+            return (text, payload.get("stop_reason"), payload.get("id"), payload.get("model"), payload.get("usage"))
         candidate = (payload.get("candidates") or [{}])[0]
         text = "".join(p.get("text", "") for p in (candidate.get("content") or {}).get("parts", []))
         return (text, candidate.get("finishReason"), payload.get("responseId"),
@@ -356,13 +389,17 @@ class Client:
             time.sleep(min(5 * 2 ** (attempt - 1), 300))
         raise RunFailed(f"{session}: no response")
 
-    def call(self, session, system, turns, json_reply=False):
+    def call(self, session, system, turns, json_reply=False, schema=None):
         # A subject runs on the provider's defaults, the one setting nobody can suspect of being chosen.
         # An instrument's temperature and seed are fixed by the procedure and sent, so its answers do
         # not depend on a default the provider may change.
         request = self._body(system, turns)
         if json_reply and self.spec["kind"] == "openai":
             request["response_format"] = {"type": "json_object"}
+        elif json_reply and self.spec["kind"] == "anthropic":
+            # Without a schema the reply is held to JSON by the prompt alone, as with the other providers.
+            if schema is not None:
+                request.setdefault("output_config", {})["format"] = {"type": "json_schema", "schema": schema}
         elif json_reply:
             request["generationConfig"]["responseMimeType"] = "application/json"
         body = json.dumps(request, ensure_ascii=False, indent=1).encode()
@@ -519,9 +556,187 @@ def grade_run(args, files, notes, out, run, grader):
     (out / "grades.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
 
 
+# --- the judge ------------------------------------------------------------------------------------
+
+def parse_reference(text):
+    """The parameters and requirements of system-requirements.yaml: ([(name, value)], [(id, requirement)])."""
+    parameters, requirements, section, current, block = [], [], None, None, None
+    for raw in text.splitlines():
+        if raw and not raw[0].isspace():
+            section = raw.split(":")[0]
+            continue
+        line = raw.split("  #")[0].rstrip() if section == "parameters" else raw.rstrip()
+        if section == "parameters" and line.strip():
+            name, _, value = line.strip().partition(":")
+            parameters.append((name.strip(), value.strip()))
+        elif section == "requirements":
+            stripped = line.strip()
+            if stripped.startswith("- id:"):
+                current, block = {"id": stripped[len("- id:"):].strip(), "lines": []}, False
+                requirements.append(current)
+            elif current is not None and stripped == "requirement: >":
+                block = True
+            elif current is not None and block and len(line) - len(line.lstrip()) >= 6:
+                current["lines"].append(stripped)
+            elif stripped:
+                block = False
+    return parameters, [(r["id"], " ".join(r["lines"])) for r in requirements]
+
+
+def parse_anti(text):
+    """The bullets of anti-requirements.md: (user-visible, technical)."""
+    lists, current = {"User-visible": [], "Technical": []}, None
+    for line in text.splitlines():
+        if line.startswith("## "):
+            current = lists.get(line[3:].strip())
+        elif current is not None and line.startswith("- "):
+            current.append(line[2:].strip())
+    return lists["User-visible"], lists["Technical"]
+
+
+def judge_system(prompt, files):
+    parameters, requirements = parse_reference(files[REFERENCE_FILE])
+    out_of_scope, technical = parse_anti(files[ANTI_FILE])
+    return (prompt.replace("{{REFERENCE}}", "\n\n".join(f"{i}: {r}" for i, r in requirements))
+            .replace("{{PARAMETERS}}", "\n".join(f"{n} = {v}" for n, v in parameters))
+            .replace("{{OUT_OF_SCOPE}}", "\n".join(f"- {a}" for a in out_of_scope))
+            .replace("{{TECHNICAL}}", "\n".join(f"- {a}" for a in technical)))
+
+
+def build_mutants(control):
+    """Each mutant's contract and what a judge must report for it, from judge-control.yaml.
+
+    Items are renumbered in their final order, so an id reveals nothing of how the contract was made.
+    """
+    base = {b["id"]: b for b in control["base"]}
+    partials = {p["id"]: p["requirement"] for p in control["partials"]}
+    additions = {a["id"]: a for a in control["additions"]}
+    mutants = []
+    for m in control["mutants"]:
+        remove, partial, add = (m[k].split() for k in ("remove", "partial", "add"))
+        unknown = [i for i in (remove + partial) if i not in base and i != "all"] + [i for i in add if i not in additions]
+        if unknown:
+            sys.exit(f"{JUDGE_CONTROL_FILE}: mutant {m['id']} names unknown entries {unknown}")
+        kept = [] if remove == ["all"] else [b for b in control["base"] if b["id"] not in remove]
+        entries = []
+        for b in kept:
+            text = partials[b["id"]] if b["id"] in partial else b["requirement"]
+            entries.append({"requirement": text, "class": "reference", "covers": b["covers"]})
+            entries += [{"requirement": additions[a]["requirement"], "class": additions[a]["class"], "covers": None}
+                        for a in add if additions[a]["after"] == b["id"]]
+        items = [{"id": f"DR-{n:02d}", **e} for n, e in enumerate(entries, 1)]
+        coverage = {b["covers"]: "missing" for b in control["base"]}
+        for b in kept:
+            coverage[b["covers"]] = "partial" if b["id"] in partial else "covered"
+        mutants.append({"id": m["id"], "name": m["name"], "items": items, "coverage": coverage})
+    return mutants
+
+
+def contract_text(items):
+    if not items:
+        return "The contract has no items."
+    listed = "\n".join(f"- id: {i['id']}\n  requirement: {i['requirement']}" for i in items)
+    return f"The contract has {len(items)} items:\n\n{listed}"
+
+
+JUDGEMENT_SCHEMA = {
+    "type": "object", "additionalProperties": False, "required": ["requirements", "items"],
+    "properties": {
+        "requirements": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False, "required": ["id", "coverage", "items"],
+            "properties": {"id": {"type": "string"}, "coverage": {"type": "string", "enum": list(COVERAGE)},
+                           "items": {"type": "array", "items": {"type": "string"}}}}},
+        "items": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False, "required": ["id", "class", "requirements"],
+            "properties": {"id": {"type": "string"}, "class": {"type": "string", "enum": list(CLASSES)},
+                           "requirements": {"type": "array", "items": {"type": "string"}}}}},
+    },
+}
+
+
+def parse_judgement(text, requirement_ids, item_ids):
+    """The judge's reply, or None unless it lists every requirement and every item exactly once."""
+    try:
+        reply = json.loads(text)
+    except ValueError:
+        return None
+    if not isinstance(reply, dict) or not isinstance(reply.get("requirements"), list) or not isinstance(reply.get("items"), list):
+        return None
+    requirements, items = {}, {}
+    for r in reply["requirements"]:
+        if not isinstance(r, dict) or r.get("coverage") not in COVERAGE or not isinstance(r.get("items"), list):
+            return None
+        requirements[r.get("id")] = {"coverage": r["coverage"], "items": [str(i) for i in r["items"]]}
+    for i in reply["items"]:
+        if not isinstance(i, dict) or i.get("class") not in CLASSES or not isinstance(i.get("requirements"), list):
+            return None
+        items[i.get("id")] = {"class": i["class"], "requirements": [str(r) for r in i["requirements"]]}
+    if (len(requirements) != len(reply["requirements"]) or set(requirements) != set(requirement_ids)
+            or len(items) != len(reply["items"]) or set(items) != set(item_ids)):
+        return None
+    return {"requirements": requirements, "items": items}
+
+
+def score(judgement):
+    """The contract's measures from one judgement (program plan §6.4, decision register D-45, D-47)."""
+    coverage = [r["coverage"] for r in judgement["requirements"].values()]
+    classes = [i["class"] for i in judgement["items"].values()]
+    counted = len(classes) - classes.count("technical")
+    return {"covered": coverage.count("covered"), "partial": coverage.count("partial"), "of": len(coverage),
+            "recall": coverage.count("covered") / len(coverage) if coverage else None,
+            "precision": classes.count("reference") / counted if counted else None,
+            "outOfScope": classes.count("user_visible"), "technical": classes.count("technical")}
+
+
+def disagreements(mutant, judgement):
+    """Every place where the judgement differs from what the mutant was built to be."""
+    found = []
+    for rid, expected in mutant["coverage"].items():
+        got = judgement["requirements"][rid]["coverage"]
+        if got != expected:
+            found.append(f"{rid}: {got}, expected {expected}")
+    for item in mutant["items"]:
+        got = judgement["items"][item["id"]]
+        if got["class"] != item["class"]:
+            found.append(f"{item['id']}: {got['class']}, expected {item['class']}")
+        elif item["class"] == "reference" and item["covers"] not in got["requirements"]:
+            found.append(f"{item['id']}: does not name {item['covers']}")
+    return found
+
+
+def judge_one(judge, system, session, requirement_ids, items):
+    """One judgement of one contract; a reply of the wrong shape is asked for once more, as the same request."""
+    for attempt in ("judge", "judge-again"):
+        reply = judge.call(f"{session}/{attempt}", system, [("user", contract_text(items))],
+                           json_reply=True, schema=JUDGEMENT_SCHEMA)
+        judgement = parse_judgement(reply, requirement_ids, [i["id"] for i in items])
+        if judgement is not None:
+            return judgement
+    raise RunFailed(f"{session}: the judgement does not list every requirement and every item exactly once")
+
+
+def judge_control(args, files, out, run, judge):
+    """Judge every mutant several times; the judge passes only when every judgement is exactly right (D-48)."""
+    mutants = build_mutants(parse_control(files[JUDGE_CONTROL_FILE], JUDGE_CONTROL_FILE))
+    system = judge_system(files[JUDGE_FILE], files)
+    requirement_ids = [i for i, _ in parse_reference(files[REFERENCE_FILE])[1]]
+    results = []
+    for repetition in range(1, args.repetitions + 1):
+        for m in mutants:
+            judgement = judge_one(judge, system, f"{m['id']}/{repetition}", requirement_ids, m["items"])
+            found = disagreements(m, judgement)
+            results.append({"mutant": m["id"], "name": m["name"], "repetition": repetition, "exact": not found,
+                            "disagreements": found, "score": score(judgement), "judgement": judgement})
+    summary = {"exact": sum(r["exact"] for r in results), "of": len(results),
+               "passes": bool(results) and all(r["exact"] for r in results)}
+    (out / "judge-control.json").write_text(json.dumps(
+        {"summary": summary, "mutants": [{k: m[k] for k in ("id", "name", "items", "coverage")} for m in mutants],
+         "judgements": results}, ensure_ascii=False, indent=1) + "\n")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("mode", choices=sorted(QUESTION_SETS) + list(GRADE_MODES))
+    parser.add_argument("mode", choices=sorted(QUESTION_SETS) + list(GRADE_MODES) + list(JUDGE_MODES))
     parser.add_argument("--persona-provider", default="mistral")
     parser.add_argument("--persona-model", help="exact model identifier; required by the persona modes")
     parser.add_argument("--persona-rpm", type=float, default=30)
@@ -535,19 +750,30 @@ def main():
     parser.add_argument("--grader-max-tokens", type=int, default=1024)
     parser.add_argument("--grader-temperature", type=float, help="sent when given; else the provider default")
     parser.add_argument("--grader-seed", type=int, help="sent when given; else none")
+    parser.add_argument("--judge-provider", default="gemini")
+    parser.add_argument("--judge-model", help="exact model identifier; required by the judge modes")
+    parser.add_argument("--judge-rpm", type=float, default=5)
+    parser.add_argument("--judge-max-tokens", type=int, default=32768)
+    parser.add_argument("--judge-temperature", type=float, help="sent when given; else the provider default")
+    parser.add_argument("--judge-seed", type=int, help="sent when given; else none")
+    parser.add_argument("--judge-effort", help="anthropic only: the effort level, sent when given")
     parser.add_argument("--graded", type=pathlib.Path, help="the completed persona run that mode grade grades")
     parser.add_argument("--repetitions", type=int, default=3)
     parser.add_argument("--out", type=pathlib.Path, help="output directory (must not exist)")
     parser.add_argument("--dry-run", action="store_true", help="check inputs and print hashes; call nothing")
     args = parser.parse_args()
-    grading = args.mode in GRADE_MODES
+    grading, judging = args.mode in GRADE_MODES, args.mode in JUDGE_MODES
 
     names = ["world-brief.md", "brief-slices.yaml"]
-    if grading:
+    if judging:
+        names += [JUDGE_FILE, JUDGE_CONTROL_FILE]
+    elif grading:
         names += [GRADER_FILE] + ([GRADER_CONTROL_FILE] if args.mode == "grader-control" else [])
     else:
         names += ["persona-prompt.md", QUESTION_SETS[args.mode]] + ([CHECK_FILE] if args.persona_check else [])
     files = {name: (HERE / name).read_text() for name in names}
+    if judging:
+        files.update({name: (HERE.parent / name).read_text() for name in (REFERENCE_FILE, ANTI_FILE)})
     files["run-track-s.py"] = pathlib.Path(__file__).read_text()
 
     units = parse_brief(files["world-brief.md"])
@@ -575,9 +801,16 @@ def main():
                 sys.exit(f"--graded {args.graded}: {name} has changed since that run")
     hashes = {name: sha256(text) for name, text in files.items()}
 
-    if grading:
+    if judging:
+        role, settings = "judge", (args.judge_provider, args.judge_model, args.judge_rpm, args.judge_max_tokens,
+                                   args.judge_temperature, args.judge_seed, args.judge_effort)
+        mutants = build_mutants(parse_control(files[JUDGE_CONTROL_FILE], JUDGE_CONTROL_FILE))
+        plan = {"mutants": {m["id"]: {"items": len(m["items"]),
+                                      **{c: list(m["coverage"].values()).count(c) for c in COVERAGE}} for m in mutants},
+                "calls": len(mutants) * args.repetitions}
+    elif grading:
         role, settings = "grader", (args.grader_provider, args.grader_model, args.grader_rpm,
-                                    args.grader_max_tokens, args.grader_temperature)
+                                    args.grader_max_tokens, args.grader_temperature, args.grader_seed, None)
         if args.mode == "grader-control":
             cases = parse_control(files[GRADER_CONTROL_FILE], GRADER_CONTROL_FILE)
             calls = sum(len(c) for c in cases.values())
@@ -586,7 +819,7 @@ def main():
         plan = {"calls": calls}
     else:
         role, settings = "persona", (args.persona_provider, args.persona_model, args.persona_rpm,
-                                     args.persona_max_tokens, args.persona_temperature)
+                                     args.persona_max_tokens, args.persona_temperature, args.persona_seed, None)
         set_file = QUESTION_SETS[args.mode]
         control = parse_control(files[set_file], set_file)
         if set(control) != set(ROLES):
@@ -618,7 +851,14 @@ def main():
            "parameters": {k: v for k, v in vars(args).items() if k not in ("out", "dry_run")},
            "inputSha256": hashes}
     try:
-        if grading:
+        if judging:
+            recorder = Recorder(out)
+            judge = Client("judge", args.judge_provider, args.judge_model, args.judge_rpm, args.judge_max_tokens,
+                           recorder, args.judge_temperature, args.judge_seed, args.judge_effort)
+            run["instruments"] = {"judge": {"provider": judge.provider, "model": judge.model,
+                                            "description": judge.describe()}}
+            judge_control(args, files, out, run, judge)
+        elif grading:
             recorder = Recorder(out)
             grader = Client("grader", args.grader_provider, args.grader_model, args.grader_rpm,
                             args.grader_max_tokens, recorder, args.grader_temperature, args.grader_seed)
