@@ -612,7 +612,7 @@ L3b — how many turns/tokens a concrete operation saves
 
 Track S measures whether and how well a model gathers requirements before it builds, and how well it derives a contract from what it gathered — a measured capability and input for routing the specification stage, never a source of the reference contract (decision register D-45, D-46). It is a separate track, never inside construction: mixing the two makes a `FAIL` ambiguous between a misread requirement and a broken build.
 
-- **Instruments:** personas (fleet technician, dispatcher, airspace desk), each knowing only its slice of the world brief, and a judge. Both are fixed across subjects and calibrated before the first one (D-48).
+- **Instruments:** personas (fleet technician, dispatcher, airspace desk), each knowing only its slice of the world brief, and two judges, each scoring the subjects of the other vendor. All are fixed across subjects and calibrated before the first one (D-48, D-55).
 - **Subject:** the model under test, as interviewer and analyst; the analyst stage sees only its own transcripts.
 - **Variants:** S-naive — a client request and a channel to the personas, with nothing telling the subject to use it; S-instructed — told to interview, then write requirements.
 - **Output:** a contract derived by the subject.
@@ -904,7 +904,7 @@ The matrix is fixed here and in the preregistration, before any scored run; it i
 | Phase 6 | Haiku × Exeris × L3 × 3 | 3 | H3 |
 | Off-vendor series | Gemini Flash (Antigravity) × 3 full arms × L1 × 3 | 9 | separate table; no comparison with Claude runs |
 | Phase 7 | Changes 3, 4, 5 × 3 full arms × 3, Phase 4 model | 27 change sessions | H2, H4 |
-| Track S, script series | 4 subjects × 2 variants × 3 | 24 | Track S (D-48) |
+| Track S, script series | 5 subjects × 2 variants × 3 | 30 | Track S (D-48, D-55) |
 | Track S, native series | 3 subjects in 2 harnesses × S-naive × 3 | 9 | Track S (D-48) |
 
 Total: 45 construction runs on Claude Code, 9 in the off-vendor series, and 27 change sessions. Track S runs through vendor APIs with fixed instruments; exhausted daily or monthly quota is an infrastructure error, as in §9.1.
@@ -919,7 +919,7 @@ Configurations not run in Campaign 1, each with its reason:
 | Changes 1 and 2 | budget; no hypothesis depends on them (H2 uses Changes 3–5, H4 uses Change 5) |
 | Axon embedded | optional continuity arm; first to go under budget (§5A.4) |
 | Temporal | §5A.6 |
-| Gemini 3.8 Flash as a Track S script-series subject | 20 requests a day on the free tier against about 75 per subject run; it is the script-series judge and a native-series subject instead (D-48) |
+| `mistral-large-2512` as a Track S script-series subject | the account's key is refused it with HTTP 403 `tier_not_allowed`, and the account pays for the Gemini and Anthropic APIs only; `gemini-3.8-flash` and `gemini-4-argon` take its place (D-55) |
 | Gemini 3.5 Flash Lite as a Track S subject | no longer offered in the vendor's own agent harness, Antigravity, though still served by the Gemini API; a subject its vendor has begun withdrawing may disappear before the matrix is done or replicated (D-48) |
 | S-instructed in the Track S native series | an instructed interview in an agent harness measures the harness's tool handling more than elicitation; the script series measures it (D-48) |
 

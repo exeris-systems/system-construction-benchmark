@@ -14,8 +14,9 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 3 (draft 7)
-Decision register: D-45 to D-54. Versions 1 and 2 (the user-story procedure under
+Version: 4 (draft 1)
+Decision register: D-45 to D-55. Version 3, whose persona calibration this version keeps, is frozen at
+tag `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
 
@@ -25,10 +26,10 @@ Track S pilots (D-46).
 | --- | --- | --- | --- |
 | Persona — fleet technician, dispatcher, airspace desk | Gemini API | `gemini-3.5-flash-lite`, temperature 0, random seed 1; answering pass only | answering: `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`); checking: `persona-check-prompt.md` + the same slice, the question and the answer's sentences |
 | Grader — of the persona's calibration answers | Gemini API | `gemini-3.8-flash`, temperature 0, random seed 1 | `grader-prompt.md` + the answering role's slice, the question, its kind and `expect`, and the answer |
-| Judge, script series | Gemini API | Gemini 3.8 Flash, exact identifier fixed before its calibration | the derived contract + the reference requirements |
-| Judge, native series | Mistral API | `mistral-large-2512` (open weights: `mistralai/Mistral-Large-3-675B-Instruct-2512`, Apache 2.0) | the derived contract + the reference requirements |
+| Judge of a Claude subject, both series | Gemini API | `gemini-4-argon` | the derived contract + the reference requirements |
+| Judge of a Gemini subject, both series | Anthropic API | `claude-opus-5-5` | the derived contract + the reference requirements |
 
-Instruments are fixed across subjects and calibrated before the first subject. The subjects, the
+Instruments are fixed across subjects and calibrated before the first subject. Each subject is judged by the other vendor; in the script series each contract is also judged, unscored, by the judge of the subject's own family, and the report gives how often the two agree (D-55). The subjects, the
 judge's calibration and the S-naive and S-instructed tasks are added to this procedure before they
 run.
 
