@@ -9,7 +9,7 @@ last-verified: 2026-10-22
 
 # How to calibrate the Track S persona
 
-Covers the persona instrument only; the judge and the subjects have procedures of their own. Run
+Covers the persona and the judges; the subjects have procedures of their own. Run
 from the repository root. The key comes from the environment and is never written to the output.
 Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute limits.
 
@@ -58,3 +58,15 @@ Each run makes 72 calls, about 130,000 tokens, against the provider's per-minute
    python3 -I trackS/run-track-s.py persona-holdout-5 --persona-provider gemini --persona-model gemini-3.5-flash-lite --persona-temperature 0 --persona-seed 1 --persona-max-tokens 8192 --persona-rpm 10 --out runs/track-s/YYYY-MM-DD-persona-holdout-5
    python3 -I trackS/run-track-s.py grade --graded runs/track-s/YYYY-MM-DD-persona-holdout-5 --grader-provider gemini --grader-model gemini-3.8-flash --grader-temperature 0 --grader-seed 1 --grader-max-tokens 8192 --grader-rpm 10 --out runs/track-s/YYYY-MM-DD-grade-persona-holdout-5
    ```
+
+5. Calibrate each judge on the mutant contracts of `judge-control.yaml`, 18 calls each. The judge of
+   Claude subjects runs on the Gemini API, the judge of Gemini subjects on the Anthropic API, whose
+   key is `ANTHROPIC_API_KEY`:
+
+   ```sh
+   python3 -I trackS/run-track-s.py judge-control --judge-provider gemini --judge-model gemini-4-argon --judge-temperature 0 --judge-seed 1 --judge-max-tokens 32768 --judge-rpm 5 --out runs/track-s/YYYY-MM-DD-judge-control-gemini-4-argon
+   python3 -I trackS/run-track-s.py judge-control --judge-provider anthropic --judge-model claude-opus-5-5 --judge-effort high --judge-max-tokens 32768 --judge-rpm 5 --out runs/track-s/YYYY-MM-DD-judge-control-claude-opus-5-5
+   ```
+
+   The verdict is `summary.passes` in `judge-control.json`; every judgement that is not exact lists
+   its differences under `disagreements`.
