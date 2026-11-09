@@ -546,3 +546,13 @@ A subject model that returns thinking blocks gets them back unchanged in the nex
 `follow_up_ratio` stays unread by the script; how it is read from the transcripts is fixed before the first subject runs (D-57).
 
 Impact: `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/procedure.md`, `trackS/how-to-run-subjects.md`, `.github/workflows/track-s-tests.yml`.
+
+### D-59 — How follow-ups are counted
+
+D-45 lists `follow_up_ratio` among Track S's measures, and D-57 left open how it is read. A question is a follow-up when it asks about something the same role said in the answer just before it: it asks the speaker to explain, give an example of, say more about, or say why of something that answer mentioned, or picks up a particular thing it named. A question that turns to something that answer did not mention is not one, even when the speaker said it earlier or it stays with the same broad subject. In S-naive the answer before a question is the same role's previous answer. `follow_up_ratio` is the follow-ups over every question after each role's first, in both variants.
+
+Telling a follow-up from a new question is a reading of meaning: a question can pick up an answer without repeating a word of it, and can repeat a word while changing the subject, so no rule over words decides it. The judges of D-55 classify the questions, each those of the other vendor's subjects, with `trackS/follow-up-prompt.md`, one call per role and run; the judge of the subject's own family is recorded unscored, as for the contract.
+
+Each judge is calibrated as classifier before it reads a subject's questions, on the four conversations of `trackS/follow-up-control.yaml`: 40 pairs of an answer and the question after it, 23 labelled follow-ups and 17 not, among them questions that return to an earlier answer, general questions, and follow-ups in other words. It passes when it agrees with at least 37 of the 40 labels in each of three repetitions. The line is a judgement in places, so an exact match is not required, as it is for the contract's mutants; 37 allows three disagreements in a repetition, one in thirteen. The pairs were written with Claude Code, on Claude Opus 5.5, as the mutants were (D-56).
+
+Impact: `trackS/procedure.md`, `trackS/follow-up-prompt.md`, `trackS/follow-up-control.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `trackS/how-to-run-subjects.md`, `trackS/calibration-log.md`, `.github/workflows/track-s-tests.yml`.

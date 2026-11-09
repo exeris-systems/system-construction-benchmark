@@ -14,8 +14,8 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 5 (draft 2)
-Decision register: D-45 to D-58. Version 4, whose instruments and their calibration this version
+Version: 5 (draft 3)
+Decision register: D-45 to D-59. Version 4, whose instruments and their calibration this version
 keeps, is frozen at tag `us-procedure-v4`; version 3, at `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
@@ -41,6 +41,7 @@ those of D-55, and their S-naive and S-instructed tasks are set out under Subjec
 | `persona-prompt.md`, `persona-check-prompt.md` | the persona instrument: the answering pass and the check pass |
 | `grader-prompt.md`, `grader-control.yaml` | the grader of the persona's calibration and the cases it is calibrated on |
 | `judge-prompt.md`, `judge-control.yaml` | the judge, and the mutant contracts it is calibrated on |
+| `follow-up-prompt.md`, `follow-up-control.yaml` | the judges as follow-up classifiers, and the labelled pairs they are calibrated on |
 | `persona-control.yaml`, `persona-holdout.yaml` to `persona-holdout-5.yaml` | the persona's calibration questions: the set the prompts are revised against, the held-out sets that decided drafts 3 to 6, and the held-out set that decides draft 7 |
 | `subject-naive-prompt.md` | the subject in S-naive: the client's request, brief §1, the roles and the channel to them |
 | `subject-interviewer-prompt.md`, `subject-analyst-prompt.md` | the subject in S-instructed: as interviewer of one role, then as analyst of the three transcripts |
@@ -147,8 +148,15 @@ the order technician, dispatcher, desk, opened by the turn "The interviewee is r
 question." Every message of the subject is a question; an interview ends when a message has
 `END OF INTERVIEW` on a line of its own, or after 30 questions. A new session of the same subject,
 with `subject-analyst-prompt.md` holding the three transcripts and nothing else, is given the turn
-"Write the requirements." and writes them. `questions_per_interview` is read from the transcripts; how
-`follow_up_ratio` is read from them is fixed before the first subject runs.
+"Write the requirements." and writes them. `questions_per_interview` is read from the transcripts.
+
+**Follow-ups.** A question is a follow-up when it asks about something the same role said in the
+answer just before it; in S-naive that is the role's previous answer, whatever was asked of the
+other roles in between. `follow_up_ratio` is the follow-ups over every question after a role's
+first, in both variants. Mode `follow-up` sends a completed subject run's pairs, one call per role,
+to a judge with `follow-up-prompt.md`, and records each question's label; as for the contract, the
+judge of the other vendor scores and the judge of the subject's own family is recorded unscored
+(D-59).
 
 **The contract** is read from the requirements message as a YAML list: the items of the message's
 `yaml` block when it has one, and of the whole message otherwise. Each entry with an `id` and a
@@ -163,6 +171,14 @@ Every turn the script itself writes to a subject is quoted above, with the reply
 names no role, "There is no such role. The roles are technician, dispatcher and desk.", and the
 sentence added to the 90th answer, "You cannot ask any more questions. Write the requirements now."
 A subject model's turns go back to it as it returned them, its thinking blocks included (D-58).
+
+## Follow-up calibration — before any subject
+
+Mode `follow-up-control` gives each judge the four conversations of `follow-up-control.yaml`, 40
+pairs of an answer and the question after it, each labelled a follow-up or not, three times. A judge
+passes as classifier when it agrees with at least 37 of the 40 labels in every repetition. A reply
+that does not label every question exactly once fails the run. The prompt is frozen before it
+classifies a subject's questions.
 
 ## Tests
 

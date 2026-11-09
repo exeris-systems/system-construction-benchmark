@@ -11,6 +11,7 @@ import io
 import json
 import os
 import pathlib
+import re
 import subprocess
 import sys
 import tempfile
@@ -526,6 +527,72 @@ class SubjectTest(unittest.TestCase):
             result = json.loads((out / "judgement.json").read_text())
             self.assertEqual(result["scored"], scored)
             self.assertEqual([(i["id"], i["read"]) for i in result["items"]], [("DR-01", "R-7"), ("DR-02", "R-7")])
+
+
+class FollowUpTest(unittest.TestCase):
+    """The follow-up classifier's pairs, reply, calibration and scoring."""
+
+    def setUp(self):
+        os.environ["GEMINI_API_KEY"] = "test-key"
+        self._urlopen, self._sleep = ts.urllib.request.urlopen, ts.time.sleep
+        ts.time.sleep = lambda seconds: None
+        self.files = {name: (HERE / name).read_text() for name in (ts.FOLLOW_UP_FILE, ts.FOLLOW_UP_CONTROL_FILE)}
+
+    def tearDown(self):
+        ts.urllib.request.urlopen, ts.time.sleep = self._urlopen, self._sleep
+
+    def label_all(self, value):
+        def urlopen(request, timeout=0):
+            text = json.loads(request.data)["contents"][-1]["parts"][0]["text"]
+            ids = [line for line in text.splitlines() if re.fullmatch(r"Q\d+", line)]
+            reply = json.dumps({"questions": [{"id": i, "follow_up": value} for i in ids]})
+            return Reply({"candidates": [{"content": {"parts": [{"text": reply}]}, "finishReason": "STOP"}]}, headers())
+        ts.urllib.request.urlopen = urlopen
+
+    def test_reply_must_label_every_question_exactly_once(self):
+        ok = json.dumps({"questions": [{"id": "Q2", "follow_up": True}, {"id": "Q3", "follow_up": False}]})
+        self.assertEqual(ts.parse_follow_ups(ok, ["Q2", "Q3"]), {"Q2": True, "Q3": False})
+        self.assertIsNone(ts.parse_follow_ups(ok, ["Q2"]))
+        self.assertIsNone(ts.parse_follow_ups('{"questions": [{"id": "Q2", "follow_up": "yes"}]}', ["Q2"]))
+
+    def test_pairs_follow_each_role_in_both_variants(self):
+        naive = {"variant": "S-naive", "exchanges": [
+            {"role": "desk", "question": "a", "answer": "A"}, {"role": "technician", "question": "b", "answer": "B"},
+            {"role": "desk", "question": "c", "answer": "C"}, {"role": "nobody", "question": "d", "answer": "D"}]}
+        self.assertEqual(ts.subject_pairs(naive), {"desk": [{"id": "Q2", "previous": "A", "question": "c"}]})
+        instructed = {"variant": "S-instructed", "interviews": {"technician": {"transcript": [
+            {"question": "a", "answer": "A"}, {"question": "b", "answer": "B"}]}}}
+        self.assertEqual(ts.subject_pairs(instructed), {"technician": [{"id": "Q2", "previous": "A", "question": "b"}]})
+
+    def test_control_set_is_forty_labelled_pairs(self):
+        conversations = ts.parse_control(self.files[ts.FOLLOW_UP_CONTROL_FILE], ts.FOLLOW_UP_CONTROL_FILE)
+        pairs = [p for c in conversations.values() for p in c]
+        self.assertEqual(len(pairs), 40)
+        self.assertTrue(all(p["follow_up"] in ("true", "false") and p["previous"] and p["question"] for p in pairs))
+
+    def test_control_passes_only_at_the_threshold_in_every_repetition(self):
+        self.label_all(True)
+        out = pathlib.Path(tempfile.mkdtemp())
+        judge = ts.Client("judge", "gemini", "j", 60_000, 100, ts.Recorder(out), 0.0, 1)
+        ts.follow_up_control(argparse.Namespace(repetitions=2), self.files, out, {}, judge)
+        summary = json.loads((out / "follow-up-control.json").read_text())["summary"]
+        trues = self.files[ts.FOLLOW_UP_CONTROL_FILE].count("follow_up: true")
+        self.assertEqual(summary["agreeing"], {"1": trues, "2": trues})
+        self.assertFalse(summary["passes"])
+
+    def test_run_ratio_is_scored_by_the_other_vendor_only(self):
+        self.label_all(True)
+        subject = {"variant": "S-instructed", "interviews": {r: {"transcript": [
+            {"question": "a", "answer": "A"}, {"question": "b", "answer": "B"}, {"question": "c", "answer": "C"}]}
+            for r in ts.ROLES}}
+        files = {**self.files, "judged-subject.json": json.dumps(subject),
+                 "judged-run.json": json.dumps({"mode": "subject-instructed",
+                                                "instruments": {"subject": {"provider": "anthropic", "model": "s"}}})}
+        out = pathlib.Path(tempfile.mkdtemp())
+        judge = ts.Client("judge", "gemini", "j", 60_000, 100, ts.Recorder(out), 0.0, 1)
+        ts.follow_up_run(argparse.Namespace(judged="r"), files, out, {}, judge)
+        result = json.loads((out / "follow-ups.json").read_text())
+        self.assertEqual((result["followUps"], result["of"], result["follow_up_ratio"], result["scored"]), (6, 6, 1.0, True))
 
 
 class ModeTest(unittest.TestCase):

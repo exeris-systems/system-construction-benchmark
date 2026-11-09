@@ -1,0 +1,175 @@
+# Follow-up control set — the pairs of known label that calibrate each judge as the follow-up
+# classifier (decision register D-59).
+#
+# Each top-level key is one conversation, as the classifier receives it: every question after the
+# first, with the answer given just before it. `follow_up` is what the classifier must report: true
+# when the question asks about something that answer said, false when it turns to something that
+# answer did not mention. The labels are sent to no model.
+
+C1:
+  - id: Q2
+    previous: I start at six with the drones that charged overnight. I look at which ones are full and which pads are still in use, and I write down anything that looks off.
+    question: What kind of thing looks off to you in the morning?
+    follow_up: true
+  - id: Q3
+    previous: Mostly a pad that says it is charging when the drone on it has not gained anything. Sometimes a drone that should be full is at half.
+    question: When a pad says it is charging but the drone gains nothing, what do you do?
+    follow_up: true
+  - id: Q4
+    previous: I take the drone off and put it on another pad, and I mark the first pad for a check. It costs me a drone for the morning round.
+    question: Who do you hand drones to once they are ready?
+    follow_up: false
+  - id: Q5
+    previous: The dispatchers. They see what is ready and pick from it for their jobs.
+    question: How do they know a drone is ready?
+    follow_up: true
+  - id: Q6
+    previous: They ask me, or they look at the board in the hangar. The board is often an hour behind.
+    question: Why is it behind?
+    follow_up: true
+  - id: Q7
+    previous: Because I update it by hand between other work, and when something breaks I fix the drone first.
+    question: Tell me about the worst day you had in the last few months.
+    follow_up: false
+  - id: Q8
+    previous: A storm took out the relay on the hill and half the fleet went quiet in flight. We did not know which ones were still flying and which had landed somewhere.
+    question: How did you find out where the quiet drones were?
+    follow_up: true
+  - id: Q9
+    previous: We waited. Most of them came back on the radio within twenty minutes, and two we had to go and fetch.
+    question: What do you check by hand today because you do not trust it?
+    follow_up: false
+  - id: Q10
+    previous: The connector on each drone. The records say one thing, and sometimes the model was changed and nobody updated it.
+    question: What happens when the records are wrong about the connector?
+    follow_up: true
+  - id: Q11
+    previous: The drone gets sent to a pad it cannot use and just sits there. Someone has to notice.
+    question: Is there anything else you would like to tell me?
+    follow_up: false
+
+C2:
+  - id: Q2
+    previous: My day is planning the jobs, signing off each flight, and watching them go. When one goes wrong I decide whether it carries on or comes back.
+    question: How do you decide whether a flight carries on or comes back?
+    follow_up: true
+  - id: Q3
+    previous: It depends on the battery and on what is in the way. If a closure comes up on its route, it comes back, no discussion.
+    question: Where do you hear about closures?
+    follow_up: true
+  - id: Q4
+    previous: From the airspace desk. They put it in and we see it. Sometimes it comes in while the drone is already halfway there.
+    question: What do you do when a closure comes in while the drone is halfway?
+    follow_up: true
+  - id: Q5
+    previous: I call it back, and then I have a job that did not happen and a customer to tell. The drone also needs a pad where it lands.
+    question: How do you choose which drone gets a job?
+    follow_up: false
+  - id: Q6
+    previous: I look at who is free, who has enough battery and who can carry the load. I choose; I do not want anything choosing for me.
+    question: Why do you not want anything choosing for you?
+    follow_up: true
+  - id: Q7
+    previous: Because I know things a list does not, like which drone has a sticky motor this week.
+    question: What would a new service most likely get wrong for you?
+    follow_up: false
+  - id: Q8
+    previous: Telling me a drone is fine when it has stopped talking to us. I need to know the moment we lose one.
+    question: When you say the moment you lose one, how soon is soon enough?
+    follow_up: true
+  - id: Q9
+    previous: A minute is already long when it is over a road.
+    question: You mentioned the battery earlier. What battery level do you send a drone out with?
+    follow_up: false
+  - id: Q10
+    previous: Not under half. Below that I do not trust it to get there and back.
+    question: And if a drone comes back below that?
+    follow_up: true
+  - id: Q11
+    previous: It goes to charge before anything else, and I tell the technicians.
+    question: Who hands work to you?
+    follow_up: false
+
+C3:
+  - id: Q2
+    previous: The desk enters every closure the authorities announce. Planned ones come with a start and an end, sudden ones apply at once.
+    question: What is different for you about a sudden closure?
+    follow_up: true
+  - id: Q3
+    previous: There is no time. It has to be in before the first drone reaches the area, and the companies need to see it straight away.
+    question: How often do closures change during the day?
+    follow_up: false
+  - id: Q4
+    previous: Often. An area gets wider, or the end time moves.
+    question: When the end time moves, what do you have to do?
+    follow_up: true
+  - id: Q5
+    previous: Enter the new version. The old one should stop counting from then on.
+    question: What do you want to know after you have entered a closure?
+    follow_up: false
+  - id: Q6
+    previous: How much trouble it caused across the customers. Not whose drones, just how many flights it hit.
+    question: Why not whose drones?
+    follow_up: true
+  - id: Q7
+    previous: That is their business. We have no reason to look into one company's operations.
+    question: Who do you hand work to?
+    follow_up: false
+  - id: Q8
+    previous: Nobody really. The companies act on what we enter.
+    question: What was the worst day for the desk recently?
+    follow_up: false
+  - id: Q9
+    previous: A closure was entered with the wrong end time and three companies kept their drones on the ground all afternoon.
+    question: How was the wrong end time noticed?
+    follow_up: true
+  - id: Q10
+    previous: One of the companies phoned us to ask why it was still on.
+    question: What does the desk check by hand today?
+    follow_up: false
+  - id: Q11
+    previous: That the area we entered is the one the authorities meant. We read it back against their notice.
+    question: Can you give me an example of an area that did not match the notice?
+    follow_up: true
+
+C4:
+  - id: Q2
+    previous: Each company has its own pads at its own sites. A pad is never lent to another company.
+    question: So what happens when all of your pads at one site are taken?
+    follow_up: true
+  - id: Q3
+    previous: The drone waits, or it flies to another of our sites if it has the battery.
+    question: Earlier you said pads are never lent. Has anyone ever asked to borrow one?
+    follow_up: false
+  - id: Q4
+    previous: Not that I know of.
+    question: How do drones report where they are?
+    follow_up: false
+  - id: Q5
+    previous: Through relay stations. When coverage is patchy their reports come late, out of order, or twice.
+    question: What does it mean for you when a report comes twice?
+    follow_up: true
+  - id: Q6
+    previous: Nothing, as long as nobody counts it twice. It is the late ones that confuse people.
+    question: Confuse them how?
+    follow_up: true
+  - id: Q7
+    previous: A late report can say a drone is back over a field when it already landed.
+    question: Are there other ways the reports mislead you?
+    follow_up: true
+  - id: Q8
+    previous: When a drone restarts in the air it starts counting its reports again from the beginning.
+    question: Let us talk about sensors. Which sensors do your drones carry?
+    follow_up: false
+  - id: Q9
+    previous: Cameras, thermal cameras and laser scanners, and the models differ.
+    question: Does it matter to you which model has which sensor?
+    follow_up: true
+  - id: Q10
+    previous: For inspections it does. An inspection needs the right sensor on board.
+    question: What is the most important thing a new service must never do?
+    follow_up: false
+  - id: Q11
+    previous: Mix up our drones with another company's.
+    question: Has that ever happened?
+    follow_up: true

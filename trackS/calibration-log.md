@@ -411,3 +411,8 @@ nothing covered on the empty contract M6, in all three repetitions.
 The mutants were written with Claude Code, on Claude Opus 5.5, the family of the judge of Gemini
 subjects (D-56). Neither judge missed one difference the mutants hold, so the calibration does not
 show where either judge's limit lies.
+
+## Follow-up classifiers
+
+| Run | Model | `follow-up-prompt.md` (SHA-256) | Verdict |
+| --- | --- | --- | --- |
