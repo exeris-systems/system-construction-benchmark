@@ -24,6 +24,11 @@ quoted source is found in the notes.
   subject-instructed run a subject in S-instructed: one interview per role, then the analyst
   judge             judge the contract of a completed subject run (--judged) with one judge
 
+  follow-up-control ask a judge to classify the pairs of follow-up-control.yaml, whose labels are
+                    known, several times
+  follow-up         classify every question of a completed subject run (--judged) as a follow-up
+                    of the answer before it or not, with one judge
+
 Each role names a provider and a model. Every request and response is written to the output
 directory verbatim, with every response header that reports a rate limit and the body of every 429,
 so the run record documents the quotas it ran under. The output is committed unedited.
@@ -54,6 +59,11 @@ GRADER_FILE = "grader-prompt.md"
 GRADER_CONTROL_FILE = "grader-control.yaml"
 JUDGE_FILE = "judge-prompt.md"
 JUDGE_CONTROL_FILE = "judge-control.yaml"
+FOLLOW_UP_FILE = "follow-up-prompt.md"
+FOLLOW_UP_CONTROL_FILE = "follow-up-control.yaml"
+# A classifier passes when it agrees with at least this many of the 40 labelled pairs, in every
+# repetition (D-59).
+FOLLOW_UP_PASS_AT = 37
 # The judge's inputs from the contract, named by their path from the repository root.
 REFERENCE_FILE = "contract/system-requirements.yaml"
 ANTI_FILE = "contract/anti-requirements.md"
@@ -86,7 +96,7 @@ QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FIL
                  "persona-holdout-2": "persona-holdout-2.yaml", "persona-holdout-3": "persona-holdout-3.yaml",
                  "persona-holdout-4": "persona-holdout-4.yaml", "persona-holdout-5": "persona-holdout-5.yaml"}
 GRADE_MODES = ("grader-control", "grade")
-JUDGE_MODES = ("judge-control", "judge")
+JUDGE_MODES = ("judge-control", "judge", "follow-up-control", "follow-up")
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
 
@@ -920,6 +930,91 @@ def judge_run(args, files, out, run, judge):
     (out / "judgement.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
 
 
+# --- follow-ups -----------------------------------------------------------------------------------
+
+FOLLOW_UP_SCHEMA = {
+    "type": "object", "additionalProperties": False, "required": ["questions"],
+    "properties": {"questions": {"type": "array", "items": {
+        "type": "object", "additionalProperties": False, "required": ["id", "follow_up"],
+        "properties": {"id": {"type": "string"}, "follow_up": {"type": "boolean"}}}}},
+}
+
+
+def pairs_text(pairs):
+    return "\n\n".join(f"{p['id']}\nThe answer just before it: {p['previous']}\nThe question: {p['question']}"
+                       for p in pairs)
+
+
+def parse_follow_ups(text, ids):
+    """{id: follow_up} for exactly the given ids, or None."""
+    try:
+        reply = json.loads(text)
+    except ValueError:
+        return None
+    entries = reply.get("questions") if isinstance(reply, dict) else None
+    if not isinstance(entries, list):
+        return None
+    labels = {}
+    for e in entries:
+        if not isinstance(e, dict) or not isinstance(e.get("id"), str) or not isinstance(e.get("follow_up"), bool):
+            return None
+        labels[e["id"]] = e["follow_up"]
+    return labels if len(labels) == len(entries) and set(labels) == set(ids) else None
+
+
+def classify(judge, system, session, pairs):
+    """The labels of one conversation's pairs; a reply of the wrong shape fails the run, never asked again."""
+    reply = judge.call(session, system, [("user", pairs_text(pairs))], json_reply=True, schema=FOLLOW_UP_SCHEMA)
+    labels = parse_follow_ups(reply, [p["id"] for p in pairs])
+    if labels is None:
+        raise RunFailed(f"{session}: the reply does not label every question exactly once")
+    return labels
+
+
+def follow_up_control(args, files, out, run, judge):
+    conversations = parse_control(files[FOLLOW_UP_CONTROL_FILE], FOLLOW_UP_CONTROL_FILE)
+    results, agreeing = [], {}
+    for repetition in range(1, args.repetitions + 1):
+        for cid, pairs in conversations.items():
+            labels = classify(judge, files[FOLLOW_UP_FILE], f"{cid}/{repetition}", pairs)
+            for p in pairs:
+                agrees = labels[p["id"]] == (p["follow_up"] == "true")
+                agreeing[repetition] = agreeing.get(repetition, 0) + agrees
+                results.append({"conversation": cid, "id": p["id"], "repetition": repetition,
+                                "expected": p["follow_up"] == "true", "got": labels[p["id"]], "agrees": agrees})
+    of = sum(len(p) for p in conversations.values())
+    summary = {"agreeing": agreeing, "of": of, "passAt": FOLLOW_UP_PASS_AT,
+               "passes": bool(agreeing) and all(a >= FOLLOW_UP_PASS_AT for a in agreeing.values())}
+    (out / "follow-up-control.json").write_text(json.dumps({"summary": summary, "pairs": results},
+                                                           ensure_ascii=False, indent=1) + "\n")
+
+
+def subject_pairs(subject):
+    """Per role, every question after the first with the answer the same role gave just before it."""
+    if subject["variant"] == "S-instructed":
+        sequences = {r: i["transcript"] for r, i in subject["interviews"].items()}
+    else:
+        sequences = {r: [e for e in subject["exchanges"] if e["role"] == r] for r in ROLES}
+    return {r: [{"id": f"Q{k + 1}", "previous": seq[k - 1]["answer"], "question": seq[k]["question"]}
+                for k in range(1, len(seq))] for r, seq in sequences.items() if len(seq) > 1}
+
+
+def follow_up_run(args, files, out, run, judge):
+    subject = json.loads(files["judged-subject.json"])
+    judged = json.loads(files["judged-run.json"])
+    roles = {}
+    for role, pairs in subject_pairs(subject).items():
+        labels = classify(judge, files[FOLLOW_UP_FILE], f"follow-up/{role}", pairs)
+        roles[role] = {"pairs": [{**p, "follow_up": labels[p["id"]]} for p in pairs],
+                       "followUps": sum(labels.values()), "of": len(pairs)}
+    follow_ups, of = sum(r["followUps"] for r in roles.values()), sum(r["of"] for r in roles.values())
+    # As for the contract, the judge of the other vendor scores; the subject's own family is unscored.
+    result = {"judged": {"run": str(args.judged), "mode": judged["mode"], "subject": judged["instruments"]["subject"]},
+              "scored": judge.provider != judged["instruments"]["subject"]["provider"], "roles": roles,
+              "follow_up_ratio": follow_ups / of if of else None, "followUps": follow_ups, "of": of}
+    (out / "follow-ups.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("mode", choices=sorted(QUESTION_SETS) + list(GRADE_MODES) + list(JUDGE_MODES) + list(SUBJECT_MODES))
@@ -959,6 +1054,8 @@ def main():
     if subjecting:
         prompts = SUBJECT_MODES[args.mode]
         names += ["persona-prompt.md"] + ([prompts] if isinstance(prompts, str) else list(prompts))
+    elif args.mode.startswith("follow-up"):
+        names += [FOLLOW_UP_FILE] + ([FOLLOW_UP_CONTROL_FILE] if args.mode == "follow-up-control" else [])
     elif judging:
         names += [JUDGE_FILE] + ([JUDGE_CONTROL_FILE] if args.mode == "judge-control" else [])
     elif grading:
@@ -966,7 +1063,7 @@ def main():
     else:
         names += ["persona-prompt.md", QUESTION_SETS[args.mode]] + ([CHECK_FILE] if args.persona_check else [])
     files = {name: (HERE / name).read_text() for name in names}
-    if judging:
+    if args.mode in ("judge-control", "judge"):
         files.update({name: (HERE.parent / name).read_text() for name in (REFERENCE_FILE, ANTI_FILE)})
     files["run-track-s.py"] = pathlib.Path(__file__).read_text()
 
@@ -993,9 +1090,9 @@ def main():
         for name in ("world-brief.md", "brief-slices.yaml"):
             if graded["inputSha256"].get(name) != sha256(files[name]):
                 sys.exit(f"--graded {args.graded}: {name} has changed since that run")
-    if args.mode == "judge":
+    if args.mode in ("judge", "follow-up"):
         if not args.judged:
-            sys.exit("--judged is required by mode judge")
+            sys.exit(f"--judged is required by mode {args.mode}")
         judged_dir = args.judged.resolve()
         try:
             files["judged-run.json"] = (judged_dir / "run.json").read_text()
@@ -1019,6 +1116,14 @@ def main():
     elif args.mode == "judge":
         roles = [("judge", judge_settings)]
         plan = {"items": len(json.loads(files["judged-subject.json"])["items"]), "calls": 1}
+    elif args.mode == "follow-up":
+        roles = [("judge", judge_settings)]
+        pairs = subject_pairs(json.loads(files["judged-subject.json"]))
+        plan = {"pairs": {r: len(p) for r, p in pairs.items()}, "calls": len(pairs)}
+    elif args.mode == "follow-up-control":
+        roles = [("judge", judge_settings)]
+        conversations = parse_control(files[FOLLOW_UP_CONTROL_FILE], FOLLOW_UP_CONTROL_FILE)
+        plan = {"pairs": sum(len(p) for p in conversations.values()), "calls": len(conversations) * args.repetitions}
     elif judging:
         roles = [("judge", judge_settings)]
         mutants = build_mutants(parse_control(files[JUDGE_CONTROL_FILE], JUDGE_CONTROL_FILE))
@@ -1076,7 +1181,8 @@ def main():
                            recorder, args.judge_temperature, args.judge_seed, args.judge_effort)
             run["instruments"] = {"judge": {"provider": judge.provider, "model": judge.model,
                                             "description": judge.describe()}}
-            (judge_control if args.mode == "judge-control" else judge_run)(args, files, out, run, judge)
+            {"judge-control": judge_control, "judge": judge_run, "follow-up-control": follow_up_control,
+             "follow-up": follow_up_run}[args.mode](args, files, out, run, judge)
         elif grading:
             recorder = Recorder(out)
             grader = Client("grader", args.grader_provider, args.grader_model, args.grader_rpm,
