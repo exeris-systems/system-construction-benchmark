@@ -1,0 +1,96 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS2AYKEAgTGAI4AUIIdGhpbmtpbmcSDI7gLSO2KQqk2QTfsRoMD4Lqi4hvjavbNWOxIjCNClKkF62YawkM8hCw0ZZmbSRkYhGTJk0x6/wbYtbTbw2oXTOjQj8ukq9LxYeNF+oq9QWFE3y37LD810H3UCEichsonvxSrh15fhfnGxHC9jjxQh7QHSPRyCgyZ2TuQFDYiBveNqqAicZdj2azHkgKF+F+bxiSISz0Lp9IwT4OrSVrGr7nX88lTKfwTBtOoZLmdGlAnfY86Qh592NNIQ7saevwxt6BCO9SNCTgWTNnkq74aM0O//SjvsZiq8bRExN5ABYGMCNC1Qkz2A7yNFbpZmiqiSE0gKxPrdjoSh3IREq7J1LSKmsEpw0IhhlkbsSo0/BnsObT1L1BOKKa+kUTctXkfZlIMHYS2rIV+HC1UQ0gI6nvkFs/QXlBYL/dd+RDuVcPAz1Fh97R//jnvTuB8UCTQ1ApYwhWpHRtWJ5IW00CURz3qpCJ18m0A0k+7oQnC4f+qjDoDE3YgsN0vexPLLHoaRUMlF+i0qzBSZQ5PkHy4DHmwUjDsIsYUpmjZGG/Dlrf0NLNsmg5mRJZU4sqJrEjpVOhBtaJ2B3gtmMACayCbYlpyyrroTsDnljMDXmdgh/7ZuTZzCbjjq6JpsYfTDL7FSuTyLxCBP1CSZapHdfgIlNgPsoq3VSO7mUaaW/Ay9L0Vr33Kd7w9tSL92WY56MI1TNm1i3E149dCouR1wl4AZOlNFF/24vV3Rb+5ajhGHmFkpry9jTUqN9Epj/mJCvRno1KBrXyY4rT/913mQ3lBJZwYUnFuQCmKasi1/SjvUgjFlJ42lL90/96RDGj1pDoOuU/mA50mnFU0NupF+Pp2+W92IkOqj6/fgDWOamcWAhKSTFS5YogYayJRXVb5W+i4PM/WNrsAFgiJMZrHgoJTP3mREFkqLRqT7w8Ho0pR0JvV3O3jaSciRVCH9d9rdOkkBT9cdttXwWclxai9V+qHrYXSu/L1JwWHlNgBROReaSpqSejTITxgfvLm6LRDeAIVLnMwrIVp48q8d/N7SmDUN6KF1trA3M7Ah4GcNuqEtO+gNheQVNPsKGyzatN9ujCGUYiatFcjdOKVq4Ge5QpMkBT9VFmGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: In a normal working day, what do you do with the drones, from the start of your shift to the end, and what information do you need or record at each step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "As a fleet technician, I keep drones and charging equipment in working order throughout my shift. My work includes adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs, put them back when fixed, and send drones to charge."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK technician: When you take a drone out of service or put it back, what details do you record (reason, who, when, parts, test flight), and who needs to see that the drone is unavailable?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS5QUKEAgTGAI4AUIIdGhpbmtpbmcSDHnx2xxwFvTsTh/8KRoMv58nC0rdpt0uQjWLIjAi1DPlLvECasRDsEzv5JnRBJJ9JT/xqlTG8uMC9VkBHuAlt1EvzI6RiamW4xaLus4qggUmxy+w56kuSvKxCqEhdIYxHMsCG1AZHoCgrLeraH4RRywaRVSdu8D3tThRZ+BcOFBn1pPOPyYglI2jMgzD3LvfW4+56pHSBptGsPLBf9IBJ967n5ny0E4xejIobtyfKb3oUZ7te3m81uGvDhFN6lFDQ2qfmGT6BWRB9GbDQqLxPhadk8TEjXRDa57xj6uZTpKfFDOAJWoqFFozqYL+vN97OyueW2RNsEpYpclKCgohEt43gUHWVWYZ2PZXmrqDVO9s3RwHo3V22RFNZMWQPLrVAe3NcyTJ3XsPfRWSrs4Tw/gTjJ0a3lhIHlMDvg2a3WtC97Ihxp/dtF1DgGKcGWgE5R3uXTr0IUp6c73353k9qrE50f5jv0F0bhdD4rQs5Kp/38qPaVarNRHu2XldHaIKbeoSKkOHjEbXzhmbejTed4YgEdrbAGRr+e5bq1HPmDWYnlHR8WeE95c9BxH+cgt8GJBm6h8G7bT/6o705YcLF8MbaR3X2FUH+fUfI2lhH3vDMzEaZIW3yeGKSQZaUgZmgKbRkLhhiyiYhB4wP3z2whgBlfvPoybnDFqrpvIrI+mtL7TgUcizyhNJFX8vm2c1KuDs/6+QoS7PgZoLjYFJyyKi4tJlJi1DfX2gsrsh2MLEVdtGpuexK1Xqobr09CCyvJn/ucVrRYQhCAjjV+Bz4w2ORokneAsyr0UB6LLhnBYfgtCazjiYshNieditd45U9tReEnhUiDFuHTB/W4Cp3nA6GB3fgOt1jiiC82z01Tpo9A8+Ynapv12/UmoA+sykUCQQum/qsmwEqDAWy9nviZwBuRdAffIuPSpXd8Y+uw4nyhT9TupDda6jcPERnHXF6E8YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Can a drone that is out of service for repair ever be given a job by a dispatcher, or must the system block that?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSkgYKEAgTGAI4AUIIdGhpbmtpbmcSDMZXV6e5ZmTaPWIrWhoMqgS6fovoVY9iFbsaIjDhvRqM8ht/MOjDxoimq5SBPKmH+q62xqdZqyIIxaZZkPZ+eb672Ubss/oK6ZclLcAqrwV7Ys5VT1+HRpPaHIUGoFLB3ZnIuJTSG0UQ4dNPNPH26lcStJ1vY5W/aaVb0o/uRzuyY67oyDwEOliQAuiVPoQS6d8bne4WWLlLDK2Brd01v2GVY9St3pZaxiWTNHpHC7SxDCrvzB+n6301hqFU/FhRY3BmaSmYPyFY9AfaC9W0H4Ql5xgODwMDygaBvbA6E58N2w5SVO6GIzfibJ3pyHSfAxF9ndm0kn8IfStXJFLSeXK4sRCpLTvK226UsePLl9tu90jIfHhvep5AhVwcxhIAX2S01ndVtqk0/8WaSIHtOheto127RKAaLpk41cyCZbzeYQchusTuVl8Nf8BH0P/WTCD/JFRepOmPHvRkk6K0wVgzQs7/vSkFpOeDzVKpzWytC9uVCP6VJ6cOM8y7a7b189yIKwjuuXjSyU/gDZu9O9oMZKDKyJ7T2qDtS4BUGXDfeXoGdttQUoB1gTaBTgL0myFYgfWZIkxPUU1xdWK75bMbj2uUBJyOiEuP6nahRlE/po9COwyvVCQpK6uCWU7zGDIk7j3ZQG9/KGt7cmf5aHziK4fwCIBlyKN4MXZS7R4SloSLXth29hAE6WLmGX1wtfik3LGuwho6DqSZC4lkjTFFKpXDG2Em4Yxt3bd0JPebHnX44mOtZ7rkGF0kN9F4YEN1Tgb9hremZSGdOoRO1uv8ymZPSr86bbMMvBO1pkqFNmCY9hy8rZrwlJ9AWoquZqztsfO8mLvFzI3rD717vjlUYVGzdJM3t0rHUzn2hHqo3hyKDfbyQ4L4HPHzNxTnWUgePLiUkJ4vBeCpUyI0G4J2cKz7U6Tco+ZGiSpSxQ3R1jwCbvvs1tLn8iaTUBEQY61QArlkNgIbIU2/N2fjnIuhDf/3GX2gHQiXDrfuqRHgn6op/+1gvDsZFRG8HUcYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: In a normal working day, what do you do, from the start of your shift to the end, and what do you need to see or decide at each step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "As a dispatcher, I plan and run the flights for my company, deciding which drone flies and along which way, and I sign off each flight before it leaves. I can call off a flight, and several of us plan at the same time, often for the same busy sites and popular drones. Before and during a flight, things happen outside our control, like whether the load is ready, the drone reaching its job's points, and its arrival, which are reported by people and devices outside the company."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS2QYKEAgTGAI4AUIIdGhpbmtpbmcSDP3s9MOO7N1DEPnOcRoM83hU1bRsSgg4cTiUIjBa/p4+EYsyT5BLoTSbxBMUN2poX3Qg1uUTf5Cl2km7gstTLYcWtAFZVOlyQOhCPpIq9gViiRzlQ3uh9M3YN5L6kOY8Bd5vzaMB7vAPQZ8z3o/rfjQuIB1gDlWZNWQOa88Lg4dsqhrfYrpDczEDgZqyGGuZnVQPqhw85S0w8Ptny7U/vt8RXxE3lQFcvCksl1OAyFY2nxqmSxzO/Bc5C/IxWJkstdrjp5/xG0IA2zzcl8qsh9qGWvX0wnKXHL5PUi3G+v+TdgBdgYYWGvRDsw9X6pc0AdqSvMcLpURiEixlj+mC3P5bdRvLGR9LtWLIJ0hcydq07RUXkVh7GY3oeVuV4JLz3VHIvRDuMxL+/lRQDPXeO9WMQbG6ma2dG0TUQnYm7bMxcD+V497A48rrPxW1jdpkBdUDWuGzBBYoi0KW6I313U3WzIFG8NoiNPCG2/5yZdh2s1LowqqQFbyUXBtw1R/nlxCCYSOJf2fEfpFTrQJDckVyo+HbHtST+0HF5q60v2NutIxh6fKcSS1TYARktZ5NkDxXNfYxt0dEGXqj8ZoCksKVqmbx7OeiBx7r+Svq5+4Q/ym9bzp4mD7AxBKuHmErvz60SvquToCQ9LcYy7DekegObv5uRLiYMGD2KBLi1sw38QlHQUnvK4iqrclVKooRPFc9hSq8ZvbK/JVCmr0pfsTO4AHTppiSbLq/FmoH93Zq0WjY3PryfWMx04V6vjTHnjIPdaurhnL3nrpqn2tXT5B5jnI5r38rQqhfcLXVW3tKtB4Y7nSjip6y28nWx4CLjmqrMikZz997xoCIxnqMmcYt2+zFqi1DrvSDNVKLU15np+0OrDlbVP2LR++lT7f2NggidgiE5b8BPZpy3ZFjE4thmQJA4ff9DdeDRJAF/ZhqvdawIEZHNQgh+dinKQ8KzngUM/Jj8gtLVgP+C4MfmJweKaBUFu5r47ZeFSNpKfkvwoXng5gJy2XEpG+v8zwgZKz944IuvhnLyPe8TkYi1gjDO3A1Gscdt8yhG3aW/gpEM/TRYg25YOlh20RJlvV+VJGIIhEnMSd8zYMDyFkehCjphIxsvhgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When two dispatchers try to give the same drone, or the same charging pad or site slot, to different flights at overlapping times, what should happen?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

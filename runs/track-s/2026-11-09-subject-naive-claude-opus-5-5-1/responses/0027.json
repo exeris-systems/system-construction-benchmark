@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CgsQSSLf2SgQbfBVmkdum",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSrgcKEAgTGAI4AUIIdGhpbmtpbmcSDEENl6SrxVKIJpbBaBoM/gAJ/1YZyc7tl4dBIjDQGKRSLF6wD1xfRlnVy9AoEA2AxgkSHHtkBZ7eJ6hPu0nUEBL9h+A6AOwF169clccqywYb2sMFT0lVhGnc+rViFeowMM5qqaEIMXMGXn9S1sTVw8G+exBR3/dv+7mpx5GqK+QrLVyx7R6cIZ8yHDJRwMKE95sBR6nUKke0UUJYoWhyiIHrixvltKdCHx7NiCllgCeFpEphZ+4JWVKKWKFLz9q/YuQwfih0unoqFc9sQSKoIs6ae1LVms3mvvLf3cgZYmyeDNwKIdPHuHh5EecPYWZ8wWBdeLwEFLUlMVFUUfPI4pZIv/hmWDst2vq7g7KAfP6Ax8el43P25g7E1ALx7mwb281FICgEyTW0FPj9vkftXbYymhUS/X9ifdyLFiKQpTtGHTBypZG2r/Q68+9vMFaxK/T+0QUWlUzShS4kCth9wdfofSogP6SpT+ZUPNmXBXWYKUvR8akJFxaeTBwcKgtwVIaNU58Z0CeG5FNn2Jq6mPMkLD3DaOea4Hdxu76c4fFghHjy/7+U4ETQdaAVfDPltmNfUpXiAzjSmygjZaXKgLI02xZwTw61TMff79ULSqGH8JQaiOzdPfMua1Q0CJfDED5Y66btdwHq+QHQnpDNfV72Xk915PI9CWyJiW/sg1jSMyI4BfWQ95qhlkHUucnqSnLmePOlaoHuevj/AAscS2L1WWQyEcu838RYg2jYpwXOJLAmWdpFfGBlEVWDZifk8mHM++CTLLCzhCQXH9WbdYPyYUnPdfTHn9mMMn7jTxcHGXSUi+9Z9giwooKX4oKZ/0bWjTP1m9i6YHDm/GLX2lJDaPs52GLrZ+vVg8AFrIPpE3CLiE3Q5nF5Hip8sqSPqWs+vif7fjQpC6IAphvdh85LfZXyVXrjPC13He5+kxlS7vEzxGYz0UK0tupdagA23xlg3fAZX9qDiszOITb5M56Fe1FfOgDBf/dy6MSe20Ahwv8Z1lKwMedsRbK1Gv3QcvgD/GBOyJMM1CxoSw7Qx55ySe3W2SbyA2vh3tsR6rHqDaP8x5o8qy8uvDD7lnmt9qW7XiUN6ZEU1EarbQwTDj6O9QLfoZ9HoGhUURJozQmRY8bK3LJsHkSemGwsoiOj/66J/GuMku7CITBNIHVWKx/29ip2QKCj0HQu+h8pgP60T0+YdKaIHdncatb9pb0Kn0XaREnbkVs5twAYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: When you look for drones that could get to where a job starts, what makes a drone count as able to get there (in service, not booked, enough charge, open corridors from its current site)?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2463,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 110,
+  "output_tokens_details": {
+   "thinking_tokens": 48
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
