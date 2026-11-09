@@ -245,6 +245,160 @@ class ClientTest(unittest.TestCase):
             self.client.describe()
 
 
+class AnthropicClientTest(unittest.TestCase):
+    def setUp(self):
+        os.environ["ANTHROPIC_API_KEY"] = "test-key"
+        self.out = pathlib.Path(tempfile.mkdtemp()) / "run"
+        self.out.mkdir()
+        self.recorder = ts.Recorder(self.out)
+        self.sent = []
+        self._urlopen, self._sleep = ts.urllib.request.urlopen, ts.time.sleep
+        ts.time.sleep = lambda seconds: None
+
+    def tearDown(self):
+        ts.urllib.request.urlopen, ts.time.sleep = self._urlopen, self._sleep
+        self.recorder.calls.close()
+
+    def reply_with(self, payload):
+        def urlopen(request, timeout=0):
+            self.sent.append((request, json.loads(request.data)))
+            return Reply(payload, headers(anthropic_ratelimit_requests_remaining="9"))
+        ts.urllib.request.urlopen = urlopen
+
+    def test_body_carries_effort_and_schema_and_no_sampling(self):
+        self.reply_with({"content": [{"type": "thinking", "thinking": ""}, {"type": "text", "text": '{"ok": 1}'}],
+                         "stop_reason": "end_turn", "id": "msg", "model": "claude-opus-5-5", "usage": {}})
+        judge = ts.Client("judge", "anthropic", "claude-opus-5-5", 60_000, 100, self.recorder, effort="high")
+        self.assertEqual(judge.call("s", "system", [("user", "q")], json_reply=True, schema={"type": "object"}), '{"ok": 1}')
+        request, body = self.sent[0]
+        self.assertEqual(request.get_header("Anthropic-version"), ts.ANTHROPIC_VERSION)
+        self.assertEqual(body["system"], "system")
+        self.assertEqual(body["output_config"], {"effort": "high", "format": {"type": "json_schema", "schema": {"type": "object"}}})
+        self.assertNotIn("temperature", body)
+        self.assertTrue(request.full_url.endswith("/messages"))
+
+    def test_refusal_is_not_a_natural_stop(self):
+        self.reply_with({"content": [], "stop_reason": "refusal", "id": "msg", "model": "m"})
+        judge = ts.Client("judge", "anthropic", "m", 60_000, 100, self.recorder)
+        with self.assertRaises(ts.RunFailed):
+            judge.call("s", "system", [("user", "q")])
+
+    def test_sampling_and_effort_are_refused_where_they_do_not_apply(self):
+        os.environ["GEMINI_API_KEY"] = "test-key"
+        for kwargs in ({"temperature": 0.0}, {"seed": 1}):
+            with self.assertRaises(ts.RunFailed):
+                ts.Client("judge", "anthropic", "m", 60, 100, self.recorder, **kwargs)
+        with self.assertRaises(ts.RunFailed):
+            ts.Client("judge", "gemini", "m", 60, 100, self.recorder, effort="high")
+
+
+class JudgeTest(unittest.TestCase):
+    """The judge's inputs, the mutants built from judge-control.yaml, and how a judgement is compared."""
+
+    def setUp(self):
+        self.files = {name: (HERE / name).read_text() for name in (ts.JUDGE_FILE, ts.JUDGE_CONTROL_FILE)}
+        self.files.update({name: (HERE.parent / name).read_text() for name in (ts.REFERENCE_FILE, ts.ANTI_FILE)})
+        self.parameters, self.requirements = ts.parse_reference(self.files[ts.REFERENCE_FILE])
+        self.ids = [i for i, _ in self.requirements]
+        self.control = ts.parse_control(self.files[ts.JUDGE_CONTROL_FILE], ts.JUDGE_CONTROL_FILE)
+        self.mutants = {m["id"]: m for m in ts.build_mutants(self.control)}
+
+    def perfect(self, mutant):
+        return {"requirements": {r: {"coverage": c, "items": []} for r, c in mutant["coverage"].items()},
+                "items": {i["id"]: {"class": i["class"], "requirements": [i["covers"]] if i["covers"] else []}
+                          for i in mutant["items"]}}
+
+    def test_reference_is_read_whole(self):
+        self.assertEqual(len(self.requirements), len(set(self.ids)))
+        self.assertEqual(self.ids.count("SR-REG-01"), 1)
+        self.assertTrue(all(text for _, text in self.requirements))
+        self.assertIn(("battery_warning_pct", "30"), self.parameters)
+        out_of_scope, technical = ts.parse_anti(self.files[ts.ANTI_FILE])
+        self.assertTrue(out_of_scope and technical)
+        system = ts.judge_system(self.files[ts.JUDGE_FILE], self.files)
+        self.assertNotIn("{{", system)
+
+    def test_base_covers_every_reference_requirement_once(self):
+        self.assertEqual(sorted(b["covers"] for b in self.control["base"]), sorted(self.ids))
+
+    def test_mutants_are_what_their_entries_make_them(self):
+        def counts(m):
+            return [list(m["coverage"].values()).count(c) for c in ts.COVERAGE]
+        self.assertEqual(counts(self.mutants["M1"]), [len(self.ids), 0, 0])
+        self.assertEqual(counts(self.mutants["M2"]), [len(self.ids) - 8, 0, 8])
+        self.assertEqual(counts(self.mutants["M5"]), [len(self.ids) - 6, 6, 0])
+        self.assertEqual((self.mutants["M6"]["items"], counts(self.mutants["M6"])), ([], [0, 0, len(self.ids)]))
+        classes = [i["class"] for i in self.mutants["M4"]["items"]]
+        self.assertEqual((classes.count("user_visible"), classes.count("technical")), (4, 3))
+        self.assertEqual([i["class"] for i in self.mutants["M3"]["items"]].count("other"), 6)
+        # Ids are renumbered, so a gap or a trailing item reveals nothing.
+        for m in self.mutants.values():
+            self.assertEqual([i["id"] for i in m["items"]], [f"DR-{n:02d}" for n in range(1, len(m["items"]) + 1)])
+
+    def test_exact_judgement_has_no_disagreement_and_a_wrong_one_is_named(self):
+        m = self.mutants["M4"]
+        right = self.perfect(m)
+        self.assertEqual(ts.disagreements(m, right), [])
+        wrong = json.loads(json.dumps(right))
+        wrong["requirements"]["SR-REG-01"]["coverage"] = "partial"
+        added = next(i["id"] for i in m["items"] if i["class"] == "user_visible")
+        wrong["items"][added]["class"] = "other"
+        self.assertEqual(len(ts.disagreements(m, wrong)), 2)
+        self.assertEqual(ts.score(right)["outOfScope"], 4)
+
+    def test_judgement_must_list_everything_exactly_once(self):
+        m = self.mutants["M1"]
+        def reply(requirements, items):
+            return json.dumps({"requirements": [{"id": r, "coverage": "covered", "items": []} for r in requirements],
+                               "items": [{"id": i, "class": "reference", "requirements": []} for i in items]})
+        item_ids = [i["id"] for i in m["items"]]
+        self.assertIsNotNone(ts.parse_judgement(reply(self.ids, item_ids), self.ids, item_ids))
+        self.assertIsNone(ts.parse_judgement(reply(self.ids[1:], item_ids), self.ids, item_ids))
+        self.assertIsNone(ts.parse_judgement(reply(self.ids + self.ids[:1], item_ids), self.ids, item_ids))
+        self.assertIsNone(ts.parse_judgement(reply(self.ids, item_ids[1:]), self.ids, item_ids))
+        self.assertIsNone(ts.parse_judgement("not json", self.ids, item_ids))
+        unhashable = json.loads(reply(self.ids, item_ids))
+        unhashable["items"][0]["id"] = ["DR-01"]
+        self.assertIsNone(ts.parse_judgement(json.dumps(unhashable), self.ids, item_ids))
+
+    def test_judge_control_passes_only_when_every_judgement_is_exact(self):
+        os.environ["GEMINI_API_KEY"] = "test-key"
+        _urlopen, _sleep = ts.urllib.request.urlopen, ts.time.sleep
+        # Every requirement missing and every item other: right for the empty contract only.
+        def urlopen(request, timeout=0):
+            text = json.loads(request.data)["contents"][-1]["parts"][0]["text"]
+            items = [line.split(": ", 1)[1] for line in text.splitlines() if line.startswith("- id: ")]
+            judgement = {"requirements": [{"id": r, "coverage": "missing", "items": []} for r in self.ids],
+                         "items": [{"id": i, "class": "other", "requirements": []} for i in items]}
+            return Reply({"candidates": [{"content": {"parts": [{"text": json.dumps(judgement)}]}, "finishReason": "STOP"}]},
+                         headers())
+        ts.urllib.request.urlopen, ts.time.sleep = urlopen, (lambda seconds: None)
+        try:
+            out = pathlib.Path(tempfile.mkdtemp())
+            judge = ts.Client("judge", "gemini", "j", 60_000, 100, ts.Recorder(out), 0.0, 1)
+            ts.judge_control(argparse.Namespace(repetitions=2), self.files, out, {}, judge)
+        finally:
+            ts.urllib.request.urlopen, ts.time.sleep = _urlopen, _sleep
+        summary = json.loads((out / "judge-control.json").read_text())["summary"]
+        self.assertEqual(summary, {"exact": 2, "of": 12, "passes": False})
+
+    def test_judgement_of_the_wrong_shape_fails_the_run_without_a_second_request(self):
+        os.environ["GEMINI_API_KEY"] = "test-key"
+        _urlopen, _sleep = ts.urllib.request.urlopen, ts.time.sleep
+        calls = []
+        def urlopen(request, timeout=0):
+            calls.append(1)
+            return Reply({"candidates": [{"content": {"parts": [{"text": "{}"}]}, "finishReason": "STOP"}]}, headers())
+        ts.urllib.request.urlopen, ts.time.sleep = urlopen, (lambda seconds: None)
+        try:
+            judge = ts.Client("judge", "gemini", "j", 60_000, 100, ts.Recorder(pathlib.Path(tempfile.mkdtemp())))
+            with self.assertRaises(ts.RunFailed):
+                ts.judge_one(judge, "system", "M1/1", self.ids, self.mutants["M1"]["items"])
+        finally:
+            ts.urllib.request.urlopen, ts.time.sleep = _urlopen, _sleep
+        self.assertEqual(len(calls), 1)
+
+
 class ModeTest(unittest.TestCase):
     """Each persona mode asks every question of its own set and writes its answers under its name."""
 

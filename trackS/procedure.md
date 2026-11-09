@@ -4,7 +4,7 @@ type: reference
 visibility: public
 owning-repo: system-construction-benchmark
 status: draft
-last-verified: 2026-10-22
+last-verified: 2026-11-09
 ---
 
 # Track S procedure
@@ -14,8 +14,8 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 4 (draft 1)
-Decision register: D-45 to D-55. Version 3, whose persona calibration this version keeps, is frozen at
+Version: 4 (draft 2)
+Decision register: D-45 to D-56. Version 3, whose persona calibration this version keeps, is frozen at
 tag `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
@@ -26,23 +26,23 @@ Track S pilots (D-46).
 | --- | --- | --- | --- |
 | Persona — fleet technician, dispatcher, airspace desk | Gemini API | `gemini-3.5-flash-lite`, temperature 0, random seed 1; answering pass only | answering: `persona-prompt.md` + its slice of `world-brief.md` (`brief-slices.yaml`); checking: `persona-check-prompt.md` + the same slice, the question and the answer's sentences |
 | Grader — of the persona's calibration answers | Gemini API | `gemini-3.8-flash`, temperature 0, random seed 1 | `grader-prompt.md` + the answering role's slice, the question, its kind and `expect`, and the answer |
-| Judge of a Claude subject, both series | Gemini API | `gemini-4-argon` | the derived contract + the reference requirements |
-| Judge of a Gemini subject, both series | Anthropic API | `claude-opus-5-5` | the derived contract + the reference requirements |
+| Judge of a Claude subject, both series | Gemini API | `gemini-4-argon`, temperature 0, random seed 1 | `judge-prompt.md` + the requirements and parameters of `contract/system-requirements.yaml` + the anti-requirements of `contract/anti-requirements.md`, and the derived contract |
+| Judge of a Gemini subject, both series | Anthropic API | `claude-opus-5-5`, effort `high`; the API takes no temperature or seed | the same |
 
-Instruments are fixed across subjects and calibrated before the first subject. Each subject is judged by the other vendor; in the script series each contract is also judged, unscored, by the judge of the subject's own family, and the report gives how often the two agree (D-55). The subjects, the
-judge's calibration and the S-naive and S-instructed tasks are added to this procedure before they
-run.
+Instruments are fixed across subjects and calibrated before the first subject. Each subject is judged by the other vendor; in the script series each contract is also judged, unscored, by the judge of the subject's own family, and the report gives how often the two agree (D-55). The subjects and the
+S-naive and S-instructed tasks are added to this procedure before they run.
 
 ## Files of the set
 
-| File | Role in version 3 |
+| File | Role in version 4 |
 | --- | --- |
 | `world-brief.md`, `brief-slices.yaml` | the world and each persona's slice of it |
 | `brief-seeding.md` | the brief sentences that are constraints or seeded needs; used to read derived contracts |
 | `persona-prompt.md`, `persona-check-prompt.md` | the persona instrument: the answering pass and the check pass |
 | `grader-prompt.md`, `grader-control.yaml` | the grader of the persona's calibration and the cases it is calibrated on |
+| `judge-prompt.md`, `judge-control.yaml` | the judge, and the mutant contracts it is calibrated on |
 | `persona-control.yaml`, `persona-holdout.yaml` to `persona-holdout-5.yaml` | the persona's calibration questions: the set the prompts are revised against, the held-out sets that decided drafts 3 to 6, and the held-out set that decides draft 7 |
-| `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 3, and replaced by subject prompts before the first subject runs |
+| `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 4, and replaced by subject prompts before the first subject runs |
 | `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
 | `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
 
@@ -94,6 +94,32 @@ call show the provider's limits, from which the subject runs are scheduled.
 The calibration establishes only that the persona keeps to its slice. It says nothing about how any
 subject interviews or derives a contract.
 
+## Judge calibration — before any subject
+
+A derived contract is a list of items, each with an `id` and one `requirement`, in YAML; the subject
+prompts ask for that shape (D-56). The judge receives `judge-prompt.md` with the reference
+requirements and their parameters from `contract/system-requirements.yaml`, the user-visible and the
+technical anti-requirements of `contract/anti-requirements.md`, and the contract. It returns, for
+each reference requirement, `covered`, `partial` or `missing`, with the items that state its
+obligations, and for each item its class: `reference`, with the requirements it states, or
+`user_visible`, `technical` or `other`. A reply that does not list every requirement and every item
+exactly once fails the run; it is never asked for again, since a second draw on the same contract
+could replace a judgement the calibration counts.
+
+From one judgement: `derived_recall` is the covered requirements over all of them, partial ones
+reported apart and never counted in it; `derived_precision` is the `reference` items over every item
+that is not `technical`; `out_of_scope_additions` is the number of `user_visible` items.
+
+Mode `judge-control` builds six contracts from `judge-control.yaml`: every reference requirement
+reworded (M1); eight of them removed (M2); six invented items added, two of which state nothing
+checkable (M3); four user-visible and three technical anti-requirements added (M4); six items with
+one obligation left out (M5); and the empty contract (M6). Items are renumbered in their final
+order. Each contract is judged three times, 18 judgements in all. A judge passes when every one of
+them gives every requirement the coverage its contract was built with, every item its class, and
+every reworded item the requirement it was reworded from; a single difference fails it. Each judge
+is calibrated on its own, and its prompt is frozen before it judges a subject; a revision is a new
+draft.
+
 ## Tests
 
 `python3 -I trackS/test_run_track_s.py`, run by the `track-s-tests` workflow, checks the script
@@ -114,8 +140,9 @@ The output directory is committed unedited:
 
 - **No human in the loop.** Nobody reads, edits or steers between calls.
 - **Sampling.** A subject runs on the provider's defaults: no temperature or similar setting is
-  sent. The persona runs at temperature 0 with random seed 1, sent with every call and recorded in
-  `run.json`, so its answers do not depend on a default the provider may change.
+  sent. The persona, the grader and the Gemini judge run at temperature 0 with random seed 1, and
+  the Anthropic judge at effort `high`, sent with every call and recorded in `run.json`, so their
+  answers do not depend on a default the provider may change.
 - **Errors.** Network failures, timeouts, rate limits and server errors are retried with the same
   request and logged. An exhausted daily or monthly quota fails the run as an infrastructure error
   (program plan §9.1), never as a subject's failure. A response whose finish reason is not a natural

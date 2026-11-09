@@ -391,3 +391,8 @@ Its `contradicts` flag agrees on 35: it also marks GD5, "a site can launch at mo
 time", as contradicting, where the case marks it as an addition. That errs towards the strict side,
 since a contradicting `fact` answer fails the persona on its own. The grader's prompt passes
 unrevised and is frozen.
+
+## Judges
+
+| Run | Model | `judge-prompt.md` (SHA-256) | Verdict |
+| --- | --- | --- | --- |
