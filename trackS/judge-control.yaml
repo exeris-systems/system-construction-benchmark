@@ -25,7 +25,7 @@ base:
     requirement: To plan a flight for a job, a dispatcher picks the drone and the way it flies, given as a sequence of corridors that run between named sites.
   - id: DR-03
     covers: BR-01
-    requirement: Several independent operating companies use the service side by side. A company's drones, drone models, sites, pads, jobs, flights and the history of all of these are visible and changeable to its own staff and to no one else.
+    requirement: Several independent operating companies use the service side by side, and the staff of one operating company can never see or change another operating company's drones, drone models, sites, pads, jobs, flights, or the history of any of these.
   - id: DR-04
     covers: BR-11
     requirement: Technicians can put a drone on charge; the service accepts only a pad with the same connector type as the drone's model and turns the request down for any other pad.
