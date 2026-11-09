@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: My day is planning the jobs, signing off each flight, and watching them go. When one goes wrong I decide whether it carries on or comes back.\nThe question: How do you decide whether a flight carries on or comes back?\n\nQ3\nThe answer just before it: It depends on the battery and on what is in the way. If a closure comes up on its route, it comes back, no discussion.\nThe question: Where do you hear about closures?\n\nQ4\nThe answer just before it: From the airspace desk. They put it in and we see it. Sometimes it comes in while the drone is already halfway there.\nThe question: What do you do when a closure comes in while the drone is halfway?\n\nQ5\nThe answer just before it: I call it back, and then I have a job that did not happen and a customer to tell. The drone also needs a pad where it lands.\nThe question: How do you choose which drone gets a job?\n\nQ6\nThe answer just before it: I look at who is free, who has enough battery and who can carry the load. I choose; I do not want anything choosing for me.\nThe question: Why do you not want anything choosing for you?\n\nQ7\nThe answer just before it: Because I know things a list does not, like which drone has a sticky motor this week.\nThe question: What would a new service most likely get wrong for you?\n\nQ8\nThe answer just before it: Telling me a drone is fine when it has stopped talking to us. I need to know the moment we lose one.\nThe question: When you say the moment you lose one, how soon is soon enough?\n\nQ9\nThe answer just before it: A minute is already long when it is over a road.\nThe question: You mentioned the battery earlier. What battery level do you send a drone out with?\n\nQ10\nThe answer just before it: Not under half. Below that I do not trust it to get there and back.\nThe question: And if a drone comes back below that?\n\nQ11\nThe answer just before it: It goes to charge before anything else, and I tell the technicians.\nThe question: Who hands work to you?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

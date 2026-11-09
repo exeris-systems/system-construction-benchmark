@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: The desk enters every closure the authorities announce. Planned ones come with a start and an end, sudden ones apply at once.\nThe question: What is different for you about a sudden closure?\n\nQ3\nThe answer just before it: There is no time. It has to be in before the first drone reaches the area, and the companies need to see it straight away.\nThe question: How often do closures change during the day?\n\nQ4\nThe answer just before it: Often. An area gets wider, or the end time moves.\nThe question: When the end time moves, what do you have to do?\n\nQ5\nThe answer just before it: Enter the new version. The old one should stop counting from then on.\nThe question: What do you want to know after you have entered a closure?\n\nQ6\nThe answer just before it: How much trouble it caused across the customers. Not whose drones, just how many flights it hit.\nThe question: Why not whose drones?\n\nQ7\nThe answer just before it: That is their business. We have no reason to look into one company's operations.\nThe question: Who do you hand work to?\n\nQ8\nThe answer just before it: Nobody really. The companies act on what we enter.\nThe question: What was the worst day for the desk recently?\n\nQ9\nThe answer just before it: A closure was entered with the wrong end time and three companies kept their drones on the ground all afternoon.\nThe question: How was the wrong end time noticed?\n\nQ10\nThe answer just before it: One of the companies phoned us to ask why it was still on.\nThe question: What does the desk check by hand today?\n\nQ11\nThe answer just before it: That the area we entered is the one the authorities meant. We read it back against their notice.\nThe question: Can you give me an example of an area that did not match the notice?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
