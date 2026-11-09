@@ -14,7 +14,7 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 6 (draft 3)
+Version: 6 (draft 4)
 Decision register: D-45 to D-61. Version 5, whose persona, grader, subjects and follow-up classifiers
 this version keeps, is frozen at tag `us-procedure-v5`; version 4, at `us-procedure-v4`; version 3, at `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
@@ -123,7 +123,10 @@ every reworded item the requirement it was reworded from; a single difference fa
 is calibrated on its own, and its prompt is frozen before it judges a subject; a revision is a new
 draft. In version 6, draft 3, the reference is `brief-requirements.yaml` and the mutants are built on
 it; the prompt is unchanged, and both judges are calibrated again before they judge a subject
-(D-61).
+(D-61). On draft 3, Argon passed and Opus did not, 17 of 18 exact: BR-01 stated BR-04's obligation, so
+mutant M2 had no single right answer for BR-04. Draft 4 narrows BR-01 and its base item to staff of
+one operating company and another operating company's data, and both judges are calibrated on it
+(`calibration-log.md`).
 
 ## Subjects — after the instruments
 
