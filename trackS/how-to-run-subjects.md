@@ -42,4 +42,13 @@ judges are those of [`procedure.md`](procedure.md). Run from the repository root
    For a Gemini subject the two judges swap roles. Each `judgement.json` says whether it is
    `scored`, and gives the judgement and its `score`.
 
-4. Commit every output directory unedited.
+4. Classify the run's questions as follow-ups, with the same two judges in the same roles; mode
+   `follow-up` makes one call per role that was asked more than one question:
+
+   ```sh
+   python3 -I trackS/run-track-s.py follow-up --judged runs/track-s/YYYY-MM-DD-subject-naive-claude-opus-5-5-1 --judge-provider gemini --judge-model gemini-4-argon --judge-temperature 0 --judge-seed 1 --judge-max-tokens 32768 --judge-rpm 5 --out runs/track-s/YYYY-MM-DD-follow-up-gemini-4-argon-subject-naive-claude-opus-5-5-1
+   ```
+
+   `follow-ups.json` gives each question's label, `follow_up_ratio`, and whether it is `scored`.
+
+5. Commit every output directory unedited.
