@@ -919,6 +919,7 @@ Configurations not run in Campaign 1, each with its reason:
 | Changes 1 and 2 | budget; no hypothesis depends on them (H2 uses Changes 3–5, H4 uses Change 5) |
 | Axon embedded | optional continuity arm; first to go under budget (§5A.4) |
 | Temporal | §5A.6 |
+| `mistral-large-2512` as a Track S script-series subject | the account's key is refused it with HTTP 403 `tier_not_allowed`, and the account pays for the Gemini and Anthropic APIs only; `gemini-3.8-flash` and `gemini-4-argon` take its place (D-55) |
 | Gemini 3.5 Flash Lite as a Track S subject | no longer offered in the vendor's own agent harness, Antigravity, though still served by the Gemini API; a subject its vendor has begun withdrawing may disappear before the matrix is done or replicated (D-48) |
 | S-instructed in the Track S native series | an instructed interview in an agent harness measures the harness's tool handling more than elicitation; the script series measures it (D-48) |
 
