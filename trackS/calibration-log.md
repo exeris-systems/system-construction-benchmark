@@ -416,3 +416,14 @@ show where either judge's limit lies.
 
 | Run | Model | `follow-up-prompt.md` (SHA-256) | Verdict |
 | --- | --- | --- | --- |
+| `runs/track-s/2026-11-09-follow-up-control-gemini-4-argon` (pairs `301e3960…`) | `gemini-4-argon`, temperature 0, seed 1 | `62d91d9b…` (version 5, draft 3) | **pass** — 40, 40 and 40 of 40 |
+| `runs/track-s/2026-11-09-follow-up-control-claude-opus-5-5` (pairs `301e3960…`) | `claude-opus-5-5`, effort `high` | `62d91d9b…` (version 5, draft 3) | **pass** — 40, 40 and 40 of 40 |
+
+### `2026-11-09-follow-up-control-gemini-4-argon` and `-claude-opus-5-5` — pass
+
+Both runs completed without error or retry, 12 classifications each, every response a natural stop
+(`STOP`, `end_turn`). Both judges agree with every one of the 40 labels in all three repetitions,
+the threshold being 37: the questions that return to an earlier answer, the general questions, and
+the follow-ups in other words are all labelled as the set labels them. The pairs were written with
+Claude Code, on Claude Opus 5.5 (D-59). As with the mutants, neither judge missed a label, so the
+calibration shows both meet the threshold, not where either one's limit lies.
