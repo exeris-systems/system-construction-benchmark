@@ -558,3 +558,15 @@ Each judge is calibrated as classifier before it reads a subject's questions, on
 Both judges pass as classifiers, each agreeing with all 40 labels in every repetition (`runs/track-s/2026-11-09-follow-up-control-gemini-4-argon`, `runs/track-s/2026-11-09-follow-up-control-claude-opus-5-5`, `trackS/calibration-log.md`), and the follow-up prompt is frozen at `62d91d9b…`. The procedure records the verdict as version 5, draft 4, with no instrument changed.
 
 Impact: `trackS/procedure.md`, `trackS/follow-up-prompt.md`, `trackS/follow-up-control.yaml`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `trackS/how-to-run-subjects.md`, `trackS/calibration-log.md`, `.github/workflows/track-s-tests.yml`.
+
+### D-60 — How the ceiling is estimated
+
+D-45 fixes a ceiling for `derived_recall` — the reference requirements a careful reader cannot trace to any sentence of the brief — to be estimated once and reported beside every score, and leaves open who estimates it. The reference requirements were written for the construction track, at the level of detail its oracle checks, so the ceiling can lie well below 39, and a recall cannot be read without it.
+
+The judges of D-55 estimate it, with the instrument they were calibrated as: `trackS/judge-prompt.md`, unchanged, judges the whole of `trackS/world-brief.md` as a contract. Each unit of the brief, a paragraph or a bullet as `trackS/brief-slices.yaml` numbers them, is one item, numbered `DR-01`, `DR-02`, … in the brief's order. Every unit reaches at least one persona, so the brief is everything a subject can learn from them. A requirement the brief covers is one a subject can derive in full, a partial one only in part, and a missing one not at all. Read this way, the ceiling is the recall of a subject that learned the whole brief and wrote it down unchanged.
+
+The judges judge the brief, not a subject, so neither judgement is scored against the other: each judge judges it three times, as in its calibration, and both are reported, with how many requirements kept one coverage in all three repetitions. The ceiling is never used to rescale a score. Its estimate reads no subject run; the first subject run of the script series, `runs/track-s/2026-11-09-subject-naive-claude-opus-5-5-1`, was judged before it.
+
+The procedure takes this as version 6, draft 1, with every instrument of version 5 unchanged.
+
+Impact: program plan §6.4; `trackS/procedure.md`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `.github/workflows/track-s-tests.yml`, `preregistration/frozen-sets.md`.
