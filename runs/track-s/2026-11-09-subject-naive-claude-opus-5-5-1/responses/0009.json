@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CgsQNTdgzMf6UCyGxrfoJ",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS2QYKEAgTGAI4AUIIdGhpbmtpbmcSDP3s9MOO7N1DEPnOcRoM83hU1bRsSgg4cTiUIjBa/p4+EYsyT5BLoTSbxBMUN2poX3Qg1uUTf5Cl2km7gstTLYcWtAFZVOlyQOhCPpIq9gViiRzlQ3uh9M3YN5L6kOY8Bd5vzaMB7vAPQZ8z3o/rfjQuIB1gDlWZNWQOa88Lg4dsqhrfYrpDczEDgZqyGGuZnVQPqhw85S0w8Ptny7U/vt8RXxE3lQFcvCksl1OAyFY2nxqmSxzO/Bc5C/IxWJkstdrjp5/xG0IA2zzcl8qsh9qGWvX0wnKXHL5PUi3G+v+TdgBdgYYWGvRDsw9X6pc0AdqSvMcLpURiEixlj+mC3P5bdRvLGR9LtWLIJ0hcydq07RUXkVh7GY3oeVuV4JLz3VHIvRDuMxL+/lRQDPXeO9WMQbG6ma2dG0TUQnYm7bMxcD+V497A48rrPxW1jdpkBdUDWuGzBBYoi0KW6I313U3WzIFG8NoiNPCG2/5yZdh2s1LowqqQFbyUXBtw1R/nlxCCYSOJf2fEfpFTrQJDckVyo+HbHtST+0HF5q60v2NutIxh6fKcSS1TYARktZ5NkDxXNfYxt0dEGXqj8ZoCksKVqmbx7OeiBx7r+Svq5+4Q/ym9bzp4mD7AxBKuHmErvz60SvquToCQ9LcYy7DekegObv5uRLiYMGD2KBLi1sw38QlHQUnvK4iqrclVKooRPFc9hSq8ZvbK/JVCmr0pfsTO4AHTppiSbLq/FmoH93Zq0WjY3PryfWMx04V6vjTHnjIPdaurhnL3nrpqn2tXT5B5jnI5r38rQqhfcLXVW3tKtB4Y7nSjip6y28nWx4CLjmqrMikZz997xoCIxnqMmcYt2+zFqi1DrvSDNVKLU15np+0OrDlbVP2LR++lT7f2NggidgiE5b8BPZpy3ZFjE4thmQJA4ff9DdeDRJAF/ZhqvdawIEZHNQgh+dinKQ8KzngUM/Jj8gtLVgP+C4MfmJweKaBUFu5r47ZeFSNpKfkvwoXng5gJy2XEpG+v8zwgZKz944IuvhnLyPe8TkYi1gjDO3A1Gscdt8yhG3aW/gpEM/TRYg25YOlh20RJlvV+VJGIIhEnMSd8zYMDyFkehCjphIxsvhgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: When two dispatchers try to give the same drone, or the same charging pad or site slot, to different flights at overlapping times, what should happen?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1089,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 94,
+  "output_tokens_details": {
+   "thinking_tokens": 40
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

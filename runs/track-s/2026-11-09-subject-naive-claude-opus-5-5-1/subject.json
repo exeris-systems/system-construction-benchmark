@@ -1,0 +1,329 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "technician",
+   "question": "In a normal working day, what do you do with the drones, from the start of your shift to the end, and what information do you need or record at each step?",
+   "answer": "As a fleet technician, I keep drones and charging equipment in working order throughout my shift. My work includes adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs, put them back when fixed, and send drones to charge."
+  },
+  {
+   "role": "technician",
+   "question": "When you take a drone out of service or put it back, what details do you record (reason, who, when, parts, test flight), and who needs to see that the drone is unavailable?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Can a drone that is out of service for repair ever be given a job by a dispatcher, or must the system block that?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "In a normal working day, what do you do, from the start of your shift to the end, and what do you need to see or decide at each step?",
+   "answer": "As a dispatcher, I plan and run the flights for my company, deciding which drone flies and along which way, and I sign off each flight before it leaves. I can call off a flight, and several of us plan at the same time, often for the same busy sites and popular drones. Before and during a flight, things happen outside our control, like whether the load is ready, the drone reaching its job's points, and its arrival, which are reported by people and devices outside the company."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When two dispatchers try to give the same drone, or the same charging pad or site slot, to different flights at overlapping times, what should happen?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "In a normal working day, what do you do, from the start of your shift to the end, and what information do you work with?",
+   "answer": "I keep the shared picture of the airspace, which consists of the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The authorities define zones where flying is prohibited, and they announce planned closures with a start and end time, as well as sudden ones that apply at once. These closures are often amended during the day, such as when an area is widened or an end time moves, and they can even come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers."
+  },
+  {
+   "role": "desk",
+   "question": "Do you work for the platform company or for one of the customer companies, and when you ask how much disruption a closure caused, what exactly do you want to see (e.g. number of flights affected per company, names of companies, details of flights)?",
+   "answer": "I work on the airspace desk at the platform company, which runs a shared service for several independent drone operating companies. When a closure is entered, I want to know how much disruption it caused across customers."
+  },
+  {
+   "role": "desk",
+   "question": "Is a total across all customers enough for you (e.g. \"14 flights affected\"), or do you need it broken down by company, or details of individual flights?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When a closure comes into force while one of your drones is in the air on a corridor or in a zone that is now closed, what must happen to that flight, and who must be told?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you sign off a flight, what must be true about it first (drone in service, charged, route not crossing closed or prohibited airspace, load ready)?",
+   "answer": "I am the licensed person responsible for each flight, and I decide which drone flies and along which way before I sign it off before it leaves. I can call off a flight if needed."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What are the stages a flight goes through, from first being planned to being finished or called off?",
+   "answer": "I plan the flight and decide which drone flies and along which way. Then I sign off the flight before it leaves, though I can call it off. Before and during the flight, external people and devices report whether the load is ready, if the drone reaches the points of its job, and when it arrives."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Is a flight's way always made of corridors from the desk's network, from one site to another, or can you draw your own route?",
+   "answer": "Drones fly along corridors between named sites. Choosing the drone and the way it flies is my legal responsibility, and our policy states that software never chooses a drone or a way for us."
+  },
+  {
+   "role": "dispatcher",
+   "question": "If the drone or the way you chose has a problem (drone out of service, corridor closed), do you want the service to stop you from signing off, or only to warn you and let you decide?",
+   "answer": "Choosing the drone and the way it flies is my legal responsibility, and our policy is that software never chooses a drone or a way for us. I want help finding out which of my drones could get to where a job starts."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you look for drones that could get to where a job starts, what makes a drone count as able to get there (in service, not booked, enough charge, open corridors from its current site)?",
+   "answer": "I want help finding out which of my drones could get to where a job starts. A company may run a few hundred drones of several models that differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use."
+  },
+  {
+   "role": "technician",
+   "question": "What do you need to record about each drone model and each individual drone (e.g. payload, range on full battery, sensors, charging connector, current charge, location)?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "When you send a drone to charge, how do you pick the charging pad, and can a pad charge drones with any connector or only one type?",
+   "answer": "Each of our sites has a few dozen charging pads, and several connector types are in use that are not interchangeable. Drones differ in which charging connector they use, and we send drones to charge. I don't know how I pick the charging pad."
+  },
+  {
+   "role": "desk",
+   "question": "Are sites and charging pads owned by one company each, or can several companies share a site or corridor?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Does a closure apply to whole zones, to individual corridors, or to sites, and when it is amended (widened, end time moved), what do you change?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Who enters closures and prohibited zones into the service, and should customer companies be able to change them or only see them?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "The reports from outside people and devices (load ready, point reached, arrived): can they come late, twice, or out of order, and what should happen then?",
+   "answer": "Reports from drones can arrive late, out of order, more than once, or not at all. Radio coverage is patchy, especially around ports, industrial sites, and in bad weather, and reports come through relay stations."
+  },
+  {
+   "role": "dispatcher",
+   "question": "If you hear nothing from a flight for a while, what do you need from the service, and after how long?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you call off a flight that has already left, what happens to the drone, and what does the service need to show or record?",
+   "answer": "I am the licensed person responsible for each flight, and I can call off a flight. Drones fly on their own autopilots while people on the ground supervise, and nobody steers a drone with a stick through this service."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Does this service send the signed-off flight plan or a call-off to the drone's autopilot, or do people pass them on some other way?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Do you need a record of who planned, signed off, or called off each flight and when, and how long must it be kept?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "When a sudden closure is entered, how quickly must the companies whose flights are affected find out?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Is it your company's own technicians who add drones and pads, and should a technician ever see or change another company's drones?",
+   "answer": "Repairs and servicing are carried out by technicians, and we add new drones to our fleet and set up our own charging pads at our sites. Each company's fleet, jobs, sites, and problems are its own business, and pads are never lent to another company."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What is a job — where does it come from, and what does it contain (start site, points to reach, load, deadline, required sensors)?",
+   "answer": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly along corridors between named sites."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Are the points of an inspection always named sites on the corridor network, and does a delivery's load have a weight you know before planning?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Can one drone do more than one job in a single flight, and can a flight be changed after you have signed it off?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Is flying in a prohibited zone or a closed area ever allowed, for example for hospital flights or with special permission?",
+   "answer": "I don't know."
+  }
+ ],
+ "requirements": "```yaml\n- id: DR-01\n  requirement: >\n    The service must keep each customer company's data separate. Company data\n    means its drones, drone models, sites, charging pads, jobs, flights, repairs,\n    reports and history. A person from one company must never be able to see,\n    search, count or change another company's data. This holds in every screen,\n    list, message, export and error message.\n- id: DR-02\n  requirement: >\n    Every user must belong to exactly one customer company or to the platform\n    company. Every user must have one or more of the roles fleet technician,\n    dispatcher and airspace desk. The service must allow each action only to the\n    roles named for it in these requirements.\n- id: DR-03\n  requirement: >\n    The platform company must be able to add a new customer company without\n    changing or interrupting the data or work of existing companies. A new\n    company must start with no drones, sites, pads, jobs or flights.\n- id: DR-04\n  requirement: >\n    The airspace picture must be shared and visible to all users of all\n    companies. It contains the corridor network, the zones, the prohibited zones\n    and the closures. Only airspace desk users of the platform company may\n    create, amend or remove anything in it.\n- id: DR-05\n  requirement: >\n    The airspace desk must be able to record named sites and corridors. Each\n    corridor joins two sites and has a length. The desk must also be able to\n    group corridors into named zones.\n- id: DR-06\n  requirement: >\n    Each site must belong to exactly one customer company. Only users of that\n    company may place drones, charging pads or jobs at it. Only users of that\n    company may see what is at it.\n- id: DR-07\n  requirement: >\n    The airspace desk must be able to record prohibited zones that the\n    authorities have defined. A prohibited zone applies at all times until the\n    desk removes it.\n- id: DR-08\n  requirement: >\n    The airspace desk must be able to enter a planned closure that has a start\n    time and an end time. The closure applies to one or more zones or\n    corridors.\n- id: DR-09\n  requirement: >\n    The airspace desk must be able to enter a sudden closure. A sudden closure\n    takes effect at the moment it is entered. It has an end time, or no end\n    time until the desk sets one.\n- id: DR-10\n  requirement: >\n    The airspace desk must be able to amend a closure while it is planned or\n    already in force. This includes widening or narrowing the zones and\n    corridors it covers, moving its start time or end time, and ending it. Each\n    amendment must take effect for every company at once. The service must keep\n    every earlier version, with who made it and when.\n- id: DR-11\n  requirement: >\n    A fleet technician must be able to record a drone model for their company.\n    The record holds the model's carrying capacity, its range on a full battery,\n    the sensors it carries, and its charging connector type.\n- id: DR-12\n  requirement: >\n    A fleet technician must be able to add a drone to their company's fleet,\n    with its model and the site where it is. A technician must also be able to\n    retire a drone. A retired drone must stay in the company's history but must\n    never again be given a flight or a charge.\n- id: DR-13\n  requirement: >\n    A fleet technician must be able to take a drone out of service for repair,\n    with a reason. A technician must also be able to put the drone back into\n    service. The service must record who did each of these and when.\n- id: DR-14\n  requirement: >\n    The service must let a technician take a drone out of service or retire it\n    even when it has signed-off flights that are not finished. In that case it\n    must at once alert the dispatchers of that company and name each affected\n    flight.\n- id: DR-15\n  requirement: >\n    A fleet technician must be able to set up a charging pad at one of their\n    company's sites, with its connector type. A technician must also be able to\n    take a pad out of use. A pad must only ever be used by drones of the company\n    that owns it.\n- id: DR-16\n  requirement: >\n    A fleet technician must be able to send a drone to charge at a pad for a\n    stated time. The service must refuse this if any of the following is true.\n    The pad is at a different site from the drone. The pad's connector type\n    differs from the drone model's connector type. The pad or the drone is\n    already booked for an overlapping time. The drone is retired. When it\n    refuses, it must state the reason.\n- id: DR-17\n  requirement: >\n    A dispatcher must be able to record a delivery job. A delivery job has a\n    load, the site where the load starts, the site where it must go, and the\n    weight of the load.\n- id: DR-18\n  requirement: >\n    A dispatcher must be able to record an inspection job. An inspection job\n    has a start site, an ordered list of points to visit, and the sensors it\n    needs. The drone must return to the start site at the end.\n- id: DR-19\n  requirement: >\n    A dispatcher must be able to plan a flight for a job. To do this, the\n    dispatcher chooses one drone, a way given as an ordered chain of corridors,\n    and a planned departure time and arrival time.\n- id: DR-20\n  requirement: >\n    The service must never choose, assign, replace or reorder a drone or a way\n    for a flight. It must never sign off or start a flight on a dispatcher's\n    behalf. Only a dispatcher's own action may do these things.\n- id: DR-21\n  requirement: >\n    When a dispatcher asks, the service must list the dispatcher's company's\n    drones that could get to a job's start site by the planned departure time.\n    A drone may be listed only if all of the following are true. It is in\n    service. It is not booked for that time. A chain of corridors that are not\n    closed or prohibited at that time leads from its current site to the job's\n    start site. That chain is no longer than the drone's range on a full\n    battery. The list must not preselect or recommend a drone.\n- id: DR-22\n  requirement: >\n    The service must check a flight at the moment a dispatcher tries to sign it\n    off. It must use the current state of the fleet and airspace at that moment.\n    It must refuse sign-off if any check in DR-23 to DR-28 fails. When it\n    refuses, it must state every check that failed.\n- id: DR-23\n  requirement: >\n    Sign-off must be refused if the chosen drone is retired or out of\n    service.\n- id: DR-24\n  requirement: >\n    Sign-off must be refused if the chosen drone is already booked, for an\n    overlapping time, by another signed-off flight or by a charge.\n- id: DR-25\n  requirement: >\n    Sign-off must be refused if the way is not an unbroken chain of corridors\n    from the drone's site to the job's start site and on to the job's end. For\n    a delivery, the end is the destination site. For an inspection, the chain\n    must pass the points in their set order and then return to the start site.\n- id: DR-26\n  requirement: >\n    Sign-off must be refused if any corridor on the way lies in a prohibited\n    zone at the planned time. It must also be refused if any corridor on the\n    way is under a closure at any point between the planned departure time and\n    the planned arrival time.\n- id: DR-27\n  requirement: >\n    Sign-off must be refused if the total length of the way is greater than the\n    drone model's range on a full battery.\n- id: DR-28\n  requirement: >\n    For a delivery, sign-off must be refused if the load weight is greater than\n    the drone model's carrying capacity. For an inspection, sign-off must be\n    refused if the drone model lacks any of the sensors the job needs.\n- id: DR-29\n  requirement: >\n    Several dispatchers of the same company may plan flights at the same time\n    using the same drones and sites. If two or more of them try to sign off\n    flights that would book the same drone for overlapping times, exactly one\n    sign-off must succeed. Each of the others must be refused with the reason.\n    The same must hold for two technicians booking the same pad or drone for a\n    charge.\n- id: DR-30\n  requirement: >\n    A dispatcher must be able to call off a flight at any stage before it is\n    finished. The service must then release the drone's booking for the rest of\n    the flight. It must record who called the flight off and when.\n- id: DR-31\n  requirement: >\n    Each flight must have one of these stages at any time: planned, signed off,\n    in the air, finished, or called off. The service must show dispatchers of\n    the owning company the stage of every flight and the time of its last\n    report.\n- id: DR-32\n  requirement: >\n    The service must accept reports from outside people and devices that load\n    is ready, that the drone has reached a point of its job, and that it has\n    arrived. It must accept such a report only from a sender registered for the\n    company that owns the flight. It must reject any report that names another\n    company's flight.\n- id: DR-33\n  requirement: >\n    When the same report arrives more than once, the service must apply it only\n    once.\n- id: DR-34\n  requirement: >\n    When reports arrive late or out of order, the service must apply them in\n    the order of the time each event happened, not the time each report\n    arrived. A late report must never move a flight back to an earlier stage.\n    For example, a late \"point reached\" report must not undo an \"arrived\"\n    report.\n- id: DR-35\n  requirement: >\n    If a signed-off flight has no arrival report by its planned arrival time,\n    the service must mark the flight as overdue and alert the dispatchers of\n    the owning company. The flight must stay marked overdue until an arrival\n    report comes or a dispatcher calls the flight off.\n- id: DR-36\n  requirement: >\n    When a closure is entered or amended, the service must at once find every\n    affected flight. A flight is affected if it is planned, signed off or in\n    the air, and its way uses a closed corridor during the closure's time. For\n    each affected flight, the service must alert only the dispatchers of the\n    company that owns it. The alert must say whether the flight is already in\n    the air.\n- id: DR-37\n  requirement: >\n    The service must not change, call off or redirect any flight because of a\n    closure. Any action on an affected flight must be taken by a dispatcher.\n- id: DR-38\n  requirement: >\n    When a closure is entered or amended, the service must show the airspace\n    desk the total number of affected flights across all customers. The total\n    must be split into flights in the air and flights not yet departed. It must\n    not show company names, per-company counts, or any detail of individual\n    flights.\n- id: DR-39\n  requirement: >\n    The service must record each of the following actions with the person who\n    did it and the time: every plan, sign-off, call-off, report, change of drone\n    state, and charge. Each record must be visible only to users of the company\n    that owns it. No user may edit or delete a record.\n- id: DR-40\n  requirement: >\n    The service must not steer drones. It must offer no manual control of a\n    drone's flight.\n```",
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must keep each customer company's data separate. Company data means its drones, drone models, sites, charging pads, jobs, flights, repairs, reports and history. A person from one company must never be able to see, search, count or change another company's data. This holds in every screen, list, message, export and error message."
+  },
+  {
+   "id": "DR-02",
+   "requirement": "Every user must belong to exactly one customer company or to the platform company. Every user must have one or more of the roles fleet technician, dispatcher and airspace desk. The service must allow each action only to the roles named for it in these requirements."
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The platform company must be able to add a new customer company without changing or interrupting the data or work of existing companies. A new company must start with no drones, sites, pads, jobs or flights."
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The airspace picture must be shared and visible to all users of all companies. It contains the corridor network, the zones, the prohibited zones and the closures. Only airspace desk users of the platform company may create, amend or remove anything in it."
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The airspace desk must be able to record named sites and corridors. Each corridor joins two sites and has a length. The desk must also be able to group corridors into named zones."
+  },
+  {
+   "id": "DR-06",
+   "requirement": "Each site must belong to exactly one customer company. Only users of that company may place drones, charging pads or jobs at it. Only users of that company may see what is at it."
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The airspace desk must be able to record prohibited zones that the authorities have defined. A prohibited zone applies at all times until the desk removes it."
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The airspace desk must be able to enter a planned closure that has a start time and an end time. The closure applies to one or more zones or corridors."
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The airspace desk must be able to enter a sudden closure. A sudden closure takes effect at the moment it is entered. It has an end time, or no end time until the desk sets one."
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The airspace desk must be able to amend a closure while it is planned or already in force. This includes widening or narrowing the zones and corridors it covers, moving its start time or end time, and ending it. Each amendment must take effect for every company at once. The service must keep every earlier version, with who made it and when."
+  },
+  {
+   "id": "DR-11",
+   "requirement": "A fleet technician must be able to record a drone model for their company. The record holds the model's carrying capacity, its range on a full battery, the sensors it carries, and its charging connector type."
+  },
+  {
+   "id": "DR-12",
+   "requirement": "A fleet technician must be able to add a drone to their company's fleet, with its model and the site where it is. A technician must also be able to retire a drone. A retired drone must stay in the company's history but must never again be given a flight or a charge."
+  },
+  {
+   "id": "DR-13",
+   "requirement": "A fleet technician must be able to take a drone out of service for repair, with a reason. A technician must also be able to put the drone back into service. The service must record who did each of these and when."
+  },
+  {
+   "id": "DR-14",
+   "requirement": "The service must let a technician take a drone out of service or retire it even when it has signed-off flights that are not finished. In that case it must at once alert the dispatchers of that company and name each affected flight."
+  },
+  {
+   "id": "DR-15",
+   "requirement": "A fleet technician must be able to set up a charging pad at one of their company's sites, with its connector type. A technician must also be able to take a pad out of use. A pad must only ever be used by drones of the company that owns it."
+  },
+  {
+   "id": "DR-16",
+   "requirement": "A fleet technician must be able to send a drone to charge at a pad for a stated time. The service must refuse this if any of the following is true. The pad is at a different site from the drone. The pad's connector type differs from the drone model's connector type. The pad or the drone is already booked for an overlapping time. The drone is retired. When it refuses, it must state the reason."
+  },
+  {
+   "id": "DR-17",
+   "requirement": "A dispatcher must be able to record a delivery job. A delivery job has a load, the site where the load starts, the site where it must go, and the weight of the load."
+  },
+  {
+   "id": "DR-18",
+   "requirement": "A dispatcher must be able to record an inspection job. An inspection job has a start site, an ordered list of points to visit, and the sensors it needs. The drone must return to the start site at the end."
+  },
+  {
+   "id": "DR-19",
+   "requirement": "A dispatcher must be able to plan a flight for a job. To do this, the dispatcher chooses one drone, a way given as an ordered chain of corridors, and a planned departure time and arrival time."
+  },
+  {
+   "id": "DR-20",
+   "requirement": "The service must never choose, assign, replace or reorder a drone or a way for a flight. It must never sign off or start a flight on a dispatcher's behalf. Only a dispatcher's own action may do these things."
+  },
+  {
+   "id": "DR-21",
+   "requirement": "When a dispatcher asks, the service must list the dispatcher's company's drones that could get to a job's start site by the planned departure time. A drone may be listed only if all of the following are true. It is in service. It is not booked for that time. A chain of corridors that are not closed or prohibited at that time leads from its current site to the job's start site. That chain is no longer than the drone's range on a full battery. The list must not preselect or recommend a drone."
+  },
+  {
+   "id": "DR-22",
+   "requirement": "The service must check a flight at the moment a dispatcher tries to sign it off. It must use the current state of the fleet and airspace at that moment. It must refuse sign-off if any check in DR-23 to DR-28 fails. When it refuses, it must state every check that failed."
+  },
+  {
+   "id": "DR-23",
+   "requirement": "Sign-off must be refused if the chosen drone is retired or out of service."
+  },
+  {
+   "id": "DR-24",
+   "requirement": "Sign-off must be refused if the chosen drone is already booked, for an overlapping time, by another signed-off flight or by a charge."
+  },
+  {
+   "id": "DR-25",
+   "requirement": "Sign-off must be refused if the way is not an unbroken chain of corridors from the drone's site to the job's start site and on to the job's end. For a delivery, the end is the destination site. For an inspection, the chain must pass the points in their set order and then return to the start site."
+  },
+  {
+   "id": "DR-26",
+   "requirement": "Sign-off must be refused if any corridor on the way lies in a prohibited zone at the planned time. It must also be refused if any corridor on the way is under a closure at any point between the planned departure time and the planned arrival time."
+  },
+  {
+   "id": "DR-27",
+   "requirement": "Sign-off must be refused if the total length of the way is greater than the drone model's range on a full battery."
+  },
+  {
+   "id": "DR-28",
+   "requirement": "For a delivery, sign-off must be refused if the load weight is greater than the drone model's carrying capacity. For an inspection, sign-off must be refused if the drone model lacks any of the sensors the job needs."
+  },
+  {
+   "id": "DR-29",
+   "requirement": "Several dispatchers of the same company may plan flights at the same time using the same drones and sites. If two or more of them try to sign off flights that would book the same drone for overlapping times, exactly one sign-off must succeed. Each of the others must be refused with the reason. The same must hold for two technicians booking the same pad or drone for a charge."
+  },
+  {
+   "id": "DR-30",
+   "requirement": "A dispatcher must be able to call off a flight at any stage before it is finished. The service must then release the drone's booking for the rest of the flight. It must record who called the flight off and when."
+  },
+  {
+   "id": "DR-31",
+   "requirement": "Each flight must have one of these stages at any time: planned, signed off, in the air, finished, or called off. The service must show dispatchers of the owning company the stage of every flight and the time of its last report."
+  },
+  {
+   "id": "DR-32",
+   "requirement": "The service must accept reports from outside people and devices that load is ready, that the drone has reached a point of its job, and that it has arrived. It must accept such a report only from a sender registered for the company that owns the flight. It must reject any report that names another company's flight."
+  },
+  {
+   "id": "DR-33",
+   "requirement": "When the same report arrives more than once, the service must apply it only once."
+  },
+  {
+   "id": "DR-34",
+   "requirement": "When reports arrive late or out of order, the service must apply them in the order of the time each event happened, not the time each report arrived. A late report must never move a flight back to an earlier stage. For example, a late \"point reached\" report must not undo an \"arrived\" report."
+  },
+  {
+   "id": "DR-35",
+   "requirement": "If a signed-off flight has no arrival report by its planned arrival time, the service must mark the flight as overdue and alert the dispatchers of the owning company. The flight must stay marked overdue until an arrival report comes or a dispatcher calls the flight off."
+  },
+  {
+   "id": "DR-36",
+   "requirement": "When a closure is entered or amended, the service must at once find every affected flight. A flight is affected if it is planned, signed off or in the air, and its way uses a closed corridor during the closure's time. For each affected flight, the service must alert only the dispatchers of the company that owns it. The alert must say whether the flight is already in the air."
+  },
+  {
+   "id": "DR-37",
+   "requirement": "The service must not change, call off or redirect any flight because of a closure. Any action on an affected flight must be taken by a dispatcher."
+  },
+  {
+   "id": "DR-38",
+   "requirement": "When a closure is entered or amended, the service must show the airspace desk the total number of affected flights across all customers. The total must be split into flights in the air and flights not yet departed. It must not show company names, per-company counts, or any detail of individual flights."
+  },
+  {
+   "id": "DR-39",
+   "requirement": "The service must record each of the following actions with the person who did it and the time: every plan, sign-off, call-off, report, change of drone state, and charge. Each record must be visible only to users of the company that owns it. No user may edit or delete a record."
+  },
+  {
+   "id": "DR-40",
+   "requirement": "The service must not steer drones. It must offer no manual control of a drone's flight."
+  }
+ ],
+ "unreadable": false,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 30,
+  "questions": {
+   "technician": 6,
+   "dispatcher": 16,
+   "desk": 8
+  },
+  "limitReached": false
+ }
+}

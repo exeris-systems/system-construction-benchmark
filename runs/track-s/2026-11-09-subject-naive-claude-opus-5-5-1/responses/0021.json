@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CgsQR7y5evyvdRGFwYvog",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSuAcKEAgTGAI4AUIIdGhpbmtpbmcSDDpzTdYoPUc865uVlhoMXA0FeIDeq7T2WXYnIjA4hydmk3F2QmbtieekOeox/YB51o13v8Iy6GmZ/vIxV5iAw0tL49I8k2BEeqS1Hioq1Qb0ppTXDc7ZiHco1w0BrLlw7UO4E4fZ29eUOW4ibQvTboBMsDola0M4D8IyWGDQ7fih2L9LyEta8mHxGT5ZXpNSvKY+MijWolukjJ9p7SjlO6CBEb5LkbbKgehatC4FTQJd7Mdt7eqItWKRpd8vmDdcWKQKFEzxtzn0D1D/kBG6ydaQJFPD+KvItY/WBy8dP2ftOd1/+srizNJ0zfXtWCoa1N1FNpnpTT7XjlDClnvwZDbDn+GT723BHcQiZWq90I6SVFrrTSPbpHpM2sYfqAY4ON/cQmDzTs9BSb62mcLWrLGSPQOLgBAVVqE/TWOHWjB/RdaF+eZ/YpLCSifIec7C+dpk20+TULhkLtDvVW/YWgdgbLYyQlXwbQ5KOvp12B8b1eKxYSEt4IN6TRbndfX/wdwiflDMGHXAqy0cftbZTAsRA4gITto3mylTx26R2l5fyuZM0z9JToLBP9I1ow1bWc/pB4mGqqJqVhb6XsCfhFRTWboUGvOpl8zm8J56r675/4KGVh255ROMc2hBu9jcw6mr7ExnIZ/n1LYBUV2TmY2fF2mqB7djZmDjoUCkAhVqVwxYHVBCJj4nP1VCZTqOjsFRIdQZtn0GNHnos9cLF6bYGX0i1UbTL9y2tGCJyKUbEWqS7tpth3NQkXuH5JlegHqSP0+r5bSnnksQSURR8JooMUiuSmQWFU6Ln9SdgZcUsiccO4GYPlGLtKh70/yALQvLdLJI7iDv9LX6XPff2zJ7beK4AEJNCA22CjoS10o+qkkPw2aPNP6a4ooxodReOWv2V+UIVM+kz7lLKf5zR+cTL7HmqeaOSomJoCkYAvg3xV3fgKsZtREDYq4Di8ANSOLgmQ19YAfupb5tOE0vJQPwL9OX4aFHQrMBvVP9rbwc7U57XuZ8MNrVz1ynqLCU36d/mR+hH4GV1FAesPRWWmU388ZUZD0eaOD/1ayqu8U6LTw43WVudFYpZAza+1le9hAGAbzgSKD4+jAf5xvYKU91wcdNhISm58bc3TV3jHP8tyBIR74odWdXIziW7Kr3Jh5xy31u75hw5Cae1QP9+mLJhU0+rIXdWRA74tpAUN/vi7Nd9TAJMC2HR+KiLFtEctbkOG58LLn8EG7BJd5J7hiJ6wxTGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: What are the stages a flight goes through, from first being planned to being finished or called off?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2000,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 82,
+  "output_tokens_details": {
+   "thinking_tokens": 46
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
