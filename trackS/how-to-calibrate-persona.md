@@ -10,7 +10,7 @@ last-verified: 2026-11-09
 # How to calibrate the Track S persona and judges
 
 Covers the instruments: the persona, the grader of its calibration, and the two judges, as judges
-of contracts and as follow-up classifiers. The
+of contracts and as follow-up classifiers, and the ceiling the judges estimate from the brief. The
 subjects have procedures of their own. Run from the repository root. Keys come from the environment
 and are never written to the output: `GEMINI_API_KEY` for the persona, the grader and the judge of
 Claude subjects, `ANTHROPIC_API_KEY` for the judge of Gemini subjects. Set a key on its own line, or
@@ -67,5 +67,14 @@ instead of running it.
    python3 -I trackS/run-track-s.py follow-up-control --judge-provider anthropic --judge-model claude-opus-5-5 --judge-effort high --judge-max-tokens 32768 --judge-rpm 5 --out runs/track-s/YYYY-MM-DD-follow-up-control-claude-opus-5-5
    ```
 
-7. Commit every output directory unedited, and record its verdict against the
+7. With both judges calibrated, estimate the ceiling: each judge judges the whole brief as a
+   contract, 3 calls each. `ceiling.json` gives, per repetition, how many reference requirements the
+   brief covers, covers in part and leaves out, and each requirement's coverage in every repetition:
+
+   ```sh
+   python3 -I trackS/run-track-s.py ceiling --judge-provider gemini --judge-model gemini-4-argon --judge-temperature 0 --judge-seed 1 --judge-max-tokens 32768 --judge-rpm 5 --out runs/track-s/YYYY-MM-DD-ceiling-gemini-4-argon
+   python3 -I trackS/run-track-s.py ceiling --judge-provider anthropic --judge-model claude-opus-5-5 --judge-effort high --judge-max-tokens 32768 --judge-rpm 5 --out runs/track-s/YYYY-MM-DD-ceiling-claude-opus-5-5
+   ```
+
+8. Commit every output directory unedited, and record its verdict against the
    criteria of [`procedure.md`](procedure.md) in [`calibration-log.md`](calibration-log.md).

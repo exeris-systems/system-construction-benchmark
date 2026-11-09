@@ -14,9 +14,9 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 5 (draft 4)
-Decision register: D-45 to D-59. Version 4, whose instruments and their calibration this version
-keeps, is frozen at tag `us-procedure-v4`; version 3, at `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
+Version: 6 (draft 1)
+Decision register: D-45 to D-60. Version 5, whose instruments, subjects and calibration this version
+keeps, is frozen at tag `us-procedure-v5`; version 4, at `us-procedure-v4`; version 3, at `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
 
@@ -34,13 +34,13 @@ those of D-55, and their S-naive and S-instructed tasks are set out under Subjec
 
 ## Files of the set
 
-| File | Role in version 5 |
+| File | Role in version 6 |
 | --- | --- |
 | `world-brief.md`, `brief-slices.yaml` | the world and each persona's slice of it |
 | `brief-seeding.md` | the brief sentences that are constraints or seeded needs; used to read derived contracts |
 | `persona-prompt.md`, `persona-check-prompt.md` | the persona instrument: the answering pass and the check pass |
 | `grader-prompt.md`, `grader-control.yaml` | the grader of the persona's calibration and the cases it is calibrated on |
-| `judge-prompt.md`, `judge-control.yaml` | the judge, and the mutant contracts it is calibrated on |
+| `judge-prompt.md`, `judge-control.yaml` | the judge, and the mutant contracts it is calibrated on; the same prompt judges the brief for the ceiling |
 | `follow-up-prompt.md`, `follow-up-control.yaml` | the judges as follow-up classifiers, and the labelled pairs they are calibrated on |
 | `persona-control.yaml`, `persona-holdout.yaml` to `persona-holdout-5.yaml` | the persona's calibration questions: the set the prompts are revised against, the held-out sets that decided drafts 3 to 6, and the held-out set that decides draft 7 |
 | `subject-naive-prompt.md` | the subject in S-naive: the client's request, brief §1, the roles and the channel to them |
@@ -181,6 +181,20 @@ that does not label every question exactly once fails the run. The prompt is fro
 classifies a subject's questions. Draft 4 records both judges passing as classifiers, each with 40
 of 40 in every repetition, on the prompt and pairs of draft 3, which it leaves unchanged
 (`calibration-log.md`).
+
+## Ceiling — before the subjects are compared
+
+Some reference requirements cannot be derived from the brief (D-45). Mode `ceiling` estimates which:
+it gives a judge `judge-prompt.md`, unchanged, with the whole of `world-brief.md` as the contract, each
+unit of the brief (a paragraph or a bullet, as `brief-slices.yaml` numbers them) one item, numbered
+`DR-01`, `DR-02`, … in the brief's order. Every unit reaches at least one persona, so the brief is
+everything a subject can learn. A requirement the brief covers is one a subject can derive in full; a
+partial one, in part; a missing one, not at all. Each judge of D-55 judges the brief three times; a
+reply that does not list every requirement and every unit exactly once fails the run (D-60).
+
+The ceiling is reported beside every `derived_recall`: the covered requirements of each judgement of
+the brief, and how many requirements kept one coverage in all three. It is never used to rescale a
+score. It reads no subject run, and no subject run reads it.
 
 ## Tests
 
