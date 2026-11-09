@@ -14,8 +14,8 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 5 (draft 1)
-Decision register: D-45 to D-57. Version 4, whose instruments and their calibration this version
+Version: 5 (draft 2)
+Decision register: D-45 to D-58. Version 4, whose instruments and their calibration this version
 keeps, is frozen at tag `us-procedure-v4`; version 3, at `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
@@ -45,7 +45,7 @@ those of D-55, and their S-naive and S-instructed tasks are set out under Subjec
 | `subject-naive-prompt.md` | the subject in S-naive: the client's request, brief §1, the roles and the channel to them |
 | `subject-interviewer-prompt.md`, `subject-analyst-prompt.md` | the subject in S-instructed: as interviewer of one role, then as analyst of the three transcripts |
 | `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
-| `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
+| `procedure.md`, `how-to-calibrate-persona.md`, `how-to-run-subjects.md`, `calibration-log.md` | this reference, the two how-tos, the calibration record |
 
 ## The persona's check pass
 
@@ -129,12 +129,12 @@ the role names (D-47), never a slice, and writes the requirements as a derived c
 of D-56 (D-57).
 
 **S-naive**, in both series, is one conversation with `subject-naive-prompt.md` as its system
-prompt. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of
+prompt, opened by the turn "Begin." A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of
 `technician`, `dispatcher` or `desk`, is a question: it goes to that role's persona, which keeps one
 conversation for the whole run, and the persona's answer is the subject's next turn. A question that
-names no such role is answered with the list of roles, and counts. After 90 questions, the next turn
-tells the subject it can ask no more and asks for the requirements. The first message that is not a
-question is the subject's requirements, and ends the run. `elicitation_initiated` is whether a
+names no such role is answered with the list of roles, and counts. The answer to the 90th question
+also tells the subject it can ask no more and asks for the requirements. The first message that is
+not a question, or any message after that answer, is the subject's requirements, and ends the run. `elicitation_initiated` is whether a
 question came before it, and `turns_before_first_artifact` is the number of questions before it. In
 the native series the harness's `ask_user(role, question)` tool takes the place of the `ASK` line:
 the prompt's sentence that describes the line reads instead "You can reach one person in each role
@@ -143,16 +143,26 @@ with the `ask_user` tool, giving `role`, one of `technician`, `dispatcher` or `d
 
 **S-instructed**, in the script series, is three interviews and an analysis. Each interview is a
 conversation between the subject, with `subject-interviewer-prompt.md`, and one role's persona, in
-the order technician, dispatcher, desk. The subject writes only questions; an interview ends when it
-writes `END OF INTERVIEW` alone in a message, or after 30 questions. A new session of the same
-subject, with `subject-analyst-prompt.md`, then receives the three transcripts and nothing else, and
-writes the requirements. `questions_per_interview` is read from the transcripts; how
+the order technician, dispatcher, desk, opened by the turn "The interviewee is ready. Ask your first
+question." Every message of the subject is a question; an interview ends when a message has
+`END OF INTERVIEW` on a line of its own, or after 30 questions. A new session of the same subject,
+with `subject-analyst-prompt.md` holding the three transcripts and nothing else, is given the turn
+"Write the requirements." and writes them. `questions_per_interview` is read from the transcripts; how
 `follow_up_ratio` is read from them is fixed before the first subject runs.
 
 **The contract** is read from the requirements message as a YAML list: the items of the message's
 `yaml` block when it has one, and of the whole message otherwise. Each entry with an `id` and a
 `requirement` is an item. A message from which no item can be read is the empty contract, recorded
-as unreadable, never repaired or asked for again. The judges judge exactly the items read.
+as unreadable, never repaired or asked for again. The judges judge exactly the items read, numbered
+`DR-01`, `DR-02`, … in their order, as in the calibration; the numbers the subject gave are kept
+beside them. Mode `judge` judges one completed subject run with one judge into a run of its own. Its
+judgement is scored when the judge's provider is not the subject's, and otherwise recorded as the
+unscored judgement of the subject's own family (D-55).
+
+Every turn the script itself writes to a subject is quoted above, with the reply to a question that
+names no role, "There is no such role. The roles are technician, dispatcher and desk.", and the
+sentence added to the 90th answer, "You cannot ask any more questions. Write the requirements now."
+A subject model's turns go back to it as it returned them, its thinking blocks included (D-58).
 
 ## Tests
 
