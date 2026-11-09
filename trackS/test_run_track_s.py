@@ -400,6 +400,49 @@ class JudgeTest(unittest.TestCase):
         self.assertEqual(len(calls), 1)
 
 
+class CeilingTest(unittest.TestCase):
+    """The ceiling judges the brief itself as a contract, with the judge prompt of the subjects (D-60)."""
+
+    def setUp(self):
+        self.files = {name: (HERE / name).read_text() for name in (ts.JUDGE_FILE, "world-brief.md")}
+        self.files.update({name: (HERE.parent / name).read_text() for name in (ts.REFERENCE_FILE, ts.ANTI_FILE)})
+        self.ids = [i for i, _ in ts.parse_reference(self.files[ts.REFERENCE_FILE])[1]]
+        self.units = ts.parse_brief(self.files["world-brief.md"])
+
+    def test_every_brief_unit_is_one_item_in_the_brief_order(self):
+        items = ts.ceiling_items(self.units)
+        self.assertEqual([i["unit"] for i in items], list(self.units))
+        self.assertEqual([i["id"] for i in items], [f"DR-{n:02d}" for n in range(1, len(self.units) + 1)])
+        self.assertFalse(any(i["requirement"].startswith("- ") for i in items))
+
+    def test_each_repetition_is_counted_and_compared(self):
+        os.environ["GEMINI_API_KEY"] = "test-key"
+        _urlopen, _sleep = ts.urllib.request.urlopen, ts.time.sleep
+        replies = iter(["covered", "missing"])
+        def urlopen(request, timeout=0):
+            first = next(replies)
+            items = [line.split(": ", 1)[1] for line in json.loads(request.data)["contents"][-1]["parts"][0]["text"]
+                     .splitlines() if line.startswith("- id: ")]
+            judgement = {"requirements": [{"id": r, "coverage": first if n == 0 else "partial", "items": []}
+                                          for n, r in enumerate(self.ids)],
+                         "items": [{"id": i, "class": "other", "requirements": []} for i in items]}
+            return Reply({"candidates": [{"content": {"parts": [{"text": json.dumps(judgement)}]},
+                                          "finishReason": "STOP"}]}, headers())
+        ts.urllib.request.urlopen, ts.time.sleep = urlopen, (lambda seconds: None)
+        try:
+            out = pathlib.Path(tempfile.mkdtemp())
+            judge = ts.Client("judge", "gemini", "j", 60_000, 100, ts.Recorder(out), 0.0, 1)
+            ts.ceiling_run(argparse.Namespace(repetitions=2), self.files, out, {}, judge)
+        finally:
+            ts.urllib.request.urlopen, ts.time.sleep = _urlopen, _sleep
+        result = json.loads((out / "ceiling.json").read_text())
+        rest = len(self.ids) - 1
+        self.assertEqual(result["summary"], {
+            "repetitions": [{"covered": 1, "partial": rest, "missing": 0}, {"covered": 0, "partial": rest, "missing": 1}],
+            "of": len(self.ids), "sameInEveryRepetition": rest})
+        self.assertEqual(result["requirements"][self.ids[0]], ["covered", "missing"])
+
+
 class SubjectTest(unittest.TestCase):
     """The subject modes with a stubbed transport: an Anthropic subject, a Gemini persona and judge."""
 

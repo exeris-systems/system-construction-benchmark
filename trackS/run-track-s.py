@@ -19,6 +19,8 @@ quoted source is found in the notes.
 
   judge-control     ask a judge to judge the mutant contracts of judge-control.yaml, whose coverage of
                     the reference requirements is known, several times
+  ceiling           judge the whole brief, every unit an item, as a contract, several times: the
+                    reference requirements no subject can derive from what the personas know
 
   subject-naive     run a subject in S-naive: one conversation in which it may ask the personas
   subject-instructed run a subject in S-instructed: one interview per role, then the analyst
@@ -96,7 +98,7 @@ QUESTION_SETS = {"persona-control": CONTROL_FILE, "persona-holdout": HOLDOUT_FIL
                  "persona-holdout-2": "persona-holdout-2.yaml", "persona-holdout-3": "persona-holdout-3.yaml",
                  "persona-holdout-4": "persona-holdout-4.yaml", "persona-holdout-5": "persona-holdout-5.yaml"}
 GRADE_MODES = ("grader-control", "grade")
-JUDGE_MODES = ("judge-control", "judge", "follow-up-control", "follow-up")
+JUDGE_MODES = ("judge-control", "judge", "ceiling", "follow-up-control", "follow-up")
 RETRYABLE_HTTP = (429, 500, 502, 503, 504)
 MAX_ATTEMPTS = 8
 
@@ -773,6 +775,31 @@ def judge_control(args, files, out, run, judge):
          "judgements": results}, ensure_ascii=False, indent=1) + "\n")
 
 
+def ceiling_items(units):
+    """Every unit of the brief as one contract item, numbered in the brief's order (D-60)."""
+    return [{"id": f"DR-{n:02d}", "requirement": line[2:] if line.startswith("- ") else line, "unit": uid}
+            for n, (uid, (_, line)) in enumerate(units.items(), 1)]
+
+
+def ceiling_run(args, files, out, run, judge):
+    """Judge the whole brief, every unit an item, as a contract: a reference requirement the brief does
+    not cover is one no subject can derive from what the personas know (D-45, D-60)."""
+    items = ceiling_items(parse_brief(files["world-brief.md"]))
+    system = judge_system(files[JUDGE_FILE], files)
+    requirement_ids = [i for i, _ in parse_reference(files[REFERENCE_FILE])[1]]
+    judgements = [judge_one(judge, system, f"ceiling/{repetition}", requirement_ids, items)
+                  for repetition in range(1, args.repetitions + 1)]
+    requirements = {r: [j["requirements"][r]["coverage"] for j in judgements] for r in requirement_ids}
+    summary = {"repetitions": [{c: [j["requirements"][r]["coverage"] for r in requirement_ids].count(c)
+                                for c in COVERAGE} for j in judgements],
+               "of": len(requirement_ids),
+               "sameInEveryRepetition": sum(len(set(c)) == 1 for c in requirements.values())}
+    (out / "ceiling.json").write_text(json.dumps(
+        {"summary": summary, "requirements": requirements, "items": items,
+         "judgements": [{"repetition": n, "judgement": j} for n, j in enumerate(judgements, 1)]},
+        ensure_ascii=False, indent=1) + "\n")
+
+
 # --- the subjects ---------------------------------------------------------------------------------
 
 def business(brief):
@@ -1063,7 +1090,7 @@ def main():
     else:
         names += ["persona-prompt.md", QUESTION_SETS[args.mode]] + ([CHECK_FILE] if args.persona_check else [])
     files = {name: (HERE / name).read_text() for name in names}
-    if args.mode in ("judge-control", "judge"):
+    if args.mode in ("judge-control", "judge", "ceiling"):
         files.update({name: (HERE.parent / name).read_text() for name in (REFERENCE_FILE, ANTI_FILE)})
     files["run-track-s.py"] = pathlib.Path(__file__).read_text()
 
@@ -1116,6 +1143,9 @@ def main():
     elif args.mode == "judge":
         roles = [("judge", judge_settings)]
         plan = {"items": len(json.loads(files["judged-subject.json"])["items"]), "calls": 1}
+    elif args.mode == "ceiling":
+        roles = [("judge", judge_settings)]
+        plan = {"items": len(units), "calls": args.repetitions}
     elif args.mode == "follow-up":
         roles = [("judge", judge_settings)]
         pairs = subject_pairs(json.loads(files["judged-subject.json"]))
@@ -1181,8 +1211,8 @@ def main():
                            recorder, args.judge_temperature, args.judge_seed, args.judge_effort)
             run["instruments"] = {"judge": {"provider": judge.provider, "model": judge.model,
                                             "description": judge.describe()}}
-            {"judge-control": judge_control, "judge": judge_run, "follow-up-control": follow_up_control,
-             "follow-up": follow_up_run}[args.mode](args, files, out, run, judge)
+            {"judge-control": judge_control, "judge": judge_run, "ceiling": ceiling_run,
+             "follow-up-control": follow_up_control, "follow-up": follow_up_run}[args.mode](args, files, out, run, judge)
         elif grading:
             recorder = Recorder(out)
             grader = Client("grader", args.grader_provider, args.grader_model, args.grader_rpm,
