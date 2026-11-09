@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I keep the shared picture of the airspace, which consists of the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The authorities define zones where flying is prohibited, and they announce planned closures with a start and end time, as well as sudden ones that apply at once. These closures are often amended during the day, such as when an area is widened or an end time moves, and they can even come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Do you work for the platform company or for one of the customer companies, and when you ask how much disruption a closure caused, what exactly do you want to see (e.g. number of flights affected per company, names of companies, details of flights)?\n\nQ3\nThe answer just before it: I work on the airspace desk at the platform company, which runs a shared service for several independent drone operating companies. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Is a total across all customers enough for you (e.g. \"14 flights affected\"), or do you need it broken down by company, or details of individual flights?\n\nQ4\nThe answer just before it: I don't know.\nThe question: Are sites and charging pads owned by one company each, or can several companies share a site or corridor?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Does a closure apply to whole zones, to individual corridors, or to sites, and when it is amended (widened, end time moved), what do you change?\n\nQ6\nThe answer just before it: I don't know.\nThe question: Who enters closures and prohibited zones into the service, and should customer companies be able to change them or only see them?\n\nQ7\nThe answer just before it: I don't know.\nThe question: When a sudden closure is entered, how quickly must the companies whose flights are affected find out?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Is flying in a prohibited zone or a closed area ever allowed, for example for hospital flights or with special permission?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
