@@ -532,3 +532,17 @@ An interview ends after 30 questions, and S-naive after 90 questions in all, the
 A requirements message from which no item can be read is the empty contract, recorded as unreadable, and is never repaired or asked for again: reading the shape it was asked for is part of what is measured.
 
 Impact: `trackS/procedure.md`, `trackS/subject-naive-prompt.md`, `trackS/subject-interviewer-prompt.md`, `trackS/subject-analyst-prompt.md`, `preregistration/frozen-sets.md`.
+
+### D-58 — How the script runs a subject
+
+Version 5, draft 2 of the Track S procedure adds the subject modes to `trackS/run-track-s.py`: `subject-naive`, `subject-instructed`, and `judge`, which judges a completed subject run with one judge. A conversation needs a first turn, and a few situations need a reply that no persona gives; the script writes those turns itself, and they are fixed and quoted in `trackS/procedure.md`, so every subject receives the same words. S-naive opens with "Begin.", each interview with the pilots' "The interviewee is ready. Ask your first question.", and the analyst with "Write the requirements.".
+
+An interview ends on a message with `END OF INTERVIEW` on a line of its own, as the interviewer prompt asks, rather than only on a message that holds nothing else. In S-naive the answer to the 90th question also says that no more can be asked; whatever the subject writes next is its requirements, so a subject that keeps asking still ends the run, with whatever its message holds.
+
+The judges read a contract with its items numbered `DR-01`, `DR-02`, … in their order, as they read the mutants, so a subject's own numbering, gaps or repeated ids included, cannot make a judgement unreadable; the subject's numbers are kept beside them. Whether a judgement is scored follows from the providers: the judge of the other vendor scores, and the judge of the subject's own family is recorded unscored (D-55).
+
+A subject model that returns thinking blocks gets them back unchanged in the next request of its conversation. The Anthropic API treats a conversation whose earlier turns were changed as a different one, and dropping a block would be such a change; the subject would then be measured on a conversation it did not have.
+
+`follow_up_ratio` stays unread by the script; how it is read from the transcripts is fixed before the first subject runs (D-57).
+
+Impact: `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/procedure.md`, `trackS/how-to-run-subjects.md`, `.github/workflows/track-s-tests.yml`.
