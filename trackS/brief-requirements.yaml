@@ -1,0 +1,250 @@
+# Track S reference requirements: what the service must do, as the users of world-brief.md can state
+# it (decision register D-61).
+#
+# Each requirement rests on the brief units it names (paragraphs and bullets, numbered as in
+# brief-slices.yaml) and on nothing else: no value, state or mechanism the brief does not give. Units
+# that give no checkable obligation are listed at the end. Brief §8 is the user-visible
+# anti-requirements of contract/anti-requirements.md and gives no requirement here.
+#
+# Drafted with Claude Code, on Claude Opus 5.5, from the brief alone, and accepted by the contract
+# author on 2026-11-09.
+
+parameters:
+
+requirements:
+  - id: BR-01
+    units: ["1.p1", "1.p2"]
+    requirement: >
+      The service serves several independent operating companies at once. Each company's drones,
+      models, sites, charging pads, jobs and flights, and their history, can be seen and changed only
+      by that company's own staff.
+
+  - id: BR-02
+    units: ["1.p2", "2.b3"]
+    requirement: >
+      The airspace picture (the corridors between sites, the zones that group them, the prohibited
+      zones and the closures) is one and the same for every company, and every company's staff can
+      see all of it.
+
+  - id: BR-03
+    units: ["2.b1", "2.b2", "2.b3"]
+    requirement: >
+      Every member of staff acts in one of three roles: fleet technician or dispatcher at an operating
+      company, or the airspace desk at the platform company. Each action of the service can be taken
+      only by the role these requirements give it to.
+
+  - id: BR-04
+    units: ["2.b3"]
+    requirement: >
+      The airspace desk cannot see any one company's drones, jobs or flights.
+
+  - id: BR-05
+    units: ["2.b1", "3.b1"]
+    requirement: >
+      A fleet technician can add a drone to their company's fleet, stating its model. For each model
+      the service holds how much it can carry, how far it can fly on a full battery, which sensors it
+      carries, and which charging connector it uses.
+
+  - id: BR-06
+    units: ["3.b2"]
+    requirement: >
+      Each drone has a home site, one of its company's sites.
+
+  - id: BR-07
+    units: ["2.b1"]
+    requirement: >
+      A fleet technician can retire a drone. A retired drone stays in its company's history and is
+      never again given a flight or sent to charge.
+
+  - id: BR-08
+    units: ["2.b1"]
+    requirement: >
+      A fleet technician can take a drone out of service for repair and put it back into service. A
+      drone out of service cannot be given a flight.
+
+  - id: BR-09
+    units: ["2.b1", "3.b2"]
+    requirement: >
+      A fleet technician can set up a charging pad at one of their company's sites, stating its
+      connector type.
+
+  - id: BR-10
+    units: ["3.b2"]
+    requirement: >
+      A charging pad is used only by drones of the company that owns it.
+
+  - id: BR-11
+    units: ["2.b1", "3.b1"]
+    requirement: >
+      A fleet technician can send a drone to charge. The service sends it only to a pad whose
+      connector type is the one the drone's model uses, and refuses otherwise.
+
+  - id: BR-12
+    units: ["3.b3"]
+    requirement: >
+      The service keeps, for each drone, a record of when it was taken out of service, repaired or
+      serviced, and put back, and by whom, so that its company can show a regulator how the drone has
+      been looked after.
+
+  - id: BR-13
+    units: ["4.b1"]
+    requirement: >
+      A dispatcher can record a delivery job: a load to be carried from one site to another.
+
+  - id: BR-14
+    units: ["4.b2"]
+    requirement: >
+      A dispatcher can record an inspection job: the sensors it needs and a list of points to visit
+      in a set order, ending back where it started.
+
+  - id: BR-15
+    units: ["2.b2", "4.b3", "4.b4"]
+    requirement: >
+      A dispatcher plans a flight for a job by choosing the drone and the way, a chain of corridors
+      between named sites.
+
+  - id: BR-16
+    units: ["4.b4"]
+    requirement: >
+      The service never chooses a drone or a way for a flight, and never puts one in place of the
+      dispatcher's choice.
+
+  - id: BR-17
+    units: ["4.b4"]
+    requirement: >
+      On a dispatcher's request, the service shows which of their company's drones could get to where
+      a job starts.
+
+  - id: BR-18
+    units: ["2.b2"]
+    requirement: >
+      A flight leaves only after a dispatcher has signed it off; nothing but a dispatcher's own action
+      signs a flight off.
+
+  - id: BR-19
+    units: ["2.b2"]
+    requirement: >
+      A dispatcher can call off a flight.
+
+  - id: BR-20
+    units: ["3.b1", "4.b1", "4.b2"]
+    requirement: >
+      The service refuses to sign off a flight whose drone cannot do the job: a load heavier than its
+      model can carry, a way longer than its model can fly, or, for an inspection, a sensor the job
+      needs that its model does not carry.
+
+  - id: BR-21
+    units: ["5.b1"]
+    requirement: >
+      The service refuses to sign off a flight whose way passes through a zone where flying is
+      prohibited, or through a closure in force at any time during the flight.
+
+  - id: BR-22
+    units: ["4.b3"]
+    requirement: >
+      The service does not let more drones take off or land at a site at the same time than the site
+      has places for.
+
+  - id: BR-23
+    units: ["4.b5"]
+    requirement: >
+      When dispatchers planning at the same time sign off flights that would use the same drone at
+      overlapping times, only one sign-off succeeds, and the others are told why they failed.
+
+  - id: BR-24
+    units: ["6.b4"]
+    requirement: >
+      When it judges whether a drone can fly a way, the service does not count on the full range of a
+      full battery, since batteries drain faster in cold and wind than planned.
+
+  - id: BR-25
+    units: ["4.b6"]
+    requirement: >
+      The service accepts reports from people and devices outside the company that a flight's load is
+      ready, that its drone has reached a point of its job, and that it has arrived, and it records
+      each against the flight.
+
+  - id: BR-26
+    units: ["6.b2"]
+    requirement: >
+      A report that arrives more than once is applied once.
+
+  - id: BR-27
+    units: ["6.b2"]
+    requirement: >
+      A report that arrives late or out of order never undoes a later one: a flight's state follows
+      the order in which things happened, not the order in which the reports arrived.
+
+  - id: BR-28
+    units: ["6.b2", "6.b5"]
+    requirement: >
+      When a report a flight is waiting for does not come in time, such as its arrival, the service
+      flags the flight to the dispatchers of its company, since nobody watches every drone.
+
+  - id: BR-29
+    units: ["6.b3"]
+    requirement: >
+      A drone that restarts in flight and carries on stays on the same flight, and its reports after
+      the restart count for that flight.
+
+  - id: BR-30
+    units: ["2.b3", "5.b1"]
+    requirement: >
+      The airspace desk can record the corridors between named sites, the zones that group them, and
+      the zones where the authorities prohibit flying.
+
+  - id: BR-31
+    units: ["5.b1"]
+    requirement: >
+      The airspace desk can enter a planned closure, with a start and an end time, and a sudden
+      closure, which applies at once. It can amend a closure, for example by widening its area or
+      moving its end time, and the amendment applies from the moment it is entered.
+
+  - id: BR-32
+    units: ["5.b2", "6.b5"]
+    requirement: >
+      When a closure is entered or amended, the service tells each company's dispatchers which of
+      their flights it affects, including flights already in the air, and tells no company about
+      another's flights.
+
+  - id: BR-33
+    units: ["4.b4", "5.b2"]
+    requirement: >
+      The service does not itself call off, reroute or change a flight because of a closure; that is
+      the dispatcher's decision.
+
+  - id: BR-34
+    units: ["2.b3"]
+    requirement: >
+      When a closure is entered, the airspace desk sees how much disruption it caused across the
+      customers, as totals that name no company and show no company's flights.
+
+  - id: BR-35
+    units: ["7.b1"]
+    requirement: >
+      The service can be restarted, or crash, while drones are flying, and afterwards carries on from
+      where it was: nothing it had recorded is lost or applied twice.
+
+  - id: BR-36
+    units: ["6.b6"]
+    requirement: >
+      An instruction the service sends to a drone or to charging equipment takes effect once, even
+      when it gets through twice or the service sends it again because it cannot tell whether the
+      first attempt arrived.
+
+  - id: BR-37
+    units: ["7.b2"]
+    requirement: >
+      The service tells each company's own systems what happens to that company's drones and jobs,
+      and nothing about any other company's.
+
+  - id: BR-38
+    units: ["6.b1"]
+    requirement: >
+      The service offers no way to steer a drone.
+
+# Units that give no checkable obligation of the service:
+#   2.b2 (second sentence: the dispatcher's licence), 3.b1 (the fleet's size), 5.b3 (the EU rules and
+#   the GDPR: the companies seek no certification and expect the service "to respect how these rules
+#   work in practice", which states nothing a contract can be checked against), 8.b1 to 8.b12
+#   (anti-requirements).
