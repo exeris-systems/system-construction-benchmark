@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\"questions\": [{\"id\": \"Q2\", \"follow_up\": true}, {\"id\": \"Q3\", \"follow_up\": false}, {\"id\": \"Q4\", \"follow_up\": true}, {\"id\": \"Q5\", \"follow_up\": false}, {\"id\": \"Q6\", \"follow_up\": true}, {\"id\": \"Q7\", \"follow_up\": false}, {\"id\": \"Q8\", \"follow_up\": false}, {\"id\": \"Q9\", \"follow_up\": true}, {\"id\": \"Q10\", \"follow_up\": false}, {\"id\": \"Q11\", \"follow_up\": true}]}",
+      "thoughtSignature": "EmQKYgFpFH0T1+x2Zx9prwieeJKwD8++kRTCIjBdT7fYLELODW5Hv72445B4XN/rBfovbBHFYTOU/FqXYdIkGoIGaiM7rzA6ctd+22hwyBNuPMU80a4Yf+LVrTQoW5oiXCDxjsG4"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 799,
+  "candidatesTokenCount": 149,
+  "totalTokenCount": 948,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 799
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 149
+   }
+  ]
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Z63xapqTDJankdUPu9HdsQ4"
+}

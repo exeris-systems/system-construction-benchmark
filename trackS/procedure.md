@@ -14,7 +14,7 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 5 (draft 3)
+Version: 5 (draft 4)
 Decision register: D-45 to D-59. Version 4, whose instruments and their calibration this version
 keeps, is frozen at tag `us-procedure-v4`; version 3, at `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
@@ -178,7 +178,9 @@ Mode `follow-up-control` gives each judge the four conversations of `follow-up-c
 pairs of an answer and the question after it, each labelled a follow-up or not, three times. A judge
 passes as classifier when it agrees with at least 37 of the 40 labels in every repetition. A reply
 that does not label every question exactly once fails the run. The prompt is frozen before it
-classifies a subject's questions.
+classifies a subject's questions. Draft 4 records both judges passing as classifiers, each with 40
+of 40 in every repetition, on the prompt and pairs of draft 3, which it leaves unchanged
+(`calibration-log.md`).
 
 ## Tests
 
