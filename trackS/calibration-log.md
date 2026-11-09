@@ -396,3 +396,18 @@ unrevised and is frozen.
 
 | Run | Model | `judge-prompt.md` (SHA-256) | Verdict |
 | --- | --- | --- | --- |
+| `runs/track-s/2026-11-09-judge-control-gemini-4-argon` (mutants `aa11f7f4…`) | `gemini-4-argon`, temperature 0, seed 1 | `40baece8…` (version 4, draft 2) | **pass** — 18 of 18 exact |
+| `runs/track-s/2026-11-09-judge-control-claude-opus-5-5` (mutants `aa11f7f4…`) | `claude-opus-5-5`, effort `high` | `40baece8…` (version 4, draft 2) | **pass** — 18 of 18 exact |
+
+### `2026-11-09-judge-control-gemini-4-argon` and `-claude-opus-5-5` — pass
+
+Both runs completed without error or retry, 18 judgements each, every response a natural stop
+(`STOP`, `end_turn`). Every judgement of both judges is exact: every reference requirement has the
+coverage its mutant was built with, every item its class, and every reworded item names the
+requirement it was reworded from. Both judges report 39 covered on M1, M3 and M4; 31 covered and 8
+missing on M2; 33 covered and 6 partial on M5; 4 out-of-scope and 3 technical additions on M4; and
+nothing covered on the empty contract M6, in all three repetitions.
+
+The mutants were written with Claude Code, on Claude Opus 5.5, the family of the judge of Gemini
+subjects (D-56). Neither judge missed one difference the mutants hold, so the calibration does not
+show where either judge's limit lies.
