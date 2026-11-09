@@ -14,9 +14,9 @@ of the script, the run record, and the rules every run follows. The commands tha
 are in [`how-to-calibrate-persona.md`](how-to-calibrate-persona.md); each calibration's verdict is in
 [`calibration-log.md`](calibration-log.md).
 
-Version: 4 (draft 3)
-Decision register: D-45 to D-56. Version 3, whose persona calibration this version keeps, is frozen at
-tag `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
+Version: 5 (draft 1)
+Decision register: D-45 to D-57. Version 4, whose instruments and their calibration this version
+keeps, is frozen at tag `us-procedure-v4`; version 3, at `us-procedure-v3`. Versions 1 and 2 (the user-story procedure under
 `contract/user-stories/`) are frozen at tags `us-procedure-v1` and `us-procedure-v2`; their runs are
 Track S pilots (D-46).
 
@@ -29,12 +29,12 @@ Track S pilots (D-46).
 | Judge of a Claude subject, both series | Gemini API | `gemini-4-argon`, temperature 0, random seed 1 | `judge-prompt.md` + the requirements and parameters of `contract/system-requirements.yaml` + the anti-requirements of `contract/anti-requirements.md`, and the derived contract |
 | Judge of a Gemini subject, both series | Anthropic API | `claude-opus-5-5`, effort `high`; the API takes no temperature or seed | the same |
 
-Instruments are fixed across subjects and calibrated before the first subject. Each subject is judged by the other vendor; in the script series each contract is also judged, unscored, by the judge of the subject's own family, and the report gives how often the two agree (D-55). The subjects and the
-S-naive and S-instructed tasks are added to this procedure before they run.
+Instruments are fixed across subjects and calibrated before the first subject. Each subject is judged by the other vendor; in the script series each contract is also judged, unscored, by the judge of the subject's own family, and the report gives how often the two agree (D-55). The subjects are
+those of D-55, and their S-naive and S-instructed tasks are set out under Subjects.
 
 ## Files of the set
 
-| File | Role in version 4 |
+| File | Role in version 5 |
 | --- | --- |
 | `world-brief.md`, `brief-slices.yaml` | the world and each persona's slice of it |
 | `brief-seeding.md` | the brief sentences that are constraints or seeded needs; used to read derived contracts |
@@ -42,7 +42,8 @@ S-naive and S-instructed tasks are added to this procedure before they run.
 | `grader-prompt.md`, `grader-control.yaml` | the grader of the persona's calibration and the cases it is calibrated on |
 | `judge-prompt.md`, `judge-control.yaml` | the judge, and the mutant contracts it is calibrated on |
 | `persona-control.yaml`, `persona-holdout.yaml` to `persona-holdout-5.yaml` | the persona's calibration questions: the set the prompts are revised against, the held-out sets that decided drafts 3 to 6, and the held-out set that decides draft 7 |
-| `interviewer-prompt.md`, `analyst-prompt.md` | the prompts of procedure v2's pilots; not used by version 4, and replaced by subject prompts before the first subject runs |
+| `subject-naive-prompt.md` | the subject in S-naive: the client's request, brief §1, the roles and the channel to them |
+| `subject-interviewer-prompt.md`, `subject-analyst-prompt.md` | the subject in S-instructed: as interviewer of one role, then as analyst of the three transcripts |
 | `run-track-s.py`, `test_run_track_s.py` | the script and its tests |
 | `procedure.md`, `how-to-calibrate-persona.md`, `calibration-log.md` | this reference, the how-to, the calibration record |
 
@@ -120,6 +121,38 @@ every reworded item the requirement it was reworded from; a single difference fa
 is calibrated on its own, and its prompt is frozen before it judges a subject; a revision is a new
 draft. Draft 3 records both judges passing, 18 of 18 judgements exact, on the prompt and mutants of
 draft 2, which it leaves unchanged (`calibration-log.md`).
+
+## Subjects — after the instruments
+
+A subject is the model under test, run on its provider's defaults (Rules). It receives brief §1 and
+the role names (D-47), never a slice, and writes the requirements as a derived contract in the shape
+of D-56 (D-57).
+
+**S-naive**, in both series, is one conversation with `subject-naive-prompt.md` as its system
+prompt. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of
+`technician`, `dispatcher` or `desk`, is a question: it goes to that role's persona, which keeps one
+conversation for the whole run, and the persona's answer is the subject's next turn. A question that
+names no such role is answered with the list of roles, and counts. After 90 questions, the next turn
+tells the subject it can ask no more and asks for the requirements. The first message that is not a
+question is the subject's requirements, and ends the run. `elicitation_initiated` is whether a
+question came before it, and `turns_before_first_artifact` is the number of questions before it. In
+the native series the harness's `ask_user(role, question)` tool takes the place of the `ASK` line:
+the prompt's sentence that describes the line reads instead "You can reach one person in each role
+with the `ask_user` tool, giving `role`, one of `technician`, `dispatcher` or `desk`, and
+`question`; their answer comes back to you."
+
+**S-instructed**, in the script series, is three interviews and an analysis. Each interview is a
+conversation between the subject, with `subject-interviewer-prompt.md`, and one role's persona, in
+the order technician, dispatcher, desk. The subject writes only questions; an interview ends when it
+writes `END OF INTERVIEW` alone in a message, or after 30 questions. A new session of the same
+subject, with `subject-analyst-prompt.md`, then receives the three transcripts and nothing else, and
+writes the requirements. `questions_per_interview` is read from the transcripts; how
+`follow_up_ratio` is read from them is fixed before the first subject runs.
+
+**The contract** is read from the requirements message as a YAML list: the items of the message's
+`yaml` block when it has one, and of the whole message otherwise. Each entry with an `id` and a
+`requirement` is an item. A message from which no item can be read is the empty contract, recorded
+as unreadable, never repaired or asked for again. The judges judge exactly the items read.
 
 ## Tests
 
