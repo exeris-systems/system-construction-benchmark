@@ -1,0 +1,259 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSzwYKEAgTGAI4AUIIdGhpbmtpbmcSDF2a0DrbV9N6Ad63xRoMmey/TOlzVVu8AGVHIjBPNE8GhK/iwBuxlQnvOhggQIEWm1kVA6KoBtKqqF8ZMtey15mkKhG2KLB58hFdG28q7AVOls2BONwv3hbb7VPPd6EfAMaNGHwAtRIVsFqRcWs3r9rdinRGERmiW1MXNSfELNBlBoWXuPhTGEOldB0vha+B5fJzfHMcUNw9r6Lipfco8bG4BAj9JH6urcXub1xioaOlTh8v4yaPqZZTM3jXgeIplfQYi2Tf+BvUBoLRS7D9DcB7UtpWkkEn2WCN/Z1FwhRzrB3mdKN/IBVyx7UwzZ/O2NDf74YlHnJzC8mdd+4qxOr5vMDjKvSiCW/pe1ffFI4VaS1Gkkm2XEczcDgkvPmF+xsZPWv51RV8tAA5TFVBHn598VpyFLqqLWDPuGwANwFHowClSw8fUUINLadKxwMC8zSCQRdttZk4/DVhmhIdXfAjDtTcnrCOu2sfxi+kx21ypKYE7fjCWY5zNd3+nrs2siJoMRpyYMTNRloxISbxlcCuod2bQHWYgBbUAVegFa0iCiO2n3m+6r3BBvr7yLjOnQNoK++539ko8XMXcyUBa1LkqvQzO8zLC/De1b6xRUgFeQqPaBVEOxadRDstQgKzSxbXMAK9T0jkJ2+UIhmirN24uaJwtgT0Padrut1YXZPF2kN9Zk0O+yGjtkijn8DQ/pBQ8RA6ehvftqh7nD4m2+q2Y6FBNWGgRKiBytaIpZpriF/wE2ZkMDdACvzzIFOnlE/VPFWRLuaSXMyPEpqdzbq8YnLjfT2s8CvVqBmpce6n/gj6ZNm5DEk5v8/2DoY3PWMxIqVAV4+RvIEFHywYysDAoXj55gwjclPY6UDEvwPUx+8qzJX3cMQD8150dvcvggwjoeRRgnvtVEyQ1RWo9tnsYQ1J2UrgrArxfDAfrr69XGNLnEsymO69v1t8xBLpG+SutXZfwgCwyAbITxjvf6I14g0tEfQVdswTBHJeRkE9JLbjcrIj0IbP/miQMxaQiXkvG+Xv8bWIoIaiNH+TVwni0cu4T2Ibv9ROZte/ZSJJNZmRXwUZwMcZnEU/VMQ8r/H7KpJCoFXJzsbIGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: What does a normal working day look like for you, from start to finish, and which tasks around the drones and their equipment take most of your time?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep our drones and charging equipment in working order, which includes adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs and put them back, and send drones to charge. Regulators can ask our company to show how our drones have been looked after."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS7gUKEAgTGAI4AUIIdGhpbmtpbmcSDHD2UoRO7PQP1n/obxoMhDyMROMnmzHzkiojIjDNOaYgIkDNVCyhEaAA2PidvdcjeDOkcYt//aaQdEHdpp4fMmehNbIQomEW3SxjZaIqiwUfH6OVc0+zFyZP4fMQv3NnOJil8QNBa0mw9XTQH8W7JPNLBNAprfwKrZUEqgl+NbGH6ukidrMP16huqWG1hBSt93b8Aez/W/KrUIU1+10n/4fQz0KK0QyXGX0LVFXtt847qG7JWbVdPjklE7ZjeLpePOo6VQx5+LsUkiZeETLb5QmFYGa+mF2ZBnAEaemvQWw8qby/M/AGk67H7K6ubNjP6aL5M994XVW3n8ioGBg/8e00PrNE1CX/27ZIckMbvfuNTypm+nC6BztGy4QM2nme7u0zL6X47By1z7vrkzXfQRtGa/dWn8qMfJ/YjM6J3IGmrJs2PFFXQU8fDCsXFKub+SOM+VLxb36aeDb74S2FKaFYpuvQIvPGdaBiWGVfsjNB/vskvnTgk3v3mghPWegBtxWlHCbBJTKTdgX1fpRhEOtt2YzYDCnBgnbWJ5SJ4vzd98IconE1J1PiKHrwXWuhObGN7Ooo4WLrWUWWFtWuE2WBP32m/C54jlGmHaxH7XTIt4ShkelnvHBC+HzHhma5gYDjSJ0Eg7TvZxB6WwuVjPdMzqaBvHooFyTtKSGliN9tvR/H3TOAtLQ2kKxUUhskPrznzGtjxXUWxUrkdgGGQVJ9jxhD+QKfQi6gSjmAC9pQ2rx0zwZOIDaJXvYvvX8KPk7Li/aD/W1j30t8D2qBLXZBmptYsPSqlRoVjK8v382Iuz5k3GuyCuYAilql60fe/Ih/jXDozzBdscHMHFOOlE5vjJBNkqOdaHcIJCIL+qboA729HBY+0KjtjiPDZVt9JBpqCVo2svtXJuaSxwjL4lnFJtlS7EVngrCPbBwDbSp9ErYm9hPhAypCg8kznN1NZtjupOVgNE4+1TIYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: When you take a drone out of service or put it back, what exactly do you need to record (reason, parts, flight hours, who signed it off), and what must be true before a drone may fly again?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS5AUKEAgTGAI4AUIIdGhpbmtpbmcSDAbNMRPRQn59ysGoIBoMugLPZUpmukFgV8USIjDicG6GHFBal2UYHhWDYm1gKYfuoq1WZM8hgtP80U4gzN5fOPgD/jmBsmL5njajsU0qgQVwucw9zYRIcEvfFmqA7es5mKJm35+2VbASCJ+g+OQGXjNApFUC92O1PMenp5ULWITqPj8OEFx4QNuWZKOkkYUt4NZ9EK4N7YFsMfxIt1oIQHZJLZkTDX5VF/vs7HLuLB6xAg46c1Z+bFgK3X9kSwO5TKR0eOspELH8IczLgP9ImNi/cfAbCh5Tc42Vg4yXJPPJqJfPbIQQqqUI/WdHA1UWxrrgFYRcAhhgPZoWXUs1DJQFP7FTDQjK4cqZjbj0pJTJEIN+alf/g+ubg2lQCLbpSmm6R8+izSy3r0cCfoiNB1Z3RYBydaJh7e7zmSGL1JZOmOtMRf8nVkwfzH+7gvHPHIfR/6xAn1VkhznyBLbFadesFtSK2l55ZY6rl7N6AAbxoqigMQF1QGr0H/kdyxMZwmmMuWo5ORSdtlkGSW8qOrdY8rc7+4vc+ICJ1Ke94HVGYyTZIF1zD/BNdJKIjq2mOP5VCZrtCaT1ltudfbR1ZFPAG7p3QS2JfOAbbEhbppRG2E1GOX7n+CSSillTeNdJNLQFwrQ554f3IpWEZEbAFCkmCdQw9Jqn00pww8jeUZq5wvKUUYUOGlDiHs6kYWrFbaLT865Z71ioTcFUiqeRLbVC4gVeUQfIQUlT82MxklhyZUz6vwqKolr0ulJq2lQhHcCJaJxUgSCnWqkUmri7pwXaYt7PS2H/dFGvx5/1FgpIunjeGwslFA9s+lGfPtzMJ6V/TPYFrB4uCmtbizDel9o8zaA4yDcfZ14yIg69DPLU24pRq5mdLQjQISqsLDbKWBg8ernBH7EH7YttjHnXzu6SDlZwXFmwZXsIhYNVYjDUGl4t9NpvJpqVW4wSMgcZxxgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: When a regulator asks your company how a drone has been looked after, what do they want to see?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK technician: When you take a drone out of service for repairs, what do you do in the service today, step by step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSrgYKEAgTGAI4AUIIdGhpbmtpbmcSDC9doqqrwQjPQYbM3RoM+lk6xioQgJmyfsawIjDG2OXy1D/wulxF6ZsG4BgwKlrh2w94jMlUf/VTKj9baLNyb/kXtMh10a9T/78LX9YqywUsgO+clXH90+pJZlh25yV5RWgq1YfWBm1tyfwjx5qTtbXKWQ4SlXWclCRxOI1epuCE0EXf2bD/IFpyRFraz3qI0bnZK1YkrJdhtsOhj8GNXiKNmwFNdszSAEF4/v9g8rpBK00jgoM1LRvTitdXwYpSQ19FLQCdhwwhgNW72NLgQArwuBJxsNQbZ2raZT84BBHOSeeMZlxhVu8KTttzG16R01ayKIkAdc28mODDO6gsJhcIvSQmWPUFWk3CGQhBm9iwxOx7zZ64mRAZ8+gMeehE613WojpNWFvGqVdAyZ8yb3yadgx8jc0zrCM4TWyYG7cdibfWvPh0XZjfj3W2BpUMF+PK+vcLH2icyk3f8y0tyqWm180ANFGpWFngf07N+/EDzA/yNoFsjCruUyfc7iWL18H5cZ7Fpl6x53ql1TAGUeLWSz5A5dL298+D7jRgymKE3+xB9HwkWyuMyVQRKTV5FxrtqO+CrBQ8pQkn7flnAS+NKcX6i1B55HZbPuoZo0/Yb6qOgKUrVQRHqbHkMh9eVjMhYKwCGXzJPjb3CHw65+TCnUiXSrG0XouGeBCduXB/u4qUuT66RSypuGGZzu21iT/Tyq4rXUjGLgJaSYYbGrlTEivgjRWbIl7kdFWPJQ8s4f3CeOuKOTOS96t+zZ+C74pkaYBglBg3E6/GOeBwNgGEQ5tbCoA4iYvdZ2330vADMTTk0Jz/WA+neES5fv6sUipZ5Pf+dbOBSVQYWc0/LdumXBNe0fEkKChk8IncFnSP6ivgNQ5lcfGJ0S95VlDtdLIFbibr8yVU7/RcB8mZHLqLKNyxCGxnT51V5ZBF/raypUglzm7BksXQvN76xG6+AJccqw04CuMD1Hj3FPM0o6f/Jzh3aXZaA4cAaaRPaQtVQSpk9GX07G/JYHqcdFSkUM3D82WlCt8euqQStAt3paRH6gdDXCdo0dAzGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: What goes wrong today in your work with drones and charging pads, or what do you wish a tool would do for you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSgAYKEAgTGAI4AUIIdGhpbmtpbmcSDDGjxTU2mR18ER6jXRoMmBQIcRTlcvj90SlqIjDnQxQZRzR5I9u7xjTwuGr0Lhai6aoTXKUPfmsAmgWL8h3xbvXtUvZRxxn51B6Y+jIqnQXXjCbO5HilbvC4iApy5kaDb0OLj4MTsZNRW/jYUP0NyWY76TygrPedSaND9w0hjo8KuE9eweN/8XVc5ajDBbO86x3VvPcoGryn1SlxSevmmOkQRoojpNRWaP1Pu929ofVNtfi+qJes308VBBVcBlZ104h479LnFrYJkN0chkcxRpD7darIPW+XZ/vuAYuRe5ptnjCnBHYuZPonomu2V3jJ1dpQMOxM42RuJo8/qwNKHqg4TEl2vTnyerJYYXyCpfPQogIazxXNzX8ywBKv3r4nRvIPUiHtlTKRIEPPKSlGAHqyP4bGFQujgwCuUV8bE98OFDn1PV+Yew5AfCANgZ9XNvK+WDTAGY0pVl84mrJHEzDgYNR5kM+Hh2osEil4vyCm3iLrHpibSAUgpfhwFNaAzIhnVsGflYgkYhewaDALxPDz1z9NIPMWOvoGVVdZ3iqjLJtYUD9efy0i4C9kFUF6pI6Ml/tTZfOknwKx5Z2THcVJrtV47udvKzMGgBaXpkJnAOpTtPFZ8EYuVa8bS1Ztt1dAjQAwR1YdRVXPNT1JBH4kiEv01siX4WZwA2PUi05ttuOTRJNcKQDWeKb2EW+paj9h6wl1MjLoUWtGbAab3Tl0gr2llY313jeScVc8vjSm18K1Br3CtbivjscP3zTNmv0dkZlsI6o4uISKBoBmeN92T/fuCUqro+OtRhO0nITob+vmqXhkSMA7E5e5M4l8Teon88D2OU1Hxn6OnEOCn0xccFNBm49XtEqA95dfCS51pBeFv17iJeGmqE1ipoAUcBrQmmP0pUBUIhrwfib2hDHO+TN9Wfv5t+jgCkzcTc/Oe8qZQvo36yl6lmD3WNws9XQo6mN/37wn6vcD4O7sSDoRjugVJJadJpGaUQsYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: What does a normal working day look like for you, and what tasks take most of your time?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I plan and run flights for my company, and I am the licensed person responsible for each flight. Several of us plan at the same time, often for the same busy sites and popular drones. I decide which drone flies and along which way, and I sign off a flight before it leaves."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK dispatcher: What do you need to know about a drone before you choose it for a flight, and what should stop you from choosing it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I need to know which model it is, how much it can carry, how far it can fly on a full battery, which sensors it carries, and which charging connector it uses. My company's policy is that software never chooses a drone or a way for us, and I am the licensed person responsible for each flight."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS0gYKEAgTGAI4AUIIdGhpbmtpbmcSDAxDKSPwv/XvI+XkfBoMBh8WrIPovbFx36bbIjCL05ZehXWKGzL0usE+Dhe5f3b7QkjpG4oOqdiRqn3DL32BxLgWKFs86Md+oF5sYHkq7wXGDKqrtFByYHIFfXkbl81IFykHB3lzWj1nFlPy+G6y+8y8YxeMha4nb+DVrj5wgAPbjy8s+T1DCxXvzH+HZGT5iFOBJBFQmiiqR8FJIl6dja0zc1ce01iz6KFR/AbBXCgR0c/Yh6SsJKPmoZZzGdzUek3x+eNOzBhRGetVS5xd5k9DqmL14X/4Ppbdy7E+qJt/S/2YWiISP33wZn/TZf6K9pgNu86Z1GX6ZwlKYV5AgUqM55rvkyOMoCg4x546c9s+Y2NB5OFmqyiWfuqKG/xDv++JsvxRjQY9r5rClQ5qnISLqP6qfs8otycmrvGU8aGTljSnL52h6g6ZeJnI+L/jgv6ZppcUSUQfn7D0kbaU3vBPyAKtiD36/oPnua6ErNlY4dVk9f5HxrM/2Xyz0iQDZ/50TqcRodToNAjYFtC2YjGQ5cn/dyDSMJrdmnDA66CTdhklvH5gDKr9VwHT9vIjaj6mkzBuVBlkGXq5XahJW/4K8ijLrCLArgNW3sxjenaHgt1ebBynKPRb5I80cGdOV5HLHW5IV7hR0FqkBt7zerFHmtMxGX7sJayje856OnMBS+0vmXMYM3XaMa/OhHCjIJ0bx6oZl4tpgtKhsbF+MIK4q1Tc1SIuiki0ZiJpijBQNQUa+APGVk1t7Q8rH24vtVwd5qgm+5FPrUj8VFI0wN3xMt+BRrVsgPUszPTaHQb3lgymGoqI0JDcW2g9o/3EgnUNL2up8H83Sli+d0doMKcI33KQMhTGHlL4u/M93r51dqWZinh4vWM9FOt08Z7+vNUrNaRXOWdHRUbjh7V3s9c1aHIu0bKCZGoOs0Ru3oEtYD4PA5y3O0op9RZh7YeslNg1m7s2sUjUBINzfJ6I6JgeoeBkA5oqfxmZn7HKbxM231sxTK6onpCtwyG5Dg6gZUAfz/3Ka36LQvnSng8Sjax6oKscA9czp0pU3YtHTrKc0FdlNMS6L3fRkz3heoNDVPFjv+4E8SQega4XurFgGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When several dispatchers plan at the same time for the same drone or site, what goes wrong, and what should the service do about it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Several dispatchers plan at the same time, often for the same busy sites and the same popular drones. Sites have only so many places where drones can take off and land at the same time. I know nothing about software, so I cannot say what the service should do about it."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Is it ever acceptable for one drone to be planned for two flights whose times overlap, or for a site to have more drones taking off or landing at once than it has places for?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSvwYKEAgTGAI4AUIIdGhpbmtpbmcSDMMbNO9vQiuY4HRUqxoM7eR9cP+yqSN0+Pz3IjDvqRHDEOnxnzPNmSXn/yfQgKHVKGQUFnYP/p1eeq88yu6+Za+D++QknuSolyuO0rkq3AUPcAnL/xc5ca58JY6fYf+6y26G/A5iB1pu64nCPTSpiD3k6KFK5+M2AzR3Z+D7RXeDAb1x2oNjWYcZsb1+JMz2SSfolYFnBXcsJINuj+Sq8QKKZDLarSexj2SjWCpsFWHCRU1N4B7Lt6FIXXw2YHLRVoUyhkB5QEciIiO/N/bohu/rZwtejs5TYo/cnckGRW2AG2STwCzG9NO69U0mzkL1UvRzgSPUPrmTO+NAl+d2dQpj5oV5cdeKymPAGQLGBwh4ynzA+QaSBx4QR12E970MUg12mdOH4Ps027W7W7QqFUDM95TYF87sq5RgPOImfCzgasuIwXRYAnco9fbfEXNBssjHDqV9Wc3Lw2HaeM8efbHGPN4Y+LhzBhb8M57vft7OGjnGOG63DdFt3uEjowJh1fw1pQ4p0dLhWQ/F9osnIsOjf713MtjFxrJWQxstgPjpWkTCxQwuKf/IPxFNBrjN0vuhf1yx/fwi2thM9VRFuIqBc98XTMf9nIsDVa4Xfl0KNMS/XTURkV/V77fsJItJ70QL7iacuuQka48IWAua0vspmk8xLshtb79UdU6Iv9B4veq/qgBpPVtYNDXOMjboCBdHnJlHV5vbcuxHqd8zHBonTYZ7w8d3BpEpTXT1/voT1wRCgtWiiq3LFWPVsK2tqG7bcH0bQJp/VXvp8nXncpH8TZqQ1Uo/p79xeNLiUCcKAjXXIVGNVO8j1SyJAu6MyP6wddwt96gtJP+etgqhAwabzpYrEiaY6LNmQGj+/wR8ddjkORPuLiGkbPupASs2v8n+RTu8PcnyaQj5kDx4BhPRUnPy7ZCauaAQ/q94f5LQeqZJ+znZCNTgPzaaeUhWys6BawFf70I0zr2EPYx7r8fyHmGrmI+ZfP+zq9+wBoWexzw6bA4Z8l8r2TWaN9cEuf+x8RDOinsjfWdYL8VBdHeGpkAlTLvPlPzBEhZDLd4QB2jz+Nd2EBepO9UYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: If two dispatchers both plan the same drone for the same time, what happens in real life when the time comes?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK dispatcher: What does \"signing off\" a flight involve: what do you check or confirm before you sign, and can anything change in the plan after you have signed?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I decide which drone flies and along which way, and I sign off a flight before it leaves. A dispatcher can call off a flight. I know nothing about software, so I cannot say what the service does or what checks are involved in signing off."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Who else, besides dispatchers, can make a flight leave, change it or call it off?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I am the licensed person responsible for each flight, and a dispatcher can call off a flight. I don't know who else can make a flight leave, change it, or call it off."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Is a flight one trip from a takeoff site to a destination, or can it have several stops, and what information does a flight plan contain?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Deliveries carry a load from one site to another, while inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly along corridors between named sites. I decide which drone flies and along which way, and I sign off a flight before it leaves."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Where do jobs come from: who creates a delivery or inspection job, and what does a job say (load weight, deadlines, points, sensors needed)?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know who creates a delivery or inspection job. Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Before you sign off a flight, what must be true about the drone, the load, the battery range and the way it flies for the flight to be safe and allowed?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I decide which drone flies and along which way, and I sign off a flight before it leaves. Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. I don't know what else must be true about the drone, the load, the battery range, or the way it flies."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS4wYKEAgTGAI4AUIIdGhpbmtpbmcSDIrJL4XX/6xwsSg/vhoM6d/rhzCNUyTmqrTtIjDvPWsGT1bGZ129o0QeKRL9YLT7fHK4mypDDPkSn3OYqlqjB0u17fGyp/+dusBnqnwqgAZlyRggpKw+HcwIa+g8PjCxgpoFS7eCqs62/UwUQBYlZvuhl1GpwxHJbYodL88Medh2JxD0sTFhCQHO2VAsKDOo8t+9wQZxOQ8rKXWiRgtsn1Jd0L892wx8ZDHe8U0kM8zkZ/epPtzYC7KOj9LfDewzMWVZlfGzBN/csvXpDlx18q/HCVpyJSTUMMfBPNW96Hsv8YKx1O9902ejmvA0Lnn1/W5i5NtAEwdODrIj/RABMqW7IMdR9w8NktkRxPdrJ9SY2w6QHK1QuG4tmRzcevR7CMN7SL4Jwbe5uXC7cObwBjiXu66M3I2eKlX1MgLJWTK1KtNLszXlWYwPzLceikPGz06RP59O8cJLriqD33VCfGYqvqRICsO6jCyoume8xojAU8SKL8gbpWFXh6DZRXwTofhbotUdZsk6L1186AHDbcpbwYOwEpnHRNDL6i1FtNX1yDCIEdLOs+Cjnab8qXQwAInlEL7Air9EVVQVZXMVa+B3kU7tc35ULkB1O3xR7meYWTrF9vT22REx95ZxBpfmRR+vE8bhEl10njEj/sYRPrrZ8u/K64mBKGjppFFNXBw5HIOX0zc905/6Qe8wNZRkah+/trrFeEPhltO/skmIoyyaBE8BoLhrHs1LXx4uDKQPPyAZAwpTPH2i5v8fFQnUe2KiJ9G43rhKgAlUq2ILXYYrfIgHanK8ZBJUiRHrKgWanGJyif9+znC4NxxieErEWtVk2Jqu/qeks4B+8fbkDCeA/DAX/QmNdgTITr/se8XOntZU2P7Day9MsWBsMUZfrWVne1YeIac6Xhj/Aek6lwFhxx3/VsJcuNNf2vN3sbh/wuWPFaeO4JARpEXhfGDgmbcSDrMNImU/vhw6KHH6pQyV638yv8z4j3pTFjlPVGkm2FQmYWs6cvhhL8uTowCl5l9mU1cUgjGVWmYeIcGnIBR32bwHoUxVK629ORHD0FXEfNEjvwZ/rF2t3z1ljTxE7yb75Vi+/vLh7sJyotLINMeeznch/EelAvBR7KvfKDEYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK desk: What does a normal working day look like for you, and what tasks take most of your time?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep the shared picture of the airspace by managing the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves."
+  }
+ ]
+}
