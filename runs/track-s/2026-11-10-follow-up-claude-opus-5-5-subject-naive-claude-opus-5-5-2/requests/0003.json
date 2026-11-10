@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I keep the shared picture of the airspace by managing the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves.\nThe question: Do you work for the platform company, for one of the drone companies, or for the authorities?\n\nQ3\nThe answer just before it: I work for the platform company. My team works for all customer companies, which include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm.\nThe question: When you want to know how much disruption a closure caused across customers, what exactly do you need to see: counts of affected flights, which companies, which flights in detail?\n\nQ4\nThe answer just before it: I don't know.\nThe question: What decisions do you make with the disruption information once you have it?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Are you allowed to see the details of a drone company's flights, drones or sites, or only airspace information?\n\nQ6\nThe answer just before it: I work on the airspace desk and have no business looking into any one company's operations. The customer companies accept sharing airspace information because that information comes from the authorities and is the same for everyone.\nThe question: What does a closure contain when the authorities announce it: an area, a set of corridors or zones, a start and end time, anything else?\n\nQ7\nThe answer just before it: The authorities define zones where flying is prohibited, and they announce planned closures with a start and end time, as well as sudden ones that apply at once. Closures are often amended during the day, for instance when an area is widened or an end time moves.\nThe question: Is a closure always stated as one or more of your zones or corridors, or can it be an area on a map that you must translate into zones and corridors?\n\nQ8\nThe answer just before it: I don't know.\nThe question: When a closure comes into force while drones are already flying through the closed area, what must happen to those drones, and who decides?\n\nQ9\nThe answer just before it: I don't know.\nThe question: Corridors run between named sites; are the sites themselves shared airspace information, or does each site belong to one company and stay private to it?\n\nQ10\nThe answer just before it: Each company's sites are its own business. The airspace desk keeps the shared picture of the airspace, which is the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities.\nThe question: When a company opens a new site, how does it get connected to the corridor network, and what do you learn about the site in doing so?\n\nQ11\nThe answer just before it: I don't know.\nThe question: When a closure is amended, does anyone need to see what it said before the change, and when each version was in force?\n\nQ12\nThe answer just before it: I don't know.\nThe question: Who enters closures and corridors into the service: only your team, or also the drone companies?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

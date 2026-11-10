@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguJfocVmbJXrtcUetvea",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSgAYKEAgTGAI4AUIIdGhpbmtpbmcSDDGjxTU2mR18ER6jXRoMmBQIcRTlcvj90SlqIjDnQxQZRzR5I9u7xjTwuGr0Lhai6aoTXKUPfmsAmgWL8h3xbvXtUvZRxxn51B6Y+jIqnQXXjCbO5HilbvC4iApy5kaDb0OLj4MTsZNRW/jYUP0NyWY76TygrPedSaND9w0hjo8KuE9eweN/8XVc5ajDBbO86x3VvPcoGryn1SlxSevmmOkQRoojpNRWaP1Pu929ofVNtfi+qJes308VBBVcBlZ104h479LnFrYJkN0chkcxRpD7darIPW+XZ/vuAYuRe5ptnjCnBHYuZPonomu2V3jJ1dpQMOxM42RuJo8/qwNKHqg4TEl2vTnyerJYYXyCpfPQogIazxXNzX8ywBKv3r4nRvIPUiHtlTKRIEPPKSlGAHqyP4bGFQujgwCuUV8bE98OFDn1PV+Yew5AfCANgZ9XNvK+WDTAGY0pVl84mrJHEzDgYNR5kM+Hh2osEil4vyCm3iLrHpibSAUgpfhwFNaAzIhnVsGflYgkYhewaDALxPDz1z9NIPMWOvoGVVdZ3iqjLJtYUD9efy0i4C9kFUF6pI6Ml/tTZfOknwKx5Z2THcVJrtV47udvKzMGgBaXpkJnAOpTtPFZ8EYuVa8bS1Ztt1dAjQAwR1YdRVXPNT1JBH4kiEv01siX4WZwA2PUi05ttuOTRJNcKQDWeKb2EW+paj9h6wl1MjLoUWtGbAab3Tl0gr2llY313jeScVc8vjSm18K1Br3CtbivjscP3zTNmv0dkZlsI6o4uISKBoBmeN92T/fuCUqro+OtRhO0nITob+vmqXhkSMA7E5e5M4l8Teon88D2OU1Hxn6OnEOCn0xccFNBm49XtEqA95dfCS51pBeFv17iJeGmqE1ipoAUcBrQmmP0pUBUIhrwfib2hDHO+TN9Wfv5t+jgCkzcTc/Oe8qZQvo36yl6lmD3WNws9XQo6mN/37wn6vcD4O7sSDoRjugVJJadJpGaUQsYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: What does a normal working day look like for you, and what tasks take most of your time?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1012,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 45,
+  "output_tokens_details": {
+   "thinking_tokens": 11
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

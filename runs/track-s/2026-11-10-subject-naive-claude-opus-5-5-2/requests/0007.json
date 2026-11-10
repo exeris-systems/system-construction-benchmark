@@ -1,0 +1,65 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSzwYKEAgTGAI4AUIIdGhpbmtpbmcSDF2a0DrbV9N6Ad63xRoMmey/TOlzVVu8AGVHIjBPNE8GhK/iwBuxlQnvOhggQIEWm1kVA6KoBtKqqF8ZMtey15mkKhG2KLB58hFdG28q7AVOls2BONwv3hbb7VPPd6EfAMaNGHwAtRIVsFqRcWs3r9rdinRGERmiW1MXNSfELNBlBoWXuPhTGEOldB0vha+B5fJzfHMcUNw9r6Lipfco8bG4BAj9JH6urcXub1xioaOlTh8v4yaPqZZTM3jXgeIplfQYi2Tf+BvUBoLRS7D9DcB7UtpWkkEn2WCN/Z1FwhRzrB3mdKN/IBVyx7UwzZ/O2NDf74YlHnJzC8mdd+4qxOr5vMDjKvSiCW/pe1ffFI4VaS1Gkkm2XEczcDgkvPmF+xsZPWv51RV8tAA5TFVBHn598VpyFLqqLWDPuGwANwFHowClSw8fUUINLadKxwMC8zSCQRdttZk4/DVhmhIdXfAjDtTcnrCOu2sfxi+kx21ypKYE7fjCWY5zNd3+nrs2siJoMRpyYMTNRloxISbxlcCuod2bQHWYgBbUAVegFa0iCiO2n3m+6r3BBvr7yLjOnQNoK++539ko8XMXcyUBa1LkqvQzO8zLC/De1b6xRUgFeQqPaBVEOxadRDstQgKzSxbXMAK9T0jkJ2+UIhmirN24uaJwtgT0Padrut1YXZPF2kN9Zk0O+yGjtkijn8DQ/pBQ8RA6ehvftqh7nD4m2+q2Y6FBNWGgRKiBytaIpZpriF/wE2ZkMDdACvzzIFOnlE/VPFWRLuaSXMyPEpqdzbq8YnLjfT2s8CvVqBmpce6n/gj6ZNm5DEk5v8/2DoY3PWMxIqVAV4+RvIEFHywYysDAoXj55gwjclPY6UDEvwPUx+8qzJX3cMQD8150dvcvggwjoeRRgnvtVEyQ1RWo9tnsYQ1J2UrgrArxfDAfrr69XGNLnEsymO69v1t8xBLpG+SutXZfwgCwyAbITxjvf6I14g0tEfQVdswTBHJeRkE9JLbjcrIj0IbP/miQMxaQiXkvG+Xv8bWIoIaiNH+TVwni0cu4T2Ibv9ROZte/ZSJJNZmRXwUZwMcZnEU/VMQ8r/H7KpJCoFXJzsbIGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: What does a normal working day look like for you, from start to finish, and which tasks around the drones and their equipment take most of your time?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep our drones and charging equipment in working order, which includes adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs and put them back, and send drones to charge. Regulators can ask our company to show how our drones have been looked after."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS7gUKEAgTGAI4AUIIdGhpbmtpbmcSDHD2UoRO7PQP1n/obxoMhDyMROMnmzHzkiojIjDNOaYgIkDNVCyhEaAA2PidvdcjeDOkcYt//aaQdEHdpp4fMmehNbIQomEW3SxjZaIqiwUfH6OVc0+zFyZP4fMQv3NnOJil8QNBa0mw9XTQH8W7JPNLBNAprfwKrZUEqgl+NbGH6ukidrMP16huqWG1hBSt93b8Aez/W/KrUIU1+10n/4fQz0KK0QyXGX0LVFXtt847qG7JWbVdPjklE7ZjeLpePOo6VQx5+LsUkiZeETLb5QmFYGa+mF2ZBnAEaemvQWw8qby/M/AGk67H7K6ubNjP6aL5M994XVW3n8ioGBg/8e00PrNE1CX/27ZIckMbvfuNTypm+nC6BztGy4QM2nme7u0zL6X47By1z7vrkzXfQRtGa/dWn8qMfJ/YjM6J3IGmrJs2PFFXQU8fDCsXFKub+SOM+VLxb36aeDb74S2FKaFYpuvQIvPGdaBiWGVfsjNB/vskvnTgk3v3mghPWegBtxWlHCbBJTKTdgX1fpRhEOtt2YzYDCnBgnbWJ5SJ4vzd98IconE1J1PiKHrwXWuhObGN7Ooo4WLrWUWWFtWuE2WBP32m/C54jlGmHaxH7XTIt4ShkelnvHBC+HzHhma5gYDjSJ0Eg7TvZxB6WwuVjPdMzqaBvHooFyTtKSGliN9tvR/H3TOAtLQ2kKxUUhskPrznzGtjxXUWxUrkdgGGQVJ9jxhD+QKfQi6gSjmAC9pQ2rx0zwZOIDaJXvYvvX8KPk7Li/aD/W1j30t8D2qBLXZBmptYsPSqlRoVjK8v382Iuz5k3GuyCuYAilql60fe/Ih/jXDozzBdscHMHFOOlE5vjJBNkqOdaHcIJCIL+qboA729HBY+0KjtjiPDZVt9JBpqCVo2svtXJuaSxwjL4lnFJtlS7EVngrCPbBwDbSp9ErYm9hPhAypCg8kznN1NZtjupOVgNE4+1TIYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: When you take a drone out of service or put it back, what exactly do you need to record (reason, parts, flight hours, who signed it off), and what must be true before a drone may fly again?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS5AUKEAgTGAI4AUIIdGhpbmtpbmcSDAbNMRPRQn59ysGoIBoMugLPZUpmukFgV8USIjDicG6GHFBal2UYHhWDYm1gKYfuoq1WZM8hgtP80U4gzN5fOPgD/jmBsmL5njajsU0qgQVwucw9zYRIcEvfFmqA7es5mKJm35+2VbASCJ+g+OQGXjNApFUC92O1PMenp5ULWITqPj8OEFx4QNuWZKOkkYUt4NZ9EK4N7YFsMfxIt1oIQHZJLZkTDX5VF/vs7HLuLB6xAg46c1Z+bFgK3X9kSwO5TKR0eOspELH8IczLgP9ImNi/cfAbCh5Tc42Vg4yXJPPJqJfPbIQQqqUI/WdHA1UWxrrgFYRcAhhgPZoWXUs1DJQFP7FTDQjK4cqZjbj0pJTJEIN+alf/g+ubg2lQCLbpSmm6R8+izSy3r0cCfoiNB1Z3RYBydaJh7e7zmSGL1JZOmOtMRf8nVkwfzH+7gvHPHIfR/6xAn1VkhznyBLbFadesFtSK2l55ZY6rl7N6AAbxoqigMQF1QGr0H/kdyxMZwmmMuWo5ORSdtlkGSW8qOrdY8rc7+4vc+ICJ1Ke94HVGYyTZIF1zD/BNdJKIjq2mOP5VCZrtCaT1ltudfbR1ZFPAG7p3QS2JfOAbbEhbppRG2E1GOX7n+CSSillTeNdJNLQFwrQ554f3IpWEZEbAFCkmCdQw9Jqn00pww8jeUZq5wvKUUYUOGlDiHs6kYWrFbaLT865Z71ioTcFUiqeRLbVC4gVeUQfIQUlT82MxklhyZUz6vwqKolr0ulJq2lQhHcCJaJxUgSCnWqkUmri7pwXaYt7PS2H/dFGvx5/1FgpIunjeGwslFA9s+lGfPtzMJ6V/TPYFrB4uCmtbizDel9o8zaA4yDcfZ14yIg69DPLU24pRq5mdLQjQISqsLDbKWBg8ernBH7EH7YttjHnXzu6SDlZwXFmwZXsIhYNVYjDUGl4t9NpvJpqVW4wSMgcZxxgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: When a regulator asks your company how a drone has been looked after, what do they want to see?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}
