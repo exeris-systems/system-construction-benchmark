@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I don't know.\nThe question: What's the first thing you do when you get to work?\n\nQ3\nThe answer just before it: I don't know.\nThe question: How long have you been working on the airspace desk?\n\nQ4\nThe answer just before it: I don't know.\nThe question: Is something making these questions hard to answer right now?\n\nQ5\nThe answer just before it: I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Can you tell me about the last closure you entered, and what happened after?\n\nQ6\nThe answer just before it: I enter closures announced by the authorities, which can be planned ones with a start and end time or sudden ones applying at once, and they are often amended during the day, such as when an area is widened or an end time moves. A closure can come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: When you say \"how much disruption it caused,\" what exactly would you want to see?\n\nQ7\nThe answer just before it: I want to know how much disruption it caused across customers when a closure is entered.\nThe question: How do you find out today what a closure did to the customers' flights?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Think of the worst day you've had in the last few months. What happened?\n\nQ9\nThe answer just before it: I don't know.\nThe question: What happens on your side when a closure is widened while drones are already in the air?\n\nQ10\nThe answer just before it: The authorities can amend closures during the day, such as when an area is widened or an end time moves, and a closure can come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: What do you double-check by hand today because you don't fully trust it?\n\nQ11\nThe answer just before it: I don't know.\nThe question: Who passes work to you, and who do you pass work on to?\n\nQ12\nThe answer just before it: I don't know.\nThe question: What worries you about a new service handling closures?\n\nQ13\nThe answer just before it: The service runs on a single server, and it is updated and restarted during working hours while drones are flying. It occasionally crashes, though the companies accept a few minutes of interruption.\nThe question: What would happen if it crashed just as you were entering a sudden closure?\n\nQ14\nThe answer just before it: I don't know.\nThe question: Right after something has gone wrong, what's the first thing you need to know?\n\nQ15\nThe answer just before it: I don't know.\nThe question: Once you know the disruption across customers, what do you do with that information?\n\nQ16\nThe answer just before it: I don't know.\nThe question: Who should be allowed to see how a closure disrupted each customer?\n\nQ17\nThe answer just before it: I work for all customer companies and have no business looking into any one company's operations, as each company's fleet, jobs, sites, and problems are its own business. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: How do you picture knowing the disruption without looking into any single company's operations?\n\nQ18\nThe answer just before it: I keep the shared picture of the airspace, which consists of the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. I work for all customer companies and have no business looking into any one company's operations, because each company's fleet, jobs, sites, and problems are its own business. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: What counts as \"disruption\" to you, for example?\n\nQ19\nThe answer just before it: I don't know.\nThe question: How do closure announcements from the authorities reach you?\n\nQ20\nThe answer just before it: I don't know.\nThe question: When a new corridor or site is added to the network, how does that come about?\n\nQ21\nThe answer just before it: I don't know.\nThe question: You mentioned the service is restarted during working hours. What does that mean for your work?\n\nQ22\nThe answer just before it: The service runs on a single server, and it is updated and restarted during working hours while drones are flying. It occasionally crashes, though the companies accept a few minutes of interruption.\nThe question: What would knowing the disruption help you decide or do?\n\nQ23\nThe answer just before it: I don't know.\nThe question: When a closure's end time moves, what do you need to know at that moment?\n\nQ24\nThe answer just before it: The authorities can announce planned closures with a start and end time or sudden ones that apply at once, and they often amend closures during the day when an end time moves or an area is widened. A closure can come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Is there anything about your work that I haven't asked about but should have?\n\nQ25\nThe answer just before it: I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. The authorities define zones where flying is prohibited and announce closures, which can be planned with a start and end time or sudden ones applying at once. These closures are often amended during the day, such as when an area is widened or an end time moves, and they can come into force while drones of several companies are already in the air.\nThe question: How do the prohibited zones differ from closures in your day-to-day work?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
