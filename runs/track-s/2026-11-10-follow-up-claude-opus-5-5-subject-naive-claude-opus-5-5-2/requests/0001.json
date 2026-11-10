@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I keep our drones and charging equipment in working order, which includes adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs and put them back, and send drones to charge. Regulators can ask our company to show how our drones have been looked after.\nThe question: When you take a drone out of service or put it back, what exactly do you need to record (reason, parts, flight hours, who signed it off), and what must be true before a drone may fly again?\n\nQ3\nThe answer just before it: I don't know.\nThe question: When a regulator asks your company how a drone has been looked after, what do they want to see?\n\nQ4\nThe answer just before it: I don't know.\nThe question: When you take a drone out of service for repairs, what do you do in the service today, step by step?\n\nQ5\nThe answer just before it: I don't know.\nThe question: What goes wrong today in your work with drones and charging pads, or what do you wish a tool would do for you?\n\nQ6\nThe answer just before it: I don't know.\nThe question: Can any drone charge on any charging pad, or must the pad match the drone's charging connector?\n\nQ7\nThe answer just before it: Our drones are of several models from different manufacturers and use several connector types that are not interchangeable. Because of this, each company has its own charging pads at its own sites that match the drones, and pads are never lent to another company.\nThe question: When you send a drone to charge, how do you choose the pad, and can a pad charge more than one drone at a time?\n\nQ8\nThe answer just before it: I don't know.\nThe question: When you send a drone to charge, does it fly to a pad at another site, and could that clash with flights the dispatchers have planned for that drone?\n\nQ9\nThe answer just before it: I don't know.\nThe question: When a drone is out of service for repairs, may a dispatcher still plan it for a flight?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
