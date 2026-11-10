@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "The platform company runs on a single server that is updated and restarted during working hours while drones are flying, and it occasionally crashes. We accept a few minutes of interruption, but closures can come into force while drones are already in the air, and radio coverage is patchy around ports, industrial sites, and in bad weather. Also, the links used to give instructions to drones and charging equipment are unreliable, so an instruction may get through twice while the sender cannot tell if the first attempt arrived.",
+      "thoughtSignature": "EmAKXgFpFH0THEWfu6ak+B3/AZj06FXce3QVVKIVcLDfwlV4r7IwleZc3MJgo+oXaWrFAQnOSxzJe2LP1eOSsCf3PXXAoUGgskJeTh4aRUSc7MQJumzSi1fSaklI1qaRJHM="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2167,
+  "candidatesTokenCount": 98,
+  "totalTokenCount": 2265,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2167
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "CDPzaq-cDJyBkdUPgN2ogAI"
+}

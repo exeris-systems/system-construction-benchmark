@@ -1,0 +1,155 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a member of the platform's airspace desk. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSogUKEAgTGAI4AUIIdGhpbmtpbmcSDLMNqufkvTxe1HdE1RoMs/3jD+XB/hnOzLavIjBVfZUQnW57sB/oPfZ5rG13IM/pTJOwHxMs/hZhCcxButWvoc3Nklw65SCTahZq3wAqvwQO9GU+twXDx9aQTgIJKSKf5Awjdgka0UvNu+P4fFtBxsgMakxtl1jx0O2+Jg+i2OBRfUNZRj8vW9VuITP+NBPT2TcbjMYSAHILpNmDz+WtiVzNHSdPg3WMtOqDnM7H3kxCWijDfJ5ywLNude8ogZ/HyoYtuvaK+KWoWOdaKXZ3JwXeAiZRec52T65aGqnyDOHyoNX8VDi/fBUf5W94XGihxYd2JT1GubIWDDR7ifdjpqZZiJ7tU4Z81UcEpCYpn2PmaV/GDDFE2vKARD6KeAEwAPWJXxQG2YMSzmL3ykBSoWZCujzuPkHGc7pzzneY+/NXJ/AHHtdFKY1433eHQnNLczgOMqa+upORa0eIE1hvyK0S7JeB+Es84WPsesFYwHmMtkbmNM3DlSCu5Kh9mq1i/OOLrvWhtNVVYMn4FyHA3lv618S7UgPTQhuL4YXJymyPH9mBuPygL47jayKK4GGAOAs4Pwr91iuJOcxE09zVQW+BWrYb35SaBaOi27Xc79sRkJFbJsq3qm+HfzV8upRrAO22qBo9s0VEiZJaOpb+KBQnq8Dyyo1zE0c4RAgaJWrfHmyu0uPDhtBy4/PjpMMlV0RrvckN9L5o7aVXXo5faEg/xRSib5SIyBUEy+poCuYU1MEbmigshxjh6fVoiQ+lhahts+/iMU9XsQGzngb4MzTatYeFX7Uv1Y+5JkxyTOc1ZV5wUdJ86FbrVwi4rRrmjSV+2+Owgcqr7etdjg/fBVyMMHtwWwuYMpw/RO3YFBgB"
+    },
+    {
+     "type": "text",
+     "text": "Can you walk me through an ordinary working day for you, from when you start to when you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS0QYKEAgTGAI4AUIIdGhpbmtpbmcSDBnlJbJahVlfzEEvNhoMllu24FQ94Kgv8POCIjBUkEUMKewuSNo0CB8rpyYZ19yqsiRJRtGIZeefJV4HfPXnw3f7Hg7Gag7UJMxeeWwq7gW55K2KgCvKHH5nUkd9yXSmndoXydxycE15DhEFhSIRtZ5TpHot+WBG7PwnHOPpNUIEo1lX7qGSy9omcp+Kn68IDOCasVGxXztl0LZHXo2q83GyEtxhY3JQqTHCY0uef241sPFXDzKTKBH2QU5kw8pyN3fzIT+0iMGarcvb877r55Z+4KRN54/Vmrkhh1aUZxP7z89PkbK91W0JjiArulSTh5cH79JjTs9rEVoPBmtdzS5YYxFzXNGbhxVKPqgq3X5CDE8aHRH3SM5qEfVsNiAPwIKzXxfM/CYZT9Swfx7kgZpW2dHJJfiaUxVqwoTDCs1bOTpe1rMB5hDlXvUKMmNuzCr/E5dXCITmC7Xls6GAFKp9fJtNo0tBcrUe40ilMo4CIoyM0rDOsQjNxUIvKGE5KkzBssUVe5nQKCa7bBq4BRbF36sChx3HpllNLDHctXHT1sQBEIhIYbtQuWieRkkXmSp1Ehfb8+/7ElGzoSiBuUjuR2jgvIIlhAro+j9wlEsl/0gvwS6Nltel89q/p1ju1zsDryqY2DHYFi6tepeU9npOBXgFB1mlEvWH9wO+oYuALQNoLoQQgr0zesgOKeaFvzY0T89eEu8lFgOJjehReFX4qOI9OyXGYGFe+kaK5RRZgQ1WKh0PPro9Kdr9mHwBcK8dXvxobxzNQ2X+gqXQKLswzbdMKRUarvUPydtj/aDICWEcOGrJMuvMTdzYbHyc30fy/fUBKtlkANVMlIpkFHNGxBIsa/ZxD8cawERgKX5TXmNoCWWDj/B5b3cEe8XTKmlX5RagT/s5VzBaxpLLYoXJBXmlvZga4dc/0hQUJiL/cah2fMzv+plv4UoKjBMZTPTN3gVus1RFUegDTBSh6RjYb+jM1HyuDnUnCgUsB1WQxWYkAmmhrmbIncZhX/Ps9RTjI7ZVNkTGs+aZ4F3hfqFEYILHl2AVbGuE8q473ZSijMShEC6mF6GUFZsA3LcebQHKa4wa4mlM1O6eY1wYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "What's the first thing you do when you get to work?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSkggKEAgTGAI4AUIIdGhpbmtpbmcSDIsZnHfaWmNLqYvj2BoMSALR1GeahVt6GPIVIjAgbC5MXnPB0OPH/w5Dx5AEJ/mlfGNu75s64TqFp6EJ5oqRq7l9bAEaWKgCJWj0PQIqrwcZ6yNo+XMxCcfI9yeB3bjs10YcJLqQIjMiZ66eE0WR2nxAsvOLztkihwbSVp9yu4YrAYfG/PfE2UqNkbn1FzWTNswD7fh1Xx5BL8/g9elzJLvXC9DBcSuDt7Gi8B+YThlkTc0mEZB0A9zdo7LimELxB3BCrS0nlfd/kzAaiBj8ytmF18hBSRyvXyNP4KvsWVA+wOseqUcgDqESwOC1co0li0Jw+5b1P3lFf5d38z+NVzoEDkWyDPzkfCt8iqX34Mb3bxrMOE6gvZH77NVoI55bqqWUNUtZ67NZVslsCibgzXoIKdUlqRO5oO9i/fvtKJvlmC12q/KoVtYZyW8AZV+QLnX8HilldWYqNF8DaiLQg7xCC6B6v9AJ0t7+y4tmmolwSOcpP9Ydl48+qzlpW09UOXmu6IINVO7gqxGxRAfS70fZE3SpTRD/pjQp+BZpy6f5kUhvJb9Jy/zsVi7wpsuD2cw8tCXgfwKdfEEtrLiiU9Rj2+D0qCbGygXSjyk6YPw/60jahiOGpADG0gXVI4alWMXtztNgiU6cmgv/sWLC+LORFV4K2zF39UTcKHSo7FnfpBo1grfD82Hsk7dYaFqGKnkzCkbrt/vxYJNG+GQgI6kwWDjrBqTWVU1IYd9WUnFdAuyM6Wh2WDxp4KJhdVTTOJT4gsGnokv8xkh/HXWb99CTnGm1Z2Ejp9D55lKl19vUkUGb1bBoORZ5qBB5481TYR++/TiH25qky+bdyX0PmkG+AXI25/FMtEd5ZZhzfodlAedd+tuR/pSZtIeJrxau1l/ACFXyt2+o5VZecyU7/aNi+IktNLNeCzmjHfaF3G2iK8RsyQtXcqslHVfo4r0C1XJbF+Ss63NbCm92DRPWTg6ZlL3IyAZ+31SMai34bmqX1+C2lSNDWcYeD07EzgRTHFJewUyOZIYlb/BxCgFAq4sihk5+VZNw3SY1RSUoavV5Y/8mhtUO8hqYm5oQZBSdUdsaU9Xm6rk3YIwoV5JDEA2NGzJhwD2KD0SNMmZ3w0uVNYDa7gFcUmYnizE8g4D0RHGtOSX2ue9CowAQXBUP6x1EUihqE7NR7YVV/4QLmk5P4TTc6B7EMfU94ZqFBYtp1Ih0aXYq6F3o4/oaRTXKT0UTaLzovA/6XTNCJE/5B+DaxrE5IjA08+lwe5j+MRudED0vV9ALgpsicBNIsfHC01tmDDVE0EkWlP0v1EFWlhzfO2C4msmsWRnlu28oR5dI68tdE++kwx3i4to0gw97GAE="
+    },
+    {
+     "type": "text",
+     "text": "How long have you been working on the airspace desk?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSvAcKEAgTGAI4AUIIdGhpbmtpbmcSDNkbbZo8eCr+E9MNdhoMakUgzOrrqMXtQ5KqIjAAp/vEGo/c0NizhL+O+1fQmMKgumFPLlfLmWZyAhLPP5OQhQMEOnKpJ9uvD1zdrVsq2QbQXbfQOh/LOzToIIROecoQCbkHHc89fNe3jS7hlbPh61KtmfHTpgeAL65y9OH4s57aXaR7k6jc9MFj1UxM9iPteXVHhduQpm2z1h84B5s8o1+3emN0slMK2GkAvQdPXqVYZz57wEq2kc0Tdnb2cuckfeAqet0fK4HoF/vYVJMm9Xyoh9wQ0P7lm+I9pHSXwJP1iSzHLbV0X0CmUgxj6OiWWbUVw4EcsnYTuYARmElCxFGE8jvITf2dmCHlkeJf8EBJtKyIC+ob7e9SYDrHfHZjRH1VavFEmXhYYyT9rPmfec20ysIY7cdeJ1f9SiiDT/Uc2x50MHJZIG4EeeadslBEc3Zg/+if5fc1/ri4i/tuNZtAcsCBdow0e3WWJ79C131D/0o0YTkrtzlEoAajOCHhwPg/SRKfBw21lT4zFWU2Qw89eYsfqnKwKflq7Zx63i7BgBm65l/nuCy50rQH9RaVGcNsv+qEGRfTuQ0g4cQR7flv610odP32TDQZTRLn0fXexwDv8JWlwlnGDS6M5XZ9fPfARM2+kraqXw7WM1ZeLWJHxdKxB06svVLBpK41FbZl18oZvf2BlRlc1xlwhG2jQg8RI+RKl6IIUv4IGjx6cgglCCvGrj9mnzOHg/MJri/Bl1U3uN0xbL4/PNmbY427FD/2tKyAyJIx9eUdkxABqHg9I8owA4ymCcCSc89jg56byPSvU0EbMJvbwOHy/mSOgjU4IWzQtx/2GYuxS7dFVH1fwMsCup1LbPQ3RAhIXia466afI+CAOe3cz8z1b+3kuL9dPiCklOKhQouyDC9ao2eUUGSMN1UnzV3Il1GpCuOl5l1miS3SxNJVwswwgKqRQcZwnfQtKEuJtURPYKxnAP8+/szjXxm/UG1yfSkWAY/T0ToIXZbdTkQkLakeb4NB9BUeIPNTLiYPOvrkILfyfr3Q6pZC0WZy5TGXxHPiDvoelp1xR5TLYf+SgTtbFd5/v7FJgsUC9y6CG03sEgKyVSQBAi/g6iEszamS/G2RebuwSAe6PalNcfQtuSQQOd6a/1QiqO+Of9uxKDPCB3L4jkvLdJgKBVjq//iLffJJRHd58NBijaRz72zgrb5WK7A4uYR7nThDswMPJEv918J9TRP4AOgZjPw3OhgB"
+    },
+    {
+     "type": "text",
+     "text": "Is something making these questions hard to answer right now?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSqwcKEAgTGAI4AUIIdGhpbmtpbmcSDNyxwxi+Pqo/ur1HbBoMsclZYlYkDusd3cL6IjBQgJbCV3aITsFtCeHSbHDZYIPIgbOW89iTmDk83Iv/XM4f5RaQnZUMYuvNtwa9UZsqyAaZ0sTDE032d5D5A38/e8Z2bCRhsmsdp1G91uZ4n2q9BT4hILuj9XzGodOYRntDBq8sDo6/mS6FaBHL9oXlHbGC7szSimHPmK0yH+zXNfddtVtJOEau+E8q5xURG3AIsDh9SoMYuuN9XbNJGZ4m/aOcoAOcANV/lvmgCKapDlt0XFSQLrb6/XXHDMDdAK9DAmpNDoTWN+0Whg70DfRkrRDmqkUfpM473nR4s6yL8kRyvXGb0hUiPyw/NoojEGT9xR425l73Eouih0/o9Ib/16IgD7BStL/mh/B0WREsWt+a/VztLAkkb2UjHMqqj1Nl1YlWegRCnZHlSEQchgtga6dVuMXtIx3km/vdoQjy+tWbk0L8DJxSKbYc2/BQOD5mRTCh4LLRuoJhcU54YokeLvm1aogPTm33twpjPXHuq28CivTMfUBVY6rC5POQr0mdw+HT3yJ5K9ba9PSWofAIIIZYc51yl5jVZzPU/2gWTfPjeB+EtNRMEx59KBawF0oq8hb6d0/cUmiY0JbpW9wlWurI9GXrr+DtKwseDvSZqLlza+CM5Z4Ge0U2tDZqa5YZFCxupX2zEfXEnEe9AAZobYVzXmmYemQyeygf5Qwb0fSwHD0jIJwBv4xmb+1AS2xfGQpktUulzCj5pTerBpJ4berhbzDNZH2LddKeG7t3JUbnOmCJriJzuxVBIAaLbRkiSAqjjxV9SXZxYhXRVQzYGCkSOZ3aJ4sYVLVLJH4KCpKlLdhum4iqMxX+4jDgyFh5o4iQ1nRJ0aJd6DFuI9tt3jW6Qu7zt1WlSW59Nv+lJ/RLYi7TzAqlk1HH1fw7FJUvDUIDXA9OWRfzDdlMNRJAM9fx0wGW8+LzDCOWsZrMRLKzDRL/rvqxy+JOUaAcrRJuQaMc3blfwDkqypeV33lAjXqWxrq0SVmKonNJAPCXuwPedPFequcIgzdErujgQmzF+Vj8IhmgAGK9VibVUzPpa1sdp/ZhzX5Q0ktQpddVnq4O8GdX85cCs8WO8LjQLShgcGE83rndHO7T7kNJtAeHD6g+K3UQZKskx5StWm4+yu0nqqRBCUNvZz7zBFhDoZ2CpL8AyYuOlmPmEZ2ZrSvs0Ke5XPe/GRvMNKcYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Can you tell me about the last closure you entered, and what happened after?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I enter closures announced by the authorities, which can be planned ones with a start and end time or sudden ones applying at once, and they are often amended during the day, such as when an area is widened or an end time moves. A closure can come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS1wYKEAgTGAI4AUIIdGhpbmtpbmcSDNhnJELQOWGgtEI02xoMOJS2vLV5l36hSvPQIjBQCizsssgER8MWto3QWY+/yvaquQQ+rmIyQcP+Xrn+vKqyRNSCM+1CSWRka0Xe4ysq9AUJYM2sY4+g9VCUAav1BUECtXqRagY3yGQNAkhNC8uwnan0Sh+xEUjrKH/NRoFwdZf0eOiJSUQ2JAtHuko8ERAVTOA8H0xZ3xKA0EucwerfQqEOfdXO0moDJcffHu674yW1QjVRIiUqRGiYEI+aEB6+10KSES/IlGYQ5846hiRsoyYJn6oiHNyJd7r6cNCM1ERlCDs+JVBVkCj07J5LSMZri9/fc7HJjOFkOTIo7aX0NTqE99h5F1qzmNx3H75H02Q7DK+x5chuKwbkgeJv52lPiRo+d3D+mkBbuA75qVJcKC7ntAMtu3Jpu2XoAx/0ndiop+VBz5DIteTQ5Qsx+ZkvmYkiPv7izZtyb5wu+KvMuNlnt38enn2TdPVkqOe0C5dhweTC05bdBANoSbCEy5FtVcVPKO2T7RrafycxHm3y2/SGhliKsJAmmsQvBJ5QN4smqt75ehCgXmlxLx0VJ8NFvJrLWfUNwczbHCBn9FVeaT3WCJn171tM1d3Y+fQIpKw8e8G794dtvC5jMLHYMgb9cKKaM/WxllkwZMGmHyqrlLACLL6ZSIPJmYGjFyZ7mrP4LaqDGF5p4YrrgKKGcc/phfETSyAHPougJbEEi6svAzg/dH43K5xYRuvDottAGpKhoFvd5yRnSQ9uRBKPP9/Bje+JSU2vB6OcCFYzXUkO3gBnjwWEkhzW5ubUehYMm2FVji1WlWIOrFDuAruEOFaaIU5DT0wHnW2UhZhDwZghdnUvQ3jWTUsNu7upedU40gFf0pjN3ZlyFrwYeRAkcjdfIe66FIykam2WwqXiWWva/1bS5mrQkYw3M8MilMslEdQirppUWnxAVQf4XKmt9MWfYWWZUienj09SH8lq7rUR7m9TLJ9DDkUFs1F4t5rFJp03DhBA8ufXImix+ifpN4S1JJ17oSi6QZqvAJdJ+biZtray95+jqSjH8P5UzHpiyZdeevE+xDXEyZRO1DqVhjhqzcPC1HZBYPDcjf45O5+prNYYZa0YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "When you say \"how much disruption it caused,\" what exactly would you want to see?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I want to know how much disruption it caused across customers when a closure is entered."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS5AYKEAgTGAI4AUIIdGhpbmtpbmcSDIHuQ1zyxtng4FnGcBoMR0vbmwyhUlOxWzmKIjCkWpzwisYeEcaKkd0dc6Q6mODhzav+yaDKJrwXoIt3FaXoWPMxlS2/FiTYGpL6lHgqgQb0jdTTiigsmKkciEOGWnN8IQsmuOozBLZJh+jPk+trHi8Qs4tEmMH2Wg/Gp9UF907EmHIYovO/4lGZ/6JCKvDnWY5oSaAd9OLskGzePg0659xDSna66kIePJ283Q+UIHDNbmCvMPdagmgwSYwCv3AKFjJcbGxcQspOxx4yAoGTjFjTQ9eqwnlFlIxVYgKK1j+P5APedfIaxCwPoDcaLGvyqFThKnyR2uAf2Bjs+CmUrcFQU/qIsjMlRTEQ9wrV8PqmPHUXD5QyLQ1eJR0QiOnrUVvy+2BeHx4ChHWIof0ZV8P2cctoKHQ1TJ6L5yM5MqS6Q1PAjIUEIr00UOa2XEvdBrUImNSXjd1ruvfQIIv4qe4Ew89+2lsFAIsuqaBn8zCzjs2ue1j+2sr21yM94G3TckqUKBw779bD2/r4hZSXpadCtoqkX5vOMakt8NOCOFIhuTDa4sy0fF5ZzCNGzNGWZMvAuc0dZg9C0yJD7nqCoWcDdZQ1j9himLCjlFj98BnzOky0qZo2vjFoNH/Fgc0FmieBKtSsU9GN0kWEighF8Y3vwBMSX7QSYAeuBO8mDeiZxwegyc00FOb/rtvThMlLtE4WT70vF6FcQUBn5KR3JoNwT/Q0z3Rk/C01Y7xrmDZp83ukoeKjcHfVhHUW09nFIOO81PPjWogPj2QOwMQxIPiXSnAo9gKp++hZSvjX5U4bETn02uDM2+QcapC16iKRqntthxqwuCBhdAzE9zMYvcN2oHIdXr5vhZJrwvMqyUfgvnwRbI6wiG4+xUK3fvG3aJy5nGJyOA+ljQnVnPalxAJTzn0Hs3DlLJEt3NcMBLg2iRCs6wKnIVcB8yYaU9As3OqT5K6aFTITS8AMoXhLHkJ0ZG2IHImdBPMrZu7STiwSYJaPmOjhhCuuHOE7fS3uxiOHclMqGWdMnViB/xmVdVv8R5w5XTKK43nrt3ByC6K3Ir1rZdoV6G3nlOBxrWDBjWVbfuWXQ7CqbwR7UITIZ64rsCZCROsGO40kadl9kBufGAE="
+    },
+    {
+     "type": "text",
+     "text": "How do you find out today what a closure did to the customers' flights?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSpwYKEAgTGAI4AUIIdGhpbmtpbmcSDFbGMZrYnEONopBmjRoMyfvbvS881v/Lckp4IjD4Ie1yOBPB/BoelgfCTUH5/Yk1FYjIcxqhX6K735czuHbR8TfE0Yu3d4VdPwaHL7AqxAVcB55OICGlWu9NHtGO8yLfSf1XIk5uelXJYoQP/NJ11XOy00uGSSDKiwWsSsyaWxILkTGWYthzfITxG4CVppNqecH62+KAsYK8sm6uxlZMxYXyVw1+PBWAF8XDEUV5y1RiWNFGaB7j9eVl5rYcoQMDEX0gPO3IFG7jw7IKNbvlcqxdz8QG/khDQqwNKsNh0kcwNwAe4/kWXEUydu8/HUDKk3d9R8JFnYE2QLQb4cAN8tMtDtT8HrhNlNmH0BdKJ4uTR/Xn2eudLgFwJeV1TQvla9li7orLctkk8cgBYOMJ93jsCREGjJpPCBQ8JPqXA84//+iCGF+TByN4PkBRRdcZCFCWO3hijuLDzBewlFS7siqwxnybh3TgZLAXMpteg1+wrRW+ivYe6wTkRDAgGoKZ3nKpWF9ixZHQeO/B2OEJ2cwWqm1afRQfbibFeQoJp8r9POZ9ztBF/ZOOA/361T9DRbpwUE6KP9KHwYdsSA7iZVT4Tj5W3UGpKfkZlMB1YhR/aQ3j7lpOAz/LKvrzv8AHIVgImL1koxGzUSZC0dwDtcLtLIgDlG7UH9SmOv2RfCB0EnDVnpfQ8mpr+hY10Yt4pCbZvFdQdjMPtV7ieiHg2Dsyynut3UTX4+h+XUa9ma8s7thi1I+3vXsx2TUMD8CBCG+niQPDSEnS1H6w7pTz1wEZdMJ5BljbQ+S7yTL9PLLrqjvqzwOrrFgQNjncPIkaqyfrmF/PhdUfoNjcTOn8iGsAWSFQRTDRvtfKSGjCIxzvaah1+zDpo7KEI4hG1l4kRctPRJVXDSidcLh3qsB0RAv6SHAi6ErlVnWAivCt23Wb2/1d/iLp6kqJyYBo7fAcgauBpBtKEP4tviNQ8OiF+clyq6C6cbLCOUXMj83BQnsq5rxq0efweBWQkKgBiT7kyw0rHmW+oAoHeFkZ6arkhffUuOEYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Think of the worst day you've had in the last few months. What happened?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

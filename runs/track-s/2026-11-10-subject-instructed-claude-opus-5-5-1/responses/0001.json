@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguT5BZBSbaAXphz2EcUH",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSrAUKEAgTGAI4AUIIdGhpbmtpbmcSDE49Ub4es1zkhZK6aRoMRuE/l0koclllvJT7IjBsicuwIxWYkbVE8E1buiOIifbZuJeQ3SxcLgTBLQ2f1uV6kc0tz6r/FMSjiRhhaPAqyQRnqoLbNFNmOGAw40DNmgoZUiDGr+7Hf4zMZiR3lMArNaaQBNxkiMtiMw8syCR4n5jihT1KpWDgm5Vp4KqZfSLeHs0Y0h0hYCkWOo2b9fKPP8DCQWRCMM6iXO/7ExhMUJxwN1ClY9lE62kXuIWj5otY42OG01gL/yRZ29KdyPzTqRUNC5yDvSUzhO8ONwhGicPJsT+gqI9ZchROuHtZ/0nS2qNXOSiWMw2B1Zgv5cUPaoqTQ8LwPx4ufFtYLZ/3ipG74bQ1vSz/GKvQcerefcgaGaO+1M2IkJjScvFU71CcPGaGNY+Ha9kXPtYdPkhObRiWBIwTIQQoz0TSC+QR6nfAmTt6EiytAsbtYDowS0xD814pHhLm1RkZJViuSkDP0R7haB0D0zcCHUCWA1F6s4rSYEoaoGf39bkBlzrnXOxP0EKZRpcgotu5ZxtzIeaQvWN5gbM2b+OTC5M/ArUhZAzcDncPBoFkpaMmwj422cIp4UmmUOrwTJhmsb5OwdJ8iKWathfLQZ1jpvTKDMgHh5OtLKRV5T5kBqQ7lspCrdxTwcV7a90EHn/NztApgFpEZwsELECsgyo2QlOdb7CNtKnCpUAnvYiaUYbkFE0aDcq6DiRWlQMG0oXEbE1jHeJpiNcvHiqORBGuiHWV3+bxJmj2vH8cZu/p+xlayoncmOdXvTDKdGhsfh0Qq5DEJCLlxzwDNaV1orxvHvdgWtrQntCHWmJ/hHl9/ksjg6DBcVR+2hFG/15qVI/vWu0QJRpwOiVzlTFu4Q8m2o0YAQ=="
+  },
+  {
+   "type": "text",
+   "text": "Could you walk me through a normal working day for you, from when you arrive to when you leave?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 623,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 48,
+  "output_tokens_details": {
+   "thinking_tokens": 19
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

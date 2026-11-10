@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguTHzfhJqh2hB3kmVeBU",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS9gYKEAgTGAI4AUIIdGhpbmtpbmcSDGIF52rxt4PXnuYC0RoMcHBqhNK8zqiKpkdKIjBQEvHL9kodpjHyxn+i/LuYZM9HbIz7j0JGnnmNlfK6vJHiyn0dnaNYn2Hy0KFWjtMqkwZ8IXDNMTZL00kcr/mH1QMOJQ/HxHcsFrQPpST+lU4R8CVX+yN8wZ8q8yBZhyTwZ5sGVXFfwj1mPwqeA+8JPUinmQGSP4iJOb8jl9OUhTZIVw44yx7liEqg4fAzMxdfufPGoXtfWJKzG+87vMJ5spf1OZ8RqpRrDpZiJD1qcoKfi95bSheNMrP0zArBz+hvAx6bWxCRZYsvF4mnp/TFFREBbGigVTOzkE6JW6cQPod1rR0doypkc3cqEj8fZ99HX3vyWlix3bOVtphWbaPk/BG7QWcmCVBvGyYqbGlcwx2CQtIiT7BtNXR/wbOo7O2lAkoqpRQoTQ/+sWXiLc5miVUxDpZJEdAqC3mo8Y2ImZhJO/Zsv7P5i+2wHqFi+zptFcaHurYmNLra48O8UjQI6ccpe3NfybiJBBL5JTNxyBP5W4DMFQkL3Hs2XUmWnUXmUPQU+nEbW5YfxkRfxJ+UoucmldSIInuhHYRvmy9GYMRUGIMGobTWuTVevBoHA17vw9ygvx3NnX4CcrlXofruujlkztUyRr+QncTmDb8tSaCxDS7+lg3b9Mz8XNoklqfVXoRivcdHvoLVlrPkLl1FcEs5TnwfUugUqab3hPelZcDDHE/lEVC0MqvU4k5FBKAciPwOsLkLvz4gMOJFSs3XoR1RJlNxcCyHNa0AbdGeW8M1Myhq+ywC/SCbehMb7LB1A6aJGX3GhbBv4Pe2XD4QfuuKcKqB/TzHKFEtGpuKQiYVIz1mZu6jQl2JFizKB1VjrM8k8tp/yh1nc7ZIRQFgZuJjwf6LqrNPQ9jS+vX0YyaU3EuQJB+nMYh9ip06fuNo2PjzgCsPkaobHRqQqMANvwxYgUZcD10oEHUDdjv9Amr0EnKqtMt2RX5aukefkoCuDbja1iyvEd7W9sryRqPXhTOtJOJ7Qai3CIo3DeJEJKhLCuJ487cK1ZmTboM5t4gnsmD0c3qybr8lQYaSV861lo88j4mjdRnF/oNAUpOhKgQtHdo9edIr4UEktzk4t84gb3GsrLAcuit05NTVtrvhukqwxdXSGAE="
+  },
+  {
+   "type": "text",
+   "text": "What makes these questions hard to answer?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 839,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 70,
+  "output_tokens_details": {
+   "thinking_tokens": 56
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
