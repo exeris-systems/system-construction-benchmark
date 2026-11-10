@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguT63ig385chH1ZJdfdP",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQShQYKEAgTGAI4AUIIdGhpbmtpbmcSDOzJl74YHhVbI0Xn6xoMFlT1XqTfg1HhHVRoIjB5NeeJrP2Qv5iFY/ZuUxYSl+xmPTTfGMBzyBf/2ZyoyIA6xn+8/5Ps93dmv74Kxu0qogVj50SjmtP7vvd8O9Dwe9TDwzjB2Mz2CaBqgiCNKbQeW+/8a0WpQq6LXmYgjoAtWl5e1WELRlbMWgAW+dNWMCUCMYuYpHxm30EtF5h+2T5pT/NMwN6AdKX/b1MNcwuvUjuZTE4OEbfR5xzlQQvsY7Wva4NoI1w442Ec3GFXYQUL/xM6qbZJzgx6nnTyVpTK1lUQMeEPROggT8BDCcKsbJA5COPxfDRgNz1iAmTmATPSda6XbZ+s222c3tGSYPlE3nzBRNlclfO9gMslfXfpD5Rsgy/slyfC01ZGOMLo+0WFquh7IombHQAAeJyRaD+Qa8yTid+xfpOpoh8+byyvfQ+NMSYMALSzpDpExLrhmgsXwN2GPrptVE3lr7QobKEKHO4LReAQc5wtELLyMxXmWfjVJQhjr7oYbfvH1lis4l0qEb880pqkRqBXHYI5oYjM2kJBzCc7EMjnJyc4sVoaLBwsdfV+AFyEfw1yBQqHyKToMiTXOFMSBuWzDmm5I6uY0V9KG9NjGNgNgKPdBACTP692QqcI2whG1olktbmYRbNcYSQpqf/mWcRictmkD0Xu3mWDBR4pApQBxXHIFJmQP2G+h5llubRVG5bxfyyDDgW37vdcz31b2V3BlP9/8Rz6GOlNk/cvJAPgkyTS9fLElh5g+xL8iG4AVkGT7wAfaCnnbbxTw6gZfu3uNlV/ypFNXFtgnei4OpO5G8/xdqaV0wf5ceYlooGk3WVtEUQiQoF19YDoGtEBtvw5V86fcn7tXApcyXsmDYzcbDuNVrd1d1SksTIc7v6bUeAaI+UkcdnJnROUCxvFFMMfbvsThTEBHXAKl9rIJSxp9UUFH5+HrUM43IAIJONWQEEzYxPQteoD2+0u7K/whxGOruwKdzPjuurWNBgB"
+  },
+  {
+   "type": "text",
+   "text": "Think about yesterday. What was the first task you worked on?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 828,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 45,
+  "output_tokens_details": {
+   "thinking_tokens": 25
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

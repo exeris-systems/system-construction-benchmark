@@ -1,0 +1,83 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a dispatcher. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSogUKEAgTGAI4AUIIdGhpbmtpbmcSDHDj7euhqL/LEyzZIBoMPBEeYQbMsHzeie6fIjB/Y1jVSEMri0ywA38k7JqrxeY9/b/5Q3Q2T2IaCOichG+aEcJarKDTIUD+YXXbnsMqvwQD9eeCclKFTd6/3pGvOWe2wEnfoXC9Acvsoe+4Tat4ajti6xQ+QXchtWRtU9HPB99GzDfZpsuVpzcBOVU/mB8dI4GjX2sb6IDjj/Nkt6lKPqWpx1v9dvnYba5MfH5sbHPruqGKBh+9g3176jaJGmImzOPZY0QtKCsbSpd8oixkU03ylVy4X9Svw3YpYesShpqIGQs89cEPnoF9Q0WwmnCSl9fJ4z3Yqc0vLmKZvEAZHrKltU3RjEEuZ7F1PiN0xC+MD56fnTAEZwJVf+qbWMZHz4nH+bDIaUSmUovJ6pm1b1y61ws35uJ6azGR+OKrANhhfdvS+Lt8nMVmr/Wpg0KP+jd0Mvp0Otg7n0OVfNivFXE7IFjnJ1Wee7T6Q6QVZlcdilH3qFS/zqAt2M9FythTu8/9nqehY9TDKlTXhog6eyxaw8OCRmrey9BwlXzQhvlZIaKpIoTnjouuqKltM+8KtJ9vG6Rayy6haKTs9RZyvmiQsu1vDfGdgXzXXo1qh6PA/nE2bx6J/Ki8W/H2BVCpMxQV++ipN5F+udeJmo0svfigEIa1fcnyrRpMPtfHPVK/AYdsA8fLowoeIQmsTb8jr9OzayfXgzqeeOFJIRoP9tfEfxOXkce/5DHzFR02c+iKK3yO0m+dFFDyUdxZIaZZIhVt2A79Q8KQtPpM+CXfaoNwaLLXjZpTDCQJh0+xU1NQiUcdA6YUshYt/D5PXf3TjdvTXfOuW+B6SpDaf1dOzke32bEGicxtMIjiQZ6a/hgB"
+    },
+    {
+     "type": "text",
+     "text": "Could you walk me through an ordinary working day, from the moment you start until you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSnAYKEAgTGAI4AUIIdGhpbmtpbmcSDBV3FBHL3Zwi6+sWjRoM8eK8nnSTSrWv5k4BIjAPsGdppVvNFtIIGzY8lJPii0ZUpQ/2uAgkyamqUVtdz3PgxXJSsj5w62AN7TQk0p0quQX8pr1eXxSU7OK0CVpnKN9gEmjTRbhT92bl6WvCl4CWMqiztuJ6VX76F2PyyjIVaM7dqNihqUB7y4gatZLjUMocESEf5VWUUOmIwXu9XIOhGYFiemFC7jbF1uLGbz2MJ5ibHcG6O4NycTBbR3DSmARBgO+TB+Kfqrx8OMo1ypyuoqmAze0d2YbvyJgQF73OQ0NfDp9FbEOYoXnHwztxq2F8sqBZFxlL5lMF6qjF+LOKTU0IknsgDkVRHucackhiaKJOi+zRgTc3sACGjwQMctNJm8RJ3VNhysui3wuSf5SdL+CFqt84YOEr7ZZVHWs+IbZey7lJuFPB+xCfNetzbQJ0UMVM/4V9TWzx4JnU6bV8kE5oqxpfAQ4fv6qdPfNw5gJLUe8kZg9I95GR09FZsypHQ9fi+dAhtvtHWjeV2Ii3L99662fuomGfeLCPBFjGSVSEk8jJO2C8ze/KUlMFyIkdbh2wccH0aAjOS2C5Fp2q3aIX/71DqnJ8mDBbemmbD8bhYrpTyOk1ow1bqTHsUt1e4vDhC+GDpFf8WoQc0V1/5+vw+5GC9BeX4GjCVVpkGPtlAtALYx3Lr1uob+VugNzFtV/tZcWmkYpjXdF0BZUTunyL23SWviVWlg7RiyuoGoCNCDYQcjoTJK+U6vtXbzDSc6EgkU9GO6ekSuQ6VZLAGV5+qECav1Icpmzsr8XURRz6G4HMVuyd01Raf2/8ecS2QWpbPWEeYVplN5xMoTxrWIQTlKEfx3yavSLvnXt80kYo0R7GzVme+8JqWwK50EOeiqYOE0wemYWwGZiPzKyHT1KW+zWm9nBwla2M0z1WNvQnDyRcAV078UO6QOEFQJNYKqMBP2Os2w0pr0dMz9gTJ5vT2ex7SYpGro1/qbKVcHJOHlV7Xd1YDqRDK7DHhuZsvAFRSB5aTHLkGAE="
+    },
+    {
+     "type": "text",
+     "text": "What is the first thing you do when you start work in the morning?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS8wYKEAgTGAI4AUIIdGhpbmtpbmcSDNz2w+xNHF0SLwvNVBoM02d4V8Xe4Sqx5TVNIjAAu9MU6yn7PVDH+fs2hLHvrVUVCcCpljoDvRl/M8XZoIQiOCDwldjeGqUTrubOUu4qkAZG6XbZ0Zmivna6f/dnBHmghGMZaDCDcFWmYJfLkVJX9+23ZDj3E6nsSuhnoLy0tCBrYlPY1Vb4qI5gM2V0w1B1gawGHenBMJx+912NTn/og2lUzgaRpsLepyDq+1FD1HUXsg0VjnaTrk4JQSo5JTHJc1peUudfUcAu5npBsLdaypzUNwPm0gtrSXXwUy8Cc6rQMn1wixsu+Nqjqau/AjdvTDLRo62ONwEK6aRw8b+hLB7aIbuNBTdzoOXJAWjZgh7iroG/ts5DBCih8i2iySE4mpbI8V7Ksff2UseimJaBdjrZcuuxA/KRGO4fg+9CuhW73PSvvskS30Tv5pfvHpwVW4j5FLaXxS/NN21Ho3G9QnFOcTU8HqmpiuKDjlM6lvYqh1P+QsLdxa3yqnUG0DgcD2AyDw01/0qJByISHJJfPDu0xQg0UqsKBhPcG4eyQ15yEguQ5dmDvxeF8FN9p5C1CTldPLRxa9IS0zZLY16XAfYMtg+iqKUwxu0ai7N/K5kC5IuXAjgMXqHZ3Vn0Mx/FpENv44Og6QzyeuaKHamUpEhwlZSmDp1dek082T8cpj2vTdNISVUEBVWGS+2y8UuRwVjdje+FJK3vvGFsC9hvX896pJZaAOuqgshCV7NTGFo/e61bdMmXFuyn6iYZnFuwye0Jud7q36jbc/T0esw9iVzrWMFe56DwbqJ72AO6C/M6SWKMYRmv82PvXlKc/OGz74h2xQtcaiGmJnVjpHi2l4iJLibqW4vEmLKUFitC/xit52xixLsk7PdhnTCS7IhAe5cNLbypa549/nvZwUX2fr85AhjtBC5YGko4/CrubZ0IUwW1CI09kGii6ijm6C4/lWsBdSaefo3NVE87Of1QShYxGXMVB2exE4xqGtD5UgO4v5JRueibBeRNPJ/sgZH3mZIp43e5HJLIdBVf6jwxRpxSsgpcZVce8RQsZ7SHxRXSo6I55Me7mV7+FmhniOfF7vbbIqLdW114RJyJfU+x90+AB0sErwSZyB5cV0+Vxmv9wF9V+Z5NnjsEnKXVzgkJGAE="
+    },
+    {
+     "type": "text",
+     "text": "Think about yesterday. What was the last thing you worked on before you went home?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS9gYKEAgTGAI4AUIIdGhpbmtpbmcSDGIF52rxt4PXnuYC0RoMcHBqhNK8zqiKpkdKIjBQEvHL9kodpjHyxn+i/LuYZM9HbIz7j0JGnnmNlfK6vJHiyn0dnaNYn2Hy0KFWjtMqkwZ8IXDNMTZL00kcr/mH1QMOJQ/HxHcsFrQPpST+lU4R8CVX+yN8wZ8q8yBZhyTwZ5sGVXFfwj1mPwqeA+8JPUinmQGSP4iJOb8jl9OUhTZIVw44yx7liEqg4fAzMxdfufPGoXtfWJKzG+87vMJ5spf1OZ8RqpRrDpZiJD1qcoKfi95bSheNMrP0zArBz+hvAx6bWxCRZYsvF4mnp/TFFREBbGigVTOzkE6JW6cQPod1rR0doypkc3cqEj8fZ99HX3vyWlix3bOVtphWbaPk/BG7QWcmCVBvGyYqbGlcwx2CQtIiT7BtNXR/wbOo7O2lAkoqpRQoTQ/+sWXiLc5miVUxDpZJEdAqC3mo8Y2ImZhJO/Zsv7P5i+2wHqFi+zptFcaHurYmNLra48O8UjQI6ccpe3NfybiJBBL5JTNxyBP5W4DMFQkL3Hs2XUmWnUXmUPQU+nEbW5YfxkRfxJ+UoucmldSIInuhHYRvmy9GYMRUGIMGobTWuTVevBoHA17vw9ygvx3NnX4CcrlXofruujlkztUyRr+QncTmDb8tSaCxDS7+lg3b9Mz8XNoklqfVXoRivcdHvoLVlrPkLl1FcEs5TnwfUugUqab3hPelZcDDHE/lEVC0MqvU4k5FBKAciPwOsLkLvz4gMOJFSs3XoR1RJlNxcCyHNa0AbdGeW8M1Myhq+ywC/SCbehMb7LB1A6aJGX3GhbBv4Pe2XD4QfuuKcKqB/TzHKFEtGpuKQiYVIz1mZu6jQl2JFizKB1VjrM8k8tp/yh1nc7ZIRQFgZuJjwf6LqrNPQ9jS+vX0YyaU3EuQJB+nMYh9ip06fuNo2PjzgCsPkaobHRqQqMANvwxYgUZcD10oEHUDdjv9Amr0EnKqtMt2RX5aukefkoCuDbja1iyvEd7W9sryRqPXhTOtJOJ7Qai3CIo3DeJEJKhLCuJ487cK1ZmTboM5t4gnsmD0c3qybr8lQYaSV861lo88j4mjdRnF/oNAUpOhKgQtHdo9edIr4UEktzk4t84gb3GsrLAcuit05NTVtrvhukqwxdXSGAE="
+    },
+    {
+     "type": "text",
+     "text": "What makes these questions hard to answer?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}
