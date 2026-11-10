@@ -1,11 +1,11 @@
-# Judge control set — the contracts of known coverage that calibrate each judge (decision register D-48, D-55).
+# Judge control set — the contracts of known coverage that calibrate each judge (decision register D-48, D-55, D-61).
 #
 # Never given to a judge as it stands: the script builds each mutant's contract from these entries and
 # sends only its items, renumbered DR-01, DR-02, … in their order, so neither the numbering nor the
 # position of an item tells which item was removed, added or shortened.
 #
 #   base       a derived contract that covers every reference requirement of
-#              contract/system-requirements.yaml, each item reworded from the one it `covers`
+#              trackS/brief-requirements.yaml, each item reworded from the one it `covers`
 #   partials   a base item with one obligation of its requirement left out
 #   additions  an item no reference requirement asks for, of a known class: user_visible (an
 #              anti-requirement of contract/anti-requirements.md that brief §8 states), technical (a
@@ -18,154 +18,151 @@
 
 base:
   - id: DR-01
-    covers: SR-TEL-01
-    requirement: Every telemetry report from a drone carries a session number that goes up each time the drone reboots, a running number inside that session, and the drone's own clock time. Reports are put in order by session and then running number, never by the drone's clock, although the clock time is kept. A report that is no newer than the last one processed is still stored in the drone's telemetry history, but it may not change the drone's current position, battery level, connectivity or operational state. A report whose session and running number were already received is a repeat and is stored once at most. The telemetry history can be read through the API.
+    covers: BR-25
+    requirement: People and devices outside an operating company can report to the service that a flight's load is ready, that its drone has got to one of the job's points, or that the drone has arrived; the service takes each such report and records it on the flight it concerns.
   - id: DR-02
-    covers: SR-MIS-01
-    requirement: Dispatchers create missions, each either a delivery or an inspection, giving an origin, an end location (the destination for a delivery, the origin again for an inspection), a drone, and a route made of corridors that leads from where the drone is now, through the origin, to the end location; an inspection's route also visits each of its waypoint locations in the given order. The service checks the route but never works one out and never picks the drone; it refuses a route in which two consecutive corridors share no location, one that does not begin at the drone's location, and one that skips the origin or does not finish at the end location. A new mission waits for approval, and only once approved does it go on to book its resources and be dispatched. A dispatcher can abort a mission in any state that is not final; aborting frees its bookings and emits compensation events.
+    covers: BR-15
+    requirement: To plan a flight for a job, a dispatcher picks the drone and the way it flies, given as a sequence of corridors that run between named sites.
   - id: DR-03
-    covers: SR-TEN-01
-    requirement: Each company sees and changes only its own data. When a request refers to something that belongs to another company, the answer is the same as if that thing did not exist at all.
+    covers: BR-01
+    requirement: Several independent operating companies use the service side by side. A company's drones, drone models, sites, pads, jobs, flights and the history of all of these are visible and changeable to its own staff and to no one else.
   - id: DR-04
-    covers: SR-CHARGE-02
-    requirement: A pad suits a drone when both belong to the same company and the pad's connector type is the drone's. If a drone on a mission is asked to charge, the request waits until the mission is over, and only an abort by a dispatcher cuts a mission short. If the drone is flying without a mission, the request sends it back and books a free suitable pad, choosing one at its home location first and otherwise one at the place it is heading to. If the drone is idle, or sits on a pad that does not suit it, the request books a free suitable pad and asks for charging. A drone already sitting on a suitable pad charges where it is.
+    covers: BR-11
+    requirement: Technicians can put a drone on charge; the service accepts only a pad with the same connector type as the drone's model and turns the request down for any other pad.
   - id: DR-05
-    covers: SR-QRY-01
-    requirement: Lists of drones, missions and incidents can be narrowed by state, put in order by a declared sort key, and read page by page; when the sort is stable, reading all the pages gives every matching record once and only once, even at the edges between pages.
+    covers: BR-17
+    requirement: When a dispatcher asks, the service lists those of the dispatcher's own company's drones that are able to reach the place where a given job begins.
   - id: DR-06
-    covers: SR-INV-04
-    requirement: When automatic safety rules clash with what people decided or with the mission plan, the stronger rule wins, in this order from the strongest — an active airspace restriction, then a critical battery, then a decision by a dispatcher or an operator, then the mission plan. The first two act even while a dispatcher has taken over the drone. A rule at warning level never overrides a person's decision or the mission plan; it emits its event, and whatever it asks for is put off until no stronger rule applies.
+    covers: BR-31
+    requirement: The desk can enter closures of two kinds: planned ones, with a start time and an end time, and sudden ones, in force immediately. It can change a closure after entering it, for instance by widening its area or moving its end time, and the change counts from the moment it is entered.
   - id: DR-07
-    covers: SR-SAGA-02
-    requirement: A mission books its resources in a fixed order — first the drone, then a take-off slot, then a landing slot. When it books the drone it checks again that the route starts where the drone currently is, and if it does not, the mission ends as rejected for unavailable resources, with that as the reason. If a later booking fails, everything the mission booked before is released, the drone goes back to idle, the mission becomes rejected for unavailable resources, and one compensation event is emitted for each released booking.
+    covers: BR-21
+    requirement: Sign-off is refused when the flight's way crosses a zone where flying is prohibited, or crosses a closure that is in force at any moment of the flight.
   - id: DR-08
-    covers: SR-REG-01
-    requirement: Operators add, look up, change and retire their company's drones and charging pads. For a drone the service keeps its model, how much it can carry, its range, its sensor packages, its connector type and its home location; for a pad, its location and its connector type. A drone that is reserved or on a mission cannot be retired.
+    covers: BR-05
+    requirement: Technicians add drones to their company's fleet, each with its model. For every model the service keeps its carrying capacity, its range on a full battery, the sensors it carries and its charging connector type.
   - id: DR-09
-    covers: SR-TEL-03b
-    requirement: If a drone that is neither docked nor retired has sent no current report for 30 seconds, the service marks it lost at some point between 30 and 45 seconds after its last current report, opens a critical connectivity incident, and pauses the mission it is flying, if it is flying one.
+    covers: BR-36
+    requirement: Every instruction the service gives a drone or charging equipment has its effect only once: also when the link delivers it twice, and when the service repeats it because it could not tell whether the first one got through.
   - id: DR-10
-    covers: SR-X-03
-    requirement: Repeating the same changing action with the same idempotency key gives back the same result, with no second state change and no second domain event. Telemetry reports are de-duplicated by their session and running number, and outside events by their event identifier.
+    covers: BR-03
+    requirement: Each member of staff has one role: fleet technician or dispatcher at an operating company, or the airspace desk at the platform company. An action is allowed only to the role these requirements assign it to.
   - id: DR-11
-    covers: SR-ROUTE-02
-    requirement: A dispatcher can ask, with a hop limit from 1 to 8, which of the company's eligible drones are at a mission's origin or can reach it over at most that many corridors that are open now, where the shortest such path is no longer than the drone's effective range, which is its model's range times its current battery fraction times 0.8. For each drone found, the answer gives the number of hops and the total length of that path. The corridor network may have loops.
+    covers: BR-28
+    requirement: If a report a flight expects, its arrival for instance, does not come when it should, the dispatchers of the flight's company get the flight flagged to them.
   - id: DR-12
-    covers: SR-INV-02
-    requirement: A drone can be charging only while it sits on a pad assigned to it. When telemetry says the drone has left the pad, charging ends in the very same state change that records it leaving, and the charging service is asked to stop.
+    covers: BR-13
+    requirement: Dispatchers can enter a delivery job: a load that has to go from one site to another.
   - id: DR-13
-    covers: SR-TEN-03
-    requirement: For every version of a restriction, the platform's administrator can see, company by company, how many missions lost their approval or were aborted because of that version; the count is final no later than 15 seconds after the version takes effect. The administrator can read nothing else about any company's data.
+    covers: BR-34
+    requirement: After a closure is entered, the desk can see the disruption it caused across all customers, as totals only, naming no company and showing no company's flights.
   - id: DR-14
-    covers: SR-OVR-01
-    requirement: A dispatcher can take over a drone and hand it back. While it is taken over, the drone's mission plan does not move forward on its own; warning-level rules still emit their events and note their requests, which take effect once the drone is handed back; and an active airspace restriction and a critical battery still act. A drone whose link is lost can be taken over too, because taking over is a decision the service records, not a command sent to the drone, and the connectivity incident stays open.
+    covers: BR-09
+    requirement: Technicians can set up a charging pad, with its connector type, at a site of their own company.
   - id: DR-15
-    covers: SR-CHARGE-04
-    requirement: Charging is finished when telemetry shows the battery at 98% or more, or when an operator stops it early with the battery at 80% or more. When it finishes, the service frees the pad, clears the request to the charging service, and gives the pad to the next suitable drone waiting for one, if there is one.
+    covers: BR-20
+    requirement: A flight is not signed off when its drone is not up to the job: the load weighs more than the drone's model can carry, the way is longer than the model's range, or an inspection needs a sensor the model lacks.
   - id: DR-16
-    covers: SR-TEL-02
-    requirement: A current report is one that moves the drone forward in its session-and-running-number order. When a current report arrives for a lost drone, the drone becomes degraded if more than a quarter of its loss window is missing and online otherwise; its open connectivity incident is closed and a link-restored event is emitted. A degraded drone goes back to online, with a link-restored event, once no more than a tenth of its loss window is missing. A new session starts with an empty window.
+    covers: BR-07
+    requirement: A technician can retire a drone. Once retired, it remains in the company's history but is never again given a flight or sent to charge.
   - id: DR-17
-    covers: SR-X-01
-    requirement: No domain event may be seen outside the service before the lasting state change it reports has been committed, and a state change that is rolled back must leave no event visible outside.
+    covers: BR-23
+    requirement: If several dispatchers at once sign off flights that would put the same drone on overlapping times, exactly one sign-off goes through, and each of the others is refused with the reason.
   - id: DR-18
-    covers: SR-AIR-01
-    requirement: Every restriction has a period of validity and a version number. A newer version takes the place of the one before it from the start of its own validity, and decisions are always made on the version in force.
+    covers: BR-38
+    requirement: There is no way to steer a drone through the service.
   - id: DR-19
-    covers: SR-VAL-01
-    requirement: A request whose content is invalid is turned down with a client error that names every invalid field, and it changes nothing.
+    covers: BR-02
+    requirement: All companies share one airspace picture, made of the corridors between sites, the zones grouping them, the prohibited zones and the closures, and the staff of every company can see the whole of it.
   - id: DR-20
-    covers: SR-SAGA-01
-    requirement: Missions running at the same time must never hold the same drone, charging pad, take-off slot or landing slot at once. A mission that loses the contest for a resource ends as rejected for unavailable resources, naming the resource it lost.
+    covers: BR-32
+    requirement: On every new or amended closure, the dispatchers of each company are told which of their own flights it affects, those in the air included, and no company is told about another company's flights.
   - id: DR-21
-    covers: SR-TEL-04b
-    requirement: When a drone's battery drops to 15% or lower in flight, the service, in one state change, starts its return, aborts its mission, opens an incident and emits an emergency-return event. The drone returns to a free suitable pad booked for it as for any charging request; if none is free, it joins the line of drones waiting for a pad with critical priority and flies to its home location. This holds even while the drone is taken over, and it happens only once per drop, not again until the battery has climbed back above 20%.
+    covers: BR-27
+    requirement: Reports are applied in the order the events happened, not the order in which they arrived, so a report that comes late or out of turn never undoes a later one.
   - id: DR-22
-    covers: SR-INV-05
-    requirement: While a drone has service work open, the service refuses to give it a mission or let it take off, but still accepts charging requests; this lasts until an operator closes the service work.
+    covers: BR-10
+    requirement: Only drones of the company that owns a charging pad may use it.
   - id: DR-23
-    covers: SR-ROUTE-03b
-    requirement: When a prohibition restriction comes into force, whether because it was just created or because its validity period begins, every mission it affects, of every company, is dealt with within 15 seconds; an approved mission that has not left yet loses its approval, and a dispatched mission is aborted and its drone comes back. A mission is affected when any corridor of its whole route is covered, no matter how much of the route has already been flown. This applies even while the drone is taken over.
+    covers: BR-14
+    requirement: Dispatchers can enter an inspection job: the sensors it needs and the points to visit in a fixed order, finishing where the inspection began.
   - id: DR-24
-    covers: SR-TEN-02
-    requirement: What a user may do depends on their role. Operators look after drones and pads, ask for charging, and open and close service work; dispatchers create, approve and abort missions and take over drones; the platform administrator manages corridors, zones and restrictions. Anything else is refused as forbidden. The company check comes before the role check; a request about another company's resource is answered as not found whatever the caller's role, the platform administrator's included.
+    covers: BR-30
+    requirement: The desk can record corridors running between named sites, zones made up of corridors, and the zones in which the authorities forbid flying.
   - id: DR-25
-    covers: SR-X-05
-    requirement: The same event may reach the event sink more than once with the same eventId, and that is not a fault; two events with different eventIds for one and the same state transition are a fault.
+    covers: BR-19
+    requirement: A dispatcher can call off a flight.
   - id: DR-26
-    covers: SR-CHARGE-01
-    requirement: A charging request, whether it comes from an operator or from the low-battery warning, is accepted only for a drone that is not retired, whose link is not lost, that is not already charging, and whose battery is under 98%. What can be observed of it is a request to the charging service; how the service keeps that request inside is left open.
+    covers: BR-35
+    requirement: The service may restart or crash while drones are in the air; when it is back, it continues from where it was, with nothing it had recorded lost and nothing applied a second time.
   - id: DR-27
-    covers: SR-TEL-03a
-    requirement: A drone's loss window covers the last 20 running numbers of its current session, up to the highest one received; while fewer have been received, it covers those received so far. It is looked at only when a current report is processed. A report that arrives late counts as received from the next look onwards and never causes a look by itself. When more than a quarter of the window is missing, an online drone becomes degraded and a link-degraded event is emitted.
+    covers: BR-06
+    requirement: Every drone has a home site, which is one of its own company's sites.
   - id: DR-28
-    covers: SR-REC-01
-    requirement: Service work on a drone is recorded with when it was opened and when it was closed, and the record can still be read after the work is closed and after the drone is retired.
+    covers: BR-24
+    requirement: In deciding whether a drone can fly a way, the service does not rely on the whole range of a full battery, because cold and wind drain batteries faster than planned.
   - id: DR-29
-    covers: SR-INV-01
-    requirement: While a drone's link is lost, every command from anyone that would change what the drone is assigned to — giving it a mission, asking it to charge, letting it take off — must be refused. A degraded link blocks neither charging requests nor take-off; whether a degraded drone can be given a mission is decided by the eligibility rules. Only the service's own silence detection can mark a drone lost, and only a current telemetry report can bring it back.
+    covers: BR-12
+    requirement: For every drone the service records each time it was taken out of service, repaired or serviced, and returned to service, and who did it, so that its company can show a regulator how the drone was looked after.
   - id: DR-30
-    covers: SR-ROUTE-01
-    requirement: A drone can be given a mission only if it is idle, online, not taken over, has no open service work and no charging request, has at least 50% battery, and has an effective range at least as long as the total corridor length of the mission's route. For a delivery it must also be able to carry the load; for an inspection it must carry every sensor package the inspection needs.
+    covers: BR-33
+    requirement: A closure never leads the service to call off, reroute or otherwise change a flight on its own; only the dispatcher decides that.
   - id: DR-31
-    covers: SR-X-02
-    requirement: Every event the service emits carries a unique eventId, the company identifier, a correlation identifier (taken from the incoming request, or created at the service's edge for automatic reactions), the identifier of its cause when that cause is a restriction (its id and version) or a timeout, the identifier of the main entity, the state version after the change, and the full target state its event contract requires. In a reaction caused by a restriction, the event names that restriction as its cause and carries a correlation identifier created for that company; the correlation identifier of the administrator's request never appears in a company's events.
+    covers: BR-18
+    requirement: No flight departs until a dispatcher has signed it off, and only a dispatcher's own action can sign a flight off.
   - id: DR-32
-    covers: SR-TEL-05
-    requirement: A mission paused because its drone was lost carries on if a current report brings the link back within two minutes. If not, the mission is aborted and its bookings are released with compensation events, while the drone stays lost and its incident stays open.
+    covers: BR-04
+    requirement: The airspace desk has no view of any single company's drones, jobs or flights.
   - id: DR-33
-    covers: SR-SAGA-03
-    requirement: Once its bookings are made, a mission waits for the outside events its type expects — for a delivery, readiness and then arrival at the destination; for an inspection, readiness, then each waypoint reached in order, then arrival back at the origin. If the service process is killed and restarted, nothing already committed may happen again; no second booking, no second event with a new eventId for a state change already emitted (delivering the same eventId again is allowed), and no outgoing command with a new idempotency key for a command already sent. The mission then completes after the expected outside event. An outside event received more than once is applied once.
+    covers: BR-37
+    requirement: Each company's own systems are informed of what happens to that company's drones and jobs, and told nothing about any other company's.
   - id: DR-34
-    covers: SR-TEN-04
-    requirement: When one restriction affects several companies, each company's incidents, events and views show only its own affected missions and drones.
+    covers: BR-22
+    requirement: At no time does a site have more drones taking off or landing than it has places for.
   - id: DR-35
-    covers: SR-CHARGE-03
-    requirement: When there is no free suitable pad, the drone waits for one and the service emits a charging-pad-unavailable event. Waiting drones are served critical-battery requests first, and the rest in the order their requests were accepted.
+    covers: BR-08
+    requirement: A technician can take a drone out of service for repair and return it to service; while it is out of service, the drone cannot be given a flight.
   - id: DR-36
-    covers: SR-INV-03
-    requirement: A retired drone stays retired for good. Every domain action on it is refused. Telemetry reports for it are kept in its history and change nothing.
+    covers: BR-29
+    requirement: When a drone restarts in the air and carries on, it is still on the same flight, and the reports it sends after the restart count for that flight.
   - id: DR-37
-    covers: SR-ROUTE-03a
-    requirement: A mission cannot be approved while any corridor on its route is covered by an active prohibition restriction, whether directly or through a zone.
+    covers: BR-16
+    requirement: The service never picks a drone or a way for a flight, and never replaces the one the dispatcher chose.
   - id: DR-38
-    covers: SR-X-04
-    requirement: Every outgoing command to a drone and every request to the charging service carries an idempotency key; when the same command is sent again for the same purpose, after a restart as well, it carries the same key.
-  - id: DR-39
-    covers: SR-TEL-04a
-    requirement: When the battery drops to 30% or lower, the service emits one low-battery event and records a charging request. It does this again only after the battery has climbed above 35%. If the drone is flying a mission, the charging request takes effect when the mission ends.
+    covers: BR-26
+    requirement: A report received more than once takes effect only once.
 
 partials:
   - id: DR-01
-    requirement: Every telemetry report from a drone carries a session number that goes up each time the drone reboots, a running number inside that session, and the drone's own clock time. Reports are put in order by session and then running number, never by the drone's clock, although the clock time is kept. A report that is no newer than the last one processed is still stored in the drone's telemetry history, but it may not change the drone's current position, battery level, connectivity or operational state. A report whose session and running number were already received is a repeat and is stored once at most.
+    requirement: People and devices outside an operating company can report to the service that a flight's load is ready or that its drone has got to one of the job's points; the service takes each such report and records it on the flight it concerns.
   - id: DR-02
-    requirement: Dispatchers create missions, each either a delivery or an inspection, giving an origin, an end location (the destination for a delivery, the origin again for an inspection), a drone, and a route made of corridors that leads from where the drone is now, through the origin, to the end location. The service checks the route but never works one out and never picks the drone; it refuses a route in which two consecutive corridors share no location, one that does not begin at the drone's location, and one that skips the origin or does not finish at the end location. A new mission waits for approval, and only once approved does it go on to book its resources and be dispatched. A dispatcher can abort a mission in any state that is not final; aborting frees its bookings and emits compensation events.
+    requirement: To plan a flight for a job, a dispatcher picks the drone that flies it.
+  - id: DR-06
+    requirement: The desk can enter closures of two kinds: planned ones, with a start time and an end time, and sudden ones, in force immediately.
   - id: DR-08
-    requirement: Operators add, look up, change and retire their company's drones and charging pads. For a drone the service keeps its model, how much it can carry, its range, its sensor packages, its connector type and its home location; for a pad, its location and its connector type.
+    requirement: Technicians add drones to their company's fleet, each with its model. For every model the service keeps its carrying capacity, its range on a full battery and the sensors it carries.
   - id: DR-15
-    requirement: Charging is finished when telemetry shows the battery at 98% or more. When it finishes, the service frees the pad, clears the request to the charging service, and gives the pad to the next suitable drone waiting for one, if there is one.
-  - id: DR-30
-    requirement: A drone can be given a mission only if it is idle, online, not taken over, has no open service work and no charging request, has at least 50% battery, and has an effective range at least as long as the total corridor length of the mission's route.
-  - id: DR-31
-    requirement: Every event the service emits carries a unique eventId, the company identifier, a correlation identifier (taken from the incoming request, or created at the service's edge for automatic reactions), the identifier of its cause when that cause is a restriction (its id and version) or a timeout, the identifier of the main entity, the state version after the change, and the full target state its event contract requires. In a reaction caused by a restriction, the event names that restriction as its cause and carries a correlation identifier created for that company.
+    requirement: A flight is not signed off when its drone is not up to the job: the load weighs more than the drone's model can carry, or the way is longer than the model's range.
+  - id: DR-35
+    requirement: A technician can take a drone out of service for repair and return it to service.
 
 additions:
   - id: I1
     class: other
     after: DR-08
-    requirement: The service keeps each drone's firmware version and refuses a mission for a drone whose firmware is older than the minimum its model requires.
+    requirement: The service keeps each drone's firmware version and refuses to sign off a flight for a drone whose firmware is older than the minimum its model requires.
   - id: I2
     class: other
     after: DR-02
-    requirement: A dispatcher gives each mission one of three priorities, and a mission of higher priority takes a contested take-off slot from one of lower priority.
+    requirement: A dispatcher gives each job one of three priorities, shown beside it in every list of jobs.
   - id: I3
     class: other
-    after: DR-15
+    after: DR-14
     requirement: Each charging pad counts the charge cycles it has delivered, and its record shows it as due for maintenance once it passes 5,000 cycles.
   - id: I4
     class: other
     after: DR-23
-    requirement: A mission that has waited for approval for more than 24 hours is cancelled automatically.
+    requirement: A flight that has waited more than 24 hours for sign-off is called off automatically.
   - id: I5
     class: other
     after: DR-30
@@ -185,7 +182,7 @@ additions:
   - id: U3
     class: user_visible
     after: DR-21
-    requirement: When a drone's battery becomes critical, the service sends a text message to the dispatcher on duty.
+    requirement: When a drone's battery runs low, the service sends a text message to the dispatcher on duty.
   - id: U4
     class: user_visible
     after: DR-35
@@ -201,7 +198,7 @@ additions:
   - id: T3
     class: technical
     after: DR-10
-    requirement: The service adds instances automatically when the telemetry load rises.
+    requirement: The service adds instances automatically when the load of incoming reports rises.
 
 mutants:
   - id: M1
@@ -227,7 +224,7 @@ mutants:
   - id: M5
     name: partial
     remove:
-    partial: DR-01 DR-02 DR-08 DR-15 DR-30 DR-31
+    partial: DR-01 DR-02 DR-06 DR-08 DR-15 DR-35
     add:
   - id: M6
     name: empty
