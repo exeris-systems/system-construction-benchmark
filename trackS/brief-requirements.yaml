@@ -15,9 +15,9 @@ requirements:
   - id: BR-01
     units: ["1.p1", "1.p2"]
     requirement: >
-      The service serves several independent operating companies at once. Each company's drones,
-      models, sites, charging pads, jobs and flights, and their history, can be seen and changed only
-      by that company's own staff.
+      The service serves several independent operating companies at once. The staff of one operating
+      company can never see or change another operating company's drones, models, sites, charging
+      pads, jobs or flights, or their history.
 
   - id: BR-02
     units: ["1.p2", "2.b3"]

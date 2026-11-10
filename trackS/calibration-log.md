@@ -398,6 +398,8 @@ unrevised and is frozen.
 | --- | --- | --- | --- |
 | `runs/track-s/2026-11-09-judge-control-gemini-4-argon` (mutants `aa11f7f4…`) | `gemini-4-argon`, temperature 0, seed 1 | `40baece8…` (version 4, draft 2) | **pass** — 18 of 18 exact |
 | `runs/track-s/2026-11-09-judge-control-claude-opus-5-5` (mutants `aa11f7f4…`) | `claude-opus-5-5`, effort `high` | `40baece8…` (version 4, draft 2) | **pass** — 18 of 18 exact |
+| `runs/track-s/2026-11-09-judge-control-gemini-4-argon-2` (reference `47eb79ec…`, mutants `d6bc096d…`) | `gemini-4-argon`, temperature 0, seed 1 | `40baece8…` (version 6, draft 3) | **pass** — 18 of 18 exact |
+| `runs/track-s/2026-11-09-judge-control-claude-opus-5-5-2` (reference `47eb79ec…`, mutants `d6bc096d…`) | `claude-opus-5-5`, effort `high` | `40baece8…` (version 6, draft 3) | **fail** — 17 of 18 exact |
 
 ### `2026-11-09-judge-control-gemini-4-argon` and `-claude-opus-5-5` — pass
 
@@ -411,6 +413,20 @@ nothing covered on the empty contract M6, in all three repetitions.
 The mutants were written with Claude Code, on Claude Opus 5.5, the family of the judge of Gemini
 subjects (D-56). Neither judge missed one difference the mutants hold, so the calibration does not
 show where either judge's limit lies.
+
+### `2026-11-09-judge-control-gemini-4-argon-2` and `-claude-opus-5-5-2` — Argon passes, Opus fails
+
+The judges' calibration on the Track S reference of D-61. Both runs completed without error or retry,
+18 judgements each, every response a natural stop (`STOP`, `end_turn`). Argon is exact in every
+judgement. Opus is exact in 17: in the third judgement of M2 it reports BR-04 covered, where the
+mutant has it missing.
+
+The difference is in the reference, not only in the judge. BR-01 of draft 3 lets only a company's
+own staff see its data, which keeps out the airspace desk as well, so it states BR-04's obligation.
+With BR-04's item removed, BR-01's item still states it, and M2 has no single right answer for BR-04:
+Opus gave missing twice and covered once. Draft 4 narrows BR-01 to staff of one operating company
+and another operating company's data, so that it no longer states BR-04, and words BR-01's base
+item the same way. The threshold is unchanged; both judges are calibrated again on draft 4.
 
 ## Follow-up classifiers
 
