@@ -1,0 +1,71 @@
+{
+  "track": "S",
+  "mode": "judge",
+  "status": "completed",
+  "started": "2026-11-10T15:36:28.013402+00:00",
+  "parameters": {
+    "mode": "judge",
+    "persona_provider": "mistral",
+    "persona_model": null,
+    "persona_rpm": 30,
+    "persona_max_tokens": 2048,
+    "persona_temperature": null,
+    "persona_seed": null,
+    "persona_check": false,
+    "grader_provider": "mistral",
+    "grader_model": null,
+    "grader_rpm": 20,
+    "grader_max_tokens": 1024,
+    "grader_temperature": null,
+    "grader_seed": null,
+    "judge_provider": "gemini",
+    "judge_model": "gemini-4-argon",
+    "judge_rpm": 5.0,
+    "judge_max_tokens": 32768,
+    "judge_temperature": 0.0,
+    "judge_seed": 1,
+    "judge_effort": null,
+    "subject_provider": "anthropic",
+    "subject_model": null,
+    "subject_rpm": 10,
+    "subject_max_tokens": 32000,
+    "judged": "runs/track-s/2026-11-10-subject-instructed-claude-opus-5-5-1",
+    "graded": null,
+    "repetitions": 3
+  },
+  "inputSha256": {
+    "world-brief.md": "dfb0de323972b2ead2811e441914d27f6fa1f98410e7c433010e8dcd057f130e",
+    "brief-slices.yaml": "7c417a65224604ea834574e457e0b285dafb79b476821cb3315b58eed8169125",
+    "judge-prompt.md": "40baece8c2d63481feee1ecc4b98a5edf0bd612d499b475c4c4c1b3e0a4830ec",
+    "trackS/brief-requirements.yaml": "e2cbebf91e12b585420b8e7205b6ca0bd04dd7a4fcd5cdcefd91bf50d3170fed",
+    "contract/anti-requirements.md": "e2a289fab84467a4b0fc2a5ec8b3eb3a6fd05318ecdac688b3b37ef2fe1c73e6",
+    "run-track-s.py": "2168e8897ad8bca1379da0540a6a824f880746a4accc89f110f769007e5ab427",
+    "judged-run.json": "10c572b79acf3bf06a8ba24019197b250e3a543e4798fa8868c7bc54949cba37",
+    "judged-subject.json": "4313a309f4ce9fa1a3830c76b2688e65cb269714aa7f7d754082a549b3d3d32f"
+  },
+  "instruments": {
+    "judge": {
+      "provider": "gemini",
+      "model": "gemini-4-argon",
+      "description": {
+        "name": "models/gemini-4-argon",
+        "version": "3.0",
+        "displayName": "Gemini 4 Argon",
+        "description": "Gemini 4 Argon",
+        "inputTokenLimit": 1048576,
+        "outputTokenLimit": 32768,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "batchGenerateContent"
+        ],
+        "temperature": 1,
+        "topP": 0.95,
+        "topK": 64,
+        "maxTemperature": 2,
+        "thinking": true
+      }
+    }
+  },
+  "finished": "2026-11-10T15:37:00.239286+00:00"
+}
