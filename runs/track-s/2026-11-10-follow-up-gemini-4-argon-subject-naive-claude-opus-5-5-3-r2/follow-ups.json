@@ -1,0 +1,278 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-10-subject-naive-claude-opus-5-5-3",
+  "mode": "subject-naive",
+  "subject": {
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "description": {
+    "type": "model",
+    "id": "claude-opus-5-5",
+    "display_name": "Claude Opus 5.5",
+    "created_at": "2026-09-21T16:24:00Z",
+    "line": "opus",
+    "max_input_tokens": 1000000,
+    "max_tokens": 128000,
+    "capabilities": {
+     "batch": {
+      "supported": true
+     },
+     "citations": {
+      "supported": true
+     },
+     "code_execution": {
+      "supported": true
+     },
+     "context_management": {
+      "supported": true,
+      "clear_tool_uses_20250919": {
+       "supported": true
+      },
+      "clear_thinking_20251015": {
+       "supported": true
+      },
+      "compact_20260112": {
+       "supported": true
+      }
+     },
+     "effort": {
+      "supported": true,
+      "low": {
+       "supported": true
+      },
+      "medium": {
+       "supported": true
+      },
+      "high": {
+       "supported": true
+      },
+      "xhigh": {
+       "supported": true
+      },
+      "max": {
+       "supported": true
+      }
+     },
+     "image_input": {
+      "supported": true
+     },
+     "pdf_input": {
+      "supported": true
+     },
+     "server_tools": {
+      "supported": true,
+      "code_execution": {
+       "supported": true
+      },
+      "web_search": {
+       "supported": true
+      }
+     },
+     "structured_outputs": {
+      "supported": true
+     },
+     "thinking": {
+      "supported": true,
+      "types": {
+       "enabled": {
+        "supported": false
+       },
+       "adaptive": {
+        "supported": true
+       },
+       "disabled": {
+        "supported": false
+       },
+       "between_tools": {
+        "supported": false
+       }
+      }
+     }
+    },
+    "lifecycle": "active",
+    "deprecated_at": null,
+    "retires_at": null
+   }
+  }
+ },
+ "scored": true,
+ "roles": {
+  "technician": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "As a fleet technician, I keep our drones and charging equipment in working order. I add new drones to our fleet, retire old ones, set up our charging pads at our sites, take drones out of service for repairs and put them back, and send drones to charge. We carry out repairs and servicing ourselves, and regulators can ask us to show how our drones have been looked after.",
+     "question": "When you take a drone out of service or put it back, what information do you need to record (reason, who, when, work done, parts), and what must happen to any jobs it was assigned to?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "When a regulator asks how a drone has been looked after, what exactly do you have to show them?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "What goes wrong most often today when you take a drone out of service for repair?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "Should anyone other than technicians be allowed to add, retire, take out of service, or return a drone to service?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "Should a drone that is out of service for repair ever be sent on a job or to charge?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "Can two drones be sent to the same charging pad at the same time, and what should the service do if that is attempted?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "What do you need the service to keep a record of so you can show regulators how your drones have been looked after?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know.",
+     "question": "What do you need to record about each drone when you add it to your fleet?",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "Is there anything that has gone wrong in the past with drones, charging pads or repairs that the new service must prevent?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 1,
+   "of": 9
+  },
+  "dispatcher": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "As a dispatcher, I plan and run the flights by deciding which drone flies along which way, and I sign off each flight before it leaves. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. I need help finding out which of my drones could get to where a job starts, but the company's policy is that software never chooses a drone or a way for us.",
+     "question": "When two dispatchers plan at the same time for the same drone or site, what should the service do so you don't clash?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "Can one drone be planned for two flights whose times overlap, and has that caused problems for you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "When you ask which of your drones could get to where a job starts, what should the service take into account (battery charge, distance, whether the drone is in service, airspace restrictions)?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "What must be true before you are allowed to sign off a flight?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "What happens when you call off a flight, and does anyone need to be told?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I can call off a flight, but my notes do not state what happens when I do it or who needs to be told.",
+     "question": "If a closure comes into force on a corridor that one of your flights is using or will use, what do you need the service to do for you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "Should other companies' dispatchers ever be able to see your drones, flights or jobs?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.",
+     "question": "Where do jobs come from, and what does a job contain?",
+     "follow_up": true
+    },
+    {
+     "id": "Q10",
+     "previous": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly along corridors between named sites, and sites have only so many places where drones can take off and land at the same time. Before and during a flight, things happen outside our control: the load is ready or not, the drone reaches the points of its job, and the drone arrives.",
+     "question": "Must the service check that a drone suits the job, for example that it can carry the load's weight or has the sensors an inspection needs?",
+     "follow_up": true
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "When the load is not ready, or a drone does not reach a point or arrive as planned, what do you need the service to do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I don't know.",
+     "question": "What do you need the service to show you about your flights while they are under way?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 3,
+   "of": 11
+  },
+  "desk": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. I work for all the customer companies and have no business looking into any one company's operations. When a closure is entered, I want to know how much disruption it caused across customers.",
+     "question": "When a closure is entered, what should happen to flights already planned or in the air that use the closed corridor or zone?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "When you say you want to know how much disruption a closure caused, what figures would you want to see, and is it fine if they are only totals with no company named?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "Do closures have a start and end time, and can they apply to a single corridor, a whole zone, or both?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "Closures can be planned ones with a start and end time, or sudden ones that apply at once. They are often amended during the day, such as when an area is widened or an end time moves. A closure can even come into force while drones of several companies are already in the air.",
+     "question": "When a closure comes into force while drones are already in the air in it, who must be told and what must they do?",
+     "follow_up": true
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "Who provides the corridor network and closures to you, and do you enter them into the service by hand?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "Can corridors and zones themselves change, for example a corridor added or removed, and what should happen to flights that use one that changes?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 2,
+   "of": 6
+  }
+ },
+ "follow_up_ratio": 0.23076923076923078,
+ "followUps": 6,
+ "of": 26
+}
