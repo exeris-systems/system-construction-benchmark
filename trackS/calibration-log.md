@@ -400,6 +400,8 @@ unrevised and is frozen.
 | `runs/track-s/2026-11-09-judge-control-claude-opus-5-5` (mutants `aa11f7f4…`) | `claude-opus-5-5`, effort `high` | `40baece8…` (version 4, draft 2) | **pass** — 18 of 18 exact |
 | `runs/track-s/2026-11-09-judge-control-gemini-4-argon-2` (reference `47eb79ec…`, mutants `d6bc096d…`) | `gemini-4-argon`, temperature 0, seed 1 | `40baece8…` (version 6, draft 3) | **pass** — 18 of 18 exact |
 | `runs/track-s/2026-11-09-judge-control-claude-opus-5-5-2` (reference `47eb79ec…`, mutants `d6bc096d…`) | `claude-opus-5-5`, effort `high` | `40baece8…` (version 6, draft 3) | **fail** — 17 of 18 exact |
+| `runs/track-s/2026-11-09-judge-control-gemini-4-argon-3` (reference `e2cbebf9…`, mutants `991be249…`) | `gemini-4-argon`, temperature 0, seed 1 | `40baece8…` (version 6, draft 4) | **pass** — 18 of 18 exact |
+| `runs/track-s/2026-11-09-judge-control-claude-opus-5-5-3` (reference `e2cbebf9…`, mutants `991be249…`) | `claude-opus-5-5`, effort `high` | `40baece8…` (version 6, draft 4) | **pass** — 18 of 18 exact |
 
 ### `2026-11-09-judge-control-gemini-4-argon` and `-claude-opus-5-5` — pass
 
@@ -427,6 +429,15 @@ With BR-04's item removed, BR-01's item still states it, and M2 has no single ri
 Opus gave missing twice and covered once. Draft 4 narrows BR-01 to staff of one operating company
 and another operating company's data, so that it no longer states BR-04, and words BR-01's base
 item the same way. The threshold is unchanged; both judges are calibrated again on draft 4.
+
+### `2026-11-09-judge-control-gemini-4-argon-3` and `-claude-opus-5-5-3` — pass
+
+The judges' calibration on draft 4 of the Track S reference. Both runs completed without error or
+retry, 18 judgements each, every response a natural stop (`STOP`, `end_turn`). Every judgement of
+both judges is exact. Both judges report 38 covered on M1, M3 and M4; 30 covered and 8 missing on
+M2, BR-04 among the missing; 32 covered and 6 partial on M5; 4 out-of-scope and 3 technical
+additions on M4; and nothing covered on the empty contract M6, in all three repetitions. Both
+judges are calibrated on the reference they judge subjects against.
 
 ## Follow-up classifiers
 
