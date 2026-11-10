@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguNKmgLLW46U2MvxUArp",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS8gYKEAgTGAI4AUIIdGhpbmtpbmcSDLb/pD5A7LsQhnamDBoMYnFJ9MxHJfXD1YHtIjCua9js/jg2FuyI8H4naLrovrJk25mfycCz/qxJ1RQz3N5cHYKeO96S9gLbQ/N9xKIqjwYr7vzh/NJeOXNxOqybnuwmmwfwgqJTP6ZE9gGLkO/a7lerkpg5M3/MTm2scLrmJ2rBaNygjxsQrs9l+t9fABOscqhhGzHorXjAUmLLHJj1b4QgbzOLs5HyyNjqADBUtbq1d5UBkz7HMMO1vnNXi22O0wRlaH5wCyrzti9vxBpyOPuAScKUPAqd816r+VjIhO8GHo10A2oJxMtKXgntUipNeHir9gqMe6Fny7XmB74LvM/KFyGr1cbiEsALYFJ0c1X/YD+8cWh5PxNG7MFOUubk398E39RUFyuh+DKLRihICEMGj6apRc6sfNUA0x3d5y0LFJn/IlB8T5OjChtCyYg3lhJObbJhm9v0BIxnK2S+f8oPWPt+JObGAvIW2W43i7SD7z7iIRhk9uQ1TRL5EVTsFYrEzqtvaP7Ew6JwbYCpI0/jJArasoiiKaq15n76L/JZ2fQnQeofUhlLQbzlqhk8klqvaVUErHU5buL9BtOgvG0qGKK8e7yQDnnBzudQHoIQbTzQtrfoIgu5E5UDKnycj60w7ov6Fwo/zsBS3tzmlITLADpnohOkG5e0voC/RXtuQmE7btkZfzHcGbS/QEl9Z8gjm8EX84Hyi0jBVbu4qWrTknuFYjsPjmc+/l1dn2ivv26sPFCOdc1aBrC43D3bacXgiv1HIl2jPtFUS/NaYTHKyKtQ1UdaaybeYYMl7KBs0CitUo5ZfI1SZF+WZHii9Uybllhbn8agpOIJa14hUp70Pw7INRdUos3dGxiLFp3v6c5ARV6svMBC5g+gd47HpK1MibhQMatW+NWP5fHKSwW1JZJz5K1J6RBxNHYXm1zKNTqLZ7H9Qm6USEBEzBTh3Vxpf306HQf16ndmpeDzyDcFpg5H0VvSmaNHFK1pAkzUGyVWks1a6L0rUMefGeY7TAfqn2J7K3assLaY235LzOp8VgZ+vfCLtu6Fm/LNgExaD3gNBonw4HdRttb7OclCjzQp/chXSUo0hjJDZ+nraLhGc/Z2XSWK0t7n/CfQV3MT1cjHyKNxqyglGzfXksoYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: When two dispatchers plan at the same time for the same drone or site, what should the service do so you don't clash?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1307,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 89,
+  "output_tokens_details": {
+   "thinking_tokens": 45
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
