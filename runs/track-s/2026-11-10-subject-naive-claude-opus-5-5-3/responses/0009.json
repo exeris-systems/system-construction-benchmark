@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguNJTsUfjqvgfnDQnUbf",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSjgcKEAgTGAI4AUIIdGhpbmtpbmcSDKttG03C2nCdkKEjaBoMZtjtHva0fw8oCyOwIjBRkDpca4V2pxMJ170zylPVGzGApqMmyCrnA6Q6L8sicFq2Lqfcubvm9lNMxwLRwucqqwaqR+YJh0GHG6Qcfcrw83aFL/WM17nwGs31LUxoxUHnNxYHGvCVA90GNs5AUiDt/ozQnsof5P2ocNByu7t/CCywe+RuiFwYTskOtCPc6DnPxeYhUTVqEd37X7UiaIwasFtN72N7EFUzoLrmUFEBgs70EihYPjgSjzXwUeENC35myPfdgNA3ZkC4NOIcYx1KzuqH274pAD/IgVBeL5Vc5H8LrubUZ4jNyS/21yctiibjMQayu3TDfZY9KCK4N9hLVMupWhHovhk6ifSrCTYFlNBcMKylg5Zxa0dOQ6A3TxwonfxhuMl9+Krvj5CMtqKq33nvUzleLvsITuYpsfF/scaJkiuyj6YsaP3EKss/RMj8b0FFppVd5cQ0ko+LsMh8LFQrGs+UM7E65Sk3MLAz9STfCNl3dvDx2P7X60c5nZZmMCciAWLVnr7lyPu/NwrOxMB2DU9OTfYjwza30vxzSXYfVu8iz/IxljIUiAx5PSbejlIvFKMnRtp3lK9DpxYHF5WSX7P63E85qGcuiNhikVC/3HnWA+45Py3KI5iF73AlMNxZ6uKgdxEX0NG6lZqTlGUC1xywv8D4pcNb3SKoyEn+ohsufzz3wT90npHe7rGLupRG8E3rZAa0zl2JYRRAa0/MJySw60HxJye9IzlkLisUt4q0RmTuvUup5lZp2ulljcXnU6IOECH/HDqjInuHqzv0G2uTzH7tp+scX4GcmtyJXXFfOZI5pm1cjZsH61BRgZbeTmPPF8MRIEfaTDNDuc+hqMBbbSCkLJHYy/qUjmtS5o1a4v4VvqAYW/6C+iZ7dXZLU/C8Nm+mm389vuejiJHFQZSfc3K5wXLxuUTDgahU47M4rCs+KjOd87A5aOV0uKSBwqLJm4t0xP9zxivXm9xbomu/kUeSFgKaqbDA49KHTG0ueDdYy/pYC/XGioC7qW6q9ZFNHuEAG5dOZOwjkfyYwMQBOaZxhwgAcD4kTj/Uz1+Vri3lw9SwIQbyy8xXmJF0qPSeq92G5+QC8qHhNHtdsrf002ShZm6pjx2ffVCeLGxrV9sVFP3UwwgFM2S1z3EK7ejmp0WCHwyOGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: Should anyone other than technicians be allowed to add, retire, take out of service, or return a drone to service?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 995,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 91,
+  "output_tokens_details": {
+   "thinking_tokens": 50
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

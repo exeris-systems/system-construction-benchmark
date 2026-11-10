@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: As a dispatcher, I plan and run the flights by deciding which drone flies along which way, and I sign off each flight before it leaves. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. I need help finding out which of my drones could get to where a job starts, but the company's policy is that software never chooses a drone or a way for us.\nThe question: When two dispatchers plan at the same time for the same drone or site, what should the service do so you don't clash?\n\nQ3\nThe answer just before it: I don't know.\nThe question: Can one drone be planned for two flights whose times overlap, and has that caused problems for you?\n\nQ4\nThe answer just before it: I don't know.\nThe question: When you ask which of your drones could get to where a job starts, what should the service take into account (battery charge, distance, whether the drone is in service, airspace restrictions)?\n\nQ5\nThe answer just before it: I don't know.\nThe question: What must be true before you are allowed to sign off a flight?\n\nQ6\nThe answer just before it: I don't know.\nThe question: What happens when you call off a flight, and does anyone need to be told?\n\nQ7\nThe answer just before it: I can call off a flight, but my notes do not state what happens when I do it or who needs to be told.\nThe question: If a closure comes into force on a corridor that one of your flights is using or will use, what do you need the service to do for you?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Should other companies' dispatchers ever be able to see your drones, flights or jobs?\n\nQ9\nThe answer just before it: Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\nThe question: Where do jobs come from, and what does a job contain?\n\nQ10\nThe answer just before it: Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly along corridors between named sites, and sites have only so many places where drones can take off and land at the same time. Before and during a flight, things happen outside our control: the load is ready or not, the drone reaches the points of its job, and the drone arrives.\nThe question: Must the service check that a drone suits the job, for example that it can carry the load's weight or has the sensors an inspection needs?\n\nQ11\nThe answer just before it: I don't know.\nThe question: When the load is not ready, or a drone does not reach a point or arrive as planned, what do you need the service to do?\n\nQ12\nThe answer just before it: I don't know.\nThe question: What do you need the service to show you about your flights while they are under way?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}

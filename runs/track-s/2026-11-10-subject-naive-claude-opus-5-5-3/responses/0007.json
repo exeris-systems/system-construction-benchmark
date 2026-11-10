@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguNHzRjbRsVGbo7V2s2M",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSgAYKEAgTGAI4AUIIdGhpbmtpbmcSDCriCFJ0g7FVRYJMbhoMwsHuYLKguVRYIzykIjA/f5Umsn2/g5oNPxYXbY6DFNt3hSygveDaa0xULT+osOCBUTnWDODbwCvCX6xArREqnQU9MotBpDJuokqVTpKPhrmnYH/xVnxCZ/wKFQC1tfvX27q2Qtbf7HiK9gIkNf8noIyPWyBWqlxXnDBksYjWdXh4Ic+xwxzaMToNTjC9cEo2wmDiFxHipXiMB3H3wvJJy6QmFZixuD4ByZoMQWy0Sdb3BGeryMY5M5b3JfQg4OjtCWT6LEidjChhoA40h81LJRYuIp/B4Pupw2CtxhhT6Yi4R1ez1iRg1xELhBFPMTP9JwAX4lysEqHLKTGm8+mB1YA9CPpSLP/odxcgiqjbtyxn3wDxQoVQStCKKOreegohKWwxQSHc11zsGENbU3Fa+sHt5kY/E5jV2bXqQZ3id64n706N2M+4bN+/Q0EJ/jSVh/FMSxUCuEOuJIOrKGuSrFizNmwBd/DeAPRi5uzTga4b8UJPOlhM/iZntyE8+ilLoDlT8Totm5FZ4ETpkthqNValj9xlOmMxBemZElFtCRLvkUhtOGHlqyuhNZz6B6ipMgBdGuVREk4jQhxcVHp7xTeAQxixReyCIj1IW7K6DPrKjnlULipFmdLu2Hmy1HkFk4wtG22USzVEX1wZNajI/1V1QCUTMkye46OYpiBYNUuR6ofJwKEqaoD8mjhCqzLrxYiSyBGu4MbFrnRBaLXrv/Z+4rejE6n5DoQ5VMDMMr8u5h8Dq/c0jLWzKKUCg9P/3gzJHHKUAVeTdRLSaUSSFCxjUINHm39g/FgNiqkvilZ34qxytKZfxb9GYnFahlnKEBnxi6vL8Ag0c5ZiGi0/dibqDBLJsx/e7lBlFggFypGu52uoEBO8MZi1qzvH6XODcG0bZyEOJv14UV6bv+Ktf0i9mc9difMRxXi0K7mDDBSu1v1Gki0zmqv1De6hm4XwN6zsPkrgz4/6nWXoyVoYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: What goes wrong most often today when you take a drone out of service for repair?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 934,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 52,
+  "output_tokens_details": {
+   "thinking_tokens": 22
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

@@ -1,0 +1,340 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "technician",
+   "question": "What does a normal working day look like for you, and which tasks around the drones (checks, maintenance, repairs, grounding) take most of your time or cause the most trouble today?",
+   "answer": "As a fleet technician, I keep our drones and charging equipment in working order. I add new drones to our fleet, retire old ones, set up our charging pads at our sites, take drones out of service for repairs and put them back, and send drones to charge. We carry out repairs and servicing ourselves, and regulators can ask us to show how our drones have been looked after."
+  },
+  {
+   "role": "technician",
+   "question": "When you take a drone out of service or put it back, what information do you need to record (reason, who, when, work done, parts), and what must happen to any jobs it was assigned to?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "When a regulator asks how a drone has been looked after, what exactly do you have to show them?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "What goes wrong most often today when you take a drone out of service for repair?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Should anyone other than technicians be allowed to add, retire, take out of service, or return a drone to service?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Should a drone that is out of service for repair ever be sent on a job or to charge?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What does a normal working day look like for you, and what do you need the service to do for you?",
+   "answer": "As a dispatcher, I plan and run the flights by deciding which drone flies along which way, and I sign off each flight before it leaves. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. I need help finding out which of my drones could get to where a job starts, but the company's policy is that software never chooses a drone or a way for us."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When two dispatchers plan at the same time for the same drone or site, what should the service do so you don't clash?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Can one drone be planned for two flights whose times overlap, and has that caused problems for you?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you ask which of your drones could get to where a job starts, what should the service take into account (battery charge, distance, whether the drone is in service, airspace restrictions)?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What must be true before you are allowed to sign off a flight?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What happens when you call off a flight, and does anyone need to be told?",
+   "answer": "I can call off a flight, but my notes do not state what happens when I do it or who needs to be told."
+  },
+  {
+   "role": "desk",
+   "question": "What does a normal working day look like for you, and what do you need the service to do for you?",
+   "answer": "I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. I work for all the customer companies and have no business looking into any one company's operations. When a closure is entered, I want to know how much disruption it caused across customers."
+  },
+  {
+   "role": "desk",
+   "question": "When a closure is entered, what should happen to flights already planned or in the air that use the closed corridor or zone?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "When you say you want to know how much disruption a closure caused, what figures would you want to see, and is it fine if they are only totals with no company named?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Do closures have a start and end time, and can they apply to a single corridor, a whole zone, or both?",
+   "answer": "Closures can be planned ones with a start and end time, or sudden ones that apply at once. They are often amended during the day, such as when an area is widened or an end time moves. A closure can even come into force while drones of several companies are already in the air."
+  },
+  {
+   "role": "desk",
+   "question": "When a closure comes into force while drones are already in the air in it, who must be told and what must they do?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "If a closure comes into force on a corridor that one of your flights is using or will use, what do you need the service to do for you?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Can two drones be sent to the same charging pad at the same time, and what should the service do if that is attempted?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "What do you need the service to keep a record of so you can show regulators how your drones have been looked after?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Should other companies' dispatchers ever be able to see your drones, flights or jobs?",
+   "answer": "Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Where do jobs come from, and what does a job contain?",
+   "answer": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly along corridors between named sites, and sites have only so many places where drones can take off and land at the same time. Before and during a flight, things happen outside our control: the load is ready or not, the drone reaches the points of its job, and the drone arrives."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Must the service check that a drone suits the job, for example that it can carry the load's weight or has the sensors an inspection needs?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When the load is not ready, or a drone does not reach a point or arrive as planned, what do you need the service to do?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "What do you need to record about each drone when you add it to your fleet?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Who provides the corridor network and closures to you, and do you enter them into the service by hand?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Can corridors and zones themselves change, for example a corridor added or removed, and what should happen to flights that use one that changes?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What do you need the service to show you about your flights while they are under way?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Is there anything that has gone wrong in the past with drones, charging pads or repairs that the new service must prevent?",
+   "answer": "I don't know."
+  }
+ ],
+ "requirements": "```yaml\n- id: DR-01\n  requirement: >\n    The service must keep each customer company's drones, charging pads, sites, jobs, flights,\n    maintenance records and problems separate. Only users of that company may see or change them.\n- id: DR-02\n  requirement: >\n    The service must not show any user, list, search result, count, report or message anything\n    that reveals another customer company's drones, charging pads, sites, jobs, flights,\n    maintenance records or problems.\n- id: DR-03\n  requirement: >\n    The service must give every user of every customer company the same read access to the\n    shared airspace information: the corridor network, the zones and the closures.\n- id: DR-04\n  requirement: >\n    The service must let only airspace desk users create, change or remove corridors, zones and\n    closures.\n- id: DR-05\n  requirement: >\n    The service must not let airspace desk users see any single customer company's drones,\n    charging pads, jobs, flights, maintenance records or problems.\n- id: DR-06\n  requirement: >\n    The service must let a fleet technician add a new drone to their own company's fleet.\n- id: DR-07\n  requirement: >\n    The service must let a fleet technician retire a drone of their own company. From then on,\n    the service must not let the drone be planned for a flight, signed off for a flight, or sent\n    to charge.\n- id: DR-08\n  requirement: >\n    The service must keep the records of a retired drone, including its maintenance history,\n    available to its own company.\n- id: DR-09\n  requirement: >\n    The service must let a fleet technician set up charging pads at their own company's sites. It\n    must not let them set up pads at another company's sites.\n- id: DR-10\n  requirement: >\n    The service must let a fleet technician take a drone of their own company out of service for\n    repair, and put it back into service.\n- id: DR-11\n  requirement: >\n    The service must not let a flight using a drone that is out of service be signed off.\n- id: DR-12\n  requirement: >\n    When a drone is taken out of service while it has flights that are planned but have not left,\n    the service must show those flights as affected to the dispatchers of the drone's company. It\n    must not reassign the flights to another drone by itself.\n- id: DR-13\n  requirement: >\n    The service must let a fleet technician send a drone of their own company to charge at one of\n    that company's charging pads.\n- id: DR-14\n  requirement: >\n    The service must not let two drones be sent to the same charging pad for overlapping times.\n    If a second request is made, the service must refuse it and say which drone already holds the\n    pad.\n- id: DR-15\n  requirement: >\n    The service must let a fleet technician record each repair and each servicing carried out on a\n    drone of their own company, with the date and the technician who recorded it.\n- id: DR-16\n  requirement: >\n    The service must record every change of a drone's status: added, taken out of service, put\n    back into service, sent to charge, and retired. Each record must show who made the change and\n    when.\n- id: DR-17\n  requirement: >\n    The service must let a fleet technician produce, for any drone of their own company, the full\n    history of its status changes, repairs and servicing, in a form that can be handed to a\n    regulator.\n- id: DR-18\n  requirement: >\n    The service must not let anyone change or delete a recorded repair, servicing or status\n    change. Corrections must be added as new records that refer to the original.\n- id: DR-19\n  requirement: >\n    The service must hold delivery jobs. A delivery job moves a load from one named site of the\n    company to another.\n- id: DR-20\n  requirement: >\n    The service must hold inspection jobs. An inspection job states the sensors needed and an\n    ordered list of points to visit, and returns to the site where it started.\n- id: DR-21\n  requirement: >\n    The service must let a dispatcher plan a flight for a job of their own company. Planning means\n    choosing one of the company's drones and a way made of corridors between named sites.\n- id: DR-22\n  requirement: >\n    The service must never choose a drone or a way for a flight by itself, and must never change\n    the drone or way of a planned flight without a dispatcher doing so.\n- id: DR-23\n  requirement: >\n    When a dispatcher asks, the service must list which of their own company's drones could reach\n    the place where a given job starts. It must leave the choice to the dispatcher and must not\n    rank or pre-select a drone.\n- id: DR-24\n  requirement: >\n    For an inspection job, the service must keep the points in the order the job gives. It must not\n    let a flight that ends anywhere other than the start site be signed off.\n- id: DR-25\n  requirement: >\n    The service must not let one drone be planned for two flights whose times overlap, even when\n    different dispatchers plan them at the same time.\n- id: DR-26\n  requirement: >\n    The service must not let more flights take off or land at a site at the same time than the site\n    has take-off and landing places. This holds even when several dispatchers plan for that site at\n    once.\n- id: DR-27\n  requirement: >\n    When two dispatchers change the same flight at the same time, the service must not let one\n    change silently overwrite the other. The second dispatcher must be shown that the flight has\n    changed, and must confirm against the new version.\n- id: DR-28\n  requirement: >\n    The service must let a flight leave only after a dispatcher of the same company has signed it\n    off. It must record who signed it off and when.\n- id: DR-29\n  requirement: >\n    The service must not let a flight be signed off if any corridor or zone on its way is closed for\n    any part of the planned flight time.\n- id: DR-30\n  requirement: >\n    If anything a sign-off depends on changes before the flight leaves, the service must withdraw\n    the sign-off and show the flight as needing sign-off again. This includes the drone's status,\n    the way, the times, or a closure on the way.\n- id: DR-31\n  requirement: >\n    The service must let a dispatcher call off a flight of their own company. It must record who\n    called it off and when.\n- id: DR-32\n  requirement: >\n    When a flight is called off, the service must free the drone and the site take-off and landing\n    places that the flight held, so that they can be planned again.\n- id: DR-33\n  requirement: >\n    The service must record, with the time of each, the events reported for a flight: the load\n    being ready or not, the drone reaching each point of its job, and the drone arriving.\n- id: DR-34\n  requirement: >\n    The service must show the dispatchers of the flight's company each reported flight event as soon\n    as it is recorded.\n- id: DR-35\n  requirement: >\n    The service must let the airspace desk keep the network of named sites and the corridors\n    between them, and the zones that group corridors.\n- id: DR-36\n  requirement: >\n    The service must let the airspace desk enter planned closures, which have a start and end time,\n    and sudden closures, which apply as soon as they are entered. A closure may cover corridors,\n    zones or both.\n- id: DR-37\n  requirement: >\n    The service must let the airspace desk amend a closure at any time, including widening its area\n    and moving its start or end time. It must keep a record of every version and who entered it.\n- id: DR-38\n  requirement: >\n    Whenever a closure is entered or amended, the service must at once find every planned,\n    signed-off and airborne flight whose way and time fall inside the closure. It must mark each one\n    as affected for its own company.\n- id: DR-39\n  requirement: >\n    When a closure affects a flight that is already in the air, the service must at once alert the\n    dispatchers of that flight's company. The alert must name the flight and the closed corridors or\n    zones.\n- id: DR-40\n  requirement: >\n    When a closure affects flights of several companies, the service must tell each company only\n    about its own flights.\n- id: DR-41\n  requirement: >\n    For each closure and each amendment, the service must show the airspace desk the total\n    disruption across all customer companies. This must include the number of flights affected,\n    split into planned, signed-off and airborne flights.\n- id: DR-42\n  requirement: >\n    The disruption figures shown to the airspace desk must not be broken down by company. They must\n    not name any company or identify any company's drones, flights or jobs.\n- id: DR-43\n  requirement: >\n    When a closure is shortened, lifted or moved so that a flight is no longer affected, the service\n    must remove the affected mark from that flight. It must show the change to the dispatchers of\n    the flight's company.\n- id: DR-44\n  requirement: >\n    The service must record every action that plans, changes, signs off or calls off a flight, and\n    every change to a job. Each record must show who acted and when, and must be visible only to\n    that company.\n```",
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must keep each customer company's drones, charging pads, sites, jobs, flights, maintenance records and problems separate. Only users of that company may see or change them."
+  },
+  {
+   "id": "DR-02",
+   "requirement": "The service must not show any user, list, search result, count, report or message anything that reveals another customer company's drones, charging pads, sites, jobs, flights, maintenance records or problems."
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The service must give every user of every customer company the same read access to the shared airspace information: the corridor network, the zones and the closures."
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The service must let only airspace desk users create, change or remove corridors, zones and closures."
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The service must not let airspace desk users see any single customer company's drones, charging pads, jobs, flights, maintenance records or problems."
+  },
+  {
+   "id": "DR-06",
+   "requirement": "The service must let a fleet technician add a new drone to their own company's fleet."
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The service must let a fleet technician retire a drone of their own company. From then on, the service must not let the drone be planned for a flight, signed off for a flight, or sent to charge."
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The service must keep the records of a retired drone, including its maintenance history, available to its own company."
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The service must let a fleet technician set up charging pads at their own company's sites. It must not let them set up pads at another company's sites."
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The service must let a fleet technician take a drone of their own company out of service for repair, and put it back into service."
+  },
+  {
+   "id": "DR-11",
+   "requirement": "The service must not let a flight using a drone that is out of service be signed off."
+  },
+  {
+   "id": "DR-12",
+   "requirement": "When a drone is taken out of service while it has flights that are planned but have not left, the service must show those flights as affected to the dispatchers of the drone's company. It must not reassign the flights to another drone by itself."
+  },
+  {
+   "id": "DR-13",
+   "requirement": "The service must let a fleet technician send a drone of their own company to charge at one of that company's charging pads."
+  },
+  {
+   "id": "DR-14",
+   "requirement": "The service must not let two drones be sent to the same charging pad for overlapping times. If a second request is made, the service must refuse it and say which drone already holds the pad."
+  },
+  {
+   "id": "DR-15",
+   "requirement": "The service must let a fleet technician record each repair and each servicing carried out on a drone of their own company, with the date and the technician who recorded it."
+  },
+  {
+   "id": "DR-16",
+   "requirement": "The service must record every change of a drone's status: added, taken out of service, put back into service, sent to charge, and retired. Each record must show who made the change and when."
+  },
+  {
+   "id": "DR-17",
+   "requirement": "The service must let a fleet technician produce, for any drone of their own company, the full history of its status changes, repairs and servicing, in a form that can be handed to a regulator."
+  },
+  {
+   "id": "DR-18",
+   "requirement": "The service must not let anyone change or delete a recorded repair, servicing or status change. Corrections must be added as new records that refer to the original."
+  },
+  {
+   "id": "DR-19",
+   "requirement": "The service must hold delivery jobs. A delivery job moves a load from one named site of the company to another."
+  },
+  {
+   "id": "DR-20",
+   "requirement": "The service must hold inspection jobs. An inspection job states the sensors needed and an ordered list of points to visit, and returns to the site where it started."
+  },
+  {
+   "id": "DR-21",
+   "requirement": "The service must let a dispatcher plan a flight for a job of their own company. Planning means choosing one of the company's drones and a way made of corridors between named sites."
+  },
+  {
+   "id": "DR-22",
+   "requirement": "The service must never choose a drone or a way for a flight by itself, and must never change the drone or way of a planned flight without a dispatcher doing so."
+  },
+  {
+   "id": "DR-23",
+   "requirement": "When a dispatcher asks, the service must list which of their own company's drones could reach the place where a given job starts. It must leave the choice to the dispatcher and must not rank or pre-select a drone."
+  },
+  {
+   "id": "DR-24",
+   "requirement": "For an inspection job, the service must keep the points in the order the job gives. It must not let a flight that ends anywhere other than the start site be signed off."
+  },
+  {
+   "id": "DR-25",
+   "requirement": "The service must not let one drone be planned for two flights whose times overlap, even when different dispatchers plan them at the same time."
+  },
+  {
+   "id": "DR-26",
+   "requirement": "The service must not let more flights take off or land at a site at the same time than the site has take-off and landing places. This holds even when several dispatchers plan for that site at once."
+  },
+  {
+   "id": "DR-27",
+   "requirement": "When two dispatchers change the same flight at the same time, the service must not let one change silently overwrite the other. The second dispatcher must be shown that the flight has changed, and must confirm against the new version."
+  },
+  {
+   "id": "DR-28",
+   "requirement": "The service must let a flight leave only after a dispatcher of the same company has signed it off. It must record who signed it off and when."
+  },
+  {
+   "id": "DR-29",
+   "requirement": "The service must not let a flight be signed off if any corridor or zone on its way is closed for any part of the planned flight time."
+  },
+  {
+   "id": "DR-30",
+   "requirement": "If anything a sign-off depends on changes before the flight leaves, the service must withdraw the sign-off and show the flight as needing sign-off again. This includes the drone's status, the way, the times, or a closure on the way."
+  },
+  {
+   "id": "DR-31",
+   "requirement": "The service must let a dispatcher call off a flight of their own company. It must record who called it off and when."
+  },
+  {
+   "id": "DR-32",
+   "requirement": "When a flight is called off, the service must free the drone and the site take-off and landing places that the flight held, so that they can be planned again."
+  },
+  {
+   "id": "DR-33",
+   "requirement": "The service must record, with the time of each, the events reported for a flight: the load being ready or not, the drone reaching each point of its job, and the drone arriving."
+  },
+  {
+   "id": "DR-34",
+   "requirement": "The service must show the dispatchers of the flight's company each reported flight event as soon as it is recorded."
+  },
+  {
+   "id": "DR-35",
+   "requirement": "The service must let the airspace desk keep the network of named sites and the corridors between them, and the zones that group corridors."
+  },
+  {
+   "id": "DR-36",
+   "requirement": "The service must let the airspace desk enter planned closures, which have a start and end time, and sudden closures, which apply as soon as they are entered. A closure may cover corridors, zones or both."
+  },
+  {
+   "id": "DR-37",
+   "requirement": "The service must let the airspace desk amend a closure at any time, including widening its area and moving its start or end time. It must keep a record of every version and who entered it."
+  },
+  {
+   "id": "DR-38",
+   "requirement": "Whenever a closure is entered or amended, the service must at once find every planned, signed-off and airborne flight whose way and time fall inside the closure. It must mark each one as affected for its own company."
+  },
+  {
+   "id": "DR-39",
+   "requirement": "When a closure affects a flight that is already in the air, the service must at once alert the dispatchers of that flight's company. The alert must name the flight and the closed corridors or zones."
+  },
+  {
+   "id": "DR-40",
+   "requirement": "When a closure affects flights of several companies, the service must tell each company only about its own flights."
+  },
+  {
+   "id": "DR-41",
+   "requirement": "For each closure and each amendment, the service must show the airspace desk the total disruption across all customer companies. This must include the number of flights affected, split into planned, signed-off and airborne flights."
+  },
+  {
+   "id": "DR-42",
+   "requirement": "The disruption figures shown to the airspace desk must not be broken down by company. They must not name any company or identify any company's drones, flights or jobs."
+  },
+  {
+   "id": "DR-43",
+   "requirement": "When a closure is shortened, lifted or moved so that a flight is no longer affected, the service must remove the affected mark from that flight. It must show the change to the dispatchers of the flight's company."
+  },
+  {
+   "id": "DR-44",
+   "requirement": "The service must record every action that plans, changes, signs off or calls off a flight, and every change to a job. Each record must show who acted and when, and must be visible only to that company."
+  }
+ ],
+ "unreadable": false,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 29,
+  "questions": {
+   "technician": 10,
+   "dispatcher": 12,
+   "desk": 7
+  },
+  "limitReached": false
+ }
+}
