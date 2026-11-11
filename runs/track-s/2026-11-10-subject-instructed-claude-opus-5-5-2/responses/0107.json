@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguXyDVRTMTxD4h6YFwPi",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSmwYKEAgTGAI4AUIIdGhpbmtpbmcSDGFIaoRzYnb8/N1JJxoMJQy2cCX4yBJ13oiBIjDVYiL6z6WzNsE2GrcHLT1Mc+I59C4R8X0foEdNegc9rhgdnVq5bTT5Mk4ZqicFa80quAWBAmVkvZOIGsEVxm/jvXPVhC1uS2tEb528bFthVNtqIl5AqNamRHUmNhZqSOY1CtUemwXQAe7FO+MRL616MeLIDY34pg2ub3EVuEDGBNPEmR2GkEab0Z2iw/0Rrsndv5076BHKAWcR2eHKuI6JtLym0cqOn9VW+jEf6kjDf+/Fo9Uozxm5rokPe2WINkpSGfseiz1ao5X8YYe11Gj3fpAgyIJxPSURT9scDv2FxM8ChZsS5t7dtnGjDHF4sGGjpps1sdVlIc7vnly8kpShTN4GO44jr2G7gEa9IpUG31ZX0a42eDv6JVMmBtDtxIEWRgiZTi/bYuACBXMiyBGkkhRK1TuYYRPruWMLQm06f9yZ4/cLh1TR7zcvqqUwCiNomsTBZNsaeLCE+50OtknQif/hC2Ce801eJr5kLirTKIhLANaK0CyHfkovt0iLECDiOI8+HwBqJraFZFqGiPgbSe7aqfybAYYMsj/XL2I+d1r9IhTm7AEixWiawgq6PHWEOKmftWOcPB8JXPt2+8R5O+7sKXmivuKeozHO08h/I8ZDFhpjiBWYkvCrtKeToRQ+85H9LNwlSzoDjkrNGQs1rypuFfIgrhf/6rhK3Bos2pjDbuIDy5+0xB72u+ECw344dHHR1YCRC/M956yMzMEjOJFnZf8iFs4fAP2mI2nz0Y2kUZUn2fyif+KOJoVl/drO2kISPyT0qf0q0bv/6e2c6vi61PKORScVSePA61qs6nIo/uTuVn2QSqflOkC/lRf3IX6XK4b/v8fPytGcLysJhbNiCOrrlPOIfUMBJXxrSyP9+AAyVNEKgwlu86RGVCrv2JEZ7FcsuF2VMaA12s2MQ7gHMrwigyMl+LLCzJHGMlPB+NKWPtCEkVOoirfMHQSBo+ipt/mDCTdkqQKoY8P5L5LvGYEP6FFyjOAYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "What was the worst day you've had in the last few months?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1280,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 30,
+  "output_tokens_details": {
+   "thinking_tokens": 13
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

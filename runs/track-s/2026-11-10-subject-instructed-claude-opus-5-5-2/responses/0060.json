@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguXnGuVuLLhsoS9v4BQH",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSmQYKEAgTGAI4AUIIdGhpbmtpbmcSDA//6MDIKa//U4QLiBoM/njfcu/gjJ3OEKb9IjBGt4Ig9rXsz+waikGC5x6aJluGKodnpX6473+7KKDHLNVaaCPkg9Q4CuCpzT3suaUqtgW1kryuGgxzWC056J26RG321ULO+yabXnanlE7Bb1lGi5aTq2i2/gmAdl9QgsWWlnUxpaio1wkRmLz/you4mBjGQJAYMIvDSZEtcg63ImZI4hbRAwPAQDByKh0duPjF+pP8doejt4Du2Cr+rifSv6wEYPvxeU0nau3xvxjuZOeeWcP2zEE3gWhIKfZyhjw7gGvEgBkyeKgxjf8Le/+7vqZzm8WVeZTapgyb2hqdJf+6n75ysFrFHpGpif8l1QCx5N1wejTtHPoQ0K9O7I9Njsttguv3/ZnbOreFkXTD7ou5TktdClDbN/G7FADwXeBMc8YtMen51VHF/fqfbK0rD/NVfoSCitaXNJeCXeCUJWL7TdKhrPxfzJtkY9YyLJJOSm1tDhmDeln0/wVuLKaYU8DHfYMNvK+KVGMIv7J0o48gr1JGuxy5YTaAW53g3JPk5ayDvxoKUqGvBaejjvmYoxQs4OZ0MQ4bC9KhvgQUN918XUyRMk5+LqXQdOHe21lqoHz+IGXc2MqUSwad/eH1RXnSESM9zU4h3buRZWd4YyD5yA4mJTlQOtjueRKAyp3ziHGk5bGK0GdBVv3LbaD4+AKU8THs2JoXwkEW/t0jCnCalJdbIM8Kh1Cdf6EArtSq6+ZM8NICs6SwvN61QQOwMHGejNhIRyqIUtQVpy8NUPGwNsq4kkZ3Bnedv7FxRpwCzTuqTbFZKK0GZshgjFUhnvuHR88mSa+YeaSUKLJHNol9e3TT1KCHcYvbug9QOVEH4ktP8NOFemetEfTRZu1K4M6NSW+73N2VS+UCpvfr13n7gBCvrFUIX/eFwA6D6BlRGfv7cbX4vYq4X1yLQk4ChReUp5niFXdrBWjcqJjBYH+4+ywpkt5psIC/qitJ75b7U4idMZFFvQfoYgCqwmapU8EZ8kxxljdAGAE="
+  },
+  {
+   "type": "text",
+   "text": "When did you last call off a flight, and why?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1042,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 29,
+  "output_tokens_details": {
+   "thinking_tokens": 14
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguXnkFoPABFWoZXgpw4S",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSlAYKEAgTGAI4AUIIdGhpbmtpbmcSDGipYicPtBU/SGKJ7xoMFXLRkrNES4QofgiLIjAYd5Y93YHW1AWoVuypdmU1W8xxhA0VcJ+uA9e+6O4n8DWRRfP1nbaipRljdPCED2wqsQW479WFBZS/puBKvr0qeHCIr+ND5oKsQLqbev/Uqhh/lpRWMRWrfOKvCHuTDSx7ym8xrAyQSIQu2CVIJ+XQnArdVAdR6fMEvB7nTvBgA1IgJWrbDF3Pi4rHC+GhGVvtGcH37W8kN/5gGJ+yT9exqCWp9YJIJN3qAt8xHaDltSanQtoYqUixqUppdgzLylTt0u83XA6m+HTjqjim/VHdu8m0M+bA/kWT+a/C3csAnuPiMzre98efFonLydqbLfaUepFTjwtGBMDi4c0zV7zzgSZwtSMAifnmCZtTKu2abdLiq5wiIZ6v9SW8J++DnRQH+bSD5sCA7R57+h+xlLa61l4rK+JFPposvPkCay3QkuUFJTN06bHsp+lqrHe2a6XtGpaIXw6OWamkKQGt+3movEbsIB9gFNCzJBGDz+wYw4Ownbu6ZymM+2f6wC79ejWp+gXGmbwSQC93+K5NOwsvZ20oRI6QKUCJgbkGNK0x+achbtAod1/nk28Puc/7PnOom4oWiP0vpw6QuAA8wtbsdPGRtOoghpofVbpN7HSj/v/VjS1AnYld8DmRP0i0PKCVq7uO/5GM0UmoigbBmSf0dSsSgSgtofn/erGQ1s8tANA17i2TyFSqEXq1Hgwa3Psm8udCasgYDXpYe5JqrlsvPxO9dC45THVfLnLRzAySm0jODbzFZD6JnofR2E3/o5GkaiTwdXx+kK54q6/qO7bW5G8VS3aTB3StG1zU+Yh7Cgb/mWdZBRX7yr8tM7TCgB94G0xxB3gJK9iph/QFqzK0mNOFZgzv1WMU63gwb9uZOvQM/duj3O5CBh8wWysiSOItzxiFSKODT00r8tV0sZRqaU6qnKf3THbxjB6sbc4LmwIRecUwugM0ZIg0DBY+lbIZikXUmIFbUkkHTPqpvSqqTkf4CxgB"
+  },
+  {
+   "type": "text",
+   "text": "Who gives you the work you plan each day?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1080,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 25,
+  "output_tokens_details": {
+   "thinking_tokens": 10
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
