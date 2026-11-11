@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011CgwjPpmvZynU2cz6UdhUV",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS5QcKEAgTGAI4AUIIdGhpbmtpbmcSDIbMvW6C468BItrGbRoM6S8VEbDHZOWs6oIJIjBRX26LQYoB24cXKq2FQKI6SzGyh3Wrwv84TBQJXM+pMiBy+2WHoTIj4dZ8902TUjgqggebGem7fj+/L6LTwXDVUXFHzQjJiARJSs69wz8SiAwM1BY5upEmg/c02+gRsnetjZRlUcH6stWk5qD7v8JIDn2ee3IXksXD0sWscPSCYrculUYFjezWaj0UcRc28R/jrKWjxImXeaDOh5kj1nv3YEM1UiyVUoIZc9jfTU/Tce2bDTtmindpzxMYlCYdSnxJw5j0Hgu1Fj4KIHUXV992LC4fDjM7fOK60BUXCivGO2mAiU8Ma0P2YNZXPKezxeo55lmDm8dPwfZQbZRkzceb+tFSqVgRxTyGJjSUQ57BcopF61ghHo3H5upLyUBAmi15/OHS0IxRuFirCEq8JDGWaX5zzZbdNFVHvR2veg85Eb+1Tkap0PxTJFjiycaeas0Y4FXCkH66OwYJWyC243yehTydzB49LlJTZRZurlqxD+ZQCo/vCSfGrYQI6McIeSroLBjgJeaFhOzP3sb1iXRjMUCeXAZMd2X/hKfcdWDlGMf6nmPsYVEDcOzBHjIT5uRgpQAa85KJ+W4IqpMcG26Jjyf7X1Bm8Lx3VKwOsPRalb6g7Rw5sr49JQVhNjcw2g5DL8TFT4lXYuKbEBtWkV7WY86LTPsc4KRZIJB8117euV3rgWYrNii7ATxfVCQj/19mPDM/qkZA5IVYs8d5ZLlUQxVMzDbK50F8aJcXlsSFUPbCNNd0glm+/lUkUgieHIH5SHE8sNV0KB92nORUBC5SzEJ1YpmlGdcMT7Wn5gNyIJFTxi8CLtV80zjzigWoAHkmDb2PU8jfH052Xl9c1V2RX03q3kgTYlVGj2dJUdhVaW3ljWkEE7CZIGeNeaoHpAL1dpzAvahfdYMAcvB0FeDdkUAo03h/gmWEZCvSezwe2oDHfnTW165gMRpFIz1bR0cwJtzPzL0a+KMyUmk1xgUzqGBobDyR4iyoGI/NtL6v0OwBYVLNmuei6JdB0f3Id6vKMLB4CEOZUsd0Q8irrQmB6VzGPxdhjkIsnA/5NKKTiqHyDSVb2YxJh5pQeJ1OtOpYE6fzuP1hDB2ToEEVMAlbh6q51COi82Or9Vbm3TQ/TKL7jQUFmBxmSzwOOvNLqxhUz820L0qsveB7NJNWSRIRnz2j0cr554BTK4hfHpTALZ9aNKXX5AUyr86LzJdQkFPeZi/In2cshYUeo182g931vN+ni0DirOEuF2Myz1SHOT0RpNtCGAE="
+  },
+  {
+   "type": "text",
+   "text": "I've asked several questions that you haven't been able to answer. What makes them hard to answer?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1230,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 113,
+  "output_tokens_details": {
+   "thinking_tokens": 83
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

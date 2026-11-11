@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011Cgwjh8uZASXSpBT9rUgox",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSoAcKEAgTGAI4AUIIdGhpbmtpbmcSDAdGrgPIfHSgUva40xoMs4YdbUtVGqLQFnEdIjAN60bvsb/4eikmAefTsXMv848ZsLWfqhNkry2dXN0dQqoqo9h1sYO3Bpb0TWP4RhgqvQbKk8/oO9JMgk9o4haOeku0cpL7/QjdBuJsf4m1wEZBHe6zNi3ceC7epOl/KTsmdpiJtXPDy0z+DO6l0kd5ZXudOzExMHcK426VkBzy5SlNJBBv6c2TGyvkoRQ0ZlM9WtFs1DGNFQH+KIxzEKNV93jT22EPbZ7s+M5MDbpwOSrV6UrPeeNVSDmGYE7u5c3XCZBNqGL5YJL7MmOllRHuRPhhqht35iJwu7KoNNUfmAj+5ejlp3+BSKZvEiUNY2rchhcvzk3zWjgfGBNA0mDDzUMJz+3zK0z0TSNt5hvuVKUI4y0KaCGjl8T8SsQurjviMz+CI5YX4pmQ0tdAMsdljERt//U8iPuENy3oQWAQ1UqXjaRP/EJOqLXun2cAUA5culFQzb63k8zv7X99Q8Ed32ZCQbDSpIDXX6RCQ9UWQ9XOya5Ciyv071bvUm9TtGGhCew6c3dJbnEYSLFm+tnc9DzRCuwBc/Tv13yN8uGkqQ+2FyULcdHyvgPInS7zVgJgcQ3jZ3vK4Ji+9pD4eKuE4MwprU2e9SsUHwJ7rlnFU9XKO79SqOOqVoIfVkIMy5+H6jaYq1LSaHJuU4o0GlyWFLo8ZhxbIXhuLpBYyIk4Ep86UmZdGhfMfsujAB6hH+pd0HhvKz6Q/Wk+Wgh6RTrn9asx+UwGn9cpNqFA7FGLe7ElOs82nqjr6vEGBC+04OKLw1AWT1zqMSYoyu1JCuSuqOUOwLLdQmHYhIEWnMPj+WStY2av2oIr8Ffl6uptImmps5Ujul8eMlDBv/0bUxkqaJcM56cVTUM1PxjxNNuQ8wm0TY6MmYotiSH58H/fDpDCrLm4Ykprmd2FVFF89E0YPTrRnlgvut/HjGuVypweL3pZm19q25mBvZhTFHrTBR4+WZB5LSzGSXo7RAwtwzn/ZbbPZJzL42q3+HBozIOnjx6adZAogaaIii2SQH1VF0O4tnWUtr5kc6I2tMZgeabc0akKcvkvJWwbCOxQ+QQH1KzGtGmJWqtXVS+gUp01r4OR3U8TaulQx5iZE9s8pykNsG4p0i1jUtv/BR/BTelNzEr7Ze35RHEKsbBj2lXkoOanTkVNUbZNmkd0X8qMUOuvGAE="
+  },
+  {
+   "type": "text",
+   "text": "After the service has crashed or restarted, what do you need to know before you trust it again?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2697,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 63,
+  "output_tokens_details": {
+   "thinking_tokens": 36
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

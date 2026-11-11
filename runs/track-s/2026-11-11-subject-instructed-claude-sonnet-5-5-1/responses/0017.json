@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011CgwjBSY7wmPYg6vxxVTW1",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSqgcKEAgTGAI4AUIIdGhpbmtpbmcSDL4LN2ebGvvdVSzrMhoMZUX7DlSU8CvbksksIjD7QT4p4weWlJuH38YIaHaq6O9QH920Vdt3e3hEnzx1GWYpxfgcsD9SJXeWYnqEAwgqxwaYez+IQDuBf9ZGZJZlDXAzCiJgDOyD4cPR7K0wP0hs2NwJu27rUZcu/v+6P2DPbbHyVr5j4lQYylv3sXGXRViUSQ9RoYpFBMYyMeuX1fm3s276fPd6ggGuJgQZQUxMzF3k7fIrBno33PluoS3xHh72CmWfJARZsu5H7VY5Bn7SHRz6mj/zA10wpCoLWOg6GH5WWqARwN4daS68p0JjJCPQQfam3+RzVf7kZroQnsx4aNEAKOHnn9uNZffwcsnblb1w2RoVR1LI+h9OulBZOO9DGB4N5yikhlZFkucojhUZ8uAVP14uxBjJohX0DukV1icSxPOY9r/gDenF2YGo7fonSK3f/CnIQ4AyCQeJxG2af0+Bi4w4eaCzztWeUZ1ZX+RGE2/hSPWna1EehjIEOU1w+DoqjPGxvzvVmV59ZiGF69YWxDkI1NunN1UPSOP04zUApgRzcWEqggpjt6iq+cdEUMdh1Mp3BRZtWcaqKZIVOIW9Zt2UD+oHJcPJI7XOtmZ/XsI8aws0aBOqJADHPxV6qr2wMRuFFppNYiRCT2p54vDxiWANB2L/QG1tlNcAdso8LEy59slI9uRVwWnf7obahUF5VekhWtLpSedrwleAfoMfePJ9JTb5+nfl0XRu3lE/uXi+XsXnmncfH/tSoMd0p34aZN/Lv5YLrONCrtZ4ta8udUyGwtyh7S30gkp5TAqHYonxGWkXTNhFExy42q5u0yHJYiNcbVwWG890vAIg1raEmUCslrqseYRj7loDYy30Axga19POYfxpeIq8vRnjTEk1vN958cdIKKfvPEpnhCNxPEMGQkh83tv0vxOI97UBMuljDSJMCSloH0BS6DP7rtc8hHRcPsMcTAXF4nlzNL3ah2ekiPNeiMIqWELCmn88W4HmmP2uu+dy9Fv6IUU9xuRfeLSrMoAtsVS5GA66Tsi2kEJ5+qG9BA29mgIXDOZaS5h6HTY9f0YlZATzaO3nYVGw8cv47N+bNShPnW7Hkz2l2/3cFmrSwOk5w0lz7lML9ZuhorlImPNy2TY8ZSuImxKhecDQc/CHXn4THgDIVSSp+7Ar0riCJCt3s0QIv0FtqozuD4PQ1rov+DWGQw0rkcyd6ol8OxgB"
+  },
+  {
+   "type": "text",
+   "text": "Is there anything you double-check yourself before a drone is cleared to fly?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1629,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 79,
+  "output_tokens_details": {
+   "thinking_tokens": 53
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
