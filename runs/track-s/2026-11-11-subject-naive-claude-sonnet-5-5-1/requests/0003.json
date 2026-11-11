@@ -1,0 +1,29 @@
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSqQcKEAgTGAI4AUIIdGhpbmtpbmcSDEBt/yUP94Fo9iDUQRoMn+pIu9NA/RttCcS4IjD5zv9XpVnMr802PDIwc4tXcA58jNwL1QuKKMFUq6KODBiRXhdCMQQ7x+yxLnPy0KIqxga+EVTh2oELd9IEL/3DA5e4An2cwWBq6Haxotr81WLCH5xPwOTYzzWTO1C+9lmZ0N37H0IVMGdTJEvCgT3rCMWH+/xUE+2yTHzOa9lphZMbYTGAcVkx6Q2lwcj+Pc93N9+8pqudNXdIz9R2AErIuStP/c1GFw0fA605Uw/rzv78rvst77X/ouYgsRTyhigWEoM+83nlDutXWdfbT3zwS6TlZk2Dvjpd1tr0iH8OAc6M2k3lNMsk7CkAGSXoxNT2bZFc2/slh9F5ExxAG5ELFTKSAXJXEfLuJ4OE96NOQhR5EEa4d5v9XtYvxNpLOteU3VMOfsqDIuR8aoyrPX+09MasqD+5Yk+5reCHD7vxoYQI6vbxzmlUq9A7oyrvYxcQuTi4OwqtZIZ6BmN51GNFzFFdkLUgdtsQ50Ku69KEidmZXG/HzhX5c9TDr94lt1m2Szt+ySyYBM8dzzYtq4dwoT2mZ4Du4BXWLRJ7D54H+YFP7baiP15srHoaweeWwv/EG+TIVQ5S1kWsc+mj4wyX83vrgIuBRqmJwC5j+2i8fYD0A++H5Z4m0Zi0AkrnHMtFVfFBPspHLlrEVajQChACAlhrgD8gLCl2guyjorbSd5VKBRtpywVyiWKMoKpvA3mbPYcZuI9G0lf1s9OMZ8erEwjcPznZXSwhvTs2i9LPbLNvonz1DVtEthOddm9nH5ZzVyJ9pFnaKRDRoGylJlJlU8diCQGvmWUItUbyY+pohSGxeOmZClfts757amXpZbuo7wt3+wDshmQQIBVBY4nBfuGVAxXkjIIXQ3WKyT+ISvxie8o8KVUwNKSRN1/+x6TKvE11edI6sl7vW4ts1civ2X7p/8bTo4gHfVoNgLdI3pOjdSjNjpP+kL93E8eMbdP64mMKqj5JtJG0TOuixJJYe9ZbRh++LD5MWuoRdSusEE7glTxJDOer4VcnHRgZSWbWFtdwNR2bNupBXUWQmAdqhvbWkcMJSzF4FOn/MkBk0Ha3XEZsRw+U5yYZ0Xb+WygMnjd4E1i6dLmre00JVWsUB9Zx6G3oBr5SW0nkPlYHun5ijJLdcxAi/1jJxTRE2BufzCi7A51YD3vgSZ2CVBHEIYboBAM53rYWGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Walk me through a typical day: what do you do in the existing way of working from the first job of the day to the last, and which of those steps do you most want this service to take over or make easier?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I plan and run flights as a dispatcher, taking legal responsibility for deciding which drone flies and along which way, and I sign off a flight before it leaves. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. I want help finding out which of my drones could get to where a job starts, but our policy is that software never chooses a drone or a way for us."
+  }
+ ]
+}

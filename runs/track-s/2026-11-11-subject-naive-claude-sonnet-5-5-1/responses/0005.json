@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011CgwhgzEwENFRaHLwDQdVd",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS+gUKEAgTGAI4AUIIdGhpbmtpbmcSDBqmBm5o/xDBynVPKBoMyXnm974xV+Qt80zbIjCC7HrnuIKNKNY2c+Ff7IGH3WW03I9pgoNzUtQoi4R05H3wvXZ+3A4USR7jwK/I9vAqlwXRMUDZdXBb+4IWq74TVvJQ/WWXjZq8+OoCa92PoUfuS1YHC2RujDTgI3sIupP7Bu7ho4hIqpsBbShu08R0OKjWiHSUVtSGwFryEesfGXS9h7shBe9hxMj/zk33j15S/sMz5++KZ+FBsS6ULLIN0+eNtOj5yco93ZJpXY3WhwdV6OOIAeOeXxAyw11bi9zanYlR5z/vYltkfS9zsxpOKnnLJeQhw3CVq5KXqCRUpEs2h3VLPFn7+ym+LpVQ3cFFu5wbS9BHUGAEp9rHNF1yS7VE2LuUYejmQ0emdT8fIu/kAA/KmJ7HTbZGpepcFJuOpw/P7k+qLbcZG8vYqsYeTI/W3QmQ8yaNP0WDNDwsGDqhka7Giqd9ILdtKbMCeFwu5h2G8bit8Dn0QVYUfAjQVzu8+BZD76mXPlua7ppraqYz8SDTBGErH3dkwNkE2YA9bVhq8z8NLXpmsGHbmFjBW0yygS9eYh8Qp4qlsjmb+cOUxSzlFAArhUn8eSEYHNuMvOzMLjbAhtTIF0D2CfeCVUyW0HqLRv+d1z9G42Gy/kr/8SZvdIixAIoOp2KpzTdOlAzFSJx34Oyi5w8sVsyPZs9L1Bt7liNb1+KTUCAf+oKHkQKBVYUV+8GfLm/WKCw8Us0upe1e+uV0ue2CBFBoR3S+nLMA4o8d9+cG4yNwLKGDzj9anlg1/s4hdQXGI0LK8sMUgoKLGot4onVdWqGWr2QWXMuvEBMv3CYY2MOUgaFCNB6r3TZqU5tfqnCkYn4kIIUvR+DhC4KdAa4Y1XQd4N66BmyBvz0yRHUQpiKjuWmH1kxLq5ROoMWsLKBi9ImzkZBsJ2Wvi/EC9trWKUq8fSA7p9lAuYEsm3GMeWwunaYB5og5Wg4MCO4YAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: What do you need to record and check about each drone (maintenance, battery, faults, parts), and when must a drone be kept from flying until you have looked at it?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 978,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 71,
+  "output_tokens_details": {
+   "thinking_tokens": 16
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

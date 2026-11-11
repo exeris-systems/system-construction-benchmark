@@ -1,0 +1,73 @@
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSqQcKEAgTGAI4AUIIdGhpbmtpbmcSDEBt/yUP94Fo9iDUQRoMn+pIu9NA/RttCcS4IjD5zv9XpVnMr802PDIwc4tXcA58jNwL1QuKKMFUq6KODBiRXhdCMQQ7x+yxLnPy0KIqxga+EVTh2oELd9IEL/3DA5e4An2cwWBq6Haxotr81WLCH5xPwOTYzzWTO1C+9lmZ0N37H0IVMGdTJEvCgT3rCMWH+/xUE+2yTHzOa9lphZMbYTGAcVkx6Q2lwcj+Pc93N9+8pqudNXdIz9R2AErIuStP/c1GFw0fA605Uw/rzv78rvst77X/ouYgsRTyhigWEoM+83nlDutXWdfbT3zwS6TlZk2Dvjpd1tr0iH8OAc6M2k3lNMsk7CkAGSXoxNT2bZFc2/slh9F5ExxAG5ELFTKSAXJXEfLuJ4OE96NOQhR5EEa4d5v9XtYvxNpLOteU3VMOfsqDIuR8aoyrPX+09MasqD+5Yk+5reCHD7vxoYQI6vbxzmlUq9A7oyrvYxcQuTi4OwqtZIZ6BmN51GNFzFFdkLUgdtsQ50Ku69KEidmZXG/HzhX5c9TDr94lt1m2Szt+ySyYBM8dzzYtq4dwoT2mZ4Du4BXWLRJ7D54H+YFP7baiP15srHoaweeWwv/EG+TIVQ5S1kWsc+mj4wyX83vrgIuBRqmJwC5j+2i8fYD0A++H5Z4m0Zi0AkrnHMtFVfFBPspHLlrEVajQChACAlhrgD8gLCl2guyjorbSd5VKBRtpywVyiWKMoKpvA3mbPYcZuI9G0lf1s9OMZ8erEwjcPznZXSwhvTs2i9LPbLNvonz1DVtEthOddm9nH5ZzVyJ9pFnaKRDRoGylJlJlU8diCQGvmWUItUbyY+pohSGxeOmZClfts757amXpZbuo7wt3+wDshmQQIBVBY4nBfuGVAxXkjIIXQ3WKyT+ISvxie8o8KVUwNKSRN1/+x6TKvE11edI6sl7vW4ts1civ2X7p/8bTo4gHfVoNgLdI3pOjdSjNjpP+kL93E8eMbdP64mMKqj5JtJG0TOuixJJYe9ZbRh++LD5MWuoRdSusEE7glTxJDOer4VcnHRgZSWbWFtdwNR2bNupBXUWQmAdqhvbWkcMJSzF4FOn/MkBk0Ha3XEZsRw+U5yYZ0Xb+WygMnjd4E1i6dLmre00JVWsUB9Zx6G3oBr5SW0nkPlYHun5ijJLdcxAi/1jJxTRE2BufzCi7A51YD3vgSZ2CVBHEIYboBAM53rYWGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Walk me through a typical day: what do you do in the existing way of working from the first job of the day to the last, and which of those steps do you most want this service to take over or make easier?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I plan and run flights as a dispatcher, taking legal responsibility for deciding which drone flies and along which way, and I sign off a flight before it leaves. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. I want help finding out which of my drones could get to where a job starts, but our policy is that software never chooses a drone or a way for us."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When several dispatchers at your company plan at the same time for the same site or the same drone, what goes wrong today, and what should the service do when two of you want the same drone or the same site slot at the same moment?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Several of us plan at the same time, often for the same busy sites and the same popular drones. Sites have only so many places where drones can take off and land at the same time. I don't know what the service should do when two of us want the same drone or the same site slot at the same moment."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS+gUKEAgTGAI4AUIIdGhpbmtpbmcSDBqmBm5o/xDBynVPKBoMyXnm974xV+Qt80zbIjCC7HrnuIKNKNY2c+Ff7IGH3WW03I9pgoNzUtQoi4R05H3wvXZ+3A4USR7jwK/I9vAqlwXRMUDZdXBb+4IWq74TVvJQ/WWXjZq8+OoCa92PoUfuS1YHC2RujDTgI3sIupP7Bu7ho4hIqpsBbShu08R0OKjWiHSUVtSGwFryEesfGXS9h7shBe9hxMj/zk33j15S/sMz5++KZ+FBsS6ULLIN0+eNtOj5yco93ZJpXY3WhwdV6OOIAeOeXxAyw11bi9zanYlR5z/vYltkfS9zsxpOKnnLJeQhw3CVq5KXqCRUpEs2h3VLPFn7+ym+LpVQ3cFFu5wbS9BHUGAEp9rHNF1yS7VE2LuUYejmQ0emdT8fIu/kAA/KmJ7HTbZGpepcFJuOpw/P7k+qLbcZG8vYqsYeTI/W3QmQ8yaNP0WDNDwsGDqhka7Giqd9ILdtKbMCeFwu5h2G8bit8Dn0QVYUfAjQVzu8+BZD76mXPlua7ppraqYz8SDTBGErH3dkwNkE2YA9bVhq8z8NLXpmsGHbmFjBW0yygS9eYh8Qp4qlsjmb+cOUxSzlFAArhUn8eSEYHNuMvOzMLjbAhtTIF0D2CfeCVUyW0HqLRv+d1z9G42Gy/kr/8SZvdIixAIoOp2KpzTdOlAzFSJx34Oyi5w8sVsyPZs9L1Bt7liNb1+KTUCAf+oKHkQKBVYUV+8GfLm/WKCw8Us0upe1e+uV0ue2CBFBoR3S+nLMA4o8d9+cG4yNwLKGDzj9anlg1/s4hdQXGI0LK8sMUgoKLGot4onVdWqGWr2QWXMuvEBMv3CYY2MOUgaFCNB6r3TZqU5tfqnCkYn4kIIUvR+DhC4KdAa4Y1XQd4N66BmyBvz0yRHUQpiKjuWmH1kxLq5ROoMWsLKBi9ImzkZBsJ2Wvi/EC9trWKUq8fSA7p9lAuYEsm3GMeWwunaYB5og5Wg4MCO4YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: What do you need to record and check about each drone (maintenance, battery, faults, parts), and when must a drone be kept from flying until you have looked at it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep drones and charging equipment in working order, which includes adding new ones to the fleet, retiring old ones, setting up charging pads at our sites, taking drones out of service for repairs and putting them back, and sending drones to charge. Regulators can ask us to show how our drones have been looked after. Sometimes drones restart in flight after a software fault and carry on, which worries me given how patchy radio coverage and unreliable links can be when we try to manage equipment and instructions in the field."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK technician: When a drone restarts in flight after a software fault, what should happen next: should it be flagged, grounded after landing, and who must clear it before it flies again, and what must the service do with commands or status updates that were sent while the link was down?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}
