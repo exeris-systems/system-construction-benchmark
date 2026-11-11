@@ -1,0 +1,266 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-11-subject-naive-claude-sonnet-5-5-2",
+  "mode": "subject-naive",
+  "subject": {
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "description": {
+    "type": "model",
+    "id": "claude-sonnet-5-5",
+    "display_name": "Claude Sonnet 5.5",
+    "created_at": "2026-09-28T00:00:00Z",
+    "line": "sonnet",
+    "max_input_tokens": 1000000,
+    "max_tokens": 128000,
+    "capabilities": {
+     "batch": {
+      "supported": true
+     },
+     "citations": {
+      "supported": true
+     },
+     "code_execution": {
+      "supported": true
+     },
+     "context_management": {
+      "supported": true,
+      "clear_tool_uses_20250919": {
+       "supported": true
+      },
+      "clear_thinking_20251015": {
+       "supported": true
+      },
+      "compact_20260112": {
+       "supported": true
+      }
+     },
+     "effort": {
+      "supported": true,
+      "low": {
+       "supported": true
+      },
+      "medium": {
+       "supported": true
+      },
+      "high": {
+       "supported": true
+      },
+      "xhigh": {
+       "supported": true
+      },
+      "max": {
+       "supported": true
+      }
+     },
+     "image_input": {
+      "supported": true
+     },
+     "pdf_input": {
+      "supported": true
+     },
+     "server_tools": {
+      "supported": true,
+      "code_execution": {
+       "supported": true
+      },
+      "web_search": {
+       "supported": true
+      }
+     },
+     "structured_outputs": {
+      "supported": true
+     },
+     "thinking": {
+      "supported": true,
+      "types": {
+       "enabled": {
+        "supported": false
+       },
+       "adaptive": {
+        "supported": true
+       },
+       "disabled": {
+        "supported": false
+       },
+       "between_tools": {
+        "supported": true
+       }
+      }
+     }
+    },
+    "lifecycle": "active",
+    "deprecated_at": null,
+    "retires_at": null
+   }
+  }
+ },
+ "scored": true,
+ "items": [],
+ "score": {
+  "covered": 0,
+  "partial": 0,
+  "of": 38,
+  "recall": 0.0,
+  "precision": null,
+  "outOfScope": 0,
+  "technical": 0
+ },
+ "judgement": {
+  "requirements": {
+   "BR-01": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-02": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-03": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-04": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-05": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-06": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-07": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-08": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-09": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-10": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-11": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-12": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-13": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-14": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-15": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-16": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-17": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-18": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-19": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-20": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-21": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-22": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-23": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-24": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-25": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-26": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-27": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-28": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-29": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-30": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-31": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-32": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-33": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-34": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-35": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-36": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-37": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-38": {
+    "coverage": "missing",
+    "items": []
+   }
+  },
+  "items": {}
+ }
+}
