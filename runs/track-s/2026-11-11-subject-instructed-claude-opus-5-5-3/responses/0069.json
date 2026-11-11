@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "The service runs on a single server that is updated and restarted during working hours while drones are flying, and it occasionally crashes. I also worry because radio coverage is patchy around ports, industrial sites, and in bad weather, and reports from drones can arrive late, out of order, more than once, or not at all. Furthermore, links used to give instructions to drones and charging equipment are unreliable, so an instruction might get through twice while the sender cannot tell if the first attempt arrived.",
+      "thoughtSignature": "EmAKXgFpFH0ToFIlsb8StBk8TDmdOPw0h4I2DN7eJHu2CA+ZPhEdBxVswvmLsbGgl3JUtBHW6pMSmJyUFRkc09P+T8iQU85Q9oB+HPhTA5NnYaV1MJgMd9ylVv0inzrSe00="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2110,
+  "candidatesTokenCount": 98,
+  "totalTokenCount": 2208,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2110
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "oL30asPGFdybkdUPo4-jgAQ"
+}

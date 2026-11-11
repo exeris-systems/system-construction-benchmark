@@ -1,0 +1,65 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a dispatcher. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSogUKEAgTGAI4AUIIdGhpbmtpbmcSDBZE4Yv3rB6/lDKhFxoMbqCbYDlwFwsrsRAYIjDeuH8ExsU1W/W+rURS6ITtg6+Xiivi0saPFsGIa7I1DqvydQ0KIgD45AJu9+niNOoqvwTkCJdIaiY2393Vix0qS5OZ1urEHZCuO+TWcQa/Ct6NrztTLgBh7T+VT794IBuSGSiD+9KEpWAMBhhYCvz/jA7R8KuC7nGkZA442P7OsPj8eIp9upaxX/S5IP83boLyZJmjwkmCC+BgcYK9+3l7arGjGC1s8itg2S0ZEh/QKcutEtd3lG1UiLR+v9Y8qoPPqIJkUUNjLTANuuh7Yzpa8pwjecdleTdAvZoDpnfhnHws6F3zUUFJs07dBvvSMgfEx7ssblCJbh5CKK7Nw6BcURnqJ7Zihn2RPFQXMfITegDiKi2fgmOfy8HEDjbckQmU1x9pk3EKY+zKqkQ6WQhMpePpEAJowLwjRkbMmbrVD5AOBnVcddJ/X3ydmPeQWNjxdRLSPVCNMNVE5NXMVtDZflJ7UAb8hs9xFKTINVLFBrvhattZCk0GyYSG1bMKYQeH7eE9Pv83OS3aYpOpon91AaKS3qKphzb9TPV2PwCk3oZHwb1vvNpm7bIRaxWxA+XpqQTtEtnF2g5dfsf6oQUkoXSd/gXhzsvGXxsnK80nW+LxyF/lq6p8823e4R5cb/AD1MfHtMuVlehxHzLL+RX9zd4T9nLvZwkCFSrRKuF4vNDDqA5xUYDmQxJinBp0V7LPscRDhhO4ZV+A9WQ4QqC++WGcXuFXhRLNW0ZszsiHZByuom/T5CQ//816GTaQ53OJ9JdPdFnwnek7fgtL+uLrTwO9rotRKeUmSuA8D1Wy8OXYNudq7CSudi5Z4iKCIdEWcBgB"
+    },
+    {
+     "type": "text",
+     "text": "Could you walk me through an ordinary working day, from the moment you start until you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSygYKEAgTGAI4AUIIdGhpbmtpbmcSDEBPWV/qnlcoVgiVGxoMyIBFIkS8kg/evfisIjAtjppKAwyvibY4YKI7gzBVakffq7sNKgG17Lm5u6JZRyDbAPLUkjHFIhCQnXZYiXoq5wV1L2KDAvTMcQwhqQD2qyJAOEcRh6+FMk0iv4ZzXxWU3QUpTyDWpRWA+0/cFWLAyQwiu9ysB1rl7STrc28/YpEV7P4//HzKV4v6NdwbT87OlufeSxNcHpb+rTQ3YhOjjnYs916CuLOeCB/AtDgNeNhURi5PmLKYCCyuRtAlP2MwAE3A6pz1F8KSF/dABYCoZw4pChxLXOpTFyrNgXq1X93ilcqdC6ausn3owMDLDW9yHDwb6ut2bu6OFOE5fhslLnQQtBHtPuq+Pmyg3kMop2TeoZj7/dABsY3GE6S08xEWszOvxGFMiv2Ea/O8mxK/IEC16Ay3Mn93KLSNLBjlsMnmlQ1pV4oocraRDq9+hIHiPeZy6Az4g3EOhtufMn1K0pSuJMVU8bluj7pTgwsxtRP4dDO4thYKFcX4IVn9rcPs7Sf2hEb2aM+b5F1sS8niPH/QYxIo9BaqwNvsXah8lTvM5c8dOMLTmB6+A4DKRbReXjXXO/myUrMCLs2LHhjdu/zVWTCB/MLK0smKFdecMXc7kR3Z7eEdQLt4aod2HB3gsjo9k8vXdECJt8aMz14tRuKtIq6ePafxMTdFM4mBNebwOrEfisw90n3wQsmAHEOQ/teR/JEQUEYr4ObJ6fvMBI5XUF9UG/XUBqGIWuqxHMqDDxyYWo9cJXb+pggUGW+Jp8v69lis0RteGq+kKA0fS+42wBojtinZBXgsCP5+vrJ3LBm6sYFokMrAHlVoRWghKNXbwQGzmXvPoLZ3xxpt6HrLqCBBniRfKhH25fRb+F2OsKO+tWdO1wVXUmpg8rHp9z6i4ulk5WxbikDVAqV5dhes1XfG3yoMzNcPGN9el6LqzPWNdPXZsTsyG+qIkQ6wzgCvZFItS/a1t16Sx2kxtehaY3ao7Yxd0Y8ejQjzdeipXF1GzXFk7keu4EbbYqzXSZBk/TBba42RMkbsUUCxXpsNwaROVhAcJjWPbgMhH6bV9+PEFj/grRgB"
+    },
+    {
+     "type": "text",
+     "text": "Let's make it smaller. What was the first thing you did when you started your last shift?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSjggKEAgTGAI4AUIIdGhpbmtpbmcSDNCACDq0/gsXmRIFhRoMOQpf28sAOqIkcoH6IjD+jrW51ljafe4hV5fn+mv4ep7HCNEkUw0/A47BtjFaFNoW3Hmhp3Dz+0VNu0SEXHoqqwfH0mzSMIIH6/XCTTT3hcwEKfzLtHl4J/exnYfbKgNBtiM3mZhYLto+a2emb+/TyKv54o8ZTVeFsgvtgjnyaRCuHA9k7glLbAHvpRdP96UoSArvwGjJcRYiO89YFqYNLGo2d7l03ZlODeEHr/27XRRmn0UzVrf4rcxppcEuZBozF6s7uhmek900evlz0iqkYYE+kSHRyhhq3MJ3ZfWNpOkrRQ2PnvHZhbdrdNxaZ/3CLP+spRmxedWiMQ+WwdTVxijZzwSw4szxB+xObzYQWLhi+RhFhJj31IXZjqZhiihFaZuxQxH7fDM/48b2STi4uC0CDwwk+ClV8kwKiq30P9aSYAiCUr8iI5lCMV21SMusr1c3Lx3QVQY1SAff3K+RokbneB6uRMeaM4mv+9Dxghk7pY5jqLs7WptwXqAtUZRuWhcPvIKF+j0yczoWnzF64yH5kD8ZBl+swyejCp/X6w0Vjw8SLmvWKfOLjAI7yPx9EKp7ux7sHo1g4Da2fEqSY8+fn0jq2ZVM67BOBpflyjjU8cN36bfgXlI17oHaoauXQxtrwocLlSFG2yif2UOTBZdVGngS2OXToL8ymznT3jdRlC019jqe2hFpl7VwtF+A/Nw+MCOGO3OBeRQumJ80kYhtMYW/v9exZk5V5gmyyFRPQ2waZY7Pu3Yg//gjlysFvfA4lSndIItZbX5X0EDzDbc9Z5KA0E5bwMAOFhtyW95Yc4Cr0rRAY4qDAHcP1rmCRdnXxo+xD9CtucW6MM4ZaZLOegFYpbyhrwlNL6zACf8OiYlQk1GhW0lg75tqxE05PllZ11C5nPG3AG2pMV8iV8V/D4TjDR2TYdWTctaqajqKew8VCeWNjaSnGfjVcGrnPc0eRIq0skqOEjsNqtmKi8g8DjuWvXkO/TKMx3NUTaiXTP8iuhpki7yjZgRZ/HYya8mMIn0ESykIGZ8U+S7fsyCNbYe7HCbt6Ee6PEAz+5L38pgvJvf0wnz2QTR0d8MlRAqY537lza4bdl3//0rJ2lVCUd4NjWt0Uve+efRJtagwcrofUaeRZ9J/HBvMGJ6x1d7wUgVWQ60+yiHV1pc4diM0VQM5Spc4F6W/ticMFlT10asCnCSsVQPGD8miL1sRU2aU3b2JOthSmAg+rSV+oqJ0DtKzeKYlMEE+o0ZK1bg5FuZ05qHlhWLrZ47/4j9ETs5BuJCc85X6cMpZaLb8Ir0nUF+O5XVMl0J9vl4Jtl3mmsoWdpi6koGGY+UYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "That's fine. In your own words, what does your job as a dispatcher involve?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "As a dispatcher, I am the licensed person responsible for each flight, and I decide which drone flies along which way before signing off a flight before it leaves. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. I also want help finding out which of my drones could get to where a job starts, though I know software never chooses a drone or a way for us."
+  }
+ ]
+}

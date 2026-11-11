@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011Cgwfu1j5YrHFjVo5AC6cH",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS9wYKEAgTGAI4AUIIdGhpbmtpbmcSDEvuVPbzdmAwuuBnDBoMqJkM+3TOYYXzScS9IjD41nTiInuKJxj9zLIdxGD383CrF7BQS4qR2JznFP6xx7ajHpLiq+Q3atHAYS81jhMqlAakSo/LXrOw/60WZGbU7DYR+5shyl4DuisSLm2w9el1IP6v9QgTJyR8PWP140akm/7kjv0iIW4hFNurQ2IteBjtqXMKmlNkSykUe/hV/iJ1GuLTJXyHjvTthPyKeayCoZjDaET+aAY/dSETSKMnvR0IgvprlBy8qXq+B5Jwqilt13JdnnT8lpqwF3rQT4MhpL3Bv+OjxV5td/5eRloLNBANVrEJkpGyDUUqd800BKK+QDE3N564sDPuC5Rsg/OjflZC2wovLAQ95m7UjpaYr49PoO9kEzv3mUuUtfkFW0fdwgYEiRMirWkzNTrG6h1XtZouZbj5ZPThxowHC6qHCob4Eu5auXCLhAjAghLQA7ugpJwybk8ixLs+k/hoK+niUwQ+xtLEv67kAtC35uJNH21XX1UNt3LgaQAnwTSMAfoNvD5AGVRZ4sFGgZV5sdwstWPn0i6AYp0RtIwt/ByHrthBq5GP5Yp+/adZrH/bVBDBt0UKWx+5RU0vnTl3Hy3Asd8lR9oTho68NRQCuzxIu0kxqRJgopG0yHqNL5HZJL0If27VPrEPX/fvkg4qUBPI612FSBpirvJ/oDn3AJxR4QqCHD5o+0HigJRQmj0xwn2yhHIozp10xMCR9+oIT2bVZe/ZkeaedNOvi9WmEmp6bePcbc1F/tnZqFMyWT385QxxXxnj3X4q6yD//Yy8PwHXQfjsMS1CgoMKWI+q/BmtNTQ/P+Jc0OW/72zCCGqP2ZLHDygUSAmzKLE3atk2AJfKAwGEPm5lPZEeyyPg3GXXOzE9V/QxTYFnDI2dyJYstpJ6TfD70ZS9UTcbfHGWcxkTfIEyK8hoLPsHKUCUagmy0qLLccxyWMQXzqSI/2jQ77HN7UdXepJDS2EGqBafTUxrE5ZtEvv2yk7LYNpitWRDKVmNuvFZIe6/NQRPH7S3fWbbBNBhe2DP4W9k/Ete0suzgOz5PPNO6w7r6Qcbs4zP1TMeAlPw8q0l2S+JXpUE8MlBzmn7Ylq2E/IbCV8KEM7Y46aKeoHVcuP2uhdmezpCIouqJpOWyxgB"
+  },
+  {
+   "type": "text",
+   "text": "How do you know where a drone currently is when you're planning a job?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 3494,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 55,
+  "output_tokens_details": {
+   "thinking_tokens": 34
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
