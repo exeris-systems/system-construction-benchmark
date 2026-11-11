@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I don't know.\nThe question: What was the first thing you did when you got to work on your last shift?\n\nQ3\nThe answer just before it: I don't know.\nThe question: That's fine. Tell me about the drones you look after: what kind of work do you do on them?\n\nQ4\nThe answer just before it: I keep the drones and charging equipment in working order. I add new drones to the fleet, retire old ones, set up charging pads at our sites, and take drones out of service for repairs before putting them back. I also send drones to charge when needed.\nThe question: Think of the last time you took a drone out of service for repair. What happened?\n\nQ5\nThe answer just before it: I don't know.\nThe question: How do you usually find out that a drone needs a repair?\n\nQ6\nThe answer just before it: I don't know.\nThe question: When you take a drone out of service, what steps do you go through?\n\nQ7\nThe answer just before it: I take drones out of service for repairs and put them back. Regulators can ask a company to show how its drones have been looked after. I don't know any other steps.\nThe question: When a regulator asks to see how your drones have been looked after, what do they want to see?\n\nQ8\nThe answer just before it: I don't know.\nThe question: What was the hardest day at work for you in the last few months?\n\nQ9\nThe answer just before it: I don't know.\nThe question: Is there anything you check by hand today because you don't fully trust it?\n\nQ10\nThe answer just before it: I don't know.\nThe question: You mentioned sending drones to charge. Who or what tells you a drone needs charging?\n\nQ11\nThe answer just before it: I don't know.\nThe question: Who do you work with most during a day?\n\nQ12\nThe answer just before it: I don't know.\nThe question: If a new shared service took over part of your work, what would worry you most?\n\nQ13\nThe answer just before it: I don't know.\nThe question: When a drone fails at one of your sites, what do you need to know first?\n\nQ14\nThe answer just before it: I don't know.\nThe question: When you add a new drone to the fleet, what has to happen before it can fly jobs?\n\nQ15\nThe answer just before it: I add new drones to the fleet and set up charging pads at our sites. I don't know what has to happen before a drone can fly jobs.\nThe question: When you set up a charging pad at a site, what do you need to know about that site?\n\nQ16\nThe answer just before it: I set up charging pads at our company's sites. Each of our sites has a few dozen charging pads, and our company has its own sites and charging pads. I don't know what else I need to know about a site.\nThe question: Who should be able to see information about your company's drones and charging pads?\n\nQ17\nThe answer just before it: Each company's fleet, jobs, sites, and problems are its own business. I do not know who else should be able to see information about our drones and charging pads.\nThe question: When you retire an old drone, what happens to it and to its records?\n\nQ18\nThe answer just before it: I retire old drones, and repairs and servicing are carried out by technicians while regulators can ask our company to show how its drones have been looked after. I don't know what else happens to a retired drone or its records.\nThe question: When a drone is out of service for repair, who needs to know about it?\n\nQ19\nThe answer just before it: I take drones out of service for repairs and put them back. Repairs and servicing are carried out by technicians, and regulators can ask a company to show how its drones have been looked after. I don't know who else needs to know about it.\nThe question: When you put a drone back into service after a repair, how do you decide it is ready?\n\nQ20\nThe answer just before it: I put drones back into service after repairs. I do not know how I decide a drone is ready.\nThe question: When you send a drone to charge, how do you choose which charging pad it goes to?\n\nQ21\nThe answer just before it: I send drones to charge at our company's own charging pads. Each of our sites has a few dozen charging pads, and our drones have a home site. I do not know how I choose which specific pad a drone goes to.\nThe question: Does a drone ever need to charge somewhere other than its home site?\n\nQ22\nThe answer just before it: I don't know.\nThe question: Does anyone ask you to send a drone to charge, or do you decide that yourself?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
