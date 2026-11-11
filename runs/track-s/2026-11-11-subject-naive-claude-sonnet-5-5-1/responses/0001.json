@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011Cgwhg6zCicj5hmJmkg4GC",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSqQcKEAgTGAI4AUIIdGhpbmtpbmcSDEBt/yUP94Fo9iDUQRoMn+pIu9NA/RttCcS4IjD5zv9XpVnMr802PDIwc4tXcA58jNwL1QuKKMFUq6KODBiRXhdCMQQ7x+yxLnPy0KIqxga+EVTh2oELd9IEL/3DA5e4An2cwWBq6Haxotr81WLCH5xPwOTYzzWTO1C+9lmZ0N37H0IVMGdTJEvCgT3rCMWH+/xUE+2yTHzOa9lphZMbYTGAcVkx6Q2lwcj+Pc93N9+8pqudNXdIz9R2AErIuStP/c1GFw0fA605Uw/rzv78rvst77X/ouYgsRTyhigWEoM+83nlDutXWdfbT3zwS6TlZk2Dvjpd1tr0iH8OAc6M2k3lNMsk7CkAGSXoxNT2bZFc2/slh9F5ExxAG5ELFTKSAXJXEfLuJ4OE96NOQhR5EEa4d5v9XtYvxNpLOteU3VMOfsqDIuR8aoyrPX+09MasqD+5Yk+5reCHD7vxoYQI6vbxzmlUq9A7oyrvYxcQuTi4OwqtZIZ6BmN51GNFzFFdkLUgdtsQ50Ku69KEidmZXG/HzhX5c9TDr94lt1m2Szt+ySyYBM8dzzYtq4dwoT2mZ4Du4BXWLRJ7D54H+YFP7baiP15srHoaweeWwv/EG+TIVQ5S1kWsc+mj4wyX83vrgIuBRqmJwC5j+2i8fYD0A++H5Z4m0Zi0AkrnHMtFVfFBPspHLlrEVajQChACAlhrgD8gLCl2guyjorbSd5VKBRtpywVyiWKMoKpvA3mbPYcZuI9G0lf1s9OMZ8erEwjcPznZXSwhvTs2i9LPbLNvonz1DVtEthOddm9nH5ZzVyJ9pFnaKRDRoGylJlJlU8diCQGvmWUItUbyY+pohSGxeOmZClfts757amXpZbuo7wt3+wDshmQQIBVBY4nBfuGVAxXkjIIXQ3WKyT+ISvxie8o8KVUwNKSRN1/+x6TKvE11edI6sl7vW4ts1civ2X7p/8bTo4gHfVoNgLdI3pOjdSjNjpP+kL93E8eMbdP64mMKqj5JtJG0TOuixJJYe9ZbRh++LD5MWuoRdSusEE7glTxJDOer4VcnHRgZSWbWFtdwNR2bNupBXUWQmAdqhvbWkcMJSzF4FOn/MkBk0Ha3XEZsRw+U5yYZ0Xb+WygMnjd4E1i6dLmre00JVWsUB9Zx6G3oBr5SW0nkPlYHun5ijJLdcxAi/1jJxTRE2BufzCi7A51YD3vgSZ2CVBHEIYboBAM53rYWGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: Walk me through a typical day: what do you do in the existing way of working from the first job of the day to the last, and which of those steps do you most want this service to take over or make easier?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 535,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 160,
+  "output_tokens_details": {
+   "thinking_tokens": 97
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

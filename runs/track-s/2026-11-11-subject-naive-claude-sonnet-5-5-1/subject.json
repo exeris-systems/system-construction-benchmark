@@ -1,0 +1,38 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "dispatcher",
+   "question": "Walk me through a typical day: what do you do in the existing way of working from the first job of the day to the last, and which of those steps do you most want this service to take over or make easier?",
+   "answer": "I plan and run flights as a dispatcher, taking legal responsibility for deciding which drone flies and along which way, and I sign off a flight before it leaves. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. I want help finding out which of my drones could get to where a job starts, but our policy is that software never chooses a drone or a way for us."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When several dispatchers at your company plan at the same time for the same site or the same drone, what goes wrong today, and what should the service do when two of you want the same drone or the same site slot at the same moment?",
+   "answer": "Several of us plan at the same time, often for the same busy sites and the same popular drones. Sites have only so many places where drones can take off and land at the same time. I don't know what the service should do when two of us want the same drone or the same site slot at the same moment."
+  },
+  {
+   "role": "technician",
+   "question": "What do you need to record and check about each drone (maintenance, battery, faults, parts), and when must a drone be kept from flying until you have looked at it?",
+   "answer": "I keep drones and charging equipment in working order, which includes adding new ones to the fleet, retiring old ones, setting up charging pads at our sites, taking drones out of service for repairs and putting them back, and sending drones to charge. Regulators can ask us to show how our drones have been looked after. Sometimes drones restart in flight after a software fault and carry on, which worries me given how patchy radio coverage and unreliable links can be when we try to manage equipment and instructions in the field."
+  },
+  {
+   "role": "technician",
+   "question": "When a drone restarts in flight after a software fault, what should happen next: should it be flagged, grounded after landing, and who must clear it before it flies again, and what must the service do with commands or status updates that were sent while the link was down?",
+   "answer": "I don't know."
+  }
+ ],
+ "requirements": "<invoke name=\"x\">\n</invoke>\nASK desk: What is your job in the day-to-day operation, what airspace information do you handle and where does it come from, and what must the service do when airspace restrictions change while flights are planned or in the air?",
+ "items": [],
+ "unreadable": true,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 4,
+  "questions": {
+   "technician": 2,
+   "dispatcher": 2,
+   "desk": 0
+  },
+  "limitReached": false
+ }
+}
