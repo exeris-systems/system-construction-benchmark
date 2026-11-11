@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I plan and run flights as a dispatcher, taking legal responsibility for deciding which drone flies and along which way, and I sign off a flight before it leaves. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. I want help finding out which of my drones could get to where a job starts, but our policy is that software never chooses a drone or a way for us.\nThe question: When several dispatchers at your company plan at the same time for the same site or the same drone, what goes wrong today, and what should the service do when two of you want the same drone or the same site slot at the same moment?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}
