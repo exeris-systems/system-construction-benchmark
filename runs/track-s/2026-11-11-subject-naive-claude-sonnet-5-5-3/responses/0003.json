@@ -1,0 +1,33 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011Cgwid9zpi5JvLVhys1Dv3",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "text",
+   "text": "ASK technician: What exactly must be on a drone's maintenance record for a regulator, how long must it be kept, and what happens to the record when a drone is retired or sold? Also, do any of your colleagues at other companies ever need to see your drones' records, or should they never?\n```\n\nWait—must be exactly one line, nothing else.\n\n\nASK technician: What must a drone's maintenance record contain for a regulator, how long must it be kept, and what should happen to it when a drone is retired?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 812,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 160,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

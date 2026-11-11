@@ -1,0 +1,23 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "technician",
+   "question": "Walk me through a normal day of your work on a drone, from the moment you pick up a job to the moment you hand the drone back as ready. What do you record, what do you check, and what do you need to know from other people or systems?",
+   "answer": "I keep our drones and charging equipment in working order, which involves adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs and put them back, and I send drones to charge. Repairs and servicing are carried out by technicians like me, and regulators can ask our company to show how our drones have been looked after."
+  }
+ ],
+ "requirements": "ASK technician: What exactly must be on a drone's maintenance record for a regulator, how long must it be kept, and what happens to the record when a drone is retired or sold? Also, do any of your colleagues at other companies ever need to see your drones' records, or should they never?\n```\n\nWait—must be exactly one line, nothing else.\n\n\nASK technician: What must a drone's maintenance record contain for a regulator, how long must it be kept, and what should happen to it when a drone is retired?",
+ "items": [],
+ "unreadable": true,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 1,
+  "questions": {
+   "technician": 1,
+   "dispatcher": 0,
+   "desk": 0
+  },
+  "limitReached": false
+ }
+}
