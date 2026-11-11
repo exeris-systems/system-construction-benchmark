@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011Cgwfp9EPKivwezJbffVG8",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS9wYKEAgTGAI4AUIIdGhpbmtpbmcSDDpwWPARySOQ8UEmMBoM5VIjiv/9rlSjxoVgIjCKOf7nPrgOzlSgiRgx0Gn4xuzmQENQfjIUEZEtfs/hPIVWxA93rbcpdo2tzLcqK/UqlAbgRN16QbrwNrKIfzD+9BYABts6v2PNKvOOTLdW3lecww1gM3sl0aVzvPd6VOU2SsM23/gSk2jcjkzSIF0DWw9TMlLXoMIdtLgY0rXEheNdBhls6m1Bk6MqlrQ7vqneKkG3PA7YdBjYHP+9Qs02e8U+gdV8CH+kQre9U9euNx1s5R5WAysvLWszfTsRyClHQ//FKQdL3TF03h0JBLqnlx0TMFjdtqKSRr/mmz3Q5TvE1q8FGbb8bZvUbkhBIz8GSK8fnokvMRF/9RKFFbf+jBa/VS5qDv5SG+IaozAhMSoOCgpBYEpaIhABmVc9KQ8fu7yhAwkS9R7Da+CgmZDtFLaCJZ4J55nb+iTh+j4hL96E0XWRDXsm9Hvg+meOioHv9Oin7HEqS6TsX5kL0jOVJ5IGLDe0MaUQX6T59tPiRswsQY6a/xb38Pof+xuH1xQcO9pRdRORw9rdbUKK7vkbhMmcx1LVL4OJo+z8o+lp+B18y6jVEHRp4xsYA2PyxIQ5bd+VihZZCWYEZ5/NiivDbwnjBPTzQtwudqqPcLqw/SE85xo6rPBiPWzxViMTlIPWLD/fEN3wu4dlC5sfllGzJyyPaa+fqr24ncoAC4W23OAPjFNkbwDvnkdgZsxRWkf0atEwuGLSJEClY/zq7DOMPA4VkiGijy8VkN0sGKtRvOcs4DNnXq0GGeSBtX+aRaFhSvQ2/9BHBBAd8Nx+wN+UEpqZXeQ8/z9xqWmJoyHm6gKRI/5fnPVTy6hhiBsNDVWI0vKswgS4MkNOmDGE4FjwCoKhhLHIKmsgKPexP2Sx5y8p0rFJIGwddGKsvt1gh0n3FmSNLwhlCIqH5Itky/YQBbwjInsGqK3IhukDNzlGScrEUQuC4XlK7tM1ckxg+6SrUShRbaXwMN0YklatpgQKM9RNftNgXOKmkPKjfiNuPbT9Sqe0S970/n63qGz+0M27Qw3KhhJLPnqVqLwPAugq24JGdVAQWYKG4sMD4ulMClnL/WLmAODlyqUwIQGWf6gjMiZgRg+kzccMMYggqGTcpHGF/TSbyxgB"
+  },
+  {
+   "type": "text",
+   "text": "How do you find out whether a drone is ready to fly?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2390,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 55,
+  "output_tokens_details": {
+   "thinking_tokens": 36
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

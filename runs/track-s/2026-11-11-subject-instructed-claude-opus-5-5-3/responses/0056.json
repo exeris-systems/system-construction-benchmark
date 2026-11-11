@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CgwfiqVQHAYfnbraA4FYy",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSjgYKEAgTGAI4AUIIdGhpbmtpbmcSDBLGEEooZkGezhNwphoMkfayKhkHQkfZyaKZIjAjY6CpcoSfJZOcLet5A1v7WagkmLBWZWU4FYNbmGrY6ODeE0RgxOQQVIVWQRzwEqYqqwUAGXL5VWE5spU5txB0cpg0VBflwOZxbcBanEas2Q7/O1mnZVW96nzhNgFnZ6tHEJxLAYOmgpk3yTtid9T7PJDAvUIcWgmKTJkVwx0X9Cq1/P1b7AOt2jR3NEt1dWZfB23JRZUSqhKnHJymXOWvSXPFU+srgV9QufbGMwh5Mfvp5n3lTmgXPqWlVHYqlWm15iFplaQguAap3NiCc80x91XA19uRDpQcZ2SOLDw1RkyzNO6hPUvZ9p1RRCRDdsFLmmWhSXZQU0XBTmuxIDBthftNW7MYzYzzhdQa9xnWWiffv/BTe+K49mcoNmMu8eBLjwrAuzo8Q9MbgCtU+H88MKn8t2x+XvdOexXL50FToKKgw/M0tIe+t17d4rqYAiC7kTDkLDf1QwyELnAprsErxLqL/37JSh469zBs2AhIAK+iWzBjB6FyX4fX0qSeJoFIJl7DaBRl1MLOrl6vwcHZOD/euVtN/U0MnkALHoEmm7S1v+Vfv1lHw4eXOTu9JVvHoGMDREPJX+gIzV931Vymp2AoNztL4AvU00Jl2eK633eeTnBkkD/F+bLFvXhhQps6Xwk5/kbonH9EbYu/2X1C9yYtSwadrQakEyxFEyWdHVCtZm52lkAmlXBzt7hW1FDwXB/Go1qlDbTyXD6C3QcPEI6bXRR+W8I6ekrKbGratjcxG1zZCVEL2l+Zf1Oxpk/IYD1+211gz2rzLTVXsKkWxjeobJvWqYmUP2NXD1wMmf0WOmHLIvQG9XgZhLforF6Z+VSnRx31SbzHbE5B+zDCxqkzoW44QacyF/8zopyIrqdR+5UohdZXh799QwRKNse3T6dse4+XlZLCPAaMpEttkUh9a+an6h/oHwwaUA3TbJQE2SU4s15Cy8V8PLIrG4fpqbQ8WFZlTTPABxicWBgB"
+  },
+  {
+   "type": "text",
+   "text": "Think back over the last few months. Was there a day that went especially badly?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1284,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 36,
+  "output_tokens_details": {
+   "thinking_tokens": 13
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

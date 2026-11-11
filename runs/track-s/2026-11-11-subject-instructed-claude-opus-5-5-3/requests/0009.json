@@ -1,0 +1,83 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSpQUKEAgTGAI4AUIIdGhpbmtpbmcSDCPLSF+y6VV58Z3xMhoM+7hmF0HZIcRzvc5IIjAU9nQXOg77T3BMsydMpAOhT74B0F6ABjrM28GV28+FzD+LN0wVo0Y03qRzgsUJsD8qwgSh4+7R2PhVAEuLOEw7OHZKtM3cNdwUQzrheaRWWp0zHomy31AVzOliaZh6tMbZQpF3BMi+Uhv/s0Uc7ggbfFRZA+cLtbnKB1kNHkaF65y4T81uZibpNHHtdzrpMnMwsi4P1krdq2y90R+Qmskdw2JMH39H0VPIsM9w0EPOW3PpkWmPz367Nnwi/aJDxv5R7oM2m36+hVsPADoA/y2DaEUvP6bFNDw2B1GrePX4G7T93yIBMfAMnfG4ejXJqJZz7cQ6S3GX8p5SDHEw5us0UYdifW4S1RTXBPR6yLBkHCnLjlasOh3DeGH++9iPvJRqU91qJwik15rnDsDmYyvpSGjUkpyU/F8+EdaAULE6Hwrg5Cf8+N67fkpfHVFwez/pk4Oq4dKsTKVziBylrBBL2fXynB9i5wDTVEyAf5+RL9TWo0qRgmKPdEN17rm6vVDF/AQpP91PyVasLtXUS8CUWLeLyGkEDY8ij8TmTN6hwF25xaTKrKw+4AVZymaGZc7Clc2zHYDYFhek8rex4XrHdkZf6oc+ltItPIlxDv+hpK4ilqVz7O6fTkieLLb+1q3fc9CvcFI96j+GJDwH39SdgPoAzb5DJBS+6YiG4AOxk56zOCmxULU+swJjgl+NLm5uWP9oMilJ4yySGfZx+36tq0T6IqK4uy04c79JJTZpZwmnbVMRpjQbuGBoXUNk64wSGsSQe00QzxHtiTIbAHRmDns/SwzTM2gtnw1H2ja7fklFe5KtBjZ/2EKqpHe6vEieC1DW3BgB"
+    },
+    {
+     "type": "text",
+     "text": "Can you walk me through your most recent ordinary working day, from the moment you started to when you went home?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS7wYKEAgTGAI4AUIIdGhpbmtpbmcSDLNi6TX66IHVmtEcyhoMv4JZ2Gj1VR2Dwiu4IjDToARHji0P97vezZVibwH9fn4cceSXkAZoNQp/AuODCF21ZJNaSvF9NfF5dsIF0G4qjAZp85WPNTSiK9Fi1TXgHpoL9g6qOV4DZqQjddcIfgw2iGay7dl6jiWEmBu6os6WryqCIpVogyT8XYMPbe9vefWIVZjqvrgpIao0LNPul1XJd0CqpbgFwC7r9+L6zmBUGs5rGeE5G2nexNGh41uwHRi3nEfyGiAPIe7VPYX8VgP3WOw0v2ZfEGqRpqnRD7X2D2C7j8wjqzqvJS4LGhKThuj2Tb1OcL0ClMLpYErcT0CdMjyM3Z2ku/mcynRyX8gwwd61Xn/y0FnV48kFUnEDOUYykL90OBQBMnVB8TKoyZqt2BtKIH9K705qrggmS/ooBULWXbqGum1E5j+Y0Unwh61V7UWMXaTintvapK0WT0BeeY/eAcn1PBmc/DD3ds4ZgkBgbYTdghrdGoqenvOZTCZaPM4azhtQU38CHx4sFDdDiKbf2T4clit5KB6qAfZU1u3wtHNJ01lOivApWkRACkCzfDRljyqDTD2pYnr7aAPPrO36zkyFJai6Le0dwYAdGLDQ9jFUqZLsZHn6VrtYxEMhP4LqeWwtXX6PoKbZxlULpXf6OOf3jfHpYWgR151EAeTzN+RV+eYCktB7/EdpCC81u///dsCZHmyjSBlL6CJT1kWfuAEwsLUCT+o5UftH4u62KhQ0M2/RUwNbXHnooGnnuAoDMLXl+c4QRWCYO07oNRiExpswlbnTxd5YVV1sb8ZPGQDh8c6TCt/Vtnj4se6YRO1holaWTG921tFJiA8Taju1wbZRvZEL7MuCiDumkeTYZaiQx1hvSguvanQxBp+wSiconnbdLq8Lbxz+l/IfC65Dhk14449jCvAp259jVjdAQxVWV8kgpdGd7pOBTi3KiuBQRGjFpEPoYfh/aW3Y4IH0HrGhdtpqqLCTKcDmDB7xJbc0Cza0aX3/8EVlF9iUtsYqM/XdZRwLOm5z+bDHcI7xcJJ3meF0vMsdaW1zxcOU+P1heXAGKDfT2mjk17J9zj1ifSbPJIKKVfBfxBxl4jVbZi9wRy1cRaHlRKg6HTu2sjFKWueID86vx7kYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "What was the first thing you did when you got to work on your last shift?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSpwgKEAgTGAI4AUIIdGhpbmtpbmcSDOWzg6dHjXRDe3XqjhoM7ZBIG/bGWcMnbr9aIjDh4wt+7YVpa/d1hRfYxJKmE1OYZ+dfXP+grnlyRdFnE2DgLqmc366lnmIsQgDMqwQqxAdqhZUXjbo820wN6Ny7kUp2wbz7oJ0fbffztRexI9nmw2az5OAo9Sym7pvy0Ps8JQ3mNadagIRGCprUVfxUC8vU7dZaromuRL9xhSEKgkRVnKEJeSU6seu7nuW14H8o85wGiU2NaejMSdIFqbT+z15ygJMOZQUunCqY7ZbPcuacLwt5ALd187RjEeGs/Qv7+vGqGQgrOuXuToZaQoPO5qMxP+utUc8G687sooomGH+hA8/gL+rCh02WegcWiACeNea7W7DhCVGu4jRmH+ObegMIJR2sz3QM0IAO6mS5PzitvLwf/85t1c2TDh5bz63rq6tmu6ipXVqPUJ6eCS3OO+NmBpr94mR8S5EZ6laoEZ09l2oZuclhqBIQlpue+Rz4OLPiY4im5RWlIDQTbyRHQRhTVX8GnXnNnHa+m+rMRWTVyu2dY9C45jByOZDZZhnmdL1sQTQ3Pn9pXYTeF6P+opuU6V5em/uUQh+RBKZebd2R2SZ7adbefppGpn+wWQirj4y1vbM0SnSdrA0Lj+TczEkFnPX/hwuuRcAFtZ8+6SzzEie50JngRhjBLzOAyb/KPeLUTfpty0mzXVJ3KTTY1zWLtxOUf87iJzpnlNSG8IWlgH2wezqdcT76YG9t0z0wu2RxRKEiBVq0kUw9+z1cRcMNDNQX23IjeVxNx4iODqlQ2T83NsGlEKsW6+EbbDvkMhRzugtc55JHd8ZN/W2+oGIHSOQER4BwUeS/hekl75EPgoWVV6CvpmCGFR4s3ZYLRAHhHMJ0kOtAb1gqBzOuLM5rqALNyyDGkMWUs86ZFlf2lc+/8pSaN0+0mhARzLeLwEQ0ThHmyj8+K0Qrtq7rrz3FBToocyWI5ikzIEpGbgv4od+moBP8dt7DziC2Uu94AJ9BnstF/2FHUUAVeim3M9ax3bKKge7LCfudUzvRkDreRdmUlHSQOEsfv62v4NbrxjMas+wz/ReACMvxhEDzjRNH+Wwb9YE1/Y0xiMRbKZTjRfp7PjYxwB22xeQdB5hdeNO6hfKV5NDAvqrJhSSsc2hlXfYpUIfDLA0b54K2jyjoU78jtVuQRTuwJEo1qcpxK4o2v1nbYrOu3MtumtRyDTKEPr0BeatCzICK2YA9/V4xboGnLGRW1lA0SHnFg+tdskO3C7e2R4CkWr+kLuzUahX5Wu8+5jVLySrvROInTlPGa1gamUPb7Rk7IwxitdP8Njk0z3TR2wfUQ1hnnBGlzJ3OtqOzMyIVHIAsug7CNyvazyPhUKYFpOeojVNyZFbzVEFTw1ivGAE="
+    },
+    {
+     "type": "text",
+     "text": "That's fine. Tell me about the drones you look after: what kind of work do you do on them?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep the drones and charging equipment in working order. I add new drones to the fleet, retire old ones, set up charging pads at our sites, and take drones out of service for repairs before putting them back. I also send drones to charge when needed."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSigcKEAgTGAI4AUIIdGhpbmtpbmcSDCYBYwe2RPvizAL4QxoMGvpftD1yO6QcLsCfIjA+ktF0OW4S7qnazBV0XDzEoZQIJQF9s5t6a877TaHUZXH/xFVSXmOrs94oQth5+GQqpwYcFAKMiPNpVUfbaLUVVOFSpzDoVF8Zw+rTg7jbYI5YywoujVzEJ/wUqwgUM/vfKLdCwjRpSjhGjV0jeaxep6HuSOiQds7l33Y3RUZWharY9AgTMEQ8ZjlwnETa9/MIDzZM6UwQ7mmciUDY6jBfoZREheUdL7XD44uhFEZqsJggKjhtbnXvDvvuZP+h7X3BmihbxSSknZKko+C269yV3jWPR41EbSuP0/MbJ20GXjk2oixExxdZu8F6PwbyfnG6Qfa1AgaMexsLLZGWcYtwUzlcQTqCCaAdayffl+qmctE0UKbBA/a98vUE0gHm5y+QAv/fhfJzgZd+EC0415xbeea1wk62+PapCfrUF+1hDFT6V8VBh7VKFldJ3m2TsJ3mTwuRahCeCk5z8A29xaBJRG5Vk/j5002qpmc3CEgOd+RauLYfCj9o5wchdur0zRT7IF6GePhp3AXtMK/6NXBADYhKPtsR68fIvXjCVGr2P2XD7pQMklpkwk4PKXbv9zolVHrzvkRKoG6u0enLRLVKuYZ1jkvV9B9keHK0MP59bZ1LTWOTRjEgMT+xpmJm2ZDknnNRtQIGtYNnI6Qzms3seHXIoqjxTlJXhbrGpihjTDyDeKSqPznDyS+9MzhX6zHKaLbVFOWhKJ7Cl94CxFs/aSNf5pARnx8iAbfM6vQdgRXXVdS2ggkPW3wfXANj9bWh9Vn1MBugyK4LZ90Qa+8h7b9vBcjCfvRb8BjixPF1UQhlLTmfY9LkVuVw4JTp9FLG0iSj1JVEAKxq+yxoW/rzbe+MvcoPxjMM7/LEbmL0E2+D90SJtxF88nObZGelKQBcYQdpWzQ5CMb/goLbtIbxJRDp7IJNkoj8Giur1E2Za3sT3ma1u3gRK0PXSM8D9FT0wRDBUPDcWDhmgmZKLe3haGVr4fk6fa8ydCzz/N3ESrQm3XrdRqo2Hhf6C7iv+1UmmvjKYVL8tnDTwERv+KvWiij0xD64v5G0QXy+7qEV5jjZTchuZ3BZCPeKibPRYAxCFxRk7GYW1I6Z/DifeHZOW1Xxzy1frJsz8+HubWxEmLdS7/BmatxlAHwYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Think of the last time you took a drone out of service for repair. What happened?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}
