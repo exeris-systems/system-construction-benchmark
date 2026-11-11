@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I don't know.\nThe question: No problem, let's start smaller. Think of your most recent shift. What was the first thing you did when it began?\n\nQ3\nThe answer just before it: I don't know.\nThe question: That's fine. Can you tell me what the airspace desk is responsible for, in your own words?\n\nQ4\nThe answer just before it: I keep the shared picture of the airspace. This includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities.\nThe question: Thanks, that helps. Can you tell me about the last time you updated that picture? What happened, from start to finish?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Let's take one piece of it. How does a closure announced by the authorities first reach you?\n\nQ6\nThe answer just before it: I don't know.\nThe question: Let's try a different angle. Think back over the last few months. Was there a day at work that was especially bad for you?\n\nQ7\nThe answer just before it: I don't know.\nThe question: Who was the last person you spoke to about your work, and what was it about?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Is there anything in the airspace picture that you check by hand because you don't fully trust it?\n\nQ9\nThe answer just before it: I don't know.\nThe question: I'm noticing these questions are hard to answer. What would make it easier for you to describe your work?\n\nQ10\nThe answer just before it: I don't know.\nThe question: Earlier you mentioned zones that group corridors. What is a zone, as you use the word?\n\nQ11\nThe answer just before it: Zones are defined by the authorities as areas where flying is prohibited. They group the network of flight corridors between sites.\nThe question: Can you give me an example of a specific zone, and what happens to the corridors in it when that zone changes?\n\nQ12\nThe answer just before it: I don't know.\nThe question: What does a closure announcement from the authorities usually contain?\n\nQ13\nThe answer just before it: Authorities announce planned closures with a start and end time, as well as sudden closures that apply at once. Closures are often amended during the day, such as when an area is widened or an end time moves. A closure can come into force while drones of several companies are already in the air.\nThe question: When a closure is amended during the day, what do you have to do?\n\nQ14\nThe answer just before it: I don't know.\nThe question: When a closure comes into force while drones are already in the air, who needs to know about it?\n\nQ15\nThe answer just before it: I don't know.\nThe question: What could go wrong if the shared picture of the airspace is wrong or out of date?\n\nQ16\nThe answer just before it: I don't know.\nThe question: How many people work on the airspace desk with you?\n\nQ17\nThe answer just before it: I don't know.\nThe question: What do you use today to keep the picture of corridors, zones, and closures?\n\nQ18\nThe answer just before it: I don't know.\nThe question: If a new service took over part of your work, what would worry you about it?\n\nQ19\nThe answer just before it: The service runs on a single server that is updated and restarted during working hours while drones are flying, and it occasionally crashes. The companies accept a few minutes of interruption, but I worry about the effect of this stability on my work.\nThe question: Can you tell me what happens to your work during one of those few minutes of interruption, for example if a closure comes in at that moment?\n\nQ20\nThe answer just before it: I don't know.\nThe question: After the service has crashed or restarted, what do you need to know before you trust it again?\n\nQ21\nThe answer just before it: I don't know.\nThe question: When you change something in the picture, who do you tell?\n\nQ22\nThe answer just before it: I don't know.\nThe question: <invoke name=\"x\">\n</invoke>\n```\n\nActually, let me write only the question.\n\nWho tells you that something has changed in the airspace?\n\nQ23\nThe answer just before it: I don't know.\nThe question: What do you know about the drones in the air at a given moment?\n\nQ24\nThe answer just before it: I don't know.\nThe question: You said you worry about the effect of that instability on your work. What effect do you mean?\n\nQ25\nThe answer just before it: I don't know.\nThe question: How do the customer companies find out about a closure today?\n\nQ26\nThe answer just before it: I don't know.\nThe question: <invoke name=\"x\">\n</invoke>\n```\n\nLet me just write the question.\n\nWhat would you want to be able to tell a company right after a closure changes?\n\nQ27\nThe answer just before it: When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Can you give me an example of what you'd count as disruption, and how you'd tell that it happened?\n\nQ28\nThe answer just before it: I don't know.\nThe question: What would you do with that information once you had it?\n\nQ29\nThe answer just before it: I don't know.\nThe question: <invoke name=\"x\">\n</invoke>\n```\n\nWhich part of this work would you most like us to understand before we design anything?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
