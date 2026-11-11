@@ -1,0 +1,23 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "technician",
+   "question": "Walk me through a normal day of your work on the fleet. What do you need to see or record for each drone, and what are the things that must not be missed?",
+   "answer": "I keep our drones and charging equipment in working order, which includes adding new drones, retiring old ones, setting up charging pads at our sites, and sending drones to charge. I also take drones out of service for repairs and put them back when they are ready. Regulators can ask our company to show how our drones have been looked after, and our repairs and servicing are carried out by technicians like me."
+  }
+ ],
+ "requirements": "ASK technician: What exactly do you record when you service or repair a drone, and what do you have to be able to show a regulator later (what, how far back, and in what form)?\n```",
+ "items": [],
+ "unreadable": true,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 1,
+  "questions": {
+   "technician": 1,
+   "dispatcher": 0,
+   "desk": 0
+  },
+  "limitReached": false
+ }
+}
