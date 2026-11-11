@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011CguYmiEbvd44mt8dDw3pK",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS+QgKEAgTGAI4AUIIdGhpbmtpbmcSDKv6Lz7AH4dXrBg9+hoMufShZU9UjCrYv3S7IjCzGbFQK7aLnyJSxnlX04vQRzHCf39VeeGMb6adbe75BNBNxhxZ9Kd6AZDDVYuF3N0qlghgTN5u15epQn5ZfLRDDqRXUh7OKSizqvrzZEF/QIpKoTJnsccMV3f+Bcj9MyjEw0JJbopHpFxMLSYJHgdQ9FKGtma+HOBWfUdY1jYRWPqq/Mcfbi4CF4ufI6VcfUAmbRsJmtEH508Ldh+mvEDRSx1R6z7J6t5+2CHzgfqyHEhoYTxzi5dm36rGlYXbzjXzh9EyYa2FtpaojHxFzX7xuR4Pa4kc8ZbiD6vaF8RFLRUrYgE6eB62PQAeEi4NH+Gvb+5OLxbv1k9wm/Hsg6yZBRIsM9tvTRKH7Pha6lB7m7It1+Kkioh7Msoozyw08u7Km5kCo45cBoNyp/E84aMyDM1IyM3cjRCdxAyeo0k/YCRWyiNzTtTa4QEbE589rdypPApSNs8c/2dEsDLSXMEYvHYJeM1QhnN7RH5P/hb763D5pg9JOZzE7uN1D4+ggGTKKv3G1tWxnzrG0eeZ0Gkjcz8+kwNEuM7wuWd5u2Ql/H+V+mEMtbLB0xo7fpFDGt3QIHnVYYZmqponjlWLdmJt3FYXzpFOywfxX7MoJXd+C3fCDFZbA0ZLkXnuJVeDtlA1NCD4JXrhCUTU+N1c/4dRxBhmMveFJeu63DkRrSb/PPmlQcT6qaEO9JoMIms9A9gqVXdMH4vsQlCHS4Tf6jg8Ur360RVAUik0cpverFGWxPxg6Y1e2+Bp5hs+Xa1w0fESHF0CHrDJTioSFvXLFtmloBk88VzH5AaxLYnyIJX/c0uBvIk3oDD6UzBY5A9i5bYz01r7VEvWFNRKaq3bkZ4UI7prK8QUdH5vpSSqb3CEDgD9nmt4XeIDOA/hnKd4zz1jRmrl8/A2IV4K3mN/DqIEkanHJVQIiEwtYv8AjCowo6O1LXwWEwz9g2bmjNbAdjAsaWw4FAbQCgkv2iOGkl2wbU9YpY4lOl1yQ/5aeIdEdet/bF4k0UxopFF8LTVLZTQoJZJ9NMgVsBX6trCAaC4Hwa4EEGrzHBToGDoYs2o7u5yrnjm/Ho1LpE72s8Dlc1FYCMv0S/eNmiyp8T+j/2VeOA+ZKRVmA3PLbbuwA/B8doMBqlop2soB5GfdrR4qgf8FB3rGu/y0a0SBpPMCzU3lp+kycBEgdcYmxk4NEwbRQaKpKhuBIdRoB3MvbXOVESUO3bZ8BkFR8wD0nwCy705J+e3n8wvU70YYAhY+jmPmTKAzt0KoEraQFpppIouobyoemZOV90CI35rJbThSiCqVHvLkU8VVv1pvsUBxljqx9LDcW1dUqIZjEn63fJFv0VcRCYIUUybVRkPeuAMOVNfKunAoR+7OGbszPbnfxkEBxXvgrlzhASZ4960jq37fW336sJNwm9wWZmo+7cyjakG/8ApV2+VrNeWvxZzWWnIV1jSxC9pht9AvShgB"
+  },
+  {
+   "type": "text",
+   "text": "{\"questions\":[{\"id\":\"Q2\",\"follow_up\":false},{\"id\":\"Q3\",\"follow_up\":false},{\"id\":\"Q4\",\"follow_up\":true},{\"id\":\"Q5\",\"follow_up\":true},{\"id\":\"Q6\",\"follow_up\":false},{\"id\":\"Q7\",\"follow_up\":false},{\"id\":\"Q8\",\"follow_up\":false},{\"id\":\"Q9\",\"follow_up\":false},{\"id\":\"Q10\",\"follow_up\":false},{\"id\":\"Q11\",\"follow_up\":false},{\"id\":\"Q12\",\"follow_up\":true},{\"id\":\"Q13\",\"follow_up\":false},{\"id\":\"Q14\",\"follow_up\":false},{\"id\":\"Q15\",\"follow_up\":true},{\"id\":\"Q16\",\"follow_up\":false},{\"id\":\"Q17\",\"follow_up\":false},{\"id\":\"Q18\",\"follow_up\":false},{\"id\":\"Q19\",\"follow_up\":false},{\"id\":\"Q20\",\"follow_up\":false},{\"id\":\"Q21\",\"follow_up\":false},{\"id\":\"Q22\",\"follow_up\":false},{\"id\":\"Q23\",\"follow_up\":false},{\"id\":\"Q24\",\"follow_up\":false}]}"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1911,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 578,
+  "output_tokens_details": {
+   "thinking_tokens": 200
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
