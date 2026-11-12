@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011CgwjjSCRyhS9RQYiFQmid",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSjgcKEAgTGAI4AUIIdGhpbmtpbmcSDMnnKb6IHIHaDoyITRoMrLyrqwwnLFRjfHYBIjDJrECzv6IcgRMZ7+leM56kcwLIQ5JAazZ/NzBhDfOgxZUmBGvuLaoF5gB8nnuF9sQqqwanXqcmssGuKY16OgU4WQ1tCJhFbbIdKBB+6b+UnH4OW+txESPuY+EepSipshmvo3C1LUdnw3uvdHza35euR8nu52fz2HZ43jmm4WOtfCb22gdSa4emors8JIlndTpx4YCDp5WxsvuE+8j8liGRmL/LPoA98KOypmFt2N4UxDQ6fXGyha+9wndo9x9MAHTFfL3HqFtLmZJx0km/ut6nLoBC66gY9wGWSoS2BA/zaPpOUrvCbtijXjmk4kJYrEw/HwuPGKzeKQGW229R8uLORG1u3RXzBSy+CyieAX4TiW669pEPJefCXtLv7sAJIyrzQ2kKAjFsJJq4G+BCH7SoLVEOLmu7VhGfJHsOfB9VNdvapv8UHh6qVEIC+jKxasYap70yFCW3YgrpCQTmnyxuIAFXzHceV5l7BcSSt2CFyaBGv5DDxDmYYsnPapb9VRG0RRv+J8oGKkDT12Pvh5rVh+vKcnvrSW2hN+Y4MBknA8KkeMU/ekRMrVEX42cxGmjPYewIlyA07pKCBdrcZIoxL84YWhRV28GRHWimqF2ZMDFNvIJZf0Q6vo3/K9TMHjrJwCs0O3cR5H/j3C5LnCCFhlA54Q786e9nJWs4P7PWufpeFTKDdTft1BFSJu//l55+yGooEjKSDQ02JrFUQvdpV+4K4XWKxoPdfF5iZSwzUUmM52IVhZDPwoPtP3vv5v0hTSNdWBcy1Pqed4sep5Xs7kPP88vRBLgUwwnj1VQKHr+Trf2t70zpbOChw22e8SghFSFQLM5ZBZMXZZCBeqEoveiwBmSR5NiiupbLcAoRKIpoRQeVjFUaE+mG/C/ynsmdPpiDukbimDsptaNe9jefQdk8OwtopYphaOOM1XTcpcF+jm0BPXoXRreD1Wq74KZnLF/lYg9Xu2iiZx40/zUlUlIrQXVrTKZMi+CB2kgCrun/pJi8hBnHUFBw4nzTpNZeYmgHuc8owKJysT3NudmVjuVyBXCHd4wXq6GCt2XSB80wm5fn4NVnSVaHIG0tUvNgrp7grg16hmyemxvWZehxtraUlaT5v4PR4fbjKZ9XTxaR6cyeq43tzOa0UO03GAE="
+  },
+  {
+   "type": "text",
+   "text": "How do the customer companies find out about a closure today?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 3134,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 52,
+  "output_tokens_details": {
+   "thinking_tokens": 35
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

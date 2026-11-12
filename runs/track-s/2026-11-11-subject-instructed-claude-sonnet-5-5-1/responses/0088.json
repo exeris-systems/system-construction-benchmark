@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "I worry because the service runs on a single server, is updated and restarted during working hours while drones are flying, and occasionally crashes, though the companies accept a few minutes of interruption. I also worry that radio coverage is patchy around ports, industrial sites, and in bad weather, and that reports from drones can arrive late, out of order, more than once, or not at all.",
+      "thoughtSignature": "EmAKXgFpFH0TLIG7KIrHXm1rVlZ1suyCV4bQ3XM3EU0IAAtVksY63sUsKlxLJP4+vMLUzC4XdiFL2hJmwcavOYLUW3vqM+7pj/jNgKpTEFwdgjEY+DCvZY25gdc2a8HaxxA="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2288,
+  "candidatesTokenCount": 78,
+  "totalTokenCount": 2366,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2288
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "7sj0ateiOJTr7M8PjbPw-Aw"
+}

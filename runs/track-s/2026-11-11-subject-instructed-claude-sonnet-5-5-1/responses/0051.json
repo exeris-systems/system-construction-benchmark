@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011CgwjJyHFQWEuS5amPw2Bm",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSigcKEAgTGAI4AUIIdGhpbmtpbmcSDKN1MlpFBBFCO6DUThoM3Shm5UpmqlgfAtZaIjDCE8pBYDla/4onRKD30NyArxxFNdjd0RiPN01zhH504DWJljtcnF0VZHIzS13mk7wqpwbmpAUIajZ3b2Ni/lAqol2WDtp2StdLTikjnw2m9C6dy53Tr8XhBGb10tzLXasoDK6w426xQokndNTAvqaoDt0gy7F9qlHQooXvpHadVPLvBdYxXaQ1Uu9aB2O8BaCGBLKuvJ7Q07kZ1lvZ34q1Vgk/mPFLEb7LQqc2kLEMj9ikytGMxsYc8TMV+ybV1ccdPVOQ0mZ1+80TVhRUfXe05Z0I8IiYGd6+wNykMuXt5GdYFRtn/o7dSZKI1yicITcSA6sNncLqLKnF6yevYSjeyHYfPCusXBW9M0KsU1uG3mklI9pN/sOSxUzxgij/aTRHpLcmmhbAYJY4jK85yUNLacZeGMkdwJA3WKs1XhiMhgi1iD/lLEu6W2DQW0g3PbBcLHZwUUKEYa0g+puT7OVsjDzx6GnymQ9MNDSVWvz/ZxSe4h4+XUvzKQPUJN3U0c7PUYYnWbuzkqbC5zRG7mnEbXN0QjqJlPULPghZNCgJzjNMJsdr37C5/G5mAn1wM6dW6yAvqlqZdXSVTh+UzA1Dk8WxSFJ0lYrKeTcWCnRFzYrVTVBguDnKFYwCsY56KyCAS7uDfOcMbHUS7PTcTLG0zvp8XW9RnEoLEAIAWPPe5+4hS0i47xs2STACZofqHTuI12NeZ56EOTJU+0QPFOlFz5493+kUPtDoVeNLd05+FJm9rrkUzpW7EpDebkgHC4xTfdX1mdCtCHhsCx6TtmgXXjwTlwrl4yBA0Sknb4EQbbnnpU4GqNUNT0DgYBibQJaC/4vhrsKOUsh5hgt1d8Sswtgqxdy+ABlyzPC78jBoj+SF9sTybR4kSWxu6+6BfYxmawoE197rS1KopBO/WiPqRTIRmVeBd7lOx8NwFDZS1NEaTvPrkdZUZ7ePHadq/QsYGSyv2IWHNnKA4eLRYtTeXcX/aig9jxOcUJmNRRqYi55h7BMiFMonrjamPrC9GQWXbzycFsgZIUD49NTNlgbeWecugrBhWyT5JU/KWSlMSggO94ZgwCVEAa2Vez8z/coC1rYdyFd0zNdcMDHkdqJCtP8UCz4uJVKA6lw1y5bZXUCZjwEQxF8rAGQYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "You said you add new drones to the fleet. What happens when a new one arrives?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 3408,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 67,
+  "output_tokens_details": {
+   "thinking_tokens": 41
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
