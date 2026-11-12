@@ -1,0 +1,379 @@
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a dispatcher. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Could you walk me through your last working day as a dispatcher, starting from the moment you began until you finished?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSyAYKEAgTGAI4AUIIdGhpbmtpbmcSDO5r/ed0wqb17H3pORoMO9yTSQyCd85UFwMeIjAs6YUeX3WDd7RzcS/5ZbrGH53yH9ObsOEh+pFQK129lBnMViNxVmD6ZWKM52LGmb8q5QVXMseHiixP6Rg09W5PzPlPhUUdgMMsK7UeMOHYhX4la52uwqfn5/sJ+bYNBhushj194XCrf880qc7LKwcu8+XrqAAR7otUOI6YoIHymwYl2CE5r5coO5/aWD4UVB87MlTIzZESclBfXHRWU1aKBOLigDHvUl1dww8rps/WNM+wSGc0asseXfgW+2DRKXV+hb8IKz223iVDA7zs+Ko46j9D6xj8aRDgnri6eRwkIvASYjYsLKlT1wXYa1CQ8AIlR2Cam6mKfrAkAcDiezuZNJMAR91ILantd4CppSc+q+mUDrEyBfc9R89R54OdfIbZCEI6vHR2ga9jzR/Huz+4C2bXwkMzdczXGLWxN+vdCCz1Een9DHNPVNFX97tVZ4Ho7m/QnfcRvomojdoc87LdAUbenR1X+u4HQGqDM7itdnLfwwlj46BBznNRATL9287SHhmOMIRkLFd7VDIiypy2TQqrtOsu2qy7J4GpOtnMgpuinUFu5X4EoSXB279++Tetsno1UPeulqA3cUGd2aXB5J8eL1VupAwkyh5hhYZvvmeznXQwKpBbW4fYAZlKt4sZl5visNfBG9Zdap3busfnq8MO+RQE+UnvGcjXileMER6y1/69JjwLa8kfqfq4DAciduXDV1ZW7wmZK/Dz9J8AyBboLLNdznJN0SfxdQqrY4wZYlivx9fSfByX/xAlw6cRAIBxFoebXQxY6NMPfUKLCqeCFjBlms4Uc2c1lIQcIqZHjoDzCThAWXmXA5rEZlAw5/SBW/vCpTboTIf9dAoIKFnf3ZYaDhhJhIDF84kAaO6nKP17zDOzZidfaOZ6FvscprFT5dpp/c090Ajgb0PKGYGtmE4gK+ccGimEjfe9ro5ZFD4YFY++dKOwkazT3tnfSjY1C59eHEw9XJlSXa4z8m6GM1K4W2+BXbxzhhEpGcEM0AcIZSxAnM8n8aSJOh7Urej0SD1SEcy6CzQrLunj23/bSWkbAVwYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "No problem, we can start smaller. What was the first thing you did when you started your last shift?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQStAcKEAgTGAI4AUIIdGhpbmtpbmcSDDnQee5joSDrjeXToBoMRYbZGtjNtSUwqskLIjA2hvE7h1sheXuAq3LdgTUAEknEQGCjLlkDWZYMDGHFj0zN9555zZPPkJVV9oSZ/mIq0QZGaNaZuW+5Amf3mu74j4DiTkez6VmoMkWjrjEz71BdRDjmvkd0gcbP3+bzmERTlpnizPRQfm1++CdpsOx9XungSdkrleqtlUJDmWhYDvzI+C8/jwgXmD8XbSJVT5blnGpxgQMSv++QD34gcza/PD/fS7uCnyNwevmMZ0y1CIx6ZrctrChqvK5GRZy14Qnc7Eq7JVMoyH4jZy6PFqWCzAj7lKMK77ZQ3bPeNG4TDJzXhwQRX4mqZGhCHiH0rv3yTVO9eiyXUZj87byNchKZ9wpFGis5nZiTFu8y2Hfq36+27q58TRFei1Wpuid/KlEjx+GXQTXK+yZPzuy3DpB9Rv+N9N9ZjfdtQKdH3Y8vB2AvaPdUl+BDu4DFK4KcpTWyfrE8WvH4iOpngPVzzwsu8tn1guHYIb8HeDVnNjeFEfP0MDLQKW7SREiUsnvVo7uZdpeM2UIyaRKmfEjx+Y+O6C6teKB4oy/qoBJwMycVCr7XZ88h43F2rOP5rvHJa6K9ntubmW4qg714DckxXAG4VJY6Q49dO+uBd0skrKzhaS+2fbD5KJgrgQA6db2eb4H5NfEYiYiR4xOIinpZ/m5F66kGoi1JJV2ewz9DUjXeebdVA6n5qHT4Fyr/GC+emdC2vepYqT5Y5KTPrvfI53iBhSDqD/stexush/B/ZH+61p2cuRoe7S1J3xwVG1j2knFhWqPe4rIxJo7iotGahzp9lmc1tpbiTbSo6l4bW2HaX1kpJ5j/pluOjetV0ejFcJV3Pw276DfC4urAUUTQTK8MOiDvmYfsX98uyVGCewQjHiVPVqcBHWcu0WCPv9rCXQ0v/Jx6G2doBZA4JDx/hlfS96vbCsO3WdQkSkU66/46fc88lVapZ1BH7p+OeeUFUie7sBTyQW0TY6VKs9jId0zfSVNtVkk0CVjI0HSoohIPEoXK3NjOcIpTYQRwmVFvKtmMezNYCLSLpNnCzg7U2bHUwO3BNzwTNBjarcCuVSGvX1id7bKICbiAjmMk16/B/cEaJwhn4AdDNCq6ohipN/EVUprSln9ZqSWiADNnKRnuFAvRDSLe1ZrszcMomosM6UEnYYBYyAxYyzu1PTdYEUNSf2JGJgXURwy+l5NSSokFk7epwKAYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "That's fine. If you were explaining your job to a friend, what would you say you do?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "As a dispatcher, I plan and run the flights for my company, and I am the licensed person responsible for each flight. I decide which drone flies and along which way, and I sign off a flight before it leaves. I can also call off a flight."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "You mentioned you sign off each flight before it leaves. Can you tell me about the last flight you signed off, from when you first heard about it until it took off?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS9QYKEAgTGAI4AUIIdGhpbmtpbmcSDP3aeTFKRZ9K8vikmRoMMvRFFKuCdM639ANfIjD/PIOPCAVKlrAdnMtGQKi6+F4aLJaYL9RgnJk6R3mfJZNhBdcS1YBes13V3Q1ji/cqkgbGxnKN0qFGjYmp26f2G6h6YHmPUwt1SqUW6/oRSDj+sCEqo+09LCwgRNrlv5thiy2VV9ybsielCTkobUO+C4XAHwmhvsO5/iGfXTJO/+2uTdibTsxz270HqnB+07UJ0VcolDUIcjDwFt/SdmghNP9FWfASrqKQ/iUd4mON6a2JfokyCqWdVwIn/voeRbcDP2cAwWekBTxWp8re6WkC178AwNSshG0Ji6HaazyWfTi460bMOPPQFuHikYDd/7cOZ3VNBeT/2/I+0eXyGXiMBs5oIod1hFa96FIu1PUEsgBa4lQzJlBpCOcgoqIXxj0ekwURzXqcYxqldLqr1zTikLYDN0fYLgQy4/o379ag216QL4dOQMGVuJN+zvs9+zhd19G+JEID+NcFKWl7C/ETXMNFV50vjG4IgrRd7QStH3+FtZ6wqEpTOi3VZzwzp5ZF3ptqEf7uu083v9Xf28mGeS6Ml23TOHOgbBLHmJ7u2HUwon32H/rVChVBuVgEiySeDqumA8zp41q60gZKNS+vVssqm7C2wlwLFb8t/nNVFDKHxXgin7ipuA5OhofT2isyoBIMshNAkY7IqBzZzukrzsegC0QZvm6o48dTmXVsX3qhCeanU3qgyeV5pGpDHr09zaFxReowVpOhKuLMYMj97iOjdyvAYldipxEpiROYycTdYyeW53msIF4s6Wtk46zYqBM5GVO3Oo3X6wH7bXErMW+2rZNzDLDIKuOx/RJ15KW9e4IQuAx82jyPo7KsLZStMuYTx1QRhegxcDzyjJ8zg1udMwzJALaMjEtYIdFLO6RiACzlAUdCOzVLhYxTvnbewsfe3wTE1vKeFI0H51PiHTXkTB/PLwV9LTPYP20Cn34/TWRZMU5ucwvgdfM7WZHWEAbIyopaPg/AcvFvferdmpjYHjq8edceiQc53WEy9CvG3nf0pGnBv06vOeW//SF9qkHk5Y+i3jdi+eHbxWz03/vhs6K1hY+x+7n37HUr8niuzbjlyBHnymEjIAdY7VF2uTcFFUXLh4XTrrTuRATFFY9GaPwYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "What do you look at when you decide which drone will fly a particular job?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I want help finding out which of my drones could get to where a job starts. A company may run a few hundred drones of several models from different manufacturers, and they differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use. Choosing the drone and the way it flies is my legal responsibility, and our policy is that software never chooses a drone or a way for us."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS9AYKEAgTGAI4AUIIdGhpbmtpbmcSDKvAROwsDQg6trd1DBoMRWlyog0PHVVmB6LLIjCWSNTRQQhKWlpCvw+7YdOehrlsXhWdi6GI2QhNdn+K8nH8V6cJ0aFCaq/o1J6F3J8qkQY2TBv83PcgK7wCB86zayMuokJ8mxpObQr/XTrPwTfnusu9Vhjs8gKOsnyOV1AOJFPVKvAOaP/pyEVIdgYlc/k1E4VARPCsubeJSVF47QKlU+TIYRAAGmx2VNYaJX8ZwWNKCPp6ntRPwQ5bDDlwA19KH1TZfQFbXpbwDP7dbVTbIoXt5PiojZMLHPGCmOuJ8J9TKrQJBQb0PITNQWTXTcJ2h3J9aBHpm69ACVmjCxpneEIq9UcB63YoS3FIlNEBK8uZA5YN+k/94qx4YUAiNckHUoWhRJoMxBUvSOdhkK4IL921R4sgv4kToquyoK034bKJ98gV+9vluboFCB7Z0z11bCiE1IW0LmAvwn/X1LvT8mbpIqIuYmgrXDvJEl2NfU3TgC2Z4N3aCSm8l6vfhG4eG+L5vMqUOAF6JLq0TGc0HIJDaSdtbdets0GqJ3RmE9uCVKGNUTXQ2z/Jy9hlvgsCVjFZpnr43UxxxPz//Inaew0FmvIlh7I5bvCOJqeH6ft+lgi8zUpFOR67LqOpGHJ/uLKE6vyR/3dmSX+SWhECA13KDAI+iM9o9FdU1CRSLKttFUF393jTZlwkq6YwaJ2X/WHs/FWoFXVoULB2Wcqd1ysOPu2JhMBHaqQ/HjjM2WWDSJ7Sk4wcn503GR+LAq1YxOgWsEMy9PEY4DNGZO41CguUNSFgOgdea3ToHffs0Omzdu2Czrm2zmGlGvcecePRRsOTJldzxvXEo8TtfZwy0p918dVOgvAboNCGtW+e/6rkwC1ow+Xcu5E0xvODQCDBSvkSJi3jXIFA9hzlMBcyPYLAcnPL4uffpDX5PfUB2DVFoYWsJqyxraiOVljXdNyOfIvlhE+RCOOGbcXy1tT3bEc0jhrMd90Ou4tb25pxh2BPbNH3sqv+pCOFXrF3YdHOelNrDC7MtBzlHpJTxlSaM69zpJ+bRIoH1gMpQfQLeRtna83mOxqzeBZMaTpFArnN92alC5SAY+p9enq/cv6gpHOw+UsxxEqBaGtRyh7/6D0q/4YrjaSD8H9mjTE4IrwxyhgB"
+    },
+    {
+     "type": "text",
+     "text": "How do you find out today which of your drones could get to where a job starts?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSpwcKEAgTGAI4AUIIdGhpbmtpbmcSDH7v5ay6xu6f/gdighoMZZI29ts47B0xHTTPIjC1BarIOLijbn5me6vtUQ9Ghiklin0Ia91MOgSciRK5+Oxj4YF08LILdvxJm+NcvpAqxAbUIziBS10M8d/mWNLqQDRM8WH2ijABOb41Hb4YjJ5bDteYmOSfyZ73a5eNU+kIZ0evUVeh3oQhswCuJkPfD7IrTZRaEf/DANd0yFeSR8ZrJ6/QXgPdCgZeXQfsrnLm21vu3F5TRhuqk8oN30H43sU+JhENyVRhO+mgd5/96enOtURsrrArnH2eaeaXuSgLFZmThGqnX4d7/lNBJi0atH922VDKoqnifZ62DtWe/WHHSyR/TaONbQhvBSWbcHaGIDrLBuSJoq6rRon/xVisgk1yilg87BC1wvdqj1TDToRT6zgc0CL6sjvNIZAH8FI7gMHOt/TddkFHt9sS0Pv3PDkM0I6Ylla2AmzPeO+L5hsM0ykHTHF+ZDVgkzJ2QINWE3PW7rBdtB/h/kf5KGqI5ofv8HKBgpxjfWDyzhCxcpxVfj+DtUlj20ulpU7FUo3F5YZVLnF4h+gYNQ9bCELBzuWfqP+D9sAgvZnk+u0G3bQyr6cJW2tRQkLDy19whjcYVIxHYatv9uKnhSU3BE61gmUbK70CP4I5Qj34eh5jUhwcVcTIMyT41T52GSi7xfilFGoUvXk4KWIBn7tFj3Ph8k/A/9QjLgBzo0pEEIww9Miv0tZZfLILXb4sQHc72562qyl2xnspfm3omfARnqus5Idmbvu6Zf5NzCRSy8DXtdVImp2GUiN2ldL7Q9K3zOpzq1DbWHZeK7crB26OU9x2jRPPB+hWZIK0IL8E9Sab9PcP3evPNtHiEsK7KdBPqYWvh0huXPmGmZn4OAmVebTajJHcMphsS78EcYDUoiwrnRKI1Gd+4kE39EHo7tiNiAyT6QBqXnTrB1w4UKmqdYui5bvQ942N/sREYk7FADLswlVNFi15Jz7DmcVai+L+JSRjhYkjdHfvh1F4rFzQlYFApo/8actMO/e2AmENG+keTNIojW5n262ExVn0svJ9nPwRpu0feaWgfgF7ewBMjj7mq+FhYW+1O9aQmygcS4yAL+8rqEbZSIl/pr1waOqRt9rTeIzgAe1kwxme+DYUJxuqn0j8oUW/CBJP4PX9We3fFHEOXaibFbp+/QwfORvAl99okq0nBLX36jKeSNAZ5T8JsAjLNaOYJxgB"
+    },
+    {
+     "type": "text",
+     "text": "Is there anything you check yourself, by hand, because you don't fully trust the information you're given?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQStwcKEAgTGAI4AUIIdGhpbmtpbmcSDNys65Ad5jisbCC+LhoMGP9dq+LiOLASBQd7IjAkXid3UX71ke/o0zjOZ0ZR/z4DdXW6H+jOkv9CnQ89FQXW364/sbG3hYVPrzjZ0LEq1AYFsVoCTND9wKfE15CjjQZk8ix2fBfkxPbx1pPp2IY7dtI2Ym+F/BZ28KXWeDJPKGcnRS14GQqyh8rIX5IFcdhvRQwNRppUR5nQL5B49zXPCfynv0tRtp1EAK1nkDgb/gXHlAJxXlwLalIpMWI2u6WTAtMj5NfE+ubDVJvZ9WU+TpDCpCkJkcK1IEjXmJNhCoBWuM4Lct09jlhf+3oAb/CDhOZQA0EwWPd6d0mNXDwtfab/pdJQUN2PnHFTWtopfXeNj4OKWZtPucHAq3iOGpHqHEyRzForzvau5upQlKdA++O3fCUxbqUgZOyhNonwSC+3gh2MRxJGcy7Uxh058raanB3G2qMdvmwbw+3z35GrXgE7CD46AiWzP7WWOaTb2wEvnzeqgEpjkIkCxjuFg2cCMcJKgKN79d1hanJ48x/x5o3WRyZClbLbhrPw6TwzjPBGEDCqL9jwTHiraDh8lUnCYoEiGvYFAOgjAceYN7qI/0Z4sOPrhtXx0cGhtP/KmaRU8zMb8uNC+wdqDK82UMLC8H1Bsv4fHl6Bd1s2aCdSjwU9q8p1dhQRdBLzxc8PX1aFwVOiErkkqTKEH/2p2xS8qAGcOqSH7WmnntKlOV81xwNxaRGWP0mAZFA/FXWWzUs/ODUDK+1BGe/hLtU7pyaV7qFequRFJKOls7D8PuwWur9ob1AIk+iC9c0aaZGXSbwcr2H9v9kRmwAoTwM6mJO4yzigkToJSjTOfHAZ1Q87MupWyRRFrlZSezfWQv+ZdMmQJYX3nUhQU/5ylJ4fyajfp1hV5RdpH4gTcYe+TkHJrRjz0szMBfE2ZP+/yZ1YnBjoyuIXQijIA9ZSSDFfu0sgsMHQlulz77/jj/j7YwdrDeLTa2ZiOJWyxddTQFH4ohJvjhta90B99y/dnnlZKNiXeVAzQAummF5jcQl+FZPDYMrAqB2Agd18o/YukzwctApoV0nvFMzl9sAKqpedwCEgSQMN0n4dJSNWlvT4huf1o1ez0hYtgGgU2hKoJhOq1e0p8r1xV23g5g/pzNybBs44vU+vmvHvnLjsox3ZyKQRWjiJPcjPoPAObvfcIl2akV3zBynHYNnjkzsMD2pvahX+zfhT24JxZ+ECFJm9hNX1dqUA6dkYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Who gives you the jobs that you plan and fly?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSxwgKEAgTGAI4AUIIdGhpbmtpbmcSDF2Ow9K62ziAdQP5+hoMXocL59csyWhyXinQIjDUIcE4QaoqNXEFV1HZJtHX/Kec3rJFpw0NNSUSVAVK3vXGgQOqz7ZH7l52Cfp2ltAq5AecBOrT6KFZUs8zIpXckh1Y22PUcsSWhqzMdS7qPsC3zQN8SFlXtXreb88SoUUQrgagZSUuhBqJSETFNtE2/k1/V9ZKwX4PNBKEZ9VvL5vmSylVq20K2rQn0Gh5wvt61DvlO5MPcoZKRnbdCzlhhJv6g+TocQSoesrsBW8NA3AaqmzRivQF59c5RPPjRPoykA2r2tJF5+FkBeQa0t6T+1fEbTscCI6sOPms5neB8hFEM2lVsQof1Yb/bq5JAYxtVbNx6I1vhRJhU34AWRSaUK/p/EaXX5czH6xMpnRlGg+aeRlEGliKS30JHbkvsanY1BJTuwR48WscJpl/WDtr0xaJyf7J1mnD3dhZUWrB6zIQ4cD1B23gbnSWOr5ZvOFqnH7rpYONk3CvU7a8ceuTnxNXPpq+4sjsHSylluVcF6f/jgbpnV+5Hx7CANRKeidg8P23g1OYtjxWeka/emgwSPXRg/HC+xxWJk/r7d3FL2TO0++CkVDO7DtdAxCfu4Q8SFTD6iKwbNMc6RH7q/ZUTSsaBnoRL3nLi0ZkhR2ODfkotAqTgWq3aVf7Knx97bSt5IetFJeetP+HFt5xxzatueQ9HQpKIN8A8G8VTA5eyySCm8+sM0HBsqHdXityurXABuU5fHLKbfZS9nrU3ZTCeL5U+joWunf0XpRA2wrP/fZcmwC/NEs1O2HGNzvZRGBHG/n2vnzN9dzoRpNMIKBkUb5FLyYbVnZZMZDIivjV0ELLv6xiGNTzR+M0Wg9210F0oz6JW0JC64QIfPE2cINAAFMGjK3nGXvu2RUuyduMrdHolnW2jMshqJLZramf/9lfqfxlQ/hEzPY3oUE1QErtXN+jWamY1lDGjkwP+FyFDC2LUhhbRkzLhZVvD4//wJvvzIE1fC+vUwvJ4O/h4jy4xV5RBr95P7JRiBPKg2D7gZNDrzEwgx/4UsJ+WpzhJIdi7ys9jSAb+fi9F+mcQc7PC6th7sXHz70ybjyuzj3+3R8jQhK5HaPs0UtFZk2JErbQnf+eThPyfYCom2oTKQAbISwCcNQYN7Bv8Rbh9VEKAvP36z3KtjXF41quzMm5gB5uaYxxoicFTI77zg6WH7IDFTaReHvH1RzeeT26pRzA670sFJrQfnL8rwZUVhpvnv0MOQwArxcJ7wcP2sJBupYZsaVjYIppf9ngwGyis6PdbpDZ4must6rSKsv003hzTLtRknrR+VFiJZG34KrBsvLYeqX+pxrngqx8UBUcEpxki2NU0+UdZhzFQR8d+eQbvW6grOmaWpoqnSHD7iWyxAKh5q7BzIzlPqJFLl/JCtQxmJ7b2DNAV28YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Can you think of a time when a flight you had signed off did not go as planned? What happened?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSkwkKEAgTGAI4AUIIdGhpbmtpbmcSDN72oF910Rqpq3ej1RoMa1G6l2DPKKAtE/dYIjBv6UF0NJjBUdA40EgIb5Ij1c/pIWuHbOgk/SASou7Y5KGF7X7II4GPRO7KfDryJdsqsAj+nLUxhQ+BnBuIwKsKc1Tm8BgQ+2roM7N5AvYtxL8oxf8PC2vqkNWXtD9cX5cK6fFrygpR5yfxa3VDLKEZiQ7AjbR62B5RNUmFMQG06hHxSRZOK7zeQ6B70PvJHuZ3OaPEECxRylWrtN2ukkPAc92TjkTTc1PSe+EkW+DqbWHuCNwBSB6xZh/hnTeM1t7PSJ0dyY4xiyM3gzAqxnmQBaDx85VlX9kFDAyZIba0ph5YJMc0j7Hcxq+eMJF3lhDNraM33a+eC3u+aly7eml1hBuUVJYZw7yaEw6W7kOLkrvFgf9Y2ngj+XaSa5Cls+te1cLRSIJ+xww0TCltv4m5r+OD69SvoeB7S949SD2QZksJhxmJ5YYtOyaUJIkmVzomDNL/0yyqAmzV24WdGt+OckEg/zXPjoDal6g+WPGl+EQ5Lci/3wPpGJjDyyyAcsvYUVJGHX7rin0/H2wkSyWSrOSEq3y22d3EtvpjtdWXW4ClIbIWYm2oAqr+uzp63730Ol/b8vxSLv3IT2sYapZD/sdnoUL5xjTxBf5Od8KvNoShy/ZyTkHZO13cMdEa/L064/Y/pZHcG7oFNbjDRpn2yBZJQIEQVwe2LreKMkgNFzUub0d9m3uySIpdFnVzCh5gZgmARCcVFJ8gAaOpDsIeCfMuOfP0DMEX391AXbAzD7WwW6UNVoe4xlrFHFQMMtwt4u9+0ewSSlauEbvufBvoHwXkPndc3+oQewHmX55P+xoxOzHPp+TN8wZPwSW2LopSHDOfGedp8cjNvCHuXMU+NrcT0jpHDlYS3cYl+vvvu0Nu8kZZTU+38jpwQE3jjYSsLuTgN7ASor6hDUtv4JOcYUH7grLt2xE28GDmg/+eepEUo+l088u/EWFjuR9wc0XA3flHYEF00HhNCPRXmngW9JI09H1zPMpMxZlpOcj8CuYFGR3K22hE3akXDMPiFRz0V3IH3RcPhqB4SrPxjQNUJXx78EslRKSzfgp7c/RY2ZPVY8mYjoYLqges23mR3iokLC2Sp6AzeEvP9nariTdJaS6+ja3FKTGM72YwwRq8MwRw0O5l1vug5Iw/Gg5LS34TWhF+dJo2hcIDavvCcupPCqaFelPYJ9t2l2GXJ8C2ebsmZRszPzAZl3FVuKDfe/hFI0Pn4eia/1nqnVKVis+myDlEETEIBO67jpTCM/26DsO58lt3dh6RLRi2Wr0Z+4rVLZiPWtmHHHeeOEF9iiAv4IJJcba4wFFiZuklcve/GqZugTdtf7T1IVn/p7Z7BDcfCyJn3tpvpT/YhHru7cZsDsGmaD1hLhCColeTtVntjqunM7+ZtWvAcYKI7qMH4KL3O8ADJ+AO9peAxaPxrt/yiCJ64IfesnKvjywMrrL2fCywB1C6PlgqAoAyCwSqzI3V6R/1d0zVkjuGF5CS+Qkp1v0CGAE="
+    },
+    {
+     "type": "text",
+     "text": "You said you want help finding which of your drones could get to where a job starts. What makes that hard right now?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Several dispatchers plan at the same time, often for the same busy sites and the same popular drones. Also, before and during a flight, things happen outside our control, like whether the load is ready, and a closure can come into force while drones of several companies are already in the air."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSxgcKEAgTGAI4AUIIdGhpbmtpbmcSDNk2e+3TUHNd3+7xnhoMRVkBJCbBH+Rh/ziZIjD08kgR/XnhL33mq6rT2tB4ExSqNiL4nSzLEmXcR5QvVj+7H9gLQLgxvK08ZGw45goq4waSifeCwmgh75ernEhhwCCu4q+yE/LP1yaX6DBI00GlzewfQumGD1JJphhfQJp5e80+6w0nFdHKCEAd9l338jDbFFN4MG9GBWvquIKW9vVNQEqOG1d/0oSUDU7Ahhx7SMqdmTiV6Li0bL+ip50IejabM+FO3Ae3NrLP5+UWWFd3PHQl/eY3lpEE3Cf2WDsQHCGsLceXRUYSBBVw2rfXFIbwuK6R5Ob5VC9ZVQNzyFQdzwgoTkyiXbDZy1WidQqlyvV1ybHEPpcRm+vM/zxJqTcK6/+/Z7OAdcax4JeqtRWMULVDBcGyHkOay4NN++1kuQv+GpSVm5agVYczir0fqm+HxqspH8HivUmVfK92mDipVoO9UpMn5ENtbwzRBvFPa0GGF0e9ijGHF7gSn/skzErswqedKGgKuUoJtS6ydXdaiz2f8t9HQWdviqkAknjGfhrRiI0UxWt/yrUrCeCCy3UEDeAc+YUofAJaz0SM6vIRQ99aihoaVOlYctzjDxp2dujGTQRy44KK3gcylGrBMevffpIqiGJMGd7HOC23XgPyVHFz3dXC5PRJE3gdwRWT3/6LqNupVX6sXZZk1sgn7/dwAbxQXnW91SW60/FqfA+FeeI9TSmWl+w1nVW722dnSX3F6I5o/9TXeHs154kr2ftbUK0n/7PEpWDpo2xXNe84AVcHUU/umEo6VGBbNM7rGdwJowmbsg5ftagEaWNziM4IJQwqMlIthjyquHgX3pCbRsjshnYNGB0YTfNbVgAXqUyNi4tk/+hoA9KN6JXU9mzyFfEcQ0MPf5G6z/uHmy2I2iVRr5eetwQMmIy6BzUy9vBn/F61KHbQknKvjIqAXLg8SnffPJJHEBdOlABD76MdWYSVuQMQnj7rNJFbpUzGw+FvAkMNfD4RZq1tTaXZUMB7RI3RhaofEQDSlbTv25axTFaocv+49bOaMQU79ihBthYIlbFTvmcfjuKKMblfq6GeTsOctdPinU3Ss6wRe74HBPcsGO4titYKa6YgI9tRsS3vLzulMiJhbopu1Vyt86co3RK7mJPYwjYtc72JRAnND6mHAUYsWpZrFLxpbtI7vcJIEzxEpQS2FS+XPsfNQODWa5ZEKL05pqsnz39t8mHCnMSDUpWVvVaUq2oIR8uP/JXvAykYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "What happens when two dispatchers want the same drone at the same time?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS4gcKEAgTGAI4AUIIdGhpbmtpbmcSDNT3sRzljKqPPtvzMBoMSYy2sGB7NOt8I4TuIjB2gPjLwXAvDvonvQU/p13HyAMawu+qSejClnOy2/R3ogNP3C1vSHp4yVbO5BbUUqMq/wazQzkweIbG8AGDCvHxG7QuISt9x4CyHShMb2XS+qim5XEm7pFtvUkY7ALpj1suVkbd0CdTCkD7vQ5KKc0fJCP9KXz23f9LrJA7iXEwGOxt+QRkoOWWYBAdL6CtFNFI5hCeXbZUz4fUzBp2pDyQppeWyVd7XEckVTKPH9hcdhL+6PXwuIKeKwxwcp1UyaE0LEtT0kMHPozN2c+syJ76WWNajVMERIqIM22gzZHTg6pZSM3apJSh8WYaXWJw+TQA1/RxRgANckrgrxI6Rb3u2u/ce+4jYWA6uAg9lIIKD8jWR77Mkyf9qNx0H7g5py4OjO9q6MQrKcAzDuDmdqxy4CptKWwgeDlu+5rK7JVwDQOOVI74a8Dh1FSExt6u66bEofkmojPhakWhFE7dfVgw0dPeoDrm4GDVLrQilE4cSMdG6Vc83BbtLwTI48R568RYXbohfRmG1IEzbZ//WS9AsHRGw8mYo1C2GAKuhN5J0V1YBOfoRBqrS1fhqsejt5Z8i5MecSUnHM6MUbBq2fFhFJVcaYvBOPDrArhb6kAZW06ObgMJ3M/QmQIOR0ZdeiMJMc/X2+SFf53qHq2oUCLsX9cMAAM8swVygYqsCsEFeihUVV012TiDzfi5xKxySLEySIdEUjM8U952Uj1GY3buaKhdF2a0+HE+ZfKRW5Ityfh0S1CL/hYk2dPibCg7eWfLHishPowUdlC5oaasgW+ba3rm1QttBGcO19J1HLMNLi5aIElwi7Pan7D7XD2I9NNLzo7qkOknUOfXpmd1svsZ/9BwVXGdBvXZG8W2pdmwLfNzlAq8GY2QtCsB9P8dhVQEUJUNZ5ddNbztFI7R58r9f06BYvv10pYGb7vX+a59BgdnFC4gDP6ZK0EM7MeDv/oi/m58+Ctd6Zl9eI2R/I1PqZ57F0/sKzbtBz8+ntz7Buk4zu1LBzig2BV2BptGjmU1bKMEK+aIJxK/TfGgxWBgbHnZ4yalocSc3GckmFNVkwjB8W96gGt1za8sHNTaZ0MUVX1EbQiZRLCV16ZInDCgIRHksL2SZ9XXwuekclq/EgoCSpRawbMNRq9YqprDlSS0YwPq5x7Yt1cmtht3AJpybrAoZdqSilpk4vWkfesPFqetpcHcYwsYBAKFZCHQoPCzSpTScss6zJDuG5q7bxIrnP8LQsOmqnxo/rLvnmzn2OlAGAE="
+    },
+    {
+     "type": "text",
+     "text": "You mentioned a closure can come into force while drones are already in the air. In that moment, what do you need to know?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I know that the authorities define zones where flying is prohibited and announce planned closures with a start and end time, as well as sudden ones that apply at once. These closures are often amended during the day, such as when an area is widened or an end time moves, and they can come into force while drones are already in the air."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS7wcKEAgTGAI4AUIIdGhpbmtpbmcSDMPrzAymkRyUVb+d0xoMqUJp6Zpsqqn7hH/eIjBQ+r5okVuMPWAl3SLTB2L66/Cjylq4oD5gyzXtYQfmEn1yymYbhmdcXNQnOYQ8inMqjAegWgubWwjDgtsqC425UUNkWWUQtBYQDGwqomAaeh4XtOl63DPHQDITbQEUH3ENRWeKQ8cw2UWSlgJL8jpYH2JDJM8ad7FNmo0F/vRdUMg3X54NkFJGwo3crcLtr7dlI2uy56yTKPGwMTeBvrhXhkfXDFywpdVmsa4Ga0VJN0w1m4e2XvjRHuv/srj4IXp9uQu50DIcbdNZf/B4yv0yOuIJf6fPYZfiNv6Eu5QpLiWHYBkKfSd7ZsFRyFg/4/BU85UwioptpnxWQqlcX+thej1a0vItorEj39mJSpnifhyAhgDsw7qsKRULasqKqQqZFl5k640pzTV0ADGfEJYaSvHP6s6j5dgQyWqaYX7/pjyNcO/8JQZyrPzmrjzQx1kLXAzc/4sM6gdru/3HIydStnwWk6seOseiZ2pHir7WUHOwWdoNC0g0ivgqZnCKFxaYM+BULfArTlJK70YZkiS/T2L+WZrBJnY7AKk1OQu1jWw91dmicDuzYX9dpHIe9JvowHoBxkhE1jLSyIhf9DvLJEHkw82qB4h4Nu7q24GZA0iHI4+9djt9zFWotovwn/p2j42DqAimXZShysdMOYN5K+LzboaSjikNSkPB67ZSX5gW59cqm/32/NR6OL0z5sq2Y4x9J1RL48hido6Fq8fnKxZykYyV26vt1Rw1uVhGUbiRFqbO2axFhQxVy94KOtYyRqoB3ZnklPOzN7kCUpyqxAeUWrcRilz4z+uk2Hqdk8LrwMOLOHsFL1pMX1l3r7uRN9/XLNfiF73RHWfLnKinjrPNz+wniNfRDvOK4hjuH++RwFpD/ZIDAq/o8ujiDplB20o7eFAAPTm6nKVg7LlBTBgLMsiRFTOnh/WjG2WihF1+OSCAp8q6fhR6b8baRllI3k4gHPIriPO/QK/zLsCIX4bBMzwKZlqBA1D2uyiO6wlGVK7fcK02kWFIqwy2VevBOQXukYWVkNzcH6A7U4LtWCYn4TD2u4SuHkigv3LwqSVMSjXsxihIKi78WevE6y1x3kdGrBgKDUl25+qXlWXDVIuqHU1Bm9cMoKtKIF3Npx7Zc8wgkgDtTTZvk7QKu9r2SnwkPtPnae5GudEWYMLYTKLolXvUdk7UpDdTawaZ2Wnycue2RhydNWF9bQFEOgKlxVMlvOPW92Hw16a06i7hbz36BeTG1L1jtDmw3RA7X7lyTGhJeJ9mH6jIcHFWOBgB"
+    },
+    {
+     "type": "text",
+     "text": "When an amendment like that arrives during the day, what do you do first?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS/wgKEAgTGAI4AUIIdGhpbmtpbmcSDChrN518g6TKz79DIBoMjIubc8mH2RZPntDKIjAn7pbP4E+UL7XFHQuXk3XrUbfDR9zENaWMlauvFqRDq0EHPI+IWxE5y2GwiRoxyxoqnAjkymJhpc+x5hYgNJbfetHruAnjVwG/E5OY2sxGsRPlV4qbpluv4jWH1h50Ga8KHC8N/IR8jODk7b/ixzmH3ODf0Rr7SNAMFrzrlJtu8m3m53YKXP9E6Mla/Bn8+CofsshIAABPtXvumqWTzi8wwzm2/Otg+FpRUDIGGhAIgK9aVuEqVCywDL8bF1dAKaZMX9o+AK64UMGfqtkmhNF4aQpHZdAYwYrVk/LklG1hYyz6s9fYgg5MDX6/RL5CTrFmTEFfD0VL7s2uhp/SzQ3SrypvX/M5wXwtiJZMBs8+FP8NtoCL43LoCxGN3Hnn7qXsowMswWOThHnlMxITWpbbNb0xa+LimH5N5HDY5mlzBhKBODT8Mc11mS7GjT6qso9K1B+70lFw/v2U3AlO0CjmNbMzy8la5lb+36M05IWUOKp4V1Z5AEG5lI3OV1zJNLYPp5q3ufH/oKz2g5uYhOEPawxegtugUycNa9Gk4iVxWAeJNKFPuI8jBeApjsaPZaJlkPpCsDapaCWjdGp8SPNWaTb/43nSLBx62ai8XqF7uN6rnLKjP8vPRm5pY8BSiqjM5/8oXbtTBuYrdfMqvdqQ5x1vU2pz09KjjhBUKj3KHyTGsNXIxFqX9DwvcWHsBnm6woxlmkGfRc66+vwau+fjmF02UdVFjfI4XJygLe68OThsKSgeZImbo7KHQAvSDMD+sVA/YgqbD+2Ouqm+aSOUk9imjpOKwfCso3CjrV5jdTAvXMPZyrfeMr9mNyhPys6+m4jc5HO9/7zDwuHea4t5k6K34obP0Br+XVnBwR02DS8U/MfONADT40rS9XIjtXvw+jiRCucjjScVfQxwIwrMeeciyK/gz889m2jzI9Q4gbMvwbHL/S+G4MOUBJ7Lhr/4Aext8slJ3+DGQf25zW2UaAXVfNU9l9s42GMeFlrcZvlTlgK0QPi7/zprW2zsQ4GJzSxKWFYeUdxdHK5CgMTVnC+pt2Z+0TS5J226X6vOWxqtuu53kMd3+AIqwdonlvwRM930umqLuabIkpRsCk9pGKQMcQ8MRrzFbDp2jdPIOeZUqG6ZBmCmeGj5A6yeW5uRA4M+9HIatWIvo1r70O9+wupZBU5LZUSA7OPFSbASXHoeVTzsQkc+/IWJqN1pxrJdPgEV6yP6GxnmrSolW8FKqp1DB0NiL8kchtoUrMveBcCPuzvr/dBEGQhAGH7ugqSdfmnMKCmlryvOHf5RjgqIXavC6xPHH2ZBxAB8SXEapqM9Sbq5z46MWTlCyUXymUCylQH2eyrwT1ShBzRIlSbwJBzKmoR5HNEgdZDA6SluDjd1edT6uFV50j6l+mI9K2mxi1kjz9Qpd5vrJCKHhwa8/vyfhWNy1O/mepG0+amlN4VjpXkH3qb1hi29K/h6pRgB"
+    },
+    {
+     "type": "text",
+     "text": "You said your policy is that software never chooses a drone or a way for you. Why is that?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Choosing the drone and the way it flies is my legal responsibility as the dispatcher."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS8QcKEAgTGAI4AUIIdGhpbmtpbmcSDFGph8DwQNApXdsacxoMmRnfZGMQa0wAzTeiIjBJ/3NB6gNleJc4/RvcWLkqTRuFHdXP95Uqb1xKBncPtYlHWKojCyGo98TJK9Cj3ncqjge7wuFK3Yao/i7E09N0JqnYJiUy3cljvJbYjk9v9AfQeVgdzxH8U1V4mAjkzqpML5qFk1rrEePv9ML+G3vNK67y3edSDJUxNyOcceV2CUt1eGAc/7BtqXnshI4GJipI/9Zd6kG4ZtWd/xXNci/yTjr8xwh/VW7TolNAbgsGaaf+eg1QqXfzVu9EJTDyItr/yER0u/5GzKD3a1oSFM2bdT6i81VN3hKIfO9ccFpwLOFDK0fuW4aT3ls/CPvC4bAPaXx19hNCrYH7KC3q8netGdQvTqq4HgWLhqElIF6rHpLM9lgmhkCz4IVG8LfPoMH9RbKUEEJgYN04MGb3/pNCEYg5QosY7DGY926cBICMa/P38qXCvEtrd4RSnGeoJWRlFvnZR1EV1a7IOFXGUMTTxYE2yYXr7NkIqCxOHNlzTjW1Efv5pLCJwdzasI2CqkGxfSN6X/j6OYCkw4zaZRKMibD7+UcN87V9E9hKQ7SZKVKfiEOLTgLEvbSWOYsX4onfpmfi9mEZA05tna1Hi4dQkhHffvWPgFMlSi6ABk8IITUoT1KsSThpzdSjvmOKiCv9ZcWAxx5f68zvtgCMsRSnZJaARW+gFUgBDPZnesYtO3WDhbXGggLpEQ6FQ/718UA5pJFDEWT2gy6pFaL239i5UoGSyQcj6RryAjPifrsUdyswcE4jUp4+mgSHIn/TV3Bi0C/qg10N6I27ERgvSN2Q377ICBVbLxlG7kgPnBsyx3d+xueRcDsF54Sos1XCHuct2BWrhzDTrP7BbVdAmd1nlAQ+o9L45jZjk9fzBkiCHeP7j4Y3dPcxwksoCiAMdgdBxGVIBqabVVIN4YV1gnUkHAgBlgLsQ1bIgviKBNjd3dxEyK3nNOdKuepmNaHdPSlCePDEpehOvMyrqcL+nfzgiGXxy7rWS0JREtunri6SvWu76iLlzCu9WUuM859Y0yoPaX4kSkh5l/6G5RkoSrfCHnl7sMmj3YcRM+3Zbc2al/8LnIOYaxp6tVWX/jiMbg8eyIzkwEuU8CdAv5YSlbqMf3a5bFfAuNFglnKqqHP0Yxyw5E3zvHAq+MzaKVRAjGGbJWIIjriGu4vllsofh/DnYHpiRS9wFYItE2s57a95n9A2+sv7PcoDl8lOhRxgZj2ujGA3KpzicIbaKYtMkMgMxgyWXKFiJd7qUTHVDIeJTDBgYD8KRtDWn/8k4JoH6Mx9GAE="
+    },
+    {
+     "type": "text",
+     "text": "What would worry you if a new service got involved in that decision?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Choosing the drone and the way it flies is my legal responsibility as the dispatcher."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQShwgKEAgTGAI4AUIIdGhpbmtpbmcSDLQVtv5k1TvLr4wFjRoMEtv2cqK3JcDOlKabIjB+6g2Q313wkXXzC9SslXItIdIwg9UlWzpv5+eNuYsN73gy7nWyRWhq796uT9kv0TYqpAdCzVt2egLjZn2NKjIGXlJHDe13e4djzmLgPA0NWoW9BzXd6R0V+cpoM2Q38ALNkxLDV1A791/ul7nEoFv1rYDKR+wYVs3Mz3iTA5IugEZRn8qythUEYNaEzkWLLRTfIMZJVQd+/WF3JMjct4PvcEW1mn0Y6iH7aQll3CsWiUKgxq11an8cH3R9XhOPJFdyjsYKdxjGHu2UVSh2/bPKI2L3M+/JGCiA1vIKviquKI1Bz1qBcvs/OTLMOh2pDUOQREy3TCEb/9FaHJnUNTumJI9pYvhymNayNboDaCJhiThK3tENCTV9HnlQcQgdO6sggHn+VeOWFqQN4RhpICIcdhKiOZGKTg64eA/AdO39/MExHYBmcLMTccz+ZlAvzGRoWa+jAdtclRpd9V5zLsGZY85nFBbBYqAen9FnQtXfDjo3Dmm/71PAVktQ3DYuBhh76zOu+vk/pjOtL3XeLqVT7qvjuoawUWLTLt5SGV+XtiYcp8sZZf8NIGdK5O1QxXcusUZ0sf9o6gSmcO6sElitiEaimHbjybVxqKgorqdvJIkep7rymJozyd0DSGbKUfhCWaMHlbhRjvsXZVKRlZkBK5uTwC8n3bpJCEB02CCFxMra3vVIEfNavdVYGVzcWFGiEKJ+eKLkuCk2wKrT0ZgC6fipY9F1xICN7QVr7zzcMb1J6vl3oKAmrQuRItf1DzxQMI2CGKqEtN7idEsTc41EOyD/pQfVl9pgy4QP4OWJJKXfVUijxST53/t7bbFkTDF9SZk81X+uCvr4SfSKGRYhcsK89JNsfb4jnx/rMQmXVvYQfMjFkzOtwV9UodKgAE02cWH9ajnDkcbVwk3BlA/EVJm0Wmd8ch1pJuBwcfTvIERqrOo65Fw+EjdIYzEDB8/C7nL/zafJtmnBWYN5bYAFw9hl15a83orUzLUmdbuQvPuUIY4OfkSX+IDmn5WECUKvu6PCabGT0s8I0zrr7q37dx6bhuBm8rVP5odefKollYQd+zqjxGJmujXsoQNnLSw2IQ6tpoWQWapgw1Vnn4vXcD8og2j9Ited8LUjXM2mOqQS316JwowRjHHdH9ShnuKXLhUYFFCmFTqGyuhJT2IdCyTHRka4x2QDzOsR2QsgGviZAq+D6naiDmQCiwgi2wi1disdtj6FbklexCRHzMjROzxI5ryo/hL2mMjS1vueepsswWWoaHDgXwi51sPzWu1EAhbZldkZ4RQMubxly8wyhYLOuhUyVBgB"
+    },
+    {
+     "type": "text",
+     "text": "Who tells you when a drone is not fit to fly?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSmQgKEAgTGAI4AUIIdGhpbmtpbmcSDHbq8c9inzqdtnNctxoMC6SQBzEIwjAPiY0OIjCKWMLsAy8uEn75n8P++xMjr8CxayBPpKzNvbnAC2RutC2iq9WE6iFFs+MxUb0Zw94qtgc4LqKf0FxHYG7y7Wga8AYZWYSpACjRFsbyg/B3ndnswIcDvNaIBMl9EX0pzZSsqlqC5puXjHfYiCg8DurgQ90qwiHtliys8y2NobFyivRCxPasftR+HYu9690DyZykweevBzctDnhaqRMaR5GwgVH/tRRuzR6EIOow6SL7cBisJIaKIhT5ZvsBORruIjMSvwmanJ9VUnLTv86vRbNx3657KOgnQPsJ3UaTM4Jn7TTA8DHLay56iozCvbspuBbVFFcncyXGghN7lnc3pwS7RtWbhLuGxNZvXiu3QQ6BEwjYyXrMW80/q3/NvZYAdTBP+0NGvWi0lA+euH4XQiqL88SdlXSmLEYx1m8JwiqbI7e6njtLk3jnCJwjLflHx4i97fmfELNV27A8pUDzUj35qnwaGYehCqaSRoKylUNTdW5kisD7k34bA33aLP786MZ43VMkuTwqmIzkdORWNXu4HlPVfPSiHye2jCjII8VQnrSZa92O7M5oXaV34UmZbmdshptGTC+XpNMRwkwamLsS1VOOHtmgtX0hAYbVQHsHusX+yNtgUr0Yk+9LOMY/8uDO26U7/HTKl3digyFrWnIENVYfOxURL4TkxtIOawMnaxX0x9PLdw+iWD3UHoHD0rcEqocbHPMRXHpHRGbzTc0BpoXl70pV53c5c6N9Ra6x3RBaMkjgWiXQMDqvt+X1D2P4LPvSWA28WxGJ1AQAn/IM9zrsrh8UR4EmjxS2qjbVEFMpQVjd4Wprd2gYhOtQ3zYVyNfoO3u//gsUp/jooGtk4cyg2z3/z1SmB6hJojUCSu4Z8cmLBHYCpt6GtJfTG12oJO1ObyX3uJjBTBkqZ0yIomlBsdFO8kHWC1nwaKBgQ7LWx9VdyfpQ8Ej7TCJ7mgIpRzPQUx1jhpapLeETOTIPnhMz3uFPXbDV+96Ob1TCdhBzo4gg22JQl/w+mK2Bnbzue1JgXLvf05drADyVoZWUAIHhDY4f2xPBN0XDA6rIK/UVPTlIf6srCgxs68sfBcK7YctLk5sGYjvP6lS59D49O80oLbOAgi41/qTZrqZze4hZXLIlYmdAgzgJ+cENWMN3BEvW/v5ktYPDrIIQauzQ5ltjDsfqhii7HN1u15YOxFlC5BxKG7Gtd+PRsXNZkiJIefBvMYesjD2EK75asszNw9zygmdTEqSFvq/Tgs+U8PynV57K3EmAp+eeGy6xkj4BzNAHe9/NlJitL2HBptUIuAe0AOAHU+H/L6qsXj0nS8nTc22xbleuwhgB"
+    },
+    {
+     "type": "text",
+     "text": "You said things outside your control happen, like whether the load is ready. Can you give me an example of that?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Before and during a flight, things happen outside our control, such as whether the load is ready or not, whether the drone reaches the points of its job, and whether the drone arrives. Batteries also drain faster in cold and wind than planned, and radios can suffer from patchy coverage around ports, industrial sites, and in bad weather."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS3AcKEAgTGAI4AUIIdGhpbmtpbmcSDNDqAxCe5MhoN/sJThoMtjQmGldcwwCYee2+IjDfH/42a7nqkXxw7cyi78HRjrZs3mDV2i7MvF0QoUHwkWd1unTBIjoRJ4B1oPFr5Jgq+QZ4pZIfY23hO0P7Q1JBkU8AIk6u6bkOZ+aF/fyN8R5EP3E0Dksgz2gHzrabvOv/PuPGFeJ9v28wa4Z/Iwr9ycqEB15C6bdMhG3Ez26qstI8NvT49aMYMr4eYZMgqFJiC1l9wO5ZSHs9+vvuZloUxIIRsyW6+51B+uIe4K534dzarwZmWDNlmFU2tZCSph4eVeN5wVTctrJCLx11MAn1c1vGxhgAYBpSEn2szz2XHD25eU7RogTvBOAK+tXXIXyXqItfc/nlhJAEQbpi71qC4LTof9ssVEAFw4aUGbefXjsUOWTC15kUclRnfaOyNRLl22NNWdGjJDuVvppJa8/ODc97KPyQnKKv2CfqGqrYjGxVmtd1MgXNLUpUucFOzjyVfloe/yGFBO35iT9XJjYxZ7vTVGoXYI0ltlNsP0RVvhUlvWmlc2Q7oUQ04Oepq9jlMcb/6ZSGBaNA63AeUU5K+QsJ6V+kIpjIZpPkXR4nHGpYqHCrpuB0ApSkOq9Y0+iGc/TQr1l+alz22+PWEeCoSfhkulvlW12L+Up9U4kXreYJYjakSsZi/7WFsp8iKvaJWjkiG1cUfIe6ldgU/6Jn7s6afxU8dS8iraon2qw68dFEPq0mbu+MZif4242VWuIN1HJa6rMxzM2k8p3y8LQHKPORQFjWHsrF7dlJ2VXBWKj9a82QpsI1V8YpKynLbWL7gSon1Ta6vmvjs2XCpda4AVNvlAgyGQdIXhNl/pnJ+ZejuKFz5SJFiiWBcunzdrTt2X/mHU9vAbIgUFroeQwpjntb4yFziPCMypQvBrAmn5LrhQQLusZlWbEaCOiko4gxB+zqSUP5w2g8dpbPDpV8p7ix4GEIlKHyDcNjPL3/XBmBj7arrFlBJqOfgOmIK6IOt91u3uPobatgmmybw6YzPfYq7Z2MfnDYCssKxX6bcDI1bqFXojCwpRDobF18drIijdkbo+89dDgbiqd/vBBG2QfRCnCyI0R+yjgaHesZNO6Iyqvc9PtIfG98uO3rvBT0AMFxHkpRBEAcwmN75Vm/eHEgCI6c8wV/7R8qR4/p26GbR2vtRIMg4zidTmm4+dGD7HIQLbkJpjxpc7Ek+EAFf0oDmP9r6XP6VVAAahjBWRBOUtqziXjfgjncQDnlDDAitZN+H7lsjaM8Of9GKVB0nu0BKbj4BSDGuMvYGAE="
+    },
+    {
+     "type": "text",
+     "text": "If a drone does not arrive, what do you need to know right then?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSmQkKEAgTGAI4AUIIdGhpbmtpbmcSDLaVSXxBqqWlnBdaIRoMGUcCyyxkmMI8DEUTIjC8Jv1gTwXYyfAMSPfpGF/t64jIcWTNMXNZz+Hz1exgf6+LdNomaCnz43AmPZkfb5Aqtgh+B8uPHxbomLq9Vco0jwDfiSYuVJZ+E6r69mpPC+B8IBDplWshmC1E3tWwFp8yzUJII5VGgU2ge8DeWMPtPA2ZFHY+7iVaLDoOKtrUfFqSZO0TAV6NTnIM7hjy2gF3w/Q4GJkbfOVR9DPQ4zUK8pXR3ooQVlXQgea2CawuBAjVxwHv2fdKEmrr23MDeFRHPq3ntG1OTDVyBrpoC+F8NSOKozI9I6jBAnL+gc2zhxy6qcXVoVgcJSt56HyJ6OmXxG/dKAX6+2E23tIIt5CvfEw9RZHz56NTHhUj+7hK2LZ6zpknCWnYJPR+ah/wP2EDU6gA6HeCY/Cf+htAGI6ocmde+3Rr3exiCpUgk+7MF6MBm4U90eyL47Xn5GojnK6Bw01jPFxTPEM8NuhW8MvwSqAU4jcCgskE/MhLMC5knjOkH42RqMg56asI/o+dG01ergSrT05Acwa0hIQsfwon96rLU7lViaoPa4P6xRyEgwk2y6jlAzvNkbuQ9sU5AUfGHBRj6ABXilKhFPW8vUbanRULIH6/IKjWZ/Ch4SLriucrtmF2xOsN6zyooEzFSihJHYVjLchqjdxHVVDR9OeHTOAsQodWNMtmI5R/gXQHZpdPPZBfRvL93hOXS8dMdRRUq//K1YuxqtJkVYxTovUlkWwFtx4IKeRALiVx5PhUxoHUYT716eQshCmDk66OlmR8fWUrJUv/M4tjol14HXvStEIFhTz+zZJYuWJAQcbrCHomQBo0MRUcXNR7DGPoB2FtOg6v53fqo394EKVUQfRFyPIEbaC1VuoGHWxEr0H+jKjJFamDxU/Josoln4crtdTCvvNboKqWHhDLT6IW0NDeCZdMKR3ebwJvuseLuBG2IxmxlbSgNNwkudSuWXysrSobHorXMkKEPt8UvDbFnGl+6YAjmqsV2Ri2PJniVwYDBwvamCU5rZtTA47VB1gitPgdbDp8k/RAQphFmSKwqzKivH1jZeO8wZCOwswfza4suSUAzfc0597tUj7tbbmglxFuN1JcYEqnKzujpWYAKqgtCLSlLmCYSODNywsqbs4OPgS8SiHb4dB52dY98kWONr0c5eOoSsS17X7EoHa9WaoxG0pQ4ytd93vkBStKSNNT3UzYBD8RYwdC6+bOCjfuuP5QiWHBEor+PDXuFKBqY3662vk5h6UukbQDohM5xLft+grgHtUha88jkDn6e89QULNPjbiqJNK35SPoShtLB7qQDGvMTHvUhV9aHQ1Lu1uQnR/Gdw5/kdE+G38rN0ZdDpLooHuoEK8O+6r6l9UEku0DAEZIKjP0YYF5rlRlqzGi1aeMkaVvgirrM+q4mFQvx4x0UuUad5NRhQQLFDrnk9ECsJzUdnCQ0cY3fFhYvVV4Nu2yFreRKW5okxF852gmxWeL3vAW7l+da9JvPImKIwH+FCNO1ArM2tPzGAE="
+    },
+    {
+     "type": "text",
+     "text": "After you sign off a flight, who else needs to know about it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Each company runs its own systems, such as billing and customer updates, that need to hear about what happens to its drones and jobs."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS9gkKEAgTGAI4AUIIdGhpbmtpbmcSDLnz9FbuGRPQJxT6HxoM6k5gnHzd1F/t04DkIjCxtgYvlzHKyV65tRO0JHBG0OA1eyMR8Q/FPKvBNQPpgUs2pREHTYhEA4F2pxqM4qIqkwnUH9xtaHdK4y5epzjYPlZRCy21DKIJOOu2UmVuftQBJWVvhk39NwNphXc9j6ZRKyZW8zOckPIvyxn16rK1LLWbcFu7i63mANQJL/CPJ0lmI6NHZ3TvvYh19P7HRn1Lap1LZuFcorkuExKvK0BYpDq8+alm+dJrTsKg7PjSSlulSVrt+WVzlAFADDZIqLlsGhsqWY3hIv6YKmHTf65pTi12IEJ0wso4u5rnC6Ni5qyX4RDML4VbhXawK/xX8bRQ3BwKfyAE0Hl4NFX//IQ0AGVnQiDLpM8lft1u32zagB8pKAIWpmrfR5JFnIPftcwi3a8LxOEGgTyC7OK4CZrtFjAdc6Uj2Q0o0nqhIU2fI17vMBjgvIsjm9EkskB6nH9QSwF9YebqouYfkFMePEhvPD1qChGMQGuavk0Tz+h1SU01WaP0TF7GoGjqbpE535E+cs7cE6cssJPdm6kC9KX2utT1oWkQir4RHrVhY/8U9wGu0i2VUuBlDd1AAkVqe3mb6PkVbqPQMTuQULbBKYAv9ZdMuy5IRrGnkO1HG224q/VJ8OyRNTG0hlfUl4o2NgfkifebU3+z5Ezzxoa+05Gsd54yMZdfPFHG5z/GEw2qxCYK+Bxt2l5SRRzRtCtlHdhOcLaTKVrBErh11H7bvSFq52DgUuFgHv6+QTfHYcyrtmS09o0t4Vql94/+5J9Mr+a5ljEbw4yQdaDVPqeAodBe3EQ/jQVukZTBL+cgb6rrvbhzjMD/frue8BqL1Kd3a4pNi9sOGBVkhGnOcdyEF9BOWfBlItXTnBg/C26x+DkEfDHT4JLjRbt2uF/F9eSix0SMlpUm5pTOL0AxsZnNAIwR6ajSqTRb6rS/MHT/SyPxksf3C/Rc6+vkVTorXmUn/RH4kkavu9hA4DjmpA+cTV5kLyWJE1czoeUSAih0N1iiU1wQtmYZeblX1NMruCtY1Mvo4Sx+UvFyY+AXewW5gTDDiT/6PT676UHpJ2vmZ++RiEXrPrEdjA2orWhLWHbJDPLB5drQYiS0pb0cYfi1nltwcaCFIZ/KgRX6iFk1J9mpkfWsGP8jNZHLEwNeDlCj7eksXVyF1W+8FJ8JpkQvBMjKFvTtjCU0M8HVHFrvqCPz6S6uez97PoEmiSXvLWcdXDMxdtsxbDvbVcIMaFhwBgoCMbvsKsTrp8qKjdjeJ5WjFT4rrwUcewcCw5ZHY4Mu7C9ZPHr92pBijvfSYpOSA7pVWkFEHMKaNlQXPypQacajqOMPkyyjtPPhba9RKWjuWhvYTvhnt5Usp7KEW0DY4gyvHGYKg5Ic868ANqC2LBREajkd8DUONR1HByXwaROD+4vNm7zykAf92wxlB8pNj2TJuTH+Ix0OjwLtDIznuwDNzgdcT1HubhneAyathf3nGe5yTNdSK6u1etvRNZV+RCS5g8ivBhTkxr8WsUPusqX6uYZT6ibgzJQvg9LnLF3vT4ZhOxlQ0HydNMKrQxVJfIz+8cPfneA957ObDiQun3CY6W6asLeWr2mlMsXi/Cg0EIUQaR4l7g2muzV4VnQv4HuYLvVcW7FEGAE="
+    },
+    {
+     "type": "text",
+     "text": "How do you feel about other companies knowing about your drones and jobs?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Each company's fleet, jobs, sites, and problems are its own business. We do accept sharing airspace information, because that information comes from the authorities and is the same for everyone."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSrAcKEAgTGAI4AUIIdGhpbmtpbmcSDKb6o9/0rBetSsuxUBoMM23PgSF2b7yQW4d/IjAX7apLGOG1qmafmoWbpl6q3BT/O+pAWcCcHbocV4CVW0MIIAOOufrmSW4durNpt6oqyQbc0INVf+NFuzxfmYW7vSUqWrbeqhb9Oq/eZMxfkRgHxxmng+mnXI3kRTcIVUWdNBnippknd/tgPfoHUGU8+ByPxodgE3rPjl8pT54o6w9LNPgDqIFWV4HIf512EZfaYreIrpoYZEfe4n8WoSWzL1VxbpmrZZOFkOrueuMA6O2fLEmdwTJSje4Mief+KU8oB3mD0/5y4l1ZiSa9niZPmw7+Ib7ZgNKOsa3+PxAXttOQkn96Md6WERZtp0enjytk4fhfmSvjU6ppMxr1OayMU0Gd/KgsbHQJwG3vOW4yrBFPoKAc9ZRLQA1XYKQjlHqKgapY3FxJHk/35wo+4+4vLq3R8jlNmhy6rJ60q8Y2Vy+pHksDGIdVoe5tbjPTlTHIXhmKcE1em07/n8NzH0LPa58iO2jXIuu+ZE/wHVRbmFu0adYwW35e0q8TrYrnHNZhYGOJqTGJRE2wbz9WMHoR55FzXy4Ikcrv678k4CycDZqAP/9z0jH7cFvkLvTOUorNKCjE/GSMlCT0/VrQdSenN0xWg1xV/0okjfBt07xdV8lm/GXH58jleeZ2Gj7C7Dmt/LMJc9OBZ/nmq8V0gnvMmxh0OTyVb0BHUXfABvNh5ddVXIN95OTtzbZcT2ja0aTxeddjMukzLBvzDxU4JkR1wig+C8Sw0s6RmlJWC2G1ul8OeDShgbJmiOGKWvGnSk5OVDQcrzRQ14CINVy2llTmRH46ZQKxUGyAc9BolBHf4kB36OO5QRXVuM3TdY6h2uSwbY7MTBPx9dpGLztbYdwQ/VQuudd8pmeD/8iWQMnHa8UHEuaOG82zLjt1mMZQC7crhJs9CPQag7YFbia9ii0Dt44riF0BOFbnQlpBnzQCDT/4yhuqmcfBvEsI9Bbe4mfzmzjrvCKz6wkJhV0xIhkEzZV3jA/jxpiPWcdU9mcqC1xTRAGt3e0Lp4R0ijAgmvh56KbmwVNeUR5fU3ImgZC341vQMsZZnPhviIM5VtpXpQZgaGhhviq/plwpINShYfjDkJiiHfnu0VUMJkxFGsnQtVSQFV6uo569fXs6OJqjuL3pKrozCcRNU6Sy01TgN77bzJjzZQWQnIcqAj2xq2tBI8vMRJVWrbq68XLGGAE="
+    },
+    {
+     "type": "text",
+     "text": "Can you give me an example of something about your company that you would never want another company to see?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Each company's fleet, jobs, sites, and problems are its own business."
+  }
+ ]
+}
