@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1VL5FqvQAUSALLG2ZiR",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSlgsKEAgTGAI4AUIIdGhpbmtpbmcSDFQTDhiVmrwjBfBN+hoMJjmmFCDC/GSJ57D0IjDWJ9sAOeED0HdUVtH5nl9nSZ+XcSCC1nqFVX1/dNCF8MhaXh4rBe0IcWplNPj63RwqswrhyVWPxMDudvANj0jbjXvGWup3Ei0EgF2AI0jjsl/Jjuxyv/Axbdb9fjUx6gBCFzXpS+jOghgxEn2/aemrJs3dM/9Rf3VJMFq6jEomgxm2WNFbClDOBQpdIqRiXw/jhFiDrClTlzSBp4Prf56HZsE++Aw0CZ/ATAxjGkpznmlkrQAkZ72t22hKilvXYdW7i6+9Bm/I9NVQSTSAG/CyAqDeYjn8tcnFYkJ0xskJAaPyWtw/qWd63z9RSgsowVDDBj1ZobZ76nlwL9BEtnw8Gcq9Z8/GZubSdl8Au3oPflNKLhV2NgApmwUc+U6oWDUGlplJSEVirDajKjt5IC0ieKgva5aFn7jRHXWCW6V0L8SMdPTx41zzPbBBCp1O3/ikgrbeHCbiT5o6T2y90MpC5NyLxX7QyrhQjuMQ4Yu95LhiKoGaIPpt72ThGsZ8WEA4v+On/5MqFBaX0nKhQnw6OPxKKtIzrDypw7nbKH4muEXy/IzXEIs0JzM24TwPaA6Bu5i0pTkdJ8k8Bfn1Xl/bu5yj8kcGXprQNOix1ojGN9A1f4AQCFx6+lG0hRf2ETWSEcPu9+S1Dl/hcQalowIuCGfRl5Ve6vF3LX4JTz6gT0rAxweb3bvQXzwCPrKsnxD8TDwdo9BsdZsg9wlD8B2YKBLJZx0W02h/D9r4Zz+oCCcVCIfJNS050OUu6RGKY/x9vMMhHbMPXpWtbrnIc+ojzHQC79iSKIIBzVjKzxpaD9CggM6xwKGp93DjsYuL58A8x6BKq95VjL9+ZtfbAKLBbESnU/9dNtQjl5JNLVo0kmr5YiEyYqpVR23QXokPii4LFnzuYuJX41JX/XCo/L5TVppcfvvgEmG+J+2Q7FYUwVym0Ci0L5/d+6rPDZ0YktRtzBxoRRxJF+v0OGTOLHDkOkmGvXS//Son8KM6WWIY1UFfVs0Q0C2doDJh9WvTbyzzvZBvhILMaV/HPRq63AJNgs+uEfChtyMrQPnFWifb9ed7dz4mdkPwp40en431R4a+OUxuBwkX+YsZXKZ4NQ9DA8pQxzvxb8lFaetbfSMfjocvuCMvs1HXPRMoZJm+WT67XklxVuNlxR0CyBVxCLeavz4gwZ0WO5dyM31DsULCghkZxR3ji09jeJSlW3bEP3FLxTrR7kIIKcXcNCLQgnh8cTVVLN3/hDi24+AhF12tmyS5TB6fYELgyFPYEnizWcqFgqsVjMOVLeoC0b3RxTossPERbeqZeyVSpyJVUe71ES6dKzTdiKH+7ocbwwqGKiPBKxvH7P4BJCRz4xowHPQajBo5Iu6iXiwRSPNLIBsYsdcWmi0vGX8aSx+HDlH+/bvCfbKk39yVHFtw6mCSNur8ICmdnMz8P1JbezfQvauUnUa7Dy70njYO3Q85hOieTS2kYpuKYhAErZ+1LeN1E2qTZ9TcZQiK3GtETyWATc936xiuGK2S+qyFQVJT7HWyvTl0pAYZ2WiyYG3Axj2cGV3LMqfAbkXoqDG1NcHIT5KdFwOe2vBbZopKF3FhH6BSUtIdCj/+gvbcpOvBA1wMz6ExRRJB1Mv/ru2UpapAXQlu8a3BTbjPi/vn5HTWStor4YcwigB1/PSWVewt61bxhfMv8iXBqYlg6nboaafCoj18k4JJ1oT6oYKGu7fxJkmwSzqbiE9apmBEric/SQb2rxYsBn+rUKZ4q4Hr+Zw6kSP+EXcVliojciJnu9AlRlP1MYDpKMNbp7JtJk8S1Aqw72Y+9Tfr+Hp6qzr/toJDWJJ2zdZGyo49chgB"
+  },
+  {
+   "type": "text",
+   "text": "```yaml\n- id: DR-01\n  requirement: >\n    The service must not select which drone flies a job, and must not choose or generate a flight route. A licensed dispatcher makes both decisions for each flight, and the service only records and presents them.\n- id: DR-02\n  requirement: >\n    The service must not allow a flight to be launched unless a named dispatcher has signed it off. A sign-off must record who signed, when, and for which drone, job, and route.\n- id: DR-03\n  requirement: >\n    The service must let a dispatcher cancel or abort a flight at any time, including while it is in the air, and must record who did so, when, and why.\n- id: DR-04\n  requirement: >\n    The service must show a dispatcher, before sign-off, the information the dispatcher needs to make the flight decision. The exact set of information must be confirmed with the customer companies' dispatchers before build, and each item must be listed in the requirements.\n- id: DR-05\n  requirement: >\n    The service must keep each customer company's fleet, jobs, sites, incidents, and operating records visible only to users of that company. No user of one customer company may see another customer company's fleet, jobs, sites, or problems.\n- id: DR-06\n  requirement: >\n    The service must not allow any platform staff member to view a customer company's operational data unless that company has granted access, and every such access must be logged.\n- id: DR-07\n  requirement: >\n    The service must provide a shared airspace picture that all customer companies see identically. The shared picture must not reveal any customer company's flights, drones, jobs, or sites.\n- id: DR-08\n  requirement: >\n    The service must show the shared airspace picture as it stands at the moment a flight is signed off, and must warn the signing dispatcher if the picture changes after sign-off and before launch or during flight.\n- id: DR-09\n  requirement: >\n    The service must send each customer company's own systems the events for its drones and jobs, such as flight launched, flight aborted, and flight completed, so that billing and customer-update systems stay current. Events from one company must never be sent to another company.\n- id: DR-10\n  requirement: >\n    The service must record every flight event in a log that cannot be edited or deleted by any user, and that is kept for a period confirmed with the customer companies and their regulators before build.\n- id: DR-11\n  requirement: >\n    The service must not allow a drone to be shown as fit to fly unless its fault status and the checks required by the customer company's own procedures are recorded as complete. The exact checks must be confirmed with the technicians before build.\n- id: DR-12\n  requirement: >\n    The service must let a technician take a drone out of service and must prevent any flight sign-off for that drone until a record shows it has been returned to service by a named person.\n- id: DR-13\n  requirement: >\n    The service must let each customer company set its own users, roles, and permissions within that company, and must not allow one company's administrators to change another company's settings.\n- id: DR-14\n  requirement: >\n    The service must work with the three roles: fleet technician, dispatcher, and airspace desk. Each role must see only the functions and data it needs for its work.\n```"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2178,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1221,
+  "output_tokens_details": {
+   "thinking_tokens": 203
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

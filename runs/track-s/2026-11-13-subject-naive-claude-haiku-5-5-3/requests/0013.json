@@ -1,0 +1,119 @@
+{
+ "model": "claude-haiku-5-5",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "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"
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: On a normal working day, walk me through how a job gets from a customer request to a drone in the air. Who creates it, who assigns the aircraft and pilot, and what must be decided before launch?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I plan and run the flights as a dispatcher, which is my legal responsibility. A company's policy is that software never chooses a drone or a way for them, so I decide which drone flies and along which way. Before a flight leaves, I sign it off."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSnwcKEAgTGAI4AUIIdGhpbmtpbmcSDHOlON0ccdT15lsn+xoMgXo8tS7x9Mzv19jyIjD01S3i9MM4CCdl6fNfauUNrAUamgrWsNvFrfwFVHHd2juh9Q5+k7p2VVdAq47qXsQqvAbGRRMr57wgFERgNbNVZ9wCyuVyRpyd9VNjZ+qxpeHHOt0Rx8PfpYfXbMK9lcdXETYWHm6dvPlt4GdV42i254ezuNyBBsr94+EZAN7wnVz+6VKWFANablDJoPt/zF77XmHl33DXCvVSux2Zi9uQgqijZqaBHQrn8ePLrqU/fkwZ6UwqJAlQMti9yLLi9F5WzO0nvyKf/LtdPsh5lypcJFud4e4126O1MPAUWWaukZk7Y1HsrTxwoHQuJFlqwaysgAZjpNh32E03a7NVPJuCB5WvVaXmc0szDmI97bMWbAvwTiMSVHNwSqVgZx+sSejAiQO+CWva+Z91wrvSk9ISYTqVQOKqcFOk4XD/SNK24Bz4sqyaX0gjFCh39qEcj30mCE7kAxZ8Oai+2dXPPuLDwDOgAZwHeVYHx+q/z4J+lRIiuktvYhcKgpQTTz+4RbwSRv7eAOZiAZXEGM1gprS2RQ43NdCHGgZmesByf1XiJhAIOT6Q6IG/67oGRz3JcY6//B0Co21W+C8wqc0QIw1ctrFvZn+YO6SS5+lGhZ0iTkvTARU8R0gJxb9fKnSZr3zve5+0KFOUlPbvy8bMhTh6OL4vp+kFSVk/P//XYAgiL2HlzbQ++RX/qlTIUEM62jEXj2/CzRR6EsVZWWsxHeByDSEQ91Epn+UHDjh5gaRN+il2mt/XwtMAe0V76XQnu3phDu4u4fjFqqOVUpkrfHdmouypl0aXg0P6qG/pJb7NZ0EcAk9+GjUcEzuWlyYIMtV2G5H/LcmiLuOx82ez5NL7+P2ej0My6NkC+R3gg2Q2TUXgg2Nb1D4oZNA8QLRgNPDFf9DmaUKkRU5TJ3H3snLnq02k7m7VOVgzS+LPw+94L9kntcCK4DzlisynL0BOU0MLPQN22PrmnGqiX/PK0Nglp7Vu7TtsuaUHIMWJpXEjdjFTxfaGhbHP44l2fqUpW0v2TkFl27ehhifqupJt+EILpcpetSNyIusvSueVo/cl0dCFGl97B9REMsR8gVwLdAO1CVXIvVC18eQ3uyh1RlHFllznTBjeCgKrxRPHLJl78GZmoXz+zSrMEvCSCrOxUQm38dn+d+LpTpIoQ9hAJ6gYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When you sign off a flight, what exactly do you look at before you do it, and what information do you need on screen to make that decision without phoning anyone?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS2AYKEAgTGAI4AUIIdGhpbmtpbmcSDL0ohcMqOpgjnoSFQxoMK6RnWHqOa9mRDXxjIjARdv/vaW2jVPpnztOD5PiWvRkQ0JZHc1zZTz3jhtrqEb0jKJ5NL+08I9cYkF7EHkgq9QWV27YmQOP10XEqJxowaSnAjANkBJV+QvU/9qCzslZux4bSzNQkALy2UnH1I0qlShZz67gk/UtZdQWT1oGMaB1G9k8RQdMDocrRKbt00YfrA/bJ149Nf7SIbMwP8yq9uTABkAdv6xjWzId2JzMJZedqVvJSFjJovHsmzxKJjeWJj8ZjPycz6P5WqG4BU0vCTzfi384TdmdKg9Y1FS01NOjvlqumEIkWAQo7ISb5Bhy6MWsGOjvV2PTWKOnGaqy2fkDyL5YXL3V20ABrS3sz1NGsh5WO+FFbUY+5tDKM+nLlquy9vDAc2SSoapTlj/LbJvJxWTKA8O3vkis2wTgqvJMJ8iq4YWptDQ235DmlXKG2XsgvZFr4f83zbxXz1njUxiYHCPpZuFJRE80sMJ7t6UDYeQbM4sIKbVGUWXyXYEN+eaavxq2F0NAg/l6GPOGVeXu6F7FOpckMgl04VmnMr/e8GUct/G2dKfdOvEDkrjzNNL+TweGZnNK1oh28BxzFGHrm3ExARb7fto27Bdk1JzH/WvbmEFImYrdda4ulWwsUMTvjvwWusaEQE1rXSBawFC9sgcHq3oCmZfaauXWg0o3OLHR1cAk4juaQRI60r8H/75A7P0zPOtlPNHfBq/rYeRUw5IbP42MRf1iPzmonuzTTKC7+piiQb28NnIaMqrUIABGEzLQZaTJSWRGSukMRtaDBD1awQV/eV5rB6Eno3SswdlCxMqIv4H5GQnrOPXEWiHg9uWFMMjpPOaG+ofLF8Kgytx5DDlT5wfWpZnKJjfQ9EikW398XljeRvUDcpughBuqtX8TADD9VmU3EUzJzqJ3nzJYMfccphuvwuA/pjILvvurE2+868mr7nSl9tEw6HgqLEGG+qyXM5a6y6paRyRJ+wm8B5goj9rjIV9QcXid0+b/DHQfHOz8ZKVpBcjbvUlMBPftmrqUlxh7lHPZ5xXzcVgC3igqTM8/n+ia960tmx1FyhCorqkZFFROeSiDQCP8z9PRBGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Before a drone is allowed to fly, what checks have to be done and recorded, and what do you need to see to know whether an aircraft is fit to fly today?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS/AUKEAgTGAI4AUIIdGhpbmtpbmcSDO5aD2t2KiBTNyA/qBoMmHcIIAIrPISDFfl9IjBJS7yOBLjWDqNUXcguvgPzZZd2odojIXZDHEOv0+9rZ2i0x57WhdTACAaPzUKcnxUqmQUY0UYUBMHoevLd3hZSowh0yBluAIGPBcAtcxPlVRbKV9zT+Oz5C8UI4jpwDedHj9Ljvy85H4CRNb80p/f5mhXckoLEWHNJQdHkcoqeCx4SRsjsR1OPYOGA4mqP1BtRPmQUANrxDayFxaGAGS3MSFic5a3Hu6BzyURqlj9vThswZRjY2tLDvzcdw+O57nMzjlwLTIg/joDxUwDujEi4cgYabQatU4WE3/83UrTMXfjwqVL89pj/jyvVQTxxRe38J2qnaj+NjHz4Iwi0aqm3yETqadRUbir0Rcua9K1nVQ6FL+5zaMgSd06oMwHfM4XbbPR5s21A3IHV+oSJQ5PiQULXMHGw+Pn00pyHg/JU+ELUKV2Z9lS4OezlzzPTCJuXsXI2+IVS6KupsDUzympw8enNzD52PTn1x35Wb/tUJVJO+MOSzLbnlj+UQn3WIXAQ5mhHUQ5EY9lRMu/xcrgtAr6wbQ3BljApS97MfaV4drsezhJ5VygCLH1+DGRnMTYOtfVWZ76TF6D1gdkl4acQPIwuHzrktgpW6d8SELWYch2HYsI1EdtLNPoSe5u6irVnYdz4WqzFaDqRNCRI+oNkdSAjP52Pa6hqMzNeWs8VitIy+r52A5rnW69YmtaC/DGzXCLMJR+ExCz0Qfoz2fiGRrEmQBmH9Phdn0TXyeJXjX8x02Hf9eAUKl7ghdvF43zJpua7I3n9f33aFov97vvCqBMx+492C70+KBWogHnbfXi2uCAjYlWCHsYesw3AoUi0b1/9YC8ZPlGfZeWugOesYeBM83+lM2PVwiIStKu1L09s1zA2xMZ9aYUxrp1Tx+KSThaIPujDaMb5uqrZ0hYd2zfpeonVfU4g0yMqHzH0Um+ke4vMgK6H/ZooHxgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK desk: What airspace information must be checked before a flight, where does it come from, and what record must be kept afterward to show that it was checked?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSvQgKEAgTGAI4AUIIdGhpbmtpbmcSDHeVrHOH61QDEbjhQRoMVlE9f73qI2vxLZBWIjC+HwJade4aAuGsh5ejCy0/9eIVf/xoTxncclkyB09IelQTZ7/jhahOA0S1BYXu2N4q2gfchNxEMGLEOOq+hnU3EWkdoQiFlB5WNc8sxy/WZMEQz2hf4/xh5PSOyVu0T7JPcYkc30qL9viiUH1QuJPAVAKf/BmvPP4zhOr7k7wDjbe6fCEg8hfIVcgFB3VdRry/mhyr3EXVStLrL14y1cf9INq912An2RqjIf6Sd+wduETPm1hL3qaAW79n5L8BoAImzG0Iree6/RgnPIjBtJvXNUFiQUjGQxdBy9JCGmsrYBBjnN/5qzy0lNO8muXKcJmwpJHuC86u0NUFDWXfOG+lUFgtJk6DYdC3XiZvPKGifqQA7OB4RqVQF+mubR/+HVDZdHt50slILRio64ruOwSXrnyc1vyIpTZx3b9thXvQIrwf1WimKWl7TjjaHtEKVFcZgdR/gwBglGWUYfqpC31yk+ufi1utOCRlW6f0imSfOQdZJmk5ONsZayw4Zo4nn2US+/Agx2MVDKYTwbOI82ksMdF/yCG79tu38GbQt6o3XbQTwIrJxmkN4pw0RWEP1R90pD460vY11tpy0j0KXK/EoVlaYFoMeLL+CHrULIZ1sPP+wbNvjqJ6qdGw6QLhInefv3XWJQRi9H8VnNsHNbdoCmdz25O+Vdg373CwFZQJSoqVOgYSQclNdMdIaDI7KtUM4stPP2Qjf7EjcNDhvC75O+jHuUkBXs5v7s6IWqUhACYmZ1bJbX8K7bLQzz4dQ8RGr+2aIMChwTyyqb0RLXgKGrJEiq7R4hNhAsoCdk/r9jMubSJvUx/wqVcQahAEXlClzkqG1AzHL8njc/zdQJbjvXEXSN/E15fePov4vZ3b6RRQcjboUMAZsHm/yjgegC6qCJKWcFgU9zhPrqbXtlXIDetHdZIYPd0CT80mXwp8WF068TdOGgOu1keSdo/mTvkw3DcOrEjMSwzKKSpADd4dNS2u0TJBdLaaDfINea6I1OeDccPOeF+9BiOoZxcJ9hawa6w5Qwl+SIKHhf0Zo6c8pEYI4NE231VBYpNsgarKTlYihUqwAVtW5A24CRcMypm8BjQJZEa6Zky5Dvmphbrfz/gbieWQTpdo90fsLjBo1V2Oix8Z6b0wAwsBqTmk+vnbAfRl54XdJ9JAbB3BSb5wIn9VyXIEtuofinSJ3JxgGx2y4RDJmXAdcEhcUE7O3bKd+gMktanlwpc6SUwbp9VemEFU+SBruY2R+7fn1xFLNwyGEtw0rNf9g+RJDYLQ7NFdgmVPe0RnXsZNgT6CAfkDU6XCrGu+cARoXcb9usW0c5vaPp9V7su5xwmp7kQHU9eUAmqkC+90dOQiFpK73OUuhkMeohU6id/kqwviNxgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Today, where do you record a flight sign-off: on paper, in a spreadsheet, in a system from another vendor, or somewhere else?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS4ggKEAgTGAI4AUIIdGhpbmtpbmcSDIurW58xPNr+hwRDsBoMQwTkJ0ClGARt7oDCIjA8ZJ+5JMC7xZZleLbvTrbNRuyrZsrO33hvscaEyVg72fsxjwhtusK+9hiRpiJH1Psq/wcGO+reAftfad2kKEo2hd7PzA/7FuTsqOqRpJByYGXoJtixap8TflgoNE7hR1jwb2ZKjD3pE6TOkAqf69z/gPXnS7Zni7mnrohoHL9hvpn27pl6jecI4HodHbWBHduub8cj8XsWjg7TnYY/FOLZcjR6SmMpucx/3oapFKiyMurn1OOFUycjHr7xVgioa2XPC2xNyVxhwyfI69Heb9iHfZcsDnaCNGjDeJjv7yh2+SieKtBcFS5rSxlyXhTB6nYnF2dqJ7z3ZtZp1gfPzT3s7aXCWJQTAWpTcIaiRhgkLZzBuWn3QSOTQZJsWHJqzthdDJw8/F+Wkq/zAsuwLH/tOiDT+gAzg7F/ZkGYRfLtJ9ha2NFGTjMD6mgRrsFTeXO7BejtcIrix2+08UUGRGetZzPHlNWov0yHgQpAk6IqibwBflZzW61Lb2uqn9CLKW/UQodVIka4qgEwtShFdz+f9DmMN4pN9jnEoIFJTNZ+XqS5hkIzYGvvGYUfyMG76mVsZ8GOjnB9dJAmDe9FD68jCPHgL3X6hRpk9jFV09cfr9ZQVIz+ALmoww3T6p4YtVz3Mub2uhIqHqfG5Fh5T7TBOk6A/YKTwfpRNFEcHay7q17nO9r889nKC30/WEb32oOmet5iJc/9NHSzGt3ksSX941TeMESylnai+5ihCvJwxzBLJmyyMUyHXQ3toBGcUz67UriFsoQ576WjJwtN6/64xkrWUPsW8sOlCPnmBthTiyIBUSsCDa2Mu3utfnCLRAaF9k7WqebhUYyKAf85eNZSeuuf+5l29e+sQH0Am4VBjJaBKE+0DDKXauMqhu4+OQ1DZfCRipi9m55JjORKu+l9JbZE4h1XzQVTrcEUqPRKUTgd7C7UZZ1O+Xh2NS1mgkYVUqz6lZl6oerRuApMDuLVd4RdSMpB/4TqaNCHLjlpBiVFKoV8fEHUklSZGL6mJ+zOiNeMtAzkNXKVoQ2WRUadLwBpF3S0yiND4vLgjcYz51TADODs/RsjZ7kBaKKWvSZuFx68Uw+MbqxNGM1YIiJp/atwYOKb4CJJLmmm9G54vSaD+ufuVSGmBprLJkXOYHgw5QfK7tybMljGXyDmdDGxXfznXf6JErB6ZNCb1Y1Vokh4A1tECSov4zbcRq/aO8+c/eCIegoKP5XjXzLYzDl7bnBaWsF2KOOfIbcHv/0z0uxFkJESdwa9Rt/WSAtYou/2wwsg+AZyQ0H5tcu6u57LGUu35S2hoFwa2QRkCgbS/TD2PYKpS5OFHhss23VjMKsXGKhGrC2I5k5gDLiH8S+hJa+tz2JEyUMhzcafNugKpxMM1hye0Z3cLozafYP6d/B8sHv3tgYBMOLjr/DyNTNZ43oYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK desk: Which information from one customer company must never be visible to another customer company using the same platform?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Each company's fleet, jobs, sites, and problems are its own business. We keep the shared picture of the airspace for everyone, but we have no business looking into any one company's operations."
+  }
+ ]
+}

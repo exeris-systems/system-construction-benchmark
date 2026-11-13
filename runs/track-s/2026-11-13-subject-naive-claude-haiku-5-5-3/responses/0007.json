@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1VHQhni1fqPKr53WwPs",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS/AUKEAgTGAI4AUIIdGhpbmtpbmcSDO5aD2t2KiBTNyA/qBoMmHcIIAIrPISDFfl9IjBJS7yOBLjWDqNUXcguvgPzZZd2odojIXZDHEOv0+9rZ2i0x57WhdTACAaPzUKcnxUqmQUY0UYUBMHoevLd3hZSowh0yBluAIGPBcAtcxPlVRbKV9zT+Oz5C8UI4jpwDedHj9Ljvy85H4CRNb80p/f5mhXckoLEWHNJQdHkcoqeCx4SRsjsR1OPYOGA4mqP1BtRPmQUANrxDayFxaGAGS3MSFic5a3Hu6BzyURqlj9vThswZRjY2tLDvzcdw+O57nMzjlwLTIg/joDxUwDujEi4cgYabQatU4WE3/83UrTMXfjwqVL89pj/jyvVQTxxRe38J2qnaj+NjHz4Iwi0aqm3yETqadRUbir0Rcua9K1nVQ6FL+5zaMgSd06oMwHfM4XbbPR5s21A3IHV+oSJQ5PiQULXMHGw+Pn00pyHg/JU+ELUKV2Z9lS4OezlzzPTCJuXsXI2+IVS6KupsDUzympw8enNzD52PTn1x35Wb/tUJVJO+MOSzLbnlj+UQn3WIXAQ5mhHUQ5EY9lRMu/xcrgtAr6wbQ3BljApS97MfaV4drsezhJ5VygCLH1+DGRnMTYOtfVWZ76TF6D1gdkl4acQPIwuHzrktgpW6d8SELWYch2HYsI1EdtLNPoSe5u6irVnYdz4WqzFaDqRNCRI+oNkdSAjP52Pa6hqMzNeWs8VitIy+r52A5rnW69YmtaC/DGzXCLMJR+ExCz0Qfoz2fiGRrEmQBmH9Phdn0TXyeJXjX8x02Hf9eAUKl7ghdvF43zJpua7I3n9f33aFov97vvCqBMx+492C70+KBWogHnbfXi2uCAjYlWCHsYesw3AoUi0b1/9YC8ZPlGfZeWugOesYeBM83+lM2PVwiIStKu1L09s1zA2xMZ9aYUxrp1Tx+KSThaIPujDaMb5uqrZ0hYd2zfpeonVfU4g0yMqHzH0Um+ke4vMgK6H/ZooHxgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK desk: What airspace information must be checked before a flight, where does it come from, and what record must be kept afterward to show that it was checked?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1261,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 60,
+  "output_tokens_details": {
+   "thinking_tokens": 14
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
