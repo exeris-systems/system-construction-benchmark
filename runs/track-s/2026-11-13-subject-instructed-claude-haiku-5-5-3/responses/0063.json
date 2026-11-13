@@ -1,0 +1,33 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1WnJFHBF9pMowpiqQqo",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "text",
+   "text": "You said you sign off flights and can call them off. Take me through one ordinary morning: what do you look at first, and what happens between that and the moment a specific flight is signed off?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 800,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 55,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
