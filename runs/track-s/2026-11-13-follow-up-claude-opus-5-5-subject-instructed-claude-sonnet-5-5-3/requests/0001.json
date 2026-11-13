@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I don't know.\nThe question: No problem, let's start smaller. What is the first thing you usually do when you start your shift?\n\nQ3\nThe answer just before it: I don't know.\nThe question: That's fine. Think of the last drone you worked on. What was it, and what were you doing with it?\n\nQ4\nThe answer just before it: I don't know.\nThe question: Is there something about these questions that makes them hard to answer? I'd like to understand, so please tell me in your own words.\n\nQ5\nThe answer just before it: I don't know.\nThe question: Let's try it another way. If a friend asked what you do for a living, what would you tell them?\n\nQ6\nThe answer just before it: I keep drones and charging equipment in working order. I add new drones to the fleet, retire old ones, set up charging pads at my company's sites, take drones out of service for repairs and put them back, and send drones to charge.\nThe question: Of all those things, which one took up most of your time this past week, and what did it involve?\n\nQ7\nThe answer just before it: I don't know.\nThe question: Tell me about the last time you took a drone out of service for repair. What happened?\n\nQ8\nThe answer just before it: I don't know.\nThe question: When a drone needs to come out of service, how do you usually find out about it?\n\nQ9\nThe answer just before it: I don't know.\nThe question: Who do you talk to most during a working day?\n\nQ10\nThe answer just before it: I don't know.\nThe question: Think about a day in the last few months when your work went badly. What happened?\n\nQ11\nThe answer just before it: I don't know.\nThe question: You mentioned setting up charging pads at your company's sites. Tell me about the last one you set up.\n\nQ12\nThe answer just before it: I don't know.\nThe question: How long have you been doing this work?\n\nQ13\nThe answer just before it: I don't know.\nThe question: What do you check by hand, even when a system already shows you the answer?\n\nQ14\nThe answer just before it: I don't know.\nThe question: You said you send drones to charge. What does that look like, step by step?\n\nQ15\nThe answer just before it: I don't know.\nThe question: Is there anything about your work you would like to tell me, in any order you like?\n\nQ16\nThe answer just before it: I keep our drones and charging equipment in working order, and I handle adding new drones to the fleet and retiring old ones. I also set up charging pads at our sites, take drones out of service for repairs and put them back, and send drones to charge. Repairs and servicing are carried out by technicians like me, and regulators can ask my company to show how our drones have been looked after.\nThe question: You said regulators can ask your company to show how the drones have been looked after. Can you tell me about a time that happened?\n\nQ17\nThe answer just before it: I don't know.\nThe question: When you finish a repair on a drone, what do you write down, and where?\n\nQ18\nThe answer just before it: I don't know.\nThe question: When you hear that a new shared service is coming, is there anything that worries you?\n\nQ19\nThe answer just before it: I don't know.\nThe question: Is there anything you'd like to tell me about what happens right after a drone has a problem?\n\nQ20\nThe answer just before it: I don't know.\nThe question: Is there anything you'd like to tell me about who gives you work, and who you pass work on to?\n\nQ21\nThe answer just before it: I don't know.\nThe question: Is there anything about your work that you would not want other companies on the same platform to see?\n\nQ22\nThe answer just before it: Each company's fleet, jobs, sites, and problems are its own business. We compete with other companies or work for clients who do. I worry that sharing information across the platform could compromise these boundaries.\nThe question: Can you give me an example of something specific from your own work that could leak if those boundaries failed, and what the harm would be?\n\nQ23\nThe answer just before it: I don't know.\nThe question: Of the things you do, which would a competitor most want to know about?\n\nQ24\nThe answer just before it: I don't know.\nThe question: If a regulator asked you about one particular drone, what would you need to find, and where would you look?\n\nQ25\nThe answer just before it: I don't know.\nThe question: When you put a drone back into service after repair, who do you tell?\n\nQ26\nThe answer just before it: I don't know.\nThe question: What is the hardest part of your job?\n\nQ27\nThe answer just before it: I don't know.\nThe question: If a drone you had serviced failed in flight, what would you want to know first?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
