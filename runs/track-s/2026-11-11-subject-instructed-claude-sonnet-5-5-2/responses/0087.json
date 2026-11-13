@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011Cgy2wkhV5xVZkcaMQeVAR",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS/wgKEAgTGAI4AUIIdGhpbmtpbmcSDChrN518g6TKz79DIBoMjIubc8mH2RZPntDKIjAn7pbP4E+UL7XFHQuXk3XrUbfDR9zENaWMlauvFqRDq0EHPI+IWxE5y2GwiRoxyxoqnAjkymJhpc+x5hYgNJbfetHruAnjVwG/E5OY2sxGsRPlV4qbpluv4jWH1h50Ga8KHC8N/IR8jODk7b/ixzmH3ODf0Rr7SNAMFrzrlJtu8m3m53YKXP9E6Mla/Bn8+CofsshIAABPtXvumqWTzi8wwzm2/Otg+FpRUDIGGhAIgK9aVuEqVCywDL8bF1dAKaZMX9o+AK64UMGfqtkmhNF4aQpHZdAYwYrVk/LklG1hYyz6s9fYgg5MDX6/RL5CTrFmTEFfD0VL7s2uhp/SzQ3SrypvX/M5wXwtiJZMBs8+FP8NtoCL43LoCxGN3Hnn7qXsowMswWOThHnlMxITWpbbNb0xa+LimH5N5HDY5mlzBhKBODT8Mc11mS7GjT6qso9K1B+70lFw/v2U3AlO0CjmNbMzy8la5lb+36M05IWUOKp4V1Z5AEG5lI3OV1zJNLYPp5q3ufH/oKz2g5uYhOEPawxegtugUycNa9Gk4iVxWAeJNKFPuI8jBeApjsaPZaJlkPpCsDapaCWjdGp8SPNWaTb/43nSLBx62ai8XqF7uN6rnLKjP8vPRm5pY8BSiqjM5/8oXbtTBuYrdfMqvdqQ5x1vU2pz09KjjhBUKj3KHyTGsNXIxFqX9DwvcWHsBnm6woxlmkGfRc66+vwau+fjmF02UdVFjfI4XJygLe68OThsKSgeZImbo7KHQAvSDMD+sVA/YgqbD+2Ouqm+aSOUk9imjpOKwfCso3CjrV5jdTAvXMPZyrfeMr9mNyhPys6+m4jc5HO9/7zDwuHea4t5k6K34obP0Br+XVnBwR02DS8U/MfONADT40rS9XIjtXvw+jiRCucjjScVfQxwIwrMeeciyK/gz889m2jzI9Q4gbMvwbHL/S+G4MOUBJ7Lhr/4Aext8slJ3+DGQf25zW2UaAXVfNU9l9s42GMeFlrcZvlTlgK0QPi7/zprW2zsQ4GJzSxKWFYeUdxdHK5CgMTVnC+pt2Z+0TS5J226X6vOWxqtuu53kMd3+AIqwdonlvwRM930umqLuabIkpRsCk9pGKQMcQ8MRrzFbDp2jdPIOeZUqG6ZBmCmeGj5A6yeW5uRA4M+9HIatWIvo1r70O9+wupZBU5LZUSA7OPFSbASXHoeVTzsQkc+/IWJqN1pxrJdPgEV6yP6GxnmrSolW8FKqp1DB0NiL8kchtoUrMveBcCPuzvr/dBEGQhAGH7ugqSdfmnMKCmlryvOHf5RjgqIXavC6xPHH2ZBxAB8SXEapqM9Sbq5z46MWTlCyUXymUCylQH2eyrwT1ShBzRIlSbwJBzKmoR5HNEgdZDA6SluDjd1edT6uFV50j6l+mI9K2mxi1kjz9Qpd5vrJCKHhwa8/vyfhWNy1O/mepG0+amlN4VjpXkH3qb1hi29K/h6pRgB"
+  },
+  {
+   "type": "text",
+   "text": "You said your policy is that software never chooses a drone or a way for you. Why is that?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2216,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 140,
+  "output_tokens_details": {
+   "thinking_tokens": 112
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

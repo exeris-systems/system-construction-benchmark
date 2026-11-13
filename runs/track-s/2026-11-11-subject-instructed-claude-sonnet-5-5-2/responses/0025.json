@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011Cgy2cRBhNYdNjYvP79zjk",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS5QcKEAgTGAI4AUIIdGhpbmtpbmcSDC8j1VaWPlhHRvkPbRoMz1L/PPqHYhoTqAQqIjCHgWnxO9TdxKuRGytzCGAZ3F6ykqI3wAqXpSGXGSNiSX2uZfSDdHy6wWmhstIfDe4qggedxoaqMktfVenpT2MAiB1ihMSZsYO7EcYrzJHbIUbN+Lf1fnXixA6CA67l1l3r+4WAUcqo4fDph4T017RfKX2ncWKOjJg5l7jYUVmiyW42xnL7oP7j3Q6NDu7Wm5Y0692UGKHlRRskt3d5WuDezu3XeXiLoyzWKClu6EGqI/gN1RTDrL/bMWwIXTbh1T3uT4zVzdpWkE7JFA2qFsAKlmkILUbyautD+qwb6m2hUbF2G+0CO1MmBS0y2cNJlqhnJlDF09/kGfPqbRex9IZq6ZESJFln/LNs1rNc2fcLLAKqa4gxwE+nnUlpe8fA0oiR+FVh7KW7rWZBDT9t9nUXHjF6qKtSnaTpehAdzAx2V0d+s9Zh7MoLv6CdK+5CDs1wrAk4XQwKS+6ynybqPnmn2CnSr5kKLDz3fesFVXZ4w2rQBxFY+DwgRcVSqG5ZRSR43RC58nahZ/bbYFWmnrmy0xYk7OqEsNSrR484VDtYCWp+7XodaTRZxDE6DMgUBXRy6bTgu9oD4NBr9S0irLzDMGYRs8joNQmrP5FUl1aAwuAmyHWmERARZpHV16VENpZq6qpUAIWPijY6tsL6phgZeeE5q/JzjT5pTsQjpOIXwTWx3ipudZ7xj/mlBXy/Qmyx48Zb6NxKiOD1sHoz+m0lr4ENftZCE8aCS5n9FsbA0M7HdlZlBL1mCerHfKpfw/CQs4i8Y4/eRFVo4yMJkhlKPcEC6AYtS5frCmmDdsbcygdy9tTX5tlegLJ0Se5RwNK6WimKlrtpWa8VpEh6DUecUznns/kFIkRQCIUdiZm35xaggTAoxpv0UtttFebWlFAg/OXzVuF6KFxQWF4CNa+Ir6ushgXmkFuxH1eV0xJFOvGcDlUrSm5jMoMoqSibZh0U4Xy5AAagY6QH9FlTvXD9yCwvy5V/QgtQb7prAc9UdOuh9ttfgeCJl1miLHEzCiFi/LK1dPAoGCtoSEzxAIl1N90+RfrBxkUugv7ueXbkUIqOTnxaPsam9G30myW5joRxfdQYMTjqD/Vw3n34SHyCgDuZuItrYkXQH3bcjD8oKkduFThlmpYK35QwuhcVwDZp9EA6m84A1M7A/V3zl8Fhisn5/nEBaRvhSaNeUohl2scWfsjXo/VwWoMoZ5t7VEwfO+0XDLJIJIUTfOitGgRS5Fx4gYPm6UdmaFnETd9ewAy10GuEGAE="
+  },
+  {
+   "type": "text",
+   "text": "Roughly how many drones are in your fleet?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2267,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 91,
+  "output_tokens_details": {
+   "thinking_tokens": 74
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
