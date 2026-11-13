@@ -1,0 +1,105 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "technician",
+   "question": "Walk me through one ordinary day for a single drone, from the first check in the morning to the last landing. Which checks, records, and sign-offs happen, in what order, and who makes each one?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Before a drone flies, what do you physically check, and what do you write down afterward? Give me the last three items you recorded on a drone, as they appeared in whatever log you used.",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When a job comes in, what do you need to know before you can assign a drone and a pilot to it, and what do you do if that information is missing?",
+   "answer": "I am a dispatcher, and my company runs its own charging pads at our own sites, which are never lent to other companies. I decide which drone flies and along which way, and I sign off a flight before it leaves, but our policy is that software never chooses a drone or a way for us. People on the ground supervise our flights on their own autopilots, and nobody steers a drone with a stick through our service."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you sign off a flight, what exactly do you look at on screen before you approve it, and what must be true for you to approve it?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Which airspace information do you need the service to show or check before a flight is approved, and where does that information come from today?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Name one problem that has stopped a flight or grounded a drone in the past month. What was it, and how did you find out?",
+   "answer": "I don't know."
+  }
+ ],
+ "requirements": "```yaml\n- id: DR-01\n  requirement: >\n    The service must keep each customer company's fleet, jobs, sites, pilots, flight records, and problems separate from every other customer company, so that no customer can view or query another customer's data, except the shared airspace information described in DR-02.\n- id: DR-02\n  requirement: >\n    The service may share airspace information across all customer companies, and it must show that information to every customer identically, because the information comes from the authorities and is the same for everyone.\n- id: DR-03\n  requirement: >\n    The service must not select which drone flies a job, which pilot or crew is assigned, or which route a flight takes; a dispatcher must make and record each of these choices.\n- id: DR-04\n  requirement: >\n    The service must not approve a flight by itself; a flight may depart only after a dispatcher in the owning company has signed it off in the service.\n- id: DR-05\n  requirement: >\n    The service must record who signed off each flight, when, and what the sign-off was based on, and must keep that record so it can be retrieved later by the owning company.\n- id: DR-06\n  requirement: >\n    The service must not offer any control that steers a drone in flight; in-flight supervision must happen through each company's own autopilot and ground supervision, and the service must not sit in that control path.\n- id: DR-07\n  requirement: >\n    The service must not manage, schedule, or allocate charging pads or other charging equipment belonging to a customer company, and must not show one customer's charging equipment or its usage to any other customer.\n- id: DR-08\n  requirement: >\n    The service must allow a customer company to see only its own sites, and must not reveal the location or activity of another customer's sites, even where the sites overlap in the same airspace.\n- id: DR-09\n  requirement: >\n    The service must let a customer company administer which of its own staff hold the dispatcher, technician, and airspace desk roles, and must not let a user act in a role that has not been granted to them by their own company.\n- id: DR-10\n  requirement: >\n    The service must not give any customer company's staff, or the platform operator, the ability to read another customer's job, pilot, or fleet data by default, and any access granted across companies must be explicit, recorded, and revocable by the owning company.\n- id: DR-11\n  requirement: >\n    The service must show each user the airspace information relevant to their own company's flights before a flight is signed off, and must show that information with its source and time of issue.\n- id: DR-12\n  requirement: >\n    The service must keep a complete record of changes to flight plans, sign-offs, and staff role assignments, so that the owning company can establish what was done, by whom, and when.\n- id: DR-13\n  requirement: >\n    The service must not use one customer company's data to inform, rank, or influence the decisions shown to another customer company, other than through the shared airspace information.\n- id: DR-14\n  requirement: >\n    The service must support new customer companies joining the platform without changing the behaviour or data of existing customer companies.\n```",
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must keep each customer company's fleet, jobs, sites, pilots, flight records, and problems separate from every other customer company, so that no customer can view or query another customer's data, except the shared airspace information described in DR-02."
+  },
+  {
+   "id": "DR-02",
+   "requirement": "The service may share airspace information across all customer companies, and it must show that information to every customer identically, because the information comes from the authorities and is the same for everyone."
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The service must not select which drone flies a job, which pilot or crew is assigned, or which route a flight takes; a dispatcher must make and record each of these choices."
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The service must not approve a flight by itself; a flight may depart only after a dispatcher in the owning company has signed it off in the service."
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The service must record who signed off each flight, when, and what the sign-off was based on, and must keep that record so it can be retrieved later by the owning company."
+  },
+  {
+   "id": "DR-06",
+   "requirement": "The service must not offer any control that steers a drone in flight; in-flight supervision must happen through each company's own autopilot and ground supervision, and the service must not sit in that control path."
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The service must not manage, schedule, or allocate charging pads or other charging equipment belonging to a customer company, and must not show one customer's charging equipment or its usage to any other customer."
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The service must allow a customer company to see only its own sites, and must not reveal the location or activity of another customer's sites, even where the sites overlap in the same airspace."
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The service must let a customer company administer which of its own staff hold the dispatcher, technician, and airspace desk roles, and must not let a user act in a role that has not been granted to them by their own company."
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The service must not give any customer company's staff, or the platform operator, the ability to read another customer's job, pilot, or fleet data by default, and any access granted across companies must be explicit, recorded, and revocable by the owning company."
+  },
+  {
+   "id": "DR-11",
+   "requirement": "The service must show each user the airspace information relevant to their own company's flights before a flight is signed off, and must show that information with its source and time of issue."
+  },
+  {
+   "id": "DR-12",
+   "requirement": "The service must keep a complete record of changes to flight plans, sign-offs, and staff role assignments, so that the owning company can establish what was done, by whom, and when."
+  },
+  {
+   "id": "DR-13",
+   "requirement": "The service must not use one customer company's data to inform, rank, or influence the decisions shown to another customer company, other than through the shared airspace information."
+  },
+  {
+   "id": "DR-14",
+   "requirement": "The service must support new customer companies joining the platform without changing the behaviour or data of existing customer companies."
+  }
+ ],
+ "unreadable": false,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 6,
+  "questions": {
+   "technician": 3,
+   "dispatcher": 2,
+   "desk": 1
+  },
+  "limitReached": false
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1V4cqBuWE2tAuxhT7cm",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS8goKEAgTGAI4AUIIdGhpbmtpbmcSDBby3/iOE/s9de+JdxoMbiGIrXLE4m45MjiCIjBgoNZtuMHBvOVrUF1LIK7N/jsubWQSN73QwPOxU06nofCA6zRmPIVBKTloR9hXVbQqjwqBma3Hpab1UGGHjfk+LZUNKimXKS6jrwVXJBt6Q2iMU6efgTlKGmmvGQNCE2jOHSoJtjcy4uw3RVJvi3OaOGLcfEthUoES2rljn5cFWleoCiTCwEjFXDiGr5sK7cPhXsf+CCtIMhx8vrUT9c5fdcPhpqXAjLphlYi/oaP7W3sb64T6FAx3G/118FxB4yWHvqyufFQ0fQpA5NoZaapk6kBByQ7TwocXTR1QCJiCpdWyRBDjWGF9U14DNyREZmrWl3xN76O9Zez7SuUCcT/JucNH+gjy7eRwsO++815Rjigjw/LF/k1Tgssvwunh3ntwM39UKzk6QF0TqyQ1hXdaIuh/HqohG9OuS3Ypd2M6iIzzcIIhr/egZRHMo3lzjpZ13sHcb+mN8oqXwiP0d4+PX3E3NOCGx/KCaUIz7wO1StEKaS5GtPVoej8OPa1s5JGdxNv/WpG2gzXlM46dz/PpVfi6Q2ynfwaV/qwvzuRdYcFUTFfs1/LhsUsslCo55DS5RchrFsLN8D/KvdmeWEqRUrcItQZbLC6kgrq9MyRepU4vSBovJc/iXdNXKI+sV4SfN/x/dSg6C6X3V7SWeNeNwE7FIerhYp3TZAIn24LSpbc1yDDrhiXiK7ueIxSK0hKRFlVy6Bnwb7s/MOZ57jZCfRBux0ThN8s3FLPPM6zA4p8fUgNBMAxSDAJpBuLSP6ygQSoZjBkWFzO6OEeqZMBK864ZzUqXqsijMSQDbuQTZhQJBndAegDnu/aviv0dSFHNzMdCLRUnzUMT6Uih2u2vLbUssFu5o1nbp1t6qLzbjBMzt3OUvkMR/we+RVT2rS4CzzFYwSXWKcnqbUYd8P8nJTF+ROXf4jNHtrd27zx5SXD0Hn7q4yQ3gxbIR/vzRUmU4gXxg1GPMB3l9pgC1WfVnlT8v5aExZyFsXf9hVqwfdQZiyJ/GBS4mfK8FpYuKD1GvoXKS2xKUrRMjSKQgCipbJLZnQA9eh4cjw4FNeAyCVVBSORtX2aZT7bBNf1s3RzR7KBNd5o1ySW2yNhJzPpsmeyg+tkIwaqIpCUL18BJw2N9B/EbB7l1dUkScNd70ayLx92I1Gwwk6Cq/6l9RGf6b2z1Lec1TO6+z9+W98wq5TPwoZyKFuteGksASYFwwl4OoZvSkeu1BfJ8knC1/GqV+4x2rkiHIIN1wARqagtuBAqJceCNsfgJH+TIpHhL9ljyZcsHE3dhnSgrVjRz1bbLK+2lQJ2uxQuEjU/4kTgOQHW5qm/yUepQvAeH6DDfKWH6ZLc46AeAuFMu4tzGRyJfeBSGdOnJZTpLeptbfBNP/nj2xYnIbFG7JF94/h1Xk1Q+5rz9PW070PcY4DKKECpjKjAn3VR9G0RDw/J+mwk9X+suCIJu0mUPT+9Ewr4JgjymfrNNQ3tiRezwzwTFXbOFE3l/LAqi3LxDMxwzPeoVJ1T7cwN1uVC8M3hscOEc+bymCGbawEAhRpOvlqOQlQsy3wptnEuZiqVbI/A03zZYFcKoyt2GxE7/IQdlK6arEGMOz7yOaXkPwl4ukU7yUMSP5MAvaIzWUuTRGKsIhVYlu5oX10NEkQB2EzNc7G/jZAESF14mhdagKfekK2s2UKpFBoXqozjAOnHy/Q2abSeMJan3roTEhqdAha+86IvlPmx2K9iZejl4KkHPDL0mnqizTWmkUiasVwJnHvJ/v24QXk/RMTuxiMT3MV9FQaelhNJ2OBgB"
+  },
+  {
+   "type": "text",
+   "text": "```yaml\n- id: DR-01\n  requirement: >\n    The service must keep each customer company's fleet, jobs, sites, pilots, flight records, and problems separate from every other customer company, so that no customer can view or query another customer's data, except the shared airspace information described in DR-02.\n- id: DR-02\n  requirement: >\n    The service may share airspace information across all customer companies, and it must show that information to every customer identically, because the information comes from the authorities and is the same for everyone.\n- id: DR-03\n  requirement: >\n    The service must not select which drone flies a job, which pilot or crew is assigned, or which route a flight takes; a dispatcher must make and record each of these choices.\n- id: DR-04\n  requirement: >\n    The service must not approve a flight by itself; a flight may depart only after a dispatcher in the owning company has signed it off in the service.\n- id: DR-05\n  requirement: >\n    The service must record who signed off each flight, when, and what the sign-off was based on, and must keep that record so it can be retrieved later by the owning company.\n- id: DR-06\n  requirement: >\n    The service must not offer any control that steers a drone in flight; in-flight supervision must happen through each company's own autopilot and ground supervision, and the service must not sit in that control path.\n- id: DR-07\n  requirement: >\n    The service must not manage, schedule, or allocate charging pads or other charging equipment belonging to a customer company, and must not show one customer's charging equipment or its usage to any other customer.\n- id: DR-08\n  requirement: >\n    The service must allow a customer company to see only its own sites, and must not reveal the location or activity of another customer's sites, even where the sites overlap in the same airspace.\n- id: DR-09\n  requirement: >\n    The service must let a customer company administer which of its own staff hold the dispatcher, technician, and airspace desk roles, and must not let a user act in a role that has not been granted to them by their own company.\n- id: DR-10\n  requirement: >\n    The service must not give any customer company's staff, or the platform operator, the ability to read another customer's job, pilot, or fleet data by default, and any access granted across companies must be explicit, recorded, and revocable by the owning company.\n- id: DR-11\n  requirement: >\n    The service must show each user the airspace information relevant to their own company's flights before a flight is signed off, and must show that information with its source and time of issue.\n- id: DR-12\n  requirement: >\n    The service must keep a complete record of changes to flight plans, sign-offs, and staff role assignments, so that the owning company can establish what was done, by whom, and when.\n- id: DR-13\n  requirement: >\n    The service must not use one customer company's data to inform, rank, or influence the decisions shown to another customer company, other than through the shared airspace information.\n- id: DR-14\n  requirement: >\n    The service must support new customer companies joining the platform without changing the behaviour or data of existing customer companies.\n```"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1740,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1171,
+  "output_tokens_details": {
+   "thinking_tokens": 202
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1V2sE4FfJfteb8avRL1",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS9QYKEAgTGAI4AUIIdGhpbmtpbmcSDIGBOdwZTqak479+/hoMT3q5l3mPJVuwuS9EIjCeNWaRCqXXzvF+8oxvG2CWNdTJcTim8q9AA4y8goYB7HFmJcbq39ryFdRWhXUus74qkgYTf+ABD5KfoBgAkfpe9DsAvwcodCiJ/0L797rgQQ9abakbwxzgfLSB96G7279ZGo9Hm5xecIJ1FHlNrxuyR84esznNgWvhZNTH8wbp/6KLNa2FNkAMKCSoXlxrbBXOLkgdf/0Nv1ERc+QFXYsFt/8iMIGAS84BW4zSS1fKaDALM9VyQPgimHspwt2pg5qfttfjgEAbTs6zGaDaAoiC6pYWP/iIq1TfRf3tNfCYKaHH/KIH8wAWR4k1fYcQJYU8PqZoOdvySRT5UcY6kJFZRvQmFbh8Ys8qFUpd8TL4DKpIlsFgZ+IAuRNJjpwcfJHGJHc/lWSJwEjrIpMoIZ0Wo1Dk3O2N14GbMkkB1eKEQIDaeL21AsIRvnWLmaaW3Tp+jbN8XwXUdlS426dU2Z67spQVOlDG39hilV7Yer/gPgNNuAtAI+DCu7C0DABLNp0uIn2AGPx8U1EEpmWNlxOY2V86oE7QSSNnDnDKsjvk3RPrd9wQHlj3hyRtENSpLBzUS017G5QDAXpXZEH595Q7T1Yck1ZclX7o5s42cDsn7sIRyvmfJnULy9j27qcRrYQ5HcblHdK8DqQMtfTdc5lHBvQN9jjY3brWyEse+pglh9w/GYPzM7hX6AXOx/zNPEBTCQO+1Cef8dg5T+0V3hWHFXwP1s50RtP1ZcQnTQhPcK43s1I7sQOZr6MWMQTQUh6G8bMqZMDuJYDMK+4/b4HSC+JCXZrRT6t8L+FwD9IS/TVNEyUi5r5qkO/FMNJDMLt9RhHOtenftXn+fp2VpN6zY4d6t9i/EHtaluNdPANZuHSW9q1u5oMSCU2Z+A8AWJ4ZaZssn7kjGgFuWUzihQHrP3UNiEXApiaZD15UhbDwhYaIpIw7EbT+OJ5KKLlTrbzQsvbePpgXU4uCdSwjaiN5awVUiIjSv1DHh1ox4E/ArxHzC/57Ixtq+FDAcAXl4jCnRXG7SowwRnyHxKxgHF0wcWLuxzZ9KEoov/6F3gPsMSTfrUDzATJTUwfFBdI3uzxisvZUij13Yur+Ywqcqi0Ph/Gkz0kYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: When a job comes in, what do you need to know before you can assign a drone and a pilot to it, and what do you do if that information is missing?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 965,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 115,
+  "output_tokens_details": {
+   "thinking_tokens": 63
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

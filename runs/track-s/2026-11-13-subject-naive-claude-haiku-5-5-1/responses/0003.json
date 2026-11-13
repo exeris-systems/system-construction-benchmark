@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1V2QLJs6HA8azMK4o2B",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSxQYKEAgTGAI4AUIIdGhpbmtpbmcSDA42tJzDyvZFnyggzhoM9+p3DDq/5HN+CV6IIjAgH+DvE577AW5kD9yU/wNRjYrpQUY+olz+GJu2fbhmh8SPx2I+6JbNld2NJM3W3eQq4gWo2lzValLCUZT7U4Tc9jOAi50GjAsuwXFqNOzvr+0C5UfBeZSzdDQ4KjpkFTAftdsdnKEtXd3FZJYvBvBbznv3+YMAhkkwVYVG7gRg0QaHUdJ9SPIlDzDMF2ItQs7Wo9ARpWSpC4z4lAEo7drBzm/tJqR5gwhS+v+K1FPQNaVQi/8CEXF0Wn3dH1dezc18uAN9nUtig9QiUw9/QMO9NiLaJO2UJas13v/UIZw0BlwhVqXGSE4PWkq1UTiZqFVdBci9QScOH3BYbxYO6JpBV7KrtOQPPQr93hnYudVaxuS4koAQH8whswKWnlP5JBQ9Loz2z63WvzKJ+9lkI4HIzFpsDZT5R9vhFCBjcxdQduU3n3Uv/dvxuak4QVaqX05rRDSDXB/nisUjg7/Ki8cWwMeV6FTknbEkm0+hrg5z0P3Aidm4N42dK5/cNdFYUcbvo88YbWXIurp/YAORGxGubS3ni/z4f2Y/GzR7piHTsloNtTGP172froiMkKXX+ELviBVVg8UR98/WjvGkaI2EBIVBA9XtmHbZjha4HryW1hUOUusK+t/dWLY0hxr0pT7qjx2tqvCs88Z2sya5SJFPUiG2L82dqfRoFh0fWUUNywWmbG+owpb4TddC2Gl5wgxjBe+YJnH4JEMFWhc4dwFzva1h0uUXv2Ipi9CKLfLBJbkQLquKIyiZC+11edAfNvtGFAvU4bbywJWRwkqSzwxci8oiypZCy6MP3Dq2KfwxS3/7gl9JmskyMSpAWjwmuq4e5VV2rGfOCayXb6KqKtvgQuvESFWLsXur2XqNG+EvII3d5WWqhBe6WmiMuIYYnoAYZ2yzFER1DlSWy7GVG83vc8V4hw6E9oB/ZwufkfVjBEv3XI35BrrY8RLiAzbvKRGGIt5Ey0n01ipisn5x8AofxmbqPyNeBJTauJ+i82bcNFc/X3128W3vLYChZBaAytv3UkWI9h0IMrhe10jhcyYvOhMb9tsYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: Before a drone flies, what do you physically check, and what do you write down afterward? Give me the last three items you recorded on a drone, as they appeared in whatever log you used."
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 849,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 107,
+  "output_tokens_details": {
+   "thinking_tokens": 45
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
