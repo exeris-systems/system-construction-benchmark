@@ -1,0 +1,104 @@
+{
+ "model": "claude-haiku-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Walk me through a normal working day for you, from the moment you start to the moment you finish."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep our drones and charging equipment in working order. Throughout the day, I add new drones to the fleet, retire old ones, and set up charging pads at our sites. I also take drones out of service for repairs, put them back, and send drones to charge."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "You said you add and retire drones and set up charging pads. Take me through one of those in order: what happens first, who you talk to, and where the information you need comes from."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "That's fine. Let's make it concrete. Think of the last time you added a drone to the fleet. What was the very first thing you did that day?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS5gcKEAgTGAI4AUIIdGhpbmtpbmcSDEl5rAneW1Islz3LLxoM/BjXNRV6mcZW1Qm8IjCDrbDo+s5APVxbrCIAVEO6+1u6SR58/x80hcOrnNlyOxn8rg8GcpyE4GWcXfcI5XIqgwffkJ1G8x9IkCNFbXddJYlL0mHzSA9GM9Ol2OTHZqiGYrFDNqx7onLn8Ut9pfgvziTajP9LK5zJaMTlV/FFX3acWmllqY/ZI1H2EQxjIB6AdNPP/X9F6ttqG2z5cJleE9sHhha0G0rfhiid0+uopwIkJvipID2ilyZXqlYoUMBnVpGomyw8BnzIovkiAci3iK0jGiad160F/0HUXCvZJE8N3fhrPFfU9x5h3ZI9T6sWpweBsB0jMLJ7RqTWi+/WW6NlgE4nA6pugzvqOO4zbZR3uKKexZM2vUJTkXBkEfUwdRfVq8j/5Krq3pvoaoke4lstP0ZUB5hAzdEfInr+X7/tpvDrnOLhAhpv6BOH31+dxpQl16PfFI86BPzZZmS9FG6fPBsbKkwPXOJn+xitxeG7dkrl4I1mPIWkBZrG78V/LE1f5DdNIhF52HLcfxlXoQgL8XNdlKB+fJIth/e65kc5kbzCGliPmrcyj4clNd22ya/lq/jhYURCiozgRoPd/CMoU/VsU3Z8e46B23RFrhMPZKGFhcAMYJWcl833LkDDpkuZPRU2GPPz1PRYM//5S+R2yPEdIZpvsW3Ltv0RVfMm1qlIix+mevsBkdSHcWgVSCzhMYdeZvdvXbd5/f3ve+LJQ2y23mmiiWhyNYtPfSRh2Eb09Hjs5qySBnXTOm02q+6F5kgS2oJEcepTdksj1JwqUo2cmNsayqSXGMk4Z2W5hwR8Eau6ASWbf8UjVSQKNKpPgrPK6aztQGVHl6Vy49TYgroyQHoBZTUq1sgvtXRt0rya5r4diOXF3DE7Cmey0MV/s4fIZe6M9dkaKPk9GP+UhImLaQlXfeKVTWZlT+F4RmLgfoCnu9mC90VjtG/wqRIi4yul2+Hl4rNc2SP6vroJvURhBe3j1b0tdXi4gRCgXVowdQnOjqsRps0LvQ0WfzW0+7PAhjIVVIfLHWYZvHXEOW7rpgipyDL+pxsnDZT0yyE6eqGFBNDyYMcjliHKNadHO9s+hKQhRzwYh8YtQ2jsboE8+3kCr9jupGZYiXo993Cm7zM7uVHhp9dWj42TWe4EHXcB7OSDaao3uNvSqOx24QRSA9dUMeZkwyk8zHkG/hrOZm42GiCDd0WWYrMrqg289s30KPx07nwQozNcoiwzf8AqgHwwMSOk/W2K9/k/YavQEF7t0eABmXyPKFZSdt1QmRgB"
+    },
+    {
+     "type": "text",
+     "text": "Let's go a different way. What was the last thing you looked at on a screen or a sheet before you started work today?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS9QgKEAgTGAI4AUIIdGhpbmtpbmcSDH+z23zmRyQ2M3GxfRoMKifM3CjStnwo+pyxIjBzRcX6tHhAQ0FSYEthZs1Z+B/FTlkzbWbW6MccLzBRjoC+T+xchq36oS80giFZijIqkgiyGTXHkSpj+UJKsCezBoqricutdhSl287rrqaYcaw8eEc68qom9bVElkqblJuWgjHGIRzo3npg1jDkYZ9giz7S0XP89uJ8VU0zQOR8G/xAsBExpqGbsNMhqkIp+/x8dr8fXCpHIlnyZOacylSA29hF2c/j4NL2e1miypGgfl2cXZFaurymgq/ybD8soLZFBVDihPKKsMEqSLjNR6dTWx3PXMI9LYCqfBIuQvLRiy2V+H0VNpGBJwHSQoQ/s3cqNKioqiug+q85uh3mzV9mUGoykO7fJ0AUBoiWlXfElE0xJ0Lk3WM5ncHDcJDOpABwIPzg/Hynp9gSjREr1sISaJIEgI6pTSNHGCKznHC8LpRtkSUgaHEyxBv6fZSyVWBQhWjIMluWvkTIkgNcIOU1BOH1Tk4J7qUfJRHJI1vzan8XkWdksomnATB13tIbj0/odW+eEkEsXa8hePfbtfCok+Pz9ykRMb4zqxI6krI9uo6VUQDEYPlKsRB7VOtRvdQycoA21Jkb3Y4OsjpYKy/4lP0VzyxxjVBav0nq23mBynX2EPPKw1S6NiFEih4pEW+JT0bs77bkLxUyyYqOHMxh2sGtG/ConkW+ezD3JgCYnBnsgCEgFw0a2QL5dH9PGjsM5pBGxvtFdgokIPpwCzGLQgZGAc5FX4qAs/BZo46vQDwoaUyL6paekVYMdPD/QOeiEHQA1/Vey87nvJT+9VoxRI0UQf6QQnOrDbV244/L1kZVjdQWqK8BQhClGfsr7kGy6+YN6E4ZfUr7abrTDXHiTfbxbNQkHfQ5L6PfP4RVFiuu/Oq00wm8nQ5u8tTEUTA1eahgfZfkoTIAUBAOx3N2tpLVJO4zyEVYpZJCl2vXd/psniQNJ8CIy0p/lg1RsQDZeVrcr1Xwh+6ZQY1i/OF+IO4iXVo+3T+ZdjkIqgH15VXn5gyil4A60Z7bSGnYC9N2YrAHRqn3RDvRXadvUnzAZTmmmsLkdlGey/X0PtepY3V7Dauval10RWHtRU01lDwrZN4dHVFto0+t1IduloXUrYI6R3gGKhX6wNlY3N4PMS3nCyWR05wIAVS7TCCStdDSW38cPNW/6aO0uddzHuzr3F4H/EJ8y4nR0HeSVEKUaGpgSx/T99duPfE0+frsJ04TPA68jwdXgz1Z7NXBQlISJXEKVnAaD0zeE3nB1j5KTKoSqmzAISPlxK65JryZ2QnyaCiwRz7dfIBPKWd1msHoiD1aKF8AL+iKZxKpoIyjEThCnVJK+VIagW0h6c6BUQK9JiHlNZ/SmQwcUxQZdZLJtCoDh428ltQ4oSg+elqbjkJ6ka/6KFpPBn83Aeab7D2IVFxKE7uK9Krher/mWleio39ruRPgoJIHBhEn2l6j3FayrHZ1GAE="
+    },
+    {
+     "type": "text",
+     "text": "I've asked three questions and got \"I don't know\" each time, so I may be asking in a way that doesn't fit how you work. Which part of your job would be easiest for you to describe?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep drones and charging equipment in working order, which includes adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs, put them back, and send drones to charge."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS/QcKEAgTGAI4AUIIdGhpbmtpbmcSDPyMGcGem6Hd2eg8ORoMAhSyqm/DQdtKbMS4IjDD4gVW/NWy+skWEig3wQdFKz7J816If7ks5P9SYdTjBRmX+yQNGHlIpy5qlsyq3/Uqmgdb4a+l+L49/AlZ50wN8LjHydgQyUnNFn/t9zjO4PyNgatfGI3RjCU2zJMSyVqCNbUOuYxDtpKwsPFQRnYlNkJUXG4Aeu0XC7igZibP4NU6ZWG3oD0LHeZv0raDh80Y3Jo5zF61LGJ7ywZnXL3MULQwz1KYdXZyBaAM2/3zA00zX2jsgbeqj+fsxCw+uRsRo1kL21xzhOxelpmYsNDjCh+Gzim7wuHORE7DCwQk4XfnZGathpDPIDp53wKvOcwxLyI0rL/fMHtqhbKvcdHxQPEaGzL4netRAZIbYt0I5hP6v/6vK6My8Ax8Obwtr800CK30c7K5eylFRBFpm7d4rbjF0MOdbQiWOMcaNQP/PM/oRYq3fAd5icIT/ftxr1BmGISRbjtzC8qDzZBY+bEsEG+iDM1PqCeqmMMnSAsdwEEB+lK6HgARG8QhVBBrp6CYZK4U5WriOEbKGNTwCcH+jWCRLS9lxG9AmWn7/8m2Xt49aItpsMofWqKAg9ULVdiJ0xOUoov+cHnUCkKarigUwHRtKnpEyoGEg+F/iSe63ZBqdrwaHfcqytzNb2QXQzw1cFykRWkOPmJWGtITeBNkMqaDfGodQa7F27batSa6+gmnFfuKcG04WxQUyoqYffy1+RwL2BvrTYLQssU12A3OgDNZI8JzGk/YmfWrX1LMdmaRyoP/o4EuIFef6MzjhPvp0ft11toQu7TSxBUL6mveOQ5zvIcg38mAgGK9ImkLcvMz8ojY+Dk1MvwMrzShor88RmsMdbAvNs6SuVjXA6uzMwHoqPWX6VgUctf7+utykudvuZ15j7vkDjb3Qe0eymG1oofZtKp065ARFACAZiE9r54UOrDNPsUo7VmO8LQMxBmFWtQ9DfiGfkTGtbhaN64SCwc6wH/OteD/eynF9jhCmQ4BdAtA4qtRZ81fkTQ2KrREzMs+TbZ8D2GarSue1bz43AW1IcaWPdg4g59mBdR56Wht9YD7MvAEx1LugEc/ai3tw441Q59BBS4EKNTBEUyKwYcKJnF9iG0zSuGoIUYqyZ4NMyoDAw+o4n87gpl1VfwDZuqlMPxtRG83DSrXTfr7yT4/zi6JXWlLMaTZdGNkFgVU+x2/tRScGpfu+3iWYExYptPvULj/mdZPc1FrWps8ufrjsVXgv7TH62F2IJeUIB1v2M4qbp5V7OsH7apR+SoIWdzNYhN4uJgidUoaTsym5W4L6AY5/T2FhKioGAE="
+    },
+    {
+     "type": "text",
+     "text": "Thank you. Let's take one of those drones you took out of service. Which one was the most recent, and what made you take it out?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1VwndE14oYhVibF1LR3",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSqQsKEAgTGAI4AUIIdGhpbmtpbmcSDMNy0POoo7Fiq9oLexoMRRQbvMdOtNM9KkKyIjDUW8HkBFl5SoCDkMbdOy5G3vvXhtXZdWyWo6zIZLawGmow0fSfDbp+6CQLPOhOcUIqxgreU0r3UkO9G+nZIkY/cBuOKV1c2LDzNIOInh2q9gesnSVf+Xn/ECDE+/9PA1WH/oAcjSppy9YBUma0Hen3mdkUW30WkuE+e2PYoUce8XFPz7rdKgSC6pmikKc49VTWHzsVzBCAwnqDKxpLKyde3fWWIPYAoBqSPmPbPVyez2o8lXhAcqj4xJvZ6EiRy53uxw0FTGbU2EQSw++R/6KR/DdtE82+Q1VU5Jmd1YBfqcwNsYEPncTIliT3/vwMQDW5yM8ccT3uqLdpFebNAcfNKWJVe4k6fmSRVmCublQWpXFtywu+LEYWBaNNKe3CarZm6H1GHkn0OAR4O6n9xwtLieoGrUCAliBSqsgbASYQtKj9664GOPOLfW7LKOGKMZ4fvdQMbl4SkeENmPnxzxwTY/f84usoA9zJtp6EIHp2KjjmC5hirFPv4uji2g2PYd5QdxRvTTq6I1TRyQNDD/VexjVrZoSd2jNls/OM4TkfCFBUmw1hY6ZBLj/o0JnrHnzvu+qsIoG4+gpFD3dWXxWTY9OK/j/sfgiwT84eXyseEON//0le+VVXmgNL0XgjXzjAFS6aOD1Wz9AxdTiy5qthv+sfo998ENQUJHaloPNCYIH97wpsvebkTOjiy9dqdXahCA5OlWqOECmer2NLlab06YMz8Lef4NVys29te1hm2TXft81Fy4WOK2/5YUOGgocPoNqphoUjRQvh08Lm4B8LLDD9tpC9WiOalswBaX/xM9jvQGqnwTRr8Maho8gXB8MhIF3FohSWQr05b/uQ+ztel4Y4zEvwuwI4FUfV7drSGomQBWxTNVoTQiv6rr2Nhqqgd3lwKvG50MOSQyo4B/uA2bv1r9mjKQo3/KPc9e7ayTjHM1NxVpPt3mfqrbPNtzLd9nDfTNdl3pZR7jsaFe9sN5wrujGixBh1XWJ3uPP+A5reDya5wTovF0sGOsRmv5d+vCix/dLkEkLk59CDaQ0tv8PvjRjg6b0FnxNmNjM9I3zEczouAtgCz2sm4Cdb7HW7wpHh6zBsKkJHdoErX+op6tEDZbPOUSZ1P61m+o07zep8asmETQ828JuiZWU/Sw+ZKKTHE4SIkf511ipOtUkTLfUqlAokcUBvdZUO5GmZI4AgXZIiL+2jIKRnCk7ZvuUSUYzTvZfI1dbeHW86pSXrkgFrlFX33681J+ilwmxBVMoolGZvxnwhhBxHxLKg3ZkrzJS6NwCHus/YC87i28FjFi7/DhNv94hLULvavMXvmOt7su3e1FqoGz0Ws4O35jFGSf4/dKUs++jx2k9cxgU/t+Xa/OcOJ4xgf3Ao/MDYfxmPWLgAdH6IT2WiRFqYYXK61xtLxQ12t2NXyxkXWtvIPx/7mcH11VPIOsmALik5Ywa2JSWgxj40F0nczoNY/1kxEB98yFZqbre4ohNt2LJj45RWVpY9/uNYASN/MVsRIk9HNuTjBanTBP2dGR8tzUrGK9opDtPux9AR+k1ZZms9o3gMMsZ70b7vZlFv/QZiSSHoIuo01mIitIr1aOjJekpBLRm5ix9/1K5+cHm2zIsjeAlhrko7rrI5UJnA3RIowMw0E0PyIr+lrqOL3ahla95nN+JJygYSkvJmVz6VG8yAFjX1/i3nXXyjHUiuf0nEHvjfGXAQnj0KMGgtSLlJ0HWnz5olWYZfU4ufG7Nga/g7zMNlurS8iMa5f/5PhzrXCvAl0zJcqNd72bRoEUbM/iZUbYfZlW9qEQG9FDJg4y4HV3KUXoCF4ToFUWSr8nnOoudpdMn5VnqmJ06zBjGI+XqbYf8L2lyUQooYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "I'm getting \"I don't know\" a lot, so I want to change how I'm asking. Would it help if I asked you to just tell me about any single day that stood out, good or bad, even if you can't remember the details?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1398,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 290,
+  "output_tokens_details": {
+   "thinking_tokens": 223
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
