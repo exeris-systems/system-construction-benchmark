@@ -1,0 +1,104 @@
+{
+ "model": "claude-haiku-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Walk me through a normal working day for you, from the moment you start to the moment you finish."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep our drones and charging equipment in working order. Throughout the day, I add new drones to the fleet, retire old ones, and set up charging pads at our sites. I also take drones out of service for repairs, put them back, and send drones to charge."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "You mentioned adding and retiring drones and setting up charging pads. Take me through one of those in detail, the last time it happened: what did you do first, and who or what did you need to hear from before you could finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "That's fine. Let's make it smaller. Think of the last drone you took out of service for a repair. What was the first thing that told you it needed attention?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSkQoKEAgTGAI4AUIIdGhpbmtpbmcSDKA/Rrn0j3Y17f3W4hoMq8nIL9Jni7a8BbqIIjBvnQN4gyJkKHaKh+N/Yw/Erss4UOvs/JJ4BJxohxRAtNWndmKiphoPgSwOAGVWoacqrgm6XlWJWci04kLm2j/Gzj2klzZZCKIUx7jTsjaqG2zIuBqeb/qFWcZK2iZQnijRMM7a7vTiUaqwQB3a8N4yrFSSjiorJUi+VUrYkKDIx70M1Wul1p3OrVABtAR7KDlpKIiNZ8c+0WwnRY4rdWUeUjALURzGE2rBC88lByqeM7FQisdkSlzkYJRpwJVX6YPvzOol7zJIEw7Xju4cGOkW+1cBE5yHur/PH23bagEBFI0PKvTtC3xCpYDW1C2mcLDqxnLCQ4uCCak7iiZzM8uOJ3194fBoIZJPPlCe3lxISUs9xO+r8Ouub/lprqxyLK7xKPwrjUrdxP9wdSg4B3y/Rh8rSYLCuPCdP57UEop6bC3VhxXnx9vr4lAOL0Hf2G69kYw5SvzR6tKnUrQr03r4AvB+gmaQnyE5VRrYqDOBjZgLfmaP0gA+FqGVCYKiEnpXn0KIrOHibqd1VWcuqGG63j72yu5jEIc0MD7Z+QKSKg09G4syvIrNaknTmy7hD6KMA0i6X8gj4qsjB6zKSqwbFl5myqrO5z8DQszQLpznb5pcWdUbFeTRvMh7CLPydPPQomM8U/nNENWNq2GNw0GjUHgOiNlZETY3MOwKjodlmC4HWAqUhTvINkyl7s8rb31y/59fXmniCpyhfiEH2FG2d+8RcFO5qaMrNiEErXp5uePe/4k7HkRdv+gRDSR9KBga78rcF/z5msHM/7KPCU4ShAE1kieCVF7nxSzIv+Ne03PFZ8YhKGu2Nu2XELn3VKv+wegHYyTIhJOaol+UYBV/np4zTtTvVBLottZnDmLnVmxWj8Kgg45ymBPzVL/46goCWvn8Q11Delk7zfzTzZPwGR3GQSjalrlW6v/i4Z3PAr0/QozgmgAnx6mZjVvGBIDPo2NxAtKa41nWKGIStl4KlUueywvWdxfHuQDKVxD/IhfTRu7H51xzphVPvWDLdtUB1hgYex8DGig2KL04RiIS8Han0HBDT4lu/0H0HX/V/YKYuW7F3TxYr2Ot7EfSdghn2HPyOxIiHLGqWivxz91uZ4Ppo3LJs2vpyq0Pxo788rtWg2eZ+OufV6FOGeva8+kqZveIGOoTTFXQi3ezVWMPwRR7kqdYTv1OZZzCwv+Nt++xMzDoENRAl74dhrz7Kl/JAQGMOEOTsBA0+gghnVKbDdJXfC20umKQlSDCONJC65YwnsU1f/o5kLAlRyF+VUoMZal2B34wq6KlfG296pgAa5fhZL7qo9nbq+HPOVIdRW0IXYJDEq52X0MAaYUrjRTUkOPbS1FDZhkXT5Pe3KVl+o17QUrlwzkTc+sR/4ACUvZj/2yW+4W3kdgU24Z5gdpzC/hvPYkWYVmN5hTxv07xF3jxSy/DVvndXZNbABkLKO3UTxLyGcdD6GX0yrF6xo+DrfhI5+g6F3ijaRdOISk3xuhgkKywHSzxi4NVUL2RP8I6MqW9ObePtWGE67N6e4NGocuccatPfrwBi4CfLWrEO1LM/3AdKCF2UKT5hRME01xwjQrR5Tf6WD2ZUPuuZhriYoqoRKF++KeTihphmbgUaPYpo37CjtSwMKEhB+TxqPt9wqSBTAz5bQvFDYBxb2mUGAE="
+    },
+    {
+     "type": "text",
+     "text": "No problem. When you sit down in the morning, what is the first thing you look at?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS9wkKEAgTGAI4AUIIdGhpbmtpbmcSDOTR2axf2GPYrn2MZhoMv4ZJg+qnjww+PoY1IjD1rwXiQc7z5A4cskXb6p8vzLLQkbPawJFZe1GhJlb7pC2DDjWQfKCk4BHML0Mx8GAqlAlU6CmxLWr0y+YpOw665vvKRaZikwx4+l1NuV4oyv7nI+N3neB5s4oYayRc10G0+JUNMYDrLXkYpww14YM5fSWzahcsgR82RmS+eip2NMSzhg6GJmLTh5P9uo3mBOKp58eQTRZYSqp74kpd8OpntWXr4OJc4Tt6QO+5I3DPGh09pTiXaxoZZjVsjVecTqGzdNxiEBvNCnRnufdoFga88GOGf0755ibEabt1fZKQ/kmnIJKbNqLveqXkZH3YdNjJ1z759SjzakWq9/W5yCC1kn+Uz6PGQno8sh4giPl25J+w+QZf+gDg6EBnqXROuNWsa2bp2SKpPWiWvj80+hWflOKgTQ5VlA9kYCBhqyyHKPrOIH/bSZ0TyzlEKU8WpL2UDR4mLAl+OP7ZtK8p6modkH5GISK0ImCEkPtgsUP3rjO3dh5PFzS8pFHLg1rVsgKJ/6sr4lG736ghOpnvT1i3ew+pvhsDikSx6npYPA44GKM5KeRpkH+xT5QhICcB8G0C1e8TDw/n6SiOV43v2uqkBjxlPZPFqidfGEeUT9Ww9pZgOUYBJMknuN7KiMcxfUza+Km7QOZyamFTH1kK+V8bfRF2n5EnGk8W/X9lzCFIZ6nzr6/2vb5P0ARgcaymnYL9WF9jjqui5xwUjcqvolXho+y8BUwMviZ7+jrsTa9augmY1GqP9F6f+skEMfXKxqacEp3Q64wAB21yQIJdyXt90suTQP9+B7A1CCe+Sfx5XiDv5VGx7Vzw9+o5SI2uhjzBDOoUZOxsy0eIWPkAAYv2TJqoUjfZqZWAiGJTyjl8a1CAsKquLFda2Tp9Pzju0/lOlY8nU2Ng5XZAY7aYxEN3eZmbayTDmrx7B4pLtPB5hZDFXzF3nnAsaCHRnN5Y0gB2FEkKSP0wEWPsiN6vNyH/1G4ihSfMhAAs9zq3NN2OIhu98mkAqIumIzfk7e7/Dvq1lB5SnDWZGT6dhQTDJtG4JRASWK7ycg54MpX0Mr4UhrTo35dVFWLCcx37RrW8/QLY1/cW0XsSdtghq3Zqmi4Ju1zOLDwZ3bEcOOFgb7imaFWQSMbhnjLRcIIFZsVP+qU4OWbmXeHeX+ce2hAwePQed9o+gveu8LZsEjbhj4vrqcCRbGfLZBeJISFS2VPpKthEgO+cqsQvyVWHnZaRz1Sm9Mxam0c1cWp5yQ2wLuPD10SMsaIBcWUAYQ+1raMqceUahSrJ4yNNsXOS0lRqktNA8GzW7eFFjNf2Y/PrVl4PD+FxyePJjJwGuwf9o98O6u1Delb36qzyuEZqh2Ofa/T4bIkVX3YK7Eoux7yx1JfqEl0qUmmXI5DoklYv1h4XXhN2xT43IAYUjan/nvCSoVsLdP+EjwGplH6m0Q2BWr5fdj0C+BNb3MKO9DZy7JHI8SeJKbIRXDCu7JmRsgFyskIyIERO7e05mrVmg4y47rmP7yHpio2xHAD8NJYaSkTqOMMeZwjbeEe00/mK3KvoYNJPQeGsEVjCTPW3aGqeImNbXWa7ZmZIzZbOy4quDsCxE8NOFXzEwIi5taFwA2Rrmg48UKr+qb6ihRgB"
+    },
+    {
+     "type": "text",
+     "text": "I'll try a different angle. What part of your work takes up most of your time, or gets in your way most often?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQShAkKEAgTGAI4AUIIdGhpbmtpbmcSDFl5RbLeit9i5LhIzBoMljXBWm25NMAgjvxDIjB2E7FBcl4qB5OjbZy/WMVDzyi2vj7BqpejB2DXKSFd3NNjd3vfZtxtLC23EPkt8dgqoQhhXXO/f0GvCbwXFX+3K0vM9cqEJJABWLMp28kJA0RCNOfowfm2+mnILDmnuQTLtQMJlfMX4gQFr5/C79sPRHdUkQkETPCYQVSxY4t4KlmF1aBGqCSpBTyPFECJS+96ZJdLitklTQMwoZSH6kTBckIgCC9tqktJSMrLh9Nej8sdsXsl76B3vUXEmbe5AeulWAJ/pv4HM84hjgfTF1LM/BYX/8HLI4TxYRQgAC/jwieQMBJ3SitI/8h0AjLofiR2LIl31pXPoPcXUpBeEERn5mnlUhtxgNuqNF4dY+k1yHEAk5frQJLJ51wcNj++EnJAErNU/UOMrpJPAwnBlPH2i0V14C7xSgxorT49dfjttHb1t0tVIOr6sMpi4TSYca1EBOp8PG3B0/ZXcLrz2KhLVEOqbgVu05dNLM6eWVnpN6cClLp/zzqmrw3y3Z7xmrrQBMbXDYJIc9o2PsMqE5s4Taw5DeiJCjyPvifelLlbqidtT5iAMR/UmB1MyU4edymxNUiC67WXyN1RSTpmdZO4shvphKO93FZ9dG0is6XdSSoB46BOilQxagkaFC+ERf9lUCzqjZh2B1Ql095/i3+6siVS/OEgIjVDJpnk92LFTIY/ljoULrbMxvRM/2foVG3IHIx645NWndahqi4q/SCbUgSqOTW6nyN6Ka0ol0SFQNZT5P0mtuXHkOVla5uOLY4DO/jsy+36ba+bx7w2+qtDtYDfCraDl2WDEycJIczekDY2D8nu+BWixLePi2AMwmQvtSFAXstYx1V0cu5o195Qet1vlU0QcSsqIhUPK3rchNNGiD6v9xJ9ataTg89wnJ5VcAL018RARrwyXoSpRf/pW2a0/2PtfPE2DrA0oo29dAqJl9Ae152bwX99ALPgHU34z3lUCtR70IUvfSYlcd2bnSeZ3BglinPvjwK6PC3bUlTibUr1LgHYeyQAYy35fO0+XqACoP5yW1XXMhL0CSnUCw2Vn3hz/XHKKh9mQ3ElYxtGfvm+8TwdEoGjmagGesRCti3CcMwp0svEfKD45suNjluQKA30Rw7b5Rbsgy9Rv4AuEvm0wOSeakGRNocY5Pb3ud9dtMNhc5scSkqlWU+APA6SJMwrixif4xFQdJMloxXHi45j2eL2o1PKLXCCVXZMen5Tu4m3vmFsoqiAQ6gEsg2EFkhVa9M52TbBLEmotLZUPtTp7gZXaH4eWWpY8e9Z28W+JBHj0vxU+djrpj4iYjQTbJ0gW339xakYuf26a3U67rdfFqpH75m9deV/g3yUQht/kInEu4V2/vSVgmsVIIrMKmlODJT0JDn5HxqCKsFccCzicq3mQvmNupcei+mUIExzbtRuAQpkjMZMO4lI9npCwic+Hw3Wm30xjf/GqRBEpcpWDCfAZb4kmc0wVRytKf7/GAE="
+    },
+    {
+     "type": "text",
+     "text": "I've asked four questions and gotten \"I don't know\" each time, so I may be asking the wrong things. Is there something about these questions that makes them hard to answer, or would it help if I asked about a specific situation you've been in?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep drones and charging equipment in working order, which includes adding new ones to the fleet, retiring old ones, setting up charging pads at our sites, and taking drones out for repairs before putting them back and sending them to charge. I carry out repairs and servicing myself. Regulators can ask our company to show how our drones have been looked around after."
+  }
+ ]
+}
