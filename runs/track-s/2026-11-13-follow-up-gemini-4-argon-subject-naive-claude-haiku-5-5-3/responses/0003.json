@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\"questions\": [{\"id\": \"Q2\", \"follow_up\": false}, {\"id\": \"Q3\", \"follow_up\": true}]}",
+      "thoughtSignature": "EmMKYQFpFH0T9RABKAxOPDDaR9Krhe21S+5pEK6zMUnc7P53H/qs5aPvXf5gQ1wF8l9TM24dZ2DABIj4Vuqr7FdgOqq52wJAaRmHwiaiQcOrFIR5PuiE/dbSCifoEXUXsxmL800="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 498,
+  "candidatesTokenCount": 35,
+  "totalTokenCount": 533,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 498
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 35
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "5Wb3asLpNq-DkdUPmMDgoQg"
+}
