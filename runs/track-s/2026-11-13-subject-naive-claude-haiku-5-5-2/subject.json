@@ -1,0 +1,38 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "dispatcher",
+   "question": "Walk me through one normal day, from the first job request to the last landed drone, and tell me which steps you do in a tool today and which you do by phone, radio, or paper.",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Think of the last job you assigned. What did you need to know before you could send a drone out on it, and where did you look for each piece of that information?",
+   "answer": "I am a dispatcher, and I am the licensed person responsible for each flight. My company's policy is that software never chooses a drone or a way for us, though we do want help finding out which of our drones could get to where a job starts. A dispatcher decides which drone flies and along which way, and signs off a flight before it leaves."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you sign off a flight, what exactly must be true for you to sign, and what do you check yourself that a tool could not check for you?",
+   "answer": "I am the licensed person responsible for each flight, and I decide which drone flies and along which way before signing off a flight before it leaves. My company's policy is that software never chooses a drone or a way for us, though we do want help finding out which of our drones could get to where a job starts. My notes do not state what else must be true for me to sign off, nor do they state what I check myself that a tool could not check for me."
+  },
+  {
+   "role": "technician",
+   "question": "Before a drone is allowed to fly, what maintenance and battery checks have to be recorded, and who records them?",
+   "answer": "I don't know."
+  }
+ ],
+ "requirements": "<br>",
+ "items": [],
+ "unreadable": true,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 4,
+  "questions": {
+   "technician": 1,
+   "dispatcher": 3,
+   "desk": 0
+  },
+  "limitReached": false
+ }
+}

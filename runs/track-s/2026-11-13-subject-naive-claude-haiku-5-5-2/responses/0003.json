@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1VCeWrnHLuSWCaLE9fa",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSuwYKEAgTGAI4AUIIdGhpbmtpbmcSDMAWNcV7LNXNT4IQaRoMbvTXjUw+ZicDjUWqIjARD8hgDkMqVIb969D+knLcuo6IuaDIZ7i0pYQ+0irpEhdre+R1k7a+jTaMJbi1jQYq2AW3DdOIH/kuuUsCTpwX7duiqBrw7DmdHHzOYx9flCPLx6RAel5yiRe+9Z0CpjiwFx1SVzSUl+jmTaO57+Fq3AH747ONCzYmUyjmRIx2gvjcxVbVYjd4o54PvFomPu53Yafk4ifg0tVgHpmYfBCTTZdJ6CdQMk11T4UZxRoTrWVP8Ds2va5vIukjly9cVzoa7zPduJWqOTxwPnMY3n8XCplVsG0Ras9yLt0P5UvcJm2PkEdncKJzD/jOT9DQWo+BNWi22JbYKElqUvKeTvpOvC3n4iGnyQ33BtjkGB6DBqH2iXo6as6lEaOu4pxFP4uQlLfD4IoKRWIWBqmTvxKp4NUhiPVHvmWz5q/KX7at8XVkDNIBr5LGk/E9oYUhWq86iWeQhY+WgliRTVu8m+kiwkZ2+ak5/BOF5T3vhvNnsXYC8Wx3IWl0Kedg3tQ1wIvQ1qNSFUYLCX0yFVIS5glzr0C84FSqXhZ/4+zWe2FATRwqr4cNGRoO/t6aibeIHvc8MDyL/khYHiG/k246XMnhU96oGQXnidZT5ILRGXcejORWAwnZkJPQnBVcv0jyus+daU7IUIi9UZISvOxsEN8LRC4wtLYyWJ/qHzAalFB5K7LtpkVKWo1iXjlO0gkcSwueicLamUbAajB4CSUmmH3PV6KsirgqfZeJHnhFpmR0JhfrGY/8aoZC1c2rmrs7ak9PpZTsU2p7MTP9a8S124WiXWt1cWZ3yfLqcroHkf/xGlWt1bRDEaBcqylzfU3PJ2Yu2ExAeXeR+u8jnBu6EajRhBSL6TEmBEpERq45QlnMJZ5USRMCRpfRgVb0UHJxVj0z2U8hTAMdyIvIqF8hcuACuQZ6bK0366EypW4bSj25lK5pAjPqvv1JIDp/PAxycshYL2WgTfKruzUSN+oiDjWc2U0G5f7C1P2yISIC7VGir5/Xix8WirtoSz8XOuwbP51kpYO92CkveUM5PhgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: Think of the last job you assigned. What did you need to know before you could send a drone out on it, and where did you look for each piece of that information?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 827,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 97,
+  "output_tokens_details": {
+   "thinking_tokens": 45
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
