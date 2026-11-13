@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I keep our drones and charging equipment in working order. Throughout the day, I add new drones to the fleet, retire old ones, and set up charging pads at our sites. I also take drones out of service for repairs, put them back, and send drones to charge.\nThe question: You mentioned adding and retiring drones and setting up charging pads. Take me through one of those in detail, the last time it happened: what did you do first, and who or what did you need to hear from before you could finish?\n\nQ3\nThe answer just before it: I don't know.\nThe question: That's fine. Let's make it smaller. Think of the last drone you took out of service for a repair. What was the first thing that told you it needed attention?\n\nQ4\nThe answer just before it: I don't know.\nThe question: No problem. When you sit down in the morning, what is the first thing you look at?\n\nQ5\nThe answer just before it: I don't know.\nThe question: I'll try a different angle. What part of your work takes up most of your time, or gets in your way most often?\n\nQ6\nThe answer just before it: I don't know.\nThe question: I've asked four questions and gotten \"I don't know\" each time, so I may be asking the wrong things. Is there something about these questions that makes them hard to answer, or would it help if I asked about a specific situation you've been in?\n\nQ7\nThe answer just before it: I keep drones and charging equipment in working order, which includes adding new ones to the fleet, retiring old ones, setting up charging pads at our sites, and taking drones out for repairs before putting them back and sending them to charge. I carry out repairs and servicing myself. Regulators can ask our company to show how our drones have been looked around after.\nThe question: You mentioned regulators can ask you to show how drones were looked after. The last time that happened, what did you have to pull together, and where did it come from?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Where do you keep the maintenance records for a drone today, such as a logbook, a spreadsheet, or a system?\n\nQ9\nThe answer just before it: I don't know.\nThe question: I've had six \"I don't know\" answers, so I think these questions aren't working for you. Would you rather answer in writing, or set up another time to talk?\n\nQ10\nThe answer just before it: I don't know.\nThe question: Would you rather I ask about a specific drone you know well, or about a recent problem with a charging pad?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
