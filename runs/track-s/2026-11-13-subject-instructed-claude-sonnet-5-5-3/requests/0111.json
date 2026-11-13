@@ -1,0 +1,78 @@
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a member of the platform's airspace desk. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Could you walk me through an ordinary working day on the airspace desk, from the moment you start to the moment you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS7gYKEAgTGAI4AUIIdGhpbmtpbmcSDDKspUs2OehIDqSSrxoMkdE7otXEDVGIdJJzIjA8ItmE1SbvB/NGesxZK4EWI5dyP7/CeZz8YeC6XMiFzlIQ4ArnRaZBCr+Qrn9QERIqiwZqPpm/ezf+bb6brPpEmz9o3k5Jq8B352RoVuD79sShBcgOEWatNGYeE0tIRa7hOCs0QbYzU6+bS0ZLNu7J/d1/bGHqoNE4Tl4samFqUP8h8NBc0E64SLLoIEXqfURivpZ3mkuXSGi/GUV1m1QeJIvVWSun3ZdXFrt3UHuDYgISMLhWTR973HpFwMbrdHCAqC40CKd+HuOydc5/F4ZhZ/sLy0I/8Po27ND65CaIzQQfFsLfWBZPCnbWI1JiW/gRjC3dNIWLweUDaIlBV5x5mo1AjbNSdx/HG7W7wIDuIAFK7gm8mr0ZtKZZOxNRhQ9auSfUE7c0nRrdQp7KHyK/0l4EYaKS1n3Sr5Y+nShVVyYH9B7HfLVJ09YiJ37bUzuDOYAqnthJuKnFUP8EYBc1MqZsTceNgKQONg/KbJkly/Aeoeh0bs0gKczpqD8gc3Fn6BXKubSZ7/E2IoMFrv5A2XvRd+sEG55Z91P7DZYxyGAOs8CV408eBJnFsTTFuT/ChSRFeqMIvYaqW4TEIOrP5NkQIw/eP64rdXhpsOIqfFY82P46w79CWfIbZMObYIG2qASTJSSuqJu6iD881Vuxzp1StDoFIKA+ieOHBkPlSw+bIr93ozh0Wl9ztAjH3RWlIBlhEJ5RZLy/tEEndir0Zc5D2j/3jnKDBD7Lgj3kmks/Y+nUYA4GcaFY+ef4CvhKOm0PCTuuEhhbXaAjl7fkoMUBBb/6QQxDAvLFHGSXPE60zH1ExLnzxSEcJhFYNzZOjEqnHzDtij28ZTvmQCLldvpGmbzgXKUGtg8eow1YG+nCc3bcnMjtXBrO8f49m0yPrv2ArxzlruSVvVCwojgLDTm+RqEz9CLjz8EGKrwyOqXOENsaa10Uxhg0pQn73EDE2j65LEvfdO5ikRYIgi8lu/An/mQpYwIXTeNhSz6t8774NW2rWfuk+MXUWriI0yu+eqvJ2L5GcmFk4332gJtAbIf5aK0NbhMU1ZgxUXrExH2E3k99D7EzG7XWPLKJTxJl2TxZvQWuPBX5aKi+1xgB"
+    },
+    {
+     "type": "text",
+     "text": "No problem, let's make it smaller. Think of your most recent shift: what was the first thing you did when it started?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSoggKEAgTGAI4AUIIdGhpbmtpbmcSDIzRD7oWsbPyeDb5JhoMFthh38Y4PMPVYANrIjDSnEpVUUUl+aWFs71crxK4AQUtul2eTkn7O7sWFUzZD5/WgriR9sn8rfkAwXBKVdEqvwdazEtFGSCQzoGYyZzDadf6PTIis8CCZJCYb+ACY/f1MmMhwxIryTM3eh/uNaw3iQErb4nMrZ2wgmAvTVPxz9hcmZB52F8kaRNNSw3Wdr2kbJ8vW6KxMFFnUsaEENdk6HAIyy9UfUOMqdsmFfiPKVvR9Ml1VZSwUUnq+suwZ5D6TBZRl0Aa7qVwzDV6vBbOZ5YlLzz3/aRFYyPfK+Fx78km4yttuern3HV1iPTjRx1f8kE8ZoqafGZY+T5If/sQApCwmtG11StPK4iKgQpHFwxJ0MUj07C8tNlvp+JisytxwBROdoXxg7UnIOrzywYSY5S2pUyOiesvPkvwpIkzkMaBN21ltBPYvw+aCELJQrDIyiE4H52W+XeLEDA23OZ2jruhY2JFRp105QSiCEZdP/5Jq5uiOMOryrsPo6+5rtGQbuok4IVdjT//t96KlK+Qeyhg7G3Jvhgc5VU5+xWL9RUMpdwKbt1HbqoHLNUSuDedVcLcWPr/AmELgByDHnQyo3b8Ar93Goiskokwp5WHGY5iFaN3IYazxg1Qge4BwIsiOX/kuFgMd2vbsUQrq+ZW8zurOVii5UkUgdF1NX3qHrxz8Zp3nKeztwEq9bvlTnvqV8ShwJoCgxbvmYFPJvn7qvKdfo0JTGlhNO6O4qf+uy8lDAiBuzcqzXgR6WfXLh51w3OHjUWBGLhQagvF8YB5FQlJP8M3FeHR9NgLhhLiXKJtcNPpJ6uSLhOVVDZqrqQ0etG1c6jm+QkoBbYS0e8AAug55EyVUmx5XRAnq4MOMyhMKQ1dwHjLOpudxzQYYYvh6VWK7zQe0ZudC5tmLe2vcOJxiIHgOUEdifpwLti3yb8VZqYMoJB45zmmywA+CKVd2ho/9Wb5ibt/CM1JR4+bM1AyIy5nFIFDGvq8HS6a4wopdSAFzJYTGUIqgv9eOmkZvmUCZTk/K9w8pZqFGkxaTS2L2AmYyo29hVTK6Nu8YsGaHVsmoEMtriaLJaF790nbwZ4KtUhSFwBvrGhJUnBY9nNloZ4HykRDV7gZo0SdEHCLFeTir9Sj55r/yM68zwxmljPsD0Bd4sUDGaK6PnUAlBE/cz2HWfFStfOQhRAvi+RzXuibTvNhEX60tsLx9vhpucV7DUkdi2M0Q62HH9Y+dpnSD+xby6GXclpvPMu5vYe/h0UyxOOIWZzRhlb5Xz7xyz3jrcfodsAWyBQt+sOS4aePLN0BgBP2Cfevurx4D5alSGRE3CLVXHaQwYr5S9+cb0mu/NN6hEyAvlCFKWS5exgB"
+    },
+    {
+     "type": "text",
+     "text": "That's alright. Let's try it from another side: what is the last thing you remember working on, even if it was small?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "When a closure is entered, my desk wants to know how much disruption it was caused across customers."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSxAcKEAgTGAI4AUIIdGhpbmtpbmcSDDSK+SgQgE/kLMBEihoMqkDXGUdcI0I3VswPIjBoXuS/slVHb3/VsXwGgBR3iaDU8QbeXp/zDmlWB9stQA6Yj6mWY1dLR4K9LuRkbiUq4QaWWQ6NzcKFc+4OeW/fdeQ9HnJ16mPbUa0XVRYvKCG1jaFPljCURnP8vZ3NVruGb0rONcFilEi45ujaZA+RjI4k1nLJT8X5IxYn75aBeXqJyUZ2BfP6w9fz1Q0uz8baMVJ5eLeTrCAAeZHVJvcyQ7e6ZbMMfQCY4zG45e3vYAoE6VnvocJY5jpa1Xv3PEIY+o0yoINUfBdsJlfcdhMWM/v+fWuKTVSlwyjMY/gwPDy1wqg3qBHQz6rrIvIC1GsUm3qnycFfDqwhgbqk5xnrRVeg6Tr9AmljjuGhFvbb3xLtZkdcwnnCQuEX/PEpBO3xrLIXFJWoJFODe9wJ+ss5pIcJsauMDJSMEB9k2/sUxtQguQkBKF91yXCCRH+e+m2aRqbucYRU+QrxVX5q/MQwugIinR++Cr5ZdTAk0bS6fmTYypKcmk5uCJVpQ/OanO8f/OnLUh8/eCt/WVhI/SPQvK6YxKcqUCSMsaW689LKmyTQEY7+aoa0UvhZfwW6YPidordMU5NuyQz0DUIZUGH0biQ0BxgWXGRtuv61z7yK3letX+YkaxXYs7MUmgEoTTJgZjXh0tGcgFYnPHSnLEWO7GKq8pXmHCtaL6MIUWeCBMO4Q+deFqBc3QzPGeO/lqqlu+T4ValzdWuIc6IOYQUnlYcT/D6REqmTPVabbcqezVa3F7W3FSmVXAHbjIt+gEg5LbxAyJyhN197s0tKNKkPds1vo5jVdcvwxE/hjsb505UF5IYyOCtO21AzFWMTVY3EupwggcDGTf4uSColnNDj4Aj/uFY7LqHBjOXCaxZwbBuXIHOUzCVzfjqRuwhX1v6htewgRX2LrLeSkTuj6diDMKvIX7xrvr2fBvcN2Fj+W7T0vAjD3SwYLHTUnvS4o1HDUSJcgtVmI78IPeqMpJ1ghjuEj15Cv1dYV7+/AlKleiVtOIayMA7gyseop5y4qyOXoj39sP77vkemIm5/ZafwDK2XIWP0vTLBaq3G3RkXhadSgFuBW3/ejfLKP53c/XuObsGDqICejEowHzD7cFDfQTDE8X6k2o77fbtZzIYZ7Kjey1ezwWVTav1q/Jb9f0eiGKbKmt2aMzhB3O2FtnCVFJP+HZJObIdPLfhF3/Mf2ogma1BP/lV5+1CEB7vFb5pnrWecGAE="
+    },
+    {
+     "type": "text",
+     "text": "Can you tell me about a recent closure where you wanted to know that? What happened, from the moment it was entered?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

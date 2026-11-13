@@ -1,0 +1,217 @@
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Could you walk me through your last working day as a fleet technician, starting from the moment you arrived?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS3QYKEAgTGAI4AUIIdGhpbmtpbmcSDPLvBzLmm9loTdQu2RoMgkL3+LoVng6Qc9BBIjAT/7x+dw2d6yoj1uWNJp7HJl2hlcjBC7ph+HEtshGlbwSFGE/u5FxsFAdl8iDNISYq+gUkA+/VsUw3XweD069rBpYdRzPi7nju8KbSCdNzPlQBmq7dYflA1tOiExnfL6AhyPdufTnNGRZb0lEN2Sk90Y7pFbjkkQFh4YGA1Eox5fXSRDon7/x0DPWkKPA6I5bp6cwX2P0aZAGMiv5wXRC7zU9gfi2ZP+OQkrv1SLaR7k3UfAy8Z1yxZ1XWlTUqdQPUpfTM519pt9mVkgr4CC65zH98Ux+sSwfpKNV2VgRcTMn6hx42t/0F3tGzZP1KhXIjhMX/4yf4ZkLm4rf5KG9pXi0+nLjkin8BzOK1sJE+Oji3RYHshK5J5obPnJe6QUegFYFP/pndtF5zeIE5/na15CWM1SEjd2vL7tL7JFzuV0ISRPCiFX5YwS2cRzaGCQXTgG+Kff55VNdZBUbnzs5Ur5gxSzj12lKbUbfNSb3++DTy812PquggLhff0VSYfeXI+Uo+nv3q9JIiFeCW1kxSQD4VJTmh6eX2LA7hDcOGhYFq+9GWuRc23f+C0aQ/BK+SHxDsUMJkVaDmOqJlTj3f0WJ8Rn51bqPst5k+PEepG+C4O6H070//Ctwe7c998XNU8Qmsr7JlzplntQcOgbYyOqsdPy0BnCdXSZOXdSb4l9Ha7KJGikxvKOghckAH44bU3eT2AqhZz5RcC1MSnFBabSW8a4oPnbXnkL5XuuPRHQqbjyjezPwWZfbS2AXt/GTSEPi0C4ElG37I879xX4XpXQzi49adbbpD+hf3UkbH0JKNqnDATM4iftGrq7XDsDpJkgq/IThN2vdjUTAt9NJp00vOUb6E6o9P8dH1NtZSqarASZHbIzwJ3jtFgrA0h+zh9BVn6gHrTmfGUxeiFMhNffn4N6PYlkF3IQBopNOHSrbZwBuwwP6WjEa/Jl+xR+aOzUuPN/CvTrZZi1oBwEPv2tWL9V3yKY8R/BX8/45/V6S/Z9umHrQUdeaRmOQ3OcYD/qS6vzcjo4aw5VXCF6/iEGPwjnxtQ1cBsLZhZIr/FmbjwiOenHNLGuscYusYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "No problem, let's start smaller. What is the first thing you usually do when you start your shift?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSugcKEAgTGAI4AUIIdGhpbmtpbmcSDNHkDyV2YtP+LvoLvhoMve1H5gLWMrBIOkvrIjCMCf+1t7XL6UW/c6OzihCpdnp/ErGnhJzWYExdqKqlFAv3ea2KVp5Xw31hm+AzjTEq1wZKn910pLPOT92hIsRodx84ptq9aNNWBCDp7bv/ETirxR4fB5VwkFsMXs3zyNaOScM9DgR3qr4cEV2I3J5hPhaWPLFV4NNwYMBCj5ohzr0L/hc1lPVzlgFntelMDCwpzEQaZnQG2XaUL8Ap9bLDdwOCFursRBSm1GXjZ2kYdcFZTQ6+0vdFKMzn+ll0e6yPpzwOSDv5+J1xAXotzG9qgL3JaM5MoyhhSOuWd6lU7ptrzqfsEwciaOzaLLGun3g9A90Xa07aOI3KAkwEcSfJQiBu7j379LaynUHdo89DxoaPl9ARIs+6a2jXiq7+GeIQpI02fiRHHFMFO0OKqkDQo5hwl/FEnbOzo42pzlRyuZ3p4xsBqphGyEVRvEMI2trI0U/s+U/hYqbr6p5ZAeF8q5NXO7INmo9tmX6lvI/iF6+q22tTW3im3ToAStTHu2pCuWTAM3wnDpfNVwiJWbF/qJg2M2zrd7TIwHT715bJoriEYwayqTNRyYAAqUB9DWpkxITGTmt3Bsa7gjmGjWEKYFHAz5xXGVljSe4HuqYBHG+1Se74FKJbQixzPvOOmlYyQbdexZNjVvhMF/UotONNSF8y0LX0ASkxVddVqaOiNBAKn1FQ0p5sfBbzWmhtgg1JB2aUTQCdZSF4EWQ+4qduad/dKBSAhi3E4yD+68ZdFa936o8Akva9e0Ahcc/ZY+imUDkf4CNU6IvBt5TYT16Heb8/qQxA8JtZq7NjeSDGPNqb+Ha/abz3HRyHrdAI0mW0Z38oPSN3tmgN25kGpoYvENaDs2tsic61jxz3jo6XAyedY10ejDDBehQ+DLEHig+z7mmiJC9vBcoi+ZsIRnWB7pVs+rIEt4xE59SccbyqCSeU57yj46kHU9bh7kVT3QE1sZ+CmXekrsjFXQfnPavCybzSUprH3RvNK1YFaFmjMIsUwFcUPPwfZ1NL7ljGI+YdjBKyjRNTEE7LRRs+aoT0eiiDjDsA3sf9WHdaT7WxkrUFD6DxETeBW7GrtfvSeOhrR7TvvZHpUJh+gKhI9v2knvGssacjKGxBh2s14TLhzjqt1nIvfHXSZ36giUi8DITdFKLGdBI8vB1DKz36CsETuP1CzRo1nbTlD8ItEqm9yY0SRza3eY/FY9QYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "That's fine. Think of the last drone you worked on. What was it, and what were you doing with it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSnwgKEAgTGAI4AUIIdGhpbmtpbmcSDO/XzGzjEqDI1jl4MRoM9HnCea+RC7+H1XNNIjAxXeNgc7BdZ68OauMzP09EvmKsjlpSYyKXCZb8CUzCb13w+C7REHLmEgRLeevygcEqvActnUjnLt5nk7a9sgWwi9W0/vec1MpwX5eb+1srLaeb7zo50ZQew0SII/1WOc3b78YkotnUNHq+ghAP8eV0Dz3wxL/NiCJmG9Qg3eMmumBzvOwGbhhvFwxe801EXe4pwJfRYVoPxwunW8QECg/DnlP4a0B6wzIjOAGWjQWr6u/UWCacOVuYlEPHAjl0FsEmSHi2Ngo0GzpZetCoYuCo/2JUnpiAeBRIuGAm5iBIoI7SQQ7rxeNbfTVY//H4wwkwx9CqeubJolxpEhlMp9rIApi3ak39F+hU2J60bitdQRF5NJhZ/c+5jXvvqzdE7UPrAHOoSP1p7x3HYjehh12Xn+c9tB1hZbjTraXAJMvkUtiaknvps0uU92cCgtxpZdH7VeuARl6qNZ99JWfcMTILuoDA48VYgx/uyktYlXcNmzroFZF9z2dZMRllcCGK/3G0wN7hJVUdr8135/ljASUydBwfpqPkT47dOtjoF93nzdqqLYtyEHT0taAvAc2bZGy0EaU1cpK3M6RQ8fW7Mz3SkypPKTzPuntnTw49+DxhetUTheA6xiCplocYsQjwerD5lLN95HJxILaLXJGsNpvZMvrtUPMQTxUYzywRMJ/MbqL5JQjVwpBLNlmS63JMmHh7453oBGAiX4pN7oOLrl8QI3zz3IWXfWwn/vfyJnb/pOsiPjA55Cec9Bg2zG8nIAgl5R2DLhYofz47U6eHCRQSZ5//A8gGY/jhpQpDzqssN4mGyoiChrsukHMqlyZEMRwpNIoRh8aaqPQt1LdB3o0+t5dzLr2cCUq2+kSOoCNF3nBemYb8uKr8TsybQAeMzNFQ98ZU6EUGDamulpf7skqeENnX/Y7PAJDSVoIccrrbxlFsdvbGzRYmhwMkiqHmCJQq/5t+safh0T4dEHRPJibwyqqrTxHS7qoOWHJdVKBhsONLpRnfMAlrzsc+3hD7jAYilcqJtUUkYlL6xDIqbMPqcz7++om//27K80EoSK/gSUB4qy7syrUmHRIvKneWgcUxmzPn5pKS+wb+qsw3ZwHKqwMGbRHqy2j0nAJJgdDDs9tru+M5zEh4NQ7jjauFpgVsg0xLFmygcgT+R9HPOvcKrJ92icxF/FNRso3NsKaP2+ucOs9n5q7fPBlF9CkFHSiD6cqVUmOJZ/BgebsJ14kMT4+lfPRvu9+0u6udZs8vyc0mZRq6zqx5qvMK0yEl49HqnjXsCMkmCfGYkVgF9uyUqdv+m/FFGgXFmpGHlBZjLdvI4AtSGZavuKgMRduEiRgB"
+    },
+    {
+     "type": "text",
+     "text": "Is there something about these questions that makes them hard to answer? I'd like to understand, so please tell me in your own words."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS2gcKEAgTGAI4AUIIdGhpbmtpbmcSDMAbPDc9lIhPiT4oTBoMG8bRvFvP+2w2IC52IjAvS4blt6vhLe0xGEIlB264W/L7+Dzp/43i2i/V9ZpYIBQXR5gwbHQnNIDhAEv41SAq9wZXRNWk4mklzmu7QMkM2R78pcpEqULddTgMdamqqJCDrt1zR2t5IJtJweI7URN4umuniaPsNkQZ/yQbJjYlJS6nVWot0WPTOq6YVnt9ezuZui/oVwMXDquXKUBGAKvXVeaAho+SVJ/DXr6q9QwwyY0Qzw+BcXBIKCiaSZDc8LBhrm3xAx/LFmc8of9TLIYd37aQpZX5m8GxPfBQ55dDffKgBz1V1IQ5/3u6ghSteXY0ZSo7aKWHOfN8S/EwY5Ni9sSipqY62D7ysj/FuheJwmMz+5Rhk8Jj0ddV3blt03ZsQHjvYejtBZyh9DmDZL18ldLusWSXh67MNVTIOTJ2eyyQd6w1qO3i7KnG5QbwtvYpEVXCcfHcfCBb7aUZKzGo09PQy23j/sf3WqN9WHirySrfz7hV8xMzrZfckw0hWIndE1hBMVuAB+Zsyp3RLDhaFdKzXa7em95A1nNgPYUtgptrzfeGlTjTsSTOjvM15BrE0lVqkPUhiQzzNp6byXdrZY4S5+UtBIk+7/Ztj7Sfzf0WcoTI1vtY4sPpx+nBhoLu9zHX3DBkZhS6JNWzqKIcWDJQyGdGmR2hiQRGJxpjBVvyeJppGmwkrEkDpijnBxpGgLlJQ2o4EYR7kCA78/kbitP99gsVSyYtQIF8GIhkygQ/BO5bK84RIougZNcaxqOqp275aj+1BWrDHWQ6ujwEIHU3Vx2Ke397qBeIkd6/MB9gdfZUdfFFsieCxUWkickE9ntLIEVUNeK7R+OgmRtXdmrXGakXvNR3JTcxpMABJK0UHVAC6E9C/zu3+L4e9JNoOloa3A8GNmBXzZvb2MFj8XR2+jTkC5eG5vq5+8kI/t1OspIOrGpbE/1VITyF6y4/0dvEcSQPiLw1pXub9g5rFvt2+mv/jpWZgBW4OOCSuohYvxesjD1GBr16VkZxJKkYpibBjdJ3xP3GMq5YMe/E2wz8ITJTkW4unSvNoH0zBsRLTX4a3Jn21DjijFVm+tsdQsupt/JQxUpQF0SJW0bORrlVQko9myCw++PRFumoV2l6ToyRtBmF3jayD5k5+whX5n4lOulkHcRlUyw98L7aLUDG2LrdAAH0yQV20dokTZeHtv8zO0fHXZ4Bo/M1Zfrs3kIMNaobp+7FqXYEfWHz9wsAH2/0/cH5TJ3Z3kzjH5oYxMprtNs3YxgB"
+    },
+    {
+     "type": "text",
+     "text": "Let's try it another way. If a friend asked what you do for a living, what would you tell them?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep drones and charging equipment in working order. I add new drones to the fleet, retire old ones, set up charging pads at my company's sites, take drones out of service for repairs and put them back, and send drones to charge."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Of all those things, which one took up most of your time this past week, and what did it involve?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSggcKEAgTGAI4AUIIdGhpbmtpbmcSDD2ycnoHmxwDmi1EOxoMRYsBjvGqHdS9H3jiIjBas4KLRNfglSkjnV2TABsjUr7gggl4/zViGm3JnCkSkxRJzh3lxNSh8taU3WEP3cIqnwZGYQVGpCNpJXVto0YF0tlRtc/RHOZgXAsm4HqUUm52ALApjGPjO0jT2GJ4BhNTWF5lV/ZvU3B+RJ1siFCDSkAVSPuN5AvQ7ruyzNmwwJ6YGiDP7volFr14BTY+1/MqIX4Q0nvQ4AWakbOuVFmAR4ENrayJsbolNJb2yaXKK0NvA/I4t6lFRn7lgHBoefUVNALARjH0eB+Baa2/hX83UOcIO47tDBZOupxtX0njJb/wyLjF0Sjxkc6g15oZaoD8XqdxtNBEF75y2H1TP4yq7X0bPPHq9MvcRYRJKHyIYO85QQcXl+lH45LcEW6NjrBnnhOPrqVZoB9+nGSEzCe+4jr//Efgtfqrmt6HqIgLBZJTUS0DBhxIgXeTNP9KAC9Qp+KZEYPx0beu3hMyYc6HQljf6qLPlaTOkga0Ia0k6tWNRbRb9uGhv8ZXu/PCk5qEXbCQ9AmjGB+HeBjmJZtxPphpbUWtE7lYzVmEOMTZkKeNLdOLN6I9s0YVQTIJwbq5n+ry54syt6C7Lql6JhprZ9yRncWOHEM1MlOECQUSvAH+7kTeiSvOUMHVvgDMAdZ18sIjpKr5JP1ogkFx/L5ZyDmRFupxeJTnVsvzPAU8HuCHYNGQPyNHG6lLklJeHHkHE3Bq6su+W9mDoACvmno5ulJg+TiBl8IIV1EIXhdAPofKBVwtHATDRk5rBwTnM7Qx/PYlUZC1fZIEPNZPmmrztgOXcP8Dw0dqG2V/jdsqZ/dnj5nX/zfGXiX2Ruw1h5/5sq0ef3ATtlVBUZ6ZN+ubLKs/fj78m7kcbZ0dMYHa0dxiZ59tyJWYT8lbjyD4luzgRTQ+8oeqoy9R1KRN3yDfE4xT5UrxK/E6iDqZTezinie2veH/WKG2Hqcx5fWN/ItUIU0GYe0oAGdgOF/tYgx4V3aeq+LUuBfGUOmtAHN0SdWMEnZWvE5exJ0wDPZDf5kPNnKvvIqMdGEJwyYISqCRhdoIyRpaEmyAETBIGdZiQHWKLUXqglZ4+iNAguN5o4BSmM21X2BKar6ZuSBl6NlJ6+iaJSS2rHsvj+aNYQHQ+Z1FGAE="
+    },
+    {
+     "type": "text",
+     "text": "Tell me about the last time you took a drone out of service for repair. What happened?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS5ggKEAgTGAI4AUIIdGhpbmtpbmcSDPiCmX17BrG4GQrnzBoMTZMTQhQifdsKGdwUIjDh4obiCie1diO0iMfRwH6xBVhSaeWV+sKoQn5Xk3udMTHyR+LahOAHiD13UbJkLVsqgwiYHgi1j/S1LgUveNxLERe3u7c9HDIhmgBdBPl1AN+u7Gvtmkjk4hKZa/+0vaxyeKFcgrHQU0DwuQy7VdpPfJVgS1zDfAxEojCYf/uZBt5nMd0XwIUVC9Ju2R+5JhHU9ZLOjcsAxJid4sGZh2djrY2e0vZBIvxrBSgDT915hbSbxBVvSgUCCVp3PP+plZ74JKtic+kSxVEHStRDkPe5CWw7dQjO1LSk2TaSZaNIUgOEaQktMj7QkhkoXccUSBWZ3JU0PwT+TmLe3Aw4ohm7qwrNqi7AJBWUXvR3Yn/Cm5oZ7GgnPEX+dbLSb3D/QFVN9JgXmPCkw9r93tbNdyYT87MsJbcjAfjHQINRzK6iuZZTksm1ak630OkVvw61B1QN4I1WrguqwS3QOqHa4NVdIideehN12im5OiRcNPfhXOAxjbDig/BieshNv/Rx63yNOP352yUIwHw7On+fK4Hio0TBSU0cNVDBYBQtCn5LX4D0x/DJ3hvZcMjyNnzpICh6cIhvgTbJzllHshmSKorDfZEBbfn6QjnU48eQq/LBn80aYqOa3vbQC9IETLSaAv2hhouVtQzFHF0oSDeCoj8sCpasoo+/bc9ob6Nc5+v3eVa8SXG8ovraSrfUZHRbxjlej9GwJoI+eZISii9ZNjQYh3TsSWqOvdCbHMY4zZVria8b+vMtyDGizqxKDOC1kebJCYOJkt6xmN9gFybv+TWvCQ79rOnzyk5sJTq/x0z5XqfLxc1re6OTADrF/YvzFyu9+gMEcuHA+0LvcDdESmK1XV9vafC73CoQMCNYqVN6W55iX02wh/0e0WRLJNFtMFMmKlGj/L6zjaAdqLyFlKzoVpd2hwEdoUcCDUfAiqcphX5wtz4cuPtxOw7xuu/a9sRHm2uFjF9w9uSDqI2jCT5WnHAoFF/RbWWTUbPcQu1AZ9jj8RjTvMpUyZ5F51BO6s9TJ3L4p9HqxRs9JjfuSI1jwZt7Yzzp6zsx4iPDstDHMWQKTj2FVwvBJi1hGCOHLBTl54TXqk41Nzippv5BWTTthcX9S5UDoIU36CS5WAhFfOAwUPAkbzG0P6w53KKB8qBSqpyI4+RJhSXKR7eht0cSTBdMHqqX69tqwC/0pc91a/mwQTE2n5xH24z6ozdZNPsYFLvXMY6Scm4RmpFbdbpOhpwLaNuShjLUBNzh6E6g+Osb3QIYO6gekYstuZ4pzakizdpC2RDJ9Pek9DS3bIK90DieaIQNKGCWcXKXSIZipSQ5tZhdydpjdqHyiRxUulxbYL9IXqsxrRG1KrFxWHisKyRpLV4gwJoXZWf7LBAKxSDAJ9vIl6Eyr/oPL1vgybHsVVfd6jxFvwwD2kPLMdPkuaCckDXdGAE="
+    },
+    {
+     "type": "text",
+     "text": "When a drone needs to come out of service, how do you usually find out about it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQStQcKEAgTGAI4AUIIdGhpbmtpbmcSDJ4Xy2KWsWiyqYuaNRoMIhgDAVT5ZwGfdjTsIjAQFUBog0YphJvMJMiL7+9FzqyzQrCoxaESXn5/CxDPa0fjYKUZgQJ01GU7+wX0b0Iq0gZOu3WKd2OlGFB7Js0mumyuyDW/X2bQBBArgesLO4dVaAsTvBDNuyRjk+3X4XN1+bnJ8hTdckWqWGpjPaL8jEZTGcP7+ltjpEmIM9SHZFggnVaFXLt3pH6wdjpsiKfJ7Jk9OCE9BKN1GC1fe5C+XikrDf6Wp7mrJaqscM+IkBsfJ9U41wzjoZDZSA9uvpSqE6U8Gcdc3AFMGEJF7XayAXzPfP9EA3sI1ofmHGLsag3jUqGouY4hkbdq8nVi031Clhn2nnQeAmlIioJbceMcdBsyxvlp4a8BL1FryAntM3IhA1j4OmdqjtAIMg9n35ltrTghCx1Fp2wYnCyiAciwQdLBIXuoTTz5Ax8YC0jAaWgxJt5h/1uU8+6LhhfGD2LPnPckr+w0L1w2PQM6UUecrps96yl6vzhDB1kXwvQYfcMdiMUX4RR72e3ifP+OEwg4KQV16OA0SGJ9MjONsvZHN+LLV/EGzPTI3OzJ8/oZD/+wpG2u/XA+rcA8qkDKhzxbD3R8GMtvGtIehScX6IwKmJrkx3debapz+NIkzRYLpD1VdmJuIZ8sfxjmbGf1u9cWs1d4qzi2uC8n6zqdkbTP2D9hS9IN3iNaCx5vT/qP6GhpCgzkODA8Vgal8R0jXc0VmsLXKTKjRP/NueMlSvzs98amYyMOsHdmTcTyTjhnuZmqGuFU81iipHRJ7ML86ZBgheVSgCG/ACcFlRuuYPDCbpb2pyPcyWK7EBx23fzZgDkuwxL76LV2OtHLe/g1JQMjD2ZpGMfX1iRPJHacz5mAGmqOZ9tjKYP3nNYhBa3VhlzHQ86896nXmsVHReptYtx8ttgyCUqWKAaMiPfJuaxIjdSVtJfyvh0cGUxFMtxKhw2uDq3vAPgvi6EBp4YAsPli3JkrXQobltTswJy9p+6uyBxqfenFNnqQdS9S85ZmLX4mLh9NWXZOA8AlLrb3WfH4L5OnIz4JbCVV6sYzhHvxpeAZKMt6l9HFdqI7W2Z49Yk8iJwvoLBmtLObk02zKG/OmUt5sc6Fiz44AFh/24o4xUZaju/wIuTMSGCKZMPglMnqjPpSVdfh0u6gAPdHDh+Wqm0TidcOG36nfdIG+gnGEggLIMOY82QThE0SqerIBJR5x+NtGAE="
+    },
+    {
+     "type": "text",
+     "text": "Who do you talk to most during a working day?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS0ggKEAgTGAI4AUIIdGhpbmtpbmcSDCX5QBQpYKF4LHlLaRoMrbvZG+LdEdKm6CEWIjCkWf42UsN9eadgYsXS8gAM2wKxwWrAb+bBV8nMIHhySyztr+jbgsfBO9FKkosZqFYq7we5P0PFxDltXeImcjl/HhwLiZDFGuyIy6GRNdHvhNnwXdlyK7tppI2gBYdQjLD88D5Uq8i68WXRjVW6g8YY6+0cKLS5Sr9NYYKywPF/0mwgqCnxh4B7nDnTgTsW6BEadvB3c7a3s1pYhXLxawMO9iXmQ/+Fnxpk/bzt1oLaJ1M/bU0UHhZpsJ2DUdC1ho3eEDrpDFKBIIj8HO1Xw0NIx6g2ZkTKCZ4SrGWCXc1JVVFU88hZLN6y0premkrF+d5phtl0dd7le14R8J7Z8sD0AQC3c5H0V4E+pt4h37jWtcX44aG7d3EqO0PWzhB4p+ySd0IsObPXWOgqrhXMLJmuSXTrKNmUNJRGwYymPCXvqx7mXGAnhm7jqchKE36a81tUz/llwKnEPkWSLL3n/d9C0dlNOJ2A6K8K2Mnb9lx4faVhS3UO2HA5hUeaYlSROyhHBJ30dX7xY8ry8sYnE56EB9xou9MVe67lz9sArirzJcsl90jvQqjzyD+tl6BI2aK8k4yppZJHzT0lOnq+oGP3I8aKtazuvoM+PyMGTPyAluwUTZE01t7qADkx9YAfRRQOjDNZi1NPLM6j++KtsKj/nnOY5H7N6R1KbRE2rMRelmoA/8O3lTwPvxwJKvgZVxu5thiriu3l+tGfFbsIaoBV/A1OI28kTa9XbnHNiddtJQaKsyzFfCO17QHjZY8l6Ky7npQCKfSiQQefNkdGbaJxq9WpTHdQRAqYCPIZt7wpQ+sKBnH1A8xxvlx6G9CukmC1fPYG6gskEMRNgixfNCsD1ZtxLVYkWaj8Rr2/JLI/8ryFyFHYSVEeHAYyWg/Ystuc5xgcaz+sV6T/mnGBP003/IMgdHRzumClM6vK90BW/7vQRJ5SdHH4F9rtlrDDaY1a0iSB/QKKfG5uT075wpfAQpze8zDJXqpCuGZaj3TCYg9pqC3oeGiQuoGT/ZaLgcP+twc7MIw6+vxPjzrehOMnEbdxQhirCu85cd6WaaJSKrTYDIDDgUK94w9uicDazmvrymEqvASGAaBBwkcnqKqCtP6Rtm6HYiN/pDJslr5q/Ldff/UZiwTsP2aIlRqV6e9II7TZWYGkoNZ/GjtcxrRpcIHmdisXkDF4qsCSoXA9lFm4cmfGJybHIAU98z/VIACM6NNbcxxYm/vl0g62iPLstu+NlQUZZRyHLdhBfcu+zsUabJAPzLQbokfOTwue9RLiJhPkImAIYmBhH4A5KeHnehVge7qIzw0Rp4VnwBs2VOInAyAI9UtGWsC0LhYh8Io/QxIV2Sr4+aeVe0MYkwaoys7DHYyUXxQ7kt7kccqjmTP3TD9iKR+k0sPjpwina747QhgB"
+    },
+    {
+     "type": "text",
+     "text": "Think about a day in the last few months when your work went badly. What happened?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSuwkKEAgTGAI4AUIIdGhpbmtpbmcSDDy3jbc1Ea39BdLGEhoMApaQ9NMPXJfCHfUXIjAcV6+Dl28acX8g45dQsIOQGmqYUiND9FGcoh/a/3rxVnMZg9DrfMYSq9vzbPrDeQYq2AgMTQMYcShozdc7LWfV/yvqPtOdmZ58g8jQUsCQu9bx13b9vk29sVlC7bf5I8f13spo1a6QxL0FPy95EVBYKfXcsuyv89fw+8E9lX5g8+qUrGYJ7eJWqW7C9hoDtBrswQkf4d9pNnhlDiDLWUJDZV9sIfR96/mKTzlG61g+gj5GVWVm8RczfP+FXGUp9zk0TGVuBKIE6D5C27UEcWlS3QVz2EBvE/wjCehCpPJ1mkANmpzKJTbphciBPT24ZEcMq//eAwTkifFpZ4kG9ZiFB617ju80Dw1W6ZBRpKNLZzsaIWJJluAbmSxOjAOB6DKqQIECzBLSIYQuGcWWdYEPP/MtAV321FjJNLRQ3b/qWfMQJyrGEvl5VjwYsqQujh56Bip/wTjJU7NMlk3Grxt29/5A8V2R9iPjAdm+DKqCYM2M5RDYZLSryXy+FVFuv5RrSF1IaO0s11ZqXLNlDXgZ10k2ofA77c3vZq9APeNgq1cjNl7QNHsktd/GTmVwrJj0eRT3E4xVhd7SuKwk4dA0kx3DbcanCr/zK6scQzY5uQEov0c6N24mYxhOIDAXD72DOQ518ye+K4+/t6X8+Ib8s2rEPDLpMfUFHtOwGchJXTZbkMrlEcFnYj1zJo2Lo/pzce0zUlotFZN+ucEsDyI7ZXpvbWBerbRVV4LNtn9X1z1MB0q3tMz49jbrCvjpbnN38/9f/OrAg1j+OxIhHQ5i+PwPBjnsULF6KzMnZNKkQOhl4Mq/0e5jfpkTlX8rrO0d8ldDNvIWai+lp8SNTQlHLbV7X45Be/e0EOPkXdSNalSC9UP3eVV5SN8pXtC0pAV8GFxJiNkhC8pdH4bFa3UOOZQtToy72ne3Xccr3Ia2r6J7MD0mRkJW2cJaFrTFp8lYonz8cKJ4FWkQhYMr+r4zBV1Wx3J+pyx5kn4o5gA4vw0WtYBKw0yZJJt9EQQowsHrmApnYCiNhF9YeKczmyRqmjI18j2QUb5JXXMmr6nX01hJOAWQR5LtzPWfa1W0hNfJZn8IUg5pKRW1K0bAfnvGdwJw8OeTQJ+lsaiQWvdcfn7lFPMGr8/m74gcjQz1ZcKhSOHsTjOuwUP1mYTCR5rBCItgkIvnaCOiUaEUX0b5KRAP6NM+0eYaA/YDA5VToYaxAINHPBFOAofcgMAqw6HGx3D1HTcQA0xnhuFSZaWTDrfYgJWwDaYJp4+HWZuq0jYE0OPKXPLbZPU5EKYiNT1qLTS8ZQPJUbTTqim9++3HPg0ws6CLda/RGWPhpaYtT2xu1DKL+wPNYhuRbqdKRw3OgSyRsfbmWSFoyRte7MGYAM59DoMf1/ggCwYTB1VFjy36sosyCuDwPLMuOB1IAmSOvoMDx4m/bv8f2G625zCmoH1QDTO7/xaNFHNHz2YEjq+lUnl+OH+Oe8W3pU17dtnT1/MkMoNl444rHyoCV41Nds8TCdzet6+y083WVhpeE4CsfFnj31YC9dg0aBgB"
+    },
+    {
+     "type": "text",
+     "text": "You mentioned setting up charging pads at your company's sites. Tell me about the last one you set up."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSwggKEAgTGAI4AUIIdGhpbmtpbmcSDO0kaL4oSTIMqD8LERoMmdQJLBmLNPN+uNRbIjBnEzNmUOXseMfYclN8sbbuwtkdOx9oIAkfJzrHLA6W2D3mREhO56i3l8SkSr+kIRkq3wdwTxqG1DF2GRbolAK9i+MCjey9tZRyoY8EK28wqS67p2CDDOVfyHS9QUEq/WHSWHB/H8tmoqjKe12fZmV/gwA0waGLUQ2PJF1AYAMQu3IvjM9x4TditFfseA+ncmuzF44Ss5AjbWWzBpmwoB6eRWfPgToC6IzCDrT0hAhj5gqdEkDkN8A/mIQb0VVEr1UD+P6nkQYeM9Z7BaNq85ypqQ31ElpxdkF3OezhgkKLz8zoqt1h00EH/5bubiLiUyT8LzSkG95h9UbcRTpNhfx7KQz3Xy6cj3WltxZw2aMw7RwCE52uRV+AOTTTTLx6iixZrURANCfQx7wrl4aCPe0yR+t/cdmMbRxDF0zVPKGU9dzgn9nDbXS3F1+xOUE8jzz8lL95pJLwMhPHrZitUF++8ffhLcqZJj+KSIYsp8ZCUbTjLaH7+Kun+4xzTM9Qebz+hBnbdEBj/QSVqlhriysWJ1LXfMtRYAWj33OZGSA8/heTIiADV3SeBi0kiZfVqNc5uH3EPgehFs8dKc1SzAsqVrWIEpjAgMUmMskLdPIKSfNHfa5+HOIWU4jMiMlfFzbTbYeuXenrGSXvS5ZyJ/ggsaCmTi8aFqdWkP3xtL3SIP4j9Aad3DxKJ4CDSN41VQK3/lN2RfY95Sd1Udsao8lmjKh1/X4b0uhYC8CTzBSDEzoipgvEPo3z/UKmxzmSBszsU5RdF5rOerSXdii+om+DMjLAYtPZ3pgKYofc/H2v7zb2RHa+nqufrvroue1TkYbC1q6JtqQHyy6uAM0ZjNoqxQjk5ovgvlBrvuSqz8nQdZ2HEZHMd43Kz98tutn6hyPqScGiBorPwChSzeSvuCTwk9S9vrzQzlmk9zE3EmLiopki2A+uG3wB1+sMVNLfSqdazujsmIj50fxTrHAIRgfpE43lUzpwb3ZQqIRaHQjwe8BgfhY3XIKs90nGvLSRVYUcvYYoO8mjAjHfPmv8sqMS0mD0/4A0Xh/WcvmbXAZyWh+M89zoL21qk65IKDyWbjrKJ2U0hyb0xLy9gfYe+1nJ6drwAyc/YaxflQDKwcZjg+IQ5ejmeKx8tMdsPdhqijwTGpkcy41zbyEN1dzUBhTOrwbKzS4NoZyVb+wIApv9tspzX3fG6O2my6wiwJwaFzeE0B49zvnHUvHZ5CsPFjCj00Ic+ckylLo/rcnRDgvS7SIKieeHfiKjqokEGmNgdmjbM0yJJtRDuuR+qn1klUE358xiKHRWW2YFG5zFPgB6n4IqfTJjklyuWgUhNojzkYWLOk9v4A3jq0Zhjfz8LQrZ8KXJU48Z2IFWmyuOKkUofVsSGAE="
+    },
+    {
+     "type": "text",
+     "text": "How long have you been doing this work?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

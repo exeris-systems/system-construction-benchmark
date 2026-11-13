@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "I worry about conditions in the field when drones sometimes restart in flight after a software fault and carry on. The service runs on a single server that is updated and restarted during working hours while drones are flying, and it occasionally crashes. Nobody watches every drone at every moment, and one person may be responsible for hundreds.",
+      "thoughtSignature": "EmAKXgFpFH0TynzLJ66BZ/W6Z3wzyrOsQOdlWTrie05D/EEVHj4ESSmTQvTqkaP4B0fi5pknHO9TF/QgesHEUC6XeT5iiRL6SVk5jlRw6vFocNoJDNvpmo7uWXJ1K9/SD9g="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2416,
+  "candidatesTokenCount": 63,
+  "totalTokenCount": 2479,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2416
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "12H3apG0NJuL7M8P-ZPQqAU"
+}

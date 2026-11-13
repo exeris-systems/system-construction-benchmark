@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "I worry about the service running on a single server, being updated and restarted during working hours while drones are flying, and occasionally crashing. However, the companies accept a few minutes of interruption.",
+      "thoughtSignature": "EmAKXgFpFH0TPQjtKHa2ScY1LZgC4ZBs3RRhwmbZ0HIc/WnnF3PO2LJZtDh5OK3B5DksAX34y6c+ABBYj3SR0YlNo7iA3DsS/5YCASZvVCNyrtO3A9b777alqflz0NP6R2g="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2000,
+  "candidatesTokenCount": 38,
+  "totalTokenCount": 2038,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2000
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "b2L3arqQD6ffnsEPoIfGuQI"
+}
