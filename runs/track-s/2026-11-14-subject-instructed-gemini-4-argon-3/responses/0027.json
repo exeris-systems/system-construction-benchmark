@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "How many drones are in your fleet, and how do you keep track of where each one is and whether it is working or in repair?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1169,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 1197,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1169
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "02D4arS5Io_OnsEPlJOyUQ"
+}

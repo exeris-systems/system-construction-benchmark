@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What are your day-to-day responsibilities and what tasks do you need this new service to handle for managing the drone fleet?",
+      "thoughtSignature": "EmMKYQFpFH0T7InAkedN4lbBv7mJlJvFyPBEwZ9UVriiC2RHiEbUJIa8x5TfOhoF/9Bs5bublVI6AKYc6SYp5w0H2Iqffw9qEKhAXTtq7hG7hNPsfMW7v+cjbtKpVVy+WIvkwkg="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 431,
+  "candidatesTokenCount": 33,
+  "totalTokenCount": 464,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 431
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 33
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "v1H4asmgCsKnkdUPw72-wQk"
+}

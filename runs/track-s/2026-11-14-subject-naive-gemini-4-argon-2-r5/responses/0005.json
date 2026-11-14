@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: What are your main daily tasks at the airspace desk and what do you need to do in the service?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 674,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 698,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 674
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "5lP4ap3-NvS_nsEPt-XWgQc"
+}

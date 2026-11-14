@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nWe have covered all topics required by the prompt (including asking about all the required points and extracting every single fact the simulated user persona has in its knowledge base). Let's end the interview.END OF INTERVIEW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1914,
+  "candidatesTokenCount": 47,
+  "totalTokenCount": 1961,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1914
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 47
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "pFr4asewE6erxN8PyezfaQ"
+}

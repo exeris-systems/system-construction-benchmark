@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you tell me more about the sites and what it means for a drone to have a home site?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1306,
+  "candidatesTokenCount": 21,
+  "totalTokenCount": 1327,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1306
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 21
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "v1b4aqrzLJb6vdIP3oXe8Qs"
+}

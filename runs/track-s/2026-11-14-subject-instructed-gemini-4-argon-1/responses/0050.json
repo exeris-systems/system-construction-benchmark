@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nLet's check the required topics:\n- an ordinary working day, from start to end (asked)\n- the worst day of the last few months, and what made it bad (asked)\n- what they check by hand today because they do not trust it\n- what they are afraid a new service would do wrong\n- what they need to know right after something has gone wrong\n- who they hand work to, and who hands work to them (asked)\n\nLet's ask what they check by hand before signing off a flight.\n[/-Thinking-]What do you currently check by hand before you sign off a flight because you don't trust it to be right otherwise?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1131,
+  "candidatesTokenCount": 147,
+  "totalTokenCount": 1278,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1131
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 147
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "CFf4aoHrMODPvdIPlpqooQM"
+}

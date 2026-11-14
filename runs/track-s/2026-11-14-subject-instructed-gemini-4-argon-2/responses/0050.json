@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What things do you check by hand today before signing off or running a flight because you don't trust the current information or tools?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1648,
+  "candidatesTokenCount": 27,
+  "totalTokenCount": 1675,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1648
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 27
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "q134aoOHFKLmxN8Pk9u4qQs"
+}

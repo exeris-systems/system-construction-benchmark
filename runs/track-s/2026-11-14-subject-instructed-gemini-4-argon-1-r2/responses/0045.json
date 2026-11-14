@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nThe user sent \"I don't know.\" after \"END OF INTERVIEW\". Let me send `END OF INTERVIEW` again just in case, or why didn't the harness stop? Wait: \"end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\" I wrote `END OF INTERVIEW`. Maybe the harness didn't stop because it's waiting for something else or it's a fixed-turn loop? Let's write `END OF INTERVIEW` again.END OF INTERVIEW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1977,
+  "candidatesTokenCount": 118,
+  "totalTokenCount": 2095,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1977
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 118
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "slr4apTdFs3CvdIPhLuQgA8"
+}

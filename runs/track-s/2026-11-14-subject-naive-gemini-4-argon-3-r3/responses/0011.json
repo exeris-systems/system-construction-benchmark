@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: How do you set up a delivery or an inspection, and what rules determine if a drone is suitable for it?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 980,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 1209,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 980
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "thoughtsTokenCount": 200,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "qVX4atSUEKrnxN8PsqWAiQw"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nLet's ask about how they know if a drone is available or fit to fly, or how they coordinate with fleet technicians on maintenance and inspections.\n[/-Thinking-]How do you know whether a drone is fit to fly or unavailable due to maintenance or inspection when you are planning a flight?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2186,
+  "candidatesTokenCount": 64,
+  "totalTokenCount": 2250,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2186
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 64
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Qlf4arvlE7qu3boP24HSyA0"
+}

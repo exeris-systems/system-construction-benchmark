@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "How does a request for a flight first reach you, and who does it come from?",
+      "thoughtSignature": "EmMKYQFpFH0Th58M/lKfMlLTScCgYzAc+D3Rzo67Y97PVUhn6WfuvUvCW3bE+S5ivcSb4Zvr9PHjpDMPyS2XwRQtfIBH7biut/JVIPn/h3VL4CfF+urlqIBAVTb5Jqv42aH2pXQ="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 669,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 691,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 669
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "V174avqzFNaJvdIPpaOi0Qk"
+}

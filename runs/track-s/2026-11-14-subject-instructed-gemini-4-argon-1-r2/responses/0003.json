@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you arrive in the morning, what is the very first thing you do or look at?",
+      "thoughtSignature": "EmQKYgFpFH0TrnhlOf6kGNVi3SZsjlCTgcq/odD2I6cOXAYcs/dWC9lR3fMpFbIrtMIcyYcPl3ObXGQWK94EztELMFZNl800f0jq4oBmS478fjdMd3WeIeWiH9ITokIIgiBWM89p"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 575,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 598,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 575
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "1Fn4aoncDL-X28oPp67kwQc"
+}

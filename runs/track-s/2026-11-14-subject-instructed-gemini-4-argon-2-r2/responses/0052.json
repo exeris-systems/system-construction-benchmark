@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "You mentioned reports from drones arriving late, out of order, or more than once through relay stations—what problems does that cause for you when you are watching a flight?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1365,
+  "candidatesTokenCount": 34,
+  "totalTokenCount": 1399,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1365
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 34
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "rl74aqLZK_nqkdUPx_2uMQ"
+}

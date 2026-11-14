@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you send a drone to charge, how do you decide which charging pad to send it to, and what happens if a pad is already in use or out of order?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1255,
+  "candidatesTokenCount": 35,
+  "totalTokenCount": 1290,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1255
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 35
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "uVb4atP4HsKnkdUPw72-wQk"
+}

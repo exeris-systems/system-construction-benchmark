@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "```yaml\n- id: DR-01\n  requirement: >\n    The service must isolate each operating company's data so that a company's\n    fleet, jobs, sites, charging pads, and operational problems are visible and\n    accessible only to that company and never exposed to competing companies.\n- id: DR-02\n  requirement: >\n    The service must prevent airspace desk personnel from viewing or accessing\n    any individual operating company's private operations, fleet, jobs, sites,\n    or problems.\n- id: DR-03\n  requirement: >\n    The service must allow fleet technicians to register new drones into their\n    company's fleet (supporting fleets of several hundred drones per company)\n    and record each drone's manufacturer, model, payload capacity, flight range\n    on a full battery, installed sensors, charging connector type, and home site.\n- id: DR-04\n  requirement: >\n    The service must allow fleet technicians to retire old drones from their\n    company's fleet so that retired drones can no longer be assigned to flights\n    or operations.\n- id: DR-05\n  requirement: >\n    The service must allow fleet technicians to take a drone out of service for\n    repairs and servicing, and to return the drone to active service when\n    repairs are complete.\n- id: DR-06\n  requirement: >\n    The service must allow fleet technicians to register and set up charging\n    pads at their company's sites (supporting several dozen charging pads per\n    company), including specifying the charging connector type for each pad.\n- id: DR-07\n  requirement: >\n    The service must allow fleet technicians to assign a drone to a charging\n    pad to charge only if the charging pad belongs to the same company and has\n    the exact same charging connector type as the drone, because connector\n    types are not interchangeable and companies never lend pads to other\n    companies.\n- id: DR-08\n  requirement: >\n    The service must allow dispatchers to plan flights by manually selecting\n    the specific drone and the flight path (corridors) for the flight, and the\n    service must never automatically select or assign a drone or a flight path\n    on behalf of a dispatcher.\n- id: DR-09\n  requirement: >\n    The service must allow a dispatcher to sign off a planned flight before it\n    departs, and allow a dispatcher to call off a flight when needed.\n- id: DR-10\n  requirement: >\n    The service must handle concurrent flight planning by multiple dispatchers\n    within the same company so that popular drones and busy sites or resources\n    cannot be conflictingly double-booked when flights are planned and signed\n    off.\n- id: DR-11\n  requirement: >\n    The service must process incoming drone telemetry and flight reports in a\n    way that tolerates patchy radio coverage and mid-flight drone software\n    restarts—specifically handling reports that arrive late, arrive out of\n    chronological order, arrive multiple times (duplicates), or are missing—without\n    corrupting the tracked state of the flight or drone.\n- id: DR-12\n  requirement: >\n    The service must track actual reported battery levels during flight rather\n    than relying solely on planned battery consumption, accounting for faster\n    battery drain caused by cold or wind.\n- id: DR-13\n  requirement: >\n    The service must allow the airspace desk to maintain a shared airspace\n    picture visible to all customer companies, consisting of the network of\n    flight corridors between sites, the zones that group those corridors, and\n    airspace closures announced by the authorities.\n- id: DR-14\n  requirement: >\n    The service must allow the airspace desk to enter new airspace closures and\n    amend existing closures announced by the authorities, including closures\n    that take effect immediately while drones from one or more companies are\n    already in the air.\n- id: DR-15\n  requirement: >\n    When an airspace closure is entered or amended, the service must immediately\n    identify affected planned and in-flight operations so that dispatchers are\n    alerted when their active or planned flights are impacted by the closure.\n- id: DR-16\n  requirement: >\n    When the airspace desk enters or amends an airspace closure, the service\n    must provide the airspace desk with an aggregated measure of how much\n    disruption the closure caused across all customer companies without\n    revealing any individual company's identity or private operational details.\n- id: DR-17\n  requirement: >\n    The service must persist flight, fleet, and airspace state durably so that\n    server updates, restarts during working hours, or unexpected server crashes\n    do not lose or corrupt the state of active flights in the air, planned\n    flights, fleet records, or airspace closures.\n```",
+      "thoughtSignature": "EusCCugCAWkUfRPkIZaBNVxBmQvLtNfg5ewPTRa0JjvGXb714RpwTasDI5s3Q1HcfXB+DAoL6SokkIvP3lxR8ZVhAYOx1lN0Nhp8t1Xk3KJ9SMTLq+uGju9ZKXN3hHNO73Jqs4XEefCp8GVdYU1cZ7czGH5IGCllvG87+cvRimso0Z2Yn/erghosKMZtxtVlWsN4A+zjeDKtNA6k48KGQ4MzzvtkQrSKLLSmVOTtIdZESPzKG6ueBab6CmNmQ7aUODxB2TEbRJmQcoaHGOmhJpqidsvd5a+C9ZnGFyQzB5QLqAsdoVe/h4jTDBrvKX/s1lgEdpVEF+IuJ1rDGkKlt69fK/iGUg981gwNEJ399Ahol6oO6ut+JBBLoQ5YaRVtl2NnFKf4OXuD9DBPpFMI5+a6erTDQ4VP6pGBkIeuTQF4cHjzSHVz8mKpGEdf4v99DW2C0ipUhl/xcctao7UFNfYtrUiCTsq4p3lDlS4v"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 3792,
+  "candidatesTokenCount": 1069,
+  "totalTokenCount": 4911,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3792
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1069
+   }
+  ],
+  "thoughtsTokenCount": 50,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "X1z4avDWKYrqkdUP4Muo4Ao"
+}

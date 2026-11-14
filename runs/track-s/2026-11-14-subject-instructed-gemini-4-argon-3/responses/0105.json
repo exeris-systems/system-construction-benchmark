@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What are all the steps you take when you enter a closure?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 986,
+  "candidatesTokenCount": 13,
+  "totalTokenCount": 999,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 986
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 13
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "bGL4aofrMpCOvdIP9ue2mAw"
+}

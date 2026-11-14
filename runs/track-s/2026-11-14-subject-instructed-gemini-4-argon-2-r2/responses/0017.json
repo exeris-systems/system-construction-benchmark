@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you add a new drone to the fleet or set up a charging pad at a site, what information do you need to record about it?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 865,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 894,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 865
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "H174aoyGN-uKvdIP2MKV-Q8"
+}

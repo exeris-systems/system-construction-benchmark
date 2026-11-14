@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What was the worst day you've had at the airspace desk in the last few months, and what made it so bad?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1004,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 1030,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1004
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "p1n4apz_GJa1nsEP4430sAY"
+}

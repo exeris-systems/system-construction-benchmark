@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens right after you enter a closure—who needs to know about it, and what do you do next?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1015,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1038,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1015
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "cmL4asDfOOCJvdIPiYr6uAI"
+}

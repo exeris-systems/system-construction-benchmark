@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly along corridors between named sites, and sites have only so many places where drones can take off and land at the same time. As a dispatcher, I decide which drone flies and along which way, and I sign off a flight before it leaves, or I can call off a flight. Before and during a flight, things happen outside our control, such as the load being ready or not, the drone reaching the points of its job, and the drone arriving, which are reported by people and devices outside our company.",
+      "thoughtSignature": "EmAKXgFpFH0TSWwYbyt2qmW/BGz91OCgXR+LuXWhBKd84vthvqAWkuLXdjqwrt92WSVPvg1cn0/DIl8ALbiZ+iEaDP1C0ZNvrRHE2Ka5kM+yrnKP7ErIK3CU/MzQT9z27x0="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1834,
+  "candidatesTokenCount": 145,
+  "totalTokenCount": 1979,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1834
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "5lX4aq-0MtKwvdIPh8KFsQQ"
+}

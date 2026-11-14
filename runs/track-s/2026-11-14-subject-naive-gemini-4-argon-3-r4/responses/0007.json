@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Can you walk me through the lifecycle of a job and a flight from creation to completion, including what details a job has and what happens if a flight is called off or disrupted?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 791,
+  "candidatesTokenCount": 39,
+  "totalTokenCount": 830,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 791
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 39
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "4FX4aqicM4aHxs0P6K24sQg"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: What are your main daily tasks and how do you handle airspace information, restrictions, or conflicts?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 681,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 703,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 681
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "BVb4atzHDpa1nsEP4430sAY"
+}

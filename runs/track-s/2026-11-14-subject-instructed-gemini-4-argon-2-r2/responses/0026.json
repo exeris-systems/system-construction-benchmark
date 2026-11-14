@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you walk me through a typical shift for you, from the moment you sit down at your desk to when you hand over and leave?",
+      "thoughtSignature": "EmQKYgFpFH0TFP/36xpRb+iFBArRg9gSJcNvygEgBociJ9RmSXiUZ6AJLo0RD0u1OSrGOjVFMF497u9iRi1iee8zewq0YaLPl8evzuyVh266e+nZ9U+kyJz6dDzZkrMR3aKbOTw0"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 484,
+  "candidatesTokenCount": 32,
+  "totalTokenCount": 516,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 484
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 32
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "QV74apOQObGUkdUPr8aGgA0"
+}

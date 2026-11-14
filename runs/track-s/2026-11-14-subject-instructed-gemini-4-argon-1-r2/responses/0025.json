@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nLet's ask about the drones themselves: what makes one drone different from another in your fleet?What makes one drone different from another in your fleet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1237,
+  "candidatesTokenCount": 35,
+  "totalTokenCount": 1272,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1237
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 35
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Tlr4arifAu-Y3boPxv6b4Ac"
+}

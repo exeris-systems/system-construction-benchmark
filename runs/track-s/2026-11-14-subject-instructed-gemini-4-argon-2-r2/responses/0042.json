@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What makes you decide to call off a flight?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 994,
+  "candidatesTokenCount": 10,
+  "totalTokenCount": 1004,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 994
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 10
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "g174as-tPI2mnsEPoZzCsAc"
+}

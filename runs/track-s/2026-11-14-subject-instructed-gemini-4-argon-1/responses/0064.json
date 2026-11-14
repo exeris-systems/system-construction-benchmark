@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nLet's ask about the \"way\" (route/corridor/path) and airspace closures: how do they choose a way, and how do airspace closures work?\n[/-Thinking-]When you decide which way a drone flies, what makes a way valid or invalid, and how do airspace closures affect it?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2266,
+  "candidatesTokenCount": 69,
+  "totalTokenCount": 2335,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2266
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 69
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "SFf4avKFFK27xN8P556dwQU"
+}

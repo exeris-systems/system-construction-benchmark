@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "You mentioned earlier that reports from drones can arrive late, out of order, more than once, or not at all, and that drones sometimes restart in flight. How does that affect you while you are running flights?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1338,
+  "candidatesTokenCount": 43,
+  "totalTokenCount": 1381,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1338
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 43
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "slv4ao3RE4y4nsEPkb_b0A0"
+}

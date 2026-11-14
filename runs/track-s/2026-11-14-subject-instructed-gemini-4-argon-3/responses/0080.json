@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else in your notes that we haven't talked about yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2135,
+  "candidatesTokenCount": 16,
+  "totalTokenCount": 2151,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2135
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 16
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "x2H4aqGHN_GGxs0P-5XYmA0"
+}

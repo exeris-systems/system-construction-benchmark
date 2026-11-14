@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nLet's see if there is anything else the fleet technician knows about their role, dispatchers, airspace desk, flights, jobs, or anything else in their prompt!Is there anything else about your drones, sites, charging pads, or how your work connects with dispatchers that we haven't talked about yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1830,
+  "candidatesTokenCount": 68,
+  "totalTokenCount": 1898,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1830
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 68
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "nFr4aoXBGPyY3boPm4LAYQ"
+}

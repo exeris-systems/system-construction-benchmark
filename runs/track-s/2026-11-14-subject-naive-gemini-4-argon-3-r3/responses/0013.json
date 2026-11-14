@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Can you tell me how you plan a flight for a delivery or inspection, and what the service checks before you sign off?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1022,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 1050,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1022
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "tVX4auCbDc6Q3boPup_GwQk"
+}

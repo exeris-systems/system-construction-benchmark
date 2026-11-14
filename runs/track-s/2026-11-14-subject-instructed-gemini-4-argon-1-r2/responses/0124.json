@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What information defines a flight corridor or a zone in the shared picture?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1121,
+  "candidatesTokenCount": 14,
+  "totalTokenCount": 1135,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1121
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 14
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "S1z4atPLI7C6kdUP2OXgoAg"
+}

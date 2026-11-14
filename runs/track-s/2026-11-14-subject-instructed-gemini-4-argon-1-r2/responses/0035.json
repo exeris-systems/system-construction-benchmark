@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nCan a drone charge at any of your company's sites, or only its home site?Can a drone use a charging pad at any of your company's sites, or only at its home site?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1625,
+  "candidatesTokenCount": 46,
+  "totalTokenCount": 1671,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1625
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 46
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "elr4aoPtD8q0nsEPzrfyqAc"
+}

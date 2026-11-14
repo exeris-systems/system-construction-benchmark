@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything in your current work that you check by hand because you don't fully trust the existing tools or data?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 813,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 838,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 813
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 25
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Nl_4avSiEoC2nsEP6eCC-Ak"
+}

@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What details about a drone or a job do you need to see to tell if that drone can reach where the job starts?",
+      "thoughtSignature": "EmMKYQFpFH0TDBUpwFDa8FJn3XdMqqKpIfJ3QcJDGqVqQRZPocR4AasJPRlzeMWcmWlmJKdaOtIslmf1W10MH/OOCWp/D1wFresyRJhBw59C9zyCc1VEhh6CnvKZYyxuQarQuqM="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 871,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 900,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 871
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "dV74aqSsFMq0nsEPzrfyqAc"
+}

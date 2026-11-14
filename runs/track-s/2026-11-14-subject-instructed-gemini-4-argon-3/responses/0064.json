@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Earlier you mentioned that a flight is investigated after an accident, or that regulators ask for records—is there anything you or your company need to provide or look at after an incident or when a regulator asks?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1517,
+  "candidatesTokenCount": 41,
+  "totalTokenCount": 1558,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1517
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 41
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "bmH4apydCdji7M8PgqnYwQk"
+}

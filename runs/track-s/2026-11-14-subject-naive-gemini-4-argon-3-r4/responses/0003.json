@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What are your main daily responsibilities, and what information and actions do you need from this service to manage the drones and sites?",
+      "thoughtSignature": "EmQKYgFpFH0TTMm/REYuyBsvx2b4EqbTwshdVFFqHmFk1+z9j8WRIFkCpanjd7nRNcVwHV2wTWCXZE3MkP3CYoUQL49UMLDgvHdEnsuyLLtnKAcE2ZfnbAN8rIRatghY8XNYn3MN"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 567,
+  "candidatesTokenCount": 32,
+  "totalTokenCount": 599,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 567
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 32
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "1FX4apn9Jr7qkdUP_OiQ0Ag"
+}

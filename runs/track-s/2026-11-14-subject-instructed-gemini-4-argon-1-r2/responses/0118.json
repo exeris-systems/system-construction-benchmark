@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Who hands work to you, and who do you hand work off to?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1028,
+  "candidatesTokenCount": 15,
+  "totalTokenCount": 1043,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1028
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 15
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Nlz4ata8I_eCvdIPxuO14A8"
+}

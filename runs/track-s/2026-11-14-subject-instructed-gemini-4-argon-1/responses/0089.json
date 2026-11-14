@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "I work as a dispatcher planning and running flights for my drone operating company. I decide which drone flies along which way, and I sign off a flight before it leaves, bearing the legal responsibility without software ever choosing a drone or a way. Several dispatchers plan at the same time for busy sites and popular drones, while deliveries and inspections are carried out using diverse drone models with different ranges, capacities, sensors, and non-interchangeable charging connectors at home sites with limited takeoff and landing spots. Before and during flights, outside factors like load readiness, checkpoint reaching, and arrivals are reported through unreliable relay stations and patchy radio coverage, alongside drones restarting in flight, batteries draining faster in cold and wind, and sudden or amended airspace closures coming into force while multiple companies' drones are airborne."
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 7082,
+  "candidatesTokenCount": 158,
+  "totalTokenCount": 7240,
+  "cachedContentTokenCount": 3967,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 7082
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3967
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "iFj4atfuMoSe28oP7LGxuQg"
+}

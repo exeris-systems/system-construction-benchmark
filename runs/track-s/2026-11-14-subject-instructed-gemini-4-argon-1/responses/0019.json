@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What are you most afraid a new service or software tool might get wrong in your work?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1000,
+  "candidatesTokenCount": 18,
+  "totalTokenCount": 1018,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1000
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 18
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "kVb4atyQMq7yxN8P4Z2iwQM"
+}

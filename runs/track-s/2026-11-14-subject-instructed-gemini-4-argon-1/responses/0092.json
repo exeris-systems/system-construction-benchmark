@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\n[/-Thinking-]END OF INTERVIEW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 6310,
+  "candidatesTokenCount": 12,
+  "totalTokenCount": 6322,
+  "cachedContentTokenCount": 4187,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 6310
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 4187
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 12
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "DFn4aoaZCJbq7M8P1p24yAw"
+}

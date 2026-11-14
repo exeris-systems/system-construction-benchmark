@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else about keeping the shared picture of the airspace, flight corridors, zones, or closures that we haven't covered yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1283,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 1311,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1283
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "lmL4asbxNqfZvdIPu5PV0QM"
+}

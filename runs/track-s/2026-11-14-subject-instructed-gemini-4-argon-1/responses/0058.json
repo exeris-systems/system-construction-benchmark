@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nLet's ask about what happens after a flight or after an incident—like investigations, logs, or legal responsibility, or how they check drone readiness, sites, or routes.\n[/-Thinking-]Because you have legal responsibility for each flight, what information do you need to check about a drone, its battery, or the sites before you sign off?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1837,
+  "candidatesTokenCount": 76,
+  "totalTokenCount": 1913,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1837
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 76
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "J1f4atH-Hfi-vdIPyuyXkQM"
+}

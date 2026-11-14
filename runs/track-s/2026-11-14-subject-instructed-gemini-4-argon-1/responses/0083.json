@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "I decide which drone flies along which way, and I sign off a flight before it leaves. Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Before and during a flight, things happen outside our control, such as the load being ready or not, the drone reaching the points of its job, and the drone arriving, which are reported by people and devices outside the company."
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 5241,
+  "candidatesTokenCount": 104,
+  "totalTokenCount": 5345,
+  "cachedContentTokenCount": 1970,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 5241
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1970
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "8lf4arD9O-GIxN8P8Jed-A0"
+}

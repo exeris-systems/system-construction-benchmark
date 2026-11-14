@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nAha! Look at that:\n\"Before and during a flight, things happen outside our control, such as the load being ready or not, the drone reaching the points of its job, and the drone arriving, which are reported by people and devices outside the company.\"\nLet's follow up on that! What else is reported by people and devices outside the company, and how do those reports work?\n[/-Thinking-]Could you tell me more about those reports from people and devices outside the company—such as whether the load is ready, the drone reaching points, or the drone arriving—and what happens if there is a problem with them?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 4324,
+  "candidatesTokenCount": 136,
+  "totalTokenCount": 4460,
+  "cachedContentTokenCount": 2062,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 4324
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2062
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 136
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "81f4apOXO4fhnsEP8IOO4Qw"
+}

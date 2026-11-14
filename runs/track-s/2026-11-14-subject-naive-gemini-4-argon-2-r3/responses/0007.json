@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: How do you define sites, jobs, and flights, and what properties or rules govern them?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 720,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 742,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 720
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "X1P4at7SBeP8vdIP97qQsAg"
+}

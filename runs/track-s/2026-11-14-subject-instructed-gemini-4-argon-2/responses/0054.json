@@ -1,0 +1,39 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\n Let's ask about what they need to know right after something has gone wrong, and about audit/investigations or logs."
+     },
+     {
+      "text": "Right after something goes wrong with a flight or a drone, what do you need to know, and who else gets involved?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1873,
+  "candidatesTokenCount": 54,
+  "totalTokenCount": 1927,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1873
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 54
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "v134avqpOruXkdUP07T3yA0"
+}

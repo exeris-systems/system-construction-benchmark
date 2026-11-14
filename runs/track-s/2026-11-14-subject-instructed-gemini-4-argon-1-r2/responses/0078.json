@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "I worry that software might be built to choose a drone or a way for us to fly, which goes against our company policy that software never does that. I also worry about the service running on a single server that is updated and restarted during working hours while drones are flying, and that occasionally crashes.",
+      "thoughtSignature": "EmAKXgFpFH0T47ahsjiaWDk7G7Sbi6LdrWzSSNSwKPHgL/FIcpzcxNZIZi9yu34F/y0wVyeq9/wZ68SCBpQMBLflxha0ijKqjd4jvVN4mYT9d4Yjho+beIXGx4PHgn57BAY="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2197,
+  "candidatesTokenCount": 60,
+  "totalTokenCount": 2257,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2197
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "nVv4auG0Lq-PxN8P6bSxEQ"
+}

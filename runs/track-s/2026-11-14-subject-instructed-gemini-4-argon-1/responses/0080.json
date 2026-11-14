@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nLet's think what other aspects of the domain might be in the interviewee's knowledge base:\n- Weather conditions (wind, cold, rain, etc.)\n- Corridors (altitude, one-way/two-way, capacity, shared corridors across companies?)\nLet's ask about corridors and whether multiple companies or multiple drones fly in the same corridors at the same time.\n[/-Thinking-]Can drones from different companies or multiple drones from your own company use the same corridors or sites at the same time?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 3889,
+  "candidatesTokenCount": 111,
+  "totalTokenCount": 4000,
+  "cachedContentTokenCount": 1689,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3889
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1689
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 111
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "4Vf4at2uLbOSxN8Pn7uduQ8"
+}

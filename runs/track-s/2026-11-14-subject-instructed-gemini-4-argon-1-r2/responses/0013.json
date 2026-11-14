@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What do you check by hand today because you don't trust the current way it's tracked?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 782,
+  "candidatesTokenCount": 21,
+  "totalTokenCount": 803,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 782
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 21
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "EVr4avqrHsb8nsEPkOickAI"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens to your work and your flights in the air when the service crashes or restarts?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1391,
+  "candidatesTokenCount": 18,
+  "totalTokenCount": 1409,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1391
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 18
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "XWH4as6DBu-Y3boPxv6b4Ac"
+}

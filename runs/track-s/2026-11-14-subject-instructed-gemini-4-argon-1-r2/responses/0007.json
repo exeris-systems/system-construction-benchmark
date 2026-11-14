@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you tell me about who hands work over to you, and who you hand work over to during the day?",
+      "thoughtSignature": "EmMKYQFpFH0TE6XaqePSOxRGVui+5oFPna3pXv342m6nNzjn16Lc9TaChi7HQX8qNukipLq8CfBG1rfrBcGZpJJjmu8S2Dp3RBVBfAjQzwd4kfuZ0ZPXRP07UiVJAd9ckNM67N4="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 660,
+  "candidatesTokenCount": 27,
+  "totalTokenCount": 687,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 660
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 27
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "61n4ar-YGp2HnsEPpvKm6As"
+}

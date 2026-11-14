@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: What are your day-to-day responsibilities at the airspace desk and how do you interact with the authorities, dispatchers, and airspace information?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 725,
+  "candidatesTokenCount": 32,
+  "totalTokenCount": 757,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 725
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 32
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "zFH4aqD2N5X4xN8Pu6e2kAE"
+}

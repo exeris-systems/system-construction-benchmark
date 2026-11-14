@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else about your work as a dispatcher, the flights, the drones, or the airspace that we haven't covered yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1478,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 1506,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1478
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "zVv4avejE7qu3boP3IHSyA0"
+}

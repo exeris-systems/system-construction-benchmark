@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Do you interact with the dispatchers or fleet technicians at all in your work?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1059,
+  "candidatesTokenCount": 16,
+  "totalTokenCount": 1075,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1059
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 16
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "PFz4atWgPI_OnsEPlJOyUQ"
+}

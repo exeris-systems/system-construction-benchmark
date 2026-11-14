@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: What are your day-to-day responsibilities, and what do you need this new service to do for you?",
+      "thoughtSignature": "EmMKYQFpFH0THr527rKdWvHn0N6yyNAyXdi39oUOOKaQAXAYeQdDOH3E1Q46EC70MskScgrp/j9fD4AKQcZ6w9LqHLuNrVK32rgcTgc4+mZDTlsUFGkjlx/c9Hg3NLiu1OL+hgQ="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 685,
+  "candidatesTokenCount": 30,
+  "totalTokenCount": 715,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 685
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 30
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "tlP4aqOiEIvqkdUP2d2HqAk"
+}

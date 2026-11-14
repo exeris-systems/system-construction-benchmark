@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you walk me through a concrete example of one flight from the moment you find out it needs to happen until it finishes—who hands the work to you, and who do you hand things off to along the way?",
+      "thoughtSignature": "EmQKYgFpFH0TqTlYodqNG2wffm6yYLUmjS1EbtnlgzpHhcMGJIeoQcmlXjPU42GN67PKsJgvc1J7xd2tLXquiXVwlL/MfhUdTZuWgJyVga+wQIeGbWi9XZQAwRkkjxJkZNGEiRBc"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 615,
+  "candidatesTokenCount": 48,
+  "totalTokenCount": 663,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 615
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 48
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "XFv4au1jqufE3w-ypYCJDA"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nWhat about the fleet size? How many drones does a company have, and do companies ever share drones?How many drones do you typically manage, and do companies ever share or lend drones?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1687,
+  "candidatesTokenCount": 42,
+  "totalTokenCount": 1729,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1687
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 42
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "jVr4auegD-q9kdUPo-eviA0"
+}

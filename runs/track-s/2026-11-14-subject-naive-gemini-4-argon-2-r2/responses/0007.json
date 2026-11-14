@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What details do you need to record when adding a drone, retiring one, or taking it out of service for repairs and putting it back?",
+      "thoughtSignature": "EoICCv8BAWkUfRN3ZXkxZJYZjC08CAIu2EpbtVA6rRcBWbgkoTo04hsmNNoxcpp7aWmEOgraTl4Cq1xhoPzL0EL8hg6pevUvO4P+b6xcfY+PHFMq4BaFPgJUsQImH6tDzHflLN5ASIEReiEMYdNsBxmmM7DmzslhLtz8SgoepO0GQjzrq9sdboKDUsA96A4PIUdiIjn43Np1Fqp3JMBZvhBKO1WfKng/uGVgZJnYZv2tldIpG/41Mj2hwOu3x/1jgA5kQA4kJXMjHdkUfXiurVtrwPNGU/YGkdziH9q13t50cyBguTtc08wems6jZ9dZ/gXzehgfQlGfQoFE7nGJu6a522BA"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 801,
+  "candidatesTokenCount": 35,
+  "totalTokenCount": 869,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 801
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 35
+   }
+  ],
+  "thoughtsTokenCount": 33,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "m1L4aufsGNW4xN8P0fXdyAI"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: What are your main daily responsibilities, and what information and actions do you need from this service to manage the airspace?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 673,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 699,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 673
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "2lX4atv9IsWZkdUP1b_f2Ac"
+}

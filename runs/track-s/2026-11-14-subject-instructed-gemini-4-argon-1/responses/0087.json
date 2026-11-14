@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "I don't know."
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 5750,
+  "candidatesTokenCount": 6,
+  "totalTokenCount": 5756,
+  "cachedContentTokenCount": 1972,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 5750
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1972
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "XVj4auniBvq0kdUP7ZPU0Qo"
+}

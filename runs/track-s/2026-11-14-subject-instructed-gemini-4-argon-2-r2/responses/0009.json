@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you tell me about the worst day you've had in the last few months, and what made it so bad?",
+      "thoughtSignature": "EmQKYgFpFH0T1A6xELP09GyWqRINfdVLqNTjKBNDlGwjXIBP8Lu0Yv6OXpXC9St6YGF3eBrFRfzooRoKAfozDKG4SuZTQAxxq+dYGnDTptQ0tMQW+CuDf8R9yjMpVdmVSRh+OhuN"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 717,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 746,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 717
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "A174aq67HImJvdIPnaWr0AI"
+}

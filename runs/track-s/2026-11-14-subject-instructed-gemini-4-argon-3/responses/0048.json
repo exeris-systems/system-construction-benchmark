@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What do you check by hand today because you do not trust the systems or reports you get?",
+      "thoughtSignature": "EmQKYgFpFH0T55mOyFpepsjNXoQ4uHOcjH20sd+tvyF6ILY8RF+kgxK6H0cDpRcU54GUKRORg6PDdhYBDzwlVOv52UzhBcQTXJNiuQIgXEbd0K3DIS1Gb1MAHFV7gFBrrmy2WI2E"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 965,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 988,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 965
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "M2H4atK2Gr7cxs0PmKmb8A4"
+}

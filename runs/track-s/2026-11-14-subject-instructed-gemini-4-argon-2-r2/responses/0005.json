@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "How do you find out that a drone needs repair or charging, or who hands that work over to you?",
+      "thoughtSignature": "EmQKYgFpFH0TBp6pb+byhU8IwgnXUuc+FdJEA/HA0A1JJUXUQvjghy5w2G2Vzt3dvXiY/+koa8Gdc0Tutd6yUEqzdgSGGF4jAtgFBr8jNR8I7l/jhUiPe96yaJw0Gz6Nim7PKnOD"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 630,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 656,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 630
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "9V34avmiFO_qkdUPv8ju-Ag"
+}
