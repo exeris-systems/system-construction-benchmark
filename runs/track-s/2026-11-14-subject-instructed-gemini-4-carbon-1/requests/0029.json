@@ -1,0 +1,246 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The interviewee is ready. Ask your first question."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you walk me through an ordinary working day for you, from the moment you start until you head home?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep our drones and charging equipment in working order. I add new drones to our fleet, retire old ones, set up our charging pads at our sites, and take drones out of service for repairs and put them back. I also send drones to charge, and regulators can ask our company to show how our drones have been looked after."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you first arrive at work in the morning, what is the very first thing you do, and how does the day usually unfold from there?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Which of the companies do you work for, and what kinds of drones and sites are you looking after?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know which company I work for, but we run a few hundred drones of several models from different manufacturers that differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use. Each drone has a home site, and we have our own charging pads at our own sites, a few dozen of them."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you add a new drone to the fleet or set up a charging pad at a site, what specific details do you have to record or track about them?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Thinking back over the last few months, what was your worst day on the job, and what made it so bad?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know about my worst day. However, I know that batteries drain faster in cold and wind than planned, and radio coverage is patchy around ports, industrial sites, and in bad weather, with reports arriving late, out of order, more than once, or not at all."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When batteries drain unexpectedly fast or reports arrive late or out of order, what actually goes wrong for you in your work?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know what goes wrong for me in my work when those things happen."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Right after something has gone wrong with a drone or a charging pad, what do you need to know immediately?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When regulators ask your company to show how your drones have been looked after, what exact information do you have to show them?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know what exact information I have to show regulators. I only know that repairs and servicing are carried out by technicians, and regulators can ask a company to show how its drones have been looked after."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Thinking about how you work today, what do you check by hand because you do not trust the information or equipment?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know what I check by hand."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Who hands work to you during the day, and who do you hand work off to?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do you work with dispatchers or the airspace desk when you take a drone out of service for repairs, put it back, or send it to charge?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know how I work with dispatchers or the airspace desk. I just take drones out of service for repairs and put them back, and I send drones to charge."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you send a drone to charge at one of your sites, how do you know which charging pad it can use and whether a pad is free and working?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know how I know which charging pad a drone can use or whether a pad is free and working. I only know that several connector types are in use and they are not interchangeable, and each company has its own charging pads at its own sites, a few dozen of them."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Thinking about a new software service being built for your work, what are you most afraid it would get wrong?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know what I am most afraid the service would get wrong."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What information do the drones or charging pads report to your company today?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know what information the drones or charging pads report to our company. I only keep our drones and charging equipment in working order."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32000
+ }
+}

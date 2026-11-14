@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Can you give me a concrete example of a problem caused when drone reports arrive late, out of order, or not at all?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 928,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 954,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 928
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "M4j4as2RGI2mnsEPoZzCsAc"
+}

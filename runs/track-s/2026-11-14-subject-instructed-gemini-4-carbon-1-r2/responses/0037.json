@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What can you tell me about how charging works for the drones?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1329,
+  "candidatesTokenCount": 13,
+  "totalTokenCount": 1342,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1329
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 13
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "xIf4auOeBZ2HnsEPpvKm6As"
+}

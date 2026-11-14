@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What information do you record when adding a new drone to the fleet or retiring an old one?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1204,
+  "candidatesTokenCount": 19,
+  "totalTokenCount": 1223,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1204
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 19
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Xoj4ar_mCpfHkdUPgsWNqQk"
+}

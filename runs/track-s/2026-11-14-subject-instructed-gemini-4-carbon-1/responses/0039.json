@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else you know about the drones, the charging equipment, the jobs, or your work that we haven't touched on yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1860,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 1889,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1860
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Q4b4ap6vAqeK7M8Px63JyQk"
+}

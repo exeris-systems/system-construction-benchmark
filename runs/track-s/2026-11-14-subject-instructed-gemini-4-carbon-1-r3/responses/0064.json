@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What determines when you need to call off a flight, either before it leaves or while it is in the air?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1409,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1432,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1409
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "DYn4atzfJLnjkdUP66bXoAs"
+}

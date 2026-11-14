@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When a charging pad breaks or needs servicing, what do you do with it?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1409,
+  "candidatesTokenCount": 16,
+  "totalTokenCount": 1425,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1409
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 16
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "HIb4atLqHfOJvdIPlfy3gQ0"
+}

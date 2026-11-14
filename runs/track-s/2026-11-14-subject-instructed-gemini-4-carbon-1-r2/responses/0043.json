@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What can you tell me about problems, failures, or alerts in your fleet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1516,
+  "candidatesTokenCount": 16,
+  "totalTokenCount": 1532,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1516
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 16
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "3If4aq_ZA8qE28oP-7qgYA"
+}

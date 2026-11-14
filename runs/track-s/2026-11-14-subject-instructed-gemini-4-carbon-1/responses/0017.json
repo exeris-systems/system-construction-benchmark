@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Thinking about how you work today, what do you check by hand because you do not trust the information or equipment?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1050,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1073,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1050
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "84X4aojwMIuJkdUPns-_kAw"
+}

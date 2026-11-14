@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What do you check by hand today because you don't trust the automatic reports or current tools?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 970,
+  "candidatesTokenCount": 20,
+  "totalTokenCount": 990,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 970
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 20
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Ooj4avDVHIT9nsEP99_kgQY"
+}

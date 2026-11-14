@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What things do you check by hand today before or during a flight because you don't fully trust the current information?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 976,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 1000,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 976
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "0Yj4aqjsLLDm7M8Pyty08Q8"
+}

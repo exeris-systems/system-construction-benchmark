@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens when a drone finishes a flight at a site that isn't its home site?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1553,
+  "candidatesTokenCount": 19,
+  "totalTokenCount": 1572,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1553
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 19
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Ion4aoKmDLnjkdUP66bXoAs"
+}

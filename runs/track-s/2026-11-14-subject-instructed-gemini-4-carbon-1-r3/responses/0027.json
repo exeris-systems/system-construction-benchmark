@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you take a drone out of service for repairs or put it back in service, what happens to its schedule or how do dispatchers know?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1159,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 1188,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1159
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "WIj4asCKDMyCxs0P3vO6WQ"
+}

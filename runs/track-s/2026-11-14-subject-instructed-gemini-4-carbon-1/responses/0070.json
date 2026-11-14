@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nOkay, no explicit mention of \"fleet technicians\" or \"airspace desk\" by role name in their context!\nLet's ask about drone maintenance / readiness / faults, and airspace rules / closures!How do you know whether a drone is fit to fly and available when you are planning?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 3192,
+  "candidatesTokenCount": 62,
+  "totalTokenCount": 3254,
+  "cachedContentTokenCount": 983,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3192
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 983
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 62
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "04b4atLHNI2rxN8P5bi96AU"
+}

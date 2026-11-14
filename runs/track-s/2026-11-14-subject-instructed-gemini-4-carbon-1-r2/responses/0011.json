@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you add a new drone to the fleet or set up a charging pad, what information do you have to record or check?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 744,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 770,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 744
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "EIf4aq6zD--Y3boPxv6b4Ac"
+}

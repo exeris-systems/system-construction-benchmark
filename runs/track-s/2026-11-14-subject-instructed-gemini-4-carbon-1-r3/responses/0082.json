@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else about airspace closures, temporary restrictions, or how you monitor ongoing flights that you want to make sure isn't missed?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1829,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 1857,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1829
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "TYn4apSOM42O28oPr62joQs"
+}
