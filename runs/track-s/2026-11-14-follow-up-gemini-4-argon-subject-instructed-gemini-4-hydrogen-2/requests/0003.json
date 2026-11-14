@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I don't know.\nThe question: What was the very first thing you did when you sat down at your desk this morning?\n\nQ3\nThe answer just before it: I don't know.\nThe question: What kinds of things are you responsible for at the airspace desk?\n\nQ4\nThe answer just before it: I keep the shared picture of the airspace. This includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Can you walk me through the last time a closure was announced by the authorities—how did you find out about it, and what did you do with it?\n\nQ5\nThe answer just before it: I don't know.\nThe question: When you enter a closure today, how do you find out how much disruption it caused across customers?\n\nQ6\nThe answer just before it: I don't know.\nThe question: What was the worst day you had at work in the last few months, and what made it so bad?\n\nQ7\nThe answer just before it: I don't know.\nThe question: Who sends work or information to you at the airspace desk, and who do you pass things on to?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Is there anything in your work today that you double-check by hand because you do not completely trust it?\n\nQ9\nThe answer just before it: I don't know.\nThe question: If a new service were built for your work, what are you most afraid it might get wrong?\n\nQ10\nThe answer just before it: I don't know.\nThe question: Right after something goes wrong with the airspace picture or a closure, what is the first thing you need to know?\n\nQ11\nThe answer just before it: I don't know.\nThe question: You mentioned wanting to know how much disruption a closure caused across customers. What does \"disruption\" mean to you in that situation?\n\nQ12\nThe answer just before it: I don't know.\nThe question: You mentioned keeping track of the network of flight corridors between sites and the zones that group them—what kind of changes happen to those corridors or zones?\n\nQ13\nThe answer just before it: I don't know.\nThe question: Is there anything else about how the airspace picture affects the customer companies, or about your day-to-day work, that I haven't asked about?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}
