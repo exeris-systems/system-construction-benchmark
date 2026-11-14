@@ -1,0 +1,422 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The interviewee is ready. Ask your first question."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Can you walk me through an ordinary working day for you, from the moment you start until you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you first get to work in the morning, what is the very first thing you do?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What kind of work do you do on the drones?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep drones and charging equipment in working order, which includes adding new drones to the fleet, retiring old ones, and taking drones out of service for repairs and putting them back. I also set up charging pads at my company's sites and send drones to charge. Regulators can ask a company to show how its drones have been looked after."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do you find out that a drone needs repairs or needs to be sent to charge?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Who hands work to you, and who do you hand work to?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What was the worst day you had at work in the last few months, and what made it so bad?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What happens right after something goes wrong with a drone or a charging pad—what do you need to know?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Is there anything you check by hand today because you don't trust the information you get?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What are you afraid a new shared service might do wrong for your work?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When regulators ask to see how your drones have been looked after, what do you have to show them?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Regulators can ask a company to show how its drones have been looked after. I carry out repairs and servicing on the drones and charging equipment."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you take a drone out of service for repairs and later put it back, what happens step by step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you set up charging pads at your company's sites, what does that involve?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I set up charging pads at my company's sites. My company has a few dozen of them, and the pads are never lent to another company. I also keep charging equipment in working order."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you send a drone to charge, how does that work?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I send drones to charge, and I keep the charging equipment in working order. Each company has its own charging pads at its own sites, which are never lent to another company."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What happens when you add a new drone to the fleet or retire an old one?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I add new drones to the fleet and retire old ones, while keeping the drones and charging equipment in working order. My company runs a few hundred drones of several models from different manufacturers. These models differ in their carrying capacity, flight range on a full battery, carried sensors, and charging connector types, which are not interchangeable."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Why does it matter that charging connector types are not interchangeable when you set up pads or send a drone to charge?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "My company's drones use several connector types that are not interchangeable. Because of this, it matters for the charging equipment I keep in working order, the charging pads I set up at our sites, and the drones I send to charge."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Do dispatchers or anyone else at your company interact with the drones you look after, or let you know when a drone needs attention?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What do you have to keep track of when you repair or service a drone?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I carry out repairs and servicing on the drones and charging equipment to keep them in working order. Regulators can ask a company to show how its drones have been looked after."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Where do you set up the charging pads, and what do you need to know about a site when you set one up?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I set up charging pads at my company's sites. Each company has its own charging pads at its own sites, a few dozen of them, and pads are never lent to another company."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Why do a drone's carrying capacity, flight range, and carried sensors matter in your work?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "My company runs a few hundred drones of several models from different manufacturers. These models differ in how much they can carry, how far they can fly on a full battery, and which sensors they carry. I add these new drones to the fleet and retire old ones while keeping the drones and charging equipment in working order."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Is anything ever shared between your company and the other drone companies when it comes to drones, charging pads, or maintenance information?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Each company's fleet, jobs, sites, and problems are its own business, and pads are never lent to another company. The only thing companies share is airspace information, because that information comes from the authorities and is the same for everyone."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What happens when a charging pad stops working properly?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How many drones or charging pads do you look after, and how do you tell one drone from another?\n\nHow do you decide which charging pad to send a drone to?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep drones and charging equipment in working order for my company, which runs a few hundred drones of several models from different manufacturers. Each company has a few dozen charging pads at its own sites, and I set them up. I do not know how I tell one drone from another or how I decide which charging pad to send a drone to."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Does a charging pad work with all of your company's drone models, or only with certain ones?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "My company's drones use several connector types that are not interchangeable. Because of this, it matters which charging connector the drone uses and which equipment I keep in working order or set up."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What information do you look at about a drone or a charging pad when you send a drone to charge?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I send drones to charge, and I keep the drones and charging equipment in working order. Our drones use several connector types that are not interchangeable. I do not know what specific information I look at when I send a drone to charge."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you take a drone out of service for repairs, what changes about that drone?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I take drones out of service for repairs and put them back. I do not know what changes about the drone itself when I take it out of service."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32000
+ }
+}
