@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What details define a delivery job versus an inspection job, and what makes a drone eligible or capable of performing a specific job and flying a chosen route?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1151,
+  "candidatesTokenCount": 33,
+  "totalTokenCount": 1184,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1151
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 33
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "AEr4apmuIonRvdIPoNWlAQ"
+}

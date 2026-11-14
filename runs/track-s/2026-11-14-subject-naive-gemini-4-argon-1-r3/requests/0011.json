@@ -1,0 +1,102 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Begin."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: What are your main day-to-day responsibilities and what tasks do you need this new service to handle for you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "As a dispatcher, I am the licensed person responsible for planning and running our flights, which includes deciding which drone flies and along which way, and signing off a flight before it leaves. I can call off a flight, and while I have the legal responsibility to choose the drone and the way it flies—since our policy is that software never chooses a drone or a way for us—I do want help finding out which of our drones could get to where a job starts. Several of us plan at the same time, often for the same busy sites and the same popular drones."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK technician: What are your main day-to-day responsibilities and what tasks do you need this new service to handle for you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "As a fleet technician, I keep our drones and charging equipment in working order, which includes adding new drones, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs and put them back, and send drones to charge. Regulators can ask us to show how our drones have been looked after, and repairs and servicing are carried out by technicians like me."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK desk: What are your main day-to-day responsibilities and what tasks do you need this new service to handle for you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep the shared picture of the airspace by managing the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. I work for all customer companies and have no business looking into any one company's operations."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: Can you walk me through the lifecycle of a job and a flight, from creation to completion or cancellation?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Before and during a flight, things happen outside our control, such as the load being ready or not, the drone reaching the points of its job, and the drone arriving. Radio coverage is patchy around ports, industrial sites, and in bad weather, and reports from drones come through relay stations that can arrive late, out of order, more than once, or not at all. Drones sometimes restart in flight after a software fault and carry on, and batteries drain faster in cold and wind than planned."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: What information is needed to create a job, and are there other types of jobs besides deliveries and inspections (e.g., for hospital logistics or repositioning drones)? Also, how does a drone get to where a job starts if it isn't already there?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Software never chooses a drone or a way for us because it is the dispatcher's legal responsibility, but we do want help finding out which of our drones could get to where a job starts. Each drone has a home site, and each company has its own charging pads at its own sites, which are never lent to another company."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32000
+ }
+}

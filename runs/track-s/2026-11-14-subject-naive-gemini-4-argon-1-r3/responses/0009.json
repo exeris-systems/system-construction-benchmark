@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What information is needed to create a job, and are there other types of jobs besides deliveries and inspections (e.g., for hospital logistics or repositioning drones)? Also, how does a drone get to where a job starts if it isn't already there?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 980,
+  "candidatesTokenCount": 55,
+  "totalTokenCount": 1035,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 980
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 55
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "-Un4apK6Mbqu3boP-eDWoAw"
+}
