@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else about your drones, sites, charging equipment, or daily work that we haven't covered?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1674,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1697,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1674
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "j5L4aqHzDbOIvdIP5dya4Qw"
+}

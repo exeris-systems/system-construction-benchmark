@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you take a drone out of service for repairs or put it back in service, how do others in your company know whether it is available to fly?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1349,
+  "candidatesTokenCount": 31,
+  "totalTokenCount": 1380,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1349
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 31
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "D5T4apLTEazMnsEPutvLyAw"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Does a drone always charge at its home site, or can it charge at any of your company's sites?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1304,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1327,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1304
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Q5H4auTQMbLOvdIP-LvU0Qs"
+}

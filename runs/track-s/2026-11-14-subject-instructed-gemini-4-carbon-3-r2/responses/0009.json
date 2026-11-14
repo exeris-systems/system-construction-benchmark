@@ -1,0 +1,39 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nThe interviewee says \"I don't know\" to open/abstract questions about routines, so let's ask directly about who hands work to them and who they hand work to."
+     },
+     {
+      "text": "Who tells you when a drone needs repair or charging, and who do you let know once you've finished working on a drone or a charging pad?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 693,
+  "candidatesTokenCount": 72,
+  "totalTokenCount": 765,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 693
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 72
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "bJH4apDaONixnsEP9fGe2Qw"
+}

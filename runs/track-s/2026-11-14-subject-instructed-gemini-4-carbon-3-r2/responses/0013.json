@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nMaybe this simulated user only knows specific topics or responds to specific phrasings, or maybe they literally have limited persona knowledge! Let's test one of the core required topics directly: worst day.What was the worst day you've had on the job in the last few months, and what made it bad?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 864,
+  "candidatesTokenCount": 66,
+  "totalTokenCount": 930,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 864
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 66
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "eZH4aqHsJuCkkdUPoZX-iAI"
+}

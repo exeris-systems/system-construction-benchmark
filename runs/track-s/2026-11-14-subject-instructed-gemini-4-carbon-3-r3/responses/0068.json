@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nLet's rephrase or probe around signing off a flight! Earlier they said:\n\"I decide which drone flies and along which way, and I sign off a flight before it leaves.\"\nLet's ask what they check before signing off a flight!Before you sign off a flight to leave, what all do you check to make sure the drone, the route, and the sites are actually able to handle the job?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1627,
+  "candidatesTokenCount": 89,
+  "totalTokenCount": 1716,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1627
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 89
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "7JL4asvIFPeCvdIPxuO14A8"
+}

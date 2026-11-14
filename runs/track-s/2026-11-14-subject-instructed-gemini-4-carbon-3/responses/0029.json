@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What do you know about the sites where your charging pads are located?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1251,
+  "candidatesTokenCount": 14,
+  "totalTokenCount": 1265,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1251
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 14
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "PZH4arL4E8Do7M8P6KizsQw"
+}

@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nNow let's ask: \"Right after something goes wrong—whether with a flight, an incident, or an investigation—what do you need to know?\"Right after something has gone wrong on a flight—or later if there is an incident or dispute—what information do you need to have?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2768,
+  "candidatesTokenCount": 62,
+  "totalTokenCount": 2830,
+  "cachedContentTokenCount": 518,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2768
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 518
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 62
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "NpP4asHVHuOY3boPhrfIoQo"
+}

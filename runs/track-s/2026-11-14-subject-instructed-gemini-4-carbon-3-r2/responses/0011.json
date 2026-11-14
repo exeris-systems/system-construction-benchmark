@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nLet's see why the interviewee says \"I don't know\". Let's ask about a specific task they mentioned, e.g., taking drones out of service or adding new drones.When you add a new drone to the fleet or set up a charging pad, what information do you have to record or look up?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 779,
+  "candidatesTokenCount": 69,
+  "totalTokenCount": 848,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 779
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 69
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "c5H4av83ltLE3w_09b6YBg"
+}

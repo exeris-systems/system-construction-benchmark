@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nOkay, let's look at the required topics and ask directly in natural open questions to elicit everything in the knowledge base!\nLet's ask: \"What do you check by hand today because you don't trust the current tools or information?\"What do you check by hand today because you do not trust what you see in front of you?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1538,
+  "candidatesTokenCount": 73,
+  "totalTokenCount": 1611,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1538
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 73
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "5JL4av2EBKn_vdIPs-vF6As"
+}

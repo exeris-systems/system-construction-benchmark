@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Who hands work to you during the day, and who do you hand work off to?",
+      "thoughtSignature": "EmYKZAFpFH0TvVjUSyeJu5dgWi/MYOb9WZwx/mptmBrcUr4jL4+tsMye71EmgGzaWyRzDeK0duozyaHD00eAKHHWT6NRQhggLqUfse2RNJx3Mk7mpzSsYcLrYWeKixwTcjurdzpfhGE="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 722,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "gJP4avfRMd6vxN8PjfPlmQs"
+}
