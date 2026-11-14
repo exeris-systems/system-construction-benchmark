@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Can you tell me more about how you maintain the network of flight corridors between sites and the zones that group them?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 979,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1002,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 979
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "G474arnoNKeUxN8PhPnMmAM"
+}

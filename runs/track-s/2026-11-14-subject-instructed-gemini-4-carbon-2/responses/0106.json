@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "hthought\nNothing new left to uncover. Output `END OF INTERVIEW`.END OF INTERVIEW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2347,
+  "candidatesTokenCount": 20,
+  "totalTokenCount": 2367,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2347
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 20
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "nI34aqTJErC6kdUP5-XgoAg"
+}

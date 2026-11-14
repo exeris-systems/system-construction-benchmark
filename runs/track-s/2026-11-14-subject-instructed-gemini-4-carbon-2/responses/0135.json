@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "If each company's sites and jobs are private, how are the flight corridors between sites set up, and how is disruption across customers measured?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1131,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 1160,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1131
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Mo74au7DKeaBkdUPobu94Ac"
+}

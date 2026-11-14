@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Which kind of drone operating company do you work for, and what kind of sites do you operate?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1364,
+  "candidatesTokenCount": 20,
+  "totalTokenCount": 1384,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1364
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 20
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "dIz4au_2BpX4xN8Pu6e2kAE"
+}

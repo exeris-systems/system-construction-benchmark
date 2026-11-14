@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you tell me more about the jobs themselves—what information comes with a job when you start planning it?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1134,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 1156,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1134
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "84z4aoCkObqWvdIPnLO7oQ8"
+}

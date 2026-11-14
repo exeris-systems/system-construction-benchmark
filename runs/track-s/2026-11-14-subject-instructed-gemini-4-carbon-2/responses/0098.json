@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Can a drone stop along its way at an intermediate site to charge, or how does getting to where a job starts work when a drone is somewhere else?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1981,
+  "candidatesTokenCount": 31,
+  "totalTokenCount": 2012,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1981
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 31
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "fY34auz2Gpu0xN8Pj-bEoAM"
+}

@@ -1,0 +1,342 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a dispatcher. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The interviewee is ready. Ask your first question."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you walk me through an ordinary working day for you, from the moment you start until you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "That's fine—maybe we can start smaller: which company do you work for, and what is the very first thing you do when you sit down for a shift?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Who usually gives you your tasks or requests during the day, and who do you pass things on to?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Can you tell me about the worst day you've had at work over the last few months, and what made it so bad?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "My notes do not describe a worst day or how bad it was, but I do worry about the server crashing while drones are flying, especially since the platform company updates and restarts it during working hours and it occasionally crashes. I also worry about closures coming into force while drones of several companies are already in the air, and about closures being amended during the day."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Right after the server comes back up from a crash or a closure comes into force mid-flight, what do you need to find out first?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Thinking about airspace closures being amended during the day, could you give me a concrete example of how a closure changes and how that affects your flights?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "A closure can change when an area is widened or an end time moves, and this can happen while drones of several companies are already in the air."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Is there anything in your work today that you check by hand because you do not trust the system or the information you get?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Thinking about a new service being built for your work, what are you most afraid it would get wrong?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I am most afraid that software might choose a drone or a way for us, because our policy is that software never chooses a drone or a way for us. Choosing the drone and the way it flies is my legal responsibility as a dispatcher."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you walk me through how you choose a drone and the way it flies for a job today?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I want help finding out which of my drones could get to where a job starts. Then I decide which drone flies and along which way, and I sign off a flight before it leaves."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What determines whether one of your drones could get to where a job starts?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "A drone's model determines how much it can carry, how far it can fly on a full battery, which sensors it carries, and which charging connector it uses. Batteries also drain faster in cold and wind than planned."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Besides the drone's model and the weather, what else do you check about a specific drone or its location before signing off a flight?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you tell me more about the jobs themselves—what information comes with a job when you start planning it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly along corridors between named sites, and sites have only so many places where drones can take off and land at the same time."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do those limits on take-off and landing places—and charging connectors—affect how you plan a flight?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Sites have only so many places where drones can take off and land at the same time, and several dispatchers plan at the same time, often for the same busy sites and the same popular drones. Batteries and charging connectors also matter, since several connector types are in use and they are not interchangeable, and each company has its own charging pads at its own sites which are never lent to another company."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What happens when two dispatchers try to plan for the same popular drone or the same busy site at the same time?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What happens when a flight is in the air and something goes wrong—like a battery draining faster than planned or an airspace closure changing?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I can call off a flight, since I am the licensed person responsible for each flight and a dispatcher can call off a flight. Drones sometimes restart in flight after a software fault and carry on, and people and devices outside the company report whether the load is ready, whether the drone reaches the points of its job, and whether the drone arrives."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do you interact with the fleet technicians and the airspace desk in your work?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you tell me more about those reports from people and devices outside the company—how do they reach you, and what do you do with them?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Reports from drones come through relay stations, but radio coverage is patchy, so reports can arrive late, out of order, more than once, or not at all. People and devices outside the company report whether the load is ready, whether the drone reaches the points of its job, and whether the drone arrives."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When something goes wrong on a flight—or when reports arrive late, out of order, or not at all—what information do you or others look at afterwards?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do airspace rules or corridors affect the way you choose for a drone to fly?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The authorities define zones where flying is prohibited, and they announce planned closures with a start and end time, as well as sudden ones that apply at once. Drones fly along corridors between named sites, and a closure can come into force while drones of several companies are already in the air."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Are there any rules about who can see your company's flights, sites, or jobs, or what you can see of other companies?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32000
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else you do or deal with in your role that we have not talked about yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1599,
+  "candidatesTokenCount": 20,
+  "totalTokenCount": 1619,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1599
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 20
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "jIz4apOsCqfq7M8PvJvGmAU"
+}
