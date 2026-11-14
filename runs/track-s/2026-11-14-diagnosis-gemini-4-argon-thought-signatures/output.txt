@@ -1,0 +1,14 @@
+$ python3 -I diag_thought_signatures.py runs/track-s/2026-11-14-subject-naive-gemini-4-argon-1-r3 5
+A text-only   #1: MALFORMED_RESPONSE   'ASK dispatcher: When you look for drones that could get to where a job starts, how should '
+B signatures  #1: MALFORMED_RESPONSE   'ASK dispatcher: When you plan a flight for a job, how do you specify "the way" it flies (e'
+A text-only   #2: MALFORMED_RESPONSE   'ASK dispatcher: How do you plan a flight for a job? Specifically, how do corridors, sites,'
+B signatures  #2: MAX_TOKENS           'ASK dispatcher: How do you plan a flight\'s route ("the way it flies"), and how do flight c'
+A text-only   #3: STOP                 'ASK dispatcher: How do you want the system to help you find out which drones could get to '
+B signatures  #3: MALFORMED_RESPONSE   'ASK dispatcher: When you plan and sign off a flight, what exact steps do you take, what ch'
+A text-only   #4: MALFORMED_RESPONSE   'ASK dispatcher: How do you plan a flight\'s route ("the way it flies"), and how does a dron'
+B signatures  #4: STOP                 'ASK dispatcher: When you plan a flight for a job, what exact steps do you take in the serv'
+A text-only   #5: MALFORMED_RESPONSE   'ASK dispatcher: When you plan a flight for a job, how do routes/corridors work, how is a d'
+B signatures  #5: MALFORMED_RESPONSE   'ASK dispatcher: How do you plan and sign off a flight? What conditions must be checked bef'
+
+A text-only   {'MALFORMED_RESPONSE': 4, 'STOP': 1}
+B signatures  {'MALFORMED_RESPONSE': 3, 'MAX_TOKENS': 1, 'STOP': 1}

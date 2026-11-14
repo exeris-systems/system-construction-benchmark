@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What are your day-to-day responsibilities and what tasks do you need this new service to handle for you?",
+      "thoughtSignature": "EmMKYQFpFH0T9Q7goZ09eqsuysMyPq/jcJir8dSOXMzzKKSEzLTMqUVgtmWaToZm/E4Hfj39piST/lS7nmqmfL/+JE8o4rjFyomvXDl8pNPnI9iJ1C4G1OlnXH83hhI4rC97Kj4="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 431,
+  "candidatesTokenCount": 30,
+  "totalTokenCount": 461,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 431
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 30
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "iUn4auykCI2dkdUPjNnHsAo"
+}

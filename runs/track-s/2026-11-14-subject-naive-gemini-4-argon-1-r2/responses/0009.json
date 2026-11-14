@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What makes a drone ready to fly versus not ready, and how do charging and repairs work in your daily routine?",
+      "thoughtSignature": "EmMKYQFpFH0T6MYc67q70FUcMaxWa6GgKIMpfKpXhejZrWdKhgn7+Pu+5iyO2VcOIAkqlA+UCExnsYJWRLw2uRwH3fSC4w1qpfPoIvnb8usRmzj4cKOImQ1JJBs/lEOnxdKXIkc="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 813,
+  "candidatesTokenCount": 30,
+  "totalTokenCount": 843,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 813
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 30
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "vUn4avbQO5C5kdUP3Pi9kAU"
+}

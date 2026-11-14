@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What are your day-to-day responsibilities and what do you need the service to do for you?",
+      "thoughtSignature": "EmMKYQFpFH0To7Kx9vIDY0pHirPechJh+sPCeAnwO2yizGl0QwOhpge3kOd0Qj1bZyCu2wLza2N/vsnDsfLX8xWaiOBryFRLzVKae1oyofLEd6JrfT4h9HxvsgVmWXAUoGjaAho="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 549,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 577,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 549
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "C0j4auvcDIH_xN8P64KK6QU"
+}

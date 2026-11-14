@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Can you walk me through the lifecycle of a job and a flight, from creation to completion or cancellation?",
+      "thoughtSignature": "EvcBCvQBAWkUfRMj/d+JN4XIOuNlyYP53THkdOt3ir8H6pQQ3jCvbz5YoN2cG8QZSam+k3+9se5ibrrPymEILloiLmE3tboNUBBt6NxmntzJaOY5HFlGpSmfx5IXcDWo7f16CYhK6q96ANZOz7lIennBd1U30MyeTDztnNYJF12dSDKyBBuZrfJKhpCbGj9fokuI3U2So24Te3u5+xf+IgLYe5gWAMmpdZqAF+eHM1UiYUr31Vn63EETWAQNhxC0r9MRWMYic/tuOr7uVyiD0IyZwEmWepfhCF+hL9pMSFNv+KHf5zxgsB8Avl0BW1dmjnCB3h/1GeoDIg=="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 807,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 872,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 807
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "thoughtsTokenCount": 37,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "80n4av_iDJf4xN8P8bai0Q0"
+}
