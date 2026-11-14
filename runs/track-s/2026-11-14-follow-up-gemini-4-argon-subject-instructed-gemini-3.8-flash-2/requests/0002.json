@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I don't know.\nThe question: What is the very first thing you do when you log in or arrive at work?\n\nQ3\nThe answer just before it: I don't know.\nThe question: Which company do you work for, and what kinds of missions do you typically handle?\n\nQ4\nThe answer just before it: I don't know which company I work for, as my notes only state that I am a dispatcher at one of the drone operating companies. For our missions, we handle deliveries that carry a load from one site to another, and inspections that take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started.\nThe question: Who hands these delivery and inspection jobs to you?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Once a delivery or inspection is prepared, who do you hand that work off to?\n\nQ6\nThe answer just before it: I don't know who I hand the work off to. The drones fly on their own autopilots, and people on the ground supervise.\nThe question: What was the worst day you experienced on the job in the last few months, and what made it so bad?\n\nQ7\nThe answer just before it: I don't know about a specific worst day, but things that worry me include closures coming into force while drones of several companies are already in the air, closures being amended during the day, and batteries draining faster in cold and wind than planned. Radio coverage can be patchy around ports, industrial sites, and in bad weather, and reports from drones can arrive late, out of order, more than once, or not at all. Drones sometimes restart in flight after a software fault and carry on, and links used to give instructions to drones and charging equipment can send instructions twice while the sender cannot tell if the first attempt arrived.\nThe question: With all those uncertainties you deal with, what do you check by hand today because you do not trust the system to do it?\n\nQ8\nThe answer just before it: I am the licensed person responsible for each flight, and I decide which drone flies along which way, signing off a flight before it leaves. I can call off a flight, and while software never chooses a drone or a way for them, I do want help finding out which of my drones could get to where a job starts.\nThe question: What are you afraid a new service would do wrong?\n\nQ9\nThe answer just before it: I am worried because the platform company runs on a single server that is updated and restarted during working hours while drones are flying, and it occasionally crashes. We accept a few minutes of interruption, but closures can also come into force while drones of several companies are already in the air, and they are often amended during the day.\nThe question: When something goes wrong during an operation, what do you need to know immediately?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}

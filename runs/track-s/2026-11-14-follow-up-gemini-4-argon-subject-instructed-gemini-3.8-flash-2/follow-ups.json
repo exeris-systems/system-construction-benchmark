@@ -1,0 +1,191 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-14-subject-instructed-gemini-3.8-flash-2",
+  "mode": "subject-instructed",
+  "subject": {
+   "provider": "gemini",
+   "model": "gemini-3.8-flash",
+   "description": {
+    "name": "models/gemini-3.8-flash",
+    "version": "3.0",
+    "displayName": "Gemini 3.8 Flash",
+    "description": "Gemini 3.8 Flash",
+    "inputTokenLimit": 1048576,
+    "outputTokenLimit": 65536,
+    "supportedGenerationMethods": [
+     "generateContent",
+     "countTokens",
+     "createCachedContent",
+     "batchGenerateContent"
+    ],
+    "temperature": 1,
+    "topP": 0.95,
+    "topK": 64,
+    "maxTemperature": 2,
+    "thinking": true
+   }
+  }
+ },
+ "scored": false,
+ "roles": {
+  "technician": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I keep our drones and charging equipment in working order. My work includes adding new drones to the fleet, retiring old ones, setting up charging pads at our sites, and sending drones to charge. I also take drones out of service for repairs and put them back afterwards. Regulators can ask us to show how our drones have been looked after, and repairs and servicing are carried out by us technicians.",
+     "question": "When you arrive at work in the morning, what is the very first thing you do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "How do you find out what drones or equipment need your attention on any given day?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "Can you tell me about the worst day you've had at work in the last few months, and what happened?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "Who tells you that a drone needs repair, and who do you notify once it's fixed?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "What is something you currently check by hand because you don't trust an automated system or report to get it right?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "When a drone breaks down or something goes wrong with it, what information do you need immediately?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "What concerns or fears do you have about what a new software system might mess up in your work?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 0,
+   "of": 7
+  },
+  "dispatcher": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I don't know.",
+     "question": "What is the very first thing you do when you log in or arrive at work?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "Which company do you work for, and what kinds of missions do you typically handle?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know which company I work for, as my notes only state that I am a dispatcher at one of the drone operating companies. For our missions, we handle deliveries that carry a load from one site to another, and inspections that take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started.",
+     "question": "Who hands these delivery and inspection jobs to you?",
+     "follow_up": true
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "Once a delivery or inspection is prepared, who do you hand that work off to?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know who I hand the work off to. The drones fly on their own autopilots, and people on the ground supervise.",
+     "question": "What was the worst day you experienced on the job in the last few months, and what made it so bad?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know about a specific worst day, but things that worry me include closures coming into force while drones of several companies are already in the air, closures being amended during the day, and batteries draining faster in cold and wind than planned. Radio coverage can be patchy around ports, industrial sites, and in bad weather, and reports from drones can arrive late, out of order, more than once, or not at all. Drones sometimes restart in flight after a software fault and carry on, and links used to give instructions to drones and charging equipment can send instructions twice while the sender cannot tell if the first attempt arrived.",
+     "question": "With all those uncertainties you deal with, what do you check by hand today because you do not trust the system to do it?",
+     "follow_up": true
+    },
+    {
+     "id": "Q8",
+     "previous": "I am the licensed person responsible for each flight, and I decide which drone flies along which way, signing off a flight before it leaves. I can call off a flight, and while software never chooses a drone or a way for them, I do want help finding out which of my drones could get to where a job starts.",
+     "question": "What are you afraid a new service would do wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I am worried because the platform company runs on a single server that is updated and restarted during working hours while drones are flying, and it occasionally crashes. We accept a few minutes of interruption, but closures can also come into force while drones of several companies are already in the air, and they are often amended during the day.",
+     "question": "When something goes wrong during an operation, what do you need to know immediately?",
+     "follow_up": true
+    }
+   ],
+   "followUps": 3,
+   "of": 8
+  },
+  "desk": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I keep the shared picture of the airspace by managing the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. My work deals with planned closures with a start and end time, as well as sudden ones that apply at once, which are often amended during the day.",
+     "question": "What is the very first thing you do when you sit down at your desk to start your shift?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "Who usually hands work to you, and in what format does it reach you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "Think back to the worst day you've had at work over the last few months—what happened?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "Is there anything in your daily work that you currently check by hand because you don't trust the system or the data?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "What are you most afraid a new software service would get wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "When something goes wrong with a closure or in the airspace, what information do you need to know immediately?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "When a closure is entered, I want to know how much disruption it caused across customers. I also deal with closures that can come into force while drones of several companies are already in the air, and closures that are often amended during the day, such as when an area is widened or an end time moves.",
+     "question": "Once you determine the disruption a closure causes, who do you hand that information to?",
+     "follow_up": true
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know.",
+     "question": "When an authority suddenly amends a closure while drones are already in the air, what does that look like in practice?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 1,
+   "of": 8
+  }
+ },
+ "follow_up_ratio": 0.17391304347826086,
+ "followUps": 4,
+ "of": 23
+}
