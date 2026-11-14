@@ -603,7 +603,7 @@ Impact: `runs/track-s/2026-11-14-subject-naive-gemini-4-argon-1`, `-1-r2`, `-1-r
 
 ### D-63 — `claude-fable-5-2`, `gemini-4-hydrogen` and `gemini-4-carbon` join the script series
 
-D-55 took three Claude classes as script-series subjects, Haiku, Sonnet and Opus, and two Gemini models, `gemini-3.8-flash` and `gemini-4-argon`. Three subjects join them:
+D-55 took three Claude classes as script-series subjects, Haiku, Sonnet and Opus, and two Gemini models, `gemini-3.8-flash` and `gemini-4-argon`. This decision amends D-55 for the script series' subjects and matrix. Three subjects join them:
 
 - `claude-fable-5-2`, the Claude class above Opus, which D-55 left out. With it the series covers the top of the Claude line.
 - `gemini-4-hydrogen` and `gemini-4-carbon`, which the Gemini API first listed on 2026-11-13, after version 6 of the procedure was frozen on 2026-11-10. `gemini-4-hydrogen` takes the place of `gemini-3.8-flash` as the Gemini model the series runs from now on; the six runs of `gemini-3.8-flash` stay in the record and in the report.
@@ -612,4 +612,4 @@ They run on the instruments frozen at `us-procedure-v6`: the persona, the prompt
 
 The decision was taken on 2026-11-14, when the runs of the D-55 subjects were complete.
 
-Impact: the Track S report; `trackS/how-to-run-subjects.md` lists no subject and is unchanged.
+Impact: program plan §9.6 (the script series' matrix, 30 runs and 18 more, and the exclusion of `gemini-3.8-flash` from later runs); the Track S report; `trackS/how-to-run-subjects.md` lists no subject and is unchanged.

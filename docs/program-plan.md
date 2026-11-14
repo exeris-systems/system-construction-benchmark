@@ -904,7 +904,7 @@ The matrix is fixed here and in the preregistration, before any scored run; it i
 | Phase 6 | Haiku × Exeris × L3 × 3 | 3 | H3 |
 | Off-vendor series | Gemini Flash (Antigravity) × 3 full arms × L1 × 3 | 9 | separate table; no comparison with Claude runs |
 | Phase 7 | Changes 3, 4, 5 × 3 full arms × 3, Phase 4 model | 27 change sessions | H2, H4 |
-| Track S, script series | 5 subjects × 2 variants × 3 | 30 | Track S (D-48, D-55) |
+| Track S, script series | 5 subjects × 2 variants × 3, and 3 subjects added by D-63 × 2 variants × 3 | 30 + 18 | Track S (D-48, D-55, D-63) |
 | Track S, native series | 3 subjects in 2 harnesses × S-naive × 3 | 9 | Track S (D-48) |
 
 Total: 45 construction runs on Claude Code, 9 in the off-vendor series, and 27 change sessions. Track S runs through vendor APIs with fixed instruments; exhausted daily or monthly quota is an infrastructure error, as in §9.1.
@@ -921,6 +921,7 @@ Configurations not run in Campaign 1, each with its reason:
 | Temporal | §5A.6 |
 | `mistral-large-2512` as a Track S script-series subject | the account's key is refused it with HTTP 403 `tier_not_allowed`, and the account pays for the Gemini and Anthropic APIs only; `gemini-3.8-flash` and `gemini-4-argon` take its place (D-55) |
 | Gemini 3.5 Flash Lite as a Track S subject | no longer offered in the vendor's own agent harness, Antigravity, though still served by the Gemini API; a subject its vendor has begun withdrawing may disappear before the matrix is done or replicated (D-48) |
+| `gemini-3.8-flash` in Track S script-series runs after its six | `gemini-4-hydrogen`, first listed after version 6 of the procedure was frozen, takes its place; its six runs stay in the record and the report (D-63) |
 | S-instructed in the Track S native series | an instructed interview in an agent harness measures the harness's tool handling more than elicitation; the script series measures it (D-48) |
 
 Track S instrument, judge and host options considered and rejected are listed in D-48.
