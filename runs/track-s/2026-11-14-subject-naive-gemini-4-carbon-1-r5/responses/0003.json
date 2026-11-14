@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Walk me through your typical day maintaining and preparing the drone fleet—what tasks do you perform, and what do you need this new service to do for you?",
+      "thoughtSignature": "EmYKZAFpFH0TFqNFDpY53Lgm3tpM/F2YxnqCTgsuqWpzjgyxcusbpSMDwAoy+FcMxq2Bb1n8mOFG3a+s6KZsd+vRzabZnXOd3gHCcRpdOSGk7YFlDJ/hrDocLAxcdFCgdR5tW3KoS1k="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 562,
+  "candidatesTokenCount": 39,
+  "totalTokenCount": 601,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 562
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 39
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "doP4atmRB-bkxN8P-7S5kQw"
+}

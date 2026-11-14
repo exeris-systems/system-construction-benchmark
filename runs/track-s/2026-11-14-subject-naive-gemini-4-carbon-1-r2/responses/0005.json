@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Can you walk me through your day-to-day responsibilities and what you need this service to do for you?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 679,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 705,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 679
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "l4L4atndBtia28oPtc2A6As"
+}

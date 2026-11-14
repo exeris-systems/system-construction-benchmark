@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Walk me through your typical day and everything you need this new service to do for you from start to finish.",
+      "thoughtSignature": "EmYKZAFpFH0THFcB/+Zij7fjeqDUtEMOEsKa1n/8RB2PVI73esgmfUO5qlAougOiNOE1a1XFbSJ9SC0qXDf6+DWQmiQy7IDN1EVI9stbN09C6fhGCfB/LRTpOcLq6N4/ej+MySJbj1o="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 604,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 633,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 604
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "soL4aqLyFuaDxs0PtNryeA"
+}

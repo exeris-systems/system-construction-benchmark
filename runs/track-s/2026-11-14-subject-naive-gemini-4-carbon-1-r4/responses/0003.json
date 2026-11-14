@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Walk me through your typical day—what tasks, records, drone statuses, and interactions with dispatchers or others do you need this service to handle for you?",
+      "thoughtSignature": "EmYKZAFpFH0TM9wLMNrMgo7nsZfivXrqtUO1raO4lHjBFjt4lssidPxYe6vzis/UVrbbRbaXKKbwNmQXvZMwSgxHe749CssfcMjpxHeNNmjLLVM5RXrifwiCklnLsl8/vQe5eMzF04Q="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 609,
+  "candidatesTokenCount": 39,
+  "totalTokenCount": 648,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 609
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 39
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "MIP4arHMFpqikdUPh9jliQw"
+}
