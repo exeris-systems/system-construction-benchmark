@@ -600,3 +600,16 @@ A diagnosis outside the series replayed the failing request of the third attempt
 Each run of `gemini-4-argon` as a subject, in S-naive and in S-instructed, gets at most five attempts in all, in place of the procedure's unlimited reruns. Every failed attempt is kept. A completed attempt is the one in five, or fewer, that did not fail, so a score of this subject is selected on outcome: the report gives, next to every score of `gemini-4-argon`, the number of attempts of its run and how each failed, and does not compare that score with another subject's without them. A run with no completed attempt is reported as unobtainable, with no score. No run of any other subject had failed when this rule was set, and their runs keep the procedure's rule. The rule was set after `gemini-4-argon` failed, and is reported as such. Its role as a judge is unaffected: there each call is a single turn, and its calibration and judgements completed with natural stops.
 
 Impact: `runs/track-s/2026-11-14-subject-naive-gemini-4-argon-1`, `-1-r2`, `-1-r3`; `runs/track-s/2026-11-14-diagnosis-gemini-4-argon-thought-signatures`; the Track S report.
+
+### D-63 — `claude-fable-5-2`, `gemini-4-hydrogen` and `gemini-4-carbon` join the script series
+
+D-55 took three Claude classes as script-series subjects, Haiku, Sonnet and Opus, and two Gemini models, `gemini-3.8-flash` and `gemini-4-argon`. Three subjects join them:
+
+- `claude-fable-5-2`, the Claude class above Opus, which D-55 left out. With it the series covers the top of the Claude line.
+- `gemini-4-hydrogen` and `gemini-4-carbon`, which the Gemini API first listed on 2026-11-13, after version 6 of the procedure was frozen on 2026-11-10. `gemini-4-hydrogen` takes the place of `gemini-3.8-flash` as the Gemini model the series runs from now on; the six runs of `gemini-3.8-flash` stay in the record and in the report.
+
+They run on the instruments frozen at `us-procedure-v6`: the persona, the prompts, the reference, both judges and the follow-up classifier are unchanged. Each is a full subject: two variants of three runs each, judged as D-55 sets, `claude-fable-5-2` by `gemini-4-argon` with the unscored judgement of `claude-opus-5-5`, the two Gemini models the other way round, and compared with the other subjects as any subject is. The attempt cap of D-62 applies to every run of `gemini-4-hydrogen` and `gemini-4-carbon` from their first, so that it is not a rule set after either fails.
+
+The decision was taken on 2026-11-14, when the runs of the D-55 subjects were complete.
+
+Impact: the Track S report; `trackS/how-to-run-subjects.md` lists no subject and is unchanged.
