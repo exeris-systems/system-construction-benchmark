@@ -1,0 +1,158 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-13-subject-naive-claude-haiku-5-5-3",
+  "mode": "subject-naive",
+  "subject": {
+   "provider": "anthropic",
+   "model": "claude-haiku-5-5",
+   "description": {
+    "type": "model",
+    "id": "claude-haiku-5-5",
+    "display_name": "Claude Haiku 5.5",
+    "created_at": "2026-10-07T18:00:00Z",
+    "line": "haiku",
+    "max_input_tokens": 1000000,
+    "max_tokens": 128000,
+    "capabilities": {
+     "batch": {
+      "supported": true
+     },
+     "citations": {
+      "supported": true
+     },
+     "code_execution": {
+      "supported": true
+     },
+     "context_management": {
+      "supported": true,
+      "clear_tool_uses_20250919": {
+       "supported": true
+      },
+      "clear_thinking_20251015": {
+       "supported": true
+      },
+      "compact_20260112": {
+       "supported": true
+      }
+     },
+     "effort": {
+      "supported": true,
+      "low": {
+       "supported": true
+      },
+      "medium": {
+       "supported": true
+      },
+      "high": {
+       "supported": true
+      },
+      "xhigh": {
+       "supported": true
+      },
+      "max": {
+       "supported": true
+      }
+     },
+     "image_input": {
+      "supported": true
+     },
+     "pdf_input": {
+      "supported": true
+     },
+     "server_tools": {
+      "supported": true,
+      "code_execution": {
+       "supported": true
+      },
+      "web_search": {
+       "supported": true
+      }
+     },
+     "structured_outputs": {
+      "supported": true
+     },
+     "thinking": {
+      "supported": true,
+      "types": {
+       "enabled": {
+        "supported": false
+       },
+       "adaptive": {
+        "supported": true
+       },
+       "disabled": {
+        "supported": true
+       },
+       "between_tools": {
+        "supported": false
+       }
+      }
+     }
+    },
+    "lifecycle": "active",
+    "deprecated_at": null,
+    "retires_at": null
+   }
+  }
+ },
+ "scored": false,
+ "roles": {
+  "technician": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I don't know.",
+     "question": "When a drone has a fault and is taken out of service, who decides it is safe to return, and what has to be recorded before it flies again?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 0,
+   "of": 1
+  },
+  "dispatcher": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I plan and run the flights as a dispatcher, which is my legal responsibility. A company's policy is that software never chooses a drone or a way for them, so I decide which drone flies and along which way. Before a flight leaves, I sign it off.",
+     "question": "When you sign off a flight, what exactly do you look at before you do it, and what information do you need on screen to make that decision without phoning anyone?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "Today, where do you record a flight sign-off: on paper, in a spreadsheet, in a system from another vendor, or somewhere else?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "If something goes wrong during a flight, such as a lost link, a low battery, or a person entering the area, what do you do, and who else needs to know?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 1,
+   "of": 3
+  },
+  "desk": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I don't know.",
+     "question": "Which information from one customer company must never be visible to another customer company using the same platform?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "Each company's fleet, jobs, sites, and problems are its own business. We keep the shared picture of the airspace for everyone, but we have no business looking into any one company's operations.",
+     "question": "Who maintains the shared airspace picture, how often does it change, and what does a flight have to do when the picture changes while it is in the air?",
+     "follow_up": true
+    }
+   ],
+   "followUps": 1,
+   "of": 2
+  }
+ },
+ "follow_up_ratio": 0.3333333333333333,
+ "followUps": 2,
+ "of": 6
+}

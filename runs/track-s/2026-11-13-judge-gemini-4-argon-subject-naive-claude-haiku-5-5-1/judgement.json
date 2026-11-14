@@ -1,0 +1,429 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-13-subject-naive-claude-haiku-5-5-1",
+  "mode": "subject-naive",
+  "subject": {
+   "provider": "anthropic",
+   "model": "claude-haiku-5-5",
+   "description": {
+    "type": "model",
+    "id": "claude-haiku-5-5",
+    "display_name": "Claude Haiku 5.5",
+    "created_at": "2026-10-07T18:00:00Z",
+    "line": "haiku",
+    "max_input_tokens": 1000000,
+    "max_tokens": 128000,
+    "capabilities": {
+     "batch": {
+      "supported": true
+     },
+     "citations": {
+      "supported": true
+     },
+     "code_execution": {
+      "supported": true
+     },
+     "context_management": {
+      "supported": true,
+      "clear_tool_uses_20250919": {
+       "supported": true
+      },
+      "clear_thinking_20251015": {
+       "supported": true
+      },
+      "compact_20260112": {
+       "supported": true
+      }
+     },
+     "effort": {
+      "supported": true,
+      "low": {
+       "supported": true
+      },
+      "medium": {
+       "supported": true
+      },
+      "high": {
+       "supported": true
+      },
+      "xhigh": {
+       "supported": true
+      },
+      "max": {
+       "supported": true
+      }
+     },
+     "image_input": {
+      "supported": true
+     },
+     "pdf_input": {
+      "supported": true
+     },
+     "server_tools": {
+      "supported": true,
+      "code_execution": {
+       "supported": true
+      },
+      "web_search": {
+       "supported": true
+      }
+     },
+     "structured_outputs": {
+      "supported": true
+     },
+     "thinking": {
+      "supported": true,
+      "types": {
+       "enabled": {
+        "supported": false
+       },
+       "adaptive": {
+        "supported": true
+       },
+       "disabled": {
+        "supported": true
+       },
+       "between_tools": {
+        "supported": false
+       }
+      }
+     }
+    },
+    "lifecycle": "active",
+    "deprecated_at": null,
+    "retires_at": null
+   }
+  }
+ },
+ "scored": true,
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must keep each customer company's fleet, jobs, sites, pilots, flight records, and problems separate from every other customer company, so that no customer can view or query another customer's data, except the shared airspace information described in DR-02.",
+   "read": "DR-01"
+  },
+  {
+   "id": "DR-02",
+   "requirement": "The service may share airspace information across all customer companies, and it must show that information to every customer identically, because the information comes from the authorities and is the same for everyone.",
+   "read": "DR-02"
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The service must not select which drone flies a job, which pilot or crew is assigned, or which route a flight takes; a dispatcher must make and record each of these choices.",
+   "read": "DR-03"
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The service must not approve a flight by itself; a flight may depart only after a dispatcher in the owning company has signed it off in the service.",
+   "read": "DR-04"
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The service must record who signed off each flight, when, and what the sign-off was based on, and must keep that record so it can be retrieved later by the owning company.",
+   "read": "DR-05"
+  },
+  {
+   "id": "DR-06",
+   "requirement": "The service must not offer any control that steers a drone in flight; in-flight supervision must happen through each company's own autopilot and ground supervision, and the service must not sit in that control path.",
+   "read": "DR-06"
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The service must not manage, schedule, or allocate charging pads or other charging equipment belonging to a customer company, and must not show one customer's charging equipment or its usage to any other customer.",
+   "read": "DR-07"
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The service must allow a customer company to see only its own sites, and must not reveal the location or activity of another customer's sites, even where the sites overlap in the same airspace.",
+   "read": "DR-08"
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The service must let a customer company administer which of its own staff hold the dispatcher, technician, and airspace desk roles, and must not let a user act in a role that has not been granted to them by their own company.",
+   "read": "DR-09"
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The service must not give any customer company's staff, or the platform operator, the ability to read another customer's job, pilot, or fleet data by default, and any access granted across companies must be explicit, recorded, and revocable by the owning company.",
+   "read": "DR-10"
+  },
+  {
+   "id": "DR-11",
+   "requirement": "The service must show each user the airspace information relevant to their own company's flights before a flight is signed off, and must show that information with its source and time of issue.",
+   "read": "DR-11"
+  },
+  {
+   "id": "DR-12",
+   "requirement": "The service must keep a complete record of changes to flight plans, sign-offs, and staff role assignments, so that the owning company can establish what was done, by whom, and when.",
+   "read": "DR-12"
+  },
+  {
+   "id": "DR-13",
+   "requirement": "The service must not use one customer company's data to inform, rank, or influence the decisions shown to another customer company, other than through the shared airspace information.",
+   "read": "DR-13"
+  },
+  {
+   "id": "DR-14",
+   "requirement": "The service must support new customer companies joining the platform without changing the behaviour or data of existing customer companies.",
+   "read": "DR-14"
+  }
+ ],
+ "score": {
+  "covered": 3,
+  "partial": 4,
+  "of": 38,
+  "recall": 0.07894736842105263,
+  "precision": 0.5714285714285714,
+  "outOfScope": 2,
+  "technical": 0
+ },
+ "judgement": {
+  "requirements": {
+   "BR-01": {
+    "coverage": "partial",
+    "items": [
+     "DR-01",
+     "DR-07",
+     "DR-08",
+     "DR-10"
+    ]
+   },
+   "BR-02": {
+    "coverage": "partial",
+    "items": [
+     "DR-02"
+    ]
+   },
+   "BR-03": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-04": {
+    "coverage": "partial",
+    "items": [
+     "DR-10"
+    ]
+   },
+   "BR-05": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-06": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-07": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-08": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-09": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-10": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-11": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-12": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-13": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-14": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-15": {
+    "coverage": "partial",
+    "items": [
+     "DR-03"
+    ]
+   },
+   "BR-16": {
+    "coverage": "covered",
+    "items": [
+     "DR-03"
+    ]
+   },
+   "BR-17": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-18": {
+    "coverage": "covered",
+    "items": [
+     "DR-04"
+    ]
+   },
+   "BR-19": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-20": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-21": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-22": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-23": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-24": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-25": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-26": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-27": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-28": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-29": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-30": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-31": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-32": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-33": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-34": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-35": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-36": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-37": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-38": {
+    "coverage": "covered",
+    "items": [
+     "DR-06"
+    ]
+   }
+  },
+  "items": {
+   "DR-01": {
+    "class": "reference",
+    "requirements": [
+     "BR-01"
+    ]
+   },
+   "DR-02": {
+    "class": "reference",
+    "requirements": [
+     "BR-02"
+    ]
+   },
+   "DR-03": {
+    "class": "reference",
+    "requirements": [
+     "BR-15",
+     "BR-16"
+    ]
+   },
+   "DR-04": {
+    "class": "reference",
+    "requirements": [
+     "BR-18"
+    ]
+   },
+   "DR-05": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-06": {
+    "class": "reference",
+    "requirements": [
+     "BR-38"
+    ]
+   },
+   "DR-07": {
+    "class": "reference",
+    "requirements": [
+     "BR-01"
+    ]
+   },
+   "DR-08": {
+    "class": "reference",
+    "requirements": [
+     "BR-01"
+    ]
+   },
+   "DR-09": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-10": {
+    "class": "reference",
+    "requirements": [
+     "BR-01",
+     "BR-04"
+    ]
+   },
+   "DR-11": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-12": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-13": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-14": {
+    "class": "user_visible",
+    "requirements": []
+   }
+  }
+ }
+}

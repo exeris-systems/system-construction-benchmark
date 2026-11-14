@@ -1,0 +1,83 @@
+{
+ "model": "claude-haiku-5-5",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQStwoKEAgTGAI4AUIIdGhpbmtpbmcSDGeUp/Xw5CYQsrDLThoMVuQLaypJ0shE3RvPIjDqEv0Pd2e7QLAYt3IOrOKEcFbq3U31ZpUBAuCqRJ+e8VH4sGWqxYo1nBb7huyv4JQq1AlyDznTRx8FOZMkGc6gAkKR5RexFPtB7ypoFPs3tsMsKzjrQlvduINiCk/5PWn5E/nGN99oQmpL4WugMAZDuAwYgW6aJtL+667FBgo+lHDRd7LDUKgMTApqQmgwt1ubSdxss+DOOPrXS39/t7Jqb0usIaiYyKNTK6aHI3QC+fjdpn4jU+HMhmU+CneIlyv60a0vyZ9uMWAtohoZvo/JoPdwEaGgBfeW/c/OjkzGJ9d+246ZpTKTDFy+78h3Eirdke73kntNeR4lzGsSkikeHSQDIK2ZJkeCTKcacE8imu8NIrU83trKuRt0xAMivrF+6jLlVV4mL6/gIVASVM47/dazL+l9lz9DlrBIrmlKt5o08baZIrY7sn3EdIbt1AtJcYBDVA/Dvr42vyIhgGwftKVeJGLJZPZ9kkKyneDa7pamjrSXOH6ob1+qXStSe7q4n9Kyzo43t2OHHnp4KV44DQb/vcvBhC1uU9Ccq68fIp5JfvEm3BS6s6rGuKeIYuP5uhbpkS/zsrS6cOIYzy0AaG2QQpYCu3OcxNKTza/8+m4gon3KGGjV801I8gs1hbTXcEf8iUVBY6HB5yMpXGy4zdWwtdqy7v6xX3HFbkfbD+V4+0UDii8dIep72+hg1czYLTNC9bQzGVGjwhIAAlqd5bT9ngl9QtDyCpBdvyE4uKgPSUS7DGh7TG6IcX2uEFzAZH1TmpkivxHZCsWVE1377ygnOb5o0GCQIJiuOYz9fZ3OfxjRf/7tSYUgVb+gooeYRKazTxV1LcD/C4Hwsv3Nec9ENFiXMioiEUpUYcjQSZCKDfRE2EOeYTef7CpOXGQWW8mjlc4QdDESzZ3bCBn1xioHqnb8XS8tB4M59Eqvi1wmxH/ozsBzOr+Y4wKCE9u9Rbs2VKYCC91c1eN710n1kJoAvKlAZuP8l/RvbPz0JAzjlcU1w565jwRoPZB10xrTnCSSH9P4LBxStNmEhP/kv1jLgPi16O5AjEoX+jYjRVi+xQZ8V1OTSkz2tM5Q8PLcBPIlTldvPMq7dPN1vZ78MMzlwB9Gg6Qw5IsyLNYHz5fmLmpOSm51qZxN3m5fRp2kQx9HYFbn8Q3TUmb0cOtI8iJaL5lI3JtHju3KFLsS4HPLuR0HtMy5GlGG6vC33z7HiqpV9Q0yr4qllsts9EnX3nEW9gVBqCJtcdWi/qgSjkk0rD0A2frU3iOMfKMDNSZdBMZtLd5YXC6fotav7GL9xDnKTkW1GqFEUx4QjFnhDEiOx+b8isYPhCtvkeA/kHfQS09qC5PSgBjdVm/TpO47BAznCdEJASWtXs3UDi6oMHaQ2kJOAkYK3spAlgfPiFLgK+blNNcMesxd9YigcfBAzu7y8GADaU3bZaUbL5DC1zy+2zzJMl+bTFIvWdYacT2cPgwHaUnfF/2YRdJtz5gr796H1sFI4wEwvHzL3IEudNftJv2JTPIKLYA3bVpIDDV3XV1veQ8MXm+1L1RIid0H/37ZVcIvOWpEqmj1pGi9H4hmZmj0V5voPTGI7+6OVHkjdhF11EJHfHsKdwgzl97+FyFwrQqQ8IBGLVzpr5nlFSkqCYSuAtUSOayhpd7H8b/aaEMiwD7ub8FYd4+2W2nNbE5nXOB0r0yHI8PKlScYcn6RcQWMbD0YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Walk me through one normal day, from the first job request to the last landed drone, and tell me which steps you do in a tool today and which you do by phone, radio, or paper."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSuwYKEAgTGAI4AUIIdGhpbmtpbmcSDMAWNcV7LNXNT4IQaRoMbvTXjUw+ZicDjUWqIjARD8hgDkMqVIb969D+knLcuo6IuaDIZ7i0pYQ+0irpEhdre+R1k7a+jTaMJbi1jQYq2AW3DdOIH/kuuUsCTpwX7duiqBrw7DmdHHzOYx9flCPLx6RAel5yiRe+9Z0CpjiwFx1SVzSUl+jmTaO57+Fq3AH747ONCzYmUyjmRIx2gvjcxVbVYjd4o54PvFomPu53Yafk4ifg0tVgHpmYfBCTTZdJ6CdQMk11T4UZxRoTrWVP8Ds2va5vIukjly9cVzoa7zPduJWqOTxwPnMY3n8XCplVsG0Ras9yLt0P5UvcJm2PkEdncKJzD/jOT9DQWo+BNWi22JbYKElqUvKeTvpOvC3n4iGnyQ33BtjkGB6DBqH2iXo6as6lEaOu4pxFP4uQlLfD4IoKRWIWBqmTvxKp4NUhiPVHvmWz5q/KX7at8XVkDNIBr5LGk/E9oYUhWq86iWeQhY+WgliRTVu8m+kiwkZ2+ak5/BOF5T3vhvNnsXYC8Wx3IWl0Kedg3tQ1wIvQ1qNSFUYLCX0yFVIS5glzr0C84FSqXhZ/4+zWe2FATRwqr4cNGRoO/t6aibeIHvc8MDyL/khYHiG/k246XMnhU96oGQXnidZT5ILRGXcejORWAwnZkJPQnBVcv0jyus+daU7IUIi9UZISvOxsEN8LRC4wtLYyWJ/qHzAalFB5K7LtpkVKWo1iXjlO0gkcSwueicLamUbAajB4CSUmmH3PV6KsirgqfZeJHnhFpmR0JhfrGY/8aoZC1c2rmrs7ak9PpZTsU2p7MTP9a8S124WiXWt1cWZ3yfLqcroHkf/xGlWt1bRDEaBcqylzfU3PJ2Yu2ExAeXeR+u8jnBu6EajRhBSL6TEmBEpERq45QlnMJZ5USRMCRpfRgVb0UHJxVj0z2U8hTAMdyIvIqF8hcuACuQZ6bK0366EypW4bSj25lK5pAjPqvv1JIDp/PAxycshYL2WgTfKruzUSN+oiDjWc2U0G5f7C1P2yISIC7VGir5/Xix8WirtoSz8XOuwbP51kpYO92CkveUM5PhgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Think of the last job you assigned. What did you need to know before you could send a drone out on it, and where did you look for each piece of that information?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I am a dispatcher, and I am the licensed person responsible for each flight. My company's policy is that software never chooses a drone or a way for us, though we do want help finding out which of our drones could get to where a job starts. A dispatcher decides which drone flies and along which way, and signs off a flight before it leaves."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSpQgKEAgTGAI4AUIIdGhpbmtpbmcSDFNCPiAH66xySouoJBoMfFVncPhfBKSppSPeIjCg/gk1BG1HbNnFt7BkKPKtdanuCEZqvyVmDGdjjkHSzMxshXphmKoyiMPVuQO+CZQqwgc12EgKAa+Penb1MHQkfZpbxJUXAflm2pgDALsPuAiVkO979mr4BD6FWqOuEdp5pscEnN+e+w+SuvhP3QzM5WazH7hVXElqkMRd7LzhYVsWTDshJHIqjZm8sWOd47Q3EHMg6CLUSLv0e8wDTQTAvhw6tG5ZiAAT9MtY1C612rnY/E6CapfP5E3elk8pbn21nGmY+g1Zlgog2SEQB1KvDWTX8npTJfdoowQ3Xu7vG8TvAtqhkk1dx7p0u3mXf/oCsl1vVYO82n82zK+Io1TmuvwDtSnl4Bs4yXBSNsoxRLC9q+G/vMLMfJpVFDysLap+d1bXPpBfQSE9RF0g4P/Z8nNoQeXjVcKWtsDnyBn66YVMBRU6GbBXTd8cz/IObA4rAd3dophiO0sghpJE+yzWgaHEuJ8pO7neRjmq8DFyrbDreQTCnmQZQsrdSLZ6pcQxdJkY8jVdQqYJgJWZkcNz2pwzu+c9vBfQ4dP64wfdFZPn3wGqqhteGzj8MUPpyusXRNLnqpIWWepKt3Ge9NImTb6uD+g7BS1/uWKP0jr+bPpBWFH7BPhFj7kQWRdhdVVABuIdxhxs8e/eRtlwXOM4rsUx6tJR/wXX/uXnLksBn9+QPeypn0EF58W393a8EPMLPng4LW/chJWx8qhQ7fTJpl3o/2WAyK6xwubrHbfkGfTKTFbHkuuq4di+jN4KfOqnnvr35Vd8E8mCUqD+crhlEtU20Fm0eB17rDY+9eaFEKDoUbfP9oTe6k51h/KhDP+sZ9gUywWBZaBMzsOQSPU1wNyofuKiQFHT9e3h/jHqHGLgC2DQx5BSwWCAXKBOkKCcP51iRTW9wZsUpIyMC3JKmFJOwJXY9chkUaj3WgRTPMblBzMb0O6uL+u2nCVzs0LqlCMMVXlhpWRWjPVYwC/vc12Whjyf/e+q5KJJN/TzouLzMzWLRDDOEB/E6RzGIHVB/Vo2r+CV4pH6cPj9MrNHUGFQ/GDCO4LM/I8Hw9iwIQnqd7QMp2N8aaapTGMdo4Dku3cwpEO/UKFrlADa6cFTNSLxKFu/S0B6eG3epWvQAUDP9lBG098T8pSz49SrEf2Kn8ZpSiGJEURkowoszW8d9ZnoJ3Cuoe6lse9SuBxGeobBw1uxrx+a9vd1RE83NUs+akBEJ4AsXSC0DZP2qeJsHOKy7J+56iEu53sACNBg+Wkeo24iSgaUTm9xeBo0zQgtfy43uBphv6TZIZkxLN8aXk48IGhuY/xHqNq9cGQo/ai+kByyedhv+M3GaYCV9t66+mVQ9xgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When you sign off a flight, what exactly must be true for you to sign, and what do you check yourself that a tool could not check for you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I am the licensed person responsible for each flight, and I decide which drone flies and along which way before signing off a flight before it leaves. My company's policy is that software never chooses a drone or a way for us, though we do want help finding out which of our drones could get to where a job starts. My notes do not state what else must be true for me to sign off, nor do they state what I check myself that a tool could not check for me."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSpAcKEAgTGAI4AUIIdGhpbmtpbmcSDJ1W1kTdFsUKApn7dRoM4irRqQtDt2zwr9MXIjAx4mMp3ki3xbVqISXY/0NfFopbCj6bgiGTq9aQy95p2REaXBvZ2XxBVdX5Gw/fzr4qwQYvvJ08ZWX17wk4EQG2aqq5AFKF0lCzHRjCiPLmxVIAC+b13K4UsnZZgpHYH4sYqhsjwOaZMWfFEbFC31quwKKCRhAYVUDn+U9/ZaNdE2coZgRY05kWNLzk/xwN3cFKypZ9cd20LOBLIkYQaEDxjn2A4et2x+XlXm9pCz8ym5fb7LcEDvBDXjrHEHQM13ehlDbm3CJzfdd/yCaZYjJKGF50cEUH0YbNGDf0aUApvsIc9dsYkoFYlqUGoetWauXLzuT3BkxvhXAx83zEhN3qWYaCigQRUO5/Pjuz8+k74r//IjwamZVa8p1TD2AbygQAEutLIUcwqdkJp+AL6YDCx3RJkQsSpBujJgTqnA8DJshSch8UuS+/ZenSKpbE+MesUGFf3PO+WHbsNmGKn6qtAImz7/6F20DDzsw0hiYJAoq7ghvzTZ3ZatURygP1vrge6aKXsAzaAr5x71AJ07vZ9sncLY3onDpw/P1fBl6oHHiNO7KmzG0mUBgLJC4p5nWq1dq8NIsCzki/iOrFj5K/dGhB0A6655cgUWqCnh/Lx703m8VZF79XBNYMUxRVxLFDZ455KSJan0jtXPHE5iA1D8zXdFLwPdEG3d2Tp8JjotI9GQQKePof9+xM7YFCNmsUmA2xsjB/KFecPUJ95+D2OzhDuAKBpeS4udEmu/oXuI3AQyan+g8ZXJu0ycPaOXve9lTogsjsfoQRxMkTNvkn/YpR6T858+SUP0IT7mIC+nDlfDlkOhQJFpSthkflcgmeoRHGXfwM2wQ6J2asK2JlHkHlgYYL60KLyxObjDd2Sdan/W7VUByY0ZIJmkcLCNd1YlbEN1B+tlujfo1EWRIVJ1xjhrQf9tvRxjkZERrFWkN/Q4qH7y1U/ZhzRFcKsEq7SUZBlpJHqhL8oFrdo9ktJwDaRhQEaBF2/f5YkoL2FjFOpNTppEIU19vEpD5OhJ54tyCNVU2pjtlEcEjweDQdluCmoCv62jmBgr49tsBVWcRdRDDaRbTeQgCjgWTSq58b3ZTo740qP8vF93idZWcgwc08P7Xn7dsGT6bo+MxwoLuyfM0fdnsqcRrfRUQl2Vuovc7rj1Yj1Xgc38wqXNdu5HCaZRgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Before a drone is allowed to fly, what maintenance and battery checks have to be recorded, and who records them?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

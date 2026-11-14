@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1V3oW6kYEmbL4Le3LFA",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS+wYKEAgTGAI4AUIIdGhpbmtpbmcSDJ5JurjJrL7j5R/amRoMTwLaSMRcPsDZvhQSIjCKju4TlqKS8SLpRbXdF2rcXHb9mGicZDd8Ei33bIW3OzzDNbzuIWt1rU+8kU8M0ZAqmAaTZW/VanZhhWZ7iX+EPNapY0Ro9ePnZgdmeMhkH7ZbVw02EXQr/QZragR1lQBIwQulPxqFCycXO2wQoNMI5i1J17+lWHxhhfOLbVX4PP3YPgrjzV/POOWOi83QvgbFUDvrybqhCtD0WBXa8wfh64xK64QdvAi920unXkpxOWXPlIyhWMFFVlmiHyn5g8AKNwvu8Z69382gUe98QI20lV4HRYJbSvXWdSUa6sM75g0VZ3qOUd8a6NhyPT0yEAckRvaUbOHsZNbRtWR2FyAKxDXq6MDbShN7cND+mfyfDhYuNYYIOEGCoFhR2ao0+A7Luk1JC7txD/ZN4vS7qxFzaegTmwOdy3AKVsc9wgEYhZaq6dz9pjRuF2+OWEmnxNjFUI83qDlIrX69YNSTUzdlwS/kKaNaJvuvwV4d6VzU+UBF/W8COHVDbNTMACTog5EGrtW3Yq74zyuH2xwI0iGOtYGRNHla7RtSymT05avLqtUt1UHtoJBI3SP5Zot1ANGfj3SEugkk5Bc+SqHz0W4D6zTGd0WNCHMRa8yB5TdSJWZLQZZ0rrDvdEV+pXG+TPlGGUq+aPS7xtJNMjvhljlG38MSwzOqSEX23uHwS3i1hp2cvFrSGFiBYQ6Le4SPQn78RUfEdoLpB0dJESmF40+3iLf1kmjEODMpM0n8GB2UzS9EdQIVon7mIZq+gS7ncrZ7rAzMlgKz1C4hpuKHG+k0w9A/GPCFG82aUBuw7fnl1IFXZ1HHqtiJIsrqCnRgPcTC4Z1HLrn37PEo69cNZptbzbYfh7r1mb/qM8zYTj2ascgQxO08WT6zVr8hxo51wYi2sS61v5y7/fFNbLPmMtULZ1GV26Yusnb5IDH66uhf8YJsUOXiSqwQblRqHOnu/W32CU1G5+ZjxUL9wNyfR4SsGnBzEt43k+NJ/27uIhI7jjHNl9mmDfMrW1MMgGjUyh7LAGwHoJSPbrc0uGTuN7iUJkD45m7yUfu62YFwUcZ83Ae7Ra94PM8T6PRO4tGcaNnVHILY5Zlc0t1myNAFLYisfcTj6X0tpa2EZJ8YAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK desk: Which airspace information do you need the service to show or check before a flight is approved, and where does that information come from today?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1373,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 91,
+  "output_tokens_details": {
+   "thinking_tokens": 51
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

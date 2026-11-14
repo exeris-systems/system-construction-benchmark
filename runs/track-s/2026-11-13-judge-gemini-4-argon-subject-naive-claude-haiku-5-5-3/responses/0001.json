@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"requirements\": [\n    {\n      \"id\": \"BR-01\",\n      \"coverage\": \"partial\",\n      \"items\": [\n        \"DR-05\",\n        \"DR-07\"\n      ]\n    },\n    {\n      \"id\": \"BR-02\",\n      \"coverage\": \"partial\",\n      \"items\": [\n        \"DR-07\",\n        \"DR-08\"\n      ]\n    },\n    {\n      \"id\": \"BR-03\",\n      \"coverage\": \"covered\",\n      \"items\": [\n        \"DR-14\"\n      ]\n    },\n    {\n      \"id\": \"BR-04\",\n      \"coverage\": \"partial\",\n      \"items\": [\n        \"DR-06\"\n      ]\n    },\n    {\n      \"id\": \"BR-05\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-06\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-07\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-08\",\n      \"coverage\": \"covered\",\n      \"items\": [\n        \"DR-12\"\n      ]\n    },\n    {\n      \"id\": \"BR-09\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-10\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-11\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-12\",\n      \"coverage\": \"partial\",\n      \"items\": [\n        \"DR-12\"\n      ]\n    },\n    {\n      \"id\": \"BR-13\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-14\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-15\",\n      \"coverage\": \"partial\",\n      \"items\": [\n        \"DR-01\",\n        \"DR-02\"\n      ]\n    },\n    {\n      \"id\": \"BR-16\",\n      \"coverage\": \"covered\",\n      \"items\": [\n        \"DR-01\"\n      ]\n    },\n    {\n      \"id\": \"BR-17\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-18\",\n      \"coverage\": \"covered\",\n      \"items\": [\n        \"DR-02\"\n      ]\n    },\n    {\n      \"id\": \"BR-19\",\n      \"coverage\": \"covered\",\n      \"items\": [\n        \"DR-03\"\n      ]\n    },\n    {\n      \"id\": \"BR-20\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-21\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-22\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-23\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-24\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-25\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-26\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-27\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-28\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-29\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-30\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-31\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-32\",\n      \"coverage\": \"partial\",\n      \"items\": [\n        \"DR-08\"\n      ]\n    },\n    {\n      \"id\": \"BR-33\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-34\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-35\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-36\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    },\n    {\n      \"id\": \"BR-37\",\n      \"coverage\": \"covered\",\n      \"items\": [\n        \"DR-09\"\n      ]\n    },\n    {\n      \"id\": \"BR-38\",\n      \"coverage\": \"missing\",\n      \"items\": []\n    }\n  ],\n  \"items\": [\n    {\n      \"id\": \"DR-01\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-15\",\n        \"BR-16\"\n      ]\n    },\n    {\n      \"id\": \"DR-02\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-15\",\n        \"BR-18\"\n      ]\n    },\n    {\n      \"id\": \"DR-03\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-19\"\n      ]\n    },\n    {\n      \"id\": \"DR-04\",\n      \"class\": \"other\",\n      \"requirements\": []\n    },\n    {\n      \"id\": \"DR-05\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-01\"\n      ]\n    },\n    {\n      \"id\": \"DR-06\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-04\"\n      ]\n    },\n    {\n      \"id\": \"DR-07\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-01\",\n        \"BR-02\"\n      ]\n    },\n    {\n      \"id\": \"DR-08\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-02\",\n        \"BR-32\"\n      ]\n    },\n    {\n      \"id\": \"DR-09\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-37\"\n      ]\n    },\n    {\n      \"id\": \"DR-10\",\n      \"class\": \"user_visible\",\n      \"requirements\": []\n    },\n    {\n      \"id\": \"DR-11\",\n      \"class\": \"other\",\n      \"requirements\": []\n    },\n    {\n      \"id\": \"DR-12\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-08\",\n        \"BR-12\"\n      ]\n    },\n    {\n      \"id\": \"DR-13\",\n      \"class\": \"user_visible\",\n      \"requirements\": []\n    },\n    {\n      \"id\": \"DR-14\",\n      \"class\": \"reference\",\n      \"requirements\": [\n        \"BR-03\"\n      ]\n    }\n  ]\n}",
+      "thoughtSignature": "EmMKYQFpFH0TVu3eofSWf5grQi4WekdK6k6aAyeQXw2JAROzJ3YajnakPaKEnvxbgyPBMh5ya+ecqmOSJrgrXJBwj3wJqqXYzwr1WSOM6+Hq7CtyCSayw4BbTR138uKtTYWSTRI="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 3219,
+  "candidatesTokenCount": 1947,
+  "totalTokenCount": 5166,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3219
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1947
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "nWb3as7WHpHMkdUPrdOS8As"
+}

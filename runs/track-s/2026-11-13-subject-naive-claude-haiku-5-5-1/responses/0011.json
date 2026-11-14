@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1V4ArEvaHqvDVkVtsHH",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSsgsKEAgTGAI4AUIIdGhpbmtpbmcSDCsGVkK43P5GEl6FNhoMeabqK1WC9elaPlv8IjBhdffSv0bDqlfuEAvVGDegHEfrqr7vCVqxSXpenFPEcUKwhQX/tzqx0R2XszTxPLYqzwp34y/AusENMPnbMrVdQxbofFrTSWfNHsysdSnmj12aqWYZ3pDszE2ima0Bt1iHZtMo5lof8aUeMxjGDXgKBpEJMg6+BBXEVESoUt6ZB8swBJr9R4WbYJSMY1tTdRqeumuuKoD/3yodcfrVaSZMv1EUpTPmstfzEZHdEPaUkpaAfYIgUl96dN5LI9uQvfKc8cgWK8VJGS6VcDp3DjVsJl5a30fkT0buN+fm9srZRCkepH8fhtInZB6poZARtEc577ng74Ju80JymcPIzcUjMhfOMdAPzz397x78C3m0I4004E6nBDx8zjqPvsskYbt3sOup5Tz+eQD7Of7okjbPSNAXtEPVvP7nXDDXmfiC+00s6EYR97TFmRcdSQkF8GdlW1iA+IVS/k/V8sFJYiOmHBeUdq1vKqFA9Kocj+J09gU1BT5P3koO5RsyI5Fsoxd2sG2rVF7dtu1B9RuRLdSAE+XaVOaZmfu86hBkYYD5PU3JZBE0wz/5c2Rqrgikv6mqYZHAPw8Lw87MfhA09dNd4ZRZjQQRcxgjLFQPwBtMOidQP94SmtWEFYwGEPl/Gd8W0ziEK1ZDqtBSulS8ZiOVdn4ILXNArxFZFkMiMms3v2k2kG8Msmk8zRce3iNut0x9Mq8JHamRmdvhRhdqE+6PBSogvo2qfDXsNL76NzMKbKqxPumZyXjvKch7mAAV5i7OBUnbU7Mx8vokKnL2pbQwg4nJ6OET4PcNdHdEr4M9AwV76howaN3Wl+V+UfGbiDidRzFxobBS1/fOHr8TXhQlxt81JveUaWIKefM8iM7PPVZlvVbEPC2XzFE8IaaSRdfgAc1ddOscKoWpBOfsskrgnt2Stqrjk6LvDQNiZm24c9nhKSb/nViKxvkXXylCQ6qr2otqXmV1ik3dlBfzBLFTutUpJKyyv21hQF1UULNd9a0i0M2kW0ApflMr6subwYScAAHVVxtmj5h1vEaHLOWeJgohT8/vyjS+Cit5NQYkOEaZcorYkfgWr4Dw/Y7JRYgHU6zSUvhpjuc4FkMfHMPeUv8KuJ1cpnaFc3IaVRz+OZdXGJowxHvnH4bF2n3WiW29TOw1K9hwOpmdlBB6NOah5NkOmo25tE7jUU8BGEQ/XIGmToJxy0Obgs1TMs86R1RA4O648RHBLRd4+XhYnF+m+HojSXItSaaZ7xGBqhRl13X1coSG/M+cR4SHfwk3DSIQq1+Vir5u9H83jXtZmXsfRA8G1vBjp7TSdudB3g7YfxdcxDtbMIErYp49J32z3aeGDYPiUnhTtIgFIOKOJNkjSuFXr0D0zMTTzQRtGL5QqjiCkLG8fuNspJOVQSl9D96XZ4nLzXcB45+nDE188kkZsgg6IeBJEonaes0ZpfGXOJ3Utr8ojm5Hr7tOw64RrWMriMYG1+UYZMoTUaCzg2x0flb6SKzLDLWiokCoeLcOlOF0Mgy+0X7pqXiFf9ecWWAyLs61GXrCq/M/xr3RBz1uCMkwERevtBxi3v9abQgMJqYlvrBKMdoI3JQkc+NmEVub9qss4G2avROZy1gQJOQm09oIIh2/22e5rESnS8lw/cCYpmws6+WbQqUqi+V70cMsFNZ1r1xVYng8jP2Ht0owZSWsFdq0Q0q4tlFaGWzWiJTk69pg9LbdS4DSqQ35GYxUmLfJRd0rYROsC/KpBX9up49IjH4i+ddj5x6jVdRvr/mkxCwVPMpZBSC4E3loLlIccjKfcTvgFwjAO7MTThoKQKrZC1M8EgYvEFNGDV57ImsolnXJwMPRONmZSokWMevoQHmqvNFvgZ6zldAmDKUZpfUYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: Name one problem that has stopped a flight or grounded a drone in the past month. What was it, and how did you find out?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1473,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 258,
+  "output_tokens_details": {
+   "thinking_tokens": 214
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

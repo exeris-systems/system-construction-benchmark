@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1VGzCemuiKSrAta46sh",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS2AYKEAgTGAI4AUIIdGhpbmtpbmcSDL0ohcMqOpgjnoSFQxoMK6RnWHqOa9mRDXxjIjARdv/vaW2jVPpnztOD5PiWvRkQ0JZHc1zZTz3jhtrqEb0jKJ5NL+08I9cYkF7EHkgq9QWV27YmQOP10XEqJxowaSnAjANkBJV+QvU/9qCzslZux4bSzNQkALy2UnH1I0qlShZz67gk/UtZdQWT1oGMaB1G9k8RQdMDocrRKbt00YfrA/bJ149Nf7SIbMwP8yq9uTABkAdv6xjWzId2JzMJZedqVvJSFjJovHsmzxKJjeWJj8ZjPycz6P5WqG4BU0vCTzfi384TdmdKg9Y1FS01NOjvlqumEIkWAQo7ISb5Bhy6MWsGOjvV2PTWKOnGaqy2fkDyL5YXL3V20ABrS3sz1NGsh5WO+FFbUY+5tDKM+nLlquy9vDAc2SSoapTlj/LbJvJxWTKA8O3vkis2wTgqvJMJ8iq4YWptDQ235DmlXKG2XsgvZFr4f83zbxXz1njUxiYHCPpZuFJRE80sMJ7t6UDYeQbM4sIKbVGUWXyXYEN+eaavxq2F0NAg/l6GPOGVeXu6F7FOpckMgl04VmnMr/e8GUct/G2dKfdOvEDkrjzNNL+TweGZnNK1oh28BxzFGHrm3ExARb7fto27Bdk1JzH/WvbmEFImYrdda4ulWwsUMTvjvwWusaEQE1rXSBawFC9sgcHq3oCmZfaauXWg0o3OLHR1cAk4juaQRI60r8H/75A7P0zPOtlPNHfBq/rYeRUw5IbP42MRf1iPzmonuzTTKC7+piiQb28NnIaMqrUIABGEzLQZaTJSWRGSukMRtaDBD1awQV/eV5rB6Eno3SswdlCxMqIv4H5GQnrOPXEWiHg9uWFMMjpPOaG+ofLF8Kgytx5DDlT5wfWpZnKJjfQ9EikW398XljeRvUDcpughBuqtX8TADD9VmU3EUzJzqJ3nzJYMfccphuvwuA/pjILvvurE2+868mr7nSl9tEw6HgqLEGG+qyXM5a6y6paRyRJ+wm8B5goj9rjIV9QcXid0+b/DHQfHOz8ZKVpBcjbvUlMBPftmrqUlxh7lHPZ5xXzcVgC3igqTM8/n+ia960tmx1FyhCorqkZFFROeSiDQCP8z9PRBGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: Before a drone is allowed to fly, what checks have to be done and recorded, and what do you need to see to know whether an aircraft is fit to fly today?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1147,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 107,
+  "output_tokens_details": {
+   "thinking_tokens": 48
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

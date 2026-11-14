@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1VDUPC1Kz9MNM7isydB",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSpAcKEAgTGAI4AUIIdGhpbmtpbmcSDJ1W1kTdFsUKApn7dRoM4irRqQtDt2zwr9MXIjAx4mMp3ki3xbVqISXY/0NfFopbCj6bgiGTq9aQy95p2REaXBvZ2XxBVdX5Gw/fzr4qwQYvvJ08ZWX17wk4EQG2aqq5AFKF0lCzHRjCiPLmxVIAC+b13K4UsnZZgpHYH4sYqhsjwOaZMWfFEbFC31quwKKCRhAYVUDn+U9/ZaNdE2coZgRY05kWNLzk/xwN3cFKypZ9cd20LOBLIkYQaEDxjn2A4et2x+XlXm9pCz8ym5fb7LcEDvBDXjrHEHQM13ehlDbm3CJzfdd/yCaZYjJKGF50cEUH0YbNGDf0aUApvsIc9dsYkoFYlqUGoetWauXLzuT3BkxvhXAx83zEhN3qWYaCigQRUO5/Pjuz8+k74r//IjwamZVa8p1TD2AbygQAEutLIUcwqdkJp+AL6YDCx3RJkQsSpBujJgTqnA8DJshSch8UuS+/ZenSKpbE+MesUGFf3PO+WHbsNmGKn6qtAImz7/6F20DDzsw0hiYJAoq7ghvzTZ3ZatURygP1vrge6aKXsAzaAr5x71AJ07vZ9sncLY3onDpw/P1fBl6oHHiNO7KmzG0mUBgLJC4p5nWq1dq8NIsCzki/iOrFj5K/dGhB0A6655cgUWqCnh/Lx703m8VZF79XBNYMUxRVxLFDZ455KSJan0jtXPHE5iA1D8zXdFLwPdEG3d2Tp8JjotI9GQQKePof9+xM7YFCNmsUmA2xsjB/KFecPUJ95+D2OzhDuAKBpeS4udEmu/oXuI3AQyan+g8ZXJu0ycPaOXve9lTogsjsfoQRxMkTNvkn/YpR6T858+SUP0IT7mIC+nDlfDlkOhQJFpSthkflcgmeoRHGXfwM2wQ6J2asK2JlHkHlgYYL60KLyxObjDd2Sdan/W7VUByY0ZIJmkcLCNd1YlbEN1B+tlujfo1EWRIVJ1xjhrQf9tvRxjkZERrFWkN/Q4qH7y1U/ZhzRFcKsEq7SUZBlpJHqhL8oFrdo9ktJwDaRhQEaBF2/f5YkoL2FjFOpNTppEIU19vEpD5OhJ54tyCNVU2pjtlEcEjweDQdluCmoCv62jmBgr49tsBVWcRdRDDaRbTeQgCjgWTSq58b3ZTo740qP8vF93idZWcgwc08P7Xn7dsGT6bo+MxwoLuyfM0fdnsqcRrfRUQl2Vuovc7rj1Yj1Xgc38wqXNdu5HCaZRgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: Before a drone is allowed to fly, what maintenance and battery checks have to be recorded, and who records them?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1312,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 109,
+  "output_tokens_details": {
+   "thinking_tokens": 66
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

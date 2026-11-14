@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1VKiYtbmvP3oQMpQmrT",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS5AcKEAgTGAI4AUIIdGhpbmtpbmcSDBPOzwIEnw7+nkwzrxoMO10hhAZ4QPoovFzzIjCKN1CyuPGd3xLwIU3GJLMiRV93DgiNPegTBbR5ZL3A5jZoxFad8mTxhNfWx3WfhjgqgQdtmSJl4WWPuUV7dulDuWKnRc/mQDSRoTUt/9hbyjTwEwbHnb/+remzNdhXCrVLWu1Bn6FPO1laOcfdONp6zPDpUkJc7Fvl7CKDocYB8sVv4s4EHhj3llcC6KkEmqFw5RmHm/vD51MHcOgBhESd2ZQ9bLob9khlVfLHX+WkcYdCl1EYuUi9mDl5I18jC9SNP55nchcXxrMHOHtOH+Csgt4SqKTjM8BDM9v8a2paiHkkEZdA2sW+5Dzmqu0B5NgbsYgLenRXb/PQoQiA/LvajNOJBVLUKVWBWSfhB8t+Em0l0uy/MMiSm+cJm7cqBNT6jlyfLtzHLpN65CRAGJ3o1WUWLSQoCaRfekgI5c7d9llBXY9yHj9nyiXq/QetiG7LqWfJBwB1SLXrHJKzk1aVJWp0hjs68n71uF5ClMWFgshapomXLi4Kq0nwrqv4XM95K7Z2Zdxj5dZrZbJiVBSHWzgoilfbv6C9b9FWxaxFYuszsfmicj/EfRmN8gaGXZfOihT8hAsk8t7WChUwDWrarraBeNIkymm8u5pTi9V0iB6vUUnqYipZ7FHmEHjiuyreSEnlRXzbEhPcFPQujoX7rvNxJ7SgSRzPaVkn0w7doKbwLYA7PzESwUfDfYrTFB56Gp5mCbEb60VJfgWJrcQ1+l/l9vuCNMKkWi8gVY3OucFzLPaz4d0d/HOJuRY5fvsnsvN62/GR3zb/CIqeEmxdzP6Vw70R3rDBezq8wTzQXPncZJn65CmTdsQucpl7cCBnkPG4BnPdH2m9Bgg8fT+jJBtgNXzDeER5mghPAvMnvO8TOLpnDGYo+xxCmKrJDjnOtlsWTe+2XgWpHZ84LfvdnuaYj2UDmaQgyg8MwN8ymOodzPm15Ep1+OHftH8eiuICmMU4BM0CYzpEIYcwBCK8qwOTM3ZbAf3aT3kz7rGCMozqgVWVEwyaN8qqY9L/69fhUQ6NYNDnMEYyVUs4SFgiiOEeFsOcgsHeLKOrL0Ivs3/MfQHTUbW1S/4V5/XoghK5VjL5Df37oFCcHkhIB9/aPtKK7jVggo8lrIxP7KPUQYW6AvKkVm2Z0WVXMoXcaLDzazGLA3IdiSv0P/ROme2aCS+jWdR1bsGI7Gx5h58fgsXnQYwYfWZyvRTu/tMibpU+To+7YjSuLZXeLlpCfuW8c7wV8Jn1SwTvmPYkfu8QSjIem3QYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: When a drone has a fault and is taken out of service, who decides it is safe to return, and what has to be recorded before it flies again?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2057,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 112,
+  "output_tokens_details": {
+   "thinking_tokens": 64
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

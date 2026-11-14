@@ -1,0 +1,119 @@
+{
+ "model": "claude-haiku-5-5",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQShQsKEAgTGAI4AUIIdGhpbmtpbmcSDEUoqyzmwsPvzEz6/RoMabtKcaKhmTHKbPdWIjDzn9OxXGu/NbOZH19g0hn5r+MPjfAkVrfwITM+W1OUhhqhxqUdNnqLbVCz28r3GG8qogoGnam5FkGyt/ekaHqmZlo4ZQScBbcaTkULw113mYuxDX6FP12OksJpWJi6YdWxkLyKO90qFq4Jx/5uR8JNFYVauV10QwdPWpyX/JfjFHhLqYw3MB6Alev5sllGw2bKrHg1BBbzbs6W8Og+vNyefKiJC6yND48BLSraX1dzIYj+dvSH0F0nxMIbQ/X3cIJ/rWrH7tYXmEVz2iQMARVOC2HbYivjpJKKSpXFLFlJMxgsliJF0+a3MAMs05gw3njrYi0t8zn84xwduLHVeve9aMLCU+Ev9JheRwdovWEOHqE37mYQyiUa+F5z1khQDEj8TmRGNQjiwk5+H7SON1Bar96TRM0Ra67ng57fyiWYLrL0YTVgJ20owB46A9ZnCLNDK4J/ZIOBvuE59pcc7hX+njUyYmBry0AXfIXvMepFdnzRNgmqtcLvRC4wwwm+W2sPdtek7ndh0zo8BIOr/U1fe3Io91V9utS46Ah8SIZy5QaIfkKssaN56l0aYUVO/r4FNveeVabiMjVLxYjsq1YkJsA8PQt6cvLzg9pWVJmfPPK+vsEwx7eGujLHHjgGNxzlPt8LwcfQkoAOF4nH0E0gq8zPR/gEZyycFziacJhewaDSydovD/pAvycNUDgklqsYWO6XYP1hA/VRkqpRDqvoKAawnqdESn24BUpXZBHUxK1ML3cQS3d4bqTp770wNYLAcsF4DUTCWWuWfV/8+/3sz+mgSuqc/floN5+KD7dxAi6zM5+kYMDbBE438dsTQQisC4e/yi0kn/seaQUXTP1fUdSLl08fQLmz6JxsjxcaZhv64Mb226l7wTkYl3XZx3xAwJmwAmkDQz4F7h6ysPo9lefnmn6XWAPTCqMaODfRGws2BjUshW9CEpPQleua/pk9cdjT0XiyOx7kP4wv+KqVVcMuLZAL58Y1A1MZZXiv8q4az7ZA506ADL2s2ENJZWKuDfvB6u2NVfT70wDzozwKD/Bl5FHd55D+L36wRFfHCGL8CnPFi11B+xC+D3ys3L/hp1/59Sy+pxo955ziXPihouXQ9ZECPtapJf2c55y80Rv+17JO7rsNR6AKvW3MKtGaruvt97s6u5nUSGwnixTm+vdyIc4QVu9Do/qq0DswC1AOgrMuF7IPMPhKelGk3JDuUtH+Y2Uio5mAmZV78xxmvhR2tOskB7KAjFH6ZfWlyg0kiFuc/R3vI8jLpnFRX9Ellb3RB+ETE5DYG40dSqTHAXSvf7k0NbrdZHhCsW5APTLyPzIci7mOc6IJf0BkgNjL3pEH+fR1WFWc8/SkEHNBjYiSJ2sgqpIqPcsNMQ+1N4D/JSKmmEKPMNaIDDIbPBPDq+heoeW8ekZArtMULoEcGpSLtLQRi8pRQ+Baz1QzB5CQblDjFd1SJ4JYR3mEOb3paI8IJsPiPjVPIE7L3WMmWQ8fEkgFAhQPvIfrjhkuLjz80ghlck1nSf6ctovUudraZXMoXDMLUKH6TTAbMu+HZcfYbT8+iMw5J2TJij7xYsZFu6MKjwey9YD6/yoGeB8EezBO3KRU9OChCA6NxlYl3jiFgxRQ5T58mdrDdOzNPM56grh2YVSwI+pbm0GOikSwDUNY2REmjVYiHmCYrmELRwp3c9fIcqBdNUWXk4UNkTVw/J4nJ6FuymBJ8agAmGWrClHRKGPpodoOWr7WFwnBCW6FntdEkHP46SCi+ZGMx0uId57iMTURgA9WzTma7TDJmc5eLHifmT+D3uMxNr2w3xoWdWwYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Walk me through one ordinary day for a single drone, from the first check in the morning to the last landing. Which checks, records, and sign-offs happen, in what order, and who makes each one?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSxQYKEAgTGAI4AUIIdGhpbmtpbmcSDA42tJzDyvZFnyggzhoM9+p3DDq/5HN+CV6IIjAgH+DvE577AW5kD9yU/wNRjYrpQUY+olz+GJu2fbhmh8SPx2I+6JbNld2NJM3W3eQq4gWo2lzValLCUZT7U4Tc9jOAi50GjAsuwXFqNOzvr+0C5UfBeZSzdDQ4KjpkFTAftdsdnKEtXd3FZJYvBvBbznv3+YMAhkkwVYVG7gRg0QaHUdJ9SPIlDzDMF2ItQs7Wo9ARpWSpC4z4lAEo7drBzm/tJqR5gwhS+v+K1FPQNaVQi/8CEXF0Wn3dH1dezc18uAN9nUtig9QiUw9/QMO9NiLaJO2UJas13v/UIZw0BlwhVqXGSE4PWkq1UTiZqFVdBci9QScOH3BYbxYO6JpBV7KrtOQPPQr93hnYudVaxuS4koAQH8whswKWnlP5JBQ9Loz2z63WvzKJ+9lkI4HIzFpsDZT5R9vhFCBjcxdQduU3n3Uv/dvxuak4QVaqX05rRDSDXB/nisUjg7/Ki8cWwMeV6FTknbEkm0+hrg5z0P3Aidm4N42dK5/cNdFYUcbvo88YbWXIurp/YAORGxGubS3ni/z4f2Y/GzR7piHTsloNtTGP172froiMkKXX+ELviBVVg8UR98/WjvGkaI2EBIVBA9XtmHbZjha4HryW1hUOUusK+t/dWLY0hxr0pT7qjx2tqvCs88Z2sya5SJFPUiG2L82dqfRoFh0fWUUNywWmbG+owpb4TddC2Gl5wgxjBe+YJnH4JEMFWhc4dwFzva1h0uUXv2Ipi9CKLfLBJbkQLquKIyiZC+11edAfNvtGFAvU4bbywJWRwkqSzwxci8oiypZCy6MP3Dq2KfwxS3/7gl9JmskyMSpAWjwmuq4e5VV2rGfOCayXb6KqKtvgQuvESFWLsXur2XqNG+EvII3d5WWqhBe6WmiMuIYYnoAYZ2yzFER1DlSWy7GVG83vc8V4hw6E9oB/ZwufkfVjBEv3XI35BrrY8RLiAzbvKRGGIt5Ey0n01ipisn5x8AofxmbqPyNeBJTauJ+i82bcNFc/X3128W3vLYChZBaAytv3UkWI9h0IMrhe10jhcyYvOhMb9tsYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Before a drone flies, what do you physically check, and what do you write down afterward? Give me the last three items you recorded on a drone, as they appeared in whatever log you used."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS9QYKEAgTGAI4AUIIdGhpbmtpbmcSDIGBOdwZTqak479+/hoMT3q5l3mPJVuwuS9EIjCeNWaRCqXXzvF+8oxvG2CWNdTJcTim8q9AA4y8goYB7HFmJcbq39ryFdRWhXUus74qkgYTf+ABD5KfoBgAkfpe9DsAvwcodCiJ/0L797rgQQ9abakbwxzgfLSB96G7279ZGo9Hm5xecIJ1FHlNrxuyR84esznNgWvhZNTH8wbp/6KLNa2FNkAMKCSoXlxrbBXOLkgdf/0Nv1ERc+QFXYsFt/8iMIGAS84BW4zSS1fKaDALM9VyQPgimHspwt2pg5qfttfjgEAbTs6zGaDaAoiC6pYWP/iIq1TfRf3tNfCYKaHH/KIH8wAWR4k1fYcQJYU8PqZoOdvySRT5UcY6kJFZRvQmFbh8Ys8qFUpd8TL4DKpIlsFgZ+IAuRNJjpwcfJHGJHc/lWSJwEjrIpMoIZ0Wo1Dk3O2N14GbMkkB1eKEQIDaeL21AsIRvnWLmaaW3Tp+jbN8XwXUdlS426dU2Z67spQVOlDG39hilV7Yer/gPgNNuAtAI+DCu7C0DABLNp0uIn2AGPx8U1EEpmWNlxOY2V86oE7QSSNnDnDKsjvk3RPrd9wQHlj3hyRtENSpLBzUS017G5QDAXpXZEH595Q7T1Yck1ZclX7o5s42cDsn7sIRyvmfJnULy9j27qcRrYQ5HcblHdK8DqQMtfTdc5lHBvQN9jjY3brWyEse+pglh9w/GYPzM7hX6AXOx/zNPEBTCQO+1Cef8dg5T+0V3hWHFXwP1s50RtP1ZcQnTQhPcK43s1I7sQOZr6MWMQTQUh6G8bMqZMDuJYDMK+4/b4HSC+JCXZrRT6t8L+FwD9IS/TVNEyUi5r5qkO/FMNJDMLt9RhHOtenftXn+fp2VpN6zY4d6t9i/EHtaluNdPANZuHSW9q1u5oMSCU2Z+A8AWJ4ZaZssn7kjGgFuWUzihQHrP3UNiEXApiaZD15UhbDwhYaIpIw7EbT+OJ5KKLlTrbzQsvbePpgXU4uCdSwjaiN5awVUiIjSv1DHh1ox4E/ArxHzC/57Ixtq+FDAcAXl4jCnRXG7SowwRnyHxKxgHF0wcWLuxzZ9KEoov/6F3gPsMSTfrUDzATJTUwfFBdI3uzxisvZUij13Yur+Ywqcqi0Ph/Gkz0kYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When a job comes in, what do you need to know before you can assign a drone and a pilot to it, and what do you do if that information is missing?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I am a dispatcher, and my company runs its own charging pads at our own sites, which are never lent to other companies. I decide which drone flies and along which way, and I sign off a flight before it leaves, but our policy is that software never chooses a drone or a way for us. People on the ground supervise our flights on their own autopilots, and nobody steers a drone with a stick through our service."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSqggKEAgTGAI4AUIIdGhpbmtpbmcSDO/IGPL4DRIMNiQ5lxoMoa9GjI5KX//YrBcQIjDO0E0H1gYHc6DadBDGo12qwDc4yx3nmmLQCg6d2raWYg9TqtcKu9qgrikX+RlAWewqxwcw2VCfwAGbjazqBU8VTUo/F2IkAV4WldwdqOlBWzVPWsCEwml9xq9pN7iQI/qyCYbX8zFEN9SWGCj/0cYs5hy12i8so2sr0b4xCm/ngqdXmcg9fNCU3IHV0XYpGCGi3haxCpdctTWr7kBW4BH9HZX9hNNrq/eKGRQ2pgh0EfraXc4l2cY23iM2r6P4rVGvthRSRMrLTsvZCcynCsLMZ6ZrnLRNElqcN9fvsHZu78R+wUnjl50Zp4ASGOuNoALM9zn+oLNcDQvJq+T376qdpNRXTRHMnKW/7HNaq2Kqo/gVzQiHjTtHqyA1+H+DCkh34W4bbTrNm+pcMvGiL+dmLvtlxS40xqHRbTWyFCrxWMTnwckTDqI7bNyCRHYhjvR1UudQZzvcxV7J7+lnEE9b0w9e/zdLYyt0AiFmjKLOjwHBsipxfue8TcIqQopzhdz7hX5xI5rOzpK4zVSizF80ZpsHr5k9G0yJIr2w1ZJqk0XslUP4GVp4Jyi0gOfM87Xs/HCzyVFFt4KF9re2oFNOTqIQ7PjR23f3NeMgq9Xkp9K2P40mG5TY1YnmkLhFzAQ8jksT+YPSZPCdc1Jpw2drs35vvCUaPG52LfEPBsQEGSEZtwKkMCcuEMzzV6GHNhx+Ab1JzyzCV1B0MpJUWuHEegZ8gjBY1UA1TCkRKmXQvlJyhI4hCIgyxbySjhtsMv5yI2hOwouazF/3h/mq9gbjfscN8I+wWSAfTqYPM7bz+YFcgT5Ix8prBRa8XxZJgxJzC/8NnKPgbu86b2rHAkfvjffvMnZuzg/i5v7qDwS0wkrn62sBa9k1QIGSFWHbu87jwpoEpxCRU6N/FOI/7ndBk1JtHeqQnVgEcjh4t0qt3nurcXh+iXa1d62EbbHdpLyP60JS62PquqoKoMMnKxviWAnUcNhdo35gPC++LYzVDkgqv3OEXdX2LqbvjOylftwTx7CaC2Kk0JCW5t4afSIujnU80G74TTYPCDF73gkOPPcPRFFY9WoCE+loc/nrJNDkUg8zGjYRKmznokqiNRfsACVNumk3uFi7z//dNt3fNvX1zynl4L8PY7gnz3D0z+UEqTXydIx7gd/y0TagyQP9JGWc1vu6YmUsIz2lBPxVrK7Cj0H7vyU9j7GkUZbThBI9J7xxKHau0JuiRK/eth2s432Ax6kPCONrhPA/5kx4fKR447Y+PjuHWh8yy3m2kB3Chd/VRaCBrPrFHW4VljH6zyUs/ydKUxwKQZbeOx528LszA6v56hEYJJcJIPxbbCfLTSkul9HIV7OmGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When you sign off a flight, what exactly do you look at on screen before you approve it, and what must be true for you to approve it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS+wYKEAgTGAI4AUIIdGhpbmtpbmcSDJ5JurjJrL7j5R/amRoMTwLaSMRcPsDZvhQSIjCKju4TlqKS8SLpRbXdF2rcXHb9mGicZDd8Ei33bIW3OzzDNbzuIWt1rU+8kU8M0ZAqmAaTZW/VanZhhWZ7iX+EPNapY0Ro9ePnZgdmeMhkH7ZbVw02EXQr/QZragR1lQBIwQulPxqFCycXO2wQoNMI5i1J17+lWHxhhfOLbVX4PP3YPgrjzV/POOWOi83QvgbFUDvrybqhCtD0WBXa8wfh64xK64QdvAi920unXkpxOWXPlIyhWMFFVlmiHyn5g8AKNwvu8Z69382gUe98QI20lV4HRYJbSvXWdSUa6sM75g0VZ3qOUd8a6NhyPT0yEAckRvaUbOHsZNbRtWR2FyAKxDXq6MDbShN7cND+mfyfDhYuNYYIOEGCoFhR2ao0+A7Luk1JC7txD/ZN4vS7qxFzaegTmwOdy3AKVsc9wgEYhZaq6dz9pjRuF2+OWEmnxNjFUI83qDlIrX69YNSTUzdlwS/kKaNaJvuvwV4d6VzU+UBF/W8COHVDbNTMACTog5EGrtW3Yq74zyuH2xwI0iGOtYGRNHla7RtSymT05avLqtUt1UHtoJBI3SP5Zot1ANGfj3SEugkk5Bc+SqHz0W4D6zTGd0WNCHMRa8yB5TdSJWZLQZZ0rrDvdEV+pXG+TPlGGUq+aPS7xtJNMjvhljlG38MSwzOqSEX23uHwS3i1hp2cvFrSGFiBYQ6Le4SPQn78RUfEdoLpB0dJESmF40+3iLf1kmjEODMpM0n8GB2UzS9EdQIVon7mIZq+gS7ncrZ7rAzMlgKz1C4hpuKHG+k0w9A/GPCFG82aUBuw7fnl1IFXZ1HHqtiJIsrqCnRgPcTC4Z1HLrn37PEo69cNZptbzbYfh7r1mb/qM8zYTj2ascgQxO08WT6zVr8hxo51wYi2sS61v5y7/fFNbLPmMtULZ1GV26Yusnb5IDH66uhf8YJsUOXiSqwQblRqHOnu/W32CU1G5+ZjxUL9wNyfR4SsGnBzEt43k+NJ/27uIhI7jjHNl9mmDfMrW1MMgGjUyh7LAGwHoJSPbrc0uGTuN7iUJkD45m7yUfu62YFwUcZ83Ae7Ra94PM8T6PRO4tGcaNnVHILY5Zlc0t1myNAFLYisfcTj6X0tpa2EZJ8YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK desk: Which airspace information do you need the service to show or check before a flight is approved, and where does that information come from today?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSsgsKEAgTGAI4AUIIdGhpbmtpbmcSDCsGVkK43P5GEl6FNhoMeabqK1WC9elaPlv8IjBhdffSv0bDqlfuEAvVGDegHEfrqr7vCVqxSXpenFPEcUKwhQX/tzqx0R2XszTxPLYqzwp34y/AusENMPnbMrVdQxbofFrTSWfNHsysdSnmj12aqWYZ3pDszE2ima0Bt1iHZtMo5lof8aUeMxjGDXgKBpEJMg6+BBXEVESoUt6ZB8swBJr9R4WbYJSMY1tTdRqeumuuKoD/3yodcfrVaSZMv1EUpTPmstfzEZHdEPaUkpaAfYIgUl96dN5LI9uQvfKc8cgWK8VJGS6VcDp3DjVsJl5a30fkT0buN+fm9srZRCkepH8fhtInZB6poZARtEc577ng74Ju80JymcPIzcUjMhfOMdAPzz397x78C3m0I4004E6nBDx8zjqPvsskYbt3sOup5Tz+eQD7Of7okjbPSNAXtEPVvP7nXDDXmfiC+00s6EYR97TFmRcdSQkF8GdlW1iA+IVS/k/V8sFJYiOmHBeUdq1vKqFA9Kocj+J09gU1BT5P3koO5RsyI5Fsoxd2sG2rVF7dtu1B9RuRLdSAE+XaVOaZmfu86hBkYYD5PU3JZBE0wz/5c2Rqrgikv6mqYZHAPw8Lw87MfhA09dNd4ZRZjQQRcxgjLFQPwBtMOidQP94SmtWEFYwGEPl/Gd8W0ziEK1ZDqtBSulS8ZiOVdn4ILXNArxFZFkMiMms3v2k2kG8Msmk8zRce3iNut0x9Mq8JHamRmdvhRhdqE+6PBSogvo2qfDXsNL76NzMKbKqxPumZyXjvKch7mAAV5i7OBUnbU7Mx8vokKnL2pbQwg4nJ6OET4PcNdHdEr4M9AwV76howaN3Wl+V+UfGbiDidRzFxobBS1/fOHr8TXhQlxt81JveUaWIKefM8iM7PPVZlvVbEPC2XzFE8IaaSRdfgAc1ddOscKoWpBOfsskrgnt2Stqrjk6LvDQNiZm24c9nhKSb/nViKxvkXXylCQ6qr2otqXmV1ik3dlBfzBLFTutUpJKyyv21hQF1UULNd9a0i0M2kW0ApflMr6subwYScAAHVVxtmj5h1vEaHLOWeJgohT8/vyjS+Cit5NQYkOEaZcorYkfgWr4Dw/Y7JRYgHU6zSUvhpjuc4FkMfHMPeUv8KuJ1cpnaFc3IaVRz+OZdXGJowxHvnH4bF2n3WiW29TOw1K9hwOpmdlBB6NOah5NkOmo25tE7jUU8BGEQ/XIGmToJxy0Obgs1TMs86R1RA4O648RHBLRd4+XhYnF+m+HojSXItSaaZ7xGBqhRl13X1coSG/M+cR4SHfwk3DSIQq1+Vir5u9H83jXtZmXsfRA8G1vBjp7TSdudB3g7YfxdcxDtbMIErYp49J32z3aeGDYPiUnhTtIgFIOKOJNkjSuFXr0D0zMTTzQRtGL5QqjiCkLG8fuNspJOVQSl9D96XZ4nLzXcB45+nDE188kkZsgg6IeBJEonaes0ZpfGXOJ3Utr8ojm5Hr7tOw64RrWMriMYG1+UYZMoTUaCzg2x0flb6SKzLDLWiokCoeLcOlOF0Mgy+0X7pqXiFf9ecWWAyLs61GXrCq/M/xr3RBz1uCMkwERevtBxi3v9abQgMJqYlvrBKMdoI3JQkc+NmEVub9qss4G2avROZy1gQJOQm09oIIh2/22e5rESnS8lw/cCYpmws6+WbQqUqi+V70cMsFNZ1r1xVYng8jP2Ht0owZSWsFdq0Q0q4tlFaGWzWiJTk69pg9LbdS4DSqQ35GYxUmLfJRd0rYROsC/KpBX9up49IjH4i+ddj5x6jVdRvr/mkxCwVPMpZBSC4E3loLlIccjKfcTvgFwjAO7MTThoKQKrZC1M8EgYvEFNGDV57ImsolnXJwMPRONmZSokWMevoQHmqvNFvgZ6zldAmDKUZpfUYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Name one problem that has stopped a flight or grounded a drone in the past month. What was it, and how did you find out?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

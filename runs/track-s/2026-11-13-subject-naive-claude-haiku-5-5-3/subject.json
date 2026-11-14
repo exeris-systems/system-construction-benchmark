@@ -1,0 +1,120 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "dispatcher",
+   "question": "On a normal working day, walk me through how a job gets from a customer request to a drone in the air. Who creates it, who assigns the aircraft and pilot, and what must be decided before launch?",
+   "answer": "I plan and run the flights as a dispatcher, which is my legal responsibility. A company's policy is that software never chooses a drone or a way for them, so I decide which drone flies and along which way. Before a flight leaves, I sign it off."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you sign off a flight, what exactly do you look at before you do it, and what information do you need on screen to make that decision without phoning anyone?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Before a drone is allowed to fly, what checks have to be done and recorded, and what do you need to see to know whether an aircraft is fit to fly today?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "What airspace information must be checked before a flight, where does it come from, and what record must be kept afterward to show that it was checked?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Today, where do you record a flight sign-off: on paper, in a spreadsheet, in a system from another vendor, or somewhere else?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Which information from one customer company must never be visible to another customer company using the same platform?",
+   "answer": "Each company's fleet, jobs, sites, and problems are its own business. We keep the shared picture of the airspace for everyone, but we have no business looking into any one company's operations."
+  },
+  {
+   "role": "desk",
+   "question": "Who maintains the shared airspace picture, how often does it change, and what does a flight have to do when the picture changes while it is in the air?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "If something goes wrong during a flight, such as a lost link, a low battery, or a person entering the area, what do you do, and who else needs to know?",
+   "answer": "I can call off a flight, because a dispatcher is the licensed person responsible for each flight. Each company runs its own systems, such as billing and customer updates, that need to hear about what happens to its drones and jobs."
+  },
+  {
+   "role": "technician",
+   "question": "When a drone has a fault and is taken out of service, who decides it is safe to return, and what has to be recorded before it flies again?",
+   "answer": "I don't know."
+  }
+ ],
+ "requirements": "```yaml\n- id: DR-01\n  requirement: >\n    The service must not select which drone flies a job, and must not choose or generate a flight route. A licensed dispatcher makes both decisions for each flight, and the service only records and presents them.\n- id: DR-02\n  requirement: >\n    The service must not allow a flight to be launched unless a named dispatcher has signed it off. A sign-off must record who signed, when, and for which drone, job, and route.\n- id: DR-03\n  requirement: >\n    The service must let a dispatcher cancel or abort a flight at any time, including while it is in the air, and must record who did so, when, and why.\n- id: DR-04\n  requirement: >\n    The service must show a dispatcher, before sign-off, the information the dispatcher needs to make the flight decision. The exact set of information must be confirmed with the customer companies' dispatchers before build, and each item must be listed in the requirements.\n- id: DR-05\n  requirement: >\n    The service must keep each customer company's fleet, jobs, sites, incidents, and operating records visible only to users of that company. No user of one customer company may see another customer company's fleet, jobs, sites, or problems.\n- id: DR-06\n  requirement: >\n    The service must not allow any platform staff member to view a customer company's operational data unless that company has granted access, and every such access must be logged.\n- id: DR-07\n  requirement: >\n    The service must provide a shared airspace picture that all customer companies see identically. The shared picture must not reveal any customer company's flights, drones, jobs, or sites.\n- id: DR-08\n  requirement: >\n    The service must show the shared airspace picture as it stands at the moment a flight is signed off, and must warn the signing dispatcher if the picture changes after sign-off and before launch or during flight.\n- id: DR-09\n  requirement: >\n    The service must send each customer company's own systems the events for its drones and jobs, such as flight launched, flight aborted, and flight completed, so that billing and customer-update systems stay current. Events from one company must never be sent to another company.\n- id: DR-10\n  requirement: >\n    The service must record every flight event in a log that cannot be edited or deleted by any user, and that is kept for a period confirmed with the customer companies and their regulators before build.\n- id: DR-11\n  requirement: >\n    The service must not allow a drone to be shown as fit to fly unless its fault status and the checks required by the customer company's own procedures are recorded as complete. The exact checks must be confirmed with the technicians before build.\n- id: DR-12\n  requirement: >\n    The service must let a technician take a drone out of service and must prevent any flight sign-off for that drone until a record shows it has been returned to service by a named person.\n- id: DR-13\n  requirement: >\n    The service must let each customer company set its own users, roles, and permissions within that company, and must not allow one company's administrators to change another company's settings.\n- id: DR-14\n  requirement: >\n    The service must work with the three roles: fleet technician, dispatcher, and airspace desk. Each role must see only the functions and data it needs for its work.\n```",
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must not select which drone flies a job, and must not choose or generate a flight route. A licensed dispatcher makes both decisions for each flight, and the service only records and presents them."
+  },
+  {
+   "id": "DR-02",
+   "requirement": "The service must not allow a flight to be launched unless a named dispatcher has signed it off. A sign-off must record who signed, when, and for which drone, job, and route."
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The service must let a dispatcher cancel or abort a flight at any time, including while it is in the air, and must record who did so, when, and why."
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The service must show a dispatcher, before sign-off, the information the dispatcher needs to make the flight decision. The exact set of information must be confirmed with the customer companies' dispatchers before build, and each item must be listed in the requirements."
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The service must keep each customer company's fleet, jobs, sites, incidents, and operating records visible only to users of that company. No user of one customer company may see another customer company's fleet, jobs, sites, or problems."
+  },
+  {
+   "id": "DR-06",
+   "requirement": "The service must not allow any platform staff member to view a customer company's operational data unless that company has granted access, and every such access must be logged."
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The service must provide a shared airspace picture that all customer companies see identically. The shared picture must not reveal any customer company's flights, drones, jobs, or sites."
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The service must show the shared airspace picture as it stands at the moment a flight is signed off, and must warn the signing dispatcher if the picture changes after sign-off and before launch or during flight."
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The service must send each customer company's own systems the events for its drones and jobs, such as flight launched, flight aborted, and flight completed, so that billing and customer-update systems stay current. Events from one company must never be sent to another company."
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The service must record every flight event in a log that cannot be edited or deleted by any user, and that is kept for a period confirmed with the customer companies and their regulators before build."
+  },
+  {
+   "id": "DR-11",
+   "requirement": "The service must not allow a drone to be shown as fit to fly unless its fault status and the checks required by the customer company's own procedures are recorded as complete. The exact checks must be confirmed with the technicians before build."
+  },
+  {
+   "id": "DR-12",
+   "requirement": "The service must let a technician take a drone out of service and must prevent any flight sign-off for that drone until a record shows it has been returned to service by a named person."
+  },
+  {
+   "id": "DR-13",
+   "requirement": "The service must let each customer company set its own users, roles, and permissions within that company, and must not allow one company's administrators to change another company's settings."
+  },
+  {
+   "id": "DR-14",
+   "requirement": "The service must work with the three roles: fleet technician, dispatcher, and airspace desk. Each role must see only the functions and data it needs for its work."
+  }
+ ],
+ "unreadable": false,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 9,
+  "questions": {
+   "technician": 2,
+   "dispatcher": 4,
+   "desk": 3
+  },
+  "limitReached": false
+ }
+}
