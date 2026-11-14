@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Can you tell me what specific actions you perform with drones and charging pads, and what rules or checks the service must enforce?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 859,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 887,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 859
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "AEL4arfhObPjkdUP_fSM8Ao"
+}

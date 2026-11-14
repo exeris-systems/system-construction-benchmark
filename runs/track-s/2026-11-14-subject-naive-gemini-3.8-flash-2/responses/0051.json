@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What sites exist, and does each company only use its own sites or are sites shared?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2193,
+  "candidatesTokenCount": 21,
+  "totalTokenCount": 2214,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2193
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "eEL4aqmRJJbq7M8P1p24yAw"
+}

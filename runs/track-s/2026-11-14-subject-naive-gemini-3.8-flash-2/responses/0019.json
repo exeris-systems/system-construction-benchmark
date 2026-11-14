@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What details are required to define a job, flight, or corridor, and what happens when you sign off or call off a flight?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1123,
+  "candidatesTokenCount": 30,
+  "totalTokenCount": 1153,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1123
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "E0L4aoWxEf_txN8P26qnaA"
+}

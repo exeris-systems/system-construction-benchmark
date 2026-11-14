@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: How do you plan and sign off a flight, and what information or validation does the service need to provide?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 956,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 981,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 956
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "B0L4atu0BJX4xN8Pu6e2kAE"
+}

@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: How does weather, such as cold and wind, or battery drain affect planning or sign-off?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1523,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1546,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1523
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "OEL4ar2tCIS2vdIP1ObHoQ8"
+}

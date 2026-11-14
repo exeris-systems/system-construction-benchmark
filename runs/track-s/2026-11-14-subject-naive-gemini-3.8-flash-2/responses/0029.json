@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What information about drones does the service need to consider when helping you find which drones can get to a job's start?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1420,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 1448,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1420
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "MkL4ap2PBeX2xN8PhfiKSA"
+}

@@ -1,0 +1,390 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Begin."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK technician: What are your main daily responsibilities, and what specific tasks do you need this new service to support?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "My daily work involves keeping our drones and charging equipment in working order. I add new drones to our fleet, retire old ones, and set up charging pads at our sites. I also take drones out of service for repairs, put them back, and send them to charge. Regulators can ask us to show how our drones have been looked after."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: What are your main daily responsibilities, and what specific tasks do you need this new service to support?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "As a dispatcher, I plan and run the flights for my company, and I am the licensed person responsible for each flight. I decide which drone flies and along which way, and I sign off a flight before it leaves or call it off. Several of us plan at the same time, often for the same busy sites and popular drones, so I need help finding out which of my drones could get to where a job starts. My policy is that software never chooses a drone or a way for me."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK desk: What are your main daily responsibilities, and what specific tasks do you need this new service to support?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. My desk works for all customer companies and has no business looking into any one company's operations."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK technician: What attributes and details do you need to record when adding, modifying, or retiring a drone?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK technician: What information must be tracked when a drone is taken out of service, repaired, or returned to service, and what must be kept for regulator records?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK technician: How do you manage charging pads at sites and what does the service need to do when you send a drone to charge?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Each of our company's sites has a few dozen of our own charging pads, and we never lend them to another company. We set up these charging pads at our sites, and we send drones to charge."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK technician: Can you tell me what specific actions you perform with drones and charging pads, and what rules or checks the service must enforce?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep our drones and charging equipment in working order, add new drones to the fleet, retire old ones, and set up charging pads at our sites. I take drones out of service for repairs and put them back, and I send drones to charge. Regulators can ask our company to show how our drones have been looked after."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: How do you plan and sign off a flight, and what information or validation does the service need to provide?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I decide which drone flies and along which way, and I sign off a flight before it leaves, though I can also call it off. Software never chooses a drone or a way for me, as that is against our policy and my legal responsibility. I do want help finding out which of my drones could get to where a job starts."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: What rules or conflicts can occur when several dispatchers plan at the same time for the same sites and drones?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Several dispatchers plan at the same time, often for the same busy sites and the same popular drones. Sites have only so many places where drones can take off and land at the same time. I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: What details are required to define a job, flight, or corridor, and what happens when you sign off or call off a flight?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly along corridors between named sites. As a dispatcher, I decide which drone flies and along which way, and I sign off a flight before it leaves or call it off."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK desk: How are flight corridors, zones, and closures defined, entered, and managed in the service?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK desk: What information makes up a closure, and how do you calculate how much disruption a closure causes across customers?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK desk: What information can the airspace desk see, and what company-specific details must be hidden from the airspace desk?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep the shared picture of the airspace, which consists of the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. Each customer company's fleet, jobs, sites, and problems are its own business. My desk works for all customer companies and has no business looking into any one company's operations."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK technician: What records do regulators require your company to show about how drones have been looked after?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: What information about drones does the service need to consider when helping you find which drones can get to a job's start?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The drones are of several models from different manufacturers, and they differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use. Batteries also drain faster in cold and wind than planned. Each drone has a home site, and each company has its own charging pads at its own sites."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: How does weather, such as cold and wind, or battery drain affect planning or sign-off?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Batteries drain faster in cold and wind than planned. I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: What kinds of jobs do customer companies run, and what requirements do they have?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. The customer companies compete with each other or work for clients who do, and each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information because that information comes from the authorities and is the same for everyone."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: When you ask the service for help finding which drones can get to a job start, what does it show or check?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: Can two dispatchers assign the same drone or the same takeoff/landing spot at the same time? How should conflicts be handled?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Several dispatchers plan at the same time, often for the same busy sites and the same popular drones. Sites have only so many places where drones can take off and land at the same time. I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK desk: When closures occur, how are they entered, and what disruption metrics or information do you want to see?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The authorities announce planned closures with a start and end time, as well as sudden ones that apply at once, and these closures are often amended during the day, such as when an area is widened or an end time moves. A closure can come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK desk: What happens to drones in the air when a closure comes into force, or how are dispatchers and the desk notified?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: What happens to a planned or in-flight mission when an airspace closure affects its corridor or zone?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The authorities define zones where flying is prohibited, and they announce planned closures with a start and end time, as well as sudden ones that apply at once. These closures are often amended during the day, such as when an area is widened or an end time moves. A closure can even come into force while drones of several companies are already in the air."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK technician: Does the charging connector on a charging pad need to match the drone's charging connector?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Our drones are of several models from different manufacturers, and they use several connector types that are not interchangeable. Repairs and servicing are carried out by technicians, and regulators can ask a company to show how its drones have been looked after."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32000
+ }
+}
