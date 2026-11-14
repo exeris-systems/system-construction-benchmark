@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\"questions\": [{\"id\": \"Q2\", \"follow_up\": false}, {\"id\": \"Q3\", \"follow_up\": false}, {\"id\": \"Q4\", \"follow_up\": true}, {\"id\": \"Q5\", \"follow_up\": false}, {\"id\": \"Q6\", \"follow_up\": false}, {\"id\": \"Q7\", \"follow_up\": false}, {\"id\": \"Q8\", \"follow_up\": false}, {\"id\": \"Q9\", \"follow_up\": true}, {\"id\": \"Q10\", \"follow_up\": false}, {\"id\": \"Q11\", \"follow_up\": true}, {\"id\": \"Q12\", \"follow_up\": false}, {\"id\": \"Q13\", \"follow_up\": false}, {\"id\": \"Q14\", \"follow_up\": false}, {\"id\": \"Q15\", \"follow_up\": false}, {\"id\": \"Q16\", \"follow_up\": true}, {\"id\": \"Q17\", \"follow_up\": true}, {\"id\": \"Q18\", \"follow_up\": false}, {\"id\": \"Q19\", \"follow_up\": false}, {\"id\": \"Q20\", \"follow_up\": true}, {\"id\": \"Q21\", \"follow_up\": false}]}",
+      "thoughtSignature": "EmMKYQFpFH0TsusbPDaJXEFqNolILkgzekQtRKCyCxVoWsqTiiLJO1WM5DORKrG7DgRyChAB//cz+8iOm2JyvoTdnkovyK/cV1NzLe3dOF3v9x0NZPnhpTehZMcbXQyGXI3rkPI="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1549,
+  "candidatesTokenCount": 299,
+  "totalTokenCount": 1848,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1549
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 299
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "QXT4asX7FZa1nsEP4430sAY"
+}
