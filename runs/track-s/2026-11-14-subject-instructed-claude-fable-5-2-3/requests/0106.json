@@ -1,0 +1,505 @@
+{
+ "model": "claude-fable-5-2",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a dispatcher. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSwAUKEAgTGAI4AUIIdGhpbmtpbmcSDBVo4ORdTxfBTNCPCxoMMJOdEAnCQATPOnhiIjBE0xKAui/oeaTZtAm1HFOVZZdO4GRDoLsGkdyTb/p/R5rn6S3tZPZO2z2ykK+jxE4q3QTZ/g8iEjDTw82cAWiZ1/WrPq02UBeDMqgjCSOp0S6Cw1S86VZMHW2NeoCzeDM1Rqf8PlThFYwNSREsvYrW66wMU6CEiEklzINXDzW4VWV9z54cQ53gcdDDngBLIR9k3GbBTfdTB2fJJ3ytvNhWiz8JafHaQPieHhYELKX/MBWmLAZkSazIGrQOzqGr3ez38SECrPgX5YVwaBBQeloktQdIzph8EfvQ8hJcqgjtbpYXxIFpNnZ5+dih5ypm7pzFZEs2HHovs1M+wMz8nUwAIMk/Anm+kE+R8GfL6eKt92GVXKptf/kuacZ/s2Rn0nkeiwn9oJnnwP6X/Ueb7RvsU50V1mnBCF9RCv6wH4tmHovwrE0IbYiYn3gmJUJrCOVnXiug1jL6L+jY/6sqfCVCco2FqCF1EuouMDy/Po7P6FTbNNp6ycHoYOHk0dF3k4GKeYbEQrzQEdc+nS/BAYltxoBm1OQTBcTwime6IOwQeJ9YxptOwCawK4adhnZzHeb+Kb8zAvrwKVk15180y+p07eqb54lrBbBqv+BBIOL5oXmjQkCrqm/kkAV80sQjx5RQmdZt+2fLj5gFEXE63p6+dmpu32RON4nLcf0bATgIvEvY513Ge/AFexOp9aMUUCMDcaIXGrzRLo2CQoZwaREr5OfBySkLMk7/F1u7bPp9GEuJtKqSs9qJhZg58QUs8oVWzVg6B99zyIZfR8LUixYWOmBacQ7kU6AFLdTM8QVVdYp60vFTKt/m0OE7UFbcrnnD4XEvndDHe3oAS88w/PF6bvy5ic/tlyWdkQz5E3KGrhgB"
+    },
+    {
+     "type": "text",
+     "text": "To start, could you walk me through an ordinary working day, from the moment you begin to the moment you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSzgYKEAgTGAI4AUIIdGhpbmtpbmcSDHMtm2CpJIs05lxcmRoMs77s2YbjGwdvNNUTIjBGrkI1kQe8fVqH9hygHqecOzot7VeMMOSXpDeS5PEclr1/GbZXIJ6CheoAzCvC6jAq6wWBHWNt+rynpLjBCesrtR9N8wE0rN85h2bHe+OjrPiacSFBwgjBIvTUqI6mlhTfNlNUicbaKR19g9gW0B68DxblYNr7ojMUpEiz1dKTQpfH/LehWUTg1LP8ThkSow+yKSoocNuF7ZFWHdj7QqrEORC2Zr3dbxJo3bHvYehYwbpt7kZcBLLSGKcQo+5Bn2lGQJt1sC9vU6Qw9wAFHRUQqpFhTaMh6igk7f6Bw/d62k5Odssoz/1hi61h5slMyv6K8lZFvTsUpt1Cww04XtjbtRDaTO3FtZVxvOlKAeyjvcfRvtMlmXcPUUKn/TjiDBVqtdI5xqTXsS+QfPS2n3YhERAUsW9fPWrOk8XbUeYTncZ9yRpV5fngnM2hGTLoXdjRDC3dzpa/uP6YPrveybFPQzMaVB6kTx216P2IEnqhuOavXCRPjWBca8Nds6clAGv+RA6FA5PIIV0hOkhKkgj8NK2tliINEp2fFLMUzwhmYXdXRu931gY68HEsqAJyHOvU9rol+vhM5PwoMXMZL0//LeVKp/Qxd8FInahl+0CCBIPtfxTjDmIF4u2u935wFzNdpfxUtB/3FE6pRhPQW+ZYgs+g+7BQ+mZtyPdQpB8qAofJWU8auoUbZFW8XLvVRxfX0QQpRvOpU4OEjA1UNu/aLEGxalzIfKCkqLnNPwDKL8/1tyPHFPO57a2j/hRPgq9P2xwSLl+ey8ApBiJUfMSjdvvkAo4Amqib0JrWf7f+L4y/J+eg8Dj8oWXMEl3u5Pparv2AZrByNFcLgsc2gEmJK4JOPLpV9iaSaVvzXcWn223x0ZXKSd/9ot7W19MgiuaF8EmJJnVLc8s8vFtE9J6P2cIrmsh5i+KMxM1cPa/jMu01hXv8nLgIdfFsCi7VCloGZQyhNli9gWsil8FehBONUmjjy1v6v+5UEphDV+eJy3eDpL+BDtvdUOGrKfdt/5znEao7jXiWDQXvJAf0eDLl5nIhk/JkAjMON/otFMkYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "That's fine, let's take it smaller. What was the very first thing you did when you started work today?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSlwkKEAgTGAI4AUIIdGhpbmtpbmcSDHsaB3gpKxR3qhof9xoM63g23w6UDHzshdtbIjCXNZSa2r5p1GLIBQdQ+u8Fwh4bKpm4SFKVaroxydlWZi3l995Y781CFSJlWDsRMz0qtAhTIiU8NlXsoa+Fi5epg7jyAjKffri5p9stSBpcbH3JVMScbMk3JaXAYOEFOhbO8985r2iIszICHxwLaiKbwds7BgzRAM1+ehFlKkxpd+23EnfkzKY/Mf8ZusIWEXWtmqKdCqeOJqqcmWny2+1bhZbJdVWVv0myoQwDR6fCJZNYmQjr/ICl4tr0CDlCtpMnUMq00u9t182ST+34b1LcMeHhiSfK79e5srxidSFzFGeKHVzb6KrJ9i+Nao3dFsoIBcsMhwGb1HYxkjCuXUB063VnXnHRVyNinrwzIMAmzdAmhEhgB1ZBZCWe6Yffy3wxv0AKVEpGwvmJ57wKaeQTNTCUm4TYCh1yniLPgZflJPKjPWdDl1/+OsD9hGQCFflz0dZdvw2nrqA7QO7FRvpk/b14dRKHG0QgyXcBPO0B1sCW+3WevnSwkEL5qqZGF0rlnW1HQeWyUq0wS+RdEMdVLOP4STtkf9Mfa5OXSpbmUNWQ+JT7bSPfHJqpKP1TUG3ZzPw2hPRmueVbUR9SzEZhHOF7JAwfUHs9mBejIq6+FBqduYC2MwruL5NbDrVnrC9agqqa3IP8S87Py4YTqzbe3ORDp5f2O1IWV++ueLY6Ab3uJcInTNNFvsNQCK5OijOL5satmGtF9J57Jwjf/vfZI7h31sx8qFBAFLiTbuMvbmnscLQGIX2HyfsS2KE0JGLxMaP/YF82QnV4TjfK+MZk8URlFFinvUirZi8UJzvI1KoDngsh0C9AgcotW5BxB08VUWDVu/q88aBmFBj6kSmr9OqTIZDw2X8JELrKepzFUb4Y66SDwTolCAaULmIF47IQOG3vMVnoI/QslfeRW70DjwX6nZ69CLI4V/akJagBHz6Fw1v53VoAsEHxDyzYagPeVkggn/FiT8Eqny/CUl4V2xhMHXcEJjlPiYIGVTonW+MqwvcnnhuzpRcV0r1GA6C8Z6+uhzD7RCEvU2YTub3CvnIBLg2TURkdymyfDkH7kt9B4XLCd06nneuZuC0Pny+rhCAjS7v/I+zqJkuLXdz34a3j7ulgEJ/87uW+hn6JkFeeZWvIE1/BpNA78Rnw1zMNi7qOSWAW3IomWqhywL57x+pO9y7Fit6tOOQZl5T4y+WCAh0SB1Gmsqf28vb4b8x1ChvgF1NeJMjHM5niEk97Ocyr0tSpneCkGfJAXqg5l0i9WWcLbJ4nNXHLVmttITXuVnuyDdzws0MfdHN6n5+NJQblAhbOIvCudkVSqwP/jVIQ3r5rYVzgeGwODo9WXTW8YSU/vKF+2aJbOL9RJO9hQJJMV545+WCgfkKxsogKlZKkQFJVFRLyFWd52w6hXwI1wMP+J8dDHIMI9kwxLTyo75HFWl/5m0MDt3wLXqu+QNPnvpoJCVRDlkGONrxZgEZhHWCKB4xow+mu2HT9HPyaAIn1knYEBhgB"
+    },
+    {
+     "type": "text",
+     "text": "No problem. Think of the last job you dispatched, whenever that was. What happened with it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSjAcKEAgTGAI4AUIIdGhpbmtpbmcSDPkDSmGHP4yUY7QaYRoMDdKhm1yXEx6ZNsyjIjDKzAGw7FuSLaSL2Kz+054kAMCN0jCwt34DMj2qojY0YPR9gYB5SOOmN9DE9R7efoQqqQaWeRsjjaKXB8eg3EBLjzghZWr040nyf1k74SoU0kbCTpm3ufm6+X4QXXsJIBjdLnA9c7CPbNlfN0UnmHvP5O6dNsDMucoXu/JQdnLnMgafbSbsPdxbqTnVw/hflc1IZP0hKwx+jPr5lqhVlGd6oYTtQG2Zc87j9RRj13DTs6lVeUpt7vjT/Gy4Yj7vLXXKp1LNtDtEQFptYY0jI1AXCWkM8gD9wDzwgT7QgtVN2I+rsOxDY+vd0x6VWo395XI9SkIxGzlPUxn/DOYknsX5XiplbAK/Xy2JnATN0GX4EeBAOukjWNxP8I5rCChScj937ShebknoDqhcMByZY/Q9KxDyLukDkGQS64+y5S18S9c3dDvL7tkbRtmnqb5TbTRinlbf9KNMrDjAl/IdbGrN9BvSorY1ic/F4kw0+oVeOqAjXylOuqZ2aCBhjAJOuxTQRPTfdd9OGooev+Vb68f+jmirN/iiqX8qPq1gD0f0SHh3W171YcxopNX5oGBusHXR7/VeLKf2Ru+x5vIBzHSY9oM84fOFidVo4unGnqF6LzKUEgZg8UBjO+By/gYLQnXpif5iOzXncoTfOwUwVORIC72JrLLfODXh9zNq1g7lgU4jngt2xUk+Dz5QqpIkX3con0pMHZE1bTotEANrxeripTwnmvvSmwu1benyOfN7WRSBRhwVYgdY3pmvHpSva037ikmzR3VY3XB00lvlWGIWMQV/ROHV8u3rSdnpaVzi71sOIMAAX6Sh30eC7Yy0kwLvA8dhVqoIcU+MvmC7kQvKtF0kC6rSzbzihESpjduXOKM1YSTKZON+4P7wVTYKHlcC95XvC4IHei72/v6cJ+7kRBzIWx9x+jUKDGBfkyt45V1rS3ILsgkLwvFp2JM8dRFZdmajWNfeBwABNLCAP8da0HrqVtEsJcfnqZq5e6DG9WIUtqKEkbdHrh5+cuZa67+rx2Z/FRNReIDENy9iLaqBwcX1s7tfVVFZkVWV0PDCjVaIyeT2641noquP5yREOpnMIOU74k6Ll3oRT7G1sQ0PwSo+Vx5VGIWnHn5yG7InjwA5opndQ856orNdeRgB"
+    },
+    {
+     "type": "text",
+     "text": "Okay. Could you tell me, in your own words, what your job is?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "As a dispatcher, I plan and run the flights for my company, and I am the licensed person responsible for each one. I decide which drone flies and along which way, and I sign off a flight before it leaves. I also have the ability to call off a flight."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSoAgKEAgTGAI4AUIIdGhpbmtpbmcSDK2EzmDSkM8Rp4KSHxoMTeMXKcKl8Y55CMtuIjDLpJMeYx9+o5vp/wJVM7O+YKXG7P7+YZrcfoRjEz24AfL3ZJD6XI7JC3QCeddHJpkqvQdFDPK7rpSf+ptXC5vdvDtzl3WWXXOpoqrE+ksQR2l1oDmOhO5oiq7TsC5xiSRNfZ0KAvyvjnHGY33q6AqY8OAW7S0ZzKUZvPS1IyDzpd4f7PmK5nG41taSbI2yOfeFKdD3gy9o9vnpvAVFXKTUkVudHqWVBVb4Y7kU4qpyrWL+DcBD3INTMbRo3koe9G3JD6+zcjjMKL3h4dwEyB9lHlB/oMXN0ONhnGm98zun+RN/+V6e7QA90dOjAJJpuPDhLYwb68KEx1SpVPh/IIYIaPl5j32510W+cvYmREpZE6NeZ9HxgDabii91y1zBICPJIRADR8/I39XIoS1as5vQttoRZwKLWwsuPeP+KCAayhb6ZFsdq7mWfFGl9kBL3JsG6B85zkHaTotlSoP/Yw9EQaD1GOcfx0FYQpK78owTCocuam/EkGgBlqm55EWs4MRhUefgpS+A5CxTwg0pNXDesjy13XWzEMAygCbIQthCp8RYtWBeVmgK6nx0X9q/28Cf1joG3OJuRhYsUl1qZ2zlxxbwWbBl3uqnNzCDyKi4rsKca17qD+wd0Kg+BWwqhK0LHW9aC2UvZLMo8FUDJ3FUyQk5/jRK6ILozUrrivJhD0vjULPBpmvzXI3R6gZxNkfFqiwacSfCKs8fy1Uo9zgsZwKQceTO+RP5p/ENdcq6fijoYibsD0LIS0KG6O5AzZ560+oOPj7nvZJxJi2vHRs61DecQ9a6tjfR5cCN10wZ+sbWiOHTxtcGNHJszonVF8GB7dOCJ/lWeomqCHj99lWDdTCHDKg66ZtHshKcAp7clwpJEgpImMtM3jnJz0IupNaDScYx7R/hA+PzhcQiTQ7kEIOkBkHjDz/Zevu/y7OI4CZWIYmZpasVEJURSuvXpzqKthISUJNIUnag+V+poKRE1yEfC+H6ut8We4ILoVTVnHw8AmkDFbvEmlMLDLhnTLC2+52ALmH9pe3RQ77vA7VQPAR++au2NUrNbqtjUJv4A/ZlAdFDda5hh4BYvGKfkzj1iCUZayrd+4KXE8MBsYVt+tOzb/EWcRFsbPDaxUFJYY5gnRxVhreJKV9YghNHkhgvQL6FpEXqkaX+1ZSRpZHXhqikW38ID0JMtZFywfRGt0lpvnvvLdnVI83z+JfgRctweQ0ajGDHf07YgCl4d/lVSD3Lh7+pGytu5R6evosS/1sjJrigNmtJFyCw0LRedc7W2jSU5f234NhUQzFMooqVirzoe0pJr6DMn+3eQb8lQqnreIIVxeA1nnmlotDj7XgYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Before you sign off a flight, what do you need to have looked at or satisfied yourself about?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSuQkKEAgTGAI4AUIIdGhpbmtpbmcSDKLw9Qz6PczE0/EjHxoMxBUPPd1tQOVWIa6eIjChSMhgo4JhQRXAMy6ZONwBRgnThe7ckVVvq1MlAe9mKCJFCcgzI9kg5KBlwbRs9YIq1gjllUljI9nJw+/YeVCxVKTDC8TXo4mw+me1FKTzHkKsOAOxRabNQG93GcA6T0ZDNQsTdtCetqe3Ie0ORNfJ0lDfHk2hI5gSJX2sVMaEzZJ3u0y9HiFaQCJSRzO13QCZK55gapZGSLGNgVo8eC5L1zmiInfMXd5GviPZyjLU2MJ2WbnCGzfMTs9rdmieNM/4vsQWaZBRDMxzQ2qN/JUnc9JjY8e7Qj3sUjoHKIV1p8/VdPjQM5oO8R5n921absBTw965p+OI0iNB0ro0SLHZVlVTEf0xdV/fj6iKdjsB47h4CaJf/ZJ4j1F4oc8boh7CM3GSH+lixBHYgI7/wna4JliJv5GbpmyLmM5kTkYQtBZ8MbJapBzb1Gtb+yCcNiFLVi5pyBBOMHwYfCNYn6N6RiEoApQnLotrcdKcO0qRqtsAmC4LRUNa7Xet9Ub2gkARanGoaRdIqcrzDvQ0vTYHpD7RAfcG1gcMoFhPRtQKYLa6uYcViLGLWkbu8xWaW8wX20VfCQi7W9uBP6J43nH/uIlmYvH5aPJLhMSqUsyDqurrR3MwfkFjKiV1PKimBbEbRjkcxIoU68BYogSg7P+Af+TQNZx2US8F7iOP+Rvvxv9KHuRoB6OHjrlfK1ijYRs0Uttqlr0CoHubn4Ipw1lo6o8BUjDWt2winKxm6kWF2pcOGy/bIlyUo2tvx6myW7QmTB8sURrBoSYOj/Qjrly+Mo6v6/jyX9hRQ1k3rbc5ySbP438rXowd/+8iDmU/4uY4bE/xJFiKh4rqoJo3rhAxY++ySjkQkt4Nt+LgOy06gZDUQNcAwM9hpa84dJ4F6AfRFVbUO2Scde64WiyaSAoUNgYuVfGMTC8LrMw9Sa2aLU2Jo5nUhLRdXGRnDbmC0qHFIsnvFxFmHMC3N1wZIoWwSf/B8v6cMeGQdR17eo7AhV//KBGka3OKDKqLposeSMiPw6JrEqQ7j33A10r+I134B9nIfWipXXMNH1vmRsELNHceYoNH9025OLOWh0DFsxEAVZtF8VAN9LfGVOUQi+flDiP+F2r8Iz2TCiyRXi+1d8B14Pm314ON6pc9BQ8igH11sc1yu09HS6r8fyH/CTzMEMybKbt7mg40nDZGrh3tWS493Av1hjwnhJbA56VG8Q7syu95WPg9hypuNJbCSXeswhz5CkVaV7q7Oezp+IxuqGWEyKl66a81YtnSYjBihgE2JWR4cOqZnrFL/H+nre0eIJYv3/LUnNDCqlrC7HHSBltkfA7AUBeL2RHN0IUkZuU38tkNtaZmnO5u+9YSplvC2YRPGH1LVOsT20ZVRD6ADwuNmi5UfCMF5Qh2AaC9IqHKodTQLu6DJQe0hlaTi1z3O9A0YY63l0dk7zWQQJ6docj4QWARvw/X03fyOguw4UPjgbEKvC42SCty4g3zwzsz3ZP+NJwa+VuSKKYOyXHqcVqUHZdxgKPPd3UcuSJhtiie3TKLd9ji1moYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "You mentioned you can call off a flight. Can you tell me about a time you did that?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQStAgKEAgTGAI4AUIIdGhpbmtpbmcSDL6LyirTSm1kBpFQhBoMF07jisncrbYPRhZnIjBX34YLOBF1SBEVfbWdVhsWGxx/3UNfvtIPsZpmQSA7KCFOgsHBjntVQUbrMe0AW+Uq0QfW4ZnaQNwSr2EMGhxVhdtD+VKiqGRZS6u3qj4dSGoo02cdSewqXbDAGplAKMAJ6MLDzHCejjBg1obSsViXSlDjLxRwcGblvnT0sbkZUYReYHU1rqq/1tKEn2P9LoI9+lcPmvXFLHxF3U+GfWbi4kU3XEEnNqKxrgY4U6J6SUJ7NsauRAc49EY1L3f5VFfnjBIRLQ4h13q7+OSrQLMg1yT45A+iHNcDUcwDdBIp9fy4iaZdgUELmeRYNM4GBSSJ1s6Ctj5VTAM0C2jL8enp+B7QnAE9Enn28oDyQs0ypRnUr6QVz5SogRq3GXb2J89Z5uHeNV8aFV6fnkLvD0r14DRTllc164j0/8EgeUGpoZo09AXu62ENbu9FtAAh2uHSB3Q+USZe2RdUS1mOkT2v8r8ZNX8+4Kyhgbi00zhG2eFVF1rH+syzirwyE/KHD+mWlR94rwZR44HSe9xoxnN4KKAK18xbpHPGEsDbXnCtm3XDL8MXqAi64+oPFX6juwtfk452cIvEbDbQF0CAULFEYN3whnNeYk1UsYSYdcNsKBt3XG4vJrFealP4y8ykOEpri0qbbKnaKMKj+q4YqD+IOU/7x6F7U9ps0onAMPwq4lUCHDI8NE4knrILPQgwAQlxABhVs5Shy+v0Fbfh0rQx+UMUEUvFV+c2/d4ZNqGD7eAV2PIDNSUs3aHfMRKhncFQL8jX6Ht3soNh8CAI3AjvYG8zS2b71z5gB0UCOP7SwslbFALFeAHDWcYBe1RJg1HR1bjyjSPRlQxh9Ic8j6kbDqRkV07f+KHxmT5nnyS+gFqgOjovOfzidq4fJ34LaSRzAU+F/rkw080Vt2qn6aCW2oPiRi6R2Q+5ZVdZIQQjdzeCEe7anxSQIUG1F5uIIWuSP3VeFSOyYX//AhwiTWCMOHok3h8+dRcAigyFNhWT0R+EQmdY5unYnTVdIqtlEkvmQD+8ux835cS3oZGSLOsoKhkULtGXfEzHwDi/0/OI776vNW23YcXrcGKuQylaLt7ed7o3uuzB22qxcOIBuHNFF8XjDfGNddYletjwNxQokzf+mDkbVjdkY7H3YkhXHX2t3r2IxlJpKn1zapIH6TcfN+w83bgmHXvD3Fz35P3Ojf2jAcsEwjwTS+wIwrpQ7xVQwUbemb+WelpxUK1dMCjNtsXo4g0jgmk/9c7JIs/3TTVevAstvaMG3HD1E1OBmuHimTnjYocOhRdNFGHUR4Cp+NK1QnH1CAA6THEbKCAF403HfftewOYD6mq9V5KGW7WDPW7u2QOZe1+pm4taxxUvf+4USxgB"
+    },
+    {
+     "type": "text",
+     "text": "Let's try a different angle. What was the worst day you've had at work in the last few months?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSyAcKEAgTGAI4AUIIdGhpbmtpbmcSDHHYkRi4PNauZqj5PhoMcfWgJFF2BS7oR0W2IjBni+Qjp8oSr7CD0ERDytPmBYKWUFY/2Kqaqe+3JHuhpZsbZF6C5AgDY3f7bxCe2b8q5QZmtlME2c1wvfw70NdNGNFR/xZn82RIwEa65wflrYI9WHHDzzE2WkqO/1VaAZ3UfA8jblbNRzFdlOfv6eeemht0ff3Dr1oywGXHrRMXZMPJnj77zxh/ALuTql46vmgyEXiLNO2oMSa+ZdegONGIruTvuirSnCUm7QowM78dIum4z2FzkjxFHIoP5fkOjrf0+LKuBUemhqSlzA1HXnfUDemYSWcYUKWF7V2Lw+Qhz44t1+CRaEZHJuu9WHWvDHjfHN1MWoASclOlHNiJXGofEEyCi5Bi0rbbVbJ4kLbfOEHQt7CKw6OxATnXRPAZUM5l7biQu9zMXpJEjfwpKI/D/Z34qyDxWuzFBEGg1pcIhkMhIkTg9kLOlQLM4EL9qNI0FJRP5FQcym+QokutMQk/UeT9iCuNGGJRvTi1QC4VKmnKZLV9xQVOBG/I+oZGXGcbpX7sE7UHSrx4NoHMdH9AzSEDLuK8nTNeSCjOvVDP+5zfkGyepI0NpWp8AmRh/RRfKExCEBEiuzGfv/hPoHPN/tcRwMsYsbsgy0O2yc21nQyzKLOhBiehpTKTqYLQv0tCSLfMKoGrkekJ/yk+T2Kr2CyHZ4R772nZNI0/PkoIrbNPW3iPxAgnj8GrlX1cwZ71nN/Lb3SDuMMlw/tLDokLXSI4aTClrz1a+dlAA0O6QxL2gqPp1R6pXz5OPbnjkrlMN4DOUK1GcZ0EwQ6tUrWXNM4nzLmoNfexVlS5d7sr4xD/k7eAyO2k0j80qWw3IYWbdRL0vDVixlt11V8swoBKoKITd5wg76MzajAdnz7GUDDQ4NdVUQUUyn6hRzJ0UZjJHGdyQwpZ5BhJaZDhpSB4FK58hiHqSQ1/hMl6MuqkO8Cbp/T6DVA79O5Enh5wHbo3EjPvO8SRTeJ+A+1dpZJ+L5yVI3xH1hzww+gzASWzGv2RSGgHQXOYRm/umtnIqB9L1LqvxNgDBBz7n0O0wToTBan2G33QnfQR+XSxE/4upRGpi8JmOc5oTeR6rsGoI7LZ73pp5yrVcYy1jWNSWlM7/PIYndALPsJIBhyklp04XUjfcwOEEJCJ5N65ouujEKYXzfn9p5JI8PKNWI1VjYq4Id9we2+sRsTBlSloRzCmluPPiSJB7fY2kkVs5PWNGUeE//JGUZJ3lRgB"
+    },
+    {
+     "type": "text",
+     "text": "All right. Who gives you the work you do, and who do you pass work on to?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSwQgKEAgTGAI4AUIIdGhpbmtpbmcSDCa2XY+Ye9JI11ZDDxoMgtJpqBm83onRzh6KIjDW7+utl9ipoGxlHZF/i4WS6ibUhv8f3e4E7ng9KhbQjAsL5smCrqI7gg3fVA2xzvQq3gc37dkyYovZLUL4npLHo5+uECWB1Zh4Mvq6e1JVneBn6tcZn31A4kyG/+67ztAywZblJ5whJ9JD5soJsAzZDCzF3gE+vGFSBQicQ9NxsxYq6hJdD8QR3RMjLj9wMWpKBefKjdZdWfjXXdSIB9kvivQzcw8fPGXotBd9bCZ6TSPPjV20K85dJy0k14tV5Xi0+/y+QnRpIH99RtnIlSWiNaY+slrHhVznctmcpvmf063dSQigp5JL4xIQmZUEivpO79+yyKu9f4nW4+qwgbJirbXOkaYWG4UKEuF1WMUCtV6E+Tbw2ESgMT93NtF7mCtnPmREsBCLdzCPc5UfHLmakAN15L7vNfdof9JVZUXqhFNrOY8WovhscmiuWPT5JanZbCaDh5ErgMrw4M6aM5KppiUaU6F5GTYdc2qvLU+WWwDLOrTlKH8CRnl5Faz/slnPNLfOf0JtvHZD8p63ZIjIB1dgxl/962gtG6wknNGGQyFtYlEUCzVpcWwXsmi+JEkN5GJDnlgs2bRFYSkJh5f9DKlhwOVWYaELh5QFO/7JbHibrdwH5xINlpOVF9oSXMD+mXqqH3JNbB7ff9EJyO3SUUkN4CCjgbH8c5yFtI5jjNxzMnIE9q6S4BEVP8Cmvd787w+AGhuvwkVuCjvPIc4ibywS7YjkF3PRoUCO0KeVhb0omivnaQfJnzHpwfZEDofhqn4yFSNyi7PJWfoAXUAhnCe0hXQhT9iaPEccSfgPoJzxR0GRakEU1W05QqL3O6a/LBMU2amNKNvYctuoez+QGkCkjlG9tLvjjK3zi/zIjG4SR9N8YepbOMHMs55gPMTnqXb/MSS2aCF+6O52vqvo403fXjO4+O8fTJKkWhidReQiWy/9oGXL03YE8VmLmQ9p03RAnOafG1dwu/7J+u5uH35Zt7P7tkhTleNLjgYebEXcD1EVTN+1bM9IZXC607TMKJ2Pe5WWY3FTndTbT1VR6/PrR3Qqnsd2L03eChCGTTlUMAinwfWJ0mkE0i1aYSNlS6E9nGAYKag+XMWzmNy9klrPLkCJZWji1k8LmN8nYCO1WJ8bkEckaNGsSCBF8C3HKnl38BAHO5FC8dUbzdkfP7K1HOrzW8T7TH0w6Ilu2YAs3nOXfGY7j/W+gfXuiBOBnlHwZ/GxaCjzHU/F/y/XTBh/TtT9qdHn+Ms0vJn3iUPqzzBHjtPqAnvs49jv6NWN6C7uGcfK3DIe9/iBAR56dRjLS3COTr3Ei4JbJcStEc9zlek4J/nBRbYuYpkkkuUiM1d2tWgxzx8sC5NMwo+yDSDckzhkEh+gWxuosP/6FVcYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "I notice my questions aren't landing well. What about your work would you find easiest to tell me about?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I can tell you that I work as a dispatcher for one of the drone operating companies, where I am the licensed person responsible for each flight. My job is to plan and run the flights, decide which drone flies and along which way, sign off a flight before it leaves, and I have the power to call off a flight."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "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"
+    },
+    {
+     "type": "text",
+     "text": "Thank you, that helps. In doing that job, is there anything you check yourself, by hand, because you don't fully trust what you're shown or told?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "If a new service were brought in for your work tomorrow, what would worry you most about it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I worry about things happening outside our control before and during a flight, like whether the load is ready, if the drone reaches its points, and when it arrives. It worries me that radio coverage is patchy, and reports from drones can arrive late, out of order, more than once, or not at all. I also worry that the service runs on a single server, is updated and restarted during working hours while drones fly, occasionally crashes, and the companies accept a few minutes of interruption."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS/AoKEAgTGAI4AUIIdGhpbmtpbmcSDDHbJ5IFIGLFm6405hoM0CxCesN9Kvcme/G9IjBZ7KqVU+dGiKB1dvj1CiC8QzrC5ABZCg29C8+WqWvGsYApBFrmF8t1hu77NMt4wmEqmQr9Nex5DX9bLA1AbDmYO2sKwB3F7cmpOjSxqfQR5hUljd56YPam8hx5QiikiKhlCaVkA6fXucisqJRYBeaTgR4SkqCsB9I+LXnLREum4nOFCMX7XmuLb+zP1mDIy0cQRu89UkYS3eLmlS4QOwj7Z5VuLJ7fQF+k6kq0oXh8sP77tXtJr70GWPWBhvmwpccMfCgbnGZr1SkGQ3fVSzFHL0ZQwMNhacXRVAIyyVUPrOCjlpuuIhbmC4XRCVwvl719z3h4UN96NjjZfckvDLDaGf9KhfxcH67oYPFHGMd799un92DIpwocVz8OJx7W8+Na4QLC67nomI7OvfGU6aER3ySctuUAoxiOkJc63ym+Hst4kyVnH5eaiEiW9c0eDaY8SUV3ZxfpUEmpYiP2fAo4MuvexuRbu/JwAyjsZ5nM7tYRfF4KJGaHM4tMy9sF3nOBw/w5820OF4hBU6KWKOCcmq87oqT4uBZjWlJ/iMk6K2FzvlJmpdN7l/Tw+aTthGPpoyKLbdxOwYIbYvCFt/xmnyZE4BdA5HSV9KEkGBHNupa3xyx1JoZSQV4Bm/eaPA0VPRTyaRRnA9yiKCdQ/TOFu9zaNjPPsTcsEA86xLfu2hDvat9jGOAIw2OHdOqTHzfx7OvbM/tl06Pwq5djm+AseMLoYXMkgfyh5YGHIXQygDtZ1iguOApqhNOfldNSlOHLbiJ2cvGBVBgDw19JqeZ3m3haUrjuwj+II9C3gU/gTbZOeLMP5yO0ETs6/UdJO3naXr+c4i6zs3zQiTH4fcJsllC2Zi2A6IowOCoHn4/z3pW9kEc54RKDdkjrVda8eJwbsXO/ktCYa7B87KjdchkvI0VZDuKWa53ebjjrkgZ+ZqWbGsHnDyYUEBl1PFW7tSQzcs6DZOJEUbXbVJ6tcrcH6KWkr5YqXKYbtBAMf4MprxBBrd8QAw1J1SJTo38i+taFCQs9E1TtlFU2D4IZQSphDxcwcbZaUrWx6OhPWDQIrzDyaUAUbXWt/5qntKalrLj/NekDwYOrjuG9SePEQFE6829bvo0Ormm1RErXKMeUQZ7c3Dqzx8qWB1M9+jw40bYhiVCWXntG+GXkE+XeAUwU1FgE4rjRW+rOSjMD2bmWQtU1/qZE4tp9d/gWF49LOg5W6j8yU5dEsoxN8esHyEri87Cph9Y1xs9NuWFj72+RVFu5hm04dBExxeirTXHzDNbwjQzOGmk/K6nYwRmWKFlnHF51mlCThP3dshxRB+AlHrAOI+DijamstDHpRQ8PLHtNknGBmKiUIEjS+YSlwAsN8UcH5ZVixVr4PX0YPheFeq5Ip77ogUc8hkMOpcMeFEoIVxUohm/nW0Rn34z9jL5+NbKx01fyYALNmGd96E8pL0zoPsoMS6cbKlcHEjmh/DCkjJ0rX5oQqP92kcBHzgoOZEPg4xT7nl77aduCo/9J3D8cv5akFv/DmSZzi2DGDB32JVs3K+XeESJENtZFv3XuMkyOC6HLKWvP1vn4ozKAsCzf9heL+vBDDqvQQjkjRWIWJ6/AoTjkW9qyBLW2UwdDkkfBCvX5SgmnxjIvAQDVDeTEAkab/vf8muqkinS8DN9DDVMwZGxpB1Kb/c8XtCmkGl2h992VbZA9zZfH58apk6CajkvBlZPTHcM/3RHDOjmbcZc0wqwHhI39YVyjK2unxhhnjy00hKOdSggMj4bwsrvbb9N6ndkCPkBXwh8BS3yA1cowcN/7DTfyjA8YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "When a report from a drone arrives late, out of order, twice, or not at all, what does that mean for you at your desk?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSmgkKEAgTGAI4AUIIdGhpbmtpbmcSDHBRCPSrL9msunmpohoMAfHmnDQ58UAExOtwIjB3LkCviGKRdn7wvrTGA8nC9WIqGSbYFGlsHeymW6AkTLRZ4lCNJW7do04xzxQiXocqtwgpcOPRmhwIqeNqbkGUqwb+O1RWEfc/uJH2cu2oodLEICRcl9BS5L7LGljjm53QxrH+7QJLTxRbHNU7EMUl0sYTeJrjCrflePDcfkDbM0Kn7Qnvqsu2VpapunMFoM1a3lipg4kP4Vi3OhbsbpuRAxKHGQv488wBuoZX4JmkoC1Rah9bh4HwcXv50VIpyP7Cdfum3uViFwQEYOg5nlTfdbk3tQ202/UdpNvbUypr3A45ahTL7l/hGVXHwx4qtY1exiJS167aA8r67/B00ys4xB47ArX0iPMsjUoRuWWgAz1czK1FodVl04KhNYr8LWqmvWLEf+4fsFxRcVAE5v3WeoZ7yA4IREZN8rK0hzG9oYI6iLu9JU7um5LKD496zUq/0AoTie2z3sD31k+BEikx53zd8rhugTTkMuECUCucF491IIgEJk3IYzDecD5cX9uyvz6wsPOVlLeOTWStmXzbXDCtD29tGhq8US97WpcNtCO6yuTwZEpu9ff7SZLbtUYlKyU++0ITiRHcs1ib+N4U2S7e1QfMaHx6itBoY3w/zQR6BloamHPwkQIolczFv4Rjx1d+q5GA4Nun//aEQEgy44SFYt90oppe2M0lwNnfJuwbtiSzcJrZBcz96fKOxpyZHLaapzP6jW1928A/2AX8TYn09EqeW9WYwgRzbK7SYNTi6WA1WdKkB1Cpi1XURDWVDj1wfp9+5T/I333BQTJDzLjeeeCQ+C8uJnDbyFAtab7IKoXD+Hkzi9FKEntKfI+qOk+Eg3v8ynW974OL9/34bckgfTe8nXRMN/4Cj73o3veCRSnV3x+mL2PW1/WtUfxZ4cXBenXRjspsKEPCYwp67j2t6wwyiAVIg23QsfgsHQFKb5M9n4WzTeUKzfGJ7VWmqQvZNWCHhqXr90UoKiz4g4eNo4a4WOgdtJB+ZseSoSs4eNRsUxfB9dZIY9esf+8G8miC0n6gxdYu0SBwybzzpQni/KUg9HXk7+mbkszsXRBoVIn804WsReehh0/dPa0MR+BasSAgM94T7Fvrcn3NpwgpisN2jGJmocVgG5tRLgM3hEby4s0DQyc/0huMZNHwf06up4viFSKN5edQ7g+wyG9fSWFmIRslvj/b0MLRI20okOTAecatqrBeEdUCGtQOqVvJTIC6wPhdrHdOnJr/gHn2eEl2c+TpbjD5h3tyK87TEZdeTdd9M2IUV+M6SBS0o7oSL/P9W/BEYlGoTjHzqWuM/WxWuWX/VfAZ0uHxxo0HGR+BJO/RUQ00L0B6v1ZCzMExrkeDxHpc+AdPxq0obli0x0C6KTj1/5EGp1mvA9+jB1Hl6DALcLxH9cBKHqK3pSnKTCOl8q2oqwbqj37tB/fyZXW1sjJRmDpjVOo2+S+Hwhw2a7gBh3OUVJ6JmP71XrZn6lemJmNpgzhIhuLliob965p3TfnsGxgB"
+    },
+    {
+     "type": "text",
+     "text": "You said the service can crash or restart while drones are flying. In the first minute after it comes back, what do you need to know?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSmQcKEAgTGAI4AUIIdGhpbmtpbmcSDKTUWa2Sjy8SPSwsXxoMAZ6ac0LYWnUbUfO/IjBWeQVksSemWgN1FhLghTBUAZouCyqzjz3es2PyOmadEx/+SQx8FfqV/90GXBhsHJcqtgbMnUl8DFWZQzU+MSJegq1v6xXj6M3q6JBvwmBM0l/nW//l04OUkrjeCXFfcsB+/emSaxSArEj52FwG5ymu9DsNtoZ+NwbRCujJAucQwCKJq1iy7zDbla/b5KjUmxcjFmiAUIg3nXkad0GS5VI3RK5Zgq4b9d6zl8rWRCAttBftsHxvE1nN9pleeGiN6UjVd4ThrZ+rgcWRzQ0m4wVW3us+fPxHc1NV+c2119JzXoq/H2rurQ6oD/g1W92FXuWnWpuM7KzxUMN4Y8hQ/W+0RcWCNPf8MeAD4GhYRazrnyrQft34iZCzl8ciWDbDc1lSVu10SEuglquyBCK2hXYolQifp2DJNN/FTF5i9jOY0ll/N5GdIzQ5esH4DIGR0Pwx7L514A+e+EcTUXD66YBsjEIoKe7ZT5/+XbPiJooAX2JtqtEHYbEv5ib3dmvCv+KMOLkz0xCV4UcUsWsISzQZKwCsY2odnryxSLhVWc6JowHwLUSpahacdAjWqMs/xmfLK1+FYTxwZOx/6Z2MjnToUq32d6u0rWK2bA8SMRaaUUoAxDpOvZnFQjtjbJzAQPq0ga8HLNbZcEv/uCKZTWzUSrgCmfy56whQMyD/8CdjhcODcUu3lXb2Q4CFaNX0avso0uMhQdok7dTtsY2XeVzjrctNe63t+Tf5+e57HrZ35agNGauTEhs9/Xfdo6rXTfQHQvvawAN3moc7y8k4aSdcK3vbUuIcL321CH2ag3QGI9xet9Joppfcl9tGfNRmKWpK57WCvH52rG7HxYtg/bxMdo8AeOf/KWzD3vle/1kLKviuHjFe176czz69e64fMpjH7crS4GtJH64kqSlO1QUs9InutmoO/9uf7qhSnU9dVIXg3y/V/tNzrqaiXWm3u5TMRytNka14tKgM5zjPncf22zWII7mU5Gtu5qACoQgb1+8hcxGC6N0BUfNnrbOrM6QqJlrYnHDaCLTYkunAznwQPV4VF/7iGAXMB2M3WvDw7ppbKibGRHmnUjv5/KKuUd6RkEYLn9G8/DYKcQjDiJsuH4CpwvlONuP9smetZNN/xJI4hkgw2EKGzxJTnzznmyN2irK5fvIxikQYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "More generally, then: when something has gone wrong with a flight, what do you need to find out straight away?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS6QcKEAgTGAI4AUIIdGhpbmtpbmcSDGNS9m7U03rQOHGQChoMmtqqesD3dm9UK3ifIjAnnNFDYguFENsmFlJyOEn5hyxvrCOmfdFVKxbJrZ8gzldBO0l77E/BdEUFOqDJsaoqhgeg5Mks3zH5t9xTx3CN8CdgSyqVnazK2FbJa7g3ibEpBIZ4imQrXQdOP1X1nkiVCEkapnnhjO+21IZcjbc+g2c+ygweANMFipo3gp/KKWm6oJZ3csOAtlIENxRqsp5cxLmMF7XOEXnqB06eUAA6njD9QT56phrkY9dejGwooGQh8m8Me+ABf5vl+VcmGhF6RHpwWiR4enuQVXzwbHlzxuDUUpbEjGZnWSc2cl4KaoMrwmT+H/b/bJS9J99wJc2nIJ3ElGFs2xdd/YCf77SdFkesxnXrqhyhimZTeHz8szPCTnc+mtijizeatGD6N6PCYxeup5WHR8AlG8UEiNk0XSb895PscbQ0DhjUqloVL7ATFo1Qy5HGyhatJEDWUNmfmaxN2HXcy/XXISA2smo7DqmZMEYPLIDEaPtNr6yk8bHy6/T5XI8b1AvcXuWxf+3EYQUEEsh0b2I9k/AnbS67LNIo8q5vo1epuI1LDMSna16/bW+LeVp2PR2STyKbbT4OdkYNpdFgnN29hKyzXZLah3hUk2sss+yGsQykCLaeDS2rhFlQCYvI6uHrZtJRGePpl2ncklEkOKnttjT9tiTZ1KkzdTc7GanxA2Peq88cYt5b/yOsDgpjW8P2nDFZwWwdnKytRhIGp4lOuYHrhtU3ilLt7GubdqlKRg5qeSDCwem4yaEbvMrSItYG9aZaKhzco71W8OcJOxyEM2bVhMH7khvlhx1KvwckzH4hvSqKL4QUFN5p/n7R9M0MLCad/7CwD/8mdShK3noiCA/97vEGrcEeFm8cqAO+tUmJmejVzmUpBio854+nPan3WEmJ72TKTC+3aXdxX9+/JcvnBJov8nuF/yQFWyWy6aLPpjBuR2JcWRnO37OAUY/qO+z8IevRj6yfydx9u31+sCBPtOZxkFFkNGAJ3kW0pXotMh88wfwU6csem/i3Nt1nBllMHZY2tOlqgi3kfAhnkVaYqhCepy1uykrpW+2Gqbud07olF+CD+N03xSKdb5td1pl8shxmDWtjG/FKK7JR0JO1XHDJlD0qfTlXmDe4PQdOgQDP/M3fsG9d6FbVv+96mkWo1VxO+Vi7lTyNjQDwWeQ67AHKy4XNZNoG1aVn268L1zUsjjlX1wxiltV2JZG91DR00nw7xaTYNQwN82K29q6zbZ24De9073gzMBKd71pFeei1ZLiEzHoJwUASrRgB"
+    },
+    {
+     "type": "text",
+     "text": "Going back to your worries about a new service: what else would you be afraid it might get wrong?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I worry about instructions not getting through properly because the links used to give instructions to drones and charging equipment are unreliable, meaning an instruction may get through twice and the sender often cannot tell whether the first attempt arrived. I am also concerned that batteries drain faster in cold and wind than planned, and that a closure of airspace can come into force while drones are already in the air."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS9AcKEAgTGAI4AUIIdGhpbmtpbmcSDCv5gHRWBioz8UPsqBoMrnoOg8aeSHAy3ss6IjDNfV0HGh3AiWyLKVeggOYG1/JZJ39Yi4hgpNyN4ek+egDO3U+1yk/L3NB/928xmPUqkQeFKNVqgOOK7UigYaVyv3nz1Z3YgHHzxA3P1/VWvZRrQZSxtpWDOymMorDd4MSsZy7/9ywC5NQJb/wCGLQoEdZ3JVDAr5iy1lhiiuY3R15A04MmqThwrGDPf5FToHaxdyQAC2UcFBvMRqA2oscBcQVLf3lhYWN2BNSxLmJcBD9l5M+I2xL+CIRFCic6g3rhrLBJn211WweCgWTkQd1LjpKAoqaWBzNNbd5wkpoX7Ylo+g7FeIegJTyXnljweL50tl9Q2XeZ+TSVWdUVmfISQRMcIqXrV/bn6OUYQP6Up+su6kdg7siO3V4XD9d+XHX6NK8WgKCAGhpdw0pKm8/Kh6a6NcHyuvfUyvglPxNeXNjAycV9myclVwTazx1MryvFBzxpgWk6J50vGQHV52mG2VVe1bj7DF6yHom3Z2wTI0LxB7msoOO4gOKI6wSSyaL0PDp1f+5HmvLJCKw6gcjdBLgdY63STILvWINTn+CX1vp1spcUyi6w8QEqkwFRkBkXpJIGo9uFXh6JYThnX3vA5oWOVBI9cH63K5i7cQF0wR84NGSyomLAONKLMRShk5oapyKKaJjK+G8C6Pp+C7kPqlGLAnFM0NDWTgMehmXCplGe3eMzq1m1yCDFJPud8IgMg1PS5MkmY4k2SrHtiO3X56zVZobOaMSaSluo8nnoY6MPRcK+ckAw4C2GUO+HJ48txUjdvvGJ4IdgxQUFtZ9trLghuvZR/KMnIzcICEiIhfKW9+x+gmYHng6M8vVukKCCQFMWyhqzJq7DobDLrwIRmvjSeg89sYOEz0BPU+nwwIQ44KWpPSdBwkVkCjnmxaByjqcq+hHBRF+hqG+UquBjt+sYsJmqriXu/KUA7JbzpEKSpjvV1SuhZliUTGUuc7cgn78gUEB/XpdA+96tWTPC9qLQ6i4eCsgYqz+enuJRQ8GsQejn8/qU8eK97dYnI88Lwxr9V4gN93ejETgvsBqQ7jpV5d6EXxebyQ6mcmziXjYnOm75pY13tY0aqMpxOCeBe86mD0zKY/YMOnjHR71hGuRRNGZnZXkHNXBLq0ESFiZZGeQ1rV59h5oHCW/2Pc1VAyLwA3/FwAvi6R9w5Y6aRoXXKGOODR/7uY707GO5pcVBU92SX+B5xw/Pok3K/p06PrghQhVaNMNZw51xwJ1m191DgdFgjfKaff7d+nxwxepZHzIaSx0Boe1Npd1Ec5xqwttOGAE="
+    },
+    {
+     "type": "text",
+     "text": "What worries you about an instruction reaching a drone or a charger twice?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS7AYKEAgTGAI4AUIIdGhpbmtpbmcSDA1s5lJ+iWAvINoSuhoMnAZ8VGXdoxwi935yIjCbLVgmtGOnQS2HTj8SALV5NllRznL8p4CcCX/T2H0UODI/Zg9wOi650EA3Qyt3uaAqiQZJ3uzxQZ7/KDqnJ+8533eeVwVwtaYLR7aRkEZjBmVRFpVKsApzjoTs+B3S39tvLrxteN/33CzjPE+cFloulmGXIPNJOCTrRw/V8aQCPNpWmQZe2kFaF/6LtdecUml7pAvHjC7pTPDN9WvhF/SXn49yHz+FGdlzDytsF0OQJQmwOUk33n2HGaOa+1HXEU1M/302OKlXZnti0UW9alMRTBAw19kYEhtz1LEY9PJtcsD+ErdE24F/6SxuwQMlbRLDfqqzSgJ80wQuW4T+6VXGRtegdS1RtX8l0IyyojrmX+Kc1LOIDsVCL12c1Zv/5BvR03n1qmHwexEcGqD1gqlF3W+qbsa6mt/qYqNsVtLXE4e3CWo9pz+MpW2ytPblkx1/SME4BXWKU0Qk0HTPnXQ8noL9tBFx9br5FqV0ftCb+DlZXMDyQYqUnz3KZ9za9tJrXWbH9p8DGAQuU3eMMyxIU1QIQfSVCscIIoczx2uC7/7zNXqkzQPPGTMmlfiEqjRF6KwkRXzUsEmKI+DOSGnFxCdx6626x2pi5lZF6YwsFQWUIKw34L130XiOSXumshkcbYkk2ctfd8n439/lhXDyuqjbm+NOxYajRSdoPjT+HSfrprU6AChyNabakLhQb/MwgmlW6ivAwLwxkK2u1Ec22dbZEMx0tj7tgzaCzHpwjnj7/c55qWdbuavtL1dXEkQ31nYn6XWWiXLqgqkZOf37dqjwM73jrvEBHiga1DEowhw1CLLeGh1UaEywt1gKy+7VPX7A2levJdoj90v6+N4PSeh6yjxpkNrkaN2fhf5XKqz20OSZEXWAe04QTyrflXqSIVXbczJODyy+2yTiPZA88C1AH5oamCZ8LLcKJmdQg6elC8jfvgPjhPSuSSlujwsLojy/Zjg1xGd29ovXonPI7WsAtt3OrCUdwX5BM9ysX+1T4WPj0UHxvYv3R2HOe4RODZ6KUVogDmhRNsb4/k7IXSr5prdUfnQTWyr0z8DnQxN8hcx1mMLJLwHtE+Pnz3wlDs9W++MCZKo4PtgYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Is there anything else you'd be afraid a new service would do wrong?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I worry about several dispatchers planning at the same time, often for the same busy sites and the same popular drones. It also worries me that drones sometimes restart in flight after a software fault and carry on, and that nobody watches every drone at every moment while one person may be responsible for hundreds."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Is there anything else you'd be afraid a new service would do wrong?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSswkKEAgTGAI4AUIIdGhpbmtpbmcSDKVvV1vuPCHZnDLUvhoMyNMGLiRifL9j0AYJIjDHID2yMflyc4UpIvFvzKeh4JwLRoEe8KxMIYPD+xfuvBwAjUOnVVVIHKFxMxKhlU8q0AiyOnPxKFLQmo17d6mj8iBz9fjvY3MqehxbvBxLhNCgw3pQ10E4FGP6N9Thw/DQ2Z36yvk5ocRzNF63PUvXl+zTO0PzC2YCPkxYpokEoHjbAQkY7xTpnVpxV36e9hVacsU/BJzAeGseUbIfaG2ve3ryNnGcHbHs+Akj9c5cwnv6uuKmPAvjeEo16ZygodGWZZdcAMmtfzX70od+ecYbT+jkz4TLJrOHsBJ9NtsppTsdr8H77TmUnGr2E9xUyI553Im7RPnerr5ZJ+Hg7gCSuIOrENcnmifNpG9a/Aoz2xhqNwQcOEFO3TGp1svo6KKgBIyJ1EDrgIsjx9fB0KVGV30QUEvNZFlLlJFvSqirJ9ywWj+7QfWiNKUnjCh5e6sUGsw897mq91hCYZf6PeJtXh4YqAgZs/Ro3H0ywWaZbebUujCHjE3daGkMRhIqtaOfcCMgHM3MQe8Lm+fYWqEQ9rVa/G6jdOJThKSYxHzQe/gO7Fkl1Cz9Bjjuo29NqedjcJ7rD77UqTWoGSqdS2EdArrMuuM/c1TAoTBXBMuhu8jZ4srBvmx021mMd77FkbE6uKDns8ojqiWDylMk9pMZS0fS7iAbYoTCF+viFDP9uPigVLo+3nwoYpd84WnqiqnMSkS8kVzR/9Lvyo6r7CYPT0OUjkCyb77O+PqP044kVOl9W5L/hjP4Q3YMeSSeABWs1jpixvSpBtkItvmZY3HTb8SkUMCpcyPAoZnZnJPsIjRaR8btH1N9yFVDXKs6NCnlNPZekree3I4r/QLXyZ4HN4qNDD8XT4QvgqyAGlh8sAWTPICjcAF2L2Zgk8MKjh1u26BwpekMW3XWic3JPAXY256xL6bIHt7SK4p7VbzW+hHXY74RXN/QCWUkBYJRYIVuVnwRxlj8rcLoBGNxFqt25/TcNLdllW1d2gMwajvz3ROk/YOZwKmCuM0NMnpW6cX6eQtsGUwpYlehU6BSAVFTBUyXz1iwrrKpTfwkxpmZUdYVZSPHI7qLXTG8Kv3hqpcJOwA+Czz4dSWe+N+Q5FsKC3yH8sLWoYbxwkKEmW9X2KzhfYNXVNcuHoSVBhRvQVdGEoRyzq+xmViuhzfOwg3+KCcoUkp4UB13F1dvmB7x3rfAFZW1o4YA69nLGqUXPx4ZLcEcwxIU8jKEoe6g5McuyFyy5H+eJ7k16OTbnHeqvP7wtZhPnSUifFi+IEkclIYndPZXV/Bt3/8shjHonYfYKjF/PYRMEPKVn5FG3BL9/lPeB1AOPOOwpIDS+sE+WBI6TE46jERa5B1P9mbk9cT0U7AQYkijOLsCm4tMEC5v8ugwwVJqJj7ss2qhBb150sOaod1YKjU2gWJ0zqFYoOn7uO6Sh74pXJV3RxYkypbfidhNLMFOHvgLwsWxaOLzdqSgbu9+FwCcfzLYdF9Vl9hS72FrQvsrSRpdeG86qVWNsd48OdyB6hQk/PJI8SCUeoyd5dcYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "You are the licensed person responsible for each flight. What must never happen on a flight you have signed off?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS/wYKEAgTGAI4AUIIdGhpbmtpbmcSDAvp3dFcAn+HhZQSXRoM7hGc+ISU7JQRgY9SIjBMT1xFzMscR7hGMOPRuSmtowJ2cKbDNZ6uH+aj/f6ZjqdWZ3jOq5q1wFnt6P7eqwwqnAabODceWNmpy+yb60sfq7jvdQxptaoEO7YTdsFB7ojMRZ/vLbTvLjeyZKy/9bx8F8CZE9TdrBV0wme4FQrJeeWOCgDW7RveyI3aqVwC5s/olCIwbcPgnwRFDoYHcecOuUorCGhmK+WVsvOpir3PoXJkCnJYIQbtA44EK0cvIsVUfKGH2N/2jRxgcl8gcdPXZlVmfJhLAsccpm6uyBezaQwb0kc3/GmxGw40edBojp2VFSHqFDQPggwgdO8yO+aKAIVoqfpwJW0pEZyQKahDc8UygA6axC2laq99Gmt6ezgzQeeqEy/M/OlKSInzHpV7Flb5NPE95U1WcAR6a61f7IN1tkUfrJbsU4Zv5PIecAVuQ9hMMEDAF/H/jO7NYXC+/anTKlHr/uycgPL2+L/JoKx7gbcd2VOxMkdfSjsHN5wVFVG0Z9ovnIYQ/aq8alj6G6YbcrPmnWzaf0/Pj4BS0TtVSdhDj/LHQK5nxO8kvG8YO6Blcj7gTmg0knGUKmPR15neYfP59eb/oWcYPRdqpWDy5WHsfu6iAgCniqCojso7TqYC2JVGIibmJPeVEpE/7OBHtRBgfFAHof0QzFvm0Tuzu6t6UeVmDjz7lOgL8VBHCSKU7lUXikhzoCsp1oK4+DivFWwEz9FhHwqUW1YTirI+XsKKBbDmDPPdbp7eX4rASbckESDVOsJBpi3d74r3Ey5x24ZzF3jVctde9sLsrnKdaG+ihk3Kj8QtvBbbr4Iq93Dr2o1iysi3RJyfvxCfGP/FkXhKqmFqTA1OZnO9e37UaAr5OvBnwd+wrnPkSOBPDuKgxKExtmoloatGk/rD/ZdLtEDPZ3IHfLEKZ3UjA6B+9nV2YeWldo2z8w4tucwzfWR7ZZB1GfbYkVkHCQn2KpYb0ddPclG10sSfeIZLyDNAu8/9Ch5Cdwbo1hxS6h1pUORMHm8b814iJnWmnZTzQm1tiVH8pCaaDbk+zVOuov1/doALW8CQH0SDitOQhHpDVFsecy/N3uyDq9JCDqgLi6qnQuSEZEogCNE4WzWFqxyr2jptoCouAKTCGTq5GAE="
+    },
+    {
+     "type": "text",
+     "text": "How does your work connect with the fleet technicians and the airspace desk?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSqwoKEAgTGAI4AUIIdGhpbmtpbmcSDKmRtOsv5yEGXeWjAxoMMev6cVmBKzrBYNx4IjDed/TbszKZ4hFGpABbqJoWOkG2QqVXnthpEjhiq+77sHheaeMn4MW3eq2Q0W6FgOEqyAmGrfGH3oIYounRxgyVL7/b29K0EN6OHeaceM4XqjAKbXozaLibbjurzmCVBii1vEv4R8LjyVa2hYClnLW9VYHJW6NtC/6aBNjqsBK9xzfrjw/PsioxFXOe7wN9CuDW/9F7f9yDm8jK53A762qe28IIWuezMGW3jUzf8/PgPa0h/D7TMnawQdIgU8YcA2+iCMCu5W/5GbPApDgoGWsdQHv8wXSaz+w99RGLa3ikPsOxkrfNSXgqziZ12MNUoKAu/NtI4nEUjox/2JMdjpbSWc90ze2q7VWy1hK3dGK+F5CTSQkJD9oQBDFKpqof0snarXn+ltxHZ61S3n6o7IoZYUp2LqWArd0Jw14mcY3Yscqt1ZR7WTOhxC/Hv1rOHLRj1wsLquESQcTjGLEPqgNHmK26DDcgK9PGJOy+antWWBWe677dyXlAvE+B3ivMgTeCrFXj8eFy611Q+g/ETNYbD0XvRBbfIioiZ+b9jdn12oDV9l4YSOOEQDyZlfGgiZ8+entbtzr6mGZeTB4M+AbRBYXTR2KAYRazUlI/+HYUXET7u2HJ2EX5QCH7539ywn1PLPTktcZCASQ7IFcmjhfR1GZqCSRSacHfHfmygR6ODm6o29IOMiXAeTul2jd5s49ePZNG+DfXB2i8LFqNkV3Qc3sjgky2B1NH0d358uBMjv81fEeoS/xOdW3JnHIVsV00t2EPgjCy6CwHE+EG84DwM8/FsTRUmv7K1ZRXCKC2sAsI4aUiSrPYXPVyn/pg8iIjnIl/m8b6bi9GLbTA5QsgijqSZrgkzN/HTw7EDpiU3FOf5tmeXH/tbq9RDYI5UKC1VzzqSdE6Ddnlx7eYFrIGN5ZSH9E61p0q/ErwLZQbmF4WfgBuf6mEyldhagDDkR88+TWoqjsMP+yK1F4S0a6HdZtEGBGR9mOSZ9MdKwErJBGU7cyhx9gS9MPXUkaWcpGfYMI+hCCc0wVT6QeyFp+5kyuO7VHjwVjZ7YADBhi9uE2qbWzK1MD6esiABEJFEAWayye+At74D2VakMuFSCSw6IyiPeepZMalqMttJFXr7+co63cYsSLrH8m/E9cR8OaCc6gXNdE17ptjla5rvmq9AIw4Ev308SF5TODSfQ5w5erO2xPZTFpSEI1sD4SmCg9PrXmLeMSUZfSbM7ApvB5GP62Ga5aHWytTfUi7qK1H1QTvoSFZV5RwA4UkfkHAUm0QBGOp8qC7CK5v0cN23VnR58wSKStwENwJGgOEDPyBjwxDXEfzqI/juH/R7DoFmg8dHgozLPeD0Kb7wYUw/oGc09xQKRp5A3sx8MClDdZnyyhFTi4RGXfSpocEvvgTj4DoAKdW2U8aVUt9GZWXiAIoIrWrGJwRA3PR0h1qOl3hCqYrnKJPZPkG7JfH9gSPzPRQorF2pNni5PzKbYCcyIpod65FVOSwa9/11vh0C4mPsQP75R33TNvyf4RDGaDugwUN27QcauHWp2nRSEZgj/z1czbi5W+wwyj6ZQyWreH5r81TyH+WV4orom/cBmmN8jEY7dD3bezXoN2bBQhamFgsJWZtQLQzvbjlKMAa1zhB2OHZGUlGK6eXptz2kbCzNGoEEP0YOVo5g7GF/CgtrvvqTInLgb414Q87pqAYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "What can you tell me about what happens between the moment you sign off a flight and the moment it arrives?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS8wYKEAgTGAI4AUIIdGhpbmtpbmcSDDTFSnxTEYQ791i/gBoMfD/p7WPmr5WP8DJgIjBMF1QzEeRDtHmd72JSqa1S6f20WNCkBo9O0ccZvf+wmlAnkyq78FTy5Bf7/hMzSvUqkAYxJ/6kEQZS6RzhfxSHRHc+aSRD0TDnVjFNRtnnC6X4gElZKrFVNqWa1k5c7MIufqBY4RLD7v3rvGPIKlwG+bSkXK24k7VfLqEM6vaOfnwQrTCsltz3l88ahGeg6JyF7uh30QJ61ErhFJM+E6+zB+17Gj5ii631yk3lkaY8J6YokYmyBbVT52wAT3R0MqH4Izyk/7rJHbEAE5ik7+ULvDkYRWnqd2nzcvF1And0hUZI8AnFGWeKq4von9v4W7u4zUFXgthWIcb/Oi/4oHEHMl+PmJAaBMbRJJrdrs4/XwB2J0U3ooiXfddX4zgFux2KtC1wl8ox1ZWr/Ii6/rDwwBaQMKO5MmA0YerJ0DmoMn7y3A5Eb6VKP1IHGWwzjW6UfEEjFk1hzNRmWweuqXS8QMg6Di4MESljfq6xhtYZMnyfs1sQ15vBvkg5IMJrfcOn7t2374BvLj4UOBPfwtBPLuBQ12zd2nJKlshdH9yqkGQxJ2ELgBp0qYHmM4/7YGQzRAbFYrC8zaKPuWlw6/w44KaOCnr3CUP6VNHAJnLpSrIzNIW/moAWRYn18k1ZTZV8VduRGThm8p0My2YAWpYTQSk5Hcy4UQBS0xNS/7DKlJM+7YbVLP0JzU2w+wnPxUKoRNCUR+vbLp+qTOzFAoGYucB/YWzEwJqbfouz+6xEUvfwioaBC8jaOx08HfmJelxVwanQHYRh1nWXEVlUy4QJZGP8z1ySwEKzyAk461NSzCRxIpPunjdj4NV+1f10NlHy8m/MaOr0IIBJ2Qn9roXxi3cdumzSkUbvuEKfEwDvEkzDAfm1hx4ERvH0WLE6DUxOTcPRWooekiE5bIc2ssJadCRo9H3MvEf6rQMyf/+TSQKkYSSv/dLXJ6ZfvNW8Z62I/ojf2WYs267Tt/wCrzIeof1FP8TeiEFVUXXGgxXpEP93yUb+jr70DbxWhDWz3vuOqR5fANuPSURcSW7UxputLOxdGRdyX/f7HZ1vs3WM7PWi0Rq8uJmAVhJVTVsjntbw8BRTvOhef5peUzepQct06GEcGAE="
+    },
+    {
+     "type": "text",
+     "text": "What do you need most from a new service to do your job well?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSvAcKEAgTGAI4AUIIdGhpbmtpbmcSDJUgQhEf81Agcg4m5BoMhZvdiqvOQqrJPHJYIjDwJh3XyU5PDlR7DMmsy7JYXWZyFGLeCJMdhZ91fFRntiZwKdypkOXGR6+3g1nWnQ0q2QY+dTYZ8YJVConQs3+bd2z2PEzM/muAVNYEA9iNuSgk8IPmP9b4O0DH7aHnq2Lgv3xhL0NkXhWsGdrZTFW2TCKh5p+V0rkUHejJ/wWHjD7TNjveQI39NZUsyVN475nF+DBLPpvzoJdIkU/C+DhaQ1OQJVOgVs9/J+hf62F8LBz48NyCWMWNVP0eHvnZg7Cw56Xlsncm+CTU3z7sUx5FnkEufvFMAg+TGTReIyck6q6x8xuFO4QkYQhEQ6XVJc+YHmHsWTIYfmYY9E3nZzFx30ZGfIu3GXrUYvYhXT5OzJhzZDf4jZYh4Tl1h2xwvNuLAlkc6rCxBfY2QGokbf0+dKBvTlfbW+1dudnUVdJ8HIcde9yjrMjD94t82bfwAok7axbULKK0t30J6Kjrhcm1bSV+zQqqoDarinA6rP8xXUKcdvf3UjFpJMPu26xRFf3KJnYlVgZTHTXtEd89S0Tg/d3UqIv03/9QwkjodHHXS2bANyFKPy2aFG7WTFhyrtkmR60Hx3YolGhrpGD9Z0Wul+/BpkB7c39ytRn6OGwMduDoR8Ktxane0rMTpMm/ItdCygJzoFUvJErCKD9ENhhZZ0lZj0s2OMnJ9L3l4SjwdoOxBADccOfmfSWQf28RLGj5kY19tfgZsX2ts7FFMJAnnRwQEtmIueB5HLku0TE+3Fgdpgn/Q4S2owsy/omlYdRRscLkRCK51DZ14OSb0TZnNsh3bEzyv7IMIwLywq9i7g4BjKSxAGPLSsVDfC+smYEQGtjCdVkYBrJDzAeRxxqeZ8SVyUlkBH2C7Du8ZeX3mFnDjeB4JjL3V/zEP3YVMSVIvGDcbHrs7D97fMwvgTMuxuDGVte+ST1EK2iXkuV30wPDTjTu63yrsNPrGCk+OSwzclfiAv+82j6F/EuHuf9Lj9V/ZsgNZnVoqjA/AE0qD7Gbok+WKo+3daWksKAVFhcteO4DEsItqZeKcbBJIyqSZht9s5tLkDNxRrTpyZn+WGoWfH8yyUbfXDaIe9Aqu8ajoeK6PDA1AZI6WD3C76cImR3bhUozJykTZHYrQrZOd4UY57iSyQFgWdcuGU8rff1lSLyn8/fsziTjLsYw1Vd2bhnqhqkZJcha05JW1V/z8qHSMqb7NL2jd+zA4hgB"
+    },
+    {
+     "type": "text",
+     "text": "What worries you about sharing a service with other drone companies?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS8QYKEAgTGAI4AUIIdGhpbmtpbmcSDPLyF7hwc0bt2YRYPhoMwi6UI2Z34dLkDtuTIjB1jF4bU0taxQ2o0srCip9YlE0mdLk3tQ+wZ3dnczcKYjDf47L4nsHPfbrLYJhvOFwqjgZeB7QoEp+47Laj1qUGe2mmtHgQvxljldZ+rmx4DO0rRNhwTS0bxV7g3XPNHCnWUbSRlW81Ouj3X9RP8P+j8Fln4TpSOy2EcPBVYzSEgP+hgIXIgAM99SSup5mJ6wg6z0JEVj5eQFoF4tt1/WRq5o8rs90/uUYkRHiWbFFk2nAHF56wStR3l9TfrsNXaUogzOrhtETkxJD+fC+DCBT2su+S+fXMHVWDYKPRiC4objtvzWThltA3mXKeUmABs6pSJI7LntHRBgA2KNxqMIA2MOmKQk2a5ZC89jaY4HrvPBxrFoFyv/yZKyR+dU9+V+gnB9TbkzMVG9v80aikPGzzgg/0DtwmfcqEK6dgZOzgYL4hPLf8gc6TEonKJm44HswwMcLWJ8M1LGowVHcJoY+qHrKR7drtI0swbCSdu6pBoGHqtq5sp1T47s0Mcsc2QvIpKBGtJnVB9WzhnWSsctF6NyldxsPssLawBvJT/s7hKgc/XIb1bV3e+l+EWJMl9g63X2AOag6JnjDqCHB6YboeGiFCCTrs32BTmxM+4IomOWZuu936rKTmmlZgtmtx+7SrsUBn6VxDXopewLT0QV6EwoXj7+siLDcPdsn3s3dBi1e43kerZpiqGQsM6o71LmoYfXvZhojcbjTOm0a8ITDbmJXoaCP2WOtqF8T5t7gbrjpvl1XTqhLHYM2drAQmb7rw7NjDGRpgorPTXkZa2Xg6nPXZwXABYz/HSxB9yljKS6hAi5liSTM+Rh2cIoqJ9CWk4l+R7+j0vtI28G2Hx2/WCVmv5635BilIL95giCo6CSXQpRsLNvFF/HHeXnUSIVVbXrNcTQr0cSSEiknKQw5MhnmSjk1NhEiU8xJ6H7qML9MbRnZf1lAh5NQd958q++wC7j3Bb3pCxtI0Iwdm3/y5G2H3q0P/K2Uk6F3PdM2yEWo/TYcyAmJaQ3F8PgE0L230HVf50qMF8ocGXIiBqyYx3FowiQQs2S7pAUCYfZFJ3KOecoE667UbQHxzJN0F/uNCDabTzKDi+CpIlCPoZ7528BgB"
+    },
+    {
+     "type": "text",
+     "text": "Leaving a new service aside, what worries you most in your work as it is today?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I worry about radio coverage being patchy around ports, industrial sites, and in bad weather, which causes reports from drones to arrive late, out of order, more than once, or not at all. It also worries me that closures of airspace can come into force while drones of several companies are already in the air, and that batteries drain faster in cold and wind than planned."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSwwcKEAgTGAI4AUIIdGhpbmtpbmcSDBrAbMJg+fQJMYRDwRoMoXyrD0oTB/I9bFYzIjDmIXCJyCmoZ6wjgQlRXxUaaMiGRs+ApaNOIieDfGXrPtykoswqgWrUUnrnsi1928Aq4AY5V78PKNqg6IPjIuIIf3pj+9M4SCBV7HRYxODgFSxNb/3rtTDc5096HdlJBnU0ZSlszb/VpL8gfLTYUhyJIdqH7n988Xmj5NmeVdg8MCY0cTvOxUxXh22v0c9ZkkdbJOvrK735M78Qc8tpYNuDqlky+P5CmRyXG28eOdpHRM9VNKQY3c8B/HMJ2ylehlvIMoPm1AiHx0BNOOckjAUfagUFSh/sIEBCDHLIWfnX7+zsikwOHLjiQwFZQ+WRNedfSCrH2JkEVnUlsQyYYEkMxdu2CQNcFlANBdQRcsJgGHcWrW79CHkD98JUbJ6Wt4iqJ5yWxoqnyBimw9glT7yOW8l2eDXQ8NS1Yr5Rqyp8N1zdvLkGSmwhIjmSBE/isPRYprEkgD+/VFJ6k9PIC5k9P0oOyXTXL0oX6EQ9JlWjeBg9dbkxECdUMOGCIX+BYDFX/7uDagKfiojP3zmhOECifg0Ud5D5TBCIo6j1RIlSocuk1QsLmRvgtzy2KBgy8F9eizhJeOlHKcZrFL+jv2EPSOsj0JDBStldl9ws/am5LnD4D+qxEpOEMmtvBhwIl24IeadfPQLJ3yHF5BQ998sj1Z26l5gwUSwNUQ3QfndnDzhV6pOGx/XDXvpyMHVmlkmL4pWHqDo+F03mJr3aaCfhIifEhH4akEQZXHE3hfZN5sdrz0qFVMLS0NGQQEZBIUFqRlecdJaiU/vFNZ2Zaor3k8UdL7HK/ra5oU1k8t5srrz32WpqMy/FP4NbcZJm2jk6s09DYFhk2/tYwVZHSodcLtvZuBp7s5IMZeiYW0sqGEWHhCzHjSGlC9tPKn4/HPqQu96wHLIMQH1CuwLrt7e3OOQR9jpGo7VstVNVfZaCP+0LoxY1V3YJTJZRx3IfxzJAtkan80GcAU1MPErC6XMHHKrsBJKEA/80yVxwWlPzgRw3a1SOzXU0AIFdKnYDFm27r598DcNcqlcvMpav61xueWX2b2hEQtL0mSCOfJIjFWzCVqUf3gYUyg/+6ZYUSz8IGBuDOabiBZOzbpftQM4UUjm73BozglV1A6RizbIJ72YUmDOcRPegyqpSKi7H5eMP4ODdilrxEeFRzUjECmQKyyNjUr8AqGgtjVKYbLQqNf0M/gCY9LthzX6azFiI1kIbtpsYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "What in your work today do you not trust?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSzwcKEAgTGAI4AUIIdGhpbmtpbmcSDBSgg3kcQ51VrV4JShoMFsTMFOTVpew5gmXyIjClw0+JGYyLpKKZRG5KeLfBK14vP6bnWixTWvCk/8kQEUmW2RijLQ0HlzRZAog0Zowq7AYYAmFzNFVa0Sy/Zl4+WjkDrRRSnx3r8YbLVBIpvHT8MrChLQFc+qbYjWCAaTOkOTbtpHUYGq92ck8SsBEz1ArcSAQ1Qtu3iqq7rpE/0zTZEADsG98NPRUiGp9xgqQHLTRrhV7DqSOfMy13S87civk4nN3vucO+VMKtM3V8MkEOAwuc+y0jiANfSHXS9/fh8da9stQgSmTbnDJGpU/wtzRDBQAVIl/mkfIqugnvMfpqjHI/qZNYE325baUcMSykCq9sggJtQU+dzU3+rvuQ0ebqDzoHyd8vnCEa9/L+bKlGxgN80LLzE4RsmRiQrCsS2DQaTRP2WSzKs6FHxU58tt6OrwPljuVFJvuEV3lJuJZH0WIYTjTkVang9tyS60MHTFcpjhvj+ObpuV7KrA3UklvVb46A29UsV4WBBx7XyogzidQ06C1gHuweVaZCTfUgARyopGCD42ELRiAobZMh90RqQq327R2+3vhq5PE7womzcYbzrXsTxexJxd87ULTXsTSoBn8Zj09+LvShwLE71Cd25xVdcmYBwcuInMqzG9L6hcnh69t11jBtQbGWdmJJLGYYzmco2FHokeHkX1qD7uskY+jBqe7LSI3AGbHB+5jUm8+5hQ0/A3obXF0tHH0gxMhClzyFkTrZyCEFd6kCeTCkjfwJFeaav4nPu7qcssHjslY48kr3mJkooNItY7Tl2K+sRT0UIrTUlSPSIsw4RsN/Yra19xeM7okxT8yNvI2wpOV4vDvmZWem/hRwswfnNUANxEOuJvS89cHezYucJ0YXaBGw/Wl3+GtjNd5pWjUjtkfIfD449YS9u79UUYpGPwb/YwtbdzXzma7SJjdGdvwhjjn7Rsry/7dJDZcHLo4D8oeVP+6xgfDmRAVU120EP7zNAn7R3EObJWiyn+zz1wp9u6OGfQLY4o4nwmusfoWOejvA8xZM26AF3EK2MUOPY5X68UHb0zHD6FFiqvmWXcFeCJz1g7qj3XjphM4xDSi66EEiCped7zBnvV3QAOqyCWLodCcm471KG9r0ok+o7VgcReDSvqLqnAbVqe01Vbfr+Ls8Zw0vwYT22XMukDoDikcKBwL7z057jaIleWHTSfa2uWGTguo4xsK7yyUKL33/3zznauUq3UpMj8UCsoncPiJ24mxdmF85oSOCUEUYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "What would make a working day a really bad one for you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSkQcKEAgTGAI4AUIIdGhpbmtpbmcSDPGTcWs/aHpsQ9+d/hoMPzzWVcYHxeiWnS/DIjBoHOG573uTfjAl49OWFimC+01jjmdGEJg2m0um8tdnVB42gkdB+GDArFBihYkF4lQqrgY+4o9mJYyfKhwHmc0Yq001Tw7pTilwhyLQ2dCS0F5mTyz6+xZA01H9oJ7HWht/JAp2RMsGu18hjfPMeJm6nkaB5M3pEMYBfmbpG73y1oK0YKnrQ1puTQjtpa+0WOufxBI/00cyXLoVBTfQ8YgDtlbhRHRwaJElqVaxJyNjbOE60co9U+IAVK/IRcDF5yNMwY39/iFH4SA08Ndl/aMJnasv0gSYnD+HLknO1DQu9DJDLOZJyBETQXroUX2vq+bdqMD+EowqVGICnj+PKUQMkpgH39v+HdwfAcOmE8PD/OLGTjbQgOOIdpIFl3XGcjhn/2RAA04Upk3T1bCQ9WoeqKe16vYHflq/f/iguuJk3uGGTQDWJWjOf749Y17g+N4wGwAhD1p13asBvv9NGrAYed0EYsb8lrhKOgJujSopmENJr3MvvmQdEPHTekjOzMZ/DEfkKULW01nf+kfrqn6Lr4R9oGMX6v9ICWh3MUqLNtvfJLjQM8/yWPMi84R/ePOwZeyGGUerCOL1b7Fsmnx8mnOzhA3pZi/a9G9K+T1SVujWyNtg8nKfUn0VWL/2kRhvQz20tG73zu+8rZkcg72EexJrABZERTcMMuRD3Xqi8SW0YH+y6q6++SmMm+L0Jrnb5dXJZ+OfG7kJMSGP1nlWsP1hts9jXtStSux1gn6N8KOI5QnfGJIEmNpiSX5hJXB/5O/sHOcFQEDUxVO9gZf7gmBdDrm71/BNTfqeBoCbOP82oCUtA28Ce/0KuZCH+pW/4DysyQdGIPO6jwlz9hg6a8Tm5C+4H8lE+9wwfhzFN3WHxTJ05KXQ10yoBQzuhtv7zAsK7jKvBg6K+gFpwbuEHT39y0+mzNYprQjvcOSaZ1vwqhb+Ci08BXY25TSvKIqiVATnUoda5h2xH8rPPCyY4RjmehNbTmIJd3Gw+HEjOWdPKoM9nSkV0hqN1TIvshcGEz7DGOpzP0HMfLCWZkdobiptWi68JslUnyG2YVLGtY4GHIO2mNxtJcYPARhRRdqdJPjBvW1nbJ8S0o3Y9+07x+0JE3HzxUwzkCapq/NC8pABp50K0w0iwQNoa7eyOBN8GAE="
+    },
+    {
+     "type": "text",
+     "text": "What worries you about the people you depend on, or the people who depend on you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSrgoKEAgTGAI4AUIIdGhpbmtpbmcSDEG7NmPtpgBFmVmM6BoMMKnlqzqTGJy4sRLnIjD34YjbdafKN7r6JJlHQS29Q8bDjg+Gylt1Tgp+AW1NSYwQ8r2mWTxK4yFhVEfmiS8qywmYlKZqHv6X5AhrDj2ZyOqCjKqy6BE3f8o2Lmz5B+LJ/ydytnSD9X8uF/H3Zuf3uT3eEofkOgrknSAvUZ4EiWbhs8oNfwIn20RUnsfwPVLHHLm/iQ3nA39IRZTgva/Ksu0De5BVv9rfYynC4lXT2MWAtJ290PPi2D3hxCYLnlKbIiYtST6oI8t76VFltz+1F98W05Esi9ZDxxOW+EQNDbGa5vsdOhBqc+XDTXXXn2fgTOPtfGi3MIxabniiyk30TqDij0n31umFRsf6usL8/XQKABi6taxmYA7X0IlQZwycDbXts/xEAC9CJ+d8R0IDnj2QQAOjqanKDlhFxRSH7ptWwpwVQOlLIICzVJAoi/xnIE1LacrM4baXECtYjcTi4pmbBvhuiAk7Q7i2P461PXBkZl0JBJ2vQ7KshwqYdbWIxoSo4TXfHmqx4PEXv+4eJXsx4OZ+vbWU/n8uzzt1tuzs4S9yIYK0Jviz2L4SuJkb5TsuIfVHHmrWLYoxj0+aNCH8YHktDIRBXtIzJ+yh+3evjBN53S/sxO2oqpeIJcoP5tYSor2KZvAO1julmSuMNoDWA0pGCLsRA68al1mBuHwgGTLYGq1yx9r+2VQ7m64oLTAigjH4bz4nqRC4Oyb9UeHSIfuQdaRSO7g5h6JcfxiCCRFM1YypVewkKrAQJUHjzEJ1JWpQewZLvNJs9DQKznOKOzCYDgD2n9yR73/8CAIlO59s1qZrK1NRFbhVQv4ozObfRxcpLPjBJlKfMgzi3MCzKZYohnT+0x8O9Bx1JdrUyjVWRDPey1tq3tfEcLQ3h9wtSYfoWUgk4wkV+wkymTGEiHM0DL8v93f/f+92Ku6lJi4dbFqRGAnJMJRpQvIE8Wkld81g0ODJAQHVrT+ti0owyfIad6MyUbkQXyAbT1a31lnvKbg4kM46/rdYy5eEaPqYt2tBFFwJmHYMI6qBRqMz3YnIVgKKQ0pM5WVpWas9GCLACokSnZiT5T/41VIELwci5Qxagk4Waz+7myNsy0+5KsZWTlSJdVJYmloZYubKf2hifY7yJ0NkNq0xZE2FzKoOPIvtehatvhqyGcv7JCfXJKwswmZLjEAsV1roECVC53NAZK1delG0CvkptuZaBmogk5U0roK4LWs7NHsAW7IORvDFRd5XoCmlqEqGqvG4sNCr1n5xOu/dV+eLmSuGeNYpMZIfojI37FFldzj0HBgoyN7/Ecbs+m24nJ+9hsssXU8YqPBs40IkDrpHxXcdWX8fYeV9UgPzrBDaWSumh+kq58puQVvojRfQ94XVEcMy03cWAkpdUs3N9o8E0ePqTTGlI+QOAd8ImQC/6CrsAQGuAe2WzEQIMWvI+Ehx8/OrT+HZzxFcdnJxpuk3blkxEJ4VDhhF/pXm5g1+BMh7CZivYMB5m4+nD35XKNGDbcUAqvESaI8lhK67VHiJUnd6x+DS1kygaSILOSthjZ9Vy2ZaQeFk1N2stPoW7gPGw4bUYDRoZEcTrBf2XYgLyy7Y1BgwGnMkqjmHxxkLyoDMKXx/byeglbA43WTNxzp0LZGiZPp6tSXOWyPIxPD1FpBAKavF73C6TrMuqZeUSQ8r9vvFayNQWeiu3i4rMY+MC/5jwj0SK+XpywU2p0wYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Is there anything I haven't asked about that you think I should know?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

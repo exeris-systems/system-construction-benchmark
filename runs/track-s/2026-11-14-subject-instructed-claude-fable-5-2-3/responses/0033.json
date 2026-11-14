@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch32CqVXq9psG6BGJAafW",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSvQYKEAgTGAI4AUIIdGhpbmtpbmcSDJh+/aLG4W434fT5sxoM2Kpb49nBpKi+MIjdIjDaqAhG1iaKmaH5sxdMafMGHr6PLrJ0o4NRzJiMeDOwIg4GK3WmPzhBsRrU7uGMBiYq2gV1ce2skrOcSaNfyDtq4rzZmnEKOSjd8xfFxOExGnInz9p/iNweaMKPvzSRLOGr12HZRwR0x5vWGbr+EuYIUiLkNswkYhgmhhRd2TUsuP0KysS//4KfbgTOxbs4OvqN5H7rkZTPkaxufNHfNDlxj5MZFv5lSx/TY2NnR4UbbKrhP7hx6eUWTVyOIKHteqzEynyy/AFilS7FHz5/3VNgXzcAq2Ak9e6EkHXTHm5ch6CStJDnx3jo6biNlw68KYveo2MRlkXLkAdkpaaboTpyx9SKmRlF3FhHAInfPpMN6YzgUPG7h8z7Jod8Ufwplx7ZmGqADyflwe37EGRnis9mSglbAy2f3Qu15G/J1/AA0UnHveUXO1flteiifoG3DOS9e+mxdDDMnS12+20pSbEEhOfcMqhxUXcDnJIBW/4fRWtVWKANqO3CMvLPfCG08Cerd5/R2Fd+rj3S8H5/Wvjg2JVW8/zkqDtXIJLEgtJepOqbxkUs3RTzsc3egI2E0SSe5YsglVNBRNSiwJ14q1kHZvZ0V85reUEU6CikTiyBbgc7JW1PnJrAnYv2ur0+J30XngRxoBqWSK5/goqLkylga0+/IodzjtAi3GiJAY/j9I7JP46orgc5J+kdIRkpD5YoakHgHbSo66jtavFqPBMXP4koq8MJQVGNQJ4JSII3zPC38yDYJ4kbIfoWZz4+4CdfQk2lG7GQUOmnB3/TRoxSgKlKLqv0hxewoP+aPdCvdKUqVimcEYT1uxjXCoUWs8akCEYD0U5RWv3gq04CAN21bUZO8oEoYs0xYnIm4lxqTQ2Uj6TNKk10OUoYjlMnUmaq1Ic9H/GsK65DF8vJELFgIUr3N241esaWWdRioXyIedBt9RyoGJzeNXW7pE3xw77Dih7txi+RZtYhKR+HRgcn2mVzk2PoFOHPbooBx7vep6fMy9NdiCnlkW6Ym/LeCtQUx5HK0WHMnISw/pvDGAE="
+  },
+  {
+   "type": "text",
+   "text": "Imagine a drone has just failed in some way. What is the first thing you would want to find out?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2234,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 44,
+  "output_tokens_details": {
+   "thinking_tokens": 14
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
