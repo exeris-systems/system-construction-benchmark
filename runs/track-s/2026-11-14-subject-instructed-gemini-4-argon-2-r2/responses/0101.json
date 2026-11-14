@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "How do the zones defined by the authorities connect to the flight corridors between sites?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1284,
+  "candidatesTokenCount": 16,
+  "totalTokenCount": 1300,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1284
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 16
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "fl_4auPoHLOSxN8Pn7uduQ8"
+}

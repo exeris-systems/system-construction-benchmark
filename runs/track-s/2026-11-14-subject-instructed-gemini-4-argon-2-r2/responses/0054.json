@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Since one person may be responsible for hundreds of drones and cannot watch every one at every moment, how do you know when something has gone wrong with one of them?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1465,
+  "candidatesTokenCount": 33,
+  "totalTokenCount": 1498,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1465
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 33
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "uF74aqiYE-DPvdIPlpqooQM"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What are you most afraid a new service would get wrong or do badly for your work?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1635,
+  "candidatesTokenCount": 18,
+  "totalTokenCount": 1653,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1635
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 18
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "1V74asnQOICJvdIPxprsiAs"
+}

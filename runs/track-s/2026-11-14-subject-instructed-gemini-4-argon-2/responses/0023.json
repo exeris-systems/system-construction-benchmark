@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "How do you decide which charging pad to send a drone to?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1004,
+  "candidatesTokenCount": 13,
+  "totalTokenCount": 1017,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1004
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 13
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Q134aonzOPX_vdIP9bXFoQM"
+}

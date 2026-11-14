@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you walk me through everything you do to plan, sign off, and run a single flight, from start to finish?",
+      "thoughtSignature": "EmQKYgFpFH0Te38YiZEpaswx9SCUXBPkqgZ+YiVmNATHzZCg3ef9d/FMJhYXCpBa1tj8RdHGIjYcSPD16AFspA57jKSE62bhrVKrWYd+4fyEa+dW4Np+8sC3M7s8MI3LRQsLif7O"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 625,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 654,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 625
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Zl34auufHNe2vdIP76eMkQw"
+}

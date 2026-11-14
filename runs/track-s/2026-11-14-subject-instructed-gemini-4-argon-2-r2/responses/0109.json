@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When a new customer company joins the platform, what needs to be added to the shared airspace picture?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1542,
+  "candidatesTokenCount": 20,
+  "totalTokenCount": 1562,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1542
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 20
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "m1_4as2VHKvokdUPodHecQ"
+}

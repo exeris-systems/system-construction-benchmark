@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else about the airspace desk, the flight corridors, the zones, or the closures that you think is important for me to know?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1578,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 1607,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1578
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "ql_4arXjF6n_vdIPs-vF6As"
+}

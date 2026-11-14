@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens when you retire an old drone from the fleet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1033,
+  "candidatesTokenCount": 12,
+  "totalTokenCount": 1045,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1033
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 12
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Sl34aoGSFeDPvdIPlpqooQM"
+}

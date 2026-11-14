@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Are there any other parts of your job, rules you must follow, or problems you deal with that we haven't talked about yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1802,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 1830,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1802
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "4l74ap76I7qUvdIPuq608A4"
+}

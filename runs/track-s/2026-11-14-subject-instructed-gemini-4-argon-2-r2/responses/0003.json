@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you walk me through what happens first thing when you start your shift, and how you decide what to work on first?",
+      "thoughtSignature": "EmMKYQFpFH0TEpAyavZcR+pVV/sEotSCz7GslgFHd+kBnW4U5cCAGtoFCPIzo7AvroeOc8rTmbUbbX0rev4XlRfXti9R3F3pZeavVDROowbMGtPvPURfdrG2yQHO3hKDfRIS6TI="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 589,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 618,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 589
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "6l34avylPPGMxN8P06iviQ8"
+}

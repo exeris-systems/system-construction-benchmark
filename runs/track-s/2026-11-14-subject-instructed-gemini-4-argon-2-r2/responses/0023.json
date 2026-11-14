@@ -1,0 +1,39 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "คิด\nThe interviewee is answering \"I don't know\" to everything after the first question. Every required topic has been asked about, and follow-ups no longer bring anything new. I should end the interview."
+     },
+     {
+      "text": "END OF INTERVIEW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 982,
+  "candidatesTokenCount": 49,
+  "totalTokenCount": 1031,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 982
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 49
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "NV74auqcFOPo7M8PyOiC0Ag"
+}

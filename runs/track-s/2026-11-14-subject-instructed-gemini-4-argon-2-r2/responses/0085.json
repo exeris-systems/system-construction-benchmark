@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When we build this new service for the airspace desk, what are you most afraid it might get wrong?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 854,
+  "candidatesTokenCount": 21,
+  "totalTokenCount": 875,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 854
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 21
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "PF_4arXkE77cxs0PmKmb8A4"
+}

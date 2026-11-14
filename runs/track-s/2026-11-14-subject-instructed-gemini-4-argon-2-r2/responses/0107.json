@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens when a sudden closure is announced that applies at once? How do the customer companies find out about it?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1503,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1526,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1503
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "lV_4atGVGJHMkdUP5-WN8A0"
+}
