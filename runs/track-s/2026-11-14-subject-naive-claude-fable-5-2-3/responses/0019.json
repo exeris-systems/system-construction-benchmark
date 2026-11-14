@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yG2KdZY44nzYwGcRgf",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSsAcKEAgTGAI4AUIIdGhpbmtpbmcSDNvdUNqCOi8xi0UWhhoMRziqFgoQL9Z3+zciIjB1pBPFQ8YxKhTNBV5iVqFK28NKbjqC+BjdADM1TtGoNmxm0OgfL8k8vrmYW8IoubcqzQY/WdDsFtpVWsrA5ZDKyXLSSxQGRo6GAafABNm7+juWfDTzuy4/Mp9jiaFTxeA7gkKBaVNd5KGHgrgI3/MPy7J8Ac64k5SjrqS+VpiIh3X04Eyj62ylbVvNb9ZNpnwi21Yah1l8Ic2+WMrdjP6IKp6dV6c/cPCs8xdS1zaa74ijbnutb/otiiThKdD64/nq1/bWcYXNTB9Ei7tudljz5kkUZ3hauXN6hEXrxODbeft1zh2cSrIAyjpX0HaGixKxP/L+HZYo2GTzozZ3n0CXfu3Q12Na1jHZygn1rAve0ygOzK20+4bVXRM+bPces3v5gdmACBG5SKp6aoDC3+J8IxOzlvJsaLQ7kRco8kj3PjZu+FLbqu8vtb7uQNH61j57Uk32w7AJOw5UmTPXe+NMxSQ2f6uGKjebA+43V+F6rX3Cue2p53rx7QK8UyDc1YinsFegI7SVxsz2kAatcD4qUAWhFeO3xoyYF0zjDjq6LF5W5IgQBnSE2PuMuGemJxbFradx4nf0P2dAUezuVMjdxejSUbsoKnhRKB+5RjN0T2sxPZW3p4hA39G4/1Tb2zpoZ9IWKHsteUg5f6r5oUjBg86Ge2LkcPRgxn4dpW70rt82/tm86Nt0/Fad7kf8QYWIxhNRZAYkdlOky33yRQwiHr/ZsobyrxxIJ5IEc/O0nc/J71mKZjWdEPaCM7Jt4uwL8MrkzwdPC79kWwfxgHp45PNhgLN4rIQWr7pGHZFnlFzL3YkTYjsC0EvROI+G5149rxE56iFNsLzAB/kerI6ls5zhV76QXdfOdu8+PpLkaPiQj9KQIhc7IfPPqKaf8vCzUclfjU4zT0ttzwCmgrMkqEVC/7oxw8qazRv4xyVTof1I33TGNoRLen6J+mNyq/8alxfepJYunN2ITrz7r7XBiVyFmZNp3lL+MQmI+Mg43sJR61akuNCOC9dOvsoP7/oTYvxtUKaWeBcbqoPYA501cdAOF5EXRCscGADoRJuZ/riIpZxtXPRq/kREfsa4ES1+jcqjBibWXoAKtLZiPv711sXYw4OH9uuth14PTC7En6/J+fGQYE7NXxqfUaSCBHri2MRv8XOWAwsntSeEJONlRNygfurdDPMyrroR8I6v2xgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: When you take a drone out of service for repair while it is already planned for a flight, what should happen to that flight?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1576,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 93,
+  "output_tokens_details": {
+   "thinking_tokens": 53
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

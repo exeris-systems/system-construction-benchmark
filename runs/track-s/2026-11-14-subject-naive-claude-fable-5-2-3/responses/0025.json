@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yHMs9UwiqUHS4QWxb7",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS+AcKEAgTGAI4AUIIdGhpbmtpbmcSDL0gVzwPUgiwabd6cBoMw7LgQPwRvXeoYZu7IjDLbLKoAYKidzHE7eJqZVAFyrTpdY/OUeDbWmgG3Vi24CAFjkK3Zz/LYp8m29HrFPAqlQeLcPTK9tSn3mWptKA8RgFuUAII66HwD7m9P5+JQOuFnQqGpJKMZ6j2AOMPUOPp0X8uCqsQtDSEl0exBU/bTUJBeEHVdGXGQBI6Hq9oVQbeNeLNXpCI0MoYEi5rrCcb+aVgkwzxGYKLcbnZqoXlC1Zvzr+jNvOdXMkaPgctTI8Yq5pyfGX3m+O788HWGg7Y0nlYpRDd4gA4y/z0ud5F63EGXPMWZtzVplNzuB94vkfzcSOnl7ofDRnzDAfxXuikvf1YAI0wW6Wytvc/kQQUOgp54XIrVcZX/S2f59r737aHWwzddnPqBywyVWMeVTtml2+KbcSB9Vc4V2F0nmZwaMLSk55yZMRUx6yzShe724xPGb92aumHNkOtmVTlVWYWwZB1FWLS2ywmioQJslVEKMUgwFNOsbdgk9V7h1aASvesZgz5ULOvg5yAcpzhQcGEtUOvE4r3WOMnyGQpRxCap6dn+GqrKUMo3ROT75ZOIZj4bGsxRj4IUrN+O2PGZWEjGL8ZzQpn8urhTSPx3mYSQtsoZGnHrCQGEVYfVEb5Ikw3wrkO8a9i78Knctnx6nENy8Q+LtLBBELcN4f1YJ6PRE5JQxlDPb1bO25VBFJjOtVdEd1f2C6+mVBxKJ3tFXKWHEsY2frr0BFPFx0ofU8dijDGDVPQ9CC+T30H5UxLM02Q137TMeTD28mSbhusxrqfitTsoJdWXh3TSj2Ofj1lZ7UYZl5PcgVsS0HX057ESNy878qPeWHNZtsr2c2KOM6TtX6UbviY6/3LLuHvzggFM7LrqAYCNT/wPtegw3fku5Zdfmy+GWRYhxYOdqPov009gA8d8h6u2X1zJwsmppKU3pKO6LgOa8iVAjbmRZLKyB3YYsjsREsQhzRdSfXywqLnUaWhbO4Bp7YO4uXsyJkgkGpohOMAV44inCRYhC1N0eQ0DB5VoQHxaMVghxr1cO78uo2zYoy88qyGSrqYf/CgbDSq5heBmC87D7gnB9KqWZBUp8LCGAoy2qMPdmOjS5STYGW+FS191q44ikxDLfa6Fi692S8gb1I/+na7Qz8v4GPOk1KTd5IdnMGlGEQrRh8HUr9Q05O2kYKP74IMjP9HnI02Mlb61nsMQfoTv8V0RZavHvbHuqWsWIsrkLxJ+a3gMNKSuDBVFfhNqITqYRuHnvLn59GwXfHHPlRfg38EhC+YvnaaKPOMwSKnfusy1n3Te40HWh74axgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: If a corridor on the way of one of your flights gets closed by the authorities after you planned it, what do you need the service to do?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1976,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 125,
+  "output_tokens_details": {
+   "thinking_tokens": 76
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

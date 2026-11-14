@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yCwCyBL76tzsuqRfnA",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSpQYKEAgTGAI4AUIIdGhpbmtpbmcSDG4opvXS7OH4BgAGrRoMOaM250zZA2tcPmA3IjCZnygi0djJzPpOPkEP+G5NrkV2RsFo75Z0zOWNms/QcUPQbJ5SXQW8BkifnFEJQ40qwgX2H4u+5siuQLBIgeeTIvUvX+VzfyIzoR3W7scrJTNnvOkq6yELRqRTCV4yiOEPiWNqf9Dik7Lv8oyRc76CgKgE7CfAxWfeujCduw0eauxaRnhOsO9d/7qFcGfXxXlze4ToFJkVAlesR8i7SHLqvyXvIShsmdSy3mdBbsadqye9TWWn/Z/6gVVcFxn/sMXe32nAu/Jojp73VM7TNdy91m87wDnP+cIepzwBSRngKC/4RcwHr5b5RNdylDKxTnryphXnPyI3Nf5C9ZH6v6Wi89KWRCQoNvUAO0zD9ykM7NaFsRYDJLc3fTWBu9RYXYFr+ydrzQVZp4nucARxcExj0XxUXXPA5jvYZ48QXWbAgnXR3nHoZzBRPfVrgh4o0GuL8N0//5nzc9+6aEHQkvvQKz/19PxB2CtFQVnjfAm/iLrws/k+KBIPvTs+sSHQMQKdJc0SEWvnJZCD0etTvryoDwciU1cAHuiDsoCXGcbgElUM7NHrEPE15lbSOWPlf5yjudjsVMF9vjNKzsoNA3m7MubAP/s7jDxU74gwOA3ry8MmbANmSbzYVV/PAlThF59rUQjPWUAurwzve++GYb6LBJg5vh8ZT0IAASqLLXOWx1pvXqYGiEYNW0Ud3DZuiyFNbc7cRP6p9OZXkX6LH/kCDTA+D77dHDK5HfQXYmRh2JOCCQsEDvq0fsTUU6vY4Vclh7ngkkzbV4TdcsAWPaIGwCpYVwPVZlMksaBI54l81nxbgq0hXMyXVqd0jQ12JoNBUiii3bAOUZCKPUML/zBEtf+WsoVg8+mBvLdY1yTltGfapTj/yHHX2olWQKxwvaQuGfEJY3V/kfdGJxs5BGO9rLyYO/9ldkOo+nKnmWUpz3DoQ8oOJeIzFEs0+BWmZ6UqDobRNb9OuZg3aiZDfvaevK8A0C7V7MyoMd6mo1LHDoT50DR1GAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: What must be true about a drone, its route and the airspace before you sign off a flight?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 942,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 71,
+  "output_tokens_details": {
+   "thinking_tokens": 35
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2ygAqWwZErK7JQR2uSb",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSmwsKEAgTGAI4AUIIdGhpbmtpbmcSDIWE4mZrfeCmQ0kZ6BoMIC166qf0IbJCcLwtIjBMc9Aei4xL/6lvWbvjhqFttaz6QRUW/2og33nKNvzb6njX2DYKFd2CJlt1VFmoB4gquAr/Q0mALcFSLPDOTVgGrbuZDmFMBtzLRXw+WzKgjP/4syZ5VbtKW6leT/mFE3dszjKGk8eOTjOek7gzvdl/Xi9NcSZc4x5XCSXqZzc8l8Ovek0R5EoURMR9k0ylQPDiF7giij2RB2VXY2Qj7Mx6Ta6mOyEIhFEYjbKqk/nG15v2yST2w7//GS5wwLxFp2xPh4yBAVVYY7WtuRRNDAfhmywQWybwAoCsVUi67DzY+gqRE1R9fhYFawlu4g7FZtGS/AdTfIELjcrE1ZrMnS1S8yLBArlRvWBgISCDDDbXXxcfq2Tmbqq5BCDgXIn4uvCEITsJEc7aU7laozDoWLHYhqI7ggDD6NF7JJS/ZJVZ72UuNpZQbM752PO+5f2Dn7zqgD7QgkrG6DouGjr/l1lzDIL0czGeV0nhIG89axKpXXVLGIiMFovf59TTeGSTlFqvTSlTh667usJD+8W2rkH9MD07bwwFBaP2eYYNcOAF+gfpf0eleDML2clotQDOggk9fE7GOfyxyvFv2pSlg+eN4XODv7yb7FCuzjYwdDpekliXvEELyNyfOrqWuUI6vRzC7iwjO9ckWJns7cWOdFFEEMbNsnk0aFMzytMMxItwglwNRfiXgHyYkWZAYmXlF4psXSEnklAyFjkvQdAYnH8wqTFhziuld+TuL1tJdUuquSTn0dZr0QyPL8ekFe6Mv56wE7BTxnGeCFJYXeNLvM9JS9TjrC0vZgmtlKaQsk+eebn4t+l3WBwNCl53ta5kHHQOttf9weHG00y37AulyU0xZ5fJaHOlyunjN1nxLcNgZrZ6IYQvLH0E0q4QYXDYSQyLvgaPNxP1GIcgX4fcBiHHWdAuvZnVo72T0knUukF7BT64F8cGZgk16Ss+LvrPM8I0dhbcw5f/50/Yqrme4+O+XArmmobnijOewfiW/vWSobg74ckcLDsi514lpORFHCGAI6eLH5XUz2V6c0lI80omDEWLGTkAGzDvBKJ2qXhmav+NWdxPx9HEXt5PM8EMQWzSxIC6YMri1dGN9DpST/IfyDRvyqPR6WnRtkiuwKRBzAFQDQFr9de37G7OaLe6VNngFOYzzM/5RR9fG4BnhMFiikREttq73I6PU9XxhKAbpq5E4uFrJQdKwHinGGkzyHcJT9KBBUOswerHwFxweqVicCHnZr64xcONR5xoepD2i/JYp4Tm0feMbjP3Dc8V5FY0da0uMH0aSMgSJrjgBmWOsTEQsUbAmGyqrBkaSrNSxEqpMrDOC7y4eyYkUTkPtnNZw+XDfcvU0J/tgx8mKD9dZy1jfiJT3C9PEYzCpMAoYfPpk+oOObc7dhb7Na3L202ZX+6Fi+t3nbaCrkikl6sSFA1p4VkyjKCGSe7X/RfQzqf4qAi5YyN38dELvQJHQLJOVGUXszUxEpTZINyOaCIOiHsdWl285B0hJlZX/gP+oiFM7LU3FiLwBX2vnpwFcX2Unhg0U7gJSFiyKQANRierobU4zRf82xFeNpwi/w1490Iq91JY4fDlXaC+tAJOZilkYzG3qPRObwGDy6THc/xV/au7VA+9ngCVEjuQ1LbyiermyboeiBjorqldn/bx1hKDxP6fR/eacrQLA0NDNGTsN1o6j+s0bfKKUws+lOUd5mvy0C21bz08T5bjkkHr1bb1YY23TFS1eN0EQKAHY9aTf16/Xj1vtYNjrbMaloKuiFex2Ly/DUVRaNl6MeznDed94wY0mZFbkqxyfs3x5p1I34OYBpjKkhUx2eSw5dxZYC4LHbGnU1chbuQsGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: How far ahead do you plan flights, and does a planned flight hold its drone and its take-off and landing places for a set time?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 8031,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 288,
+  "output_tokens_details": {
+   "thinking_tokens": 239
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

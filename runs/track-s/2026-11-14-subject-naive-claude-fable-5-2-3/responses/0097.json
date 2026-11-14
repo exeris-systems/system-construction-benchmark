@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yZJwyub263pzSuAgL1",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS9QYKEAgTGAI4AUIIdGhpbmtpbmcSDLpN+2SJPUGFESO7aRoMU+ui0AizjJKsLAiQIjA+7cmmpSJyrg+28dDPVrLdw6ZrI/VoxGEK0BVlw0KLbya3ZESbB0iZosbaSd1bDVUqkgY7lSkRtr5eml3i24r6brHzYuC9lAN0U6LfrFDRfjRdFb7Y/eo8j4vhRB8DA9cyas/KmIK9yvST31fDJ4PG50VM9W662Dqz6KCbGXvGsQ/BFFOekxWuxSfIV29BtzYkSBEwQWOwN25RmdJu1wyzYGqkLGeUWUzpUyXDrvR1dMQLhwsrC1Ft8zxKAnnlp7vkhigMR9ib+98aomDezy3V7fLVblMdTktEW4zuBW8zM+5RxXs2eYIjbSArIrnHZbIab1I6LgCCCZP6DSNJB4glv0rSCEAel34qIp9pdncIXU4+mbKK7dblnA/zwRGXqTbCqGSw7DVesWd/o3ck9xnQGp2TD+RH9QABn5MWdhre+U4jgr1hRMOd121mhYCesJcTV+F8EhKsIlrDH99N4ya+YAHsguI/FB7cY4xLzUp3CKpJb8k7HWvgzNJVhWssl3V967h8+pYeWX1pdnndj1YkQ41clyUl7Kv4ZXLX99GuQQiz0v2WIqYKB8Z2ySr6K2HfYJr/6z7VtGuaV38HJ4WtBYWBRIY3YwUWYd7EI/u7UPp+/D10YwMFPOXrWGRYXV7G9rVfC2KryuWbJFI2+hndDLRnAPBugThBsH/BRNS4KucVQmo4+fbRRpVuthCvgUe2KmsPvlcwNSdDDz1q+exUKTHqUS5u3+LpOL3rXHGpW4edL1tAJD+/7NV5bkOCCZjYdpDXURSiKGY1HbT9efZW8aK/IX74Z6GWVsutJUVV1oEihoSDba1K7ktUKnbVi9s9hhP2HLi/fq61jR4SLIjCRKHAkVJO0WWGgOUDeAONK5ERxBq140fh154hvEsTlzjux0ouV2eDAQc/w2u3lwNOWSQQ/4dLP6+Sc9EfXt6Eayq2go6ib3vK8tdJB+uOvezax4jaqLcyzfh2g3fW9dtnIwIm4TuRRA5nq2hSUUEqrg86WR46Lce05BpFQ4yP0f/B7KQWOU2O4DlbSx4Kgch3GtrvpgS+Krq/Dxg5SSNzanANYunbIM13kNX7B1SKe06sg1/EnRY1qfb1XaQp2oz+pjEl9nUYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: Is there any limit on how many drones may use the same corridor at the same time, or any rule keeping drones apart in a corridor?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 5767,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 81,
+  "output_tokens_details": {
+   "thinking_tokens": 30
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

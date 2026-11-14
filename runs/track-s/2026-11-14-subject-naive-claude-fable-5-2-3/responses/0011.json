@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yEFqfzP3Aazh5KAPyW",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSygYKEAgTGAI4AUIIdGhpbmtpbmcSDBRYDE9nA2Fby3wjxBoMWjqpAQUgTovZ6pm2IjDgDFkWdHZkplDZNJvRrftIyo6VFoKc6MU3VdaDWfNlDdMyFTKQ/yoHnSs/XKYSAaIq5wVZysFebrnxqum3f5ak2jtEnqlS5n07TMad3GyMNUkafJWCNCHrefF8UOYVi4aFUMeBBt92q3AU+yapDMHFF2ovwdymUb0PDflhycB5I2XaDL/y2PU1p+JDx00fJ8liLemFU8TGMQJGlFD6kyX/D6xECP0d7tGQ9T8AwWD9Uti0pGP3NuAKfC9m5p8c146r78UKqXmo5gwCgJMTM6NQM3K/H6Z4dVPFctGU+u7fTukwX9HKFnh/waXlLv8M94TTIEK+h3GvK3f3CZNMlyvJY0rM9e971C5Ag41X0uSDOm6nzEI3BUC77S/3/iMc2GYYX0gugYvqe/qOESOf6jdXVA9K7QeEwLRq4AgDKZiA/C9FFPV3l8YfyKgeH8LW2nyuTWK8u6OJsIWV/84nFmPpI7zSWUI4Hssqm8Xo0jrb65SghGWDnQE5ok14J0akX81gRFkehRGN8Gyzy8TQj1TQXYlwVFrf0cRaah344XQshdkRdBmxf/buyPTiT3v3ztYzdJFTCrVMH2m4IPrvFbL6rZvVK1yaGCUPz0NbORQs3+YJ3+7wBLHybsbrHCFsBhfpA9lu1qZN+StMIUBWX6OYVrW7qpsABsHuzWmvAQH27eVwhM+RnyEXeSChUe75IgjNJaA6pVJSgr+JKl10U9HwfXdkmzCIYq8h9KaF037ArvuU4pBG2AoOSoUs5GAlcm7lZ9SGk7+aDSGoZn8zK74yMCQXub5rgD+skWvhEO7VYtWXkCdDOOcen+3P2uJFRPMk00TPMlh8Vd55FgbQFYPzBS1WjAn+Hl8x0GhEYCA6GHoMZNYg/6qMdHTnVOYSqoO3BPnSt8FoloMZ7RdS1pPfbUH7QPtUx6PmW5UALeMHVf6xQLLkhk0XQoBYo84sqxuoXMTaELlmJqGOJagRRxdv5sl33sILicnaK/mKBwn2EPiPRp4ARxFwbL+cdjq7B94S9JnU04eDd9lIa4jgfG70v3bw/D5pDqdvsRgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: What goes wrong most often in your work today that the new service must prevent?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1201,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 71,
+  "output_tokens_details": {
+   "thinking_tokens": 39
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

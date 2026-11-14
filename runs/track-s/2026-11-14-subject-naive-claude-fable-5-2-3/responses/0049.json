@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yNfhLmUPqg5DjL6ioQ",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS5wYKEAgTGAI4AUIIdGhpbmtpbmcSDFhPMlpuWu2/olBcChoM6SSs37z8QY8cKsBJIjByGHcbiFMvsSSuzglSu+f8L1F4bvrOJBrmFc9t5ej0y4D9xZ6kqtC6iLZd9sRTXfQqhAZFBEKAf63eAvtZsgv9ukxjlzWRrDFmFXWxUMeiznJRTchXI9QPBG6ALloQV8TLhKyNaZrDCqPiIXPp0qMQSF6xKAlMxLp4Ce8rYdB4gtolxQFVLnVsng5BRMAxCpm53iKDfaV3bVblhSVk3j/H/upOXEu9+FMQaybvoTsVm//f4agAWV+RMxNr8nUgBZhNBSV0s71PK+0eIM6ADCyRLn9xqpm9hwIYE7oPuvHULa6lCweelBEEF1FH3ReY84BaXINPtRZjPXEVLneAHMZN3hrmBViWjDycbNsjrhgtz856GhUm2rKChmRjSmbLRefDmimMNWIEK1YDeJioD9/T7meKuUKHFICLYDpnsli+hNfweJrRlRVNPjGJBmLbTeKbV3W3na82A+Mx+Gn3negBafmtNX0KzRuxCQUjGZBwGHzIiK4mdj37aLB1UOzQnT+5RmI9hu9I+vM6+cJ5Lk0QEnYa6kKbxWh8p3YURw63dwWG8Cjt12vCIZ9Hnm07eSxyodcCvXc5+PgCu83SNqTUqZcsGGXn/jjWM5r/VoOCPMjP+nWCddhdIZr+aK6d3bTORIhcI6mLhNA6dCB5utiRCNsimRtenIOGeV7TdCyMujvCDyyyYv1pOv2/SkgUcpcgOrPKFQvOIgfpvWD6aasJwpGyQlrv6k5VlCVaEl5lfqGV8J8q0oaCj5KuHLtbVlBkiwwpPLe4N2jbFuLu1QQLCmLziki52lr7SN9GtudnYpLUvukZ0nwGAISIlyxRj5gYSg9RZguHxvuVqcIWjDpE3VHZlmVCPahV0Ewb7mvfbxmPFVhvI5+eZ+r2gLgkgrio0yM/k4vreBJ/yE/Tfw3APzhYZBBWcazSFJurNWq31RCfKDlJh1aiatrtw9u2HKVR938ltGhl+co3kqWfPNS4DlJAREdKZYcrVMUH8TtHwHoJYU3PJ8ky7XWxeNB6JzGPhe+yAZgRJeBQzHERjNjFjDgz3ElnvHVtdYtuVBssk7IKTL/F2fe4Oh98GHE8GGoHPTrqd41QGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: Apart from restarts and crashes, what else worries you or has gone wrong in the past?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 3413,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 61,
+  "output_tokens_details": {
+   "thinking_tokens": 22
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
