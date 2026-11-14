@@ -88,11 +88,91 @@ def scored_scores(records):
         if record.get("parameters", {}).get("mode") != "judge" or record.get("status") != "completed":
             continue
         if "trackS/brief-requirements.yaml" not in record.get("inputSha256", {}):
-            continue  # judged against the construction reference, before D-61
+            continue  # not judged against the brief-level reference
         judgement = json.loads((path / "judgement.json").read_text())
         if judgement.get("scored"):
             scores[Path(judgement["judged"]["run"]).name] = judgement["score"]
     return scores
+
+
+def within(root, given):
+    """A path given on the command line, resolved, and refused unless it lies inside root."""
+    path = (root / given).resolve()
+    if not path.is_relative_to(root):
+        sys.exit(f"{given}: outside the repository")
+    return path
+
+
+def group_attempts(records):
+    """Subject run name without date and attempt suffix -> its attempts, oldest first."""
+    groups = defaultdict(list)
+    for path, record in records.items():
+        if record.get("parameters", {}).get("mode") in SUBJECT_MODES:
+            base = ATTEMPT.match(DATED.sub("", path.name)).group("base")
+            groups[base].append((path, record))
+    for attempts in groups.values():
+        attempts.sort(key=lambda a: a[1].get("started", ""))
+    return groups
+
+
+def run_row(prices, scores, base, attempts):
+    """One subject run: the cost of all its attempts, and the score of the one that completed."""
+    params = attempts[0][1]["parameters"]
+    usd, tokens, completed = 0.0, defaultdict(int), None
+    for path, record in attempts:
+        cost, used = run_cost(prices, path, "subject")
+        usd += cost
+        for kind, count in used.items():
+            tokens[kind] += count
+        if record.get("status") == "completed":
+            completed = path
+    score = scores.get(completed.name) if completed else None
+    covered = score["covered"] if score else None
+    return {
+        "run": base,
+        "model": params.get("subject_model"),
+        "variant": SUBJECT_MODES[params["mode"]],
+        "attempts": len(attempts),
+        "failed": sum(r.get("status") != "completed" for _, r in attempts),
+        "completed": completed.name if completed else None,
+        "usd": round(usd, 4),
+        "tokens": dict(tokens),
+        "recall": score["recall"] if score else None,
+        "usd_per_covered": round(usd / covered, 4) if covered else None,
+    }
+
+
+def measuring_costs(prices, records):
+    """(mode, judge model) -> USD of every judge and follow-up run."""
+    totals = defaultdict(float)
+    for path, record in records.items():
+        mode = record.get("parameters", {}).get("mode")
+        if mode in ("judge", "follow-up"):
+            cost, _ = run_cost(prices, path, "judge")
+            totals[(mode, record["parameters"].get("judge_model"))] += cost
+    return totals
+
+
+def recall_text(row):
+    if row["completed"] is None:
+        return "unobtainable"
+    if row["recall"] is None:
+        return "-"
+    return f"{row['recall']:.2f}"
+
+
+def print_tables(rows, measuring):
+    print("| Run | Variant | Attempts (failed) | Subject USD | Recall (scored) | USD per covered |")
+    print("| --- | --- | --- | --- | --- | --- |")
+    for row in rows:
+        per = "-" if row["usd_per_covered"] is None else f"{row['usd_per_covered']:.3f}"
+        print(f"| {row['run']} | {row['variant']} | {row['attempts']} ({row['failed']}) | {row['usd']:.3f} "
+              f"| {recall_text(row)} | {per} |")
+    print()
+    print("| Measuring | Judge | USD |")
+    print("| --- | --- | --- |")
+    for (mode, judge), usd in sorted(measuring.items()):
+        print(f"| {mode} | {judge} | {usd:.3f} |")
 
 
 def main():
@@ -101,68 +181,20 @@ def main():
     parser.add_argument("--prices", default="analysis/prices.json")
     parser.add_argument("--json", action="store_true", help="print JSON instead of a table")
     args = parser.parse_args()
-    runs, prices = Path(args.runs), json.loads(Path(args.prices).read_text())
+    root = Path.cwd().resolve()
+    runs = within(root, args.runs)
+    prices = json.loads(within(root, args.prices).read_text())
     records = load(runs)
     scores = scored_scores(records)
-
-    groups = defaultdict(list)
-    for path, record in records.items():
-        mode = record.get("parameters", {}).get("mode")
-        if mode in SUBJECT_MODES:
-            base = ATTEMPT.match(DATED.sub("", path.name)).group("base")
-            groups[base].append((path, record))
-
-    rows, measuring = [], defaultdict(float)
-    for base, attempts in sorted(groups.items()):
-        attempts.sort(key=lambda a: a[1].get("started", ""))
-        params = attempts[0][1]["parameters"]
-        usd, tokens = 0.0, defaultdict(int)
-        completed = None
-        for path, record in attempts:
-            cost, used = run_cost(prices, path, "subject")
-            usd += cost
-            for k, v in used.items():
-                tokens[k] += v
-            if record.get("status") == "completed":
-                completed = path
-        score = scores.get(completed.name) if completed else None
-        covered = score["covered"] if score else None
-        rows.append({
-            "run": base,
-            "model": params.get("subject_model"),
-            "variant": SUBJECT_MODES[params["mode"]],
-            "attempts": len(attempts),
-            "failed": sum(r.get("status") != "completed" for _, r in attempts),
-            "completed": completed.name if completed else None,
-            "usd": round(usd, 4),
-            "tokens": dict(tokens),
-            "recall": score["recall"] if score else None,
-            "usd_per_covered": round(usd / covered, 4) if covered else None,
-        })
-
-    for path, record in records.items():
-        mode = record.get("parameters", {}).get("mode")
-        if mode in ("judge", "follow-up"):
-            cost, _ = run_cost(prices, path, "judge")
-            measuring[(mode, record["parameters"].get("judge_model"))] += cost
-
+    rows = [run_row(prices, scores, base, attempts) for base, attempts in sorted(group_attempts(records).items())]
+    measuring = measuring_costs(prices, records)
     if args.json:
         json.dump({"subject_runs": rows,
                    "measuring": [{"mode": m, "judge": j, "usd": round(c, 4)} for (m, j), c in sorted(measuring.items())]},
                   sys.stdout, indent=1)
         print()
-        return
-    print("| Run | Variant | Attempts (failed) | Subject USD | Recall (scored) | USD per covered |")
-    print("| --- | --- | --- | --- | --- | --- |")
-    for r in rows:
-        recall_text = "unobtainable" if r["completed"] is None else ("-" if r["recall"] is None else f"{r['recall']:.2f}")
-        per = "-" if r["usd_per_covered"] is None else f"{r['usd_per_covered']:.3f}"
-        print(f"| {r['run']} | {r['variant']} | {r['attempts']} ({r['failed']}) | {r['usd']:.3f} | {recall_text} | {per} |")
-    print()
-    print("| Measuring | Judge | USD |")
-    print("| --- | --- | --- |")
-    for (mode, judge), usd in sorted(measuring.items()):
-        print(f"| {mode} | {judge} | {usd:.3f} |")
+    else:
+        print_tables(rows, measuring)
 
 
 if __name__ == "__main__":
