@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "I worry about the service running on a single server that is updated and restarted during working hours while drones are flying, and that occasionally crashes. We accept a few minutes of interruption, but these system crashes and restarts happen while our operations are active.",
+      "thoughtSignature": "EmAKXgFpFH0TlJnoGjwUAkMWBZdpSzV+xZkjSuTYA/eltu4JS4umDe0w2+VKAuJ3LMJpWheWe1beur0Cr0FDB7MwmFApD/3zuemjfQmaNuY3prvsx9TlRcRq3wfWmxH6Ryc="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1985,
+  "candidatesTokenCount": 49,
+  "totalTokenCount": 2034,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1985
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "pUP4asuPObmZkdUP8ZzVuQk"
+}
