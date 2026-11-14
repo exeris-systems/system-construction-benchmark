@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: How are flight corridors, zones, sites, and closures structured, and how do closures affect ongoing or planned flights?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1033,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 1059,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1033
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "lFP4arGkLeOY3boPhrfIoQo"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What are your day-to-day responsibilities and what tasks do you need this new service to handle for you?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 569,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 595,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 569
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "i1L4avSDIsG5vdIP9KLKoQE"
+}

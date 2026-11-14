@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: When you add a new drone to the fleet, what details do you need to enter about it?",
+      "thoughtSignature": "EmQKYgFpFH0TPpKAPHhnYGgBS6BCSDDkKgxUOOq/jOL/RdnFSQ8WUv948b4AETUhFK4kVXGjQL0YJI88yIWotc0EqtuQyHDPpVpafwU/QrAbIZkMx0wjk3YyGcvKVrMvKdh4phDn"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 787,
+  "candidatesTokenCount": 27,
+  "totalTokenCount": 814,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 787
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 27
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "cFL4aquXC9qK7M8PlZjWwAk"
+}

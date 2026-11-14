@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What properties does a drone or a charging pad have, and what are the rules for adding, retiring, repairing, and charging drones?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 846,
+  "candidatesTokenCount": 30,
+  "totalTokenCount": 876,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 846
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 30
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "fVP4ar6oCt3qxN8P9quFmQM"
+}

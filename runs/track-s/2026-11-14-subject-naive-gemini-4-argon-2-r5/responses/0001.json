@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What are your main daily tasks and what does the service need to do to help you manage flights and jobs?",
+      "thoughtSignature": "EmMKYQFpFH0TajO6QG66F5cLgy0tVJt6QHVZFJbNv7+KITq/oXfDBnOd9ZOYYWj03cE/hztUaLklNnm6ujl8T9IUhH8eqHO4NAP2LtS8Dy2x6yuJEw2EDB4kV1EPRieV5PW6yLI="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 431,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 460,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 431
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "2VP4aq-aKoS2vdIP1ObHoQ8"
+}

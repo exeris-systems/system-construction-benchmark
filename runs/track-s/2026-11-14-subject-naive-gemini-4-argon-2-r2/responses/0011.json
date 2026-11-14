@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: How do you tell one drone from another, and what are the different models or capabilities of drones in your fleet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 898,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 924,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 898
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "6VL4ao-_IOTQvdIPm6uxyAc"
+}

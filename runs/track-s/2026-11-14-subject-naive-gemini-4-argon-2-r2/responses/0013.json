@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What do regulators ask to see when they check how your drones have been looked after?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1010,
+  "candidatesTokenCount": 20,
+  "totalTokenCount": 1030,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1010
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 20
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "91L4asygKrjOnsEPxubOoA0"
+}

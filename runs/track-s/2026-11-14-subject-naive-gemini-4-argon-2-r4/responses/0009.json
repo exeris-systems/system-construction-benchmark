@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What details define a job (both delivery and inspection), and what rules must be checked when you assign a drone, choose a route, and sign off a flight?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 917,
+  "candidatesTokenCount": 36,
+  "totalTokenCount": 953,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 917
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 36
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "xFP4aqanOpaC7M8P5KLEkQU"
+}
