@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "",
+      "thoughtSignature": "EskGCsYGAWkUfRMZYCCMh2s7Sx1AyjZpAhUCkO4htgrMSAlNnN6/CPaAnXr+uyZ8+SxPHI3J8FKXdz6fscAV3WQJbfTcLgppyZpy71ZfW5OYz6KiPm0Lg0ao1m1mzva6FwAz/w94maqbeGv6pwYPCsJWkzvVOFGk+lRnHFHeyz+RFN9FHNfMHFV4JE5VWBGNQkb7JpQDpi5JNpVuSJd0CEQnfGufBsf+9QDW6LrND37wrd4FwTcoFH+4QdSBjVe75y6fcMxAP9pYn9SFxDkknP4zKq/vUFtShSpzOomzm67qjModErO2eSCvyzJfOI8K7PEYTzRb/ndvO9u/dN+FSU+r2D3duLaawidS5zEYz+ZZByh2oTofcOBifihCw0LW/xx9TMam6HIAIXQ0OjvB1nRqMilJAxhLyCi17RHOa8HmYju0bAWT1yGpmqpqh7mMz44wXjVb6X3Bg90O+vfn8V16/falSXc+j8Ad0L9O0SD62FgcAJraEwetOS25Z2f0Ib6EuGb2bt3/ttbgOM1YiYC8H8n5EzB41uvUKlYIzqholV3fvL7seOMeiaVTvT4gg/ERwNnhdiwEp0oNBUCBol7xwrqp2GSzLymi1CwClq6y1N3wub3F1zpX1/FNqV6d0P1ckYk2kwJw1tauxSAmNIh6D3/4CmLYoLoFaR9h2iPw5yowyXvYMt6NXskSbot4c3JZatilEU6yESFk90f6PdDTXTU0SSuFzDtaRWsaUAXxYRiBGQznPhLwrJoxPOk0ABXrQkL7vWq8K2efqtqHEVcmCfI0l4zANfDEWmoJ/0XeJGc91j73X3BBDju/Rg9czGTtr0OpNgfVdnD49DLyZ7QhyIeGTK13nv/2xQur2nL0e+UbCZhY8tdUcw+NCyd4JyWcrKjqghXk4UeXkLsHcBVVpKmCov//Fs6olC1/oehCi5FIHrZFh8uADRUntRolaoz7JbI0MdcydncCVYKlpnCEKqhoN/xvKLhNAd3Go8NWiX5xYs2tr+aSEPOqIMTy76xZYhw2rIvkQWNnprfj7jFIG0dN52ryOByqbukxVeVpa4AZXHWBHuJcHKFJKlkzwOlFK9JzcXY20kv4rpeylSo6AAwDFVPRyZGcCg=="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "MALFORMED_FUNCTION_CALL",
+   "index": 0,
+   "finishMessage": "Malformed function call: call:None:ASK dispatcher: Can you walk me through everything you do in a typical day—from receiving job requests, assigning drones, planning or launching flights, monitoring them in the air, to handling delays, cancellations, or emergencies?\nWait—I need to output plain text starting with `ASK dispatcher: ...` (no tool call). Let's check format: \"A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person\". Let's send the exact one-line message. ASK dispatcher: Can you walk me through everything you do in a typical day—from receiving job requests, assigning drones, planning or launching flights, monitoring them in the air, to handling delays, cancellations, or emergencies?"
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 557,
+  "totalTokenCount": 557,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 557
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-hydrogen",
+ "responseId": "nHr4asvOMdG2nsEPxfDg2Qc"
+}
