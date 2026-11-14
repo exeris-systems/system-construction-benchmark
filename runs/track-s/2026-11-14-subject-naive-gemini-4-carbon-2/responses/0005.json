@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Can you walk me through what you do day to day at the airspace desk, and which companies you support?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 692,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 717,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 692
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 25
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "mIP4auz_E_SOvdIP7oKXwQQ"
+}

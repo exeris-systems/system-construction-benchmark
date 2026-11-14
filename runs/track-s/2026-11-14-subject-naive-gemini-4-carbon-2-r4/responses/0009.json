@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Since customer sites are private to each company, how are flight corridors between sites defined and managed without exposing customer sites to the desk or to other companies?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 820,
+  "candidatesTokenCount": 33,
+  "totalTokenCount": 853,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 820
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 33
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "yYT4arifJL3wkdUP4srPmAU"
+}

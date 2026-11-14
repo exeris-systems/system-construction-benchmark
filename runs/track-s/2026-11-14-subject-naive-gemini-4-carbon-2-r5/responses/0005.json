@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Walk me through your typical day at the airspace desk—what tasks do you perform, who do you work for, and what do you need this service to handle for you?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 693,
+  "candidatesTokenCount": 38,
+  "totalTokenCount": 731,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 693
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 38
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "54T4aoOkM_eCvdIPxuO14A8"
+}

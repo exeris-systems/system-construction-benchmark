@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Walk me through your typical day from start to finish—who do you work for (platform or operator), what airspace information and flight events do you manage, and how do you interact with dispatchers or authorities?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 723,
+  "candidatesTokenCount": 45,
+  "totalTokenCount": 768,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 723
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 45
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "X4T4aoCuNPSOvdIP7oKXwQQ"
+}
