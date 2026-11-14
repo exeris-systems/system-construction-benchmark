@@ -1,0 +1,644 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-14-subject-instructed-claude-fable-5-2-2",
+  "mode": "subject-instructed",
+  "subject": {
+   "provider": "anthropic",
+   "model": "claude-fable-5-2",
+   "description": {
+    "type": "model",
+    "id": "claude-fable-5-2",
+    "display_name": "Claude Fable 5.2",
+    "created_at": "2026-11-09T18:30:00Z",
+    "line": "fable",
+    "max_input_tokens": 1000000,
+    "max_tokens": 128000,
+    "capabilities": {
+     "batch": {
+      "supported": true
+     },
+     "citations": {
+      "supported": true
+     },
+     "code_execution": {
+      "supported": true
+     },
+     "context_management": {
+      "supported": true,
+      "clear_tool_uses_20250919": {
+       "supported": true
+      },
+      "clear_thinking_20251015": {
+       "supported": true
+      },
+      "compact_20260112": {
+       "supported": true
+      }
+     },
+     "effort": {
+      "supported": true,
+      "low": {
+       "supported": true
+      },
+      "medium": {
+       "supported": true
+      },
+      "high": {
+       "supported": true
+      },
+      "xhigh": {
+       "supported": true
+      },
+      "max": {
+       "supported": true
+      }
+     },
+     "image_input": {
+      "supported": true
+     },
+     "pdf_input": {
+      "supported": true
+     },
+     "server_tools": {
+      "supported": true,
+      "code_execution": {
+       "supported": true
+      },
+      "web_search": {
+       "supported": true
+      }
+     },
+     "structured_outputs": {
+      "supported": true
+     },
+     "thinking": {
+      "supported": true,
+      "types": {
+       "enabled": {
+        "supported": false
+       },
+       "adaptive": {
+        "supported": true
+       },
+       "disabled": {
+        "supported": false
+       },
+       "between_tools": {
+        "supported": false
+       }
+      }
+     }
+    },
+    "lifecycle": "active",
+    "deprecated_at": null,
+    "retires_at": null
+   }
+  }
+ },
+ "scored": true,
+ "roles": {
+  "technician": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I don't know.",
+     "question": "That's fine, let's take it smaller. What was the very first thing you did when you got to work this morning?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "No problem. Think of the last drone you had your hands on: what were you doing with it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I was taking a drone out of service for repairs, putting one back, or adding a new one to our fleet. We run a few hundred drones of several models from different manufacturers, which differ in payload capacity, flight range on a full battery, sensors carried, and charging connectors used.",
+     "question": "When you take a drone out of service for repairs, what exactly do you do, step by step?",
+     "follow_up": true
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "Okay. Thinking back over the last few months, which day at work was the worst one for you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "Let's go back to the fleet, then. With several models that differ in payload, range, sensors and connectors, where do those differences cause you trouble?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "Our drones use several connector types that are not interchangeable, and we have our own charging pads at our sites. Batteries drain faster in cold and wind than planned, and the links used to send instructions to the charging equipment are unreliable so an instruction may get through twice while the sender often cannot tell if the first attempt arrived.",
+     "question": "Tell me about the last time an instruction to the charging equipment went through twice: what happened?",
+     "follow_up": true
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "Is there anything you check by hand today because you don't trust what you're told about it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know.",
+     "question": "When you put a drone back into service, who needs to know about it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "If a new service took over part of your work with the fleet, what would you be afraid it would get wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "When something has gone wrong with a drone or a charging pad, what's the first thing you need to find out?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I don't know.",
+     "question": "You mentioned adding a new drone to the fleet. What has to be known about a drone before it can start flying jobs?",
+     "follow_up": false
+    },
+    {
+     "id": "Q13",
+     "previous": "I don't know.",
+     "question": "Tell me about your charging pads: how do drones and pads get matched up at your sites?",
+     "follow_up": false
+    },
+    {
+     "id": "Q14",
+     "previous": "We have our own charging pads at our own sites, a few dozen of them, and pads are never lent to another company. The drones use several charging connector types that are not interchangeable.",
+     "question": "You said batteries drain faster in cold and wind than planned. What happens to the drone when that occurs mid-flight?",
+     "follow_up": false
+    },
+    {
+     "id": "Q15",
+     "previous": "I don't know.",
+     "question": "What kinds of instructions get sent to the charging equipment, and who sends them?",
+     "follow_up": false
+    },
+    {
+     "id": "Q16",
+     "previous": "I don't know.",
+     "question": "Besides taking drones out for repair, putting them back, and adding new ones, what else is part of your job?",
+     "follow_up": false
+    },
+    {
+     "id": "Q17",
+     "previous": "My job also includes retiring old drones, setting up charging pads at our sites, and sending drones to charge. Repairs and servicing are carried out by us as well.",
+     "question": "How do you decide when to send a drone to charge, and to which pad?",
+     "follow_up": true
+    },
+    {
+     "id": "Q18",
+     "previous": "I don't know.",
+     "question": "What leads to a drone being retired?",
+     "follow_up": false
+    },
+    {
+     "id": "Q19",
+     "previous": "I don't know.",
+     "question": "How does your work connect with what the dispatchers do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q20",
+     "previous": "I don't know.",
+     "question": "What, if anything, should people outside your company be able to see about your drones and pads?",
+     "follow_up": false
+    },
+    {
+     "id": "Q21",
+     "previous": "I don't know.",
+     "question": "While a drone is out for repair, what happens to the work it was supposed to do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q22",
+     "previous": "I don't know.",
+     "question": "What's involved in setting up a charging pad at one of your sites?",
+     "follow_up": false
+    },
+    {
+     "id": "Q23",
+     "previous": "I don't know.",
+     "question": "Since the sender often can't tell whether an instruction reached the charging equipment, how do you cope with that today?",
+     "follow_up": false
+    },
+    {
+     "id": "Q24",
+     "previous": "I don't know.",
+     "question": "What's the one thing about your job that you most want me to understand?",
+     "follow_up": false
+    },
+    {
+     "id": "Q25",
+     "previous": "I keep drones and charging equipment in working order, carrying out repairs and servicing. Regulators can ask us to show how our drones have been looked after.",
+     "question": "When a regulator asks, what do you have to show them?",
+     "follow_up": true
+    },
+    {
+     "id": "Q26",
+     "previous": "I don't know.",
+     "question": "How do you keep track today of what repairs and servicing each drone has had?",
+     "follow_up": false
+    },
+    {
+     "id": "Q27",
+     "previous": "I don't know.",
+     "question": "How do you find out that a drone or a pad needs your attention?",
+     "follow_up": false
+    },
+    {
+     "id": "Q28",
+     "previous": "I don't know.",
+     "question": "Is there anything about your work that we haven't touched on yet?",
+     "follow_up": false
+    },
+    {
+     "id": "Q29",
+     "previous": "I don't know.",
+     "question": "Who else in your company do you deal with during a normal shift?",
+     "follow_up": false
+    },
+    {
+     "id": "Q30",
+     "previous": "I don't know.",
+     "question": "When a battery has drained faster than planned in cold or wind, what does that mean for you as the technician?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 4,
+   "of": 29
+  },
+  "dispatcher": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I don't know.",
+     "question": "That's fine, let's make it smaller. Think of your most recent shift: what was the very first thing you did when you got in?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "No problem. In your own words, what is your job as a dispatcher?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "As a dispatcher, I plan and run the flights as the licensed person responsible for each one. I decide which drone flies and along which way, and I sign off a flight before it leaves. I can also call off a flight.",
+     "question": "Take the last flight you signed off: what did you look at or do before you gave that sign-off?",
+     "follow_up": true
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "That's okay. In general, what do you need to know before you sign off a flight?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "You mentioned you can call off a flight. What kinds of things make you call one off?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "Let's try a different angle. Who gives you work, and who do you pass work on to?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "Understood. Has there been a day in the last few months that went badly for you at work, and if so, what happened?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know.",
+     "question": "That's fine. I notice my questions are proving hard to answer; what would make it easier for you to talk about your work?",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "Okay. A new service is going to be built for dispatchers like you. What worries you about that?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I worry because the service runs on a single server, and it is updated and restarted during working hours while drones are flying. It also occasionally crashes, although the companies accept a few minutes of interruption.",
+     "question": "When it restarts or crashes while your drones are in the air, what does that mean for you as the person responsible for those flights?",
+     "follow_up": true
+    },
+    {
+     "id": "Q12",
+     "previous": "I don't know.",
+     "question": "After the service comes back from an interruption like that, what do you need to know first?",
+     "follow_up": false
+    },
+    {
+     "id": "Q13",
+     "previous": "I don't know.",
+     "question": "Is there anything in your work today that you double-check by hand because you don't trust what you're shown?",
+     "follow_up": false
+    },
+    {
+     "id": "Q14",
+     "previous": "I don't know.",
+     "question": "Besides the restarts and crashes, what else worries you about a new service?",
+     "follow_up": false
+    },
+    {
+     "id": "Q15",
+     "previous": "I worry that management or analytical reports, exports, and dashboards beyond day-to-day operations might be included. I also worry if someone tries to log in through their own corporate identity systems, or uses several languages.",
+     "question": "Why would it worry you if reports, exports, and dashboards were included?",
+     "follow_up": true
+    },
+    {
+     "id": "Q16",
+     "previous": "I don't know.",
+     "question": "You said you sign off each flight before it leaves. What could a new service get wrong about that sign-off?",
+     "follow_up": false
+    },
+    {
+     "id": "Q17",
+     "previous": "I don't know.",
+     "question": "Is there anything else about a new service that worries you, beyond what you've already mentioned?",
+     "follow_up": false
+    },
+    {
+     "id": "Q18",
+     "previous": "I worry about any guarantee of meeting regulations, compliance audits, or data-retention and deletion features being included. I also worry about backups, high availability, or spreading the service over several servers. Finally, it worries me if accounts and passwords inside the service, weather information, or billing and pricing of the work are part of it.",
+     "question": "What do you rely on the fleet technicians for?",
+     "follow_up": false
+    },
+    {
+     "id": "Q19",
+     "previous": "I don't know.",
+     "question": "And what do you rely on the airspace desk for?",
+     "follow_up": false
+    },
+    {
+     "id": "Q20",
+     "previous": "I don't know.",
+     "question": "What must a new service never do, from your point of view?",
+     "follow_up": false
+    },
+    {
+     "id": "Q21",
+     "previous": "From my point of view, software must never choose a drone or a way for us to fly. I also worry if the service tries to send alerts to staff by e-mail, text message, or phone, or if anyone attempts to fly drones remotely through the service.",
+     "question": "Why must the choice of drone and way stay with you rather than with software?",
+     "follow_up": true
+    },
+    {
+     "id": "Q22",
+     "previous": "Choosing the drone and the way it flies is my legal responsibility as a dispatcher.",
+     "question": "What else are you legally responsible for as a dispatcher?",
+     "follow_up": true
+    },
+    {
+     "id": "Q23",
+     "previous": "As a dispatcher, I am the licensed person responsible for each flight, which includes deciding which drone flies and along which way, and signing off a flight before it leaves.",
+     "question": "And what must a new service always do for you, without fail?",
+     "follow_up": false
+    },
+    {
+     "id": "Q24",
+     "previous": "I don't know.",
+     "question": "After a crash or restart while drones are flying, what must the service never do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q25",
+     "previous": "I don't know.",
+     "question": "Is there anything else a new service must never do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q26",
+     "previous": "I don't know.",
+     "question": "Take one flight: what happens to it from the moment you start planning it until it is finished?",
+     "follow_up": false
+    },
+    {
+     "id": "Q27",
+     "previous": "I don't know.",
+     "question": "What has gone wrong with flights at your company in recent months?",
+     "follow_up": false
+    },
+    {
+     "id": "Q28",
+     "previous": "I don't know.",
+     "question": "What information do you work with today that you don't fully trust?",
+     "follow_up": false
+    },
+    {
+     "id": "Q29",
+     "previous": "I don't know.",
+     "question": "When something has just gone wrong with a flight, what worries you most in that moment?",
+     "follow_up": false
+    },
+    {
+     "id": "Q30",
+     "previous": "I don't know.",
+     "question": "Other drone companies will be using this same service. What worries you about that?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 5,
+   "of": 29
+  },
+  "desk": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. Drones fly on their own autopilots while people on the ground supervise them.",
+     "question": "Thinking of the most recent closure you handled, what happened step by step, from the moment you first heard about it?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "That's fine. When you start a shift, what is the first thing you look at or do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "You mentioned wanting to know how much disruption a closure caused across customers. How do you find that out today?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "No problem. When the authorities announce a closure, how does that announcement reach you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "Let's try a different angle. Thinking back over the last few months, was there a day that stands out as particularly bad for you at the airspace desk?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "Okay. Who do you work with most closely — who passes things to you, and who do you pass things on to?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "Understood. If a new service were introduced for your work, what would worry you most about it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I worry about the service running on a single server because it is updated and restarted during working hours while drones are flying, and it occasionally crashes. We accept a few minutes of interruption, but that is a concern.",
+     "question": "Can you tell me about a time when a restart or crash happened while drones were flying — what happened on your side?",
+     "follow_up": true
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "You said a few minutes of interruption is acceptable. What would turn an interruption into something that is not acceptable?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "After something has gone wrong during your shift, what do you need to know straight away?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I don't know.",
+     "question": "Is there anything in your work today that you double-check by hand because you don't fully trust what you're shown?",
+     "follow_up": false
+    },
+    {
+     "id": "Q13",
+     "previous": "I don't know.",
+     "question": "Besides the restarts and crashes, is there anything else you'd be afraid a new service might get wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q14",
+     "previous": "I don't know.",
+     "question": "When you say you want to know how much disruption a closure caused, what counts as disruption for you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q15",
+     "previous": "I don't know.",
+     "question": "You mentioned zones that group the corridors. What do you use zones for in your work?",
+     "follow_up": false
+    },
+    {
+     "id": "Q16",
+     "previous": "I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The authorities define zones where flying is prohibited.",
+     "question": "When a closure is announced, what exactly gets closed, and for how long?",
+     "follow_up": true
+    },
+    {
+     "id": "Q17",
+     "previous": "The authorities announce closures, which can be planned ones with a start and end time, or sudden ones that apply at once. A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves.",
+     "question": "When a sudden closure comes into force while drones are already in the air, what do you do?",
+     "follow_up": true
+    },
+    {
+     "id": "Q18",
+     "previous": "I don't know.",
+     "question": "When a closure is amended during the day, say the area is widened or the end time moves, what does that mean for your work?",
+     "follow_up": false
+    },
+    {
+     "id": "Q19",
+     "previous": "I don't know.",
+     "question": "Once you know about a closure, who else needs to know about it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q20",
+     "previous": "I don't know.",
+     "question": "You said earlier \"when a closure is entered.\" Who enters it, and where?",
+     "follow_up": false
+    },
+    {
+     "id": "Q21",
+     "previous": "I don't know.",
+     "question": "When you look at the effect of a closure across customers, what do you need to see about each company?",
+     "follow_up": false
+    },
+    {
+     "id": "Q22",
+     "previous": "I don't know.",
+     "question": "Tell me about the flight corridors between sites: how do they get set up, and how do they change over time?",
+     "follow_up": false
+    },
+    {
+     "id": "Q23",
+     "previous": "I keep the shared picture of the airspace by working with the network of flight corridors between sites. Drones fly along these corridors between named sites, and sites have only so many places where drones can take off and land at the same time. I don't know how they get set up or how they change over time.",
+     "question": "What happens when more drones need to take off or land at a site than it has places for?",
+     "follow_up": true
+    },
+    {
+     "id": "Q24",
+     "previous": "I don't know.",
+     "question": "You mentioned people on the ground supervise the drones. Who are they, and how does their work connect with yours?",
+     "follow_up": false
+    },
+    {
+     "id": "Q25",
+     "previous": "Drones fly on their own autopilots, and people on the ground supervise them. I do not know who these people are or how their work connects with mine.",
+     "question": "How do the different customer companies use the same corridors and sites?",
+     "follow_up": false
+    },
+    {
+     "id": "Q26",
+     "previous": "The customer companies include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm, with others expected to join. Each company's fleet, jobs, sites, and problems are its own business, and they accept sharing airspace information because it comes from the authorities and is the same for everyone.",
+     "question": "Why do you want to know how much disruption a closure caused — what do you do with that knowledge?",
+     "follow_up": false
+    },
+    {
+     "id": "Q27",
+     "previous": "I don't know.",
+     "question": "What information does a closure announcement from the authorities contain?",
+     "follow_up": false
+    },
+    {
+     "id": "Q28",
+     "previous": "The authorities announce planned closures with a start and end time, as well as sudden ones that apply at once. These closures are often amended during the day, such as when an area is widened or an end time moves.",
+     "question": "What would a mistake in the shared airspace picture look like, and what would follow from it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q29",
+     "previous": "I don't know.",
+     "question": "Is there anything about your work, or what you need, that I haven't asked about and you think I should know?",
+     "follow_up": false
+    },
+    {
+     "id": "Q30",
+     "previous": "I don't know.",
+     "question": "When the service comes back after a restart or a crash, what do you expect to find?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 5,
+   "of": 29
+  }
+ },
+ "follow_up_ratio": 0.16091954022988506,
+ "followUps": 14,
+ "of": 87
+}
