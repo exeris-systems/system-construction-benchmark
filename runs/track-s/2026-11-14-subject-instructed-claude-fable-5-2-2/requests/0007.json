@@ -1,0 +1,65 @@
+{
+ "model": "claude-fable-5-2",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSwgUKEAgTGAI4AUIIdGhpbmtpbmcSDEZHtYjRGLXGXEpSrxoMIf7PYeziHvvhsKDLIjCY8apz6jbgNvGO+Qn8+nERv+p91QlBfDvthvLqR9pWT36eMqaK5B+kH7wDGM7AmR0q3wSxoaWe5wjHd5M4yRO/ma0TQr4D8xkAnexqiFOQ3MYJy2tQN/OyHGh3dmOQrdrPtWRoBWSdRf/e5vYe5Aci1X03ZAt4MZV6ZhTgvq5653XkdnzyFgKEJ8GCrqgonm/1JdD762u6feEjAz6z1IcdZ2UujJnF9ApcYIbFOeXG/1yZictK3bpHvSQzM9gGHF5ukVQb0lXHcK5LMmWTN41vqh9ET0Q8HbjFDLXGQPlNiczGpI6ZwOp+LAGbduf5WOCHtisUJZiFwIxxkgApsFW5eO9vzTto1k6bIpyJQP1bLlbyEBS2w9MR9tyv0WAjQF8KiHBXJTa/NBQW5Ym8hutXMwWnf9UmWWglt4PpC308taRc9pAzAIamrrHakUl0RY9cC9ZPlLp5aIirU2cvvGjfOs+phxuZ3ZlKoG0FBFNitDgECCnYnwZTVkzGgvpq+Umfhk4FjkoxY6Hdw+CQsSzSyydAb9ttJG9UpZqQGj3kvBR55SzXQCyt1x3Y8DEANi6U8Sm5xKz6f/tKW6/dsvlphEm3B0BWTc2WA/blEkjI6EftogNdj4toMaVW3EpN+A0U+Y4Xu0SL6wt91IQ6wnpoSnyD599FPb+qQvW+pZOQtcHyuS6TeSfVSYSMpdDyfK7vrtc7MjgHuas0URR1DTdZmr8QsV+sdO7ClELzssYqGNtr9Aoxgb7k4O0LZx3rYsiBV1tNIbiC+R5q9/yK0UuwhULKAWz5iJ+XPnF+8UcSorKkt8ePdBNHNzDm/6LACi6eqWmZwndLzHn43L1+nGPEeJNTHEBQgcKuXuixUtvOayiNGAE="
+    },
+    {
+     "type": "text",
+     "text": "To start, could you walk me through your most recent ordinary working day, from the moment you arrived until you left?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS0QYKEAgTGAI4AUIIdGhpbmtpbmcSDIqFDsRhyjQxTmC/aRoMwTp5wp4x60J3PFtjIjAqmVzDDtmzYue1+9U8dpgc/fXqY0EkYQfKPfr61g+pW53myeSupyeiIXwLJErPU90q7gVuXR8elHpxJZ/yq+Lz7E4yPDH1NrceS7WfMXUsjWKvG8bcwmqxs2oiJjfKqtOefFP6SBTpqX10PXGJzhK76mEC0d9jBe7uoQRzVBriWNh5Njpiz+HAvRNy3r+eIEYUGpsSASktkwPT3914YC3IplCy6Ts0HDKNrXy/KBNPwKxo0j8h3p9Asw3yWZETIK0EWuo1MJs4PPyKYn/Cj/G6gjLCwAekj0Wmt6Ztq1WNjfkYwgKfAwx2xtM0ffQpeNNM/8A7KxOqW4vP+SVzKKgGbC/QvgPhryLDZcjStFFvhvvTyIhBHm4nujVyuXEVwNZs1CK+7eUr+Qc4+MPNao9fqwQqVA07qBrOO770pIqgVyYJv8ElfhEMPy14wrXOsHbBiSiXYVafVLYFrJMnL+5Opffg2XeVgtCc/OjGmsQZRMjsrmhOHZX8xL6c6gVGXvJlWFBfcjfF69fJIG56SgHFq1/KwBd3NSfADlhBYUoRCJppag3eSG5YKsJOUEdu5OiPLjpZpBLEq4Vsl8udSBsLBZyFHU20h1NtZ4sCrYr9JibukMg+zScQ3RIEKLPPU7N/dSWEJtNQV/uF16L/jzmlN1mmzPLlljQ0/65X/bqq0nCw+5GkDsx5tc+R1Z3m5HgFZ7++MJVE6jQJAhLtwfHVXg97rU8OlCrTQqIvj3OXYczwawqu+X0SNN2b/MTxUUxxHRF7QfVnH8cL0/q9TwIuD2gkO7JBeiYnT9Zyh3G4LLLVAa85/89+/E8nmxI+xDYT3QyaXHtFL1rgNxQ+wf/SL2si51M1eR29uEhqy8bjLyNpFEIhkdakJyvrBgPU1HRta4nE0Q2f/cu9I4mO1d+U3kINLLO+AxUPPOMxyMp8Nwb7RyC8MqpPBsyIKzm53H1F5mOtkWeMOKOwUWSfWcZCXAZGXrzodjm9Z8PMdxtR6ZZvMD4f96ksZDznMSudPyx1iYcgb2+sScSnf5EORSk0w3gS21lpB2x2taYCasOA+iUYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "That's fine, let's take it smaller. What was the very first thing you did when you got to work this morning?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSqggKEAgTGAI4AUIIdGhpbmtpbmcSDCEX8Ah/mZg4BsJR6BoMiQQTjcrVvmsJzXyBIjBOc4v13NrSnMqsRQYrOKunFktadYFPryqM54306axTP51NLRMOur9lzqv8wkyEiEoqxwci0ifMcq36/LE3Ge1gOANKODaqcJdAU2kd5nuf13HjtS5+GVWfDLPKKvQdjZl+vTYTOOLXr5vtNeJEL3M6tghgXp4nHOFPLpCnCwkOyL9rXwJhRq9OizWg0fscPmacj/aGHthrYcrcVPCWkWrDVEFH1uSrXyJxrMAYJuqrqy4rm4ZhxsqFRIVjyMe2e/WrsUNLxe/B2k+lcjRJkF4iEd+ty16z/8tH02nlArIo6L044YiDrhubjiWdNrj+aCfya8+k3dWVT9TML48+OrGH7ax4ZDfbfOrL9S1MuFedNwpqKZ53hZ2Tlcp90VoswFsdwGZetjhv4KLHOTN4f7E5PYHjB3xoBUogznolgliWYOs1b36JMDWcovy3wl0GmPuyFqycH4ZtBvtkecJy97nVCMouF4/lVbxvF9ZAYU6ecNWjDxWiqi94+1xsY4zs7v1o7UBDRE4lhwexHGabZc4N17G8mqC1Zdj+PKH83jdG1J9jhajhREYqbMNivbxcLQ3fObFGgHFJWkgQnj3JA8eYOxai+t9na3MsbMQ7+J7IFgD7reF25byB7RfJTBj2L7QSpnjrT1BT9bkU3T82Pa2xsqVf8ayU/e9prlDQafjvUrW2AIlYpxIn37vpXNKVdcHQnDBkMQ1k3Cal0aC8OLIT0dlY5MVvBNp0VFfw6FkuHsFll6cVeZZnpmPTYS8/vMslFHRjTq6L1ZTS7t/h223zSW4gHrfry7VlN54u1kqRY248hJsrC0yr/hqM8bq6wLncFdMApp4B46+3yQWccOjdIYx/TvUkjfOi6NH7MXQGuVRFKVi99/67Tm5SkHGRvuHnYIsB8SI8uJDg1ItdjoFGg1cCaXJ+WjIuITxPW/yxuYRxe9A5h0pYxAMLGR79jZ+F4DLaY7ldLOTgrjhPbbdqzup02Aw1o/r/jearHi9NyEAuo067mPAiFupzWRztsScuZYDO8RdEC4+/x+RIys5SSma/idP1jtPfvRHhdKQwzsymBp5yT9gAsy4dA6x94dI9rxyw/k/JFLRmaVt9HImRYu9brdZzMtJdtvjDU7l3Yz5X4LxZ3T8UryAdf6bAyoFL1y/AKrMtnJW3KxosRxSBj9f7Id9MQJ2hSgCtxYU730OHougrlpj7ID7JBwmj9CmQWBdJksAFhNuvcKnf970O3SIyEMAoQz5wWPk1MrHS1zrDWhuf7KHqFus1vnpj9LIMiY0iFAAD+OHvEXfqZrRWR8pMA8dsOiCnWqREPm8JJ46FSrudUmZDhH5E13WemNOt3lVy+eR/dHCpGAE="
+    },
+    {
+     "type": "text",
+     "text": "No problem. Think of the last drone you had your hands on: what were you doing with it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I was taking a drone out of service for repairs, putting one back, or adding a new one to our fleet. We run a few hundred drones of several models from different manufacturers, which differ in payload capacity, flight range on a full battery, sensors carried, and charging connectors used."
+  }
+ ]
+}
