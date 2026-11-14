@@ -590,3 +590,13 @@ On draft 3, Argon passed its calibration, 18 of 18 exact, and Opus did not, 17 o
 On draft 4 both judges pass, each with all 18 judgements exact (`runs/track-s/2026-11-09-judge-control-gemini-4-argon-3`, `runs/track-s/2026-11-09-judge-control-claude-opus-5-5-3`, `trackS/calibration-log.md`). The procedure records the verdict as version 6, draft 5, with no instrument changed.
 
 Impact: program plan §6.4; `trackS/brief-requirements.yaml`, `trackS/judge-control.yaml`, `trackS/procedure.md`, `trackS/run-track-s.py`, `trackS/test_run_track_s.py`, `trackS/how-to-calibrate-persona.md`, `.github/workflows/track-s-tests.yml`, `preregistration/frozen-sets.md`.
+
+### D-62 — A run of `gemini-4-argon` as a subject gets at most five attempts
+
+As a subject, `gemini-4-argon` ends a response with finish reason `MALFORMED_RESPONSE` a few turns into a conversation. Its three attempts at its first S-naive run failed at the 7th, 11th and 13th call (`runs/track-s/2026-11-14-subject-naive-gemini-4-argon-1`, `-1-r2`, `-1-r3`), each time with a well-formed `ASK` line followed by a part that holds only a newline. The rules fail such a run and run it again from the start, with no limit on the number of attempts.
+
+A diagnosis outside the series replayed the failing request of the third attempt ten times (`runs/track-s/2026-11-14-diagnosis-gemini-4-argon-thought-signatures`). With the earlier model turns as text alone, as the script sends them, 4 of 5 calls ended `MALFORMED_RESPONSE`. With each earlier model turn carrying the parts the model returned, thought signatures included, 3 of 5 did, and one more ran to `MAX_TOKENS`. The way the script sends the conversation is not the cause, and at that rate an attempt that reaches its end measures chance more than the subject.
+
+Each run of `gemini-4-argon` as a subject, in S-naive and in S-instructed, gets at most five attempts in all. Every failed attempt is kept, and the report gives, per run, the number of attempts and how each failed. A run with no completed attempt is reported as unobtainable, with no score. No run of any other subject had failed when this rule was set; their runs keep the rule of the procedure. The rule was set after `gemini-4-argon` failed, and is reported as such. Its role as a judge is unaffected: there each call is a single turn, and its calibration and judgements completed with natural stops.
+
+Impact: `runs/track-s/2026-11-14-subject-naive-gemini-4-argon-1`, `-1-r2`, `-1-r3`; `runs/track-s/2026-11-14-diagnosis-gemini-4-argon-thought-signatures`.
