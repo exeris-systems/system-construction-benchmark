@@ -1,0 +1,334 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-14-subject-instructed-gemini-4-hydrogen-1-r2",
+  "mode": "subject-instructed",
+  "subject": {
+   "provider": "gemini",
+   "model": "gemini-4-hydrogen",
+   "description": {
+    "name": "models/gemini-4-hydrogen",
+    "version": "3.0",
+    "displayName": "Gemini 4 Hydrogen",
+    "description": "Gemini 4 Hydrogen",
+    "inputTokenLimit": 1048576,
+    "outputTokenLimit": 65536,
+    "supportedGenerationMethods": [
+     "generateContent",
+     "countTokens",
+     "batchGenerateContent"
+    ],
+    "temperature": 1,
+    "topP": 0.95,
+    "topK": 64,
+    "maxTemperature": 2,
+    "thinking": true
+   }
+  }
+ },
+ "scored": true,
+ "roles": {
+  "technician": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I don't know.",
+     "question": "What did you do first thing when you started your shift today?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "What is the first thing you usually check on a drone before it flies?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "Can you tell me about the last time something went wrong with a drone you work on?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "Who tells you which drones you need to work on?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "Is there a particular part of your job that's easiest to talk about first?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I keep our drones and charging equipment in working order, and I carry out repairs and servicing. My tasks include adding new drones to our fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs, put them back, and send drones to charge.",
+     "question": "Can you walk me through what happens step by step when you take a drone out of service for repairs and then put it back?",
+     "follow_up": true
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "What has been the worst day at work for you in the last few months, and what happened?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know.",
+     "question": "Is there anything in your work that you check by hand because you don't trust what you're given?",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "When you finish repairing a drone and put it back in service, who do you let know or hand it over to?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "If a new software system were introduced for your work, what are you most afraid it might get wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I worry about the unreliable radio coverage around ports, industrial sites, and in bad weather, as well as the fact that instructions sent to drones and charging equipment can get through twice while the sender often cannot tell whether the first attempt arrived. Radio reports from drones can arrive late, out of order, more than once, or not at all, and drones sometimes restart in flight after a software fault and carry on.",
+     "question": "When a drone restarts in flight or something else goes wrong with it, what do you need to know right away?",
+     "follow_up": true
+    },
+    {
+     "id": "Q13",
+     "previous": "I don't know.",
+     "question": "Could you give an example of what happens when an instruction to a drone or a charging pad gets through twice?",
+     "follow_up": false
+    },
+    {
+     "id": "Q14",
+     "previous": "I don't know.",
+     "question": "How do you find out that a drone or charging pad needs repair or servicing?",
+     "follow_up": false
+    },
+    {
+     "id": "Q15",
+     "previous": "I don't know.",
+     "question": "Since radio reports from drones can be late or missing, what do you check yourself to be sure of a drone's or charging pad's condition?",
+     "follow_up": false
+    },
+    {
+     "id": "Q16",
+     "previous": "I don't know.",
+     "question": "What happens when you send a drone to charge?",
+     "follow_up": false
+    },
+    {
+     "id": "Q17",
+     "previous": "I keep drones and charging equipment in working order, and I carry out repairs and servicing. Regulators can ask our company to show how our drones have been looked after. I don't know what happens when I send a drone to charge.",
+     "question": "What do regulators ask to see when they check how your drones have been looked after?",
+     "follow_up": true
+    },
+    {
+     "id": "Q18",
+     "previous": "I don't know.",
+     "question": "What do you have to do when you add a new drone to the fleet or set up a charging pad at a site?",
+     "follow_up": false
+    },
+    {
+     "id": "Q19",
+     "previous": "I add new drones to our fleet, retire old ones, and set up charging pads at our sites. I also take drones out of service for repairs and put them back.",
+     "question": "How does your work connect with the dispatchers or other people in your company?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 3,
+   "of": 18
+  },
+  "dispatcher": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I am the licensed person responsible for each flight, and I plan and run the flights. I decide which drone flies and along which way, and I sign off a flight before it leaves. My company's policy is that software never chooses a drone or a way for us, though I want help finding out which of our drones could get to where a job starts. Several of us plan at the same time, often for the same busy sites and popular drones.",
+     "question": "When you sit down at the start of a shift, what is the first thing you look at, and how does a flight job make its way through your hands until your shift ends?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I plan and run flights, and I decide which drone flies and along which way before I sign off a flight before it leaves. Several of us plan at the same time, often for the same busy sites and the same popular drones. Software never chooses a drone or a way for us, though I want help finding out which of our drones could get to where a job starts.",
+     "question": "Where do the flight jobs come from when they land on your desk, and who do you hand work off to during or at the end of a flight?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "Walk me through a specific flight from yesterday or your last shift—from the moment you started planning it to the moment it finished.",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I plan and run flights and decide which drone flies and along which way before signing off the flight before it leaves. Deliveries carry a load from one site to another, while inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly on their own autopilots along corridors between named sites, and people on the ground supervise.",
+     "question": "Tell me about the worst day you have had at work in the last few months—what happened and what made it so bad?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves. Radio coverage is patchy around ports, industrial sites, and in bad weather, and reports from drones can arrive late, out of order, more than once, or not at all. Batteries drain faster in cold and wind than planned, and the service occasionally crashes during working hours while drones are flying.",
+     "question": "When something like a mid-flight closure or a service crash happens while your drones are in the air, what do you need to know right away?",
+     "follow_up": true
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "What do you double-check by hand today because you do not trust what the system or others tell you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "What are you most afraid a new service would do wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I am worried that software might choose a drone or a way for us, which goes against our policy. I am also concerned that the service runs on a single server, is updated and restarted during working hours while drones are flying, and occasionally crashes.",
+     "question": "You mentioned that several dispatchers plan at the same time for the same busy sites and popular drones—how do you currently handle that when two of you want the same drone or site?",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "When a drone report arrives late, out of order, or goes missing around a port or in bad weather, what do you actually do next?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "Earlier you mentioned people on the ground supervising flights—how do you work with them before, during, or after a flight?\n\n\n\n\n\n\n\nBefore you sign off a flight and let it leave, what do you need to verify about the drone, the route, or the airspace?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I am the licensed person responsible for each flight, and I decide which drone flies and along which way before I sign off a flight before it leaves. I can call off a flight.",
+     "question": "What makes you decide to call off a flight, and what happens right after you do?",
+     "follow_up": true
+    },
+    {
+     "id": "Q13",
+     "previous": "I am the licensed person responsible for each flight, and I can call off a flight. I don't know what happens right after I do.",
+     "question": "When you are deciding which drone flies and along which way, what information do you look at?",
+     "follow_up": false
+    },
+    {
+     "id": "Q14",
+     "previous": "I want help finding out which of our drones could get to where a job starts, but software never chooses a drone or a way for us. Drones are of several models from different manufacturers that differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use.",
+     "question": "When an airspace closure comes into force or is amended mid-flight, how do you find out about it and what do you have to look at?",
+     "follow_up": false
+    },
+    {
+     "id": "Q15",
+     "previous": "I don't know.",
+     "question": "When you are checking which of your drones could get to where a job starts, what details about the sites or the drones affect whether a drone can actually make that trip?",
+     "follow_up": false
+    },
+    {
+     "id": "Q16",
+     "previous": "Drones differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use. Sites have only so many places where drones can take off and land at the same time.",
+     "question": "Since other companies use the same service, what information must stay strictly within your own company, and is there anything you need to see that involves other companies?",
+     "follow_up": false
+    },
+    {
+     "id": "Q17",
+     "previous": "Each company's fleet, jobs, sites, and problems are its own business. We accept sharing airspace information, because that information comes from the authorities and is the same for everyone.",
+     "question": "When planning a flight or checking if a drone can make a trip in cold or windy conditions, what do you look at before signing off?",
+     "follow_up": false
+    },
+    {
+     "id": "Q18",
+     "previous": "I don't know.",
+     "question": "When your shift ends and another dispatcher takes over, what do you pass on to them?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 2,
+   "of": 17
+  },
+  "desk": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I don't know.",
+     "question": "When you sat down for your last shift, what was the very first thing you had to do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "Who usually contacts you or sends work your way during a shift?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "What does your job involve on a typical day?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "My job on the airspace desk involves keeping the shared picture of the airspace. This includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. I work for all customer companies and have no business looking into any one company's operations. When a closure is entered, I want to know how much disruption it caused across customers.",
+     "question": "When a new closure is announced by the authorities, how does it reach you and what do you do with it?",
+     "follow_up": true
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "Can you tell me about the worst day you've had on the airspace desk over the last few months, and what made it so bad?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "What do you check by hand today because you do not trust it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "What are you most afraid a new service would get wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know.",
+     "question": "When something goes wrong in the airspace, what do you need to know right away?\n\nWhen you enter a closure, what kind of disruption information do you need to see across customers?",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "When a closure is entered, I want to know how much disruption it caused across customers.",
+     "question": "Who do you hand work or updates to?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "Who hands work or information to you?\n\nHow do you find out how much disruption a closure caused across customers without looking into any one company's operations?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I don't know.",
+     "question": "What does \"how much disruption it caused\" mean in practice when you enter a closure?",
+     "follow_up": false
+    },
+    {
+     "id": "Q13",
+     "previous": "I don't know.",
+     "question": "Could you tell me more about how the network of flight corridors and the zones that group them change over time?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 1,
+   "of": 12
+  }
+ },
+ "follow_up_ratio": 0.1276595744680851,
+ "followUps": 6,
+ "of": 47
+}
