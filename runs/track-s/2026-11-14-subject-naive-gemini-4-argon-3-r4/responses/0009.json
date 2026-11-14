@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What specific properties, statuses, and capabilities do drones, charging pads, and sites have, and what rules govern charging, maintenance, and retirement?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 984,
+  "candidatesTokenCount": 32,
+  "totalTokenCount": 1016,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 984
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 32
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "51X4avnvN-CJvdIPiYr6uAI"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: How do you find out which of your drones could get to where a job starts, and what makes a drone able or unable to get there and do the job?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1148,
+  "candidatesTokenCount": 36,
+  "totalTokenCount": 1184,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1148
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 36
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "u1X4aourKrC6kdUP3eXgoAg"
+}

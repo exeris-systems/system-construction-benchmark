@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What information do you enter when creating a delivery job, and what information do you enter for an inspection job?",
+      "thoughtSignature": "Eo8BCowBAWkUfRPA5F+yDvmYKGV+9N7QR35wyXfBRBgzqVnCqvPJIobEolMyMSpzzHlQcO3T/mI9zFaCvqoFxEzMtm30gEMpmqzALCObLa+CLMt6Ib1TxvkiT/82q+rwhON78sJZqNMEd0MOvS49JnCBGNWceDeBJEY9x/vf1jQb+zLoROdhX4Jn9he3cu59Bxc="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 939,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 978,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 939
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "thoughtsTokenCount": 10,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "oVX4ap-HAeq9kdUPo-eviA0"
+}

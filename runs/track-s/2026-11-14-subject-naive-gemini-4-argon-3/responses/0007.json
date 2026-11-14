@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Can you walk me through the exact lifecycle of a delivery job and an inspection job, including what information is needed to create them, what checks the system should perform, and what states they go through?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 815,
+  "candidatesTokenCount": 43,
+  "totalTokenCount": 858,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 815
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 43
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "QFX4as7vNqerxN8PyezfaQ"
+}

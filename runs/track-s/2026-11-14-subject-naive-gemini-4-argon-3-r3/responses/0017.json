@@ -1,0 +1,33 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What happens when several dispatchers try to use the same drone or the same site at the same time? How does the service handle conflicts or reservations?"
+     },
+     {
+      "text": "\n",
+      "thoughtSignature": "EnYKdAFpFH0TNaaQOfzoKzn67XoSVtK3vxXgfig3snThPR8tKv6+DnsdzfDpmTiSNl7wIrPBWebcFVGGzdoEMWySfAPt/OirCCx4gsmmJusl/sgF1SEJN3+VonkabJPl54cSsx2NvuvzzeF+Jj+VlBCCO8fE0VB5"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "MALFORMED_RESPONSE",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1283,
+  "totalTokenCount": 1283,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1283
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "wVX4apLXNqmKvdIPo_6eqAE"
+}

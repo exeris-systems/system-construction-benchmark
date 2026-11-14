@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What details do you enter when creating a delivery or an inspection, and what has to match between a job and the drone you pick for it?",
+      "thoughtSignature": "EmQKYgFpFH0T8Om/DeMzarrZ6SZ7/k7Yzth7R/1Bd6Dq20KTJmuFYSPh5AwUfFIpyKgh28UpKEVOLTTQCzglpqQQC13a9AEwL0mwHrJXIAubrTDNaRXDN2UT+DHmd9qBVUnWW+TJ"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 874,
+  "candidatesTokenCount": 36,
+  "totalTokenCount": 910,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 874
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 36
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "SFX4asOmKuP8vdIP97qQsAg"
+}

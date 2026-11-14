@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What details define a delivery job and an inspection job, and what are all the steps or statuses a job and a flight go through from creation to completion or cancellation?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 887,
+  "candidatesTokenCount": 36,
+  "totalTokenCount": 923,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 887
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 36
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "mFX4ar_kCMv5xN8PvaSn4Qc"
+}

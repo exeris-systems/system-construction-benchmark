@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What are your main daily tasks and what does the service need to do for you to manage your company's flights and jobs?",
+      "thoughtSignature": "EuUCCuICAWkUfRNp1/RYQQ+/H7QrYfLgmPplZLtUZstp/mCUrcC1aJdltiAIAPF/jrfUImfEgfXpdnvwS1j4GV9R5GrRs3/pxdOqpQ0lpBRV1qkDgBkbtacoaSSndilsGPLDZP/IGi1GUsK6YJXh1Kp5KQ0aDGVe/3j4ipNRb1du6Wi2Q3WG9X5kWXH63icf+/JRakYh68KzuARD2Tr4yyzwkJojrBgZD/lewae2nsg3jMpuoAsk5yUeNYp71F1HVdAruTAWAVS5Bg1koL4WSfAVXOlonrULT62/x8z1saV9GKqslMIfBtlAaTHxJUJEMyDC3vDXtgq/BjR9mt6Cm/LZR1wcm241+RKkCPDq+hZhMusgP5PXGHF6wo5DAPRUtbUNX0DGBlUJOZ1olCXwVZs9/HIZ3uw/v9J8RXdewiOOq3U+Gj66XIIv8ZV1Sx2wfn2eIz/FGl7Fyb+NRbxg4VZvZszejdO3"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 431,
+  "candidatesTokenCount": 33,
+  "totalTokenCount": 525,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 431
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 33
+   }
+  ],
+  "thoughtsTokenCount": 61,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "9lX4asKtLqD9vdIPjKrUQA"
+}
