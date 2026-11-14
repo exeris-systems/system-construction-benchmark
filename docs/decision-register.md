@@ -613,3 +613,15 @@ They run on the instruments frozen at `us-procedure-v6`: the persona, the prompt
 The decision was taken on 2026-11-14, when the runs of the D-55 subjects were complete.
 
 Impact: program plan §9.6 (the script series' matrix, 30 runs and 18 more, and the exclusion of `gemini-3.8-flash` from later runs); the Track S report; `trackS/how-to-run-subjects.md` lists no subject and is unchanged.
+
+### D-64 — The brief-level reference stays as frozen; an independent audit of it is reported
+
+A separate agent read only the brief and its numbering into units, without seeing the reference, and wrote down every obligation of the service the brief's users could state (`runs/track-s/2026-11-14-audit-brief-reference`). It wrote 89 finer-grained obligations; mapped onto the reference, 78 fall within BR-01 to BR-38.
+
+Eleven have no reference requirement. The strongest are that every flight has one dispatcher known as responsible for it (2.b2) and that a dispatcher can follow how each of their flights is going (2.b2, 4.b6); the others are a company's "problems" being its own (1.p2), further companies joining (1.p1), scale and mixed fleets (3.b1, 3.b2, 6.b5), a "not ready" load report (4.b6), the single server (7.b1, 8.b5) and an interruption of a few minutes at most (7.b1). Five reference requirements the audit does not state in full: BR-24, which it reads 6.b4 as giving no obligation for; BR-33; BR-03; the "by whom" of BR-12; and the flagging in BR-28.
+
+The reference stays as frozen at `us-procedure-v6`, and every run is scored against it. Revising it would rebuild the judges' mutants and their calibration and change the scores of runs already made. The report gives the audit's findings as a limit of the reference, and shows, for every subject, its score with and without BR-24, which the scored judgements give as covered in two runs (`gemini-3.8-flash` S-naive run 2, `gemini-4-argon` S-instructed run 3) and as partly covered in two (`claude-sonnet-5-5` S-instructed run 3, `gemini-4-argon` S-instructed run 1). A reference revised from the audit is a candidate for the next version.
+
+The audit was made by the model that drafted the reference, Claude Opus 5.5, and the mapping by the same model; the audit is independent of the reference in what it read, not in the model that read it.
+
+Impact: `runs/track-s/2026-11-14-audit-brief-reference`; the Track S report.
