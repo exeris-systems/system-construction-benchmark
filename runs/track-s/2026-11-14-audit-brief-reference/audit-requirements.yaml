@@ -1,0 +1,438 @@
+# Independent requirements extraction from trackS/world-brief.md (audit).
+# Units numbered as in trackS/brief-slices.yaml. Each item rests only on the units named.
+
+requirements:
+  # --- §1 The business ---
+  - id: AR-01
+    units: ["1.p1"]
+    requirement: >
+      The service serves several independent drone operating companies at the same time.
+  - id: AR-02
+    units: ["1.p1", "8.b12"]
+    requirement: >
+      Further companies can be brought onto the service beyond the current ones (by the
+      platform company, not by the companies signing themselves up through the service).
+  - id: AR-03
+    units: ["1.p2"]
+    requirement: >
+      A company cannot see another company's drones (its fleet).
+  - id: AR-04
+    units: ["1.p2"]
+    requirement: >
+      A company cannot see another company's jobs or flights.
+  - id: AR-05
+    units: ["1.p2", "3.b2"]
+    requirement: >
+      A company cannot see another company's own sites and charging pads.
+  - id: AR-06
+    units: ["1.p2"]
+    requirement: >
+      A company cannot see another company's problems.
+  - id: AR-07
+    units: ["1.p2"]
+    requirement: >
+      A company cannot change anything that belongs to another company (its drones, jobs,
+      sites).
+  - id: AR-08
+    units: ["1.p2", "2.b3"]
+    requirement: >
+      Every company sees the same airspace information (corridors, zones, closures) kept by
+      the airspace desk.
+
+  # --- §2 People: fleet technicians ---
+  - id: AR-09
+    units: ["2.b1"]
+    requirement: >
+      A fleet technician can add a new drone to the company's fleet.
+  - id: AR-10
+    units: ["2.b1"]
+    requirement: >
+      A fleet technician can retire an old drone.
+  - id: AR-11
+    units: ["2.b1"]
+    requirement: >
+      A retired drone can no longer be given a flight.
+  - id: AR-12
+    units: ["2.b1"]
+    requirement: >
+      A fleet technician can set up a charging pad at one of the company's sites.
+  - id: AR-13
+    units: ["2.b1"]
+    requirement: >
+      A fleet technician can take a drone out of service for repairs.
+  - id: AR-14
+    units: ["2.b1"]
+    requirement: >
+      A fleet technician can put a drone that was out of service back into service.
+  - id: AR-15
+    units: ["2.b1"]
+    requirement: >
+      A drone that is out of service cannot be given a flight.
+  - id: AR-16
+    units: ["2.b1"]
+    requirement: >
+      A fleet technician can send a drone to charge.
+
+  # --- §2 People: dispatchers ---
+  - id: AR-17
+    units: ["2.b2"]
+    requirement: >
+      A dispatcher can plan a flight.
+  - id: AR-18
+    units: ["2.b2"]
+    requirement: >
+      The dispatcher decides which drone flies a flight.
+  - id: AR-19
+    units: ["2.b2"]
+    requirement: >
+      The dispatcher decides the way the flight takes.
+  - id: AR-20
+    units: ["2.b2"]
+    requirement: >
+      Every flight has one dispatcher known as the person responsible for it.
+  - id: AR-21
+    units: ["2.b2"]
+    requirement: >
+      A flight cannot leave until a dispatcher has signed it off.
+  - id: AR-22
+    units: ["2.b2"]
+    requirement: >
+      Only a dispatcher can sign off a flight.
+  - id: AR-23
+    units: ["2.b2"]
+    requirement: >
+      A dispatcher can call off a flight.
+  - id: AR-24
+    units: ["2.b2", "4.b6"]
+    requirement: >
+      A dispatcher can follow how each of their flights is going (run the flight).
+
+  # --- §2 People: airspace desk ---
+  - id: AR-25
+    units: ["2.b3"]
+    requirement: >
+      The airspace desk can keep the network of flight corridors between sites.
+  - id: AR-26
+    units: ["2.b3"]
+    requirement: >
+      The airspace desk can keep the zones that group corridors.
+  - id: AR-27
+    units: ["2.b3"]
+    requirement: >
+      The airspace desk can enter closures announced by the authorities.
+  - id: AR-28
+    units: ["2.b3"]
+    requirement: >
+      The airspace desk cannot look into any one company's operations (its drones, flights,
+      jobs).
+  - id: AR-29
+    units: ["2.b3", "5.b2"]
+    requirement: >
+      When the desk enters a closure, the desk can find out how much disruption it caused
+      across customers.
+  - id: AR-30
+    units: ["2.b3"]
+    requirement: >
+      What the desk is told about a closure's disruption does not show it any one company's
+      operations.
+
+  # --- §3 Fleets and equipment ---
+  - id: AR-31
+    units: ["3.b1"]
+    requirement: >
+      For each drone the service knows its model.
+  - id: AR-32
+    units: ["3.b1"]
+    requirement: >
+      For each drone the service knows how much it can carry.
+  - id: AR-33
+    units: ["3.b1"]
+    requirement: >
+      For each drone the service knows how far it can fly on a full battery.
+  - id: AR-34
+    units: ["3.b1"]
+    requirement: >
+      For each drone the service knows which sensors it carries (cameras, thermal cameras,
+      laser scanners).
+  - id: AR-35
+    units: ["3.b1"]
+    requirement: >
+      For each drone the service knows which charging connector it uses.
+  - id: AR-36
+    units: ["3.b1", "2.b1"]
+    requirement: >
+      For each charging pad the service knows which connector type it has.
+  - id: AR-37
+    units: ["3.b1", "2.b1"]
+    requirement: >
+      A drone is never sent to charge at a pad with a different connector type from its own.
+  - id: AR-38
+    units: ["3.b1"]
+    requirement: >
+      A company can run a fleet of a few hundred drones on the service.
+  - id: AR-39
+    units: ["3.b1"]
+    requirement: >
+      A company's fleet can mix several drone models from different manufacturers.
+  - id: AR-40
+    units: ["3.b2"]
+    requirement: >
+      Each drone has a home site.
+  - id: AR-41
+    units: ["3.b2"]
+    requirement: >
+      A company can have a few dozen charging pads at its own sites.
+  - id: AR-42
+    units: ["3.b2"]
+    requirement: >
+      A drone is never sent to charge at a pad belonging to another company.
+  - id: AR-43
+    units: ["3.b3", "2.b1"]
+    requirement: >
+      A company can show, for each of its drones, how it has been looked after: when it was
+      taken out of service for repairs or servicing and when it was put back.
+
+  # --- §4 The work ---
+  - id: AR-44
+    units: ["4.b1"]
+    requirement: >
+      A dispatcher can plan a delivery that carries a load from one site to another site.
+  - id: AR-45
+    units: ["4.b1", "3.b1"]
+    requirement: >
+      A delivery is flown only by a drone that can carry its load.
+  - id: AR-46
+    units: ["4.b2"]
+    requirement: >
+      A dispatcher can plan an inspection as a list of points to visit in a set order.
+  - id: AR-47
+    units: ["4.b2"]
+    requirement: >
+      An inspection brings the drone back to the place where the inspection started.
+  - id: AR-48
+    units: ["4.b2", "3.b1"]
+    requirement: >
+      An inspection is flown only by a drone carrying the sensors the inspection needs.
+  - id: AR-49
+    units: ["4.b3"]
+    requirement: >
+      A flight's way runs along corridors between named sites.
+  - id: AR-50
+    units: ["4.b3"]
+    requirement: >
+      For each site the service knows how many drones can take off and land there at the
+      same time.
+  - id: AR-51
+    units: ["4.b3"]
+    requirement: >
+      No more drones are planned to take off or land at a site at the same time than the
+      site has places for.
+  - id: AR-52
+    units: ["4.b4", "8.b8"]
+    requirement: >
+      The service never chooses the drone for a flight.
+  - id: AR-53
+    units: ["4.b4", "8.b8"]
+    requirement: >
+      The service never chooses the way a flight takes.
+  - id: AR-54
+    units: ["4.b4"]
+    requirement: >
+      A dispatcher can find out which of their company's drones could get to where a job
+      starts.
+  - id: AR-55
+    units: ["4.b5"]
+    requirement: >
+      Several dispatchers can plan at the same time.
+  - id: AR-56
+    units: ["4.b5"]
+    requirement: >
+      When dispatchers plan at the same time, the same drone is not committed to two flights
+      at once.
+  - id: AR-57
+    units: ["4.b5", "4.b3"]
+    requirement: >
+      When dispatchers plan at the same time for the same busy site, together they cannot
+      plan more simultaneous take-offs and landings there than the site has places for.
+  - id: AR-58
+    units: ["4.b6"]
+    requirement: >
+      The service accepts a report that a flight's load is ready, or that it is not ready.
+  - id: AR-59
+    units: ["4.b6"]
+    requirement: >
+      The service accepts a report that the drone reached a point of its job.
+  - id: AR-60
+    units: ["4.b6"]
+    requirement: >
+      The service accepts a report that the drone has arrived.
+  - id: AR-61
+    units: ["4.b6"]
+    requirement: >
+      These reports can come from people and devices outside the company.
+
+  # --- §5 Airspace ---
+  - id: AR-62
+    units: ["5.b1", "2.b3"]
+    requirement: >
+      The airspace desk can record the zones where the authorities prohibit flying.
+  - id: AR-63
+    units: ["5.b1"]
+    requirement: >
+      A flight whose way crosses a zone where flying is prohibited cannot be signed off.
+  - id: AR-64
+    units: ["5.b1"]
+    requirement: >
+      The desk can enter a planned closure with a start time and an end time.
+  - id: AR-65
+    units: ["5.b1"]
+    requirement: >
+      The desk can enter a sudden closure that applies at once.
+  - id: AR-66
+    units: ["5.b1"]
+    requirement: >
+      The desk can amend a closure by widening its area.
+  - id: AR-67
+    units: ["5.b1"]
+    requirement: >
+      The desk can amend a closure by moving its end time.
+  - id: AR-68
+    units: ["5.b1"]
+    requirement: >
+      Once a closure is amended, the amended closure is what applies from then on.
+  - id: AR-69
+    units: ["5.b1"]
+    requirement: >
+      A flight cannot be signed off through a closed area while the closure is in force.
+  - id: AR-70
+    units: ["5.b2"]
+    requirement: >
+      When a closure comes into force, the flights already in the air that it affects are
+      found, for every company.
+  - id: AR-71
+    units: ["5.b2", "2.b2"]
+    requirement: >
+      The dispatcher responsible for a flight in the air learns that a closure now affects
+      it.
+
+  # --- §6 Conditions in the field ---
+  - id: AR-72
+    units: ["6.b1", "8.b9"]
+    requirement: >
+      Nobody can steer or fly a drone through the service.
+  - id: AR-73
+    units: ["6.b2"]
+    requirement: >
+      A report that arrives late is still taken into account.
+  - id: AR-74
+    units: ["6.b2"]
+    requirement: >
+      A report that arrives out of order does not replace newer information about the drone
+      or flight.
+  - id: AR-75
+    units: ["6.b2"]
+    requirement: >
+      A report that arrives more than once has effect only once (e.g. a point reached or an
+      arrival is not counted twice).
+  - id: AR-76
+    units: ["6.b2"]
+    requirement: >
+      A report that never arrives is not treated as if it had (e.g. a drone is not shown as
+      arrived without an arrival report).
+  - id: AR-77
+    units: ["6.b3"]
+    requirement: >
+      A drone that restarts in flight and carries on is still treated as flying the same
+      flight, and its reports after the restart are accepted for that flight.
+  - id: AR-78
+    units: ["6.b5"]
+    requirement: >
+      One person can be responsible for hundreds of drones.
+  - id: AR-79
+    units: ["6.b5"]
+    requirement: >
+      The responsible person learns which drones or flights need their attention without
+      having to watch every drone.
+  - id: AR-80
+    units: ["6.b6"]
+    requirement: >
+      When it is unclear whether an instruction to a drone or to charging equipment got
+      through, it can be sent again.
+  - id: AR-81
+    units: ["6.b6"]
+    requirement: >
+      An instruction to a drone or to charging equipment that gets through twice is carried
+      out only once.
+
+  # --- §7 The service itself ---
+  - id: AR-82
+    units: ["7.b1", "8.b5"]
+    requirement: >
+      The service runs on a single server.
+  - id: AR-83
+    units: ["7.b1"]
+    requirement: >
+      The service can be updated and restarted during working hours while drones are flying.
+  - id: AR-84
+    units: ["7.b1"]
+    requirement: >
+      After a restart or a crash, nothing the service had recorded before it is lost.
+  - id: AR-85
+    units: ["7.b1"]
+    requirement: >
+      After a restart or a crash, flights that are in the air continue to be followed.
+  - id: AR-86
+    units: ["7.b1"]
+    requirement: >
+      An interruption of the service lasts no more than a few minutes.
+  - id: AR-87
+    units: ["7.b2"]
+    requirement: >
+      A company's own systems hear about what happens to its drones.
+  - id: AR-88
+    units: ["7.b2"]
+    requirement: >
+      A company's own systems hear about what happens to its jobs.
+  - id: AR-89
+    units: ["7.b2", "1.p2"]
+    requirement: >
+      A company's own systems never hear about another company's drones or jobs.
+
+anti_requirements_section_8:
+  - units: ["8.b1"]
+    text: No management or analytical reports, exports or dashboards beyond day-to-day operations.
+  - units: ["8.b2"]
+    text: No logging in through the companies' own corporate identity systems.
+  - units: ["8.b3"]
+    text: No support for several languages.
+  - units: ["8.b4"]
+    text: No guarantee of meeting regulations, no compliance audit, no data-retention or deletion features.
+  - units: ["8.b5"]
+    text: No backups, no high availability, no spreading the service over several servers.
+  - units: ["8.b6"]
+    text: No accounts or passwords inside the service; staff accounts are issued by the platform company outside it.
+  - units: ["8.b7"]
+    text: No alerts to staff by e-mail, text message or phone; each company's own systems reach people.
+  - units: ["8.b8"]
+    text: No software that plans routes or picks drones.
+  - units: ["8.b9"]
+    text: No flying drones remotely through the service.
+  - units: ["8.b10"]
+    text: No weather information.
+  - units: ["8.b11"]
+    text: No billing or pricing of the work; companies do that in their own systems.
+  - units: ["8.b12"]
+    text: No signing up of new companies through the service; the platform company does that itself.
+
+no_obligation_units:
+  - unit: "5.b3"
+    why: >
+      Names the applicable rules (EU 2019/947, EU 2021/664, GDPR) and says no certification
+      is sought; "respect how these rules work in practice" names no checkable behaviour.
+      Its concrete content (zones, flight sign-off, operator responsibility) is already
+      carried by 2.b2, 5.b1 and 4.b4.
+  - unit: "6.b4"
+    why: >
+      States a field condition (batteries drain faster in cold and wind than planned) but no
+      behaviour of the service; any obligation drawn from it would need a mechanism or value
+      the brief does not give.
