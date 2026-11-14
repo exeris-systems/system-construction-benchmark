@@ -1,0 +1,78 @@
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Could you walk me through your last working day as a fleet technician, starting from the moment you arrived?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS3QYKEAgTGAI4AUIIdGhpbmtpbmcSDPLvBzLmm9loTdQu2RoMgkL3+LoVng6Qc9BBIjAT/7x+dw2d6yoj1uWNJp7HJl2hlcjBC7ph+HEtshGlbwSFGE/u5FxsFAdl8iDNISYq+gUkA+/VsUw3XweD069rBpYdRzPi7nju8KbSCdNzPlQBmq7dYflA1tOiExnfL6AhyPdufTnNGRZb0lEN2Sk90Y7pFbjkkQFh4YGA1Eox5fXSRDon7/x0DPWkKPA6I5bp6cwX2P0aZAGMiv5wXRC7zU9gfi2ZP+OQkrv1SLaR7k3UfAy8Z1yxZ1XWlTUqdQPUpfTM519pt9mVkgr4CC65zH98Ux+sSwfpKNV2VgRcTMn6hx42t/0F3tGzZP1KhXIjhMX/4yf4ZkLm4rf5KG9pXi0+nLjkin8BzOK1sJE+Oji3RYHshK5J5obPnJe6QUegFYFP/pndtF5zeIE5/na15CWM1SEjd2vL7tL7JFzuV0ISRPCiFX5YwS2cRzaGCQXTgG+Kff55VNdZBUbnzs5Ur5gxSzj12lKbUbfNSb3++DTy812PquggLhff0VSYfeXI+Uo+nv3q9JIiFeCW1kxSQD4VJTmh6eX2LA7hDcOGhYFq+9GWuRc23f+C0aQ/BK+SHxDsUMJkVaDmOqJlTj3f0WJ8Rn51bqPst5k+PEepG+C4O6H070//Ctwe7c998XNU8Qmsr7JlzplntQcOgbYyOqsdPy0BnCdXSZOXdSb4l9Ha7KJGikxvKOghckAH44bU3eT2AqhZz5RcC1MSnFBabSW8a4oPnbXnkL5XuuPRHQqbjyjezPwWZfbS2AXt/GTSEPi0C4ElG37I879xX4XpXQzi49adbbpD+hf3UkbH0JKNqnDATM4iftGrq7XDsDpJkgq/IThN2vdjUTAt9NJp00vOUb6E6o9P8dH1NtZSqarASZHbIzwJ3jtFgrA0h+zh9BVn6gHrTmfGUxeiFMhNffn4N6PYlkF3IQBopNOHSrbZwBuwwP6WjEa/Jl+xR+aOzUuPN/CvTrZZi1oBwEPv2tWL9V3yKY8R/BX8/45/V6S/Z9umHrQUdeaRmOQ3OcYD/qS6vzcjo4aw5VXCF6/iEGPwjnxtQ1cBsLZhZIr/FmbjwiOenHNLGuscYusYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "No problem, let's start smaller. What is the first thing you usually do when you start your shift?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSugcKEAgTGAI4AUIIdGhpbmtpbmcSDNHkDyV2YtP+LvoLvhoMve1H5gLWMrBIOkvrIjCMCf+1t7XL6UW/c6OzihCpdnp/ErGnhJzWYExdqKqlFAv3ea2KVp5Xw31hm+AzjTEq1wZKn910pLPOT92hIsRodx84ptq9aNNWBCDp7bv/ETirxR4fB5VwkFsMXs3zyNaOScM9DgR3qr4cEV2I3J5hPhaWPLFV4NNwYMBCj5ohzr0L/hc1lPVzlgFntelMDCwpzEQaZnQG2XaUL8Ap9bLDdwOCFursRBSm1GXjZ2kYdcFZTQ6+0vdFKMzn+ll0e6yPpzwOSDv5+J1xAXotzG9qgL3JaM5MoyhhSOuWd6lU7ptrzqfsEwciaOzaLLGun3g9A90Xa07aOI3KAkwEcSfJQiBu7j379LaynUHdo89DxoaPl9ARIs+6a2jXiq7+GeIQpI02fiRHHFMFO0OKqkDQo5hwl/FEnbOzo42pzlRyuZ3p4xsBqphGyEVRvEMI2trI0U/s+U/hYqbr6p5ZAeF8q5NXO7INmo9tmX6lvI/iF6+q22tTW3im3ToAStTHu2pCuWTAM3wnDpfNVwiJWbF/qJg2M2zrd7TIwHT715bJoriEYwayqTNRyYAAqUB9DWpkxITGTmt3Bsa7gjmGjWEKYFHAz5xXGVljSe4HuqYBHG+1Se74FKJbQixzPvOOmlYyQbdexZNjVvhMF/UotONNSF8y0LX0ASkxVddVqaOiNBAKn1FQ0p5sfBbzWmhtgg1JB2aUTQCdZSF4EWQ+4qduad/dKBSAhi3E4yD+68ZdFa936o8Akva9e0Ahcc/ZY+imUDkf4CNU6IvBt5TYT16Heb8/qQxA8JtZq7NjeSDGPNqb+Ha/abz3HRyHrdAI0mW0Z38oPSN3tmgN25kGpoYvENaDs2tsic61jxz3jo6XAyedY10ejDDBehQ+DLEHig+z7mmiJC9vBcoi+ZsIRnWB7pVs+rIEt4xE59SccbyqCSeU57yj46kHU9bh7kVT3QE1sZ+CmXekrsjFXQfnPavCybzSUprH3RvNK1YFaFmjMIsUwFcUPPwfZ1NL7ljGI+YdjBKyjRNTEE7LRRs+aoT0eiiDjDsA3sf9WHdaT7WxkrUFD6DxETeBW7GrtfvSeOhrR7TvvZHpUJh+gKhI9v2knvGssacjKGxBh2s14TLhzjqt1nIvfHXSZ36giUi8DITdFKLGdBI8vB1DKz36CsETuP1CzRo1nbTlD8ItEqm9yY0SRza3eY/FY9QYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "That's fine. Think of the last drone you worked on. What was it, and what were you doing with it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSnwgKEAgTGAI4AUIIdGhpbmtpbmcSDO/XzGzjEqDI1jl4MRoM9HnCea+RC7+H1XNNIjAxXeNgc7BdZ68OauMzP09EvmKsjlpSYyKXCZb8CUzCb13w+C7REHLmEgRLeevygcEqvActnUjnLt5nk7a9sgWwi9W0/vec1MpwX5eb+1srLaeb7zo50ZQew0SII/1WOc3b78YkotnUNHq+ghAP8eV0Dz3wxL/NiCJmG9Qg3eMmumBzvOwGbhhvFwxe801EXe4pwJfRYVoPxwunW8QECg/DnlP4a0B6wzIjOAGWjQWr6u/UWCacOVuYlEPHAjl0FsEmSHi2Ngo0GzpZetCoYuCo/2JUnpiAeBRIuGAm5iBIoI7SQQ7rxeNbfTVY//H4wwkwx9CqeubJolxpEhlMp9rIApi3ak39F+hU2J60bitdQRF5NJhZ/c+5jXvvqzdE7UPrAHOoSP1p7x3HYjehh12Xn+c9tB1hZbjTraXAJMvkUtiaknvps0uU92cCgtxpZdH7VeuARl6qNZ99JWfcMTILuoDA48VYgx/uyktYlXcNmzroFZF9z2dZMRllcCGK/3G0wN7hJVUdr8135/ljASUydBwfpqPkT47dOtjoF93nzdqqLYtyEHT0taAvAc2bZGy0EaU1cpK3M6RQ8fW7Mz3SkypPKTzPuntnTw49+DxhetUTheA6xiCplocYsQjwerD5lLN95HJxILaLXJGsNpvZMvrtUPMQTxUYzywRMJ/MbqL5JQjVwpBLNlmS63JMmHh7453oBGAiX4pN7oOLrl8QI3zz3IWXfWwn/vfyJnb/pOsiPjA55Cec9Bg2zG8nIAgl5R2DLhYofz47U6eHCRQSZ5//A8gGY/jhpQpDzqssN4mGyoiChrsukHMqlyZEMRwpNIoRh8aaqPQt1LdB3o0+t5dzLr2cCUq2+kSOoCNF3nBemYb8uKr8TsybQAeMzNFQ98ZU6EUGDamulpf7skqeENnX/Y7PAJDSVoIccrrbxlFsdvbGzRYmhwMkiqHmCJQq/5t+safh0T4dEHRPJibwyqqrTxHS7qoOWHJdVKBhsONLpRnfMAlrzsc+3hD7jAYilcqJtUUkYlL6xDIqbMPqcz7++om//27K80EoSK/gSUB4qy7syrUmHRIvKneWgcUxmzPn5pKS+wb+qsw3ZwHKqwMGbRHqy2j0nAJJgdDDs9tru+M5zEh4NQ7jjauFpgVsg0xLFmygcgT+R9HPOvcKrJ92icxF/FNRso3NsKaP2+ucOs9n5q7fPBlF9CkFHSiD6cqVUmOJZ/BgebsJ14kMT4+lfPRvu9+0u6udZs8vyc0mZRq6zqx5qvMK0yEl49HqnjXsCMkmCfGYkVgF9uyUqdv+m/FFGgXFmpGHlBZjLdvI4AtSGZavuKgMRduEiRgB"
+    },
+    {
+     "type": "text",
+     "text": "Is there something about these questions that makes them hard to answer? I'd like to understand, so please tell me in your own words."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

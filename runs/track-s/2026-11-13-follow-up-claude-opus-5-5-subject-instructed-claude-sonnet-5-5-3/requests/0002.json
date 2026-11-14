@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I don't know.\nThe question: That's fine, we can start smaller. What was the first thing you did when your last shift began?\n\nQ3\nThe answer just before it: I don't know.\nThe question: No problem. In your own words, what is your job as a dispatcher?\n\nQ4\nThe answer just before it: As a dispatcher, I am the licensed person responsible for each flight. I decide which drone flies and along which way, and I sign off a flight before it leaves. I can also call off a flight.\nThe question: Can you tell me about a flight you signed off recently, from the moment you first heard about it until the drone left?\n\nQ5\nThe answer just before it: I don't know.\nThe question: When you decide which drone flies a given job, what do you look at?\n\nQ6\nThe answer just before it: I want help finding out which of my drones could get to where a job starts. Beyond that, our company's policy is that software never chooses a drone or a way for them.\nThe question: How do you find that out today, which of your drones could get to where a job starts?\n\nQ7\nThe answer just before it: I don't know.\nThe question: You mentioned your company's policy that software never chooses a drone or a way. Can you tell me what led to that policy?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Who gives you a job to dispatch?\n\nQ9\nThe answer just before it: I don't know.\nThe question: I've noticed you've answered some questions and not others. Is there something about my questions that makes them hard to answer?\n\nQ10\nThe answer just before it: I don't know.\nThe question: What is the hardest part of your job as a dispatcher?\n\nQ11\nThe answer just before it: I worry about conditions in the field, such as when radio coverage is patchy and reports from drones arrive late, out of order, more than once, or not at all. Drones sometimes restart in flight after a software fault and carry on, and batteries drain faster in cold and wind than planned. Before and during a flight, things happen outside our control, and several dispatchers plan at the same time for the same busy sites and popular drones.\nThe question: Can you tell me about a recent time when reports from a drone arrived late, out of order, or not at all? What happened?\n\nQ12\nThe answer just before it: I don't know.\nThe question: When reports from a drone are late or missing, what do you do?\n\nQ13\nThe answer just before it: I don't know.\nThe question: You said several dispatchers plan at the same time for the same busy sites and popular drones. What goes wrong when that happens?\n\nQ14\nThe answer just before it: I don't know.\nThe question: What are you afraid a new service would do wrong?\n\nQ15\nThe answer just before it: I worry about a single server running the service, which is updated and restarted during working hours while drones are flying, and occasionally crashes. I also worry that the service runs on a single server, and that nobody watches every drone at every moment while one person may be responsible for hundreds.\nThe question: You said one person may be responsible for hundreds of drones. What does that look like in practice?\n\nQ16\nThe answer just before it: I don't know.\nThe question: Right after something has gone wrong with a flight, what do you need to know?\n\nQ17\nThe answer just before it: I don't know.\nThe question: What do you check by hand because you don't trust the information you are given?\n\nQ18\nThe answer just before it: I don't know.\nThe question: Thinking back over the last few months, was there a day that was especially bad for you? What made it bad?\n\nQ19\nThe answer just before it: I don't know.\nThe question: When you call off a flight, who do you tell?\n\nQ20\nThe answer just before it: I don't know.\nThe question: You mentioned drones sometimes restart in flight after a software fault and carry on. Why does that worry you?\n\nQ21\nThe answer just before it: I worry about conditions in the field when drones sometimes restart in flight after a software fault and carry on. The service runs on a single server that is updated and restarted during working hours while drones are flying, and it occasionally crashes. Nobody watches every drone at every moment, and one person may be responsible for hundreds.\nThe question: If the service stopped working for ten minutes while your drones were in the air, what would you do?\n\nQ22\nThe answer just before it: I don't know.\nThe question: What do you get from the airspace desk, and when?\n\nQ23\nThe answer just before it: I don't know.\nThe question: What do you hear from the fleet technicians about the drones you plan to use?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

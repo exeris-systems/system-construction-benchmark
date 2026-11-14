@@ -1,0 +1,38 @@
+{
+ "model": "claude-sonnet-5-5",
+ "id": "msg_011Ch1TnLzsZ7kYBvdxwVE1c",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS6gcKEAgTGAI4AUIIdGhpbmtpbmcSDODuYWyjOTn1wVYLeRoMC08lQUdpIlF9v1x0IjAFaa95D6+ybSiDOpNLjOcShLGSrnXfKfFea7hitkUySNHIiuBESBFK3Px3zvsGT1EqhwcoxAwH5sKQ/aMv8SLtXOPVn0qznD4APi7lNFEoWBbNCeJ1yTUfXCoNd8TFiu2RNxzCBmiENpepkBVf16BTCj1xfAvZZ/3sVY+eRnAZzetyk5IuK6Rkhx9HzJnAOp8g+DJmyIt2Bqohf37nevd1z3XGGeFW0CfOnsML2OFIHKNSaEG8tglUhezxi5vLkzR5/zOi00swrhj3NrQW9UyAvCuVZkHetwNyzKvbBagG8nA6vMiPJYQlYTqhkX+ieeol7GdOo7xDiAXzQycsxmsVHGmqmJK/2wjY1ypMNXtn9vL1n1mO39TajsFCRNH/zJBvJKfVJApR4t190NCQkgeUsBDjQOU2K6NpzpOWZ1A/ssFp7A13o4nGZkqNoe1O6fuprAKIxvvhXGQEEVX90A3r+uIIbI6fcmCtsF75yqrqkg82QLw5Zf+zCsSM2Zcva4EU6dO+Vg7U4fBRy1JH0PQPEA34q7mnJkOWFEtl719gyybqCl5Ys2XgQLNvutNHeq2j6K3zzxy7mgXoTmv306M+eeUXnCv39uw/TSLNHsOSQ81XzrHsl4RbeFdkU/x6a9fwncEFLtnswwzwRrXPaHeW6X2XpCmS+S8mRy0RWYxeJN66d2iL4ygsmiv5HQPPh8uob6RYHyftyVemm6D3z93Y5Sf0RJEcypZp4IXIhCbfZykaJ0cdPdHvk0J1nKTflZBcMvM2EMlJLy6deMMdGsFJYKufcouTzq74FicqM81kSTw32f+OfA2FqVYwJdVzoOBCbZaxhLc2MYqRKD3yahH7QVnEuDlW6YOeuCPWawjkUYjgyHX0gLDsQzvGFdSZv434OumTKSCNO/+vG7kjaoSODy6XHRmweAUgdPLQrNuh+cvOrTvdkzWxPUa3TJSNRi4fQv0stHhGZh1bp90Ikm0c/vccwaF41KqAP+NHiSqTnrd7mDz8I4dcijDt5h9NHjrMMf9l1SQ12dVkunHMvd+jA+m/Mia4stxEIsUf45LTooA8Rx6VCCVTww7q+jw0AZEdbq3/SXHDt1buZL7MQ1s/HTvPtM/Tq+awAJvNlYzuAuBJTtNlBpmI0tHLzBh+09GO9HuJ9YLwXxLED0O9YAE89Fs78J6s6obu2FuC640dtSjgETqcrEzk0VS0SqtMAZX81cbg83DaTNcp+q/9vQnzW8crc1qBNCIK/bRyz4xBrePrbb9OnP1AJKQYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "You mentioned drones sometimes restart in flight after a software fault and carry on. Why does that worry you?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2782,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 101,
+  "output_tokens_details": {
+   "thinking_tokens": 65
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
