@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. My work serves all customer companies, and I have no business looking into any one company's operations.\nThe question: You mentioned how much disruption a closure causes across customers. Can you tell me about the last closure you handled: what came in, what you did with it, and how you knew what the disruption was?\n\nQ3\nThe answer just before it: I don't know.\nThe question: That's fine. Let's start smaller. Think of the most recent time a closure or zone change reached you. How did it arrive, and who or what told you about it first?\n\nQ4\nThe answer just before it: I don't know.\nThe question: Let's set closures aside for a moment. When you sit down in the morning, what is the first thing you open or look at?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Is there a part of your work you'd rather talk about first?\n\nQ6\nThe answer just before it: I keep the shared picture of the airspace, which is the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. My desk works for all customer companies, and I have no business looking into any one company's operations. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: You've said your desk has no business looking into any one company's operations, and also that you want to know the disruption a closure causes across customers. How do you get that picture without looking into a company's operations?\n\nQ7\nThe answer just before it: I don't know.\nThe question: Let's try a different angle. Think of a recent day that went badly for the airspace desk. What was the first thing you noticed?\n\nQ8\nThe answer just before it: I don't know.\nThe question: I've asked several questions and you've said \"I don't know\" each time. Is that because the questions are unclear, because you don't want to answer them, or because the work itself is hard to describe?\n\nQ9\nThe answer just before it: I keep the shared picture of the airspace, which consists of the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The authorities define zones where flying is prohibited, and they announce planned closures with a start and end time, as well as sudden ones that apply at once. A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves.\nThe question: Think of the last time a closure was widened or its end time moved while drones were already in the air. What happened, step by step, from the moment you heard about the change?\n\nQ10\nThe answer just before it: I don't know.\nThe question: Let's keep it general, then. When a closure is amended, how does that change usually reach you?\n\nQ11\nThe answer just before it: I don't know.\nThe question: Let's move to a different question. If a new service took over part of the closure work, what would worry you most about it getting something wrong?\n\nQ12\nThe answer just before it: I worry about how closures are often amended during the day, for example when an area is widened or an end time moves, and how a closure can come into force while drones of several companies are already in the air. The authorities announce sudden closures that apply at once, as well as planned ones with a start and end time.\nThe question: What would a wrong result look like to you, concretely? Describe what you would see, or what would reach you, when the service got it wrong.\n\nQ13\nThe answer just before it: I don't know.\nThe question: Is there anything you check by hand today, even though a system or a colleague has already given you an answer?\n\nQ14\nThe answer just before it: I don't know.\nThe question: Who do you pass work to once a closure is entered, and who passes work to you?\n\nQ15\nThe answer just before it: I don't know.\nThe question: After something has gone wrong in the airspace, what is the first thing you need to know?\n\nQ16\nThe answer just before it: I want to know how much disruption a closure caused across customers when a closure is entered. I keep the shared picture of the airspace, including the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities.\nThe question: When you say disruption, what exactly counts as disruption for you?\n\nQ17\nThe answer just before it: I don't know.\nThe question: What has frustrated you most in your work over the last few months?\n\nQ18\nThe answer just before it: I don't know.\nThe question: Who else, on your desk or elsewhere, would be better placed to answer these questions than you?\n\nQ19\nThe answer just before it: I don't know.\nThe question: Think about the last time you finished a shift feeling uneasy about something in the airspace. What was it?\n\nQ20\nThe answer just before it: I don't know.\nThe question: Is there anything about your work on the airspace desk that you think I should have asked and didn't?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

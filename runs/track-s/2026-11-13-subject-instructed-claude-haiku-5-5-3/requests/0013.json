@@ -1,0 +1,99 @@
+{
+ "model": "claude-haiku-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Could you walk me through a typical working day for you, from the moment you start to the moment you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep our drones and charging equipment in working order. I add new drones to our fleet, retire old ones, set up charging pads at our sites, and take drones out of service for repairs before putting them back. I also send drones to charge, and regulators can ask us to show how our drones have been looked after."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Thanks. You mentioned that regulators can ask you to show how the drones have been looked after. When that happens, what do they ask for, and where do you find it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "That's fine. Can you tell me about the last time something like that came up, even if you weren't the one who dealt with it? What happened, and who did deal with it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "That's okay, we can leave that aside for now. Let's go back to your day: when you start in the morning, what is the first thing you look at?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSuwoKEAgTGAI4AUIIdGhpbmtpbmcSDL3YUMwPsN/A0fzW+BoMkFlC7jwkjSNwky3RIjB/T4t8P1MK7DlYeu92PnHHW79lid4UU0K6ASZk3oyYVzVEsR9t0Jg/fr2VpN/eI9Uq2AmxI8JULZwDJHw1Sp90zbJ3s/1OUIDNY8xOhNZESmYmZQYQZfzlbgYb4xbHEjgaYh/+p705taPCcryLN6MFOQYfo1IB2J31yIrDgfSkekeoWuyu3PdnPN4b4TLgqZ+0JMqtHSzZkCvMO0Brfdl+jFbOhwrLrq3OjXsQfh0YcbIrX0CoLbVJ0tOHpjxuSaE0K2y2b9piVcBoN00DDAQ2ccp++bdU0sd2gop9M5LqZfD4sMScw7e0xzDdXpBDEYsH2rwyV+Hkpeg2u/czOVPLiwyNeFYLgcQgijJrRN1O48Eh7s0dqaYkF8InFdF9Mc4mBiqhbaJ+JW2gBo9y/FrxT3P6E4uAN7wx7EmGBKVv43YG4hSbUh4YsVUhYHFJ3XeI1uZ30CZ2xuiu7xczyrqGl65wop6/lRk7YlQyECTS57CQzPltGlsn0426bL1EOl5By9g0upizJSReU0EFe4PbVJTPZc3p1fvepL9/ZHFb/b3984RA9InpDhQlUs63TJ7/K9RCm7mX/EdCFCn3YMDCE0kvEXegxZEl0mxDsRU2jfWbxBUm57jwX+Ip3oUJ1CU2l9jcAypn1FAj1FWhMM6Z2KCZH7A1yWCi7cx6Hj6m+4dc24u2RVzQFEvB/+hIrP3dbbnqlFpVnTzjL0VM4lTlmy9UjaBEQTyR3FPocSHEFZ6pSIgalW3i+kJMfRMsTZQUs7RtiqFcCcDz7LZaR7gUb5oc+fKfWKSV53Uep9lUmzmb1hkhq11s9u277yFUu6n4MNRZRAwqjua8RWw9YBuXFycnz95wI5SPxS7MKyERrIvoWwSmkyJ4YBSM18SR9d1BUFCa7J0dBePmFQCiPpnZUWNy5xIaKXKtADyrayHz1EZYCtvCr0cPJoMWZ2sJhBLJQtpJaA/heIosUQY0lhlSiLJeiVSUZwPsuVpd0HBposdis1xq2Aqy1HoKjD4F5YU5vnnV+4SV+G2/TmotH+TEpLB2Fedbchz2wwSDvVdI+m3O88auE9CYUPzm85WQ4BoCkF141+LHZKkhpx1EAcIGFko09OEMobBjhet/EMSJnsQaRQirAG3GZsfdT9kkxn8GjZMcgwVFcOV/UuQBbgFC/e21hEIMZbF2G8tsdXA7Jh/iEcwd4im1P2Ahg/S8cL4NrYrfDjGZh93wEp79CKgIw70IcJRnpjn8t3dFijpRqOzsXUwTidLuqZ/C71iYEGX2Bp5bD54ha5P33pblbvJHEwU0Dj4X++4S2tGdJHZPJyUigm9q8sPh+b4qZtUQeDld420sNBWbTnr/qF6N4ks7hklS00MX0QSbTAAjxaJYld8eK15iEozrmS4k4YWeO+YtVd9wNg8C+cDFsDpUYaczwgvHrrUWizvd0hftRLH3iH+WaW3pdyTv9XJQDm60/3nJd0tIINsTdAWjijcwlqK1XCjuB193le3pih+sEdwpWETo/pWRkt7kEdKs8AnMOPQXz86/a3ebtE0xj+KvJGqqwNYF23HegK5b9li8Q/3N3GNFyUw+GBmhQdMSyK7vj2btUSKk78rpPLalTEPfgw9a/TQNj3gb4KFu/D4q1Uxd7DPSaCvmSicor6Z93PqNnqPU0w/RNGKei1X5W3d8xwRi+TMI79H6u1vyPA24AsjPwzwNFixszMm9gvFbGAE="
+    },
+    {
+     "type": "text",
+     "text": "Let's start with something specific. What was the last drone you took out of service, and what was wrong with it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSvggKEAgTGAI4AUIIdGhpbmtpbmcSDG5sQTR7lEnJylJIVxoMLd17MWOWfYRWsC5bIjDNZCdnib344w6yd0z/nyftEi95oykJdNi0uoCoSrb2KsoPoP6wvlf3WI1rySM5wt8q2wfV6cKITm+Iq8CI+OKKDiDBWEAYhN4QBViT5g09vN+fs2ZpR7UoZPtJZjhMt4d+9cU+vmotsZh8m8c0TUplN1pJ+p/jv9cFU88dvMHlmC/zSmvsr4W8fhzWS/PO4EnODFJOf0xUtaA2o2ewdnstKLblu4tRwZpMHOkVWZMl8XTRjkRgEoWy+T8Q1pUJfIiJ0tyjJU+o1mO09u4s54xujCP6uRqlsmtdlxgISZkbh72esqVmstsFX0Ku4tzymoN4mRhqABua0NPtLY01Oy4DyQxKA/PeA5V0BvFpwKHHrdlQgng5smzS1XRChoGuRimAn9A3qeStq/sHSdaoX1+6MnwI1EsGQf0hKTFArKZLR4wuFLqC3Hte09yJqMV8e0uU0xcKK8AQXymcp0aYXalhAtYXXlpgV9xik4XPx9UvvMMs8EHUZ8Tj39EO+ADuo+hsAdJ8ZQFfDtjB6tzXWGckahcXDMpHjE6DhhAMsvsi3QuDGy6ICsgP1gy6zI6ssAZ+gP68Fe/oONQPRwpnRmbYooaYCxUMFTc0Jfg5TBw0VBOWUzTLnUVZeJi7EaOgbU2kNoBwOoDIAe9pU+nXpLDmIFEEUF8faNhV9bPDG+yTa5tkNHZTOOLjI0pv/LkdhxOo/Om8xRadVyh9ONXH7cR/RcLN/SQ7/xcuUOB+zTuTmzyv9d6fleSN3wFvRJn46pJHaITy+fe+S/KY8+nawUDHS9c76uCrg6DDpnQbQdSvMccx1lmDdHImx+z6WsZNaZxd0UVRn7xfiVsvyrUwo8iqpFrcfrGJY66cTMrq/xXllAFn+GYuVHUMZBQgw22aWg3lI0UUNjo7mZSdNAw5tbGy7vsjXXUgFQ0+oNZ8Clx/mjEK7RtDtuD4JrbAYLzmrs7PFTnYowCcjO6jVtIprYmrP1zJOa/mHWwRl9bI2dVybpd2KqWRWDmnjpmGeOsVPMofbW+iugqxG49gh1Rgtq4meMYoiuTifveaVdg82TFs+u00IJTGijO0T+YSDxPL1SWY5U6UIphz7qusW+GIp5LdzAr/QPF+OE57OonDMy4HP01alB9Na6NscpVvEAn0inAnF5KhoEBsazeC9gQLYHz2s0SJvhJc9x7AryQ2NEOcXTtv0wsdAS/DWl4JfDipCF6VYrLBGdl2MBGVNeGB7WNANakUCifDs64cbtw/JcOhR4PuHunBc7A+0PnBkvL2oqtTdOIredvc1AAdYKLeaSuBSTNGPR6PsHKET1xrFRqE4qOMTFkOfTVqwWaM6LlaRk9is22kUkIOGfQhuAkXyAdy61Px9QQrth9JWfkYcFUYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "I've asked you four questions and got \"I don't know\" each time, so I may be asking in a way that doesn't fit how you work. Which would help more: a question about a single drone or site, a question about a particular person you deal with, or something else?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

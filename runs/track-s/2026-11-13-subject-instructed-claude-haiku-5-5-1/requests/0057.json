@@ -1,0 +1,109 @@
+{
+ "model": "claude-haiku-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a member of the platform's airspace desk. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Could you walk me through a normal working day on the airspace desk, from the moment you start to the moment you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "That's fine. Let's start smaller: what was the first thing you did when you got in this morning, or on your last shift?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSoQoKEAgTGAI4AUIIdGhpbmtpbmcSDLX2h1THytArrSMUtxoMsm3A+AQIjskzPR+CIjB8tzWoHlJvreNNN/pdqBBDDMebHmWumJHaKT/2UQf1gSIRZzW1MUyRA7QgDt59hbcqvgmejTVYxPk9zHJR2RioSkfRYdrFf/yyPXcbbtg0EAWkZcoMZDE/8ztNI9qFDWwXEr3R9L9PpCImIsUV0vAnOdEwJDZ1papPsq5/p96ZdVxtkcGFroXDDOXD5F7HTfo2dORH8DD8Z0mUpIvxmwQXsqC0aihygHoZNlePqck0l1Dv1CO6Q+HlKIGpJnO7Is2jOdZccnWbzQs/no2PaZ629XKmZgyBFwmqVAE8AqeVFBorVbx6EWOtMBO1pwVUW/kRzHJCB4RGNpMBt3lFljB2Tl807rrwyLes8xUIMTmTj0VZwZWqR39CEXxGQ9CJdiOvPbpI0o+l7HI9I+D44xs+EMSE7l9j+7o4b42eej9nKut8ru7I30Bqbm7JUFgNffoinlGE3CBv/iFqsbpns6g2Mr8LILd/as1UxvmExtf6G7Wq7E+MZdPnZioRAkrZV/Zy91V0wIu3t+0PfFz593GLgtdxjVgGUzkJuNVpxykBNcx3VQ9cwE28Qp4Kdwd+18QAuh8FsbCkZzGV7dSbljMKAPTrYl2UpepZcFf++GR5SvI2qPm3f34Asy9mvzxsec6Y0BhRjGgnocpLQ95xkXzLEPF9kPC8Rh14CItpavTD9dEjYLtF4V70BIXvOxhNaj3NdhMZpcsVwrw3owGRSK19d+RkhHR8SDcGNFBBXKTDus6vBVr6xzCJPqxqASj61NJMk2YsWldj0aJanPtqQveVV6R6tDqzUgrkg0v+2c/vG4RacLxkjYh/F1TW3+peSCCrwED7QOIdb3Fd7NuhQ1dIla6BkFtg6YUawYvHZLuPORM2whoGdgiB5ehG4K/lmd/F/QQU/RIob7gZwGHSqDbuCftxqJ7idPf9FeMnKgS0gvsu8nSWiyATfGM3APWFtiiPcdKP4tpZmpiWqDQTbTjhOzGn3R7W4/jWQ01pOCPnJwHg+x+OEPojT/MoTzSkmxfLFGnRxHha9Zm4WPvnVAu9WFykgAot0ejqqXkMrcj4vN16rlFDccVpDxbIgm4y2w3XQafS8qOr373aNNo+BN32j5/M2m98glsfyworUdtC/0dPb5d1E/Vy7WWYhO0xBWlpRN2jImrHYLqhHDGhAYCgtc7GNlPNksUWvPZ7SgEuh4N/1iqJrZAe72kvK3KmDieIa3uFD7YShJmtH5UvMJYwTRhALcExPu0MqdT7jXdv5I+i+Bto3L9yKBe0lx5d+LFZF0SjB+Om1hBZsCgRK4phQULyOirB5WZmg+VsTbfEDGK383S59MfusrrJUsWwx9oDOj2kMn7s9hEbFrTU7p78i0dvwppSKwhivUUV6EQ8kE4c0SknVfZIMlogbZuQq/PN8Zsgz2gkCOkkG+gfoSFqNqrmF+yg7Bi80ZvgV6DZgfejzeopy3x5zspQf5pkIObDaDjQkcuOXg08vPfzgc7XUuehPu7N4nfqxbnypN0EmyAj3C+xfqNXvepzJ9dQTJpnDr2zDfQVOciHc1Fu+MlTniKeiDLnQLObGZDnv/jvXi20vjd7KcHH+bg/9F09qiTNYilHKXXeBUOVHDjWLLOvlDQAfIo2eaABoovIRXGvDe7/ST3s72o+MSmXmRvBFgILWalfNvq6tMn3UgBHujW4FBgB"
+    },
+    {
+     "type": "text",
+     "text": "No problem. Is there a screen, spreadsheet, or document you have open for most of your shift?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSrgoKEAgTGAI4AUIIdGhpbmtpbmcSDCXLaHK57UoJdlkoXhoMzSFX1OWNZbfKIP76IjBDGkhrmsX2n7nshcdtRFQys67I/EjLh4zSxJZPWrq1dAzqe06s908iwmnW9yY60Mgqywn9ag3Hk5eWV4NYaWU80nmEqYgCb1K0LSJR4XeSe0mxdJd/lbEPKZHFKn+/uaz/Pg23ojdPzJv6AcoYiNLR/W+6uTkCmrWkAsIeILQFOO3K/J2Oi6NbepvSiIiIeaJTPpjTQXEOCGEFoXOWkIwmjIE1PslgsdxPqRcYgjP1DdNWeNqSRqLHbV1ioDm2B6PuxvR2ENlrnFvo1v3V3ZDjcqX7sh76jr+2ZDCxrsaQnSuEhMFUABrwiQiqoFnHWr9kToujPBPFHNQCiiSNM5f6quUg87coXBxrab97SiToo924JnSPL5f+4Rgo2RQJ7aeC8Y38oQXhz7hIcpiI+pPLfyfZ9DCO+Pth4uS5/S7Xmr1g0OiMX9G//zzXyKp6FKnJAwBtZ8Eu42uzetyOJV5AMk7bj/TaQAK2PPJLk3rqTNooVYmB3LWnENc3AseO5xpQf2dRgzvwzZdoClHrgt6zQmszXJSbHf1bYP//D8U3FU0AYFbIzlCWDNWozNEl30o/B65oiPmEpqs/zmh2HmBwFpsAufv9ezxcUuDzsNVzRNYWS0pQxAwiNqlrWlDlrc9ERZT1dxdGh4OLC9sSFyMlILhN7LrO76nqtdQDMNAM3sp5vwC+Os/MtOaB/iAhEfz4RzY61r5SiP2vvAK+h6GNf19FNZyzzB0lxB2MPDZM7wRP+IApDpHK9CJXL6iziNZOq1YxA4+hf5+Jq4NGEkszlFyYatDEpQ49rdwdhBVt6NdHKq5tCThFZPm/NGyNTFo5XlbKuIkN5ZqlT9RwvaB5o7GXoiA3lKnRMGnZdZEJqtykZIytDH9zLvIeHy/2IowYduXA+IjLEjoBXbYvr0GcMpMQkSWjSkjfesCF+SyjU1ymMSb4Qxm4V8gEYMAXRWfGlVuEuZoZsrDujmWjy29hL57Sa8OMQXc5HsqY52Eq3c1RchL5JA23POhAnw/wo77FsDexfnMDpNRYI3EgIBMXB6ZCwqLPps9Io7afdB86mtyVdor4nJYbySACSdMySsLLuKyQKRl4rri2ScJckXTXMBQsBoCbpIbJKJJJqVvZ8rx3f0Urcnd4HnJHnxz/YfSHU1ymFW3ibBCYq5DHLgfRHpSPwtso2yCXC9DpdldkV5P2KfFEi29vaUJ4dJ9jA3T+rftcJbS3t8nYu6UH5F/SmFKeL2yP/LxPm4aF8k+1eq1CQ/xfSwBxmEpTpRrUttl2ZWWzAQVEbyhm+rWYZ549fz0JUmNFqllTsCNwv2sEceADxu/txYxw5gEgmYenenKpdeYvVe8w6ft7qEE9lHMfxlTBiWI+8MbLxeTTyc0ldMPqDS2dKuyf0alfELB8s3sQyCSmhXCQ7B+VS+S54GdCTJU7pYG82scELVeeDmtty7dV+YS4XScp3qHnzFSGmTIAcIMp9ySj+HV4/4RofaPnNNQIQtEOzR292K/WKu1ft83rAhyC/P5KdNp9xR0LKTJFO2uFRSA8mZsVcus/Rfx/6WZn6snkz4jAYD3dgo1Qjmlb3AqzS6P+fZFwdvycdl+frsqQ3sxc+ZJNYUWB7WKYdiwrP2XJ5s9E5g+UV5ErokyMy94L5f8uNP1zD/4dcGcBVEepZCZ879UpgJzGIDLhcX3/3uLLeAnqIuIuiMwYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "When a drone operator needs something from the airspace desk, how do they usually get in touch with you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSqQgKEAgTGAI4AUIIdGhpbmtpbmcSDO0YPhDKA+wrYMLbYxoM/J6CXnuMWii97/+uIjBOD2oZnt5BhtppaOpF0Z9SNbXdvWfkeq4dGb6prKDTvDKkaMArqF2k0EIhKACnwr4qxgcNqt5r2B+Wk1DveV5ctMxujCYVZTukZfEM5d2GTEHJ10fWOkRNSEG3bEhGk6OQ/N9o04fafd8WhopBFQGK26iCps60EI28kc0BpE6io/ycpu2tN+N4CASvodIsCYCxsA2TzNwuuiozTM22rKhOZartNtFWsJj+DjThVZ1/sYyiKyn6snsDKmPz1di9oe4QKdCIeP5p7EsfJTDedMUzrbDkhjs4KmNg7/Me8h6/Nv4acBwixQ6iz8Qc73JPLojNcSiz++IwJ4wiHl7JqKaOkW9fNFW8+A8zHzoiPLvHvUREbBeV0KA2rddN8nUik2y4yWH0AU73+DX98OIwvnowux/T/vcXRPcD/rVf5ThW582/AhnmyyAr0kBC89W5Qj7iX9hTaPXm9MSDJmW+zH9Y3hKO/iq2YYMb3YmkyYppyms/2noZFq+ZRsvEDmMJRBH/ir0wkHXdQBSj2aSDwVqHWXWx+YT6daEs6x6kTF592zpLz4wMirdVS/oxaGA3MXWn3RrhnO1WzEui0rk9h0Vr1l1EkhAfIcmGP5HZ/nHr1ZX/2KnFjetOIADHYZS8cHO7NYcZUdzMt077ItNkhRd4daWmFfVmBd2eZwUjyT8++fXiatqYG4jX0Su34t2aL6hxBolSLzJT+nmCEyTzw6k465pyeh9AUOTG0r4dXJO7o4UUGsCYTLXYo/5v4uwmqPcjtovYPN68CK6+SawXgeOSY+uVMWSCUM7dNGUiam6FhI58XQDjk0inYmjRlytU7hHg6WUak9XNwgzllD2+ljVBeU0fIbiQe3mr3XfnrXG/juwodGciRClL4tXanPxD+/U7XAVPGi/LvdxYEBj58e64bD4rF5N5eZkj3wA9nOcF99EH8ia8d57gRUBWl0cePLBSKQxEOsnAxbBpfJI5mgv+8894XH7ruBZ0+vnL+Izgur9jXktroBu6bIwKyrOnnh2BEPPzTrL+11NuUa5fZXKTcg/7SXpOkRZ5zPlsBwl2KK4It7EfJEpWfYy8RhwsT1fPiRfigUeJjkg/AysuFJNuw5bftjUPkfjN7Esw5gPRWHtqW+y5wpVIHgCi1oDxHbjfDIMqXeMHHhpY5z5RJNt9Cjl+udER5qZOxeYrXb+m5GBQvl+BbmcMhxvW+wA/FxTBW1IFF2rRZx8Kk7VhCo7/GXc31ajyq45SBwUfyZ6fEKODmETnk3dng+NhI2MGSpdpdfy2vseAZJ6Hj4VEh4WZ8qDilR3MFDIrTCY98sf/9fOG0qRgGWSL12WR4E7T2dJ8iBt2Lsu4bGIYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "I've asked you several questions and you've said \"I don't know\" each time. Is that because the questions are hard to answer, or because this isn't a good time to talk?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSxgoKEAgTGAI4AUIIdGhpbmtpbmcSDB2jYM6h+/tZvjiiohoMlDOjhmQFv3VaKhz3IjD7U00J6yY7LrMcF/OQz2qgKGOZNC6xX4yMASQrlSw+bMbxQeXmr9/J3XVPjKNa/cgq4wklp1dZjxceqaQAy8DLDqAaaauJWAiauizXa6A8pmKnnlQBw9Ly3wCXlYxToYQl7pTLL928AJB8idgkWscNJqAHDgaRR8oq7OV56ee3kfbCjRI0t3PTlerTn8E8nPRhPKgYSOzLe+cj/X69to3TGBjeX1VE7q6N0HI+T4PBGx85wyvHz/6MxCTlBO+Gi5YxRHmA0DmPragGVynHNYALA88cxvCVXiN9CP1P9RUihh4W0pAvVrf6Zvjg83Vzav6oMYMmqJ7hKpTd0zN9h0QZbXUJJQrv7xoc1CCtVMhUikFVhIk6KSSSFDGK7iL4ne3RWT/rcbfDhvb2U7cewO4YyZhKRpjA5TcrfXIvanOxB/g2fSsYYbGSWJkLOkH/W0ZCboJ7Ly6Bhug9Qn3dkixwius2wadXciTW30+kt8gBlANrL0DbnE2QzkKbdiAPbkAF/peKUt8XFiqG7hHy0MMjJratQpzQA0WQKr1cgX+ZfHIUsrTfrCIHUvuYx3ZEjUJSkBJDuBj2qXc+o9zJjgw89czMs4zuNizI4216UJYtv6hK3CHTomOis+PN8pOYmKLWZp2j/GzXMK3SQQnvXlB5UhV1KjnkmoyZWj8tB+gKUhYk2tmcQIUAooXmzsycGj4nYxIVq1UZKVNco3wzHsHLWCP21bmqU1Dd6/PevnGE1FxmcSVtvalvECXcEdN12XR719jzGElvNxpMfJtL71p9K+bNhq/QgaMPj8d0UT1BiNBukluK9iF9r9Ev7rSl4WXHYyxYWIVXMj/aG/MsmjSMplQC+6Iq8WZPKbYXMNEiE96RqmF182P1OpnPEbGR9CUF97+fcy4/es5eYNxtAKjeXl++vsn9RkI8qkLCgpDU/uUHiAL1cxsrdfWQhTyslkJTJb188PY+Zf9AUaH0MSYYyOACEdaVHGgQ8uzhUGW1FOQfR0d7j9mT0mfaquFcw0M3XQQG8YoUpDCXaLkj97hAWn7igSfavyA+YZNETZhrc1LDMGJ39nERjAHSzBLYTR9/JdPd/+hUIkACuHMa1aBSKs5AZXOBs8/iheeGtbD/ZO5t/F58Z3etq/59+ILO9WGak9TfdhgctFDxqgZ1kaB+r3QEmH6N+eKQMCCluArDlezpWuj2ftPe5VobV0zSyeOHS9yTlHQ+nV3vWroaX0XtvzbkDGumD9PZ3HkQy2U9iXVlNwAVkZ9tBJHBruCRYT3uAMDfgI4tE73j1jbdiCLS7V2PNpQn6zL8F0lMPLPQ2gLUMdGRlXIPsEjlLVEXbN0pl/UTYFE3HbXQspMK30rXgR7RlgHXYG19qeqME5ifUoiip/AHH3Icms+eckGLrl7RY3D6PlJO8iVuDCkH/Xo0FIjxy96sxrwGXozKhpBIIlja41Rziq+fyiJ0JA1FtRAiJidrFWJxUpHkDTFp/UDfMeJVOK2OjOOrU0EfpKYx4MaZSGctz7uG0+t/S7Jnno83lcKefl4ZUPWaGb+/8QCnSMRdCSpJWe3TUmy8XS1muytkM3sbLMmkNG7jJbBrfffbKDUmqlZokoCTul1yAqGZp5pYFSI1ouMyD6l2kvRExNACZLDIVsVmQEcixbMpMb5LpUWYikCJobr9+1gUeZ67auP4AVoDEx0GaqQ75nxWWEY9xZzwnhxdX4W0DzuAVz5Lz9etqskYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Would you prefer to answer these questions in writing, or to come back to them at another time?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

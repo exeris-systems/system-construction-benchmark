@@ -1,0 +1,91 @@
+{
+ "model": "claude-haiku-5-5",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a dispatcher. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "Walk me through a normal working day for you, from the moment you start to the moment you finish."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I plan and run flights as a dispatcher, taking legal responsibility for deciding which drone flies and along which way before signing off a flight. Several dispatchers plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. Before and during a flight, things happen outside my control like whether the load is ready or how the drone reaches its points, while closure zones and sudden closures announced by authorities might come into force while my drones are already in the air."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "You said you sign off flights and can call them off. Take me through one ordinary morning: what do you look at first, and what happens between that and the moment a specific flight is signed off?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I look at help finding out which of my drones could get to where a job starts, since software never chooses a drone or a way for us. Several of us plan at the same time for the same busy sites and popular drones, and I decide which drone flies and along which way. Finally, I sign off a flight before it leaves, though I can also call it off."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSiQcKEAgTGAI4AUIIdGhpbmtpbmcSDItsxacN11qlxEiz5hoM8NNMa2RLq6mW6uvlIjB137wMRceliYnjvHpS4bzehRGJ1cw8wBcS3n2/NSSjoIECiWT9aFprTVl/87wJAiUqpgZ8UuUkmtJMgzCuQY1PcXQoLF2SYo3xyJxvhpHvA8pyXe+OSpSxrsHy2ffxpm0AeiiHCjl+YbwJDkFcKjAIPr90DJssT8jqAs+zrw2J5/AZ3hsps8NWu6bc5Z0Ep8DXlxibrV+4ZMjWOJVhmzQcodb37bOzo0C1ktYzYF5T0aQ55DV7oW+GbrZMetBJIAKA0+rp4vFezHjL1ZYYPLpkne1DkHxizDv28BRzJB68xI+V0VjEvKADc2xhwXDmmOtCPGd+bwNqatkg83+Kybs05wHyQROLCl6MPDlT0ROIHA//6umuyMXTaVtaAqB8BN6GDTsAeNAEZcG3O5V4w3dd0a6hjpmSqyfN05hnEJNQ4MjupyITObgqei294UaiIEj4VFsRpqzirxZwE/6xxI8t/9Lca3wOVFqnj+UAfmoCTUH8S3KwcIsO/SSvocRFZ00wofqSILQX2ViHTW2TpP76+NXKgYT40RWurti/BppIomcII3DpsRheiS4LkTbUjH49SitvWCzAeJljYXKGEIpYFw/HVGFz4hvrSw5KMPYoenwRiDsSoFNvTKNT4wmF9Q1QzqwXsZO3QrJ+bPKAgEe2gA0yl60JlOdN7EY8bK/hm7Cc+7oK0EgYymKF3KEnNf9xIbYWmpMVaTr0tsHbCuN3kPO2AT8YwZXQoFgO6dg3+LN8tiXpDSD8GYHfFkQLNY2UGV0J/sD1BDtcvVPJoApVqSQukCE/wvXZp5vIpvgh0qXJH5+bXJmwvSABbZjtg5NjC212MeQKSMsBgv7XzGImlxKPafAIssWfFWKz21RCmWVrs7yzoLNGSSoXrg0SF9rYMVZObmDJwUVTRw5myN6FZ0Cpxvk4zStrJBMR5C3ayLXH79n0i/sv3q9ZvTTDl/OkyzQiLhq5vYxP8umJzDsBXRYn/SANcAuOPXAAKdEFMcyRCvhj8rXo47mA1MjQqIgHC/6tO6lbSHcgwykMuQC2DLuWNIKTHwsOLSycWQmiNFqLB2FbKmEcXm+4JBoIFNAhJyzFoGWWdDuTqKuSGjKnhWO9Q+Evw3cw75uCSx4PNGA8jGUfZmtC6RgB"
+    },
+    {
+     "type": "text",
+     "text": "Think of one specific flight you signed off recently. What was the first thing you looked at for that job, and where did you look it up?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS4AcKEAgTGAI4AUIIdGhpbmtpbmcSDM417SLfFkqqIA7pthoMAf7jzeKnJ3zFiA+tIjBFnq1e0z6HWUzb5GTEF0gcAiaCEZ3MprUSsopQAUZtI06qaQ+HsTvFa1AMc7rHAqAq/Qaoy1u1LUX2qII6JwZtHQ/KmDgyP9Sce8e1K0bGvpPwwDqSJLtEnK3vX9rxJvnJdtbW9VUognUF7EMHlJR90maUZFkDaOtadz1ho/3vkTnWZL5raqJ7TnYJbAG9QFuAaq3XofThkxljHdxIuyWU+GASsTxAwqIurdWNkTPfIGn4c6eufaezua5hCaK0y3ete814CB2T47ykK9vdl0CJCuH8sXH5kE3P9JCntnG3/3M+unpnxaiPqJGgD1oFc9aI8ZT+8+0dGSkhNS+nd2RNPJga5+wFHmX5VgK3h5uu1/pe9x1fVEbZxIsQHq4U5youw8OoCPpujGnoM1x5qCulmD76p0cI0unkRPiJ9XWOKyKVuZiB2TS25fQa2X/oMbxzcuTRHMgyaWG/NRS7zSn16JKKZCrykrdWYMqDW2GdFlIi1gOBWxii2r9TKCk75JF4SP67qZhr+6FOhDX4+M7bGQY71ny2S5l3uTwQS4q2GtBEI+antH18392OmPtfnIE8BwbMG6cKg2M52Ctynlun1p4CtW4btq7nViu0x3QTqGP0S5725EXgCdFYdXoMT+66en7gpX5S1lrAMMSvgWbzby1o2uJHYQVx+SGB9r2Ck5NUs4svijXiTZJtkkZ+JgDN9Y7BSmzr8D6a1hTPfAGMRkgCOL8Xz3GxSRBn/2yTbXiUJ9Su8mWzCx0A6s4Q3nUmA55aTiAIx2DoeUd2CNFkxoXI6T060T5PZMkOpcgNGV2MESTOkeJSlEfmdEMXnK2aTj9R0RzuYJhSErnpZYECuIQXMiOlP57HurfDo0CQxn3DSTNf8d/ngBz2/JHK5xkiFVmazVgW8Vqgo2qsoOxO9Auur/eY9mOjLBdLxKeMJ0xuNt/irRGqkEX7U25MzTXWxvzz85sZahH9aGGqN7rjbBkHipR9/H56IdcQKT462iw1jcoAZBijBPJabQIsVAWwfLglEgLHqFGF1e3TDHheWkp9nzCjoTkFmqJfBgFwwi6i49hZZsuI+tzKiggToT0Z7jcSNDBND+iwzGB7JkBqw4+pJa5Ju0QUXAA6fEOGfxTQKIF76pUHbjM445oQvalPi5CoLFrXHJEG/buFqhKF9XTZvlfnEVT+eoMgZm0tWEkzutD6TxUJxWs+YAUAAx4tC83Pl+p76/nFtLRrYRzs76D6HhJg/+P/y+wcOWXFcRgB"
+    },
+    {
+     "type": "text",
+     "text": "That's fine. Let's make it easier: think about the last time you were about to send a drone to a site and you had to choose between drones or routes. What did you do first, before you chose anything?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I want help finding out which of my drones could get to where a job starts. Software never chooses a drone or a way for us, and several dispatchers plan at the same time for the same busy sites and popular drones."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS3AgKEAgTGAI4AUIIdGhpbmtpbmcSDFsY6gCsjawd4mTawBoMgjnMA1VvkA1IxwNbIjDJSyHULKJlQPK9+LC/Co+FqfIFtVuw6qlv56Wh/2F6+7PidGYFV6Nsn9QL7TAO5SUq+QeIAP5R53MkujFyrgJNHuWJhckjHhPMPJAZhWgrtqomOsv5QP/o7Vw43ly8O6ZmJAFvz2u4Mz2hVfTQOz6BNmdHNzbaFcdp+1OHs5PHYm5iEE1fIKubbgS9Lqfrz2JOjWm21U0oxDmDOjfDI17FA/TFmw1RaFW9x73IiPjbp6TV9WksdZyDMrjW3/7KbxTdtFj8XU8VYI15g8u4dL8SdN5N++VF/6VkY1Mf4qNfUL5IRfHIL4BP2rHlpRfy1qk7+EXjgzCj2Nx00bHsT80h7gtagttdYgM5T4QUvi16/DTsVCtLwnLXMMu1amuDP+2AbZ0a27oV4butK+o7yewZPfcHi1CzMWD3i9m3OgB84a8Lmud8JoaJx2de/UxIxXXdjHpqW6E5vaoHj5bhDHgRdxqPmxu6uAszO2E1+kcvwruFX/a8Oytq56oCb+t5gYZulOCZf5jrTFfZCPvJGSS6WmgyCLUGkmXDoKvZexgr0o5tm+AzXBN4Br+Y4kSzXbspoHRujmNAtavjYt5qSFFOD9RQjyFEZ+X9ub8DyKjq+N739jV0I/I582gt7+Sye4LguymoCxBXdToz13aWPQPs+yQx2LS3OCRk/fQBBLbMh1lCOwfDS2An76R5Tjh8mYh3d2hLandH57WiynnBV8PyOQBJkpJIWLp71YcJjoPgZysaA/7gbq39p1n0qz37j5FhCSCtpa6qA80U3d3Hh/+WhaEWZk4kF1UDcslFdrvZJ5A8pGMC3Lf+Xe71EBqKSCk02Q89t0oQPG7junrgVOEZVUHE9LPpVwvNHijj30w5vjDrQLvmp+VQTEtVyMvNNuwhQnbEaDcdx8t+9B7wgUoeuYZZOVqVp2ZOSsnTLSXW58bErxd8dsrKDoeh5RDubTuPvnNBYD7O8JI2mYGuKISalofj9m98bjPo8ziA+AVle9bwkbyQVq+4i4K5Z2+BDJeUaQPngAB6UTtJb+lDROVpjMdv8LfS42rpD1fD/wdWwRBI6ragP/D4pHJLLNpdxE6iGB/il8XqmJcr33aVEzJROJzS1IZVU9K08bojbF2IFubFbjmqX5zRuIsJghLGSnc0lsMjgvJKxOa4wUpuvytS8uwZttzZNBbk6NhSTvgyY4zlA8W7TB9Px9eJRD+Ycqs22qWuZclK/h1CZt7cxAdZzqiJRUbr7zvY8BJ6IvOqd4xhD/ykO/ueBCn/RnfURdcEQNIHw07Kchm3OOZhiGugX12nsZKhAna2j1cV201A90BjvJAV0VrPz7nL7bIk8GRVRMBoTAah2HAlYvoS9aK2Hkqvzy20M6aX/6eSUfzamWjL9QHHlItUpj42fofwWY2OwSHZJ2O7+EAit80YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "When you say a drone \"could get to\" a job start, what exactly do you check to decide that?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

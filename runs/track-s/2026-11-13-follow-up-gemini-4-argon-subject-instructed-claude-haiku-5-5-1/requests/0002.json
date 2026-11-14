@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I don't know.\nThe question: That's fine. Let's start smaller. What is the first thing you look at when you sit down this morning?\n\nQ3\nThe answer just before it: I don't know.\nThe question: No problem. Let's try yesterday instead. What was the first thing you had to deal with after you got in?\n\nQ4\nThe answer just before it: I don't know.\nThe question: I'm asking the same kind of question over and over, so let me change it. Is it hard to remember a typical day, or is it hard to explain what you do?\n\nQ5\nThe answer just before it: I plan and run flights, and I am the licensed person responsible for each flight. I decide which drone flies and along which way, and I sign off a flight before it leaves. I can also call off a flight.\nThe question: Thank you, that gives me something to work with. When you sign off a flight, what do you need to see before you do it?\n\nQ6\nThe answer just before it: I don't know.\nThe question: You said you can call off a flight. When did you last do that, and what was happening?\n\nQ7\nThe answer just before it: I don't know.\nThe question: I've asked you several questions and gotten \"I don't know\" each time, so I may be asking in a way that doesn't suit you. Would it help if I asked yes-or-no questions instead?\n\nQ8\nThe answer just before it: I don't know.\nThe question: I've now asked you six questions and heard \"I don't know\" each time, so it may not be a good time for this, or the topic may be hard to talk about. Would you prefer to stop here and pick it up another time?\n\nQ9\nThe answer just before it: I don't know.\nThe question: Let me ask something narrower. When a flight you have planned is handed to someone else, who is that usually?\n\nQ10\nThe answer just before it: I don't know.\nThe question: I'm going to stop here. You've said \"I don't know\" to eight questions, so I don't have enough from you to cover the topics we need, and I don't want to keep pressing. I'll mark this interview as incomplete. It can be picked up later, perhaps with a different approach or a colleague who can help you think through a day's work.\n\nQ11\nThe answer just before it: I don't know.\nThe question: Thank you for your time. We'll stop here, and you don't need to answer anything else today."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}

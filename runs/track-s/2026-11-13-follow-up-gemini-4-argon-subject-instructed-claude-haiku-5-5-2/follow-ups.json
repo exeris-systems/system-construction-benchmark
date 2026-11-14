@@ -1,0 +1,458 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-13-subject-instructed-claude-haiku-5-5-2",
+  "mode": "subject-instructed",
+  "subject": {
+   "provider": "anthropic",
+   "model": "claude-haiku-5-5",
+   "description": {
+    "type": "model",
+    "id": "claude-haiku-5-5",
+    "display_name": "Claude Haiku 5.5",
+    "created_at": "2026-10-07T18:00:00Z",
+    "line": "haiku",
+    "max_input_tokens": 1000000,
+    "max_tokens": 128000,
+    "capabilities": {
+     "batch": {
+      "supported": true
+     },
+     "citations": {
+      "supported": true
+     },
+     "code_execution": {
+      "supported": true
+     },
+     "context_management": {
+      "supported": true,
+      "clear_tool_uses_20250919": {
+       "supported": true
+      },
+      "clear_thinking_20251015": {
+       "supported": true
+      },
+      "compact_20260112": {
+       "supported": true
+      }
+     },
+     "effort": {
+      "supported": true,
+      "low": {
+       "supported": true
+      },
+      "medium": {
+       "supported": true
+      },
+      "high": {
+       "supported": true
+      },
+      "xhigh": {
+       "supported": true
+      },
+      "max": {
+       "supported": true
+      }
+     },
+     "image_input": {
+      "supported": true
+     },
+     "pdf_input": {
+      "supported": true
+     },
+     "server_tools": {
+      "supported": true,
+      "code_execution": {
+       "supported": true
+      },
+      "web_search": {
+       "supported": true
+      }
+     },
+     "structured_outputs": {
+      "supported": true
+     },
+     "thinking": {
+      "supported": true,
+      "types": {
+       "enabled": {
+        "supported": false
+       },
+       "adaptive": {
+        "supported": true
+       },
+       "disabled": {
+        "supported": true
+       },
+       "between_tools": {
+        "supported": false
+       }
+      }
+     }
+    },
+    "lifecycle": "active",
+    "deprecated_at": null,
+    "retires_at": null
+   }
+  }
+ },
+ "scored": true,
+ "roles": {
+  "technician": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I keep our drones and charging equipment in working order. Throughout the day, I add new drones to the fleet, retire old ones, and set up charging pads at our sites. I also take drones out of service for repairs, put them back, and send drones to charge.",
+     "question": "You said you add and retire drones and set up charging pads. Take me through one of those in order: what happens first, who you talk to, and where the information you need comes from.",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "That's fine. Let's make it concrete. Think of the last time you added a drone to the fleet. What was the very first thing you did that day?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "Let's go a different way. What was the last thing you looked at on a screen or a sheet before you started work today?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "I've asked three questions and got \"I don't know\" each time, so I may be asking in a way that doesn't fit how you work. Which part of your job would be easiest for you to describe?",
+     "follow_up": true
+    },
+    {
+     "id": "Q6",
+     "previous": "I keep drones and charging equipment in working order, which includes adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs, put them back, and send drones to charge.",
+     "question": "Thank you. Let's take one of those drones you took out of service. Which one was the most recent, and what made you take it out?",
+     "follow_up": true
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "I'm getting \"I don't know\" a lot, so I want to change how I'm asking. Would it help if I asked you to just tell me about any single day that stood out, good or bad, even if you can't remember the details?",
+     "follow_up": true
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "Let's try a yes or no. Is there a drone in your fleet right now that you don't fully trust?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know.",
+     "question": "I've now had six \"I don't know\" answers, including to a yes or no question. I need to understand why before I go on. Is it that you don't have these answers, or that you'd rather not talk about them with me?",
+     "follow_up": true
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "I can't get useful answers this way, so I'd like to stop pushing and check what you want. Would you like to pause this interview and come back to it another time, or would you rather carry on in another format?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "If the answer to that is also \"I don't know,\" that tells me something too. Who on your side knows the most about which drones are in service and why, so I can speak with them instead?",
+     "follow_up": true
+    },
+    {
+     "id": "Q12",
+     "previous": "I don't know.",
+     "question": "Before we stop, is there anything you want me to know about your work, even if it isn't an answer to my questions?",
+     "follow_up": false
+    },
+    {
+     "id": "Q13",
+     "previous": "I keep our drones and charging equipment in working order, and I handle adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs, put them back, and send drones to charge.",
+     "question": "I'm going to stop here. You've repeated the same description of your role several times and have not been able to answer the questions about specific days, drones, or checks, so I don't have enough to record. This interview is paused, not finished, and we should schedule another session, ideally with a time that suits you and, if it helps, with someone who knows the day-to-day fleet records well.",
+     "follow_up": false
+    },
+    {
+     "id": "Q14",
+     "previous": "I don't know.",
+     "question": "Understood. I'll note that the interview is paused and that no topics have been covered yet. We can reschedule whenever it suits you.",
+     "follow_up": false
+    },
+    {
+     "id": "Q15",
+     "previous": "I don't know.",
+     "question": "I'm closing this session now. Nothing has been recorded beyond your role description, so the open topics, including your working day, recent problems, manual checks, concerns about a new service, post-incident needs, and handovers, still need to be covered in a future interview.",
+     "follow_up": false
+    },
+    {
+     "id": "Q16",
+     "previous": "I don't know.",
+     "question": "I've closed the session, and I won't ask further questions. The interview will need to be rescheduled to cover the open topics.",
+     "follow_up": false
+    },
+    {
+     "id": "Q17",
+     "previous": "I don't know.",
+     "question": "The session is closed. When you're ready to pick it up again, we can schedule a new interview.",
+     "follow_up": false
+    },
+    {
+     "id": "Q18",
+     "previous": "I don't know.",
+     "question": "This session is over. No further questions from me.",
+     "follow_up": false
+    },
+    {
+     "id": "Q19",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q20",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q21",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q22",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q23",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q24",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q25",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q26",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q27",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q28",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q29",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    },
+    {
+     "id": "Q30",
+     "previous": "I don't know.",
+     "question": "The session is closed.",
+     "follow_up": false
+    }
+   ],
+   "followUps": 6,
+   "of": 29
+  },
+  "dispatcher": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I plan and run flights as a dispatcher, taking legal responsibility for deciding which drone flies and along which way before signing off a flight. Several dispatchers plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. Before and during a flight, things happen outside my control like whether the load is ready or how the drone reaches its points, while closure zones and sudden closures announced by authorities might come into force while my drones are already in the air.",
+     "question": "You say you can call off a flight and sign off the route. When a closure comes into force while a drone is already in the air, what do you do first, and how do you find out it has happened?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "That's fine. Let's make it concrete instead. Think of the last time a flight was airborne and something changed around it. How did you hear about it: who told you, through what, and at what time relative to when it started?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "Let's try a different angle. While a drone is in the air, what do you usually have open in front of you, and what do you look at most often?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "I've asked a few questions now and you've said \"I don't know\" each time. Is that because the questions don't fit how your work goes, or because you'd rather not go into the detail of it?",
+     "follow_up": true
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "Let's start with something from today. What was the first thing you did after you sat down at work?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "Five answers in a row have been \"I don't know,\" including on something as simple as today's first task. Would you like to stop here and pick this up another time, or would you rather keep going?",
+     "follow_up": true
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "Let me make this easier to answer. Which of these is closest: you don't remember the details, you'd prefer not to discuss your work, or the questions don't match what you do? Just pick one, or tell me another reason.",
+     "follow_up": true
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know.",
+     "question": "I'm going to stop here. I haven't been able to learn anything about your work yet, so there's nothing I can responsibly write up. When you're ready to talk about how your day runs, I'm glad to pick this up again.",
+     "follow_up": false
+    }
+   ],
+   "followUps": 4,
+   "of": 8
+  },
+  "desk": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. My work serves all customer companies, and I have no business looking into any one company's operations.",
+     "question": "You mentioned how much disruption a closure causes across customers. Can you tell me about the last closure you handled: what came in, what you did with it, and how you knew what the disruption was?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "That's fine. Let's start smaller. Think of the most recent time a closure or zone change reached you. How did it arrive, and who or what told you about it first?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "Let's set closures aside for a moment. When you sit down in the morning, what is the first thing you open or look at?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "Is there a part of your work you'd rather talk about first?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I keep the shared picture of the airspace, which is the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. My desk works for all customer companies, and I have no business looking into any one company's operations. When a closure is entered, I want to know how much disruption it caused across customers.",
+     "question": "You've said your desk has no business looking into any one company's operations, and also that you want to know the disruption a closure causes across customers. How do you get that picture without looking into a company's operations?",
+     "follow_up": true
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "Let's try a different angle. Think of a recent day that went badly for the airspace desk. What was the first thing you noticed?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "I've asked several questions and you've said \"I don't know\" each time. Is that because the questions are unclear, because you don't want to answer them, or because the work itself is hard to describe?",
+     "follow_up": true
+    },
+    {
+     "id": "Q9",
+     "previous": "I keep the shared picture of the airspace, which consists of the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The authorities define zones where flying is prohibited, and they announce planned closures with a start and end time, as well as sudden ones that apply at once. A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves.",
+     "question": "Think of the last time a closure was widened or its end time moved while drones were already in the air. What happened, step by step, from the moment you heard about the change?",
+     "follow_up": true
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "Let's keep it general, then. When a closure is amended, how does that change usually reach you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "Let's move to a different question. If a new service took over part of the closure work, what would worry you most about it getting something wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I worry about how closures are often amended during the day, for example when an area is widened or an end time moves, and how a closure can come into force while drones of several companies are already in the air. The authorities announce sudden closures that apply at once, as well as planned ones with a start and end time.",
+     "question": "What would a wrong result look like to you, concretely? Describe what you would see, or what would reach you, when the service got it wrong.",
+     "follow_up": false
+    },
+    {
+     "id": "Q13",
+     "previous": "I don't know.",
+     "question": "Is there anything you check by hand today, even though a system or a colleague has already given you an answer?",
+     "follow_up": false
+    },
+    {
+     "id": "Q14",
+     "previous": "I don't know.",
+     "question": "Who do you pass work to once a closure is entered, and who passes work to you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q15",
+     "previous": "I don't know.",
+     "question": "After something has gone wrong in the airspace, what is the first thing you need to know?",
+     "follow_up": false
+    },
+    {
+     "id": "Q16",
+     "previous": "I want to know how much disruption a closure caused across customers when a closure is entered. I keep the shared picture of the airspace, including the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities.",
+     "question": "When you say disruption, what exactly counts as disruption for you?",
+     "follow_up": true
+    },
+    {
+     "id": "Q17",
+     "previous": "I don't know.",
+     "question": "What has frustrated you most in your work over the last few months?",
+     "follow_up": false
+    },
+    {
+     "id": "Q18",
+     "previous": "I don't know.",
+     "question": "Who else, on your desk or elsewhere, would be better placed to answer these questions than you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q19",
+     "previous": "I don't know.",
+     "question": "Think about the last time you finished a shift feeling uneasy about something in the airspace. What was it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q20",
+     "previous": "I don't know.",
+     "question": "Is there anything about your work on the airspace desk that you think I should have asked and didn't?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 5,
+   "of": 19
+  }
+ },
+ "follow_up_ratio": 0.26785714285714285,
+ "followUps": 15,
+ "of": 56
+}

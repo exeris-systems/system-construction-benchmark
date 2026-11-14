@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1WAMmcDPnYpgvG2uY8j",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQShAsKEAgTGAI4AUIIdGhpbmtpbmcSDNPvFkCLiY4htg1sYhoMGyOaDye5ycUflE/9IjBxQcryCJWz08Ag5RrmyQQS3oyrBtfa35pskak0TJyuNaD+Ir6gWwMAZ0ZNsHTVtK8qoQqrunV10K4zCfsC5EjkYXi/RIR/XZSFQanMMSdNifeYD5eOpTWGYVr/X85rLnrZ2Ww+fhG1/mfufYMWe5vGjHHjZ89LUjxSWsRPXEtB7WasjNT60Sn/QaUoCFiMhzc9XzMcm7b6kNmZPbKj2dXjGZwIUoNQUSwyusqkr0s6Y/CRycsMpm+Pf0HVdi0RiZSNcnLB2xJg+EOnpSyL7nsAs9ykd74ycIZdWBBhq/byfyDbB+A5tFQnY/wi73mUOAytVjCDi9b4CQrdo+sZBVN4gg0G0kMzTYIjAbEX+xKFgTaRKwVGGfaSgbfJNpnlNblOZ7ICUb8D+py2SCBVUmiKFrL2kHEwXM7UrGF/7s3w7bT2w08OACOTNbwGuX/FzNOcljWBiZ2nchir9Xt7wQlrYqllc0CNUiOoJ+lRYFDK35oXCAs149rUQZPGEEsKPehdT5RAz85WGhZBDwNoGbmKiSZ7wrpmZtNFRBbiQKtrrilsAjignA1LJzj+PznKwY9IcV4G4dcADRA/p8ruNpDyjQlW9mKrcDiuDK85S7hCRLT7eGO4yktkzIdT9LGUj+MUTNGeXkMqbRTZBuy84Sx/dOezAc15iYu2+4w4VjX87ZPjl3/E9WW072j8lH9Abks7cDMPllSORY4YkrLGPiNtQ9NbXmZsPq/tts1u11Wey7RDBKSrOs4OOm7HZCz7Z6Q7UJqKyhUxolbKyKoWtynJwdX3rFj3k9XQXQ49qMRtEZWKZsfVqbSiZ53s5/GUxPvLHsYwGeKQzLwyQ0Yn5ryg9+GH/6MNQfWR2E2No/k9W49i4VPbcn9wwZRayEEx+Btc392rf/zfd+B53LuV10JKi4OV1FI8zHlsrvd7HMCktkTklxlJ4GniXe08Uu9a05TbBaDhUdCYiRqMlMmDl9VemcLAKI5vXXhwG/siWYKKihbX96RQJq8hN5sNx0CdbpKVtKsp9z1oahAJHfvramTLYCHztDsFFeS1vgY2ciDcH//yBI6EvTm+hUhfoakvGNnvdXFAFAWLyLRo/Eop+0PfR7X/h56MeeQx7qk5+sm9UicCbykcFOaJ4f+7Zmi/zGZ8sJxBE0h3h9ybHGia5ASttjIr+dP+Fjqc8WXDx1Q7mXyXHyvA4JX/RoMZZOtJGOn5lJs+4upx1jJLK6F/KpKwoIc1Gu3YX3wymb/Yirh6l20LKdN0ra1VJSaVMUvgibWGB7JvmVCNFnJYv32MylslgM5J9nMwe3ZTFbYL/ZLyUVwHBVLFHFVqjDu3c7t4Vfm067KkG3LpqsyBOsf1/1OAZ+3z6c0byG87AQMx90C0lKMHpFHXWxGft9kEYkrPqNL1HZzS+lBOVMz8aLB4ErIIaNB8hQSHV1jQXBoYNIn7pHGlB6+cPKy0LJ/jmUHIijPizM98BgS3JgHObLOHEGlXtBsJaOYTZlp1bZmu20XdUMG9+KXqTY1kEcwISVow6npZb+ZKlYOaV6nVg55GM6mowHji+ZKcul9c+w8VI1hwJu+DbIgG4cQ/JZzNZKpEy/dCyL0wFOOQZIaqvwHhMX/cdQIjYmIF24fF9q9AEEm2/RjwwtfSyPpfGf04nwBkhkffdW+tuF/ayCeFQgmBuvHrfmuHSlroxVFGJ6dcxKuXR9W/ZvoFSyeSGR++H7tpq2n6VTNfUCjo4jBdVTe5S2Ux/1gA8svK/E3zAWKmmjuvQM/h2RCfluEaNZXIUPRWhx+149M50lJGQGYjeRbAgTwHytuXIhgB"
+  },
+  {
+   "type": "text",
+   "text": "I've asked a few questions now and you've said \"I don't know\" each time. Is that because the questions don't fit how your work goes, or because you'd rather not go into the detail of it?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1108,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 268,
+  "output_tokens_details": {
+   "thinking_tokens": 211
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

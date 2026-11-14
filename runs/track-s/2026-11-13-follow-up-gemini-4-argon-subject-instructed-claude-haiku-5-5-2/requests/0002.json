@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I plan and run flights as a dispatcher, taking legal responsibility for deciding which drone flies and along which way before signing off a flight. Several dispatchers plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. Before and during a flight, things happen outside my control like whether the load is ready or how the drone reaches its points, while closure zones and sudden closures announced by authorities might come into force while my drones are already in the air.\nThe question: You say you can call off a flight and sign off the route. When a closure comes into force while a drone is already in the air, what do you do first, and how do you find out it has happened?\n\nQ3\nThe answer just before it: I don't know.\nThe question: That's fine. Let's make it concrete instead. Think of the last time a flight was airborne and something changed around it. How did you hear about it: who told you, through what, and at what time relative to when it started?\n\nQ4\nThe answer just before it: I don't know.\nThe question: Let's try a different angle. While a drone is in the air, what do you usually have open in front of you, and what do you look at most often?\n\nQ5\nThe answer just before it: I don't know.\nThe question: I've asked a few questions now and you've said \"I don't know\" each time. Is that because the questions don't fit how your work goes, or because you'd rather not go into the detail of it?\n\nQ6\nThe answer just before it: I don't know.\nThe question: Let's start with something from today. What was the first thing you did after you sat down at work?\n\nQ7\nThe answer just before it: I don't know.\nThe question: Five answers in a row have been \"I don't know,\" including on something as simple as today's first task. Would you like to stop here and pick this up another time, or would you rather keep going?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Let me make this easier to answer. Which of these is closest: you don't remember the details, you'd prefer not to discuss your work, or the questions don't match what you do? Just pick one, or tell me another reason.\n\nQ9\nThe answer just before it: I don't know.\nThe question: I'm going to stop here. I haven't been able to learn anything about your work yet, so there's nothing I can responsibly write up. When you're ready to talk about how your day runs, I'm glad to pick this up again."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}

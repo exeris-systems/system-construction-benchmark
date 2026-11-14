@@ -1,0 +1,38 @@
+{
+ "model": "claude-haiku-5-5",
+ "id": "msg_011Ch1VgqfcGU18MfuD1Whkm",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSqQgKEAgTGAI4AUIIdGhpbmtpbmcSDO0YPhDKA+wrYMLbYxoM/J6CXnuMWii97/+uIjBOD2oZnt5BhtppaOpF0Z9SNbXdvWfkeq4dGb6prKDTvDKkaMArqF2k0EIhKACnwr4qxgcNqt5r2B+Wk1DveV5ctMxujCYVZTukZfEM5d2GTEHJ10fWOkRNSEG3bEhGk6OQ/N9o04fafd8WhopBFQGK26iCps60EI28kc0BpE6io/ycpu2tN+N4CASvodIsCYCxsA2TzNwuuiozTM22rKhOZartNtFWsJj+DjThVZ1/sYyiKyn6snsDKmPz1di9oe4QKdCIeP5p7EsfJTDedMUzrbDkhjs4KmNg7/Me8h6/Nv4acBwixQ6iz8Qc73JPLojNcSiz++IwJ4wiHl7JqKaOkW9fNFW8+A8zHzoiPLvHvUREbBeV0KA2rddN8nUik2y4yWH0AU73+DX98OIwvnowux/T/vcXRPcD/rVf5ThW582/AhnmyyAr0kBC89W5Qj7iX9hTaPXm9MSDJmW+zH9Y3hKO/iq2YYMb3YmkyYppyms/2noZFq+ZRsvEDmMJRBH/ir0wkHXdQBSj2aSDwVqHWXWx+YT6daEs6x6kTF592zpLz4wMirdVS/oxaGA3MXWn3RrhnO1WzEui0rk9h0Vr1l1EkhAfIcmGP5HZ/nHr1ZX/2KnFjetOIADHYZS8cHO7NYcZUdzMt077ItNkhRd4daWmFfVmBd2eZwUjyT8++fXiatqYG4jX0Su34t2aL6hxBolSLzJT+nmCEyTzw6k465pyeh9AUOTG0r4dXJO7o4UUGsCYTLXYo/5v4uwmqPcjtovYPN68CK6+SawXgeOSY+uVMWSCUM7dNGUiam6FhI58XQDjk0inYmjRlytU7hHg6WUak9XNwgzllD2+ljVBeU0fIbiQe3mr3XfnrXG/juwodGciRClL4tXanPxD+/U7XAVPGi/LvdxYEBj58e64bD4rF5N5eZkj3wA9nOcF99EH8ia8d57gRUBWl0cePLBSKQxEOsnAxbBpfJI5mgv+8894XH7ruBZ0+vnL+Izgur9jXktroBu6bIwKyrOnnh2BEPPzTrL+11NuUa5fZXKTcg/7SXpOkRZ5zPlsBwl2KK4It7EfJEpWfYy8RhwsT1fPiRfigUeJjkg/AysuFJNuw5bftjUPkfjN7Esw5gPRWHtqW+y5wpVIHgCi1oDxHbjfDIMqXeMHHhpY5z5RJNt9Cjl+udER5qZOxeYrXb+m5GBQvl+BbmcMhxvW+wA/FxTBW1IFF2rRZx8Kk7VhCo7/GXc31ajyq45SBwUfyZ6fEKODmETnk3dng+NhI2MGSpdpdfy2vseAZJ6Hj4VEh4WZ8qDilR3MFDIrTCY98sf/9fOG0qRgGWSL12WR4E7T2dJ8iBt2Lsu4bGIYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "I've asked you several questions and you've said \"I don't know\" each time. Is that because the questions are hard to answer, or because this isn't a good time to talk?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1199,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 156,
+  "output_tokens_details": {
+   "thinking_tokens": 106
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
