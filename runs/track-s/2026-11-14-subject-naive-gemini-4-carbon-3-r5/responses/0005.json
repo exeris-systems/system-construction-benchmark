@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Walk me through your typical day at the airspace desk—who do you work for, what airspace information do you manage, and how do you interact with the drone operators and authorities?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 753,
+  "candidatesTokenCount": 39,
+  "totalTokenCount": 792,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 753
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 39
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "oYX4aqbFGM2ckdUP5Y3G0QI"
+}

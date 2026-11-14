@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Walk me through your typical day and everything you need the service to help you do from start to finish.",
+      "thoughtSignature": "EpECCo4CAWkUfROsxQN8FiBkVvOF0KX8vh3jJmo1YG+IXZ+v9V/pnW5HFvMhFe6Wy4JISYung09RAoj9DVPLPe+8DPEvfDhRe1lJmYri+9QlGpZbwUlBQMh5/bOWFJbrtm0+y3X3zGUvgNttCpdP3jbDNJ6crUU+dmYe6RbY3OFPQM3b11wqY+Ok+iETG6uTGKsaaQpK5LJFNIS6lQNSuTY6i40ttxGbDSMNkY4ZvHa+Oruub/6NKKGcDtUsyrxKASvoYA6mldHarlRWV9wM8rxFBd8XImDHalelBEVfA9uT036X2vQ4uRmxEYHWmQ/NegZ9lBelT9z2pydkzQLpBTgwM/wMqRXrLfSxMaWqUc90pEJk"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 560,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 628,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 560
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "thoughtsTokenCount": 40,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "A4X4avvfNOyR3boP7ZnIyAk"
+}

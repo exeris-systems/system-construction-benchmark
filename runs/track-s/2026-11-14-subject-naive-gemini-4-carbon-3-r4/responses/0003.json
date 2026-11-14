@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Could you walk me through your day-to-day work and what you need this service to do for you?",
+      "thoughtSignature": "EmYKZAFpFH0TzQHtSmNe8YBFoHnlY7ZJkJue0ZInuXHwlGqE0Bkvx64gN1D1d1kyQPjQLV8FwKJoebHU1uQqD/I/QU+v2EqUprRcNGr365wtL9I556XFq1D7Inz+sFmAF6QAd7xSgCw="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 567,
+  "candidatesTokenCount": 30,
+  "totalTokenCount": 597,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 567
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 30
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Z4X4at6SKLjPnsEPiPeT0Ak"
+}
