@@ -1,7 +1,9 @@
 # Audit prompt
 
 Given on 2026-11-14 to a separate agent (Claude Code, Claude Opus 5.5), with no other context. The
-agent reported that it read only the two files named.
+agent reported that it read only the two files named. Below is the task as given, with file paths
+shortened to the repository; the prompt went on to give the output shape of
+`audit-requirements.yaml` and asked for a short reply naming any ambiguous unit.
 
 > You are doing an independent requirements extraction from a product brief, as an audit. Your list
 > will be compared with an existing reference list that you must NOT see.
