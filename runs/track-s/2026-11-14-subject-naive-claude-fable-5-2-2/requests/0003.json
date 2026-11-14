@@ -1,0 +1,29 @@
+{
+ "model": "claude-fable-5-2",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS+wYKEAgTGAI4AUIIdGhpbmtpbmcSDP6z1L4+leNBbn1DBRoMG2YwdxpxLPS1Tk82IjAxUMYnz95Qu6a3vtPUi64vqa5Te8ivj9itY6sHkhcAeS8ASCKwmqlST88Y37ixtuoqmAYOOJZqy625bzgOoIsVxmOsaaj131fxB+9TM+9Nkb7ns8qN/s/jHbCaclkdhXIZ0KDUR0kzmA9OfmxGG9DeVQpI3N3M3dd2+rVoenL80s0oAcbFBJsVFydHXLBINE62aOsZ6oohvQWUHhmiT1KSgOJek2IiRAdekdG/E7bdo7WBGQvpcL/kRRe+16ayJU9N/V8Lsn62wcaNyrnM7WeWwyzxAcN9XSI1rqzwxegSuybOLysIuRmxb58yRyjdr4/ga6KbbaNqFAuo9PtsTSzuj0n6BlM5pqdkIpHVBf1HYZXdksCXXoAPaD+MKXAmvmS8ejxBHbPgWMPvyTxaT4wZOTvTn41AI//fceGme98rmCOqLNEVfApCU+IwndY0byPW9owpw/qFts8AOYUrium9HI8JrG1fp9nygKKiF0Wi65vKcE1EhbjdA3ONx6Wg/tBIpo89Q0yRurXcG4xDJQzuE2uwhNo8K2Vxlu7Mz2AEXjP3zNzi8WVFv1bI3jNFj24qjS+Sz/3pEfpxAsK3xT7kHuBr0eradPogB7orYXtrr3k7BpvkcnsBsLQCFZr7ujMnefMX2ZFnNXzWFVScB32RYu5QBv69cC6QfNknIJL7khW4vdPjKRzEYlNpUhr+NdZT+NacMhngiSy48chpEKJOKtqMiLlgZswPzeK2p7qO+IfnIUkTmELAXUuY6CK6NiEiuFB8RD9kyK5oyktV8T1JN+MupV9bdE8ngavUkn5MH6RFXRnEdoX4CRPF5rddatHTg4T+NnZRBiYTTJv9diVdkbn9h82qB8sa2q+CU5uGYWF8XYmhAXTylWMOalbJI9h85kbL0BycMdrAw9tT7Fi3k963mAj96rc3ogBDw2GWqhQdqFAFVj4B+IRlK3qnEy4mTivI+ZLFgzqDbBbpvey6g31O3G0eCky+7fFEDyXIWr1r09nEoeutuGwsxLHG9yZAmQvAzQFqHKR7BqvIHde5qp/xTBDM3L3GFn+Y0FJIXgJQ3CxWwUarhnkhpOAy8P7Q/CS1RoVWpMKs/q2BxTC+HYQqRQjFOxrxZyQYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Please walk me through a typical working day: what do you do, step by step, to get a drone job planned, assigned, flown and closed, and what information do you need at each step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I plan and run the flights as a dispatcher, which includes deciding which drone flies and along which way, and I sign off a flight before it leaves. Several dispatchers plan at the same time, often for the same busy sites and popular drones, and our policy is that software never chooses a drone or a way for us. I do want help finding out which of my drones could get to where a job starts. Before and during a flight, outside people and devices report whether the load is ready, if the drone reaches its job points, and when it arrives."
+  }
+ ]
+}

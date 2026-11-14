@@ -1,0 +1,33 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xQ5t4KCdxs5n7YmYwn",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "text",
+   "text": "ASK technician: Tell me about charging: how do you send a drone to charge, what are the limits of charging pads (how many drones at once, which connectors, which sites), and what goes wrong with charging today?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2652,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 66,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

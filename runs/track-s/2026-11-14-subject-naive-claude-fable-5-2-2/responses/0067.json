@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xZfyeqJfKrcNFYpXS5",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS1wYKEAgTGAI4AUIIdGhpbmtpbmcSDLKqO9hC902/hEt2/BoMVYH5EszFhAsjp9ZhIjCEodc9J85o+dku94cWHEa16MFp13CUUpt26VgKRaqTvDO7NTfFfckuJra6/BULlGQq9AW+0YP6JKc2J76XBYH2x9kCiROejveLE7D2glmVGY/NopSuyjWw05Soe5u2fNBz9Tbev9VT7QEns9A23j6gey3NlnNvb2UK/oooPr+d0VNK4pRreamaPLusQcoCXUJ6rec8Ckn0wL4rhVk6ds07g98tYay5o7UQS4l0s1iHjycERuawnJWnp99j2cm39n16RDQ75/RIl3lGURXLP3fGwaTG97h3Of5tz7oRQg95jS9a6dvBO52gLdxFGVr90ClZr6zIGT8C/joAsW8KAKkd9yaRV9hC81H2J6/vOkbxvohI/Ygavf5LCVtNlAhIIEMPlDgSTvWhz2fEYdyV2V4f9yefIwQontjwqAznHXcFL7DndNQfPQyyulOQS15oDWClPUFj3Gh8rULkxGmyxOhiVH7QTkbK20oSjHNDHMZHHS3QW70FnfNFzcdsvJr+KSEkvn0C4Y2Tkqk6613zWX7OmDAqcIaQAMUOZBD5BThifS2mGOSIgVsSTLL653k5xXRDiUT29PKG55ydqqxinThJ/rN6zSo4ekSC5QQlDzDYetZOi6g94/S9GYrWKdUzETU+GC8OvYMdj9JWxHjX30xMCtdY3zBQ8TPljYcPnQZfwL9ubjvH420RtXSM4GykHTfzQ5ZFMTTK7ePqTLq7p11AW/Pze3IjQnPhjDeL54HyDkeJtiDX7Q1eqdGGGPVKrDaZG/18dzqsrSityeh778mh36yxkNlUzupvyxvWTGUjoB5viP1OtfkPiTElCHxy+n2cciSkoBRXWdKr9fyz/gunuthHjH/kiROPRhwmBEycx51babk9oVEQGo/5tIoJhu8bI3hd+uRTavuWhVJ+G+hzrp+vAlVc5F161XZBjOyjnz4YVrb+92FqxxDU6ixg/Kd6r4g57GmPhMUfisB0WLHlXnzrrTA+s8JdCKRZEq3OP44HYcL9TznkJg3oeEV87Uxi3wbmHa6z0DMfg0El2pukiJqN/seihUKfoHkq6LLrocTpQKdVOJ4YAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: How does a drone's battery level, location and condition become known to you: does the drone or pad report it, do you enter it by hand, and can those reports be late, repeated or wrong like other reports?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 6836,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "output_tokens_details": {
+   "thinking_tokens": 18
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
