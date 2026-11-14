@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens if a drone has to travel farther than a single battery charge allows to get to a job or finish a delivery?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1748,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 1773,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1748
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 25
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "nmH4atbHCMjnxN8P39vRwQ0"
+}

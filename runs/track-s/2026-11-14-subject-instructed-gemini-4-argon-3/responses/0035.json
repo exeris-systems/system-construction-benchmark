@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else about your role, the drones, the sites, or the charging equipment that we haven't covered yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1441,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 1467,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1441
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "82D4asDOMrqu3boP24HSyA0"
+}

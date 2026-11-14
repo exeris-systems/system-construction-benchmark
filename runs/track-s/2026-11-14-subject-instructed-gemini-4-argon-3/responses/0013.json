@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What do you check by hand today because you do not trust the current tools or information?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 817,
+  "candidatesTokenCount": 18,
+  "totalTokenCount": 835,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 817
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 18
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "mGD4at3sFeSUkdUPwZrFSA"
+}

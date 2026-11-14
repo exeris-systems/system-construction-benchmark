@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When something goes wrong with a drone or a charging pad, what do you need to know right away?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 780,
+  "candidatesTokenCount": 21,
+  "totalTokenCount": 801,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 780
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 21
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "kWD4atS1BJ2Q3boPu_rVuAE"
+}

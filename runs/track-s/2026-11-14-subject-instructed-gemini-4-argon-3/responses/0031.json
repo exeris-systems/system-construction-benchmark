@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Can a drone charge or be serviced at a site that is not its home site?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1368,
+  "candidatesTokenCount": 17,
+  "totalTokenCount": 1385,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1368
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 17
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "4mD4arzjKuCfxN8PrPinoAw"
+}

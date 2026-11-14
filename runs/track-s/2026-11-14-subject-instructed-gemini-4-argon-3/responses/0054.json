@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What else do you need to know about the drone's current state, or the sites and pads it might use, before you pick it for a job?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1198,
+  "candidatesTokenCount": 32,
+  "totalTokenCount": 1230,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1198
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 32
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "SmH4aonwDNaJvdIPpaOi0Qk"
+}

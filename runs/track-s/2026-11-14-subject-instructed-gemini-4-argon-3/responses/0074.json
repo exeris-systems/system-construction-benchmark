@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What are all the reasons you might have to call off a flight, either before it leaves or while it is in the air?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1894,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 1920,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1894
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "rGH4arn9CZW5vdIPjMvnwQE"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Can you tell me everything else in your notes about airspace, sites, drones, or anything else that affects your work as a dispatcher?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2009,
+  "candidatesTokenCount": 27,
+  "totalTokenCount": 2036,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2009
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 27
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "u2H4atfeL5XGvdIPnYGe-Qg"
+}

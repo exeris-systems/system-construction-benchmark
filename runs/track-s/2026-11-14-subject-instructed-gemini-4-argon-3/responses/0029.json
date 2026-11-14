@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else you can tell me about your sites, your repairs, or how your company works with the platform?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1262,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 1286,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1262
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "3GD4at3OKNuu28oPoIO36Qs"
+}

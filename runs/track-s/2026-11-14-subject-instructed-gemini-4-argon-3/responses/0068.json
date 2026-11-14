@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What makes a job different between parcel delivery, infrastructure inspection, or hospital logistics?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1684,
+  "candidatesTokenCount": 16,
+  "totalTokenCount": 1700,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1684
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 16
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "fGH4avC2A8bmxN8P3KrdqAw"
+}

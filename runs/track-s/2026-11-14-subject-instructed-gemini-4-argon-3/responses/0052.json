@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you want to find out which of your drones could get to where a job starts, what information do you need to figure that out?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1109,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 1137,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1109
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Q2H4apTIMKeUxN8PhPnMmAM"
+}

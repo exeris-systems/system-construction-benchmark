@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Where do the airspace closures you enter come from, and who sends them to you?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 953,
+  "candidatesTokenCount": 17,
+  "totalTokenCount": 970,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 953
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 17
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "ZGL4apPOKtCkvdIP_YD3qQM"
+}

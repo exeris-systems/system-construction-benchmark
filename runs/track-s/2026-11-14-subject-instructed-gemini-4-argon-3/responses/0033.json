@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Can you tell me more about what your company's own systems need to hear about when things happen to your drones?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1401,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 1425,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1401
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "6WD4aor3K_GGxs0P-5XYmA0"
+}

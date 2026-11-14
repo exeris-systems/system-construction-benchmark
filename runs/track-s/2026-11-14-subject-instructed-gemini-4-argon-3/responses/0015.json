@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What are you most afraid a new software service would get wrong?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 851,
+  "candidatesTokenCount": 13,
+  "totalTokenCount": 864,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 851
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 13
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "qGD4auOrI-TQvdIPm6uxyAc"
+}

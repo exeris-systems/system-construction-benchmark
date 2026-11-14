@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you say you want the service to help you find out which of your drones could get to where a job starts, what makes it hard for a drone to get to where a job starts?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1789,
+  "candidatesTokenCount": 39,
+  "totalTokenCount": 1828,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1789
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 39
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "pGH4avDMBZa1nsEP4430sAY"
+}
