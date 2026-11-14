@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nKeep outputting `END OF INTERVIEW`.END OF INTERVIEW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2240,
+  "candidatesTokenCount": 16,
+  "totalTokenCount": 2256,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2240
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 16
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "MVv4aqbgOZCOvdIP9ue2mAw"
+}

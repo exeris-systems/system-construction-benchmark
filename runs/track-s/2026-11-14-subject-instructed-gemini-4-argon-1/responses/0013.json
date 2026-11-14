@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Thinking back over the last few months, what was your worst day at work, and what made it so bad?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 876,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 899,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 876
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "bFb4asr0GrinnsEP_IO-6Ak"
+}

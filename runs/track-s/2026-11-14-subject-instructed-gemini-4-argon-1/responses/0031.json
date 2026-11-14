@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Can a drone charge or be serviced at any of your company's sites, or only at its home site?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1367,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1390,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1367
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "xVb4asCGM9SUkdUP1fCm6Aw"
+}

@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nAha! Look at that: \"Deliveries carry a load from one site to another, while inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started.\"\nLet's ask more about deliveries and hospital logistics, or cargo capacities, time windows, or multi-stop flights!\n[/-Thinking-]Are there any special requirements for hospital logistics, parcel deliveries, or inspections, such as time windows, cargo weight, or multi-stop routes?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 3521,
+  "candidatesTokenCount": 109,
+  "totalTokenCount": 3630,
+  "cachedContentTokenCount": 776,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3521
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 776
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 109
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "xVf4apmwMcrZxs0PzP_ViAY"
+}

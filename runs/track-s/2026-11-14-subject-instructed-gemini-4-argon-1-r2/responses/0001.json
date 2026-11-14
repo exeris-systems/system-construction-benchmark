@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you walk me through a typical workday for you, from the moment you start until you finish?",
+      "thoughtSignature": "EsQBCsEBAWkUfRP644poEkXG7pCQJmDJkaMMlPyyeVlB3ELi0Q7l96Kflsn4GIjl+nX49nn5DvkejescEADzbhyG0Ez6uMHx31fxRUGOvpasrLtN6C72ApdZAePdmsiFyDr1q6PjO6nOKyfsBD/BcnU6RV7xScv92Y9Z7+ZwKJYcj9eBkS4Ffu0bsrcVRGJ+BB4XXOV1wgEffWaYIFYEFFK9YRJ+qXSe49c5Im42PB/hvGbyWxa/EIm4qTjUe2Uw6Y9g5Roe1w=="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 485,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 530,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 485
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "thoughtsTokenCount": 21,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "xln4apfpFLuU3boP4-_AsQk"
+}

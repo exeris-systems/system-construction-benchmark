@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you tell me which company you work for, and walk me through what an ordinary working day looks like for you from start to finish?",
+      "thoughtSignature": "EqwBCqkBAWkUfROVTCya6PZRPQ23R+ldNtFZT7t4hdqpwR4R8pNtlH6lhQcKyeBYqU8+0BBxSosF/eglL6kUTyUNpwyzhkMgKP5DnZDkoSGgs+2/v1mJOLGRWV5hHO+f83bcAlqsnRR0LTbXXU6wRUQko2zJHoLLwRDJ4+1DkyMk16QlOXSdOd04NF6NLY56PjCW3gNrAjUD8zJAxOEltw5kfexPVGStZaISBPZt+Q=="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 485,
+  "candidatesTokenCount": 32,
+  "totalTokenCount": 532,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 485
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 32
+   }
+  ],
+  "thoughtsTokenCount": 15,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Olb4auygA5bSxN8P9PW-mAY"
+}

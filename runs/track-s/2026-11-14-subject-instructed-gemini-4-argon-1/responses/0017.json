@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What do you currently check by hand in your daily work because you don't trust a system or someone else's word?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 958,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 984,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 958
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "hVb4apmRFpb6vdIP3oXe8Qs"
+}

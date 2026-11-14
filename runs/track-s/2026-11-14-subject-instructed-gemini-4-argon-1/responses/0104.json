@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Think back to your most recent shift—what was a specific task or problem you dealt with that day?",
+      "thoughtSignature": "EmMKYQFpFH0TxURrj8k0hgWdskKWs3/xrUQSyevMlrruP/jFG3NA0Yg4TWaSPn684hdIvMWxhCIAFeQnv8jkeFtkbGknieoXcbNaCxY7WA0mCtM0dEtnjCuRCki+M4YKwBaCzVU="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 574,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 599,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 574
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 25
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Zln4atCKCbSlkdUPif_6oAU"
+}

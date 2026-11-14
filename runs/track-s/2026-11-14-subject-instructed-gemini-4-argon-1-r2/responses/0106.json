@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When do you need to add or change a flight corridor or a zone?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 820,
+  "candidatesTokenCount": 15,
+  "totalTokenCount": 835,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 820
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 15
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "DFz4apP_EYuJkdUPoLW8qA0"
+}

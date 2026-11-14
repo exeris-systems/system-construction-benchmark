@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Before and during a flight, things happen outside our control, such as the load being ready or not, the drone reaching the points of its job, and the drone arriving, which are reported by people and devices outside the company. Radio coverage is patchy around ports, industrial sites, and in bad weather, and reports from drones come through relay stations so they can arrive late, out of order, more than once, or not at all. Drones sometimes restart in flight after a software fault and carry on, while batteries drain faster in cold and wind than planned."
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 5484,
+  "candidatesTokenCount": 113,
+  "totalTokenCount": 5597,
+  "cachedContentTokenCount": 1971,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 5484
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1971
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "JVj4asrvKrDm7M8Pyty08Q8"
+}

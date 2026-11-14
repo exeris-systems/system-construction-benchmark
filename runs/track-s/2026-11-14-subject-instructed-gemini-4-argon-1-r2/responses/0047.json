@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nThe user replied `END OF INTERVIEW`. Let's output `END OF INTERVIEW`.END OF INTERVIEW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2109,
+  "candidatesTokenCount": 27,
+  "totalTokenCount": 2136,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2109
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 27
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "wVr4av64MN3qxN8P9quFmQM"
+}

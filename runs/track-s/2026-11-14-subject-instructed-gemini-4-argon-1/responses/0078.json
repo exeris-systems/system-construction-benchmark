@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nLook at the new facts we got: \"cameras, thermal cameras, or laser scanners\", \"how much they can carry, how far they can fly on a full battery\".\nWhat else could be in the dispatcher's knowledge base?\nLet's check:\n- Drones returning home vs ending at another site! When a delivery carries a load from one site to another, does the drone stay there, charge there, or return to its home site?\nLet's ask!\n[/-Thinking-]When a delivery takes a drone from one site to another, what happens to the drone afterward regarding charging or returning to its home site?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 3738,
+  "candidatesTokenCount": 135,
+  "totalTokenCount": 3873,
+  "cachedContentTokenCount": 1472,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3738
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1472
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 135
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "z1f4apS0KPyY3boPm4LAYQ"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When something does go wrong with a flight or a drone, what is the very first information you need to know right after it happens?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1004,
+  "candidatesTokenCount": 27,
+  "totalTokenCount": 1031,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1004
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 27
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "klv4aqj3Dbj5vdIPjeHHiQM"
+}

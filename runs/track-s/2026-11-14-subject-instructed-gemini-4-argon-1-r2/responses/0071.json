@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you are signing off a flight or monitoring it, what do you currently check by hand because you don't trust the systems or data you have?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 890,
+  "candidatesTokenCount": 31,
+  "totalTokenCount": 921,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 890
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 31
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "glv4avXaN52ExN8Pi5HskA8"
+}

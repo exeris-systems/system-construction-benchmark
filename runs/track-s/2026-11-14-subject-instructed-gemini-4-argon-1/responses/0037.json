@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Are there any other details about your role, your company, or the fleet that you haven't mentioned yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1555,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1578,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1555
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "2Vb4asi5FbLOvdIPj7zU0Qs"
+}

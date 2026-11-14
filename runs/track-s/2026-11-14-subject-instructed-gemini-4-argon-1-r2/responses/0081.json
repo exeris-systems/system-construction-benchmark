@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you sign off a flight before it leaves, what needs to be true before you are allowed to sign it off?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1216,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 1240,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1216
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "pFv4asn6N4vrkdUPr6OJ-Ag"
+}

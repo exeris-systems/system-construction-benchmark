@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else you can tell me about the drones, the charging pads, the sites, or the work you do?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1074,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 1099,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1074
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 25
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "qFb4avnSD8CRvdIP_77l0Ag"
+}

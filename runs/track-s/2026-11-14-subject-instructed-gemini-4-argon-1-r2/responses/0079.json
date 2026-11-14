@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Why does your company have the policy that software must never choose the drone or the route, and what do you look at when you make those choices yourself?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1143,
+  "candidatesTokenCount": 31,
+  "totalTokenCount": 1174,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1143
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 31
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "nlv4asGbLJaC7M8P5KLEkQU"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nLet's ask what happens when a drone is charging, or how many drones can use a charging pad at once.How many drones can use a charging pad at the same time, and how does finishing a charge work?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1172,
+  "candidatesTokenCount": 49,
+  "totalTokenCount": 1221,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1172
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 49
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "RVr4at-NKPyD28oPj72RgAo"
+}

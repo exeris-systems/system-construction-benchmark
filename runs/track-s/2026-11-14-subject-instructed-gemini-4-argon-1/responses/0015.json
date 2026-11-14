@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens when a drone is out of service for repairs—how do other people in your company know it can't be used?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 915,
+  "candidatesTokenCount": 27,
+  "totalTokenCount": 942,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 915
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 27
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "e1b4auv7HNDOvdIPspOYWA"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else about your work at the airspace desk or what you need from the service that you can tell me?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1151,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 1175,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1151
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "U1z4atysLfq0kdUP7ZPU0Qo"
+}

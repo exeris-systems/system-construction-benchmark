@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "생각이\nWhat about the sensors, payload capacity, battery/range, or status of a drone? How do those change or get tracked?Does a drone's equipment, like its sensors or battery, ever change over its lifetime, or is that fixed when you add it?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1756,
+  "candidatesTokenCount": 58,
+  "totalTokenCount": 1814,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1756
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 58
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "k1r4atzeFfX4nsEPt42h6Ao"
+}

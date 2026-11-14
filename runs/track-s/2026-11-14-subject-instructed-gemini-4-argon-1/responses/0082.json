@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nLet's check what else might be in the dispatcher's prompt!\nWhat about:\n- How a flight progresses from planning to sign-off, takeoff, in-flight, landing, or cancellation?\nLet's ask about the stages of a flight from when it is planned to when it finishes.\n[/-Thinking-]Can you walk me through the stages of a flight from the moment you start planning it until the drone lands and finishes the job?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 4111,
+  "candidatesTokenCount": 99,
+  "totalTokenCount": 4210,
+  "cachedContentTokenCount": 1840,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 4111
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1840
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 99
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "7Ff4aomdJv2WxN8P3aWt-As"
+}

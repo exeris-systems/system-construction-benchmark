@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nWe have covered all required topics and follow-up questions are no longer yielding new information. Let's finish the interview with `END OF INTERVIEW`.\n[/-Thinking-]END OF INTERVIEW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2765,
+  "candidatesTokenCount": 44,
+  "totalTokenCount": 2809,
+  "cachedContentTokenCount": 626,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2765
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 626
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 44
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "hVf4ata5I7OavdIP-uLHEA"
+}

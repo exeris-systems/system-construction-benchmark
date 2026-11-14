@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Thinking about a new service being built for your work, what are you most afraid it might do wrong or make harder for you?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1047,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 1073,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1047
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "mFv4apuaI6TzvdIP-ISJSQ"
+}

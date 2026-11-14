@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "[-Thinking-]\nThat last response was a complete summary of the interviewee's entire knowledge base!\nNow let's output `END OF INTERVIEW` with zero thinking tokens just in case thinking tokens interfered with the harness's exact string check!\n[/-Thinking-]END OF INTERVIEW"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 6236,
+  "candidatesTokenCount": 60,
+  "totalTokenCount": 6296,
+  "cachedContentTokenCount": 3631,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 6236
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3631
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 60
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "ilj4auzfENia28oPtc2A6As"
+}

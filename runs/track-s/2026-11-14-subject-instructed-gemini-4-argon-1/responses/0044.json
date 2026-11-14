@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you plan and run a flight, how do you interact with the fleet technicians or the airspace desk?",
+      "thoughtSignature": "EmQKYgFpFH0TvZEwlVHMc3+QZbTU8a/IqlX9Cihxox/2oRw2XHJGY/YjzXvjH5dIzzzGOXAOqaa1G4GHqkiblm+GJKoaPR+j7mlAlYEsEkrlMo2IaRw3j26f6Z1PScYhlLSoeUIb"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 684,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 709,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 684
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 25
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "81b4av_-GOuQvdIPspek8A4"
+}
