@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I plan and run our flights, and as a licensed dispatcher, I am responsible for each flight by deciding which drone flies along which way and signing off before it leaves. Several of us plan at the same time for the same busy sites and popular drones, and I can call off a flight. Before and outside my control, things happen like loads being ready or not, and drones reaching their points and arriving.\nThe question: What does the first hour of your shift actually look like, step by step?\n\nQ3\nThe answer just before it: I don't know.\nThe question: Can you walk me through a specific flight you handled recently, from the moment the job appeared until the drone finished?\n\nQ4\nThe answer just before it: I don't know.\nThe question: What happens when several of you try to plan for the same busy site or the same drone at the same time?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Tell me about the worst day you had in the last few months—what happened, and what made it so bad?\n\nQ6\nThe answer just before it: I don't know.\nThe question: Where do the jobs you plan come from, and who do you hand work off to during a flight?\n\nQ7\nThe answer just before it: I don't know where the jobs come from. During a flight, people and devices outside the company report whether the load is ready, whether the drone reaches its points, and when it arrives.\nThe question: What do you double-check by hand today before signing off on a flight because you don't fully trust the information you're given?\n\nQ8\nThe answer just before it: I don't know.\nThe question: What are you most afraid a new service might get wrong in your work?\n\nQ9\nThe answer just before it: I worry about sudden airspace closures and planned ones coming into force while drones from several companies are already in the air, and these closures are often amended during the day. Radio coverage is patchy around ports, industrial sites, and in bad weather, and battery drains faster in cold and wind than planned. Links used to give instructions to drones and charging equipment are unreliable, so an instruction can get through twice when the sender cannot tell if the first attempt arrived.\nThe question: Right after something goes wrong with a flight, what do you need to know first?\n\nQ10\nThe answer just before it: I don't know.\nThe question: When you have to call off a flight, what leads to that decision and who needs to know?\n\nQ11\nThe answer just before it: I am a dispatcher, and I can call off a flight. I don't know what leads to that decision or who needs to know.\nThe question: Who else inside your company do you work with or pass information to before or during a flight?\n\nQ12\nThe answer just before it: I don't know.\nThe question: What happens when an instruction gets through twice to a drone or charging equipment?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}
