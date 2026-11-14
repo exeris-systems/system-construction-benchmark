@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: How do you decide when a drone needs repair, servicing, or charging, and what do regulators ask to see about how drones have been looked after?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 905,
+  "candidatesTokenCount": 33,
+  "totalTokenCount": 938,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 905
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 33
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "3FH4ar_KJ9aLvdIP49e28As"
+}

@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What specific actions do you take with drones and charging pads, and what rules or constraints apply to them?",
+      "thoughtSignature": "EmQKYgFpFH0TsHhTPsh55Q8MnFOr0kQjnvAvTiAYbsd0s0JCwXNY4srjVic1SeuY0e+1JEFkBYSMSIPIqvIDyv+UXEO5ikppnim88oMW6uTazPgkdK9XbiaTQcsoxNd49ZLCJ8kL"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 865,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 893,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 865
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "FFL4aoGOFunNvdIP1bOU2As"
+}

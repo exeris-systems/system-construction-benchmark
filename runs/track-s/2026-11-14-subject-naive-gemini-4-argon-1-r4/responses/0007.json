@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What information do you record when adding a new drone, retiring an old one, or setting up charging pads at sites?",
+      "thoughtSignature": "EmQKYgFpFH0TQoPLXOCe3lVW54KOwZME9KZrPKpRCnZTGenpFWWRtlLMIUCiMuhzf6qvuk3lkhGDGp6Db2/2yP+2Pkvix+p4GmDi5nZw1NNboXVKxMtFVuLQcxHiIxBDZEo5QzHj"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 862,
+  "candidatesTokenCount": 31,
+  "totalTokenCount": 893,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 862
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 31
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "1FH4asC5N8G5vdIP9KLKoQE"
+}

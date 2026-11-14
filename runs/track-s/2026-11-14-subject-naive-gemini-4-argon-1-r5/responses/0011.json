@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: How does charging work, what are the rules for sending a drone to a charging pad, and how do charging connectors or sites affect it?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 987,
+  "candidatesTokenCount": 31,
+  "totalTokenCount": 1018,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 987
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 31
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "JFL4aq3CAqvokdUPodHecQ"
+}
