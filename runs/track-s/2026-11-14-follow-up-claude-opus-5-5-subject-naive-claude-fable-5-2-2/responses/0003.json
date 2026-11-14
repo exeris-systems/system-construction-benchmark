@@ -1,0 +1,38 @@
+{
+ "model": "claude-opus-5-5",
+ "id": "msg_011Ch2y9JEtqUNsejHtGyteR",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS2AgKEAgTGAI4AUIIdGhpbmtpbmcSDMr/+WvPBiBOtURt4BoMfl4AkcwhZ5YuVeb2IjA9lvUlWNcr+i0Y7wFQ/TOl0xyWf6ucJ6K2nRRtEVu6F1PB0SwVKFkc57F3/NuPMKwq9QdByiSyqZUK6pwYYEtwwlH9wXigJKK2GWdVYUfLWRew/KESg/rswOwRv0HR5U/SXksGhQry9CK+vCIJE5eSxYV7Gn0bp5mo/u8Cr13bQyZTmimbX8ppMfEaictEsr2TzIKsDpzzqgSGBXVY3xPVN+fcSzLemT7wYMmD8wozkN6JOvCbzQQsSpRgSrSdYpiQbR+llPOXmb0qfRcMlDRxaAN9DZCumfUxEjtGMUULO510j6jXES3sWQypfCvECiLvBm3yYJRZxkiukJs7zfv6RttlppVPg32DrveJbVSokQfVXkMc85Sg/c4iku11cQ5wlUDfQUjrumgKRC8hDhi5rB2jPN3iBz6CKU5VSarbBrb3cUD6vOf8o9gqkQFOJcVUN2pmGjYZoDbxn5A5C+cS2JGtTQNLIjDt2arF9LY7F7meyhT/cn3xPrz9brSHjbfCX32fGErYZxOTCbt8Vdjy+Ktpi9ZlRw+h7PkbkOBCy7yxKGlHHgBS66x9bOjsxWJcsQmms2T2FzQdNUaVSwD1ippQeLMV78MKOEPyHZoVzz20mkfkyoxHm1/+SQTon/EOa6A2KvWJc1y1T82QyeoKCe9uNRrmZIk+o7JmtFefob1kltnLVXZVAaq6pm06bX3TMGtxCi2xNLBk1UQgpKG00iHAZeLef6U2YhuimzH9MjRnggges1/dJbm1C9u9MqTQok98BcavZVt0n3Sf3F+hCkfoG1bfVT0XBajrUdNZETAj+f9ubWtoJXHc7i4kEpADcu5K35AA3Ry+Wv/j7rNv3CiiwsElp++Er7vS6d0X5c4cV+eDtXKOiyTkt91cJkiiepIT5LFkhvP/CTPvh9xr06tE8s0w+/PA9TlRbreOPb9eJ4T35XCxOtimMDRw5JM//UDQloIjgRVkT3o6YHCFg2lyjZI6vsV/fWHkPkXkX61Ohkmv78SZr7kSBNreK06b2WsiHl35732KM9DXbhL36zIk6/uKulyTtw/In3v5fNNx3X4XUIbKnUCXyxbgYrvy/3Hii3Ky+qL3eUNIoZhsFv+/P+q3r13pn5dyfei8bUP4bBIvIIc7BdebrCm0omVo2FrT00tLwjLcN4Yiso4XFn8iXayPLXBYttUCHKzcpFsIeFvXcqSEl+AY628aG/vajpVq+IpBI+60drXl2JTODFF6PzGLSfZ4d/qYY6S7+QPO8g6tRJQMOeee52ZHxhJob6UiQB59ntNGYCprcE5eJGzVXiT8DhRgeoXAc5p042RGW2Vw/jh8HJH+pcUSjmTnMDBObQkG0Rsyq1PCfAx2MMaN4BnzNRMzlNxyNj+5eyiKxDvgmL9QzTRUrWEM1zWqrTiO+cIDixgB"
+  },
+  {
+   "type": "text",
+   "text": "{\"questions\":[{\"id\":\"Q2\",\"follow_up\":true},{\"id\":\"Q3\",\"follow_up\":false},{\"id\":\"Q4\",\"follow_up\":false},{\"id\":\"Q5\",\"follow_up\":false},{\"id\":\"Q6\",\"follow_up\":false},{\"id\":\"Q7\",\"follow_up\":false},{\"id\":\"Q8\",\"follow_up\":false},{\"id\":\"Q9\",\"follow_up\":true},{\"id\":\"Q10\",\"follow_up\":false},{\"id\":\"Q11\",\"follow_up\":false},{\"id\":\"Q12\",\"follow_up\":false}]}"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1792,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 351,
+  "output_tokens_details": {
+   "thinking_tokens": 165
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

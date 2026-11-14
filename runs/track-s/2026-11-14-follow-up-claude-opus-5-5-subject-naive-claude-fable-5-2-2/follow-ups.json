@@ -1,0 +1,398 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-14-subject-naive-claude-fable-5-2-2",
+  "mode": "subject-naive",
+  "subject": {
+   "provider": "anthropic",
+   "model": "claude-fable-5-2",
+   "description": {
+    "type": "model",
+    "id": "claude-fable-5-2",
+    "display_name": "Claude Fable 5.2",
+    "created_at": "2026-11-09T18:30:00Z",
+    "line": "fable",
+    "max_input_tokens": 1000000,
+    "max_tokens": 128000,
+    "capabilities": {
+     "batch": {
+      "supported": true
+     },
+     "citations": {
+      "supported": true
+     },
+     "code_execution": {
+      "supported": true
+     },
+     "context_management": {
+      "supported": true,
+      "clear_tool_uses_20250919": {
+       "supported": true
+      },
+      "clear_thinking_20251015": {
+       "supported": true
+      },
+      "compact_20260112": {
+       "supported": true
+      }
+     },
+     "effort": {
+      "supported": true,
+      "low": {
+       "supported": true
+      },
+      "medium": {
+       "supported": true
+      },
+      "high": {
+       "supported": true
+      },
+      "xhigh": {
+       "supported": true
+      },
+      "max": {
+       "supported": true
+      }
+     },
+     "image_input": {
+      "supported": true
+     },
+     "pdf_input": {
+      "supported": true
+     },
+     "server_tools": {
+      "supported": true,
+      "code_execution": {
+       "supported": true
+      },
+      "web_search": {
+       "supported": true
+      }
+     },
+     "structured_outputs": {
+      "supported": true
+     },
+     "thinking": {
+      "supported": true,
+      "types": {
+       "enabled": {
+        "supported": false
+       },
+       "adaptive": {
+        "supported": true
+       },
+       "disabled": {
+        "supported": false
+       },
+       "between_tools": {
+        "supported": false
+       }
+      }
+     }
+    },
+    "lifecycle": "active",
+    "deprecated_at": null,
+    "retires_at": null
+   }
+  }
+ },
+ "scored": false,
+ "roles": {
+  "technician": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I keep the drones and charging equipment in working order, which involves adding new drones to the fleet, retiring old ones, setting up charging pads at our sites, taking drones out of service for repairs and putting them back, and sending drones to charge. Regulators can ask us to show how our drones have been looked after, and our repairs and servicing are carried out by technicians. I do not know anything about software or what is needed from the new service.",
+     "question": "When you take a drone out of service for repair, what should happen to flights already planned for that drone, and to a flight it is flying right now? And who is allowed to put it back into service, under what conditions?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I do not know how flights already planned or currently in flight are handled when I take a drone out of service. My notes state that I take drones out of service for repairs and put them back, and that repairs and servicing are carried out by technicians. However, my notes do not state any specific conditions for putting a drone back into service.",
+     "question": "Tell me about charging: how do you send a drone to charge, what are the limits of charging pads (how many drones at once, which connectors, which sites), and what goes wrong with charging today?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I send drones to charge, and we have a few dozen charging pads at our own sites. Several connector types are in use, and they are not interchangeable, while our pads are never lent to another company. What goes wrong today is that the links used to give instructions to the charging equipment are unreliable, meaning an instruction may get through twice and the sender often cannot tell whether the first attempt arrived.",
+     "question": "When an instruction to the charging equipment gets through twice, or you cannot tell if it arrived, what harm does it cause, and how do you find out what the pad is really doing?",
+     "follow_up": true
+    },
+    {
+     "id": "Q5",
+     "previous": "I do not know what harm a duplicated or unconfirmed instruction causes. My notes do not say how I find out what the charging pad is really doing.",
+     "question": "What records must you be able to show regulators about how drones have been looked after, how far back, and are there rules about changing or deleting those records?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "Regulators can ask us to show how our drones have been looked after, and our repairs and servicing are carried out by technicians. My notes do not state how far back these records must go. My notes also state that none of the companies is seeking certification from the platform, and that there are no data-retention or deletion features.",
+     "question": "Are the technicians who repair and service your drones all your own company's staff, or do some outside or contract technicians (perhaps working for several companies) do this work? What may each see and do?",
+     "follow_up": true
+    },
+    {
+     "id": "Q7",
+     "previous": "I do not know whether the technicians who repair and service our drones are our own staff or outside contractors. My notes state that repairs and servicing are carried out by technicians, and that each company's fleet, jobs, sites, and problems are its own business.",
+     "question": "When you add a new drone to the fleet or retire one, what details do you record about it, and what should happen to a retired drone's history and to anything still planned for it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I add new drones to the fleet and retire old ones, but my notes do not state what details I record about them. My notes also do not say what should happen to a retired drone's history or to anything still planned for it.",
+     "question": "Besides repairs, what else do you know about drones that dispatchers need to know before using one (battery level, faults, servicing due, where it is)? And what problems do you have today working with dispatchers?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I do not know what else dispatchers need to know before using a drone, or what problems I have working with them. My notes state that I keep drones and charging equipment in working order, add new drones to the fleet, retire old ones, set up charging pads at our sites, take drones out of service for repairs and put them back, and send drones to charge.",
+     "question": "Is there anything else you know about your work, the drones, sites, charging pads, batteries, or what the service must or must not do, that you have not yet told me? Please tell me everything.",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "I keep our drones and charging equipment in working order, and our repairs and servicing are carried out by technicians. Regulators can ask our company to show how its drones have been looked after. I do not know anything about software or what the new service must or must not do.",
+     "question": "How does a drone's battery level, location and condition become known to you: does the drone or pad report it, do you enter it by hand, and can those reports be late, repeated or wrong like other reports?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I do not know how a drone's battery level, location, and condition become known to me, or whether those reports can be late, repeated, or wrong. My notes state that reports from drones come through relay stations and can arrive late, out of order, more than once, or not at all, but they do not state whether this applies to battery level, location, or condition reports.",
+     "question": "May a dispatcher plan or sign off a flight for a drone that you have taken out of service or that is charging? And may you take a drone out of service or send it to charge without asking the dispatcher who has planned it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I do not know whether a dispatcher may plan or sign off a flight for a drone that I have taken out of service or that is charging. My notes do not state whether I may take a drone out of service or send it to charge without asking a dispatcher.",
+     "question": "When you set up a charging pad at a site, what do you record about it (site, connector type, how many drones it charges at once), and what should happen if you send a drone to a pad with the wrong connector, a busy pad, or a pad at another site?",
+     "follow_up": false
+    },
+    {
+     "id": "Q13",
+     "previous": "I set up charging pads at our company's sites, and we have a few dozen of them. Several connector types are in use, and they are not interchangeable. My notes do not state what I record when setting up a pad, or what should happen if I send a drone to a pad with the wrong connector, a busy pad, or a pad at another site.",
+     "question": "What does a drone's home site mean in practice: must it return there after flights, may it charge at any of your company's sites with a matching pad, and can its home site change?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 3,
+   "of": 12
+  },
+  "dispatcher": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I plan and run the flights as a dispatcher, which includes deciding which drone flies and along which way, and I sign off a flight before it leaves. Several dispatchers plan at the same time, often for the same busy sites and popular drones, and our policy is that software never chooses a drone or a way for us. I do want help finding out which of my drones could get to where a job starts. Before and during a flight, outside people and devices report whether the load is ready, if the drone reaches its job points, and when it arrives.",
+     "question": "When several dispatchers plan at once for the same drone or the same busy site, what goes wrong today, and what should the service do when two plans want the same drone or the same site slot at the same time?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "Can one drone be planned for two flights whose times overlap, and can a site (launch or landing place) take more than one drone at the same time? What are the limits?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "Sites have only so many places where drones can take off and land at the same time. My notes do not state whether one drone can be planned for two flights whose times overlap, so I don't know.",
+     "question": "When a site's take-off and landing places are all taken for the time you want, what should happen to your plan: refused, warned, or something else? And who sets the number of places a site has?",
+     "follow_up": true
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know what should happen to my plan, and I don't know who sets the number of places a site has.",
+     "question": "What do you check before you sign off a flight for departure, and what must be true for you to be allowed to sign it off?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I am the licensed person responsible for each flight, and I decide which drone flies and along which way before signing off a flight before it leaves. I can call off a flight. My notes do not state what I check before I sign off a flight for departure or what must be true for me to be allowed to sign it off.",
+     "question": "You said you want help finding which of your drones could get to where a job starts. What makes a drone able or unable to get there (location, battery, range, load capacity, condition, airspace), and what should the service show you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "Drones are of several models from different manufacturers that differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use. Each drone has a home site, and batteries drain faster in cold and wind than planned. I don't know what the service should show me.",
+     "question": "The outside people and devices that report load readiness, job points reached, and arrival: who or what are they, how do their reports reach you, and what problems do you have with those reports (late, missing, duplicated, wrong order, from the wrong sender)?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "Reports come through relay stations because radio coverage is patchy, especially around ports, industrial sites, and in bad weather. Because of this, reports from drones can arrive late, out of order, more than once, or not at all. My notes do not state who or what the outside people and devices are.",
+     "question": "When reports arrive late, out of order, or twice, what do you need the service to do so that you still see the true state of a flight? And what should happen when no report arrives at all for a flight in the air?",
+     "follow_up": true
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know what I need the service to do when reports arrive late, out of order, or twice. My notes do not state what should happen when no report arrives at all for a flight in the air.",
+     "question": "What are all the things that can force you to change or call off a flight after you have planned it or signed it off, and what do you do in each case?",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "I can call off a flight, and a closure can come into force while drones of several companies are already in the air. The authorities define zones where flying is prohibited and announce planned and sudden closures, which are often amended during the day. My notes do not state all the things that can force me to change a flight or what I do in each case.",
+     "question": "What does a job consist of (start point, job points, load, time window, needed sensors, client), where do jobs come from, and are there differences between the kinds of work (parcel delivery, inspection, hospital logistics) that the service must handle?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly along corridors between named sites. My notes do not state where jobs come from or what differences exist between the kinds of work the service must handle.",
+     "question": "Should the service let you plan or sign off a flight along a corridor that is closed, or through a prohibited zone, at the time the drone would be there? And when a closure is entered or amended later, what do you need to learn about your already planned and airborne flights?",
+     "follow_up": true
+    },
+    {
+     "id": "Q12",
+     "previous": "I don't know whether the service should let me plan or sign off a flight along a closed corridor or through a prohibited zone. My notes do not state what I need to learn about my already planned and airborne flights when a closure is entered or amended later.",
+     "question": "Is there anything else you know about your work, the flights, the sites, the drones, the reports, or what the service must not do, that you have not yet told me? Please tell me everything.",
+     "follow_up": false
+    },
+    {
+     "id": "Q13",
+     "previous": "Each company's fleet, jobs, sites, and problems are its own business, and we accept sharing airspace information because it comes from the authorities and is the same for everyone. Our drones are of several models from different manufacturers with different capacities, ranges, sensors, and charging connectors, and each has a home site with our own charging pads that are never lent to another company. The platform company runs on a single server that is updated and restarted during working hours, and it occasionally crashes, which we accept for a few minutes of interruption. Finally, there are many things we do not want, such as software that plans routes or picks drones, billing or pricing, management reports, staff accounts inside the service, or alerts by e-mail, text message, or phone.",
+     "question": "Are the named sites your drones take off from and land at used only by your company, or do drones of other companies also use the same sites and their take-off and landing places? If shared, what may you learn about other companies' use of a site?",
+     "follow_up": true
+    },
+    {
+     "id": "Q14",
+     "previous": "Each company has its own charging pads at its own sites, and these pads are never lent to another company. Sites have only so many places where drones can take off and land at the same time. I don't know whether drones of other companies use the same sites or what I may learn about other companies' use of a site.",
+     "question": "Roughly how many drones, sites, dispatchers and flights per day does your company have, and how quickly must you see a change (a new report, a closure, another dispatcher's plan) after it happens?",
+     "follow_up": false
+    },
+    {
+     "id": "Q15",
+     "previous": "I don't know how many drones, sites, dispatchers, or flights per day my company has. My notes do not state how quickly I must see a change after it happens.",
+     "question": "You said batteries drain faster in cold and wind than planned. What has that caused in practice, and what do you want the service to do about a drone's battery when you plan a flight and while it flies?",
+     "follow_up": false
+    },
+    {
+     "id": "Q16",
+     "previous": "My notes state that batteries drain faster in cold and wind than planned, but they do not state what this has caused in practice or what I want the service to do about a drone's battery when planning and flying.",
+     "question": "Who besides a dispatcher may plan, change, sign off or call off a flight, and may a technician or the airspace desk do any of those things or see your flights?",
+     "follow_up": false
+    },
+    {
+     "id": "Q17",
+     "previous": "I don't know who besides a dispatcher may plan, change, sign off, or call off a flight. My notes do not state whether a technician or the airspace desk may do any of those things or see my flights.",
+     "question": "For an inspection, the drone must visit points in a set order and return to the start. What does it mean for you if a point is reported out of order, skipped, or the arrival is reported at a different site than planned?",
+     "follow_up": false
+    },
+    {
+     "id": "Q18",
+     "previous": "My notes do not state what it means for me if a point is reported out of order, skipped, or if the arrival is reported at a different site than planned. I only know that inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started.",
+     "question": "When may you call off a flight: only before it leaves, or also while it is in the air? What happens to the drone and its load when a flight is called off or a closure hits it in the air?",
+     "follow_up": false
+    },
+    {
+     "id": "Q19",
+     "previous": "I am a dispatcher and can call off a flight, and a closure can come into force while drones of several companies are already in the air. My notes do not state whether I may call off a flight only before it leaves or also while it is in the air. Furthermore, my notes do not state what happens to the drone and its load when a flight is called off or a closure hits it in the air.",
+     "question": "When you ask which of your drones could get to where a job starts, do you mean reachable along corridors that are open, within the drone's range, and fit for the job (load capacity, sensors)? What do you do if a drone is not at the start site?",
+     "follow_up": false
+    },
+    {
+     "id": "Q20",
+     "previous": "I am a dispatcher, and my company's policy is that software never chooses a drone or a way for us, though I do want help finding out which of my drones could get to where a job starts. Deliveries carry a load from one site to another, and inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. My notes do not state whether I mean reachable along open corridors, within range, and fit for the job, nor do they state what I do if a drone is not at the start site.",
+     "question": "When the server restarts or crashes for a few minutes while your drones fly, what must be intact when it comes back, and what should happen to reports and to your own actions that were sent during the interruption?",
+     "follow_up": false
+    },
+    {
+     "id": "Q21",
+     "previous": "My notes state that the platform runs on a single server which is updated and restarted during working hours, while drones are flying, and occasionally crashes, and we accept a few minutes of interruption. My notes do not state what must be intact when the server comes back or what should happen to reports and actions sent during the interruption.",
+     "question": "With no staff accounts or passwords inside the service, how do you expect the service to know that an action comes from your company and from a dispatcher, and must it record which person signed off a flight?",
+     "follow_up": false
+    },
+    {
+     "id": "Q22",
+     "previous": "I don't know how the service knows that an action comes from my company and from a dispatcher without staff accounts or passwords inside the service. My notes do not state whether the service must record which person signed off a flight.",
+     "question": "Please list every single thing your notes say the companies do not want in this service, and anything your notes say about laws or rules that apply.",
+     "follow_up": false
+    },
+    {
+     "id": "Q23",
+     "previous": "My company does not want management or analytical reports, exports, and dashboards beyond day-to-day operations, or logging in through our own corporate identity systems. We also do not want several languages, any guarantee of meeting regulations, any compliance audit, data-retention or deletion features, backups, high availability, or spreading the service over several servers. We reject accounts and passwords inside the service, alerts to staff by e-mail, text message, or phone, software that plans routes or picks drones, and flying drones remotely through the service. Finally, we do not want weather information, billing or pricing of the work, or signing up new companies through the service. The relevant rules are the EU drone operation rules, including geographical zones and operator responsibilities, the EU U-space rules, including airspace information and flight authorisation, and the GDPR for personal data of staff.",
+     "question": "Do several dispatchers work on the same flight or only each on their own, and what must never happen when two of you act on the same drone, flight or site place at the same moment?",
+     "follow_up": false
+    },
+    {
+     "id": "Q24",
+     "previous": "My notes state that several dispatchers plan at the same time, often for the same busy sites and the same popular drones. However, my notes do not state whether several dispatchers work on the same flight or only each on their own. I also do not know what must never happen when two of us act on the same drone, flight, or site place at the same moment.",
+     "question": "May a flight leave before its load is reported ready or before you have signed it off, and how do you learn that a flight has actually left, reached each job point, and arrived?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 5,
+   "of": 23
+  },
+  "desk": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I work for the airspace desk at the platform company, keeping the shared picture of the airspace that includes the network of flight corridors between sites, the zones grouping them, and closures announced by the authorities. I enter closures and want to know how much disruption a closure caused across customers. The authorities define zones where flying is prohibited and announce planned and sudden closures, which are often amended during the day.",
+     "question": "When you want to know how much disruption a closure caused across customers, what exactly do you want to see, and how much of each customer company's flights, drones and jobs are you allowed to see?",
+     "follow_up": true
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know. Each company's fleet, jobs, sites, and problems are its own business, and I have no business looking into any one company's operations.",
+     "question": "What exactly does a closure cover (a zone, single corridors, sites?), what times does it have, and when the authorities amend a closure during the day, what can change (start, end, area, cancelled altogether) and how should the service treat the earlier version?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "When you enter a closure that takes effect while drones of several companies are already in the air in the affected area, what must happen: who must be told, how fast, and what must they be told?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "What is the relation between zones, corridors and sites in the picture you keep? Who may add or change corridors and zones, and how often does that happen?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "What goes wrong today in your work with closures, and what mistakes must the service help you avoid?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "Should a flight be allowed to be planned or signed off along a corridor that is closed, or inside a prohibited zone, at the time the flight would be there? Who decides, the service or the dispatcher?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "Is there anything else you know about your work, the corridors, zones, closures, the authorities, the customers, or what the service must or must not do, that you have not yet told me? Please tell me everything.",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "Drones fly along corridors between named sites that have only so many places to take off and land at the same time. The relevant rules are the EU drone operation rules and the EU U-space rules, and personal data of staff is covered by the GDPR. The service runs on a single server, is updated and restarted during working hours while drones fly, and occasionally crashes, but the companies accept a few minutes of interruption. Management reports, corporate identity systems, multiple languages, compliance audits, backups, passwords inside the service, and staff alerts by e-mail or phone are all things the companies do not want.",
+     "question": "Are the named sites in the corridor network part of the shared picture you keep, and can drones of several customer companies use the same site and its take-off and landing places? Who says how many places a site has?",
+     "follow_up": true
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "When the authorities announce a closure, what does the announcement say and what do you enter: which zone or corridors, from when to when? How do planned and sudden closures differ, and how do amendments reach you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "Do the customer companies' dispatchers see the closures and the corridor network exactly as you enter them, and can anyone other than the airspace desk change that shared picture?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I don't know.",
+     "question": "Since the companies want no staff accounts, passwords or corporate identity systems inside the service, how will the service know who a user is, which company they belong to and which role they have?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 2,
+   "of": 11
+  }
+ },
+ "follow_up_ratio": 0.21739130434782608,
+ "followUps": 10,
+ "of": 46
+}
