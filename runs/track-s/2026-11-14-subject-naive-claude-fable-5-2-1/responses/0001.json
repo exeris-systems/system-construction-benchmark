@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wQsxMiBCpBnxJZRbgc",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSiwYKEAgTGAI4AUIIdGhpbmtpbmcSDOmcYZtGTfExagH1IBoMqfatEzpL7fh59oOlIjBS5y7LZM5o9wdSsmuXjFyf3xxpmGn3VWB/7AlLfnimp5zsh4BO5xIAVN2qBjVY/iUqqAWS6UywbI7kvFqzw92mirzVXqAfc3Rdu4xErO4R3+8N6S9xvUCHohBSDJVmSgi4nSbmsfSloxeBuYyKPNh7lXy/vRHfIoERlID/iMRiFDmF30vO9yNNEi1wTd6yv9ED9F0SHbDeUntEmhgJUQzEv5r8FCvKQlXhQwBE3VsMInTBU+qQj9yIqmu3cQ3uUa6ZliqViKPayVj6mEzLyuJv74mA8cObf8YhIcYxEnIHqfYuH8VbTjAb88LlhSmk/M25JSf99rKgPDiy8eeSWffVeDUNHDfClzj/xTTxwJ8KB57APExgLmyHbbzBUImPV14yFbljlRT1V8f0xe6cn5462byxqpqidfXLsUaanKA5lWJiKZcsxUCWLkYDP62xaovZ8eBrLNsje+qbJOgg68lYmeLBi+uJstphlFa5achm8bp/8gcPHo4gvvOaS776PedxwzcPBSTZ7c0IWXQZ+axXIetCmlByRvfFcGomzGl4qSnIZj0KRhA2dTK75hFhC2tKVU0KYM49T9HI3VFBEeVdryLdIAxo+yKqgnDQDjiQRGbKxz3AANwqpSl1AA92ck1Whb7Lm1sGYo+ohhnHnAtpMGC7OVW10yjCrSAvAo7A/WHJxK8lMyYiH7rKZZ/vpJU0wDX8dbJG1PAlxmLr5ugjs8GZKQvqpxJ1E6PL0KQ8D2QpZknIKkSsYCTw+4aEWtSrhJuXOW7TeNY/9zSVsBXnWZRVQlbFjKwzy5Ukado2uAwgM9Nrpw+Re9TFfslJEz2ZPR3enZrBvHvsvKYVhauWnEvj0n7wPOpHYaxbJeWxL4N1oFK4fLm0RXYA5+Vohby3E1tjEPTW5yQ19HbDwd5ruEKGZD26GOzg+ev81zxovRY6B/yDe3fr6MNH5qHzoZLmUKbwtH4lEHUVKBgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: Please walk me through a typical working day with your drone fleet: what do you check, record, or decide, in what order, and what information do you need at each step?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 535,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 103,
+  "output_tokens_details": {
+   "thinking_tokens": 51
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

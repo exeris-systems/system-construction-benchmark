@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wVJEUkkgT3a2zy8nan",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS5QYKEAgTGAI4AUIIdGhpbmtpbmcSDJR+j6r1qUZ9PC9lIRoMmQWA91/GROtnUMzrIjCiO6R8ImrqoVx3TRN7htNyUYSNC73hKPwIeAVKyIbdzbZGcjJcAq6JVhKOKKsYNKIqggaMZ3y/t6ZXDb6WM6blFbziEMwiMg3bHhhbhv8PqzV+b54pzFNFNzzPh5sP4iGtGF6dZik1DR7aNgdiTG6W/aeni+g42X5FJ7dX3qfAeX/ux4yktFo+GUEvmuf8CGEB9rN5qjoa0HmAO6utjqEi6Mvi8yyBnr72yYTmQHeEoI43qcIoqdaOWFJyLt+eJzXYtohV5rZsiOfhSjy/vB6jD+dWUXOyv0h7rtEoF8cTWJCqF/EateQVXocOkUFfexEr1H+KjU9bk9KT0wtNSGmK/apqUkIYKeUpZp8VmCXxTDioTcUhHBRYUIqPlIbpNdfPf347trzcN3yrkUwh1uawRoA9Ag9EI7jrnRFeK6vCvrb0NHHA3+B/wVCGuRr7RS2bmHJy2Z3q4mR+kDTjiDm39OOXVo9X5ChrNPlrVtKeZQtT4brH61nJmlGswusd5XsSURKOmdQNa+OB8PTD2tC+nSN29CtbWh65lRzOwLwruUnWaBOLNpWmEC0Wuwe0jaIyTTbRls08fATwrnH4uctZ5aQgyhgyek8mLpmfpjCq/f8/dzxTABgstK+vmeuATKu+nppKqup+dz5BzloPkv/VwQESEfJFxuu416hyed0n511LOXofLOCX1zElRe2XX7utosSc1AN5mgga56WcTWAOS/FXM/XPXf2fLBkMdG8PGszZOPG7dhZx8s2O+BHGG3jgrsX/Lew8AlVlahtVroiT4Oj810Rop9D0HWHsHqHZ/2Odb0xIfD/8te7m/BPa0RjuoWf88xX2eXAlX6ckWOOeF7/e4pnNN3Tyh+1/pmJ01VKkih+GXAkbRWKO3Madxw7ykHjBNJtC+Eqy/jlZ+7GHJ8Sd/IE7jsWZQ8f1iOjPXpSLNxtluq4M66EFXwal11tbXN1hcyNCao++p7Jwzk1iz4pY1VeJRL9KjstPXPVZ1Ck2co5/XMksKMTbIcj8oOSQqJvGk8ggIIx3IJ6cBxi+Kbr2LM2dfs4XMT6IDXKdyYHLMhNvAbx5XFw6m6TOxpBA4886VxgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: Please walk me through a typical working day: what jobs do you plan and assign, what decisions do you make, and what information do you need at each step?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1546,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 77,
+  "output_tokens_details": {
+   "thinking_tokens": 24
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

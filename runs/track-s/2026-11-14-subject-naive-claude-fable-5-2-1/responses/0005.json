@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wRmGZaBYjSKBGaFTiA",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSlQYKEAgTGAI4AUIIdGhpbmtpbmcSDGUseSK0UkAXMPOh8BoMFanGOsxVja390Gh3IjCh+wXcKxd9o8fI4tTyQqmQzb0OiVJnvbZx10qKxDbO6KL9seK2FXh5G/8PAnnl3CsqsgXxRjVwji3fajw2spmom8IWCrNjMcyH9lg4j5Nc3Tn1k+ia9fGthonmYmIwImETZrRADAAG9BPf9iLhs+iQq8qlkhANRp9J8aiWALeiVHtQDA18scRs+lN0N6PImliOcLTSZaMxCqKkAaQpt4ix6fcrhjip0FXHW9TZkACs7SivwHgX/NvyUQzI4G2gmo0Q63KJVYV2aKfREelnrmlk/R/A2JoNi7P0TuYYKpqVn3s59HPpKr3f3UaFmVOsYjnmBfDqMtgXJU1+h+AU/7E0eBASCr7o2K3gMOYFKW8nIrojKrpM/g416DaS5IIWWXUU3vMlEBV9GRC9TxV99yAczAP055wn6xikGz0/wcPtNXWuOwHptgaRpmG2pIBFveHgp48gVsiNzhR2tvr6iWpYwTPWlPU7v3p/qg+54JzNrNOXU0OwIw6b/C5ntvmFZ+FmxAxFwZfHKRLK1dMPMUInIr04XSf0D3mWBEam8QeiE3uX/zrYaKS3ALrYCKbkFKU5sHq2ayL0WYPsQvkZQhK+kWUadhDPHZ2ebzwYylucS0YMTWgUOuPXAy2qjirX/TnZNwRIDt4fl0Z5vDSr7jLQ1OU4d51cMK5QNmr1p554nfgS5E+3RU8Erw3yl4FW2Zuwe95yj6YA3VVAGe+mMbA5VF/SMX9GrkD6QwnL4TfAc+S3xde5Nr1zrdWpPD3KHz4NGaW5htqcmpH8vwTbbSXLdUas/iFPXc/GSVypHH4AyUW7Hfhke5LhB3z8Ec4xs4CR4uUs5JKSAUqaS2DB7DgYxDCVhd5aYt3aP1nKkA3booGeKg+nbA6jICHEcWr9PMntvcEmvEqRI+evxQBSopb/uDs3ed1oDiJv3ua5M/PIOnImbI0FWC5F8fZdmg9soKqkObaZZZ3rRYRiZaxJVSok/YSG1OgYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: When you take a drone out of service for repair, what must happen to any job it is assigned to or flying, and what has to be true before it can be put back into service?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 837,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 78,
+  "output_tokens_details": {
+   "thinking_tokens": 25
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

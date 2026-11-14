@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wiFfoYnbWNDj4UKiHU",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSkwcKEAgTGAI4AUIIdGhpbmtpbmcSDBG7WkyDwHXoeJH36BoMBYHlwFZrI2KM+XW7IjB/ZIAcvIDRL5mNOcah5uQzgnhA+TpwVeGrYKvpYFsVaiLmAAZp7cVyofvK7jnuMdQqsAbu6jMEueOHHffWUyE4jefl8i+6EBDR06q+1EQ4qfsB8oYMuIrn0B5TGJTpkb1GGO2X19f38NVOXEhWVJ2Zz/m1U7BPEbwNxLmMyKvh4GG8kS+j29iDJqhhqAlRhDJP1YZvKSyLLYDMugEwZkgRRpCddpUoyEsGN0TTnbogkVW6BXZHFBvHhNjT+mUe4VRNT+Z7lqrHPxymHG/nM018UKNvVUuk18BWko+kBzv3y80xI0WylB+TxRln3Ts0A4VFJ7Yw3SaHSdxZFhcsJ73fJYYPqx8tcfdfQ222dD8BupPBCltTtcJ7WWrESFyCB+SIfphoyy4AMhZV3NOqtzOYTAK8pLECxv6vnn90wZVBbXshJp7HO7SI8iBrM+YtJvWFbZB2JYfQQbsPcuHGV+QMmWgUdgKEStiGxMKa2Gx3mEMaNWt3Q+fZyI9zYguDOHxleEMR7M/d9lwMFcdKs8NAMDb24VDUnidQzZ9QuwsCn+ZYukE7MN90HUeUhM8RjvqmghQYuNyq0s+xftEoUhVtj31UdcINf5gBwGKKFR0p2fifuC1ZpfobwLVJ/FuAQSgwEOfwj0ktnY/EGpiQdsOJFKhyeJw33r5tlrsESMhx8P+43kqvIBI00f1nxRspqkwyV03650awrRtDIWu+ten21plRS1LPqnFqNvsimRMfd9k2ncokRGjsUD9N9LuqD3pHJL+vKpXZzg5IydZ17aD1O/Zw7vQWIN6dGQZx2Y8bPhJESw2lJzTHuGgD4rJsC9dsPHhfxT2Opz21CFWq4X6Lfyqe265bceCaObz0w9MTnIvGWhuULcl1Yttk098K1gA2n2iqmpq6xXRXFx2/lGczwhsxNg/8nOZC6VBNO07jjWPQlayFeZXc+f7rUjaBwoaaH1+6nzcBwkEQ73eUxkwH0ok+hi/9uTMVmOK1w6E9HltIFbk9J0JXiih7hXmTPFkG17BxJR/5dVINTqtG2MpWQ9SIAkMsZDfLuEFuST4M6nyEi/ZtpRyZXUrPhyuoPL/gx9wDIm5Zg/EJjU32pMlFzT1/ZVoyeNpDzB01nE0VbqC0pEYsxZJ3wW/kjJ7No2dYnqMYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: How many drones, dispatchers, flights per day, and sites does your company have, and how quickly must the service respond for you to work well?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 5055,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 80,
+  "output_tokens_details": {
+   "thinking_tokens": 29
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

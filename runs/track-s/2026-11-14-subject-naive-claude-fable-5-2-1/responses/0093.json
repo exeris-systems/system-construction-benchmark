@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wmLsfSmFSgsXix6CzC",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS1gcKEAgTGAI4AUIIdGhpbmtpbmcSDEfs82+gnDXMTcL3rhoMX6yju42Oy0DVdyZPIjDZObQoGaVz4JQFP5SZRDWbAGgGMiMXdgegLELVK0bx68L/JOxH2Wzt6UmwTj0BkY8q8wY8mS53lR2DtznXOt9V7rmAiOF9AfgrUauX8bWYqqSHPP1BU7VLHGcQcnktxP5w3WQRBiVM2Of9YpDHOLc2D/EnZA57w6MJ//Uqq2whwpNo54pBeJmSBgjKHTrKjGij2OnWzTgRwHH1HpFsxwTvrIHpNx+grh+KCM1u0eEO6w8lcHnclT2KPKi1Jo8VouUcNAD1DXyTOmaQlpAVB1a7KYZr3QZzKUcqo2/lHNU1RIsyFg2q9WJfQ3/ogBigT14/+kPdeLUv7HFjpTQALR1TMWpCFLFE2o/K0URYxJAVCJoTmiJKaDKDkKbbQJOaScMZ2trOEVLyfyxPc7UUTG3ucxUEC/L/ZVr27nq1bCFwvVEPeou+q0ej7zAJYXCEq0QKEPUMgbLE+SUGf2mr4SL9w5j/X+Qe6zJGSIaGedn8w+Z1KBTRwPBGByKBiDvnLmUxZhmoqeCGlss/Cy9ZaNP4fj6Mf0lyuk1X9/k8+/FAr+Y4wPnEKmRmTgN+A5Htzd1nJqFyizDb87uC4lE0SGfEDK1fr/CRuBSy951vgtlE8cC+Cj4E5Q7diyqJ3bZDo67Ib6ZB1vFzZUpc0l5x1j3cwURXit3f6xijjISoc2rbWaiKRuPbcxMJ6NNL518uetRI7vytS90r2hPfpJyx+Y/Gbt1FnADl2q+Rgu6/V3tv6djjmPjeiRaHnX8hGWsBeb9RfkpZkUjU1SW1l3xXAqhhO8oM60aFPtmBj2f1mya0hHVPTf6sENLxn8LaNIFTmTXlp5A9fbK6dyfYfi0qGC8SVtgKQON1fu9RvuCSmKExI7BET6j4905HIW1QQv+eE2RNboRgp8ZhAqRbHt85UZUmPRRC+yqAStcLg7VtYEmhx2zWCs+mbCrlBkJZWH9Hsfhijj6zO6479KsO3cPGolhMrG3YcH3ozIW7FHeWrH46nUdRE8q01S1jYNlPRnyzUDsT266cYCVFToo5MRbRLw3ooHdXepKuPNiZCsNpHqeoEBfob4jqvhdqM3ZlUUU5/z36zNZmo9XoiFaIb+B/fbDm1X4U02RVmM9qA9BH1uocoIL7P76fg2a/ab/qlEmNUQaXmSUCqKnw5xEWpRnGYk2KTe4lrIdqy0vyCzzUXCLE2RPnmX8g8clusKMHdMvsrlUUyerRTZkk/llGIa08cc0UFGKcLf0IGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: What do your company's own systems need to get from the service or send to it?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 6390,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 71,
+  "output_tokens_details": {
+   "thinking_tokens": 41
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

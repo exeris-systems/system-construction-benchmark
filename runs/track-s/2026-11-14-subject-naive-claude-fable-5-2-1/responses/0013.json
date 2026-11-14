@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wTXhntdA8Rradv1vPq",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSwQYKEAgTGAI4AUIIdGhpbmtpbmcSDPsk+ZvDhhSouXS3zxoMKg2F5IRtCTLZMb6iIjD3hvUm+bdjrsST1eiqWjWys2OpQZpemmstlspNn1XU+pw2gTiILjbUwNMcPM327c0q3gWOZh093942UzoDdy0ARjP1jRVDdS06gMruznA4YI00TbfA6tE4zef+pYcPZicIfl9AJfhYBRb4txX//QCorI6R6uKPXqVN7hFpPnp7QIAHLEyG91VdfxIv5RtczNszn1t8XpjWKQX3mOmT9pJdEoRXQy3cIseSOXZkjI/PyJmxRGEJyU6XeZnIScnwbP8QodCrHgMlYVKBw0u4/HTElW/2JDujZegzBpYPwRd6XYvJ80YOpFs2WW0Sapq4FNzRH11B+0Bq6MIiLvkNQdVp96rLu3xVrCIpCVEumBj+heEe/1SMgwwATzLMR+c6OqsAKQ/wMwGdgoyZ25AzwH+iNxBjeepoxup6s2JACfuN8VQOepBhLfx6hrZ+0XJWTJ5gLF8kzUtIhAXhuvDvnj/CoEspPa2/Y8sHeSPNFp1mtYFRaVNCl7qtXfuBHwO4JlIrOetnyhVRNMDsEvRgnjBKDGGy2dbmYxBmim7LMaphtrfB/L5GRWG+N87wU0wZDGL2WiGjiO85+DQXfVM/tgOtH0ngA+fDBE5XMMuN4bVnApTostrr5iTZLrOhC/Dxx712bZRAqIr44rhXR0vIedkpr9ZCK6Q//LIkUM900AjjQSqCNS+uLI78L6ZVEQxD7Gn5fjYYB+R8AEjq5YYbeC3o/6m1L8Jt4kuF0mONtWZA6FhFRQt5RY8FtzE3Op16e3SsN4wjQbTuVkPCJ6M3NcvQq9/8bXu4MxtWKKgFqWGw5UTAk1sHlgMXzCS6Ip+f0ARCf/gBzvKWdaUHZj1MshsUEeAhNVkkUYmV1/e8tSayu0YXx2NnnmZQ12pQmKIi2riAr8SfJoOxeSzZY9CQyc5/NgyknN/dXi0d3AAdfnF6WqsjU2+tMBhD7gj5HOzrmQFaNa3JB3kOGee+qwm5g7/44FBIiEqseENmX5JKJFJSjOuqQiNkCVougk2KHI6Su6yUBg3Pf+24Ssnm1BaLwyiepRgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: What do you need to know about a charging pad before you send a drone to it?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1227,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 58,
+  "output_tokens_details": {
+   "thinking_tokens": 29
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

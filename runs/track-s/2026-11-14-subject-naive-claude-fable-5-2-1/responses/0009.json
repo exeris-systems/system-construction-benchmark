@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wSebkR7BkAiUahnUAj",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS0QYKEAgTGAI4AUIIdGhpbmtpbmcSDN7nCMjBGbQB1yaKQRoMciR1i4Mx2tbADle3IjDzuMBFgGSNfQfsOY1/fmGZXpQ9ShAymZm/eNpCZ/g2Eo9IuIiG1z+J4yfojCJXRpUq7gWjIxhwLdvzCixwMJy4lXpNv4F82H/ZsldQbZSBz/ioQL+Qlz/myZ+AvD75qPVQeRSzJfQuBhvE7xlHk8DGhGLNhkHmEMn3guQ/pSeM0TxtLlQAXvKbydI6CI3bMEtEDgDj3DsB6r8Twp8VC3UI6Gq4t5rbP3GYr9Hq1wVBApk52Nb+5iTYLeSk24L8Qhm3LSLcb7in1qldYdGtApsny2wZE/DzV27cb22YGgEYTXG5ikxChuK3keYGEINXIcmvWh+vw05dxU5tbhx64FxLlOssWDROj7mScsJF+bF14cnQUHJ3+u0pKKIR2AZ3DKYoU7ifXBt/foVxifN6EfxZcEHPabITB/bwU+MW5Ag56Ac1QMzqaR7QWUh6Q04i195NXYndfsVU9HP9/IbVVx/yWbjekzfoMeDtlUMJcevNI9N5Quvp2bJCqDpzftoW3pSvL7N15KwTtbSsmnHi++845GqWQ5yUljXJpp4spqE7zmI4VPjLCEPuGzrwWDE2CDmH90opSePYz9NOCnSrIJKQWfVGt2ilt+fAd9FXi6zcAhpe06lWEc0j4lNV2DU947W+ej99dS7rsXKX0Uaz7ZAPjTf5IrdkuCgHtRl9ISlbYfV7oB9jhUGFFi0+eJ0BOUoDyoXT25a19as3eY1D6TvaetUvcQXFN/he4+KLhvanz5sLmsGlf45F2x5ZxTPr3BR7n8dw3nCfA3n1KI2p5Qi8ghzv9shsdOZ+jLL4lhpNa9kbwTgOQ4cVYERCyNz16sKV4csbMim4CipRrG36rnYUQpdKFvqZKNVQd9VZl4GHbn73JOi/3zKF+E1j+90MVVO9OucwDho8tTaPFnqVzwbfEkFtTtkH0ND6nWdqN/6J8t5iuzUsLR5eUPo+P3QFQdg6TybczUo05oDZfkqAiUKlgqnV3oA7gf1sA2RMq+HMuLGnIFDm++XfQbtYxeawVBfigDnxygB4LPwjgkIm9CIGahHxUO+FqRi/jWtX6M86XZEYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: Are there any rules about sending a drone to charge, for example which charging pad it may use or how many drones a pad can take?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1013,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 87,
+  "output_tokens_details": {
+   "thinking_tokens": 42
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

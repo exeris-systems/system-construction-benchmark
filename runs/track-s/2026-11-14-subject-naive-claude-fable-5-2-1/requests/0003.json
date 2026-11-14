@@ -1,0 +1,29 @@
+{
+ "model": "claude-fable-5-2",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSiwYKEAgTGAI4AUIIdGhpbmtpbmcSDOmcYZtGTfExagH1IBoMqfatEzpL7fh59oOlIjBS5y7LZM5o9wdSsmuXjFyf3xxpmGn3VWB/7AlLfnimp5zsh4BO5xIAVN2qBjVY/iUqqAWS6UywbI7kvFqzw92mirzVXqAfc3Rdu4xErO4R3+8N6S9xvUCHohBSDJVmSgi4nSbmsfSloxeBuYyKPNh7lXy/vRHfIoERlID/iMRiFDmF30vO9yNNEi1wTd6yv9ED9F0SHbDeUntEmhgJUQzEv5r8FCvKQlXhQwBE3VsMInTBU+qQj9yIqmu3cQ3uUa6ZliqViKPayVj6mEzLyuJv74mA8cObf8YhIcYxEnIHqfYuH8VbTjAb88LlhSmk/M25JSf99rKgPDiy8eeSWffVeDUNHDfClzj/xTTxwJ8KB57APExgLmyHbbzBUImPV14yFbljlRT1V8f0xe6cn5462byxqpqidfXLsUaanKA5lWJiKZcsxUCWLkYDP62xaovZ8eBrLNsje+qbJOgg68lYmeLBi+uJstphlFa5achm8bp/8gcPHo4gvvOaS776PedxwzcPBSTZ7c0IWXQZ+axXIetCmlByRvfFcGomzGl4qSnIZj0KRhA2dTK75hFhC2tKVU0KYM49T9HI3VFBEeVdryLdIAxo+yKqgnDQDjiQRGbKxz3AANwqpSl1AA92ck1Whb7Lm1sGYo+ohhnHnAtpMGC7OVW10yjCrSAvAo7A/WHJxK8lMyYiH7rKZZ/vpJU0wDX8dbJG1PAlxmLr5ugjs8GZKQvqpxJ1E6PL0KQ8D2QpZknIKkSsYCTw+4aEWtSrhJuXOW7TeNY/9zSVsBXnWZRVQlbFjKwzy5Ukado2uAwgM9Nrpw+Re9TFfslJEz2ZPR3enZrBvHvsvKYVhauWnEvj0n7wPOpHYaxbJeWxL4N1oFK4fLm0RXYA5+Vohby3E1tjEPTW5yQ19HbDwd5ruEKGZD26GOzg+ev81zxovRY6B/yDe3fr6MNH5qHzoZLmUKbwtH4lEHUVKBgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Please walk me through a typical working day with your drone fleet: what do you check, record, or decide, in what order, and what information do you need at each step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep drones and charging equipment in working order by adding new drones, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs and put them back, as well as send drones to charge. Regulators can ask us to show how our drones have been looked after, and repairs and servicing are carried out by us technicians."
+  }
+ ]
+}

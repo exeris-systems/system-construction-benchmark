@@ -1,0 +1,101 @@
+{
+ "model": "claude-fable-5-2",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSiwYKEAgTGAI4AUIIdGhpbmtpbmcSDOmcYZtGTfExagH1IBoMqfatEzpL7fh59oOlIjBS5y7LZM5o9wdSsmuXjFyf3xxpmGn3VWB/7AlLfnimp5zsh4BO5xIAVN2qBjVY/iUqqAWS6UywbI7kvFqzw92mirzVXqAfc3Rdu4xErO4R3+8N6S9xvUCHohBSDJVmSgi4nSbmsfSloxeBuYyKPNh7lXy/vRHfIoERlID/iMRiFDmF30vO9yNNEi1wTd6yv9ED9F0SHbDeUntEmhgJUQzEv5r8FCvKQlXhQwBE3VsMInTBU+qQj9yIqmu3cQ3uUa6ZliqViKPayVj6mEzLyuJv74mA8cObf8YhIcYxEnIHqfYuH8VbTjAb88LlhSmk/M25JSf99rKgPDiy8eeSWffVeDUNHDfClzj/xTTxwJ8KB57APExgLmyHbbzBUImPV14yFbljlRT1V8f0xe6cn5462byxqpqidfXLsUaanKA5lWJiKZcsxUCWLkYDP62xaovZ8eBrLNsje+qbJOgg68lYmeLBi+uJstphlFa5achm8bp/8gcPHo4gvvOaS776PedxwzcPBSTZ7c0IWXQZ+axXIetCmlByRvfFcGomzGl4qSnIZj0KRhA2dTK75hFhC2tKVU0KYM49T9HI3VFBEeVdryLdIAxo+yKqgnDQDjiQRGbKxz3AANwqpSl1AA92ck1Whb7Lm1sGYo+ohhnHnAtpMGC7OVW10yjCrSAvAo7A/WHJxK8lMyYiH7rKZZ/vpJU0wDX8dbJG1PAlxmLr5ugjs8GZKQvqpxJ1E6PL0KQ8D2QpZknIKkSsYCTw+4aEWtSrhJuXOW7TeNY/9zSVsBXnWZRVQlbFjKwzy5Ukado2uAwgM9Nrpw+Re9TFfslJEz2ZPR3enZrBvHvsvKYVhauWnEvj0n7wPOpHYaxbJeWxL4N1oFK4fLm0RXYA5+Vohby3E1tjEPTW5yQ19HbDwd5ruEKGZD26GOzg+ev81zxovRY6B/yDe3fr6MNH5qHzoZLmUKbwtH4lEHUVKBgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Please walk me through a typical working day with your drone fleet: what do you check, record, or decide, in what order, and what information do you need at each step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep drones and charging equipment in working order by adding new drones, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs and put them back, as well as send drones to charge. Regulators can ask us to show how our drones have been looked after, and repairs and servicing are carried out by us technicians."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS1QUKEAgTGAI4AUIIdGhpbmtpbmcSDGchJbKPTTgWrVWWNhoMswNyHfOa6myN6e00IjA4baZJLFxt/DoEofC2LzxEURaET4cZg0V5k4exQ2bUhhbl1ZqJq1G2YJGdLCcshY0q8gS2eRDrUaOUjDzcK5ikSuTejmrL01W4h+gQNrGMYrK3+AES97KbaszGJARVLyRUWITWwJ+ChB1KA7KcgE6JTfiNT7TSri7smm+CoYV+9eqB/9jXQsDdgEYCs5cpZyvfgOejFJqdgs3UDThUicmZIhyMl+y3cbEWhxqEYjrze/apRuDZhgKPNKLrlkxIC4axbI6JH0FgGcO6gRVSfNXxYoqiqUZu3d86i0eEjIyCM6L2sf05ltpgR2iGa3ivd6dMQJvEaLvno+bJHNprqsibAUjcAKepLSrYy/8t69+LuYdShg9xfjNz9XHuBxcTixxJz+rvGhrzkp8ZttENPxLVU17qkDiGmWr4N1f0rtFjElABQL6q8+iBNA+Oeb3TadXmAM1Iy8vGgk1RFUAFyAZUqhi9M4yxgo6S3GlkZt/CyW3K4wVK7BwesESOqqBAtMH/5N30+wlRBOgi8ceFOBKgwTBLhJTRunXjKr2GXN0HwDL9bP374amG/GRQHw8EWLnyJFYn6I/Aqcyp79I23vmyDueAKZgZgK3ut+l61QwEED1z6azaMrI63Rj4MOj0GrX9wUN6FWQoP5Tyi/fbRaDXPB4ZvT2nlOMviGh90OirBXDq6yuTWB/IChlTreCWaevgfUVRdTOJNWrszmOcsaBS6023CKDIX1nOnPueltdRxFje3uTR08I3aEZLGHEn27Y+mJR/xK2vwFMCUTZ6XO3ROzlVgiFeyzh4rLi5/lgCzVLGL/nI80+HBLJX827OWSiJeMia1ZgFyV59FyCEhutIH+EDO6yH0GJIPhrSVPeFEr5DAhyMd3KRMgR6865WdCoz9bY/nRgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: When you add a new drone, what details must be recorded about it, and are there any rules about what makes a drone acceptable or not (e.g., unique identifiers, required fields, which site it belongs to)?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSlQYKEAgTGAI4AUIIdGhpbmtpbmcSDGUseSK0UkAXMPOh8BoMFanGOsxVja390Gh3IjCh+wXcKxd9o8fI4tTyQqmQzb0OiVJnvbZx10qKxDbO6KL9seK2FXh5G/8PAnnl3CsqsgXxRjVwji3fajw2spmom8IWCrNjMcyH9lg4j5Nc3Tn1k+ia9fGthonmYmIwImETZrRADAAG9BPf9iLhs+iQq8qlkhANRp9J8aiWALeiVHtQDA18scRs+lN0N6PImliOcLTSZaMxCqKkAaQpt4ix6fcrhjip0FXHW9TZkACs7SivwHgX/NvyUQzI4G2gmo0Q63KJVYV2aKfREelnrmlk/R/A2JoNi7P0TuYYKpqVn3s59HPpKr3f3UaFmVOsYjnmBfDqMtgXJU1+h+AU/7E0eBASCr7o2K3gMOYFKW8nIrojKrpM/g416DaS5IIWWXUU3vMlEBV9GRC9TxV99yAczAP055wn6xikGz0/wcPtNXWuOwHptgaRpmG2pIBFveHgp48gVsiNzhR2tvr6iWpYwTPWlPU7v3p/qg+54JzNrNOXU0OwIw6b/C5ntvmFZ+FmxAxFwZfHKRLK1dMPMUInIr04XSf0D3mWBEam8QeiE3uX/zrYaKS3ALrYCKbkFKU5sHq2ayL0WYPsQvkZQhK+kWUadhDPHZ2ebzwYylucS0YMTWgUOuPXAy2qjirX/TnZNwRIDt4fl0Z5vDSr7jLQ1OU4d51cMK5QNmr1p554nfgS5E+3RU8Erw3yl4FW2Zuwe95yj6YA3VVAGe+mMbA5VF/SMX9GrkD6QwnL4TfAc+S3xde5Nr1zrdWpPD3KHz4NGaW5htqcmpH8vwTbbSXLdUas/iFPXc/GSVypHH4AyUW7Hfhke5LhB3z8Ec4xs4CR4uUs5JKSAUqaS2DB7DgYxDCVhd5aYt3aP1nKkA3booGeKg+nbA6jICHEcWr9PMntvcEmvEqRI+evxQBSopb/uDs3ed1oDiJv3ua5M/PIOnImbI0FWC5F8fZdmg9soKqkObaZZZ3rRYRiZaxJVSok/YSG1OgYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: When you take a drone out of service for repair, what must happen to any job it is assigned to or flying, and what has to be true before it can be put back into service?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSmwYKEAgTGAI4AUIIdGhpbmtpbmcSDJ9Q8hLPTJ8KwqhvshoM2dsI5IsiTCcuAQm4IjAVNViFDB46EoAFR2RnsQcbdWpUgYBr2ubL1t+6o2//aT2bPkcbUWo6V+21pzjY/HsquAWvVADnEwp7PHLIG/pbgMwVrE2pIkZV9/PvaGdsedrPxR3O/Czqkmk6lDb68f4pqIzwvjt2qoXP6757orZL0yTv69Weop6nB1MYS6zBDzf5VnhQ2O0dhxun3Y8+4iTNwNZaWfe+GxAI/oOIaFBfKZNALk48VbMCs5PmiBg2xU/ZR+z/DF+sHopqZRgpPRPDc4aujeiZ8RuD9ndfhkxges6tUPdVtLuktQkLpT6+cMDVUDe7zpfnrOp0X23e6ksNOGpi4fxMlwcmTGUBIv+AXNhI3X1Awo5Ws8lseEgweTv/xS0DgfBifM9lzh043+nUhlK76qWFWKT6rcDRDZsK3XJvsnZ0YDCveielrPQSURHKgsrW+ToxTtFJ3N+ztjhPtnPslXkPEB7z/CajxROTdcxIpT51wMant0jzjENJnziO9iTYyhuucRjZBixnLXofw4CCbzawaW//Bw5OpN4tCCll4XTCt3oj3Mre2ehWL3SDFXXvI1w12vtBjVRcFFhIIiYN28JHKU6zdkwlBBE/w28SvBqF6mcUdoZJYrf5Y+zIYPGZgyxc2wXpQCriFuXFrpFZme+k9JG8b5xrGOTgehH4Hq8fbGHGHRWpg2JmE4REA4ZmlXyWQ9djkOfJwzXuPgSNtF7UgaroE9MU5G+4WHuu40Z5rB/ogWC1tJfuzaageBHBWlk+a6Ps7GH+uFIgQJy+mooFget7MEMbclzsAm8b2f2WsLFBmEb+tUb71qVrvexpwQjPkTc/FUYB8FxKocHsRPCZaFx/GlhVJMs9CWCxPyU3l3wGnFLnpeMyD+NaijuNSss8NCwIp7jfBorVaUynxj9zhxSfKGNmp20dwfRXD/gJoV6gBBshGkgrMI8zb68m5G1hT+rZbXu5tcv+1Lj0zaCPsODS5pZ922eBFNCdAcfqhn50bRIYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: What goes wrong today, or what are you most worried could go wrong, when taking drones out of service, returning them, retiring them, or sending them to charge?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS0QYKEAgTGAI4AUIIdGhpbmtpbmcSDN7nCMjBGbQB1yaKQRoMciR1i4Mx2tbADle3IjDzuMBFgGSNfQfsOY1/fmGZXpQ9ShAymZm/eNpCZ/g2Eo9IuIiG1z+J4yfojCJXRpUq7gWjIxhwLdvzCixwMJy4lXpNv4F82H/ZsldQbZSBz/ioQL+Qlz/myZ+AvD75qPVQeRSzJfQuBhvE7xlHk8DGhGLNhkHmEMn3guQ/pSeM0TxtLlQAXvKbydI6CI3bMEtEDgDj3DsB6r8Twp8VC3UI6Gq4t5rbP3GYr9Hq1wVBApk52Nb+5iTYLeSk24L8Qhm3LSLcb7in1qldYdGtApsny2wZE/DzV27cb22YGgEYTXG5ikxChuK3keYGEINXIcmvWh+vw05dxU5tbhx64FxLlOssWDROj7mScsJF+bF14cnQUHJ3+u0pKKIR2AZ3DKYoU7ifXBt/foVxifN6EfxZcEHPabITB/bwU+MW5Ag56Ac1QMzqaR7QWUh6Q04i195NXYndfsVU9HP9/IbVVx/yWbjekzfoMeDtlUMJcevNI9N5Quvp2bJCqDpzftoW3pSvL7N15KwTtbSsmnHi++845GqWQ5yUljXJpp4spqE7zmI4VPjLCEPuGzrwWDE2CDmH90opSePYz9NOCnSrIJKQWfVGt2ilt+fAd9FXi6zcAhpe06lWEc0j4lNV2DU947W+ej99dS7rsXKX0Uaz7ZAPjTf5IrdkuCgHtRl9ISlbYfV7oB9jhUGFFi0+eJ0BOUoDyoXT25a19as3eY1D6TvaetUvcQXFN/he4+KLhvanz5sLmsGlf45F2x5ZxTPr3BR7n8dw3nCfA3n1KI2p5Qi8ghzv9shsdOZ+jLL4lhpNa9kbwTgOQ4cVYERCyNz16sKV4csbMim4CipRrG36rnYUQpdKFvqZKNVQd9VZl4GHbn73JOi/3zKF+E1j+90MVVO9OucwDho8tTaPFnqVzwbfEkFtTtkH0ND6nWdqN/6J8t5iuzUsLR5eUPo+P3QFQdg6TybczUo05oDZfkqAiUKlgqnV3oA7gf1sA2RMq+HMuLGnIFDm++XfQbtYxeawVBfigDnxygB4LPwjgkIm9CIGahHxUO+FqRi/jWtX6M86XZEYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Are there any rules about sending a drone to charge, for example which charging pad it may use or how many drones a pad can take?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Each company has its own charging pads at its own sites, a few dozen of them, and pads are never lent to another company. Each drone has a home site, and several connector types are in use that are not interchangeable."
+  }
+ ]
+}

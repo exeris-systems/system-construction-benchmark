@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wRKTH5XoxPanz3k4R6",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS1QUKEAgTGAI4AUIIdGhpbmtpbmcSDGchJbKPTTgWrVWWNhoMswNyHfOa6myN6e00IjA4baZJLFxt/DoEofC2LzxEURaET4cZg0V5k4exQ2bUhhbl1ZqJq1G2YJGdLCcshY0q8gS2eRDrUaOUjDzcK5ikSuTejmrL01W4h+gQNrGMYrK3+AES97KbaszGJARVLyRUWITWwJ+ChB1KA7KcgE6JTfiNT7TSri7smm+CoYV+9eqB/9jXQsDdgEYCs5cpZyvfgOejFJqdgs3UDThUicmZIhyMl+y3cbEWhxqEYjrze/apRuDZhgKPNKLrlkxIC4axbI6JH0FgGcO6gRVSfNXxYoqiqUZu3d86i0eEjIyCM6L2sf05ltpgR2iGa3ivd6dMQJvEaLvno+bJHNprqsibAUjcAKepLSrYy/8t69+LuYdShg9xfjNz9XHuBxcTixxJz+rvGhrzkp8ZttENPxLVU17qkDiGmWr4N1f0rtFjElABQL6q8+iBNA+Oeb3TadXmAM1Iy8vGgk1RFUAFyAZUqhi9M4yxgo6S3GlkZt/CyW3K4wVK7BwesESOqqBAtMH/5N30+wlRBOgi8ceFOBKgwTBLhJTRunXjKr2GXN0HwDL9bP374amG/GRQHw8EWLnyJFYn6I/Aqcyp79I23vmyDueAKZgZgK3ut+l61QwEED1z6azaMrI63Rj4MOj0GrX9wUN6FWQoP5Tyi/fbRaDXPB4ZvT2nlOMviGh90OirBXDq6yuTWB/IChlTreCWaevgfUVRdTOJNWrszmOcsaBS6023CKDIX1nOnPueltdRxFje3uTR08I3aEZLGHEn27Y+mJR/xK2vwFMCUTZ6XO3ROzlVgiFeyzh4rLi5/lgCzVLGL/nI80+HBLJX827OWSiJeMia1ZgFyV59FyCEhutIH+EDO6yH0GJIPhrSVPeFEr5DAhyMd3KRMgR6865WdCoz9bY/nRgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: When you add a new drone, what details must be recorded about it, and are there any rules about what makes a drone acceptable or not (e.g., unique identifiers, required fields, which site it belongs to)?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 748,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 80,
+  "output_tokens_details": {
+   "thinking_tokens": 10
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
