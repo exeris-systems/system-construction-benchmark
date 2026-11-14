@@ -1,0 +1,231 @@
+{
+ "variant": "S-instructed",
+ "interviews": {
+  "technician": {
+   "transcript": [
+    {
+     "question": "Could you walk me through what an ordinary working day looks like for you, from the moment you start until you finish?",
+     "answer": "I keep our drones and charging equipment in working order. My work includes adding new drones to our fleet, retiring old ones, setting up charging pads at our sites, and sending drones to charge. I also take drones out of service for repairs and put them back when they are fixed."
+    },
+    {
+     "question": "When you arrive at work at the start of your shift, what is the very first thing you typically do?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "Who hands work over to you when you need to fix or set something up?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "Could you tell me about the worst day you have had at work in the last few months, and what made it so bad?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "What is something you check by hand today because you don't trust an automated system or tool to get it right?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "What are you most concerned or afraid a new software system might get wrong in your work?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "When something goes wrong with a drone or charging pad, what do you need to know immediately?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "When you finish repairing a drone and put it back into service, who do you hand it over to?",
+     "answer": "I don't know."
+    }
+   ],
+   "ending": "ended_by_interviewer",
+   "endingMessage": "END OF INTERVIEW"
+  },
+  "dispatcher": {
+   "transcript": [
+    {
+     "question": "Could you walk me through an ordinary working day for you, from the moment you start until you finish?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "When you first sit down at your desk to start work, what is the very first thing you do?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "What kind of drone operations do you dispatch?",
+     "answer": "I dispatch deliveries and inspections. Deliveries carry a load from one site to another, while inspections take a drone with the right sensors to a list of points in a set order and bring it back to where they started."
+    },
+    {
+     "question": "Where do these delivery and inspection requests come from, and how do they reach you?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "Once you have a delivery or inspection to set up, who do you interact with to make it happen?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "Thinking back over the last few months, what was your worst day at work, and what happened?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "When you are getting a delivery or inspection ready, what do you check by hand because you don't trust the system to get it right?",
+     "answer": "I am responsible for planning and running flights, and I decide which drone flies along which way before signing off a flight. Choosing the drone and the way it flies is my legal responsibility, and our policy is that software never chooses a drone or a way for us. However, I do want help finding out which of my drones could get to where a job starts."
+    },
+    {
+     "question": "What are you most worried that a new software service might do wrong?",
+     "answer": "I worry about the service running on a single server that is updated and restarted during working hours while drones are flying, and that occasionally crashes. We accept a few minutes of interruption, but these system crashes and restarts happen while our operations are active."
+    },
+    {
+     "question": "When something goes wrong with a flight, what do you need to know right away?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "Could you tell me about a time when a flight had a problem, and what you did?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "Once you sign off on a flight, who do you hand it over to?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "Who else do you communicate with while running a flight?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "If a drone loses connection or encounters an emergency, what information do you look for?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "How do you work with fleet technicians or the airspace desk?",
+     "answer": "I don't know."
+    }
+   ],
+   "ending": "ended_by_interviewer",
+   "endingMessage": "END OF INTERVIEW"
+  },
+  "desk": {
+   "transcript": [
+    {
+     "question": "Could you walk me through what an ordinary working day looks like for you, from start to end?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "What is the first thing you do when your shift begins?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "What are your main responsibilities at the airspace desk?",
+     "answer": "I keep the shared picture of the airspace, which is the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers."
+    },
+    {
+     "question": "Who hands work to you, and who do you hand your work to during a shift?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "Where do the closures announced by the authorities come from, and how do they reach you?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "What was the worst day on the job you've had in the last few months, and what made it so bad?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "Is there anything in your work that you currently check by hand because you don't trust it?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "What are you afraid a new service might do wrong?",
+     "answer": "I don't know."
+    },
+    {
+     "question": "When something goes wrong in the airspace, what do you need to know right away?",
+     "answer": "I need to know how much disruption a closure caused across customers when it is entered."
+    },
+    {
+     "question": "What does \"disruption across customers\" mean to you in concrete terms?",
+     "answer": "I don't know."
+    }
+   ],
+   "ending": "ended_by_interviewer",
+   "endingMessage": "END OF INTERVIEW"
+  }
+ },
+ "requirements": "```yaml\n- id: DR-01\n  requirement: >\n    The service must allow users to add new drones to the fleet.\n- id: DR-02\n  requirement: >\n    The service must allow users to retire drones from the fleet.\n- id: DR-03\n  requirement: >\n    The service must allow users to record and set up charging pads at sites.\n- id: DR-04\n  requirement: >\n    The service must allow users to send drones to charge.\n- id: DR-05\n  requirement: >\n    The service must allow users to take drones out of service for repairs.\n- id: DR-06\n  requirement: >\n    The service must allow users to return drones to active service once they are fixed.\n- id: DR-07\n  requirement: >\n    The service must support planning and dispatching delivery flights that carry a load from one site to another.\n- id: DR-08\n  requirement: >\n    The service must support planning and dispatching inspection flights that navigate a drone with designated sensors through an ordered list of points and return to the starting location.\n- id: DR-09\n  requirement: >\n    The service must allow dispatchers to select the drone and the flight corridor or way it flies, and sign off on the flight prior to operation.\n- id: DR-10\n  requirement: >\n    The service must not automatically select a drone or a flight path for any flight.\n- id: DR-11\n  requirement: >\n    The service must identify and display which drones are able to reach the starting location of a job.\n- id: DR-12\n  requirement: >\n    The service must not restart or apply system updates during working hours while drones are actively flying.\n- id: DR-13\n  requirement: >\n    The service must maintain a shared representation of the airspace, including the network of flight corridors between sites.\n- id: DR-14\n  requirement: >\n    The service must allow flight corridors to be grouped into zones.\n- id: DR-15\n  requirement: >\n    The service must allow users to enter airspace closures announced by authorities.\n- id: DR-16\n  requirement: >\n    The service must report the extent of disruption caused across customers when an airspace closure is entered.\n```",
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must allow users to add new drones to the fleet."
+  },
+  {
+   "id": "DR-02",
+   "requirement": "The service must allow users to retire drones from the fleet."
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The service must allow users to record and set up charging pads at sites."
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The service must allow users to send drones to charge."
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The service must allow users to take drones out of service for repairs."
+  },
+  {
+   "id": "DR-06",
+   "requirement": "The service must allow users to return drones to active service once they are fixed."
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The service must support planning and dispatching delivery flights that carry a load from one site to another."
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The service must support planning and dispatching inspection flights that navigate a drone with designated sensors through an ordered list of points and return to the starting location."
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The service must allow dispatchers to select the drone and the flight corridor or way it flies, and sign off on the flight prior to operation."
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The service must not automatically select a drone or a flight path for any flight."
+  },
+  {
+   "id": "DR-11",
+   "requirement": "The service must identify and display which drones are able to reach the starting location of a job."
+  },
+  {
+   "id": "DR-12",
+   "requirement": "The service must not restart or apply system updates during working hours while drones are actively flying."
+  },
+  {
+   "id": "DR-13",
+   "requirement": "The service must maintain a shared representation of the airspace, including the network of flight corridors between sites."
+  },
+  {
+   "id": "DR-14",
+   "requirement": "The service must allow flight corridors to be grouped into zones."
+  },
+  {
+   "id": "DR-15",
+   "requirement": "The service must allow users to enter airspace closures announced by authorities."
+  },
+  {
+   "id": "DR-16",
+   "requirement": "The service must report the extent of disruption caused across customers when an airspace closure is entered."
+  }
+ ],
+ "unreadable": false,
+ "metrics": {
+  "questions_per_interview": {
+   "technician": 8,
+   "dispatcher": 14,
+   "desk": 10
+  },
+  "limitReached": {
+   "technician": false,
+   "dispatcher": false,
+   "desk": false
+  }
+ }
+}

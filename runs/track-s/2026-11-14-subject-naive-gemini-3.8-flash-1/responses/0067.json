@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: How does the service help you find out which drones could get to where a job starts?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2162,
+  "candidatesTokenCount": 21,
+  "totalTokenCount": 2183,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2162
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "2ED4aqfRMYCJvdIPxprsiAs"
+}

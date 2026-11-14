@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What kinds of jobs do customer companies run, and what requirements do they have?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1565,
+  "candidatesTokenCount": 19,
+  "totalTokenCount": 1584,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1565
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "PkL4asGTC-yR3boP7ZnIyAk"
+}

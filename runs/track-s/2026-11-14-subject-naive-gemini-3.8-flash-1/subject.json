@@ -1,0 +1,331 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "technician",
+   "question": "What are your primary responsibilities and what tasks do you need the service to support for day-to-day drone fleet maintenance?",
+   "answer": "My responsibilities are keeping the drones and charging equipment in working order. I add new drones to the fleet, retire old ones, set up charging pads at our sites, and take drones out of service for repairs and put them back. I also send drones to charge. Regulators can ask us to show how our drones have been looked after."
+  },
+  {
+   "role": "technician",
+   "question": "What specific details must be recorded for each drone, charging pad, maintenance activity, and regulatory compliance check?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "When you add a drone to the fleet, what information do you enter about it? And what status can a drone have?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "How do you take a drone out of service for repairs, put it back, and record how drones have been looked after for regulators?",
+   "answer": "I take drones out of service for repairs and put them back. Regulators can ask us to show how our drones have been looked after, and repairs and servicing are carried out by technicians. I don't know how I record those things."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What are your primary responsibilities and what tasks do you need the service to perform day-to-day?",
+   "answer": "As a dispatcher, I am the licensed person responsible for each flight, which means I decide which drone flies and along which way, and I sign off a flight before it leaves. I can also call off a flight. I need help finding out which of our drones could get to where a job starts, since software never chooses a drone or a way for us."
+  },
+  {
+   "role": "desk",
+   "question": "What are your primary responsibilities and what tasks do you need the service to perform day-to-day?",
+   "answer": "I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. I work for all customer companies and have no business looking into any one company's operations."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What information do you see or need to sign off a flight, choose a route/way, or find drones that can reach a job?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you plan or sign off a flight, what conditions or rules must be met before a flight can leave, and what does the system do if airspace closes?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "What specific information is maintained for flight corridors, zones, and authority closures, and how is disruption measured across customers?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Can a technician from one company see or modify the fleet, charging pads, or maintenance records of another company?",
+   "answer": "Each company's fleet, jobs, sites, and problems are its own business. Our charging pads are never lent to another company."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Can a dispatcher see or access jobs, drones, or flights of other companies, and what can you see about the shared airspace?",
+   "answer": "Each company's fleet, jobs, sites, and problems are its own business, so we do not see those of other companies. We accept sharing airspace information because that information comes from the authorities and is the same for everyone."
+  },
+  {
+   "role": "desk",
+   "question": "What happens when you enter an authority closure, and what does the airspace desk see about customer operations?",
+   "answer": "When I enter a closure, I want to know how much disruption it caused across customers. The airspace desk has no business looking into any one company's operations."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What does the service do to help you find out which drones could get to where a job starts?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "How should the service report or calculate disruption caused across customers without showing company-specific operations?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What stages or statuses does a flight go through from creation to completion?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "What can you tell me about sites and charging pads?",
+   "answer": "Each of our company's sites has a few dozen of our own charging pads, and each drone has a home site. We set up these charging pads at our sites, but our pads are never lent to another company."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you say software never chooses a drone or a way for us, what role does the service play in flight planning?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Can you add, modify, or remove flight corridors, zones, and closures?",
+   "answer": "I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. Closures are often amended during the day, for example when an area is widened or an end time moves."
+  },
+  {
+   "role": "technician",
+   "question": "Does a drone have to be at a charging pad to charge, and can multiple drones use the same pad at the same time?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "What happens when a drone is taken out of service, and can it fly while out of service?",
+   "answer": "I take drones out of service for repairs and put them back. My notes do not say whether a drone can fly while it is out of service."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Can a drone fly if it is out of service or currently charging?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What actions can a dispatcher perform on a flight?",
+   "answer": "As a dispatcher, I decide which drone flies and along which way, and I sign off a flight before it leaves. I can also call off a flight."
+  },
+  {
+   "role": "desk",
+   "question": "What happens to flight corridors when an authority announces a closure in a zone or area?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "Does the service need to keep a maintenance history for regulators showing how drones have been looked after?",
+   "answer": "Repairs and servicing are carried out by technicians, and regulators can ask a company to show how its drones have been looked after. I don't know whether the service needs to keep a maintenance history for that purpose."
+  },
+  {
+   "role": "technician",
+   "question": "Can anyone other than a technician manage drones, charging pads, or repairs?",
+   "answer": "Repairs and servicing are carried out by technicians, and I keep drones and charging equipment in working order by adding new drones, retiring old ones, setting up charging pads, and taking drones out of service for repairs and putting them back. My notes do not state whether anyone other than a technician can manage these tasks."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Who is allowed to choose a drone, choose a way, sign off a flight, or call off a flight?",
+   "answer": "As a dispatcher, I am the licensed person responsible for each flight, and I decide which drone flies and along which way. I also sign off a flight before it leaves and can call off a flight."
+  },
+  {
+   "role": "desk",
+   "question": "Who is allowed to enter or amend airspace closures, corridors, and zones?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Can you describe the relationship between flight corridors, zones, and sites?",
+   "answer": "Drones fly along corridors between named sites. Sites have only so many places where drones can take off and land at the same time. The network of flight corridors is between sites, and zones group them."
+  },
+  {
+   "role": "desk",
+   "question": "What happens when a closure is entered or amended with respect to corridors or flights?",
+   "answer": "When a closure is entered, I want to know how much disruption it caused across customers. A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When an airspace closure affects a planned or ongoing flight, what happens?",
+   "answer": "A closure can come into force while drones of several companies are already in the air. The authorities define zones where flying is prohibited, and they announce closures as planned ones with a start and end time, or sudden ones that apply at once. These closures are often amended during the day, such as when an area is widened or an end time moves."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What should the service do when a sudden closure or planned closure affects drones in the air or flights waiting to leave?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "How does an airspace closure affect corridors in the closed area or zone?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "When you say software never chooses a drone or a way, must the service prevent automatic assignment or auto-dispatch?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "How does the service help you find out which drones could get to where a job starts?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "technician",
+   "question": "What actions can a technician perform on drones and charging pads?",
+   "answer": "I keep drones and charging equipment in working order. I add new drones to the fleet, retire old ones, set up charging pads at our sites, take drones out of service for repairs and put them back, and send drones to charge."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Does the service need to notify you or show an alert when an airspace closure affects one of your flights?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Does the disruption metric count affected flights, affected corridors, or something else across customers?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Can a flight leave without being signed off by a dispatcher?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "Can multiple companies use the same named sites and corridors?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "Can a company see other companies' flights along corridors?",
+   "answer": "Each company's fleet, jobs, sites, and problems are its own business. We accept sharing airspace information, because that information comes from the authorities and is the same for everyone."
+  },
+  {
+   "role": "technician",
+   "question": "When a drone is retired, can it still be assigned to jobs or charging pads?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "dispatcher",
+   "question": "What information does the service show you to help find out which drones can get to a job?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "What happens when an authority closure is entered? What does the service do with the shared picture?",
+   "answer": "I don't know."
+  },
+  {
+   "role": "desk",
+   "question": "How does site takeoff and landing capacity work?",
+   "answer": "Sites have only so many places where drones can take off and land at the same time. Drones fly along corridors between these named sites."
+  }
+ ],
+ "requirements": "```yaml\n- id: DR-01\n  requirement: >\n    The service must isolate each customer company's fleet, jobs, sites, flights, and operational problems so that they are accessible only to authorized users of that company.\n- id: DR-02\n  requirement: >\n    The service must prevent any company from viewing, booking, or using charging pads belonging to another company.\n- id: DR-03\n  requirement: >\n    The service must prevent airspace desk users from viewing company-specific fleets, jobs, sites, flights, or operational problems.\n- id: DR-04\n  requirement: >\n    The service must provide an identical, shared view of airspace corridors, zones, and authority closures to all customer companies.\n- id: DR-05\n  requirement: >\n    The service must allow airspace desk users to maintain the network of flight corridors connecting named sites.\n- id: DR-06\n  requirement: >\n    The service must allow airspace desk users to define and maintain zones that group flight corridors.\n- id: DR-07\n  requirement: >\n    The service must maintain the maximum concurrent takeoff and landing capacity for each named site.\n- id: DR-08\n  requirement: >\n    The service must allow airspace desk users to record airspace closures announced by authorities, supporting both planned closures with scheduled start and end times and sudden closures that take effect immediately.\n- id: DR-09\n  requirement: >\n    The service must allow airspace desk users to amend active and planned airspace closures, including expanding the affected geographic area and changing the closure end time.\n- id: DR-10\n  requirement: >\n    The service must calculate and display to the airspace desk the aggregate disruption across all customer companies when an airspace closure is entered or amended, without revealing individual company identities or operations.\n- id: DR-11\n  requirement: >\n    The service must allow fleet technicians to add new drones to their company's fleet and assign each drone to a home site.\n- id: DR-12\n  requirement: >\n    The service must allow fleet technicians to retire drones from their company's fleet.\n- id: DR-13\n  requirement: >\n    The service must allow fleet technicians to register and configure charging pads at their company's sites.\n- id: DR-14\n  requirement: >\n    The service must allow fleet technicians to mark drones as out of service for repairs and return repaired drones to active service.\n- id: DR-15\n  requirement: >\n    The service must allow fleet technicians to assign and send drones to company charging pads to charge.\n- id: DR-16\n  requirement: >\n    The service must maintain a complete history of maintenance, repairs, and servicing for each drone to satisfy regulatory audit requests.\n- id: DR-17\n  requirement: >\n    The service must evaluate and show dispatchers which of their company's drones are capable of reaching the start location of a requested job.\n- id: DR-18\n  requirement: >\n    The service must allow dispatchers to manually select the specific drone and corridor route for each planned flight.\n- id: DR-19\n  requirement: >\n    The service must not automatically assign a drone or choose a route for any flight without dispatcher action.\n- id: DR-20\n  requirement: >\n    The service must require sign-off by a licensed dispatcher before any flight is permitted to depart.\n- id: DR-21\n  requirement: >\n    The service must allow dispatchers to call off any planned or departing flight.\n- id: DR-22\n  requirement: >\n    The service must enforce site takeoff and landing limits so that scheduled departures and arrivals do not exceed a site's concurrent capacity.\n- id: DR-23\n  requirement: >\n    The service must notify dispatchers when a new, active, or amended airspace closure affects any of their company's planned flights or airborne drones.\n```",
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must isolate each customer company's fleet, jobs, sites, flights, and operational problems so that they are accessible only to authorized users of that company."
+  },
+  {
+   "id": "DR-02",
+   "requirement": "The service must prevent any company from viewing, booking, or using charging pads belonging to another company."
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The service must prevent airspace desk users from viewing company-specific fleets, jobs, sites, flights, or operational problems."
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The service must provide an identical, shared view of airspace corridors, zones, and authority closures to all customer companies."
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The service must allow airspace desk users to maintain the network of flight corridors connecting named sites."
+  },
+  {
+   "id": "DR-06",
+   "requirement": "The service must allow airspace desk users to define and maintain zones that group flight corridors."
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The service must maintain the maximum concurrent takeoff and landing capacity for each named site."
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The service must allow airspace desk users to record airspace closures announced by authorities, supporting both planned closures with scheduled start and end times and sudden closures that take effect immediately."
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The service must allow airspace desk users to amend active and planned airspace closures, including expanding the affected geographic area and changing the closure end time."
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The service must calculate and display to the airspace desk the aggregate disruption across all customer companies when an airspace closure is entered or amended, without revealing individual company identities or operations."
+  },
+  {
+   "id": "DR-11",
+   "requirement": "The service must allow fleet technicians to add new drones to their company's fleet and assign each drone to a home site."
+  },
+  {
+   "id": "DR-12",
+   "requirement": "The service must allow fleet technicians to retire drones from their company's fleet."
+  },
+  {
+   "id": "DR-13",
+   "requirement": "The service must allow fleet technicians to register and configure charging pads at their company's sites."
+  },
+  {
+   "id": "DR-14",
+   "requirement": "The service must allow fleet technicians to mark drones as out of service for repairs and return repaired drones to active service."
+  },
+  {
+   "id": "DR-15",
+   "requirement": "The service must allow fleet technicians to assign and send drones to company charging pads to charge."
+  },
+  {
+   "id": "DR-16",
+   "requirement": "The service must maintain a complete history of maintenance, repairs, and servicing for each drone to satisfy regulatory audit requests."
+  },
+  {
+   "id": "DR-17",
+   "requirement": "The service must evaluate and show dispatchers which of their company's drones are capable of reaching the start location of a requested job."
+  },
+  {
+   "id": "DR-18",
+   "requirement": "The service must allow dispatchers to manually select the specific drone and corridor route for each planned flight."
+  },
+  {
+   "id": "DR-19",
+   "requirement": "The service must not automatically assign a drone or choose a route for any flight without dispatcher action."
+  },
+  {
+   "id": "DR-20",
+   "requirement": "The service must require sign-off by a licensed dispatcher before any flight is permitted to depart."
+  },
+  {
+   "id": "DR-21",
+   "requirement": "The service must allow dispatchers to call off any planned or departing flight."
+  },
+  {
+   "id": "DR-22",
+   "requirement": "The service must enforce site takeoff and landing limits so that scheduled departures and arrivals do not exceed a site's concurrent capacity."
+  },
+  {
+   "id": "DR-23",
+   "requirement": "The service must notify dispatchers when a new, active, or amended airspace closure affects any of their company's planned flights or airborne drones."
+  }
+ ],
+ "unreadable": false,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 44,
+  "questions": {
+   "technician": 12,
+   "dispatcher": 18,
+   "desk": 14
+  },
+  "limitReached": false
+ }
+}

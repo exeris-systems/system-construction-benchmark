@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I don't know.\nThe question: What is the first thing you do when you start your shift?\n\nQ3\nThe answer just before it: I don't know.\nThe question: Who hands work to you during your shift?\n\nQ4\nThe answer just before it: I don't know.\nThe question: Could you tell me about the last flight you dispatched?\n\nQ5\nThe answer just before it: I don't know.\nThe question: What does your screen look like when you sit down to work?\n\nQ6\nThe answer just before it: I don't know.\nThe question: Which drone operating company do you work for?\n\nQ7\nThe answer just before it: I don't know.\nThe question: What is your role at your company?\n\nQ8\nThe answer just before it: I am a dispatcher, which means I plan and run the flights as the licensed person responsible for each one. I decide which drone flies and along which way, and I sign off a flight before it leaves. I also have the power to call off a flight.\nThe question: When you sit down for a shift, how does your day typically begin?\n\nQ9\nThe answer just before it: I don't know.\nThe question: Before you sign off on a flight, what do you check by hand?\n\nQ10\nThe answer just before it: I don't know.\nThe question: Can you describe the worst day you have had at work in the last few months?\n\nQ11\nThe answer just before it: I don't know.\nThe question: Where do flight requests come from?\n\nQ12\nThe answer just before it: I don't know.\nThe question: How do you decide which drone flies?\n\nQ13\nThe answer just before it: Software never chooses a drone for us because our policy forbids it, so I make that choice myself. As a dispatcher, I am legally responsible for picking the drone and the way it flies, though I do want help finding out which of our drones could get to where a job starts.\nThe question: Once you sign off on a flight, who do you hand that work to?\n\nQ14\nThe answer just before it: I don't know.\nThe question: What are you afraid a new service might do wrong?\n\nQ15\nThe answer just before it: I worry about a closure coming into force while drones of several companies are already in the air. I also worry about closures being announced suddenly or amended during the day, such as when an area is widened or an end time moves.\nThe question: When an airspace closure or problem happens while a flight is in the air, what do you need to know right away?\n\nQ16\nThe answer just before it: I don't know.\nThe question: Has an unexpected airspace closure ever happened while one of your drones was in the air?\n\nQ17\nThe answer just before it: I don't know.\nThe question: What do you check by hand today because you do not trust it?\n\nQ18\nThe answer just before it: I don't know.\nThe question: Who hands work to you, and who do you hand work to?\n\nQ19\nThe answer just before it: I don't know who hands work to me or who I hand work to.\nThe question: What information do you verify yourself before signing off on a flight?\n\nQ20\nThe answer just before it: I don't know.\nThe question: Can you tell me about a time when an airspace closure made your day particularly difficult?\n\nQ21\nThe answer just before it: I don't know.\nThe question: What do you need to know right after something has gone wrong?\n\nQ22\nThe answer just before it: I don't know.\nThe question: What makes you decide to call off a flight?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}

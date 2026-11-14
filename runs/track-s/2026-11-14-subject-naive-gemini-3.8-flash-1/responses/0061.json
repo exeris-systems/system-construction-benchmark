@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What should the service do when a sudden closure or planned closure affects drones in the air or flights waiting to leave?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2069,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 2095,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2069
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "xkD4as3rM__txN8P26qnaA"
+}

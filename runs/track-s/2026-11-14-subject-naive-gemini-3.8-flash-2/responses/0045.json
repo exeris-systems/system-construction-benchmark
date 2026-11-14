@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Does the charging connector on a charging pad need to match the drone's charging connector?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2024,
+  "candidatesTokenCount": 21,
+  "totalTokenCount": 2045,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2024
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "YkL4arnwOMz8kdUP842ggAM"
+}

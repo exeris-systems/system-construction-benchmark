@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Can two dispatchers assign the same drone or the same takeoff/landing spot at the same time? How should conflicts be handled?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1711,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 1740,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1711
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "SkL4asqhA5XGvdIPnYGe-Qg"
+}

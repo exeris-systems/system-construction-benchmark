@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What happens when a drone is taken out of service, and can it fly while out of service?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1441,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 1464,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1441
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "e0D4aorSOcPlxN8P1IGWmQE"
+}

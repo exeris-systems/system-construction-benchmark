@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: What are your primary responsibilities and what tasks do you need the service to perform day-to-day?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 745,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 770,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 745
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "HUD4aujuKuyR3boP7ZnIyAk"
+}

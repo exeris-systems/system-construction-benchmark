@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I don't know.\nThe question: When you first sit down at your desk to start work, what is the very first thing you do?\n\nQ3\nThe answer just before it: I don't know.\nThe question: What kind of drone operations do you dispatch?\n\nQ4\nThe answer just before it: I dispatch deliveries and inspections. Deliveries carry a load from one site to another, while inspections take a drone with the right sensors to a list of points in a set order and bring it back to where they started.\nThe question: Where do these delivery and inspection requests come from, and how do they reach you?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Once you have a delivery or inspection to set up, who do you interact with to make it happen?\n\nQ6\nThe answer just before it: I don't know.\nThe question: Thinking back over the last few months, what was your worst day at work, and what happened?\n\nQ7\nThe answer just before it: I don't know.\nThe question: When you are getting a delivery or inspection ready, what do you check by hand because you don't trust the system to get it right?\n\nQ8\nThe answer just before it: I am responsible for planning and running flights, and I decide which drone flies along which way before signing off a flight. Choosing the drone and the way it flies is my legal responsibility, and our policy is that software never chooses a drone or a way for us. However, I do want help finding out which of my drones could get to where a job starts.\nThe question: What are you most worried that a new software service might do wrong?\n\nQ9\nThe answer just before it: I worry about the service running on a single server that is updated and restarted during working hours while drones are flying, and that occasionally crashes. We accept a few minutes of interruption, but these system crashes and restarts happen while our operations are active.\nThe question: When something goes wrong with a flight, what do you need to know right away?\n\nQ10\nThe answer just before it: I don't know.\nThe question: Could you tell me about a time when a flight had a problem, and what you did?\n\nQ11\nThe answer just before it: I don't know.\nThe question: Once you sign off on a flight, who do you hand it over to?\n\nQ12\nThe answer just before it: I don't know.\nThe question: Who else do you communicate with while running a flight?\n\nQ13\nThe answer just before it: I don't know.\nThe question: If a drone loses connection or encounters an emergency, what information do you look for?\n\nQ14\nThe answer just before it: I don't know.\nThe question: How do you work with fleet technicians or the airspace desk?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}

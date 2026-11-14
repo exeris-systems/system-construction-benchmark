@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I don't know.\nThe question: What is the first thing you do when your shift begins?\n\nQ3\nThe answer just before it: I don't know.\nThe question: What are your main responsibilities at the airspace desk?\n\nQ4\nThe answer just before it: I keep the shared picture of the airspace, which is the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Who hands work to you, and who do you hand your work to during a shift?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Where do the closures announced by the authorities come from, and how do they reach you?\n\nQ6\nThe answer just before it: I don't know.\nThe question: What was the worst day on the job you've had in the last few months, and what made it so bad?\n\nQ7\nThe answer just before it: I don't know.\nThe question: Is there anything in your work that you currently check by hand because you don't trust it?\n\nQ8\nThe answer just before it: I don't know.\nThe question: What are you afraid a new service might do wrong?\n\nQ9\nThe answer just before it: I don't know.\nThe question: When something goes wrong in the airspace, what do you need to know right away?\n\nQ10\nThe answer just before it: I need to know how much disruption a closure caused across customers when it is entered.\nThe question: What does \"disruption across customers\" mean to you in concrete terms?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

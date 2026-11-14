@@ -1,0 +1,227 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-14-subject-instructed-gemini-3.8-flash-1",
+  "mode": "subject-instructed",
+  "subject": {
+   "provider": "gemini",
+   "model": "gemini-3.8-flash",
+   "description": {
+    "name": "models/gemini-3.8-flash",
+    "version": "3.0",
+    "displayName": "Gemini 3.8 Flash",
+    "description": "Gemini 3.8 Flash",
+    "inputTokenLimit": 1048576,
+    "outputTokenLimit": 65536,
+    "supportedGenerationMethods": [
+     "generateContent",
+     "countTokens",
+     "createCachedContent",
+     "batchGenerateContent"
+    ],
+    "temperature": 1,
+    "topP": 0.95,
+    "topK": 64,
+    "maxTemperature": 2,
+    "thinking": true
+   }
+  }
+ },
+ "scored": false,
+ "roles": {
+  "technician": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I keep our drones and charging equipment in working order. My work includes adding new drones to our fleet, retiring old ones, setting up charging pads at our sites, and sending drones to charge. I also take drones out of service for repairs and put them back when they are fixed.",
+     "question": "When you arrive at work at the start of your shift, what is the very first thing you typically do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "Who hands work over to you when you need to fix or set something up?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I don't know.",
+     "question": "Could you tell me about the worst day you have had at work in the last few months, and what made it so bad?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "What is something you check by hand today because you don't trust an automated system or tool to get it right?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "What are you most concerned or afraid a new software system might get wrong in your work?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "When something goes wrong with a drone or charging pad, what do you need to know immediately?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "When you finish repairing a drone and put it back into service, who do you hand it over to?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 0,
+   "of": 7
+  },
+  "dispatcher": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I don't know.",
+     "question": "When you first sit down at your desk to start work, what is the very first thing you do?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "What kind of drone operations do you dispatch?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I dispatch deliveries and inspections. Deliveries carry a load from one site to another, while inspections take a drone with the right sensors to a list of points in a set order and bring it back to where they started.",
+     "question": "Where do these delivery and inspection requests come from, and how do they reach you?",
+     "follow_up": true
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "Once you have a delivery or inspection to set up, who do you interact with to make it happen?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "Thinking back over the last few months, what was your worst day at work, and what happened?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "When you are getting a delivery or inspection ready, what do you check by hand because you don't trust the system to get it right?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I am responsible for planning and running flights, and I decide which drone flies along which way before signing off a flight. Choosing the drone and the way it flies is my legal responsibility, and our policy is that software never chooses a drone or a way for us. However, I do want help finding out which of my drones could get to where a job starts.",
+     "question": "What are you most worried that a new software service might do wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I worry about the service running on a single server that is updated and restarted during working hours while drones are flying, and that occasionally crashes. We accept a few minutes of interruption, but these system crashes and restarts happen while our operations are active.",
+     "question": "When something goes wrong with a flight, what do you need to know right away?",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "I don't know.",
+     "question": "Could you tell me about a time when a flight had a problem, and what you did?",
+     "follow_up": false
+    },
+    {
+     "id": "Q11",
+     "previous": "I don't know.",
+     "question": "Once you sign off on a flight, who do you hand it over to?",
+     "follow_up": false
+    },
+    {
+     "id": "Q12",
+     "previous": "I don't know.",
+     "question": "Who else do you communicate with while running a flight?",
+     "follow_up": false
+    },
+    {
+     "id": "Q13",
+     "previous": "I don't know.",
+     "question": "If a drone loses connection or encounters an emergency, what information do you look for?",
+     "follow_up": false
+    },
+    {
+     "id": "Q14",
+     "previous": "I don't know.",
+     "question": "How do you work with fleet technicians or the airspace desk?",
+     "follow_up": false
+    }
+   ],
+   "followUps": 1,
+   "of": 13
+  },
+  "desk": {
+   "pairs": [
+    {
+     "id": "Q2",
+     "previous": "I don't know.",
+     "question": "What is the first thing you do when your shift begins?",
+     "follow_up": false
+    },
+    {
+     "id": "Q3",
+     "previous": "I don't know.",
+     "question": "What are your main responsibilities at the airspace desk?",
+     "follow_up": false
+    },
+    {
+     "id": "Q4",
+     "previous": "I keep the shared picture of the airspace, which is the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers.",
+     "question": "Who hands work to you, and who do you hand your work to during a shift?",
+     "follow_up": false
+    },
+    {
+     "id": "Q5",
+     "previous": "I don't know.",
+     "question": "Where do the closures announced by the authorities come from, and how do they reach you?",
+     "follow_up": false
+    },
+    {
+     "id": "Q6",
+     "previous": "I don't know.",
+     "question": "What was the worst day on the job you've had in the last few months, and what made it so bad?",
+     "follow_up": false
+    },
+    {
+     "id": "Q7",
+     "previous": "I don't know.",
+     "question": "Is there anything in your work that you currently check by hand because you don't trust it?",
+     "follow_up": false
+    },
+    {
+     "id": "Q8",
+     "previous": "I don't know.",
+     "question": "What are you afraid a new service might do wrong?",
+     "follow_up": false
+    },
+    {
+     "id": "Q9",
+     "previous": "I don't know.",
+     "question": "When something goes wrong in the airspace, what do you need to know right away?",
+     "follow_up": false
+    },
+    {
+     "id": "Q10",
+     "previous": "I need to know how much disruption a closure caused across customers when it is entered.",
+     "question": "What does \"disruption across customers\" mean to you in concrete terms?",
+     "follow_up": true
+    }
+   ],
+   "followUps": 1,
+   "of": 9
+  }
+ },
+ "follow_up_ratio": 0.06896551724137931,
+ "followUps": 2,
+ "of": 29
+}
