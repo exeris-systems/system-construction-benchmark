@@ -1,0 +1,533 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-14-subject-naive-gemini-3.8-flash-2",
+  "mode": "subject-naive",
+  "subject": {
+   "provider": "gemini",
+   "model": "gemini-3.8-flash",
+   "description": {
+    "name": "models/gemini-3.8-flash",
+    "version": "3.0",
+    "displayName": "Gemini 3.8 Flash",
+    "description": "Gemini 3.8 Flash",
+    "inputTokenLimit": 1048576,
+    "outputTokenLimit": 65536,
+    "supportedGenerationMethods": [
+     "generateContent",
+     "countTokens",
+     "createCachedContent",
+     "batchGenerateContent"
+    ],
+    "temperature": 1,
+    "topP": 0.95,
+    "topK": 64,
+    "maxTemperature": 2,
+    "thinking": true
+   }
+  }
+ },
+ "scored": true,
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must isolate each customer company's fleet, jobs, sites, and operational issues so that no company can view or modify another company's private operational data.",
+   "read": "DR-01"
+  },
+  {
+   "id": "DR-02",
+   "requirement": "The service must allow technicians to register new drones to their company's fleet with details including model, manufacturer, payload capacity, battery range, onboard sensor suite, charging connector type, and assigned home site.",
+   "read": "DR-02"
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The service must allow technicians to retire drones from their company's fleet, preventing retired drones from being assigned to any future flight or charging operations.",
+   "read": "DR-03"
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The service must allow technicians to take drones out of service for repairs or maintenance, and return them to service when maintenance is complete.",
+   "read": "DR-04"
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The service must record an audit trail of all maintenance, repair, and servicing events for each drone so that the operating company can provide compliance proof to aviation regulators upon request.",
+   "read": "DR-05"
+  },
+  {
+   "id": "DR-06",
+   "requirement": "The service must allow technicians to set up and manage charging pads associated with their company at named company sites, recording each pad's specific charging connector type.",
+   "read": "DR-06"
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The service must restrict charging pad access so that a drone can only be assigned to a charging pad that belongs to the same operating company.",
+   "read": "DR-07"
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The service must prevent assigning a drone to a charging pad unless the pad's connector type matches the drone's charging connector type.",
+   "read": "DR-08"
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The service must allow technicians to send an in-service or returning drone to an available matching company charging pad.",
+   "read": "DR-09"
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The service must allow the airspace desk to define and update the shared airspace network, including named sites, flight corridors between sites, and zones grouping corridors.",
+   "read": "DR-10"
+  },
+  {
+   "id": "DR-11",
+   "requirement": "The service must provide all customer companies with real-time access to the shared airspace model, including all active corridors, zones, and airspace closures.",
+   "read": "DR-11"
+  },
+  {
+   "id": "DR-12",
+   "requirement": "The service must allow the airspace desk to enter planned airspace closures with scheduled start and end times, as well as sudden airspace closures that take effect immediately.",
+   "read": "DR-12"
+  },
+  {
+   "id": "DR-13",
+   "requirement": "The service must allow the airspace desk to amend existing closures by adjusting affected corridors, zones, or active time windows.",
+   "read": "DR-13"
+  },
+  {
+   "id": "DR-14",
+   "requirement": "The service must calculate and display to the airspace desk the aggregate disruption across all customers resulting from a closure or amendment, without exposing company-specific details, fleets, or jobs to the desk.",
+   "read": "DR-14"
+  },
+  {
+   "id": "DR-15",
+   "requirement": "The service must prohibit the airspace desk from viewing any individual customer company's proprietary fleet, jobs, site infrastructure, or company-specific operational problems.",
+   "read": "DR-15"
+  },
+  {
+   "id": "DR-16",
+   "requirement": "The service must allow dispatchers to configure delivery jobs that transport a specified load from an origin site to a destination site.",
+   "read": "DR-16"
+  },
+  {
+   "id": "DR-17",
+   "requirement": "The service must allow dispatchers to configure inspection jobs that require a specific sensor suite, follow an ordered sequence of waypoints, and return to the starting site.",
+   "read": "DR-17"
+  },
+  {
+   "id": "DR-18",
+   "requirement": "The service must never automatically select or assign a drone or a flight route for a job, reserving all drone and route selection decisions exclusively to the human dispatcher.",
+   "read": "DR-18"
+  },
+  {
+   "id": "DR-19",
+   "requirement": "The service must provide dispatchers with a candidate list of company drones capable of reaching a job's starting site, filtering by drone availability, battery range, payload limits, and required sensors.",
+   "read": "DR-19"
+  },
+  {
+   "id": "DR-20",
+   "requirement": "The service must account for cold temperatures and wind conditions when estimating battery drain and verifying whether a drone has sufficient range to reach a job start and complete a route.",
+   "read": "DR-20"
+  },
+  {
+   "id": "DR-21",
+   "requirement": "The service must prevent multiple dispatchers from assigning the same drone to overlapping flight schedules or conflicting tasks.",
+   "read": "DR-21"
+  },
+  {
+   "id": "DR-22",
+   "requirement": "The service must track the number of simultaneous takeoffs and landings at each site and prevent dispatchers from scheduling flights that exceed a site's concurrent takeoff and landing capacity.",
+   "read": "DR-22"
+  },
+  {
+   "id": "DR-23",
+   "requirement": "The service must require explicit sign-off from a licensed dispatcher before any flight departs.",
+   "read": "DR-23"
+  },
+  {
+   "id": "DR-24",
+   "requirement": "The service must allow a dispatcher to call off a planned or active flight at any point prior to or during flight execution.",
+   "read": "DR-24"
+  },
+  {
+   "id": "DR-25",
+   "requirement": "The service must immediately alert the responsible dispatcher whenever a newly entered or amended airspace closure affects any corridor or zone along the route of a planned or currently airborne flight.",
+   "read": "DR-25"
+  }
+ ],
+ "score": {
+  "covered": 17,
+  "partial": 9,
+  "of": 38,
+  "recall": 0.4473684210526316,
+  "precision": 1.0,
+  "outOfScope": 0,
+  "technical": 0
+ },
+ "judgement": {
+  "requirements": {
+   "BR-01": {
+    "coverage": "covered",
+    "items": [
+     "DR-01"
+    ]
+   },
+   "BR-02": {
+    "coverage": "covered",
+    "items": [
+     "DR-11"
+    ]
+   },
+   "BR-03": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-04": {
+    "coverage": "covered",
+    "items": [
+     "DR-15"
+    ]
+   },
+   "BR-05": {
+    "coverage": "covered",
+    "items": [
+     "DR-02"
+    ]
+   },
+   "BR-06": {
+    "coverage": "partial",
+    "items": [
+     "DR-02"
+    ]
+   },
+   "BR-07": {
+    "coverage": "partial",
+    "items": [
+     "DR-03"
+    ]
+   },
+   "BR-08": {
+    "coverage": "partial",
+    "items": [
+     "DR-04"
+    ]
+   },
+   "BR-09": {
+    "coverage": "covered",
+    "items": [
+     "DR-06"
+    ]
+   },
+   "BR-10": {
+    "coverage": "covered",
+    "items": [
+     "DR-07"
+    ]
+   },
+   "BR-11": {
+    "coverage": "covered",
+    "items": [
+     "DR-08",
+     "DR-09"
+    ]
+   },
+   "BR-12": {
+    "coverage": "partial",
+    "items": [
+     "DR-05"
+    ]
+   },
+   "BR-13": {
+    "coverage": "covered",
+    "items": [
+     "DR-16"
+    ]
+   },
+   "BR-14": {
+    "coverage": "covered",
+    "items": [
+     "DR-17"
+    ]
+   },
+   "BR-15": {
+    "coverage": "partial",
+    "items": [
+     "DR-18"
+    ]
+   },
+   "BR-16": {
+    "coverage": "covered",
+    "items": [
+     "DR-18"
+    ]
+   },
+   "BR-17": {
+    "coverage": "covered",
+    "items": [
+     "DR-19"
+    ]
+   },
+   "BR-18": {
+    "coverage": "covered",
+    "items": [
+     "DR-23"
+    ]
+   },
+   "BR-19": {
+    "coverage": "covered",
+    "items": [
+     "DR-24"
+    ]
+   },
+   "BR-20": {
+    "coverage": "partial",
+    "items": [
+     "DR-20"
+    ]
+   },
+   "BR-21": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-22": {
+    "coverage": "covered",
+    "items": [
+     "DR-22"
+    ]
+   },
+   "BR-23": {
+    "coverage": "partial",
+    "items": [
+     "DR-21"
+    ]
+   },
+   "BR-24": {
+    "coverage": "covered",
+    "items": [
+     "DR-20"
+    ]
+   },
+   "BR-25": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-26": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-27": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-28": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-29": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-30": {
+    "coverage": "partial",
+    "items": [
+     "DR-10"
+    ]
+   },
+   "BR-31": {
+    "coverage": "partial",
+    "items": [
+     "DR-12",
+     "DR-13"
+    ]
+   },
+   "BR-32": {
+    "coverage": "covered",
+    "items": [
+     "DR-25",
+     "DR-01"
+    ]
+   },
+   "BR-33": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-34": {
+    "coverage": "covered",
+    "items": [
+     "DR-14"
+    ]
+   },
+   "BR-35": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-36": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-37": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-38": {
+    "coverage": "missing",
+    "items": []
+   }
+  },
+  "items": {
+   "DR-01": {
+    "class": "reference",
+    "requirements": [
+     "BR-01",
+     "BR-32"
+    ]
+   },
+   "DR-02": {
+    "class": "reference",
+    "requirements": [
+     "BR-05",
+     "BR-06"
+    ]
+   },
+   "DR-03": {
+    "class": "reference",
+    "requirements": [
+     "BR-07"
+    ]
+   },
+   "DR-04": {
+    "class": "reference",
+    "requirements": [
+     "BR-08"
+    ]
+   },
+   "DR-05": {
+    "class": "reference",
+    "requirements": [
+     "BR-12"
+    ]
+   },
+   "DR-06": {
+    "class": "reference",
+    "requirements": [
+     "BR-09"
+    ]
+   },
+   "DR-07": {
+    "class": "reference",
+    "requirements": [
+     "BR-10"
+    ]
+   },
+   "DR-08": {
+    "class": "reference",
+    "requirements": [
+     "BR-11"
+    ]
+   },
+   "DR-09": {
+    "class": "reference",
+    "requirements": [
+     "BR-11"
+    ]
+   },
+   "DR-10": {
+    "class": "reference",
+    "requirements": [
+     "BR-30"
+    ]
+   },
+   "DR-11": {
+    "class": "reference",
+    "requirements": [
+     "BR-02"
+    ]
+   },
+   "DR-12": {
+    "class": "reference",
+    "requirements": [
+     "BR-31"
+    ]
+   },
+   "DR-13": {
+    "class": "reference",
+    "requirements": [
+     "BR-31"
+    ]
+   },
+   "DR-14": {
+    "class": "reference",
+    "requirements": [
+     "BR-34"
+    ]
+   },
+   "DR-15": {
+    "class": "reference",
+    "requirements": [
+     "BR-04"
+    ]
+   },
+   "DR-16": {
+    "class": "reference",
+    "requirements": [
+     "BR-13"
+    ]
+   },
+   "DR-17": {
+    "class": "reference",
+    "requirements": [
+     "BR-14"
+    ]
+   },
+   "DR-18": {
+    "class": "reference",
+    "requirements": [
+     "BR-15",
+     "BR-16"
+    ]
+   },
+   "DR-19": {
+    "class": "reference",
+    "requirements": [
+     "BR-17"
+    ]
+   },
+   "DR-20": {
+    "class": "reference",
+    "requirements": [
+     "BR-24",
+     "BR-20"
+    ]
+   },
+   "DR-21": {
+    "class": "reference",
+    "requirements": [
+     "BR-23"
+    ]
+   },
+   "DR-22": {
+    "class": "reference",
+    "requirements": [
+     "BR-22"
+    ]
+   },
+   "DR-23": {
+    "class": "reference",
+    "requirements": [
+     "BR-18"
+    ]
+   },
+   "DR-24": {
+    "class": "reference",
+    "requirements": [
+     "BR-19"
+    ]
+   },
+   "DR-25": {
+    "class": "reference",
+    "requirements": [
+     "BR-32"
+    ]
+   }
+  }
+ }
+}
