@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. I work for all customer companies and have no business looking into any one company's operations.\nThe question: What specific information is maintained for flight corridors, zones, and authority closures, and how is disruption measured across customers?\n\nQ3\nThe answer just before it: I don't know.\nThe question: What happens when you enter an authority closure, and what does the airspace desk see about customer operations?\n\nQ4\nThe answer just before it: When I enter a closure, I want to know how much disruption it caused across customers. The airspace desk has no business looking into any one company's operations.\nThe question: How should the service report or calculate disruption caused across customers without showing company-specific operations?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Can you add, modify, or remove flight corridors, zones, and closures?\n\nQ6\nThe answer just before it: I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. Closures are often amended during the day, for example when an area is widened or an end time moves.\nThe question: What happens to flight corridors when an authority announces a closure in a zone or area?\n\nQ7\nThe answer just before it: I don't know.\nThe question: Who is allowed to enter or amend airspace closures, corridors, and zones?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Can you describe the relationship between flight corridors, zones, and sites?\n\nQ9\nThe answer just before it: Drones fly along corridors between named sites. Sites have only so many places where drones can take off and land at the same time. The network of flight corridors is between sites, and zones group them.\nThe question: What happens when a closure is entered or amended with respect to corridors or flights?\n\nQ10\nThe answer just before it: When a closure is entered, I want to know how much disruption it caused across customers. A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves.\nThe question: How does an airspace closure affect corridors in the closed area or zone?\n\nQ11\nThe answer just before it: I don't know.\nThe question: Does the disruption metric count affected flights, affected corridors, or something else across customers?\n\nQ12\nThe answer just before it: I don't know.\nThe question: Can multiple companies use the same named sites and corridors?\n\nQ13\nThe answer just before it: I don't know.\nThe question: What happens when an authority closure is entered? What does the service do with the shared picture?\n\nQ14\nThe answer just before it: I don't know.\nThe question: How does site takeoff and landing capacity work?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}

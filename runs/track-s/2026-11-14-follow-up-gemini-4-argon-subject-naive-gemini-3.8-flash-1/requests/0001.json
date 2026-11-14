@@ -1,0 +1,25 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Q2\nThe answer just before it: My responsibilities are keeping the drones and charging equipment in working order. I add new drones to the fleet, retire old ones, set up charging pads at our sites, and take drones out of service for repairs and put them back. I also send drones to charge. Regulators can ask us to show how our drones have been looked after.\nThe question: What specific details must be recorded for each drone, charging pad, maintenance activity, and regulatory compliance check?\n\nQ3\nThe answer just before it: I don't know.\nThe question: When you add a drone to the fleet, what information do you enter about it? And what status can a drone have?\n\nQ4\nThe answer just before it: I don't know.\nThe question: How do you take a drone out of service for repairs, put it back, and record how drones have been looked after for regulators?\n\nQ5\nThe answer just before it: I take drones out of service for repairs and put them back. Regulators can ask us to show how our drones have been looked after, and repairs and servicing are carried out by technicians. I don't know how I record those things.\nThe question: Can a technician from one company see or modify the fleet, charging pads, or maintenance records of another company?\n\nQ6\nThe answer just before it: Each company's fleet, jobs, sites, and problems are its own business. Our charging pads are never lent to another company.\nThe question: What can you tell me about sites and charging pads?\n\nQ7\nThe answer just before it: Each of our company's sites has a few dozen of our own charging pads, and each drone has a home site. We set up these charging pads at our sites, but our pads are never lent to another company.\nThe question: Does a drone have to be at a charging pad to charge, and can multiple drones use the same pad at the same time?\n\nQ8\nThe answer just before it: I don't know.\nThe question: What happens when a drone is taken out of service, and can it fly while out of service?\n\nQ9\nThe answer just before it: I take drones out of service for repairs and put them back. My notes do not say whether a drone can fly while it is out of service.\nThe question: Does the service need to keep a maintenance history for regulators showing how drones have been looked after?\n\nQ10\nThe answer just before it: Repairs and servicing are carried out by technicians, and regulators can ask a company to show how its drones have been looked after. I don't know whether the service needs to keep a maintenance history for that purpose.\nThe question: Can anyone other than a technician manage drones, charging pads, or repairs?\n\nQ11\nThe answer just before it: Repairs and servicing are carried out by technicians, and I keep drones and charging equipment in working order by adding new drones, retiring old ones, setting up charging pads, and taking drones out of service for repairs and putting them back. My notes do not state whether anyone other than a technician can manage these tasks.\nThe question: What actions can a technician perform on drones and charging pads?\n\nQ12\nThe answer just before it: I keep drones and charging equipment in working order. I add new drones to the fleet, retire old ones, set up charging pads at our sites, take drones out of service for repairs and put them back, and send drones to charge.\nThe question: When a drone is retired, can it still be assigned to jobs or charging pads?"
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32768,
+  "temperature": 0.0,
+  "seed": 1,
+  "responseMimeType": "application/json"
+ }
+}
