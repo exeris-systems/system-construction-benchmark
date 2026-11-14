@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: When you say software never chooses a drone or a way for us, what role does the service play in flight planning?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1293,
+  "candidatesTokenCount": 27,
+  "totalTokenCount": 1320,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1293
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "ZkD4apOtAbqu3boP3IHSyA0"
+}

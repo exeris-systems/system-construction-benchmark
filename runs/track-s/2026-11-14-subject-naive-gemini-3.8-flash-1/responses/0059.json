@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: When an airspace closure affects a planned or ongoing flight, what happens?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1980,
+  "candidatesTokenCount": 17,
+  "totalTokenCount": 1997,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1980
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "wED4apnnMIfhnsEP8IOO4Qw"
+}

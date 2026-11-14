@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What information do you see or need to sign off a flight, choose a route/way, or find drones that can reach a job?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 842,
+  "candidatesTokenCount": 31,
+  "totalTokenCount": 873,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 842
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "I0D4aoT5MrmZkdUP8ZzVuQk"
+}

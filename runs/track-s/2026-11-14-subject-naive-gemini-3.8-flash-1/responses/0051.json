@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Who is allowed to choose a drone, choose a way, sign off a flight, or call off a flight?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1747,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 1773,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1747
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "qED4aqzTF47d7M8Py6XLqQI"
+}

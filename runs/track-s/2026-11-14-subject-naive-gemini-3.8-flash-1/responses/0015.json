@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: When you plan or sign off a flight, what conditions or rules must be met before a flight can leave, and what does the system do if airspace closes?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 881,
+  "candidatesTokenCount": 35,
+  "totalTokenCount": 916,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 881
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.8-flash",
+ "responseId": "KUD4ar25KMC5kdUPqq6ZmQg"
+}
