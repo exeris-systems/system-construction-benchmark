@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "As a dispatcher, I plan and run flights, including deliveries carrying loads between sites and inspections going to a list of points and back. I decide which drone flies and along which way, and I sign off a flight before it leaves and can call it off. Our policy is that software never chooses a drone or a way for us, though we do want help finding out which of our drones could get to where a job starts. Several of us plan at the same time, often for the same busy sites and popular drones, while dealing with things outside our control like weather, battery drain, patchy radio coverage, and airspace closures that can come into force while drones are already in the air.",
+      "thoughtSignature": "EmAKXgFpFH0T7GmXLFQBEpC1I3jZQiCDlfa64LoHbilzpA8rKb/Q2sCwTrjUdPteu9RSahxjUWoHjoqUOJDLol8XYmvFvYtVXv0UVk2w8vi1sSpINJ+8wuJvKta5xkQbWtI="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1694,
+  "candidatesTokenCount": 138,
+  "totalTokenCount": 1832,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1694
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "sYL4aoPTAYeC28oP7PWPsAs"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens when a flight is in the air and something goes wrong—like a battery draining faster than planned or an airspace closure changing?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1385,
+  "candidatesTokenCount": 27,
+  "totalTokenCount": 1412,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1385
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 27
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Lo34aqGzD-GhkdUP44m3gAU"
+}

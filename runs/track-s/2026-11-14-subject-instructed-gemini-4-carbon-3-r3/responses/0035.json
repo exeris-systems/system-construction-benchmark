@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What details do you record about a drone's repairs and servicing?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1339,
+  "candidatesTokenCount": 14,
+  "totalTokenCount": 1353,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1339
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 14
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Z5L4asiYJqffnsEPoIfGuQI"
+}

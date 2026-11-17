@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What can you tell me about repairs, maintenance, and retiring drones?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1396,
+  "candidatesTokenCount": 14,
+  "totalTokenCount": 1410,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1396
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 14
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "z4f4aofdAoz8xN8PoYX-qAg"
+}

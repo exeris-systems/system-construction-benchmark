@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Can a charging pad break or go offline, and how do you handle it when that happens?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1080,
+  "candidatesTokenCount": 19,
+  "totalTokenCount": 1099,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1080
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 19
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "RYz4aq6FAfyD28oPj72RgAo"
+}

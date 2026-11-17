@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What can you tell me about your sites and the charging pads at those sites?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1271,
+  "candidatesTokenCount": 16,
+  "totalTokenCount": 1287,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1271
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 16
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "vof4aqLPAbjPnsEPiPeT0Ak"
+}

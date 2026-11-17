@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Tell me everything about sites, jobs, deliveries, and inspections—what details are recorded for each, who sets up sites, and how jobs are created and tracked?",
+      "thoughtSignature": "EmcKZQFpFH0T3cn02MmfEhynwNkfkGNQ6J4TC6a4C8AY6jeo6VEgbXTBojT8okLigD7pfOlHT9XFmzIzRXaB6OPyjfYt0+lOJ2/jJzFqgX/KrSYSZSdEsA+1COyNTPAtHvoNeRWstLw7"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 878,
+  "candidatesTokenCount": 40,
+  "totalTokenCount": 918,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 878
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 40
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "yYL4atuXHqyZxN8PuZ6noQQ"
+}

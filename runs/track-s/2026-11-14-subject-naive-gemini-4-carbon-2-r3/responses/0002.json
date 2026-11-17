@@ -1,0 +1,31 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "As a dispatcher, I plan and run the flights for my company, deciding which drone flies along which way, and I sign off a flight before it leaves. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight. I need help finding out which of our drones could get to where a job starts, but our policy is that software never chooses a drone or a way for us. Drones fly on their own autopilots while people on the ground supervise, and nobody steers a drone with a stick through this service.",
+      "thoughtSignature": "EmAKXgFpFH0TBHq28eb/U0XwK9PIhMnOahOa3JSUcGcFy48jHnRO/2EDovZevWqsv17JFFj4BlMpjEfTEw7i2POiHtZgehYlOs2V6ff/v0joilmDgIucgoXY950a8X7OOr0="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1710,
+  "candidatesTokenCount": 120,
+  "totalTokenCount": 1830,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1710
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-3.5-flash-lite",
+ "responseId": "VoT4asrmN92yxN8PyJDayQg"
+}

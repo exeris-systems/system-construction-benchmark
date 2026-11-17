@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "How many drones can use a single charging pad at one time?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1646,
+  "candidatesTokenCount": 13,
+  "totalTokenCount": 1659,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1646
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 13
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "iJL4asCoFI-D7M8PoYHKsQc"
+}

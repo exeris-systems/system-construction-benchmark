@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What parts of the airspace picture do you currently double-check by hand because you don't fully trust them?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 841,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 864,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 841
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Bo74av_4FtKwvdIPh8KFsQQ"
+}

@@ -1,0 +1,39 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Walk me through the lifecycle of a job and a flight—how do jobs arrive, what details do they have, how do you plan a flight (including positioning a drone to the start site), sign off, launch, monitor, and finish it?"
+     },
+     {
+      "text": "\n"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 865,
+  "candidatesTokenCount": 55,
+  "totalTokenCount": 920,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 865
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 55
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "PYP4avq0IZW5vdIPlsvnwQE"
+}

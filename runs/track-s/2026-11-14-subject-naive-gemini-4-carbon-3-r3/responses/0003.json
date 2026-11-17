@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Walk me through your day-to-day work with the drone fleet and what you need this new service to do for you.",
+      "thoughtSignature": "EmYKZAFpFH0T1prrmoKnTQi/czpxxOmJbhVBUqZlTi28Cl6r1T6B+l3NlpCTbdypBKh04tNWTbRXvCwMBOmOxBWMezts/dO6VfnPnO03u8WoOIi2HOVPVuzl5CEEH12MH52XZwTzO2Y="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 583,
+  "candidatesTokenCount": 33,
+  "totalTokenCount": 616,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 583
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 33
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "RoX4ar_QMpHMkdUPrdOS8As"
+}

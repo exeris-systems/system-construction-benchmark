@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: What are your main day-to-day responsibilities, and what workflows do you need this new service to handle for you?",
+      "thoughtSignature": "EmcKZQFpFH0TwPIJP/LLfe8HYeGl4NNQL2fse7ZNaSaXsw067IzM3ASKjkfE8oQEUS0bSaLsQ75MQ7bQEEK582196gjPLhJWbA88NOGainzl4QvTgvX3y8GPPGx18o+CIHyskZCNeFU5"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 561,
+  "candidatesTokenCount": 32,
+  "totalTokenCount": 593,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 561
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 32
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "p4T4aonNGKrnxN8PsqWAiQw"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What do the reports coming from the drones actually tell you while a flight is underway?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1625,
+  "candidatesTokenCount": 17,
+  "totalTokenCount": 1642,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1625
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 17
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "MIn4atP2B8C5kdUPn66ZmQg"
+}

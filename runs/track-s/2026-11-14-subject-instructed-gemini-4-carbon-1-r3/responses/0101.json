@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you think about a new software service being built for your desk, what are you most afraid it might get wrong?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 651,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 675,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 651
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "wIn4apSxHKrDvdIPrpiL0Qs"
+}

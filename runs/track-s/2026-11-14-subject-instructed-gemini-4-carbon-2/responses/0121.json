@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Thinking back over the last few months, what was your worst day on the desk, and what made it so bad?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 764,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 788,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 764
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "4I34aui9POqLvdIP9729wAg"
+}

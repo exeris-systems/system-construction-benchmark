@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Can a drone charge at any of your sites, or only at its home site?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1300,
+  "candidatesTokenCount": 17,
+  "totalTokenCount": 1317,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1300
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 17
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Z4z4ataBEpOykdUP2Nz80Ak"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What kind of servicing or scheduled maintenance do your drones or charging pads require?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1333,
+  "candidatesTokenCount": 15,
+  "totalTokenCount": 1348,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1333
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 15
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "boz4aq28BZbZ28oPiPu18Qs"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What can you tell me about the batteries or battery levels of the drones?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1581,
+  "candidatesTokenCount": 15,
+  "totalTokenCount": 1596,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1581
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 15
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "6If4ap3mNpSCvdIPvNX2qQ0"
+}

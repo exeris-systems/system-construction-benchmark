@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What else do you know about your company's sites, charging pads, or fleet rules?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1306,
+  "candidatesTokenCount": 19,
+  "totalTokenCount": 1325,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1306
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 19
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "cIj4aqzcNLGUkdUPr8aGgA0"
+}

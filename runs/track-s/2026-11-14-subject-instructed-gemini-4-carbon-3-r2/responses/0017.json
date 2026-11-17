@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nWait... why did they say \"I don't know\" to that too?! Let's ask what they DO know or what they need from the new service! Let's ask one of the required topics directly without two clauses: \"what they check by hand today because they do not trust it\". Let's phrase it cleanly.What do you check by hand today because you don't trust how it is currently tracked?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1243,
+  "candidatesTokenCount": 90,
+  "totalTokenCount": 1333,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1243
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 90
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "i5H4arTjFsG3nsEP48-3yAg"
+}

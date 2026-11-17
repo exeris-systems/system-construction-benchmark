@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "How do you work with dispatchers or the airspace desk when you take a drone out of service for repairs, put it back, or send it to charge?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1128,
+  "candidatesTokenCount": 32,
+  "totalTokenCount": 1160,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1128
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 32
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "AYb4avfGM4Se28oP7LGxuQg"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What kinds of reports do the drones send in, and what is in them?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1239,
+  "candidatesTokenCount": 16,
+  "totalTokenCount": 1255,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1239
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 16
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "ZIj4asXHD8b8nsEPkOickAI"
+}

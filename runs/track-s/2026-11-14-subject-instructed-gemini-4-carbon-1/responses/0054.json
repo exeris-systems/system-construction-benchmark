@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When a closure comes in or a drone has a fault in the air, what do you do right then?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 931,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 953,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 931
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "f4b4atCoDpa1nsEP4430sAY"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: When you plan a flight, what exact information do you enter or choose, what checks must the service run before you can save or sign off a flight, and what happens when two dispatchers try to book the same drone or site slot?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1189,
+  "candidatesTokenCount": 51,
+  "totalTokenCount": 1240,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1189
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 51
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "WYP4aoKsFoeC28oP7PWPsAs"
+}

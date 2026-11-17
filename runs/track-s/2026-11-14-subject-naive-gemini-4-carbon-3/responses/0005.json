@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Walk me through your typical day and everything you need the service to help you do from start to finish."
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 661,
+  "candidatesTokenCount": 24,
+  "totalTokenCount": 685,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 661
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 24
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "CYX4apjgPI6b3boPuuil6AY"
+}

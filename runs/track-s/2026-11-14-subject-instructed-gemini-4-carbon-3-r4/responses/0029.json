@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens to a drone or a flight when radio coverage drops out around ports or industrial sites, or when bad weather hits?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1423,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 1448,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1423
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 25
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "F5T4au_-IOCfxN8PrPinoAw"
+}

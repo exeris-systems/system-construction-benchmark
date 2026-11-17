@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nInteresting—the user persona says \"I don't know\" to things outside their scripted facts! Let's carefully probe the six required topics and any domain details they *do* know!\nLet's check the required topics:\n1. ordinary working day, from start to end (asked)\n2. the worst day of the last few months, and what made it bad\n3. what they check by hand today because they do not trust it\n4. what they are afraid a new service would do wrong\n5. what they need to know right after something has gone wrong\n6. who they hand work to, and who hands work to them (asked 2 questions, let's also ask about fleet technicians and airspace desk specifically just in case!).\n\nLet's ask about the fleet technician and airspace desk without suggesting features, just asking how their work connects to technicians or airspace people, OR let's first ask about the worst day of the last few months! Let's ask about the worst day first.Could you tell me about the worst working day you've had in the last few months, and what made it so bad?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1016,
+  "candidatesTokenCount": 240,
+  "totalTokenCount": 1256,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1016
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 240
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "1JL4avKoA_S_nsEPt-XWgQc"
+}

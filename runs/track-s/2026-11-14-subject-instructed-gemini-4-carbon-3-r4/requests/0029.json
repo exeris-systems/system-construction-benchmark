@@ -1,0 +1,246 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a fleet technician. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The interviewee is ready. Ask your first question."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you walk me through an ordinary working day for you, from start to end?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep our drones and charging equipment in working order. I add new drones to our fleet, retire old ones, set up our charging pads at our sites, and take drones out of service for repairs and put them back. I also send drones to charge, and regulators can ask our company to show how our drones have been looked after."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you first arrive at work in the morning, what is the very first thing you do, and how does the day usually unfold from there until you clock out?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Which type of drone operating company do you work for, and how do tasks—like repairing or charging a drone—typically come to you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know which type of drone operating company I work for beyond being a fleet technician at one of them. Repairs and servicing are carried out by me."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Who hands work to you during the day, and who do you hand work off to?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Thinking back over the last few months, could you tell me about your worst day at work and what made it so bad?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know about my worst day at work. I know that radio coverage is patchy around ports, industrial sites, and in bad weather, and that batteries drain faster in cold and wind than planned."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Right after something goes wrong—like losing radio coverage or a battery draining faster than planned—what do you need to know right away?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you are looking after the drones and charging pads, what do you check by hand today because you don't trust it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When a new service is built for your work, what are you most afraid it would get wrong?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know what I would be most afraid of."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you tell me more about what is involved when you add a new drone to the fleet or retire an old one?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep drones and charging equipment in working order as part of my job. When handling the fleet, I add new drones, retire old ones, and take drones out of service for repairs or put them back."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When regulators ask your company to show how your drones have been looked after, what exact information do they ask for?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know what exact information they ask for. I only know that regulators can ask our company to show how our drones have been looked after, since repairs and servicing are carried out by technicians like me."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do you decide when to send a drone to charge, and how does setting up charging pads at your sites work?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I send drones to charge and set up charging pads at our company's sites, which number a few dozen and are never lent to another company. I also keep the charging equipment in working order."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What else can you tell me about your company's fleet, your sites, or how your drones operate?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Our company may run a few hundred drones of several models from different manufacturers. Each drone has a home site, and we have a few dozen charging pads at our sites. The drones differ in their carrying capacity, flight range on a full battery, sensors, and charging connectors, which are not interchangeable."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What happens when a drone needs to charge at a site—how do the different charging connectors affect where a drone can charge?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Our drones use several connector types that are not interchangeable. Because of this, a drone must use the correct charging equipment for its specific connector type. I send drones to charge, but I do not know how connector compatibility is handled across our sites beyond the fact that these different connectors exist."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When you take a drone out of service for repairs or put it back in service, how do others in your company know whether it is available to fly?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know how others in our company know whether a drone is available to fly. I simply take drones out of service for repairs and put them back."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32000
+ }
+}

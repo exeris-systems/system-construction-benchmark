@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nMore great details!\nLet's see what else:\n- What happens when several dispatchers try to book the same drone or landing/takeoff place or charging pad at the same time?\n- How do fleet technicians and the airspace desk affect what drones or ways can be planned?\n- What about other companies on the shared platform (confidentiality, competing, shared sites like hospitals or ports?)?\n- What happens when a flight is called off, or after an incident / audit (since they have legal responsibility)?\n\nLet's ask about how fleet technicians and the airspace desk fit into their planning and operations.How does the work of fleet technicians and the airspace desk affect your flights?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 3032,
+  "candidatesTokenCount": 144,
+  "totalTokenCount": 3176,
+  "cachedContentTokenCount": 656,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3032
+   }
+  ],
+  "cacheTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 656
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 144
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "yob4aryrJOCkkdUPoZX-iAI"
+}

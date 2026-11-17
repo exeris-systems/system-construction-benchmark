@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Walk me through your typical day—what tasks do you do to manage, inspect, maintain, and prepare the drones, payloads, batteries, and sites for your company?",
+      "thoughtSignature": "EmYKZAFpFH0TbZ32iyiCKGGFa7/TLgkauU3hNQ4GgYwJovzKQ+hUEjEzOEYnO7wBAXSXEoRWB3xLUBW1TtOS4Z7nPHQCQwdCRkujcYqfhSg+7yIUj1hEsEto0SHAcJIZxMnO2DvWbN0="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 620,
+  "candidatesTokenCount": 41,
+  "totalTokenCount": 661,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 620
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 41
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "RIL4arX2Jv2WxN8P3aWt-As"
+}

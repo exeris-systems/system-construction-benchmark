@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What do you check by hand today before signing off a flight because you don't trust the current systems?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1111,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 1133,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1111
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "mIb4arj2J82ckdUP5Y3G0QI"
+}

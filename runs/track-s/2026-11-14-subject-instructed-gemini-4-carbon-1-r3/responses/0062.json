@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What kinds of jobs are you planning flights for, and how do their routes or job points differ?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1310,
+  "candidatesTokenCount": 20,
+  "totalTokenCount": 1330,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1310
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 20
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "B4n4at2gI6n_vdIPs-vF6As"
+}

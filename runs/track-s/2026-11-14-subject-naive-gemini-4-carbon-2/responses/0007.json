@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Can you explain how jobs, sites, flight corridors, and payloads work together when you plan and sign off a flight?",
+      "thoughtSignature": "EmYKZAFpFH0T4t2nNh31OkjusPeoZzlx05hHY3H4gbaHKMotoEmXoc8RCqE/cfid2w4VODbnZUeUYJGq+17M4Q4HpEGzN5BDUB/VUcuqPm54CpHqby8+LOqRD+aX3q0yMXiACgrnsA0="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 818,
+  "candidatesTokenCount": 31,
+  "totalTokenCount": 849,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 818
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 31
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "noP4aoWLF8G5vdIP9KLKoQE"
+}

@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Walk me through your typical day from start to finish—what tasks do you perform regarding drones, batteries, payloads, sites, and maintenance, and what do you need from this service?",
+      "thoughtSignature": "EmcKZQFpFH0TH3RszIGTTYhGtixUrwIgf2/FkCcZZsR4ca3VaDSwMYcDDXfqqtcGPLYul5aUjcw6703+bW78e67a7g8o6t3m6rjZqlqRauIL3bz779aUuxnZ+56ZDvJQdu6Qkcx4y3yJ"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 601,
+  "candidatesTokenCount": 44,
+  "totalTokenCount": 645,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 601
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 44
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "WIT4aqO0CZC5kdUPuPe9kAU"
+}

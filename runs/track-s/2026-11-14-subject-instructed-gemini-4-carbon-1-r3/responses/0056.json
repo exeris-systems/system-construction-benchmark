@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When we build a new service for your work, what are you most afraid it might get wrong?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1016,
+  "candidatesTokenCount": 20,
+  "totalTokenCount": 1036,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1016
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 20
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "14j4apbOK4y1xN8PhMyEwA0"
+}

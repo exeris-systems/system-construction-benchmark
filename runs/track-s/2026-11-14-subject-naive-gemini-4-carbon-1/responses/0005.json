@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Walk me through your typical day—what tasks do you do regarding airspace information, restrictions, corridors, or coordinating across companies on the platform?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 729,
+  "candidatesTokenCount": 31,
+  "totalTokenCount": 760,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 729
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 31
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "WYL4auCDEqerxN8PyezfaQ"
+}

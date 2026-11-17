@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Besides the drone's model and the weather, what else do you check about a specific drone or its location before signing off a flight?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1090,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 1118,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1090
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "7Iz4ap6UINrQvdIPvYqR8Q0"
+}

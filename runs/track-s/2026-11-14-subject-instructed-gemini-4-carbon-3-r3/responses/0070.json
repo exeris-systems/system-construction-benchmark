@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nAha!! \"Sites have only so many places where drones can take off and land at the same time.\"\nLet's see what else they know about drones, sensors, loads, batteries, corridors, maintenance/technicians, airspace!\nLet's ask what makes a drone eligible or able to take on a specific delivery or inspection job (e.g., load, sensors, battery, location, readiness).What determines whether a particular drone can take on a given delivery or inspection job and get to where the job starts?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1800,
+  "candidatesTokenCount": 115,
+  "totalTokenCount": 2044,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1800
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 115
+   }
+  ],
+  "thoughtsTokenCount": 129,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "85L4avv7OvSOvdIP7oKXwQQ"
+}

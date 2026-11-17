@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Walk me through your typical day—who do you work for (the platform or an operator), and what airspace information, rules, alerts, or approvals do you manage in the service?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 722,
+  "candidatesTokenCount": 40,
+  "totalTokenCount": 762,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 722
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 40
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "NoP4arqxPIy1xN8PhMyEwA0"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nOh!! That unlocked a ton of domain facts! Let's look carefully at every phrase there:\n- \"Drones are of several models from different manufacturers that differ in their payload capacity, full-battery flight range, carried sensors like cameras, thermal cameras, and laser scanners, and charging connector types.\"\n- \"Each drone has a home site and its own charging pads at the company's own sites.\"\n- \"Batteries drain faster in cold and wind than planned, and the load must be ready.\"\n\nLet's follow up on sites, charging pads, home sites, and corridors! What about customer sites vs company sites, or corridors between named sites? Let's ask about sites and corridors!Could you tell me more about the sites and corridors you fly between—for instance, how company sites differ from other sites, and how corridors work?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1994,
+  "candidatesTokenCount": 178,
+  "totalTokenCount": 2172,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1994
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 178
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "GpP4atHtKu3yvdIPk_eh0AI"
+}

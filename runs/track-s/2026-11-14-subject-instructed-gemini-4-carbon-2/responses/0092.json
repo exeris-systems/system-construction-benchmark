@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What happens to a drone or a job after a flight arrives at its destination or gets called off?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1870,
+  "candidatesTokenCount": 20,
+  "totalTokenCount": 1890,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1870
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 20
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "aI34apXJBZC5kdUPuPe9kAU"
+}

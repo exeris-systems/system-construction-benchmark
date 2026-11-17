@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What constitutes a \"job\" and a \"flight\" in detail—what information defines them, how are sites and job points represented, and how do different types of operations (like delivery, inspection, hospital logistics) differ?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 897,
+  "candidatesTokenCount": 48,
+  "totalTokenCount": 945,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 897
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 48
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "H4T4at7gNtLZkdUPmoioyQk"
+}

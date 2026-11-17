@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Which of the companies do you work for, and what kinds of drones and sites are you looking after?",
+      "thoughtSignature": "EmcKZQFpFH0TJt2/F0uqzjoQXAI7Wrbl03Ymj56oqFY5OGxWOLiFCTdMOA4cffuup2mLy530pJe38nS+ZcLvLtOKSMbOO2gdtAa8XX5KGixJHfhaVl5i0bs032U7w/IeDPm57gevt3a/"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 630,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 655,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 630
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 25
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "v4X4aoLWEbSzkdUPm9ycwAk"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Thinking about a new shared service coming in, what are you afraid it might get wrong?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 823,
+  "candidatesTokenCount": 18,
+  "totalTokenCount": 841,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 823
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 18
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "a5T4aqDFJ-WS3boP6vDguAk"
+}

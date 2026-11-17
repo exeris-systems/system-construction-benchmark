@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Are there any legal, audit, or safety records that have to be kept about your sign-offs, flights, or decisions?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1906,
+  "candidatesTokenCount": 26,
+  "totalTokenCount": 1932,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1906
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 26
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "b434atyaDKyZxN8PuZ6noQQ"
+}

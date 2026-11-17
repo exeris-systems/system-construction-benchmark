@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you tell me more about those reports from people and devices outside the company—how do they reach you, and what do you do with them?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1523,
+  "candidatesTokenCount": 30,
+  "totalTokenCount": 1553,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1523
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 30
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "QI34aufBI_ShnsEP7OmmUA"
+}

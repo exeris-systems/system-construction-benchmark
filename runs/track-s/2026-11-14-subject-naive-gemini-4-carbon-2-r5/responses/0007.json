@@ -1,0 +1,39 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: How do jobs or missions enter the system, what details do they have, and how do you turn a job into a planned and signed-off flight?"
+     },
+     {
+      "text": "\n"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 824,
+  "candidatesTokenCount": 36,
+  "totalTokenCount": 860,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 824
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 36
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "7oT4atm6EOmQ3boPleScyQU"
+}

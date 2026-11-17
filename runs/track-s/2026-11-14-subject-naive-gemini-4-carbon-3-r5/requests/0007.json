@@ -1,0 +1,70 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Begin."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK dispatcher: Walk me through your typical day from start to finish—what tasks do you need this service to do for you, and what are the hardest parts of running flights day to day?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I plan and run flights as a dispatcher, deciding which drone flies along which way and signing off on each flight before it leaves. Several of us plan at the same time for the same busy sites and popular drones, and I use the service to help find which of my drones can get to a job's starting point. I also call off flights when needed, but the policy is that software never chooses a drone or way for us. Running flights is hard because things happen outside our control, batteries drain faster in cold and wind than planned, and closures can come into force while drones are already in the air."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK technician: Walk me through your typical day—what tasks do you need this service to do for you, and what do you manage regarding drones, batteries, sites, and problems?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep our drones and charging equipment in working order by adding new drones to the fleet, retiring old ones, and setting up charging pads at our sites. I take drones out of service for repairs and put them back, and I send drones to charge. We run a few hundred drones of several models from different manufacturers, which differ in payload, flight range, sensors, and charging connectors. Our repairs and servicing are carried out by technicians, and regulators can ask us to show how our drones have been looked after."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "ASK desk: Walk me through your typical day at the airspace desk—who do you work for, what airspace information do you manage, and how do you interact with the drone operators and authorities?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I work for the platform company, running a shared service for several independent drone operating companies. My job on the airspace desk is to keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32000
+ }
+}

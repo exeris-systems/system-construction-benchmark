@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Is there anything else at all about your job, your company's needs, or the operating environment that we haven't covered yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2106,
+  "candidatesTokenCount": 28,
+  "totalTokenCount": 2134,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2106
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 28
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "Y4n4arTIItGQ3boPx-Om4Aw"
+}

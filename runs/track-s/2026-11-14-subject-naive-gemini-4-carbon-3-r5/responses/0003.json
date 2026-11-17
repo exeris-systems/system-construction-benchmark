@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK technician: Walk me through your typical day—what tasks do you need this service to do for you, and what do you manage regarding drones, batteries, sites, and problems?",
+      "thoughtSignature": "EqoBCqcBAWkUfROnxTuydaRZLs2fNHcX0gSpS+Vln5azoYKUF/XrryVUCmf6qGEN1ZDwETv361BTNA3Wj1D0su4NoNnB641opwujcHcv3WUatgLMNZPrdr1E8gijYML9mzs+UBdVxdiu8IYGbYsPETWRQIGmdlfBD26cm14lnEmdjk+1eGOnfOh3wANMbrhBWJtLNGmDfJ/P2202Bw/JEUfaAJMUq+HMPppY9NE="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 603,
+  "candidatesTokenCount": 41,
+  "totalTokenCount": 658,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 603
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 41
+   }
+  ],
+  "thoughtsTokenCount": 14,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "mYX4auScCPGMxN8P06iviQ8"
+}

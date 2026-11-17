@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Thinking about a new software service being built for your work, what are you most afraid it would get wrong?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1308,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 1330,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1308
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "EIb4auPdEdia28oPtc2A6As"
+}

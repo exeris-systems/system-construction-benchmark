@@ -1,0 +1,294 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a dispatcher. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The interviewee is ready. Ask your first question."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you walk me through an ordinary working day for you, from start to finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I plan and run flights for my drone operating company, deciding which drone flies along which way and signing off on flights before they leave. Several of us plan at the same time, often for the same busy sites and popular drones, and I can call off a flight if needed. Before and during a flight, things happen outside my control like whether a load is ready, how the drone reaches its job points, and when it arrives."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do those jobs first reach you when you start your shift?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Who do you interact with—who hands work to you, and who do you hand work off to during the day?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Could you give me an example of what happens when several of you are trying to plan for the same drone or busy site at the same time?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Several of us plan at the same time, often for the same busy sites and the same popular drones. That worries me when we are trying to plan for those same busy sites and popular drones simultaneously."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Tell me about the worst day you've had in the last few months—what happened, and what made it so bad?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Radio coverage was patchy in bad weather and around industrial sites, meaning reports from drones arrived late, out of order, more than once, or not at all. Drones sometimes restarted in flight after a software fault and carried on, while closures were amended during the day and could even come into force while drones from several companies were already in the air. Batteries also drained faster in cold and wind than planned, and the server was updated and restarted during working hours while drones were flying, occasionally crashing."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When something goes wrong like that—whether a flight problem or a server crash—what is the very first thing you need to know right afterward?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Thinking about that bad day, when an airspace closure came into force while your drones were already in the air, how did you find out and what did you have to do?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What things do you check by hand today before or during a flight because you don't fully trust the current information?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "When we build a new service for your work, what are you most afraid it might get wrong?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I worry about a server crash, since the service runs on a single server that is updated and restarted during working hours while drones are flying, and the platform company accepts a few minutes of interruption. I am also concerned that closures can come into force while drones of several companies are already in the air, and that closures are often amended during the day, such as when an area is widened or an end time moves."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Before you sign off on a flight to leave, what information do you look at to decide which drone to use and which way it should go?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I decide which drone flies along which way, and I sign off a flight before it leaves. I want help finding out which of my drones could get to where a job starts, but software never chooses a drone or a way for us."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What makes a drone suitable or able to get to where a job starts?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Drones differ in how much they can carry, how far they can fly on a full battery, which sensors they carry like cameras, thermal cameras, or laser scanners, and which charging connector they use. Each drone has a home site, and each company has its own charging pads at its own sites, which are never lent to another company."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What kinds of jobs are you planning flights for, and how do their routes or job points differ?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I plan deliveries that carry a load from one site to another, and inspections that take a drone with the right sensors to a list of points in a set order before bringing it back to the starting point. Drones fly along corridors between named sites, and sites have a limited number of places where drones can take off and land at the same time."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What determines when you need to call off a flight, either before it leaves or while it is in the air?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I can call off a flight, and I am the licensed person responsible for each flight. Beyond that, I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Earlier you mentioned things happening outside your control, like whether a load is ready—how do you find out when a load is ready or when a drone reaches its job points?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do fleet technicians or the airspace desk come into your work, if at all?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What happens when a drone finishes a flight at a site that isn't its home site?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Besides closures, what else affects the corridors or sites when you are deciding which way a drone should fly?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32000
+ }
+}

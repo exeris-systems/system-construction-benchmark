@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Do you ever communicate directly with dispatchers, fleet technicians, or the authorities, and if so, when?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1274,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 1296,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1274
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "UI74auDvHJfHkdUP-MSNqQk"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Walk me through your typical day from start to finish—who do you work for, what airspace information do you handle, and how does your work affect dispatchers and flights across the companies?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 721,
+  "candidatesTokenCount": 41,
+  "totalTokenCount": 762,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 721
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 41
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "LIX4as3xGuSUkdUPwZrFSA"
+}

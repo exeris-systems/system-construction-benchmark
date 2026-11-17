@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Are there any other parts of your job on the airspace desk, or any other concerns you have about a new service, that we haven't touched on yet?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1352,
+  "candidatesTokenCount": 33,
+  "totalTokenCount": 1385,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1352
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 33
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "XI74avaGPJiinsEP_vGE4Qw"
+}

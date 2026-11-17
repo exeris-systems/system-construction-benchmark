@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "How do you know which drones in your fleet are fit to fly or currently available when you are planning?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1833,
+  "candidatesTokenCount": 21,
+  "totalTokenCount": 1854,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1833
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 21
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "X434atOZHK2E7M8P84D5yAo"
+}

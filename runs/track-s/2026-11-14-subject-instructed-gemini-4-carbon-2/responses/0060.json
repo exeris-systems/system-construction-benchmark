@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Thinking about airspace closures being amended during the day, could you give me a concrete example of how a closure changes and how that affects your flights?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 763,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 792,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 763
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "x4z4ar2KOamVkdUP3MKV0Qw"
+}

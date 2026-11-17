@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "When you take a drone out of service for repairs or retire an old one, what happens to any flights or tasks it might have had, and who needs to know?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1126,
+  "candidatesTokenCount": 34,
+  "totalTokenCount": 1160,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1126
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 34
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "MJH4ariaFqzMnsEPldvLyAw"
+}

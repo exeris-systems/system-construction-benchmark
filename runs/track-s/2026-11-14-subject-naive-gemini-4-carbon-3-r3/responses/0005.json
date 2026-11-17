@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Walk me through your day-to-day work at the airspace desk and what you need this new service to do for you."
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 697,
+  "candidatesTokenCount": 29,
+  "totalTokenCount": 726,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 697
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 29
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "TIX4asysPOm_vdIP28es-A4"
+}

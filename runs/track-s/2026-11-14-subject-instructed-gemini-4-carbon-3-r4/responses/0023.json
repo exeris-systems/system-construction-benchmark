@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What else can you tell me about your company's fleet, your sites, or how your drones operate?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1165,
+  "candidatesTokenCount": 22,
+  "totalTokenCount": 1187,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1165
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 22
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "A5T4aqbwD6fq7M8PvJvGmAU"
+}

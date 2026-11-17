@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"questions\": [\n    {\n      \"id\": \"Q2\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q3\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q4\",\n      \"follow_up\": true\n    },\n    {\n      \"id\": \"Q5\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q6\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q7\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q8\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q9\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q10\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q11\",\n      \"follow_up\": true\n    },\n    {\n      \"id\": \"Q12\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q13\",\n      \"follow_up\": true\n    },\n    {\n      \"id\": \"Q14\",\n      \"follow_up\": true\n    },\n    {\n      \"id\": \"Q15\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q16\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q17\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q18\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q19\",\n      \"follow_up\": false\n    },\n    {\n      \"id\": \"Q20\",\n      \"follow_up\": false\n    }\n  ]\n}",
+      "thoughtSignature": "EmQKYgFpFH0T9KzFG6HlRpK13kFR6vXTCV3Bm87G+XGIiavmfz49mCE0Gk4mKI1sbrJHZA3aEagVd+/dshJX3CPDr3y4AxLecae8Q1xruGAk8tn+rFX3NwJgeMGqZnvIplvUy3ac"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1329,
+  "candidatesTokenCount": 464,
+  "totalTokenCount": 1793,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1329
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 464
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "Wo_4av7JMbOavdIP-uLHEA"
+}

@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "thought\nAha! Jackpot! That unlocked a whole new section of the interviewee's context!\nLook at the clues in that answer:\n- \"Choosing the drone and the way it flies is my legal responsibility, and our policy is that software never chooses a drone or a way for us.\" (Aha! That was \"what they are afraid a new service would do wrong\" -> auto-selecting drone/route!)\n- \"Drones are of several models from different manufacturers, and they differ in how much they can carry, how far they can fly on a full battery, which sensors they carry like cameras, thermal cameras, or laser scanners, and which charging connector they use.\"\n- \"I want help finding out which of my drones could get to where a job starts\" (repositioning / deadhead / range / charging connector at the site!).\n- \"several dispatchers plan at the same time for the same busy sites and popular drones.\"\n\nLet's probe into **sites** (charging connectors, busy sites, pads, constraints) and what happens when several dispatchers plan at the same time!What makes a site busy, and what do you have to take into account about the sites themselves when planning?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 2705,
+  "candidatesTokenCount": 250,
+  "totalTokenCount": 2955,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 2705
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 250
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "wYb4auL5JeaDxs0PtNryeA"
+}

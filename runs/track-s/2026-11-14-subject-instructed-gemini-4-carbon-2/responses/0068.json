@@ -1,0 +1,36 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "What determines whether one of your drones could get to where a job starts?"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1020,
+  "candidatesTokenCount": 15,
+  "totalTokenCount": 1035,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1020
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 15
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-carbon",
+ "responseId": "5oz4aq6ZG_SOvdIP7oKXwQQ"
+}
