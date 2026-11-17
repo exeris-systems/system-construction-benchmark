@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xbtFtanseUH9zFF1xv",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQShQgKEAgTGAI4AUIIdGhpbmtpbmcSDNrbIwWXUiWYWHy5FRoMc8wYfVVnzbBoJO96IjADfoKDbPNKdGQwmb1Ihwn7YR7WjEHwnvSag6h4hkbVfyOwtyQYHIo7itoRzU9vyscqogdlWbcYTFvB8mz9U6dUif7NnrLPUyu5TEsrFFX3E9ETMwdNWrO/TJamOZNGLA/iVa1uZnUg0VGxG/7RBbwf0xbD31kHP1zinogKtPqLzHrMo389y21xMcFNUDJGg9WttGzSZy1t4SKVNiy0jIszl2heIfllQISKZUd1RINoTN4djYP2C84E6OGjhDXojES/+MrEVwBJgoV2P+Ay8rRv+6ej7cmJJJ5M0Gs49/txHtm7dQ0rC2c6aW+L5995/5oqK5OqDZQEE7bD3yjIiWJesSPCzd0cP8bAUBGzKf6bfJCOWxiwQ1BRfd9Xihq4jM0N42lO+aEOa0SiKfSQ4TvYnr9KZNQbwoyDMbFONBYPXsKxbWaE1yL1TBZwNWVVs45/jnWrAXNYmbYfhXtQqGlDRX2E1m2QP8UaCGvY1Z9bbo+itRtos9w41wfTSFZYVX6xOPiHlD99ZQ43rqcf7+FmcFuOFLNIyGXc4aVWy8dpUG8gKQ9FUmc9O4UPvCsZ4WZZulCHSRLQA4XSuCzISBoZMbGam5s01OVeB4xhrtAJRUsLll1v02dMdHSCKbbUwAWZQwBd3azA//htQSjTWIHo1CigexkR7u2NxW93D511RfayUp7NCd4CqIphfUshMYbX64q8o4v8n6jb1tgvGStwIgzoBebuGGTbqnEQpmNTV4vTqVRNymzEqqkYyQ7S6Sl8wUdWQ1YyQcR0xIj1wX8aOVfn/h5o8NCSkoh2CPeVVRwxjnKXevpRrs86nFr/Y5y/ieVm3W4/D4SyMWsq03sDEeVEph45LL77nrI/zeaFfb/zJxVSebAvDsL5yL4sWP1KjVqaK/JrdSGrG9/jHIdOgsmeROIKQXuk6A/voUukJf5xAxYW880cRJ+xhViFlQh8jII0EuAEGTYkRm5bnlWHUvQXcqBWqVYVqJQy5rg6QrcfsZMR5fyMcdzKUFJBVMrlxIlLmXfNQIDdXemVHY29ZB64zP29b53AZOknSs4mJZK8QnR8Wow+q2fVuJwhCcZ3pEtEnuZdpip3+sPbq3cwxMDj8hEi9TKRJ/nnqBizSKUBh43iTNvTxxpRypxXuFWherOsJjnN9X+avJUF0urY2NG/fYA0sFU/JD/JFlOJ+p6wPamG7p92dNF/bu6Vs1QpBP22Hjfeg+31hZIh4u8XQ08xFwnyl2QniHAZn9IsLoYB2YsaYmnm2TwQ6/o3ploTt0LLJ0A17G63C3TuaKUyY44ozMcYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: For an inspection, the drone must visit points in a set order and return to the start. What does it mean for you if a point is reported out of order, skipped, or the arrival is reported at a different site than planned?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 7551,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 136,
+  "output_tokens_details": {
+   "thinking_tokens": 65
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

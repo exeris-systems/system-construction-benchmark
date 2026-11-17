@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xVPoT1R89ZmQ4m6P9y",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSwwcKEAgTGAI4AUIIdGhpbmtpbmcSDMmqnI2Ypn5mH8i1qxoMHooZ1FPPv60UqotpIjDrtTyFeAtxFvRZm61rBEOC/TPrmlEz3GpSO+RrCcOwe5CETGkTtzoK/UgnrUgYhH8q4Aajs+veXnxxKG9cc0x4EnxfXRkzUKrqFfPZquiVDVhQpUJt+T/ft4yrGbHS2UPOx326CuXR50Z6sY7ISmKsVA2DsQECgHBBhQRGeVDuzyP9IvDvyeTcbbUWqxkjGi47SbYVepY7YE4K9o61+pw5dnohqSSUaee+iWB6YhkvK9pKDHNSc0FPidp+4nYKcmrh/8Y9BbdYQVz/f8hO7zQhOiNotlcHpWBKkAS1lWZD7XDorq5gXAQ/tnWSCeF/sSlGHETP0Vz7axT9DVOA3O/CaSUE9s+oxdS9jpwS7s4a05nEamq17WWksGxO4+5szB9bEldu9kzvbCY7wD1Fok1HjII/XYXsFL1P1et2JYMPfa2oswCGjiuCkcKLy+8Y6LgH7TF66VqvMS0RGX5RK2hIe+lzi26Xd/Ku+xKdzPwWTeLYbrWv7fIUKm6k/wYIv0qK6lBeIMP9E/oojoHkTp36AJJJr4pQxgGzkk7zpjbx/HHNfF/kC2nj625K36j/ugxuMaUOx+/folup3EU2kl3i+wUUlMlGKVC/ZCkiex5ZnE6UL3UEw0C2MSpz89tLH76KhdPJIJT713F4KdlF4TL++q25xvjJb4DPLZw4bCJA7t3AHQq6xJbQhwmx1VxnzZBrunJL7zdBH1C71NSvEWGw+GMZHfj1N0Q9vweFXc6T2zOjQc9YKFrtUpO7dfXDA5AsR6kGPcetM6Rirq9p6f2X6lnyoR1T6PdxtVAaQVH5kGH2f5xTLvtg9rR3g0tSSa0DTZPf+eYBZO8e5fEt34SZ/nIXeEx/emRnKoxzRC+9CU7Bqsp0NgO/INkZVSPOLkqe2guQ3pTZhtDIhBOoRj0Y1ekDHUN+j/ByYZ2PCfPe27E0rhCu9oiLrWstnVDNVWJNZvs8AbSkDffjMLZFNhjBs57sB4Lq7L0gYt57fkHew1SyULejDPGsl+vT5IZ6q+dFxQfBOdJvqfnZzLV9a17mW5WJfEgqYlfCLr8xg3q2jyF4ZOkfXrE/sgSbS2r5pYaZpVpBINY4bO9DTdVyPnKSvy7gOl4hDlnGTbejnh5DE19wfYHNFsmT27iN09wUDoiYP1P3UcACOmz8TIv0zTF/QnAre5PUCcSf6d5+z140Hr5LT3zFw1OSQrWNoEYpHgMbBOIYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK desk: Should a flight be allowed to be planned or signed off along a corridor that is closed, or inside a prohibited zone, at the time the flight would be there? Who decides, the service or the dispatcher?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 4357,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 125,
+  "output_tokens_details": {
+   "thinking_tokens": 54
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

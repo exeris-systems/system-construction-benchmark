@@ -1,0 +1,96 @@
+{
+ "model": "claude-fable-5-2",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS+wYKEAgTGAI4AUIIdGhpbmtpbmcSDP6z1L4+leNBbn1DBRoMG2YwdxpxLPS1Tk82IjAxUMYnz95Qu6a3vtPUi64vqa5Te8ivj9itY6sHkhcAeS8ASCKwmqlST88Y37ixtuoqmAYOOJZqy625bzgOoIsVxmOsaaj131fxB+9TM+9Nkb7ns8qN/s/jHbCaclkdhXIZ0KDUR0kzmA9OfmxGG9DeVQpI3N3M3dd2+rVoenL80s0oAcbFBJsVFydHXLBINE62aOsZ6oohvQWUHhmiT1KSgOJek2IiRAdekdG/E7bdo7WBGQvpcL/kRRe+16ayJU9N/V8Lsn62wcaNyrnM7WeWwyzxAcN9XSI1rqzwxegSuybOLysIuRmxb58yRyjdr4/ga6KbbaNqFAuo9PtsTSzuj0n6BlM5pqdkIpHVBf1HYZXdksCXXoAPaD+MKXAmvmS8ejxBHbPgWMPvyTxaT4wZOTvTn41AI//fceGme98rmCOqLNEVfApCU+IwndY0byPW9owpw/qFts8AOYUrium9HI8JrG1fp9nygKKiF0Wi65vKcE1EhbjdA3ONx6Wg/tBIpo89Q0yRurXcG4xDJQzuE2uwhNo8K2Vxlu7Mz2AEXjP3zNzi8WVFv1bI3jNFj24qjS+Sz/3pEfpxAsK3xT7kHuBr0eradPogB7orYXtrr3k7BpvkcnsBsLQCFZr7ujMnefMX2ZFnNXzWFVScB32RYu5QBv69cC6QfNknIJL7khW4vdPjKRzEYlNpUhr+NdZT+NacMhngiSy48chpEKJOKtqMiLlgZswPzeK2p7qO+IfnIUkTmELAXUuY6CK6NiEiuFB8RD9kyK5oyktV8T1JN+MupV9bdE8ngavUkn5MH6RFXRnEdoX4CRPF5rddatHTg4T+NnZRBiYTTJv9diVdkbn9h82qB8sa2q+CU5uGYWF8XYmhAXTylWMOalbJI9h85kbL0BycMdrAw9tT7Fi3k963mAj96rc3ogBDw2GWqhQdqFAFVj4B+IRlK3qnEy4mTivI+ZLFgzqDbBbpvey6g31O3G0eCky+7fFEDyXIWr1r09nEoeutuGwsxLHG9yZAmQvAzQFqHKR7BqvIHde5qp/xTBDM3L3GFn+Y0FJIXgJQ3CxWwUarhnkhpOAy8P7Q/CS1RoVWpMKs/q2BxTC+HYQqRQjFOxrxZyQYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Please walk me through a typical working day: what do you do, step by step, to get a drone job planned, assigned, flown and closed, and what information do you need at each step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I plan and run the flights as a dispatcher, which includes deciding which drone flies and along which way, and I sign off a flight before it leaves. Several dispatchers plan at the same time, often for the same busy sites and popular drones, and our policy is that software never chooses a drone or a way for us. I do want help finding out which of my drones could get to where a job starts. Before and during a flight, outside people and devices report whether the load is ready, if the drone reaches its job points, and when it arrives."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS5QUKEAgTGAI4AUIIdGhpbmtpbmcSDLV+jUUtxn8C46NWjRoMDD1k9WrDxL6ja3ZQIjCWP9g9p5+qe8yk8lvKeUAd+2vsgrgSXquNxb7PuAMH9Nq4iVNSgH4DqzUlTUuGNtAqggVrPXX3UUwMY//j4UeEc2g2dx2Ihuh/GiXQCcb5mV3SKGgYnKZPXHQTyFDYOJigRsma+ZFlNfSkFV47/+A8zmeh5xPQkFYZOUzBbKgFlxvwdmQ0cujLPjwAVhX8xbzxinefZv3/fxB7ng/7LeAHQxpUH434QD++u2AvWLVX2ex1zYsxYpe5+n/jsN5Nacmvm3XN5BP/SfFl8LdV0+MdvhYsX90HpXRsZv+OMKIfIeNP+sVin36wVDIsJUbkocmjjRLuFxsDRQWWOVtCZJAsIcUbGkm7scpg5Xuyoibwit3hj7u9XzWqaARwrx7njrME0SMVrz8IaQ5U9/rizcJ0EMBntWa0sfG5OXa6Fy6IBFoUW3RSukgc+gyUJRoLtLEhDUU0fXOV3s86EZ76igif0u+nQE9orszoQf9ZqQOIEC9p2Dgx+y8c/p6h+gB3xc9u/a0XB08ARSxwKgen/YRi/bFFoBy7rUKe4jGwKNl4Lr+L/uv6A1ttlbkInK4m3yMTxamWdZJMwohGCLfbAr4qu+SRUSCun5o8/lg7QMgD1Ion+bGlW2wrSwpHXOTh1fKzu5yFm++mmGmsCDbtVuP1Y9U1w2F3PvufLkUH+n62Uf277neNWeHzVH8xCjolyhHcnXyYCQNI4XvXvD5oXC3PotCnd9LCulfTjuTae3AZH5uvFfcONmiau2YtPOm+v39F1Op3u774lVUFRQMlpvs6gYLMqRnv1Yd8MnBU9kSbl3jk8aEIt6Hx3O3FmV5wIPz5DBj8qYz4KdbhyLXheEnftX91zJ+v8m66jGiE3HkAyAwBteGYkHr2vdCEar6C9neggRT+vAHuZhbty4yq9PfafbHbxrYYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When several dispatchers plan at once for the same drone or the same busy site, what goes wrong today, and what should the service do when two plans want the same drone or the same site slot at the same time?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSkQYKEAgTGAI4AUIIdGhpbmtpbmcSDPVZSQM+i/R9xULhDhoMc+7sMJmrtIhhoOHyIjBHZr0aSVjQuhF4b3Ru+aLLN+yrN/pm3IpTIoExRBLckTn2ra9+D9let7EVA5pLIREqrgV4/kDYyfj1Da6YKC0XibRmdwnFST/c9LLh/LCOyRPD87g6lNnu6D/Zs0+7rY5hTsE3oNQDehIPJ/Eundiy5L+aUZ8l4S9JlyYGFDTDS0s2Cj5T9cR+aMsgP5e8MzgxyRVMoGfuna9LmkBDaLYLVw4J3NTWhCFYShqOmSjS8AsP6agrD+HAwCCtDWplGrNCrhah0Zcaz/dbG7uVVahCJ/YO0aczbGRCMo/wRKFXOsQ9W+2SEfyAk67DBvemBaUx/nuOWqXnP25n+77Hg6bFJizhzzQAItYKU5lQEIHSlQhkXsdAsSxl6kfzksMbr00zeuNZHWzkeIJEgci2b8RyFFH1QhWnP7iGJG/sCtnjUiLskpH/C4OrFKl2X9MNpmkyDlZfX5UnZwZ4ww+b51SLO61MBeu295P1jsI8aefcqDC0ugwyRpZmW8h9y8sG+oG0g2E1GfDoWIekzYqpLJl7NabOypSHqJljXsw5nB/7+r0cu9nimpPK4pl3Bm4VSLVee4SR7OQ47dxBEbYRfH0kBlZubWmJmCm3gmzUKbPOFdBUdNSSi2MnupXt4JuejhbpNTsXiuYQllkZqVcYrtFI0m5oL+uw5/dGc2IdkfYFMCK8vljlyFgRFt1nENCBR8iCdpQytqEWow1bjQbyRJAGirmKrXsQDJfZXAkUKQWjBL7Y+M9P8aZ4Dez00lEQCjJ5DMx6xxtw9CYfBifL2DUASPq55oPf6el5Tr58yc0JLgbRmhrGofTvHIR9FKTuel0FJG8VoKCccV7crt6t0jwSQJmWm54UixrBcM5OCgNGmjZCwQ1vqU5dE4u+6Ffksi5UiWfUVJ/mB9yVl518meqNzScObCNKwzeILOAEcKYBEYWahEFRdwmAH87YVKwKv/YJdqeNCqGagu8f8Ul2RK8kVhgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Can one drone be planned for two flights whose times overlap, and can a site (launch or landing place) take more than one drone at the same time? What are the limits?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "Sites have only so many places where drones can take off and land at the same time. My notes do not state whether one drone can be planned for two flights whose times overlap, so I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When a site's take-off and landing places are all taken for the time you want, what should happen to your plan: refused, warned, or something else? And who sets the number of places a site has?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know what should happen to my plan, and I don't know who sets the number of places a site has."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSsQYKEAgTGAI4AUIIdGhpbmtpbmcSDGk84W+9aRrCzV2WJhoM/53TjZsoDUECkngnIjDsovLF3Rl0ktrNHfWkMr0LBI1W/F8WJh19bHYaRL9vFOIjOAwR6UQfF61mhwe6tSUqzgV/CM4+tff7A8hia6EA0oYGvJp4qh6PInEqz1IHmeyrR7lgTDG6q7ywbYAlYDCK3dZnLWG8IAJgvqr01oW1JM/D07IRhH12wMyLMO7YKghOI2+8KxxyzJG1uKVv+QPgc9/a3CyWfvCLdHAjPXx+HnkIBb22WjI919NaSCnipOpqBdOZinQ3UStDhmbM8dd6jm/082lISGyNblZa1eEiGVv3VfbAafbMv+rlqyw9wNcDRvh/mNjtuyA3GYeNIEZeo0I2KME5K6RugJAjaA5on1T1zagCU/CWnc6d/4g/0r6CQaPbDo2zanNOq+Y2rmJaXdfP74bgNyG2ddKD7h/eQrfZ4j/SHRxfN1A1qtR3ev1GmO2PcbD8r2C3UKitcLdy7wofyV5DqP9wrger4UU4qa0ZvYcU6KNRc3IVV1wdWPkE++cDT2U1Ix8uNKD33O5arfqqk7ptaQW9KNgyVFpu9wGFthA12jlSDhRCeiaNTL8GT+Qt/v7S5RISdPGdLjfl+LcFeUxzHCjv3N5B1H+bILTJ72S91KH6967eImWLPA6aCqomKaA/dCwAT1ha13BjfjhZNuHYtzAlTH1GTx/s5GxtjnUHqkLBPnfEV5IySeUxhbYPUETgKImBIjIiU02RsSyGZcO7QhESQklHzhUqyuApKUltAjqf7QMP69mGvszJOiGgaX88/tHxtwiX9zd9jncsOo7vMhDHuyD3V09I1jbxVsUEm9BqAJ2vfkaiATwhar5XdQSCemYUeyZhObrUVdJoHuFiRwm3A6D/VrnRB6W3j7Nob25/yWep5S5/bYsUFu68xfv7JUd4sWofMAhs5IZ/jO2m40h+uBUR/sF0NJBsHt8TDTGfHmYaHMC9YpBV0WyhwoR5qsW0SvPCJsAPoBIQugXR0s3SKmYPf6Isi0jY8adH2xvUYAtQJ3w9aIIks/RS0IjwdwYSW9fxddseGAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: What do you check before you sign off a flight for departure, and what must be true for you to be allowed to sign it off?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I am the licensed person responsible for each flight, and I decide which drone flies and along which way before signing off a flight before it leaves. I can call off a flight. My notes do not state what I check before I sign off a flight for departure or what must be true for me to be allowed to sign it off."
+  }
+ ]
+}

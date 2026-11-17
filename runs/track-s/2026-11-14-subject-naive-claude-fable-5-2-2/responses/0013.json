@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xMRjp7USHpZ1mhY1ot",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSxwYKEAgTGAI4AUIIdGhpbmtpbmcSDMECPzdeZDnz95ublhoMS4FkvgqxS81BvQ0uIjCKTyV2ZOQcdT1esUW/coqLXqmfbZwKGhrBte7lr+NTlCw7AVuyTUmjtt/NjOt8+msq5AXjR4CtoG6iWY/df37HhI77odcXDf8aaN+xmVUeAM2f8+V+zvJTedFa12pqJrhfQv213yfoOCGPdgiN4Hf/6OctCTLjS3ZEgyQDVXjUtOHP4h+ldrcGHePQeSrIpQrDlGdI2+IixKUjHI486mOPdsDvnxwlEtsOjmy2SreZ1MOEXr0HVFA7/As+UVbFvGZGDLIWi3AmA2rtGwhsaLcqVJCm9vP+MkD+V0rYkS4GLTXFe0H1DPbQG8K97ThWG5Ra0fs9IAh7oMahsITYKnrkVvaphoh+wFlMmHSmWCTC6b0awfuSRV6J9ac7KRfVnL4S+bMFYcP62G0SFfwqD9UyYXh5O/03YLKMhfCWbwTgahv4pJBerg54oNmevsUzufsdD/PGl1D2YQI9O0q4jrCdnGmZNUXRlgo03CYWkYERYQ1WgqTdMGRwGvt8d3A+b74vREMMvqSwlyvsxXm6teZlm6VGCzCRqr+Dz921pd6/epJ8tS/0tp3HZwv79tFKu7vVquW6RiplluPo/WM3AuaEeTP6f5yyL6BGHPaxMd/7c9C2V6gP6kUvvf0/EInoW3qnSrWwcu+QqpDFAc6e+T6lThZQsIBfp1I7K5CVIU2lTizqcqpMdtxFjObjBNmAgMQceMV6DGcqnY1r0JxMxuXeEpcJ3MNIeSlOCgYzwm8qvPm4htFyBQa3WG59+dSzKMcc49nmJsMevjQxq4s58tT1ceVJUjpbpl6COwnXxgt7vK/tX5cz7fAYEGv/MI8oDIesSrOHk3SRrKGiFOWMMlkAQflMcsfUaQb2m+ic9RgaIDkKeklv+5Iv4VlWwnYgSOvUKQ8VYAj1TNpx8Ie1+xLSobq9ADq4yvFU5uA9psa+7IQwpMHEgvCFFn4HaoEIX4FVPNaJZ3hAoCZpi1m8SPYyqpruqj2goRiUnBAzy5dEDWnL9uadlgMLR8Ce80BUrWfQF5o1KSiNH4bNipfmPhtBFPNZcz0HtRgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: The outside people and devices that report load readiness, job points reached, and arrival: who or what are they, how do their reports reach you, and what problems do you have with those reports (late, missing, duplicated, wrong order, from the wrong sender)?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1518,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 111,
+  "output_tokens_details": {
+   "thinking_tokens": 25
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

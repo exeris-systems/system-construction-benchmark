@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2za8pRu4KvQZQEhcSYQ",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSzAYKEAgTGAI4AUIIdGhpbmtpbmcSDK5CFxUHOT7ADIA/eRoMoCxVgTUdtKiWKRHnIjCJZEWgBptxemr8ChxduBaIHya+si67CfVwCJcaD5BN+zS9nERi7dnLC7AQlzqHY9Yq6QUI2hZcV2wQCMSOpzPOl9sMZglCvGZ1yrMeqDwnncsAJxytUixwTQhlIBv2jMpqYMB3mfLeYCPAi2xJt3Wfy7czW6bYgsgKB/Kx95v14CXmrCXvI99Lowvrz3dHg2PWBECVUpvFZdJwjGy+3U40iVFkJXuEGgHcrTvbo/s17RCm1um9yX+QARwJ3ypES+qZnsA7NnZG8nl5Ajj1iK+xP0ngUIaFypo6ROtrAsIkvfqjDVmSPhb1PeHDYAb2SL6dF1yRg1oGEqwClS+SUEe0soFAv5UIuAR0xeWJlSCeBSU50NTtH6iWDDXlz4379FfNwRV2Fz/t7NXaBRjmQ9Ohgsq1XafAhgVKcgStTPyk5b5S1M5hCj+J4oOLMsYLjuxsn2tbx2hRg7IGj2aQ1Sw9Vvrl3XH5cqEsesbGIeAPbYZsWYPUh+Hk8XQDfSv62zHiHiO0XxymKRBRj+R9cDosBxR/6PgkWeGeu8R2VebtxBjQRJ2bJ7x/4mZ0ck+5UR0EBG0BENyjKx2Mmiow7UBlCTbNsIwgMRcEFwGeeAM9oNi3I/VVukGH8xzNRFPLCnKsIpCcHDMBVY8ZnJeDy/gY2kj0yIXaIwgNdjRp9b8zG9k6TUSSjobmfAZK1oqMD8ltwrnRsWSk3oJkegvd30o91oXG49xjVN8eewMLUkxm+fXbSbT6/JwFUks5KhT2f29DPJ6HQEsuUwJCK3vdJhGM2gza4VynSpVuTmUTbucCHg8R4Pmr8woJOaHAUHwyMBpACzdZCw0v0+Ft8SQ6qSfFT0CReazXmRxaPOxW0FscA6V07WsBQPjM8rNQ3gMUraP4HGdGxJq/dOXKa+J35ZqK2OGGUTQHnC+8sE6VEDKjrnGIhWzEXLDqVpUOGBGhaUfG6odDHS49Ms8cCAF5j0UQb1mwks+bBMNPK8i0th4i8q4c05MEyJXXUM38inqnXonu1EmHUNzZdCPmkA1zki4L68D7sMAYdM6TO5FDGAE="
+  },
+  {
+   "type": "text",
+   "text": "Is there anything in your work today that you double-check by hand because you don't fully trust it?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1323,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 54,
+  "output_tokens_details": {
+   "thinking_tokens": 25
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

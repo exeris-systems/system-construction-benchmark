@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2zCecwNva726ceV6j3w",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS+AYKEAgTGAI4AUIIdGhpbmtpbmcSDE8nJeTS9jiIJGf2gRoMvnizrN0NHqtoM6gNIjCL07V0fgNSHsLdSDSlekH5qftiWRhRzNb/hFJ8vISrK5zIVQEZejx/wNcCNb53YcQqlQayrv+3FvjH7bf3zf9DuXiOmxAEi/MVZ8e+AXRFhdl9SRs/qsaTn5FSXLaUELrt4X+gX7XFahwGmsr4l35usT+opXzQnowmoruT3zPRjPD7F3PV797FeF4hhdlA2Fn7AtoMy625WteuyzIwecnoVDg+XPyZQOfUwVUk5DyAETWFLe4Fn6qicFyhRnDQe9MMbym869AlH3AKd3YuKdoi6W8MIH8ZJ0DZOL8f0ph1+Hl9BOS+UUSMx7bbVmIGpOopwfn3L8BnnBRCXtBeedtk7yb7dCWIPCDwQ3ifWVWZwd3cVrBIzRp0AOTQddo3DbBPXlPkGOgluxWI+rWXZqjXjoO00io0qMHoDKuA7KU39/2w7qWpdTChUkBKH1jYm7mKzqhoaA4U4T9C8Z8fLwyC8MujLRI33QiokNMNYjzNZTOhKoqKyxcSfL9qwHe0w1dRQuJe7Eu2hueJQuJEvoYZAeKj0fO13MGHWmkaZPQLWp6DJx/vSXQbKyidpAkqnWeq1qUyh4xWli4seZUQcXxxVU1vnRzFgfSh7uNStmXn8hRLvUsUu1Em6GWi6iHabTwgwpS53MLKleJr7LF5UJmhqCa4xlxQulPOakSjYyZLDb7TYyqm7J2NlzNfa1KizC9WtM0iI4W6b6K+L9zu+2uvwtbwwpMLQRCJs+1E/sOKch2JOnOk9ly1zv//CEHUMQNZaiCIkrTJytAlUSn9v2gEe4ks20MHxl5F/Qbgpn+iAr9CTsZYoD6zFbFG9m6u2EEksoHjnGUEHx+1SVhNoOmiRUeasy7JEPiN5aCndb/nYJieXjv/2eeWgheemQpw2IF02oUMJ46AU4SywzH4eHztfDr6DqFWfR+kbNJ5rKbUaQBoyQ0JPKf1EN+Sy/bhP2k5zvD742/CNz+TKX0qEDHxmAFGEUB7tkkTMlbGOnKjnTtbtgT/mYvQBDDqiCp7daaV+3EHp0m32tiNPQ1G+T8iugAqOVhbsCmKzSILNa/7RXrXBhamPoPUcqkUH9Vkgk8IFziqwWjT1lfMDpYsHNE+2OUCsc71+5QYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "You also mentioned sending drones to charge. How do you decide which drone goes to which charging pad?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1839,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 63,
+  "output_tokens_details": {
+   "thinking_tokens": 30
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xKDP7YkRDuHpAGsEuE",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS5QUKEAgTGAI4AUIIdGhpbmtpbmcSDLV+jUUtxn8C46NWjRoMDD1k9WrDxL6ja3ZQIjCWP9g9p5+qe8yk8lvKeUAd+2vsgrgSXquNxb7PuAMH9Nq4iVNSgH4DqzUlTUuGNtAqggVrPXX3UUwMY//j4UeEc2g2dx2Ihuh/GiXQCcb5mV3SKGgYnKZPXHQTyFDYOJigRsma+ZFlNfSkFV47/+A8zmeh5xPQkFYZOUzBbKgFlxvwdmQ0cujLPjwAVhX8xbzxinefZv3/fxB7ng/7LeAHQxpUH434QD++u2AvWLVX2ex1zYsxYpe5+n/jsN5Nacmvm3XN5BP/SfFl8LdV0+MdvhYsX90HpXRsZv+OMKIfIeNP+sVin36wVDIsJUbkocmjjRLuFxsDRQWWOVtCZJAsIcUbGkm7scpg5Xuyoibwit3hj7u9XzWqaARwrx7njrME0SMVrz8IaQ5U9/rizcJ0EMBntWa0sfG5OXa6Fy6IBFoUW3RSukgc+gyUJRoLtLEhDUU0fXOV3s86EZ76igif0u+nQE9orszoQf9ZqQOIEC9p2Dgx+y8c/p6h+gB3xc9u/a0XB08ARSxwKgen/YRi/bFFoBy7rUKe4jGwKNl4Lr+L/uv6A1ttlbkInK4m3yMTxamWdZJMwohGCLfbAr4qu+SRUSCun5o8/lg7QMgD1Ion+bGlW2wrSwpHXOTh1fKzu5yFm++mmGmsCDbtVuP1Y9U1w2F3PvufLkUH+n62Uf277neNWeHzVH8xCjolyhHcnXyYCQNI4XvXvD5oXC3PotCnd9LCulfTjuTae3AZH5uvFfcONmiau2YtPOm+v39F1Op3u774lVUFRQMlpvs6gYLMqRnv1Yd8MnBU9kSbl3jk8aEIt6Hx3O3FmV5wIPz5DBj8qYz4KdbhyLXheEnftX91zJ+v8m66jGiE3HkAyAwBteGYkHr2vdCEar6C9neggRT+vAHuZhbty4yq9PfafbHbxrYYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: When several dispatchers plan at once for the same drone or the same busy site, what goes wrong today, and what should the service do when two plans want the same drone or the same site slot at the same time?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 844,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "output_tokens_details": {
+   "thinking_tokens": 16
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

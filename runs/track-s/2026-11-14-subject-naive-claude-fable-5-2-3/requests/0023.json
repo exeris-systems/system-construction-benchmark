@@ -1,0 +1,199 @@
+{
+ "model": "claude-fable-5-2",
+ "max_tokens": 32000,
+ "system": "You are working for a client on a new software service. Nobody has designed it yet.\n\nThe client writes:\n\n> Our customer companies need a new service for running their drone fleets from day to day, on our platform. Write the requirements for it: what the service must do, so that a team can build it and anyone can check whether it does.\n\nWhat you know about the client's business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe people who will use the service work in three roles: fleet technician, dispatcher, airspace desk. You can reach one person in each role. A message that is exactly one line, `ASK <role>: <question>`, with `<role>` one of `technician`, `dispatcher` or `desk`, goes to that person, and their answer comes back to you. Each of them remembers what you asked them before. You can send at most 90 such questions in all. Any other message is taken as your requirements, and ends the work.\n\nWrite the requirements as a list in YAML, in exactly this format, with nothing else in that message:\n\n```yaml\n- id: DR-01\n  requirement: >\n    one thing the service must do, or must not do, and in which case\n- id: DR-02\n  requirement: >\n    ...\n```\n\nNumber the items DR-01, DR-02, and so on. Each item states one requirement in plain words.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Begin."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSrQYKEAgTGAI4AUIIdGhpbmtpbmcSDOoApAJI0ikxfFKg1BoM3+GCFuDbs/+WOhnMIjDsHxI5a/4axmnekFMUq0Vb8CiFEfHoDn5R4z+wT7+E/2H+m0S72ulsYUJ6p/lDGmQqygVSHsWxNGMQ32JQG2YyMKXOXZoQtVR5pRodq8cx0/pQx+1POLsvO377eRCLI7kOE+3eT5haWLTOXnziJnT64ycYMQWWufDC2G1S6sUP21VoQa0PN/tNczFj6t/O0XbLJqGh4Y3hXStSP9PEfM6CHcaKYQLlL+JZRB2Ch3HiE5qIdNlMwoRvTF0HgmSWsLz/vc6q+WnqTpelSQylCJ7v2t14Kt3/T7G8ja2qFehGLkSBFAyr23ZYWmVtYcMNXo8TK+fU2eqvrDXxZhkVNtTAUphlCbozpwdqTZNd1Rnh/FVVp2DnPY3tiKBaZ+ErfguFdhjkc/tC3RUh3E2RiN4Z/fqMKdJoTJjmrF5RAU02+RCujVc8rhoCi/lSz/Fkq9RVQD7KtJvk9c2eeddKv4VpkioNJtqV7Cr52RPnRZaqQyQrVlCc1diZBIqo2vaTbcSE+IP+OuCyac7ScOeu7CZT86rRxGeGNVZzaxDv3yME9RxRWTo0FwHKEkIyRL0hh3nwK3dBRLLbpcRh/WkSJWobVWDIW6F9nGmMTJc/bxo7cTuOPgAfm3WN/OtUhJtwiISUHrmgfhDrTHn4bEtgUYENXoRgqEUC74O/GnZRYvlU1A1TspfifA61+CZtvkHVcJ7lOjQzS/ZNJiH3okmbTQ49ymXZEMxjcYAt5Hfrft2JfILQz0ryMnFlZRGNdoe5wctKoDVVzfAjgKV1Wp000xVHY+63ho95jrZI3pwa62AJk/qYNPNbST4VWTlFyPbqpSGBWReqqtLDfofnDGJbGJvrf3cr03lgG19KIstq4hjfoDmvUBPzMRDqBt2GsyMjOLzwxzNoK1/EDFVaJ+3GMMBqoUT+dwPQbr27TA4fm+0yqVMG4+YrmCxkgjv0O2BDk+67I9pEUtzhecPZH2oWIIWwD452KF86pOknqw4XZ4gJSqOO9QK5RG5eSgTLG4IYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: Please walk me through a normal working day: what do you do with your drones and jobs from start to finish, and what information do you need at each step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "As a dispatcher, I plan and run the flights for my company, and I am the licensed person responsible for each one. I decide which drone flies and along which way, and I sign off a flight before it leaves, though our policy is that software never chooses a drone or a way for us. Several dispatchers plan at the same time, often for the same busy sites and popular drones, and I can call off a flight if needed. I need help finding out which of our drones could get to where a job starts, and I work with deliveries that carry a load from one site to another and inspections that take a drone with the right sensors to a list of points in a set order and bring it back."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSggYKEAgTGAI4AUIIdGhpbmtpbmcSDMnVRART2LhTd958exoMklBthWVr15JtDadkIjDFohgCaB0fIWB9mnky0Mo2VP7Y2wTvuQCqHJ4Nr6ptbQ+Blxjs8r8Qhb2e7B6C+GIqnwVx5ZYuYEXsXuxn5gOrdooyj45wq+Z2zIbudic6QRbkKOwmieGuRWLOIPX7lvMq0RCyR2RfTdS21StNfz1osV3NUUgfG5fWHKUoxF1qonP3ppbwRSZuEqT4GPMXGVyvxap332KbE2uCmuO+PDg4WaE6+0EdXl9a7jrtpn3rTdtkCYKxLacoQ6/GNjuUh8kPo5nmhXmq8e3J6+lODFBH7PwGuMLMqaeMtTDqPo5/y3sttDj2uf5CB4IyVllDBWLxrGeWQgC3CyzPCq/Yt2wc3i1GpknPybGTkoYU3ZxLfIGjJ/ZpoyAzQ4kvpIwl6xXlkOd2yvFYodsrQenXNoOlqKr7fP4Aux76qBRtz+zzzSRn0yyxFzkKFSkVu/CuYtAt2+MGi2OEGVxrtC1ybDF7MsXgC/UFnKjfEpbkckuG5UWGKetv/8j9G77iFZ2MHhLoLxASjQAB9DgQDRwGO+4t2ZDtzXDtc/sBXB9wF1+lIv8FUyWAkBQgfwCq378DitAdCbaAVQw2zoLG6F5Sm/DPQ4uh1CCuFjewjTyYmXNotq2Q5PlbzUtSfwwU3JJRLNTbFnbcIoWSwE8VkM5lK3NHyKwQT1iYfWiWLVl1CW7Px9Rz05HO4nXjfxqH3qvpQtoPEKMmAzOywtw+k2OeSD1+qNTGqt9Xtk+k/hfjYT8cJw28ENLSQHwYjbDBld5SN0TOknc6PRxY4XRriZYIiRmFKFbS48QLe3tPQL3QHl56k1ijJOGhldX5jixxEE3vvy95jHF2WRevOY/ylIklwpYMgmX2Bo27oAQ35b+KzkpM1c12lfWQdqIbJar7CO3lQ/8Yppv6Y1nUYPEz19R4rfS53SpRln/2/m2jyzvDus1td/3ycSbh7ykaKklt2d90MEkJWhgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: What exactly does a job consist of when it reaches you (who creates it, what details it carries), and what are all the things that must be true before you are allowed to sign off a flight?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSpQYKEAgTGAI4AUIIdGhpbmtpbmcSDG4opvXS7OH4BgAGrRoMOaM250zZA2tcPmA3IjCZnygi0djJzPpOPkEP+G5NrkV2RsFo75Z0zOWNms/QcUPQbJ5SXQW8BkifnFEJQ40qwgX2H4u+5siuQLBIgeeTIvUvX+VzfyIzoR3W7scrJTNnvOkq6yELRqRTCV4yiOEPiWNqf9Dik7Lv8oyRc76CgKgE7CfAxWfeujCduw0eauxaRnhOsO9d/7qFcGfXxXlze4ToFJkVAlesR8i7SHLqvyXvIShsmdSy3mdBbsadqye9TWWn/Z/6gVVcFxn/sMXe32nAu/Jojp73VM7TNdy91m87wDnP+cIepzwBSRngKC/4RcwHr5b5RNdylDKxTnryphXnPyI3Nf5C9ZH6v6Wi89KWRCQoNvUAO0zD9ykM7NaFsRYDJLc3fTWBu9RYXYFr+ydrzQVZp4nucARxcExj0XxUXXPA5jvYZ48QXWbAgnXR3nHoZzBRPfVrgh4o0GuL8N0//5nzc9+6aEHQkvvQKz/19PxB2CtFQVnjfAm/iLrws/k+KBIPvTs+sSHQMQKdJc0SEWvnJZCD0etTvryoDwciU1cAHuiDsoCXGcbgElUM7NHrEPE15lbSOWPlf5yjudjsVMF9vjNKzsoNA3m7MubAP/s7jDxU74gwOA3ry8MmbANmSbzYVV/PAlThF59rUQjPWUAurwzve++GYb6LBJg5vh8ZT0IAASqLLXOWx1pvXqYGiEYNW0Ud3DZuiyFNbc7cRP6p9OZXkX6LH/kCDTA+D77dHDK5HfQXYmRh2JOCCQsEDvq0fsTUU6vY4Vclh7ngkkzbV4TdcsAWPaIGwCpYVwPVZlMksaBI54l81nxbgq0hXMyXVqd0jQ12JoNBUiii3bAOUZCKPUML/zBEtf+WsoVg8+mBvLdY1yTltGfapTj/yHHX2olWQKxwvaQuGfEJY3V/kfdGJxs5BGO9rLyYO/9ldkOo+nKnmWUpz3DoQ8oOJeIzFEs0+BWmZ6UqDobRNb9OuZg3aiZDfvaevK8A0C7V7MyoMd6mo1LHDoT50DR1GAE="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: What must be true about a drone, its route and the airspace before you sign off a flight?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSygYKEAgTGAI4AUIIdGhpbmtpbmcSDGaC4evRkXLy3VCvhhoMDhMoElo6QBlfhsYGIjB/Mfr8H6aF0SWoS+Rj8t7ZThC8BXdFBGPcWnHVBQyQjj74+n7jEwi7gjE76rFJrJwq5wUIIij9dZ/aUw1T2HGz6KRNUsdTP9ADwnqvTtCPZydK09MUyX1lWXw8fyPMZSo7cZE2s1t7ZojHkLbwug1vOe7vKNdvsT0sV3JJC0KhJPoK1Olg9bdSeh6rsx5oXCAgfLZenM4+z2gALdWLqHTwtR2czugh4Lq4cRfen/apRVTa0UkNU4qE8TAE20j7zTxYqmXW1njqH7YGDJrLFlRvSRaddDsi3WRh+z7cD4MeEX+6Kp4COjfv6Iublt+fPbes4CJHosXR/irvIxGa6dKU1El6gB33pEFe+ZUCygWQcqwIqcVCowhQeHAn7ZoJwx/h2LUdef+PoG3b4XZ8CVrpINwUuUVw9YxRXmays8wCilcIgk70B6GGaSEzbxZdXg31t50sUowQz5PiiWLUDoEAQd65zOUAFeUjN9oPvEA6NIX4EHB574riSMxiQVe5xO/OgGgW08VHvlTRnJJN6v8TFKEQ5c91AgUqv4Ri40q2/vtz1c0UXUvo/dnWd+tyIPjYm0AJhJtqcGUyGyWhqioZ2BcOBV/KcgGG6s5JlVXgF9jhXiw7Fmak1hxfLltiN/RpmPG2eckpwkFhyeshzCAWZP/jo5RBqWkTTCymSie13GUh3uxepK9sO2NoWzJ9Xi1VO/dQIOpmlbMR/UEGBLq4DORt/FhPB6QHY35KDnymoDplz16pkiZZjemCJYtSL89B3fCMyRWjb+qIlxkt0sZGB/doa8i4XUknRXRm7Z95x4/eGb2VnLnQGtNEHXiDV21S7UJ/4jBMrpIYYiHcEFKYco6mROLpVJIMXrPE4tQF6OFHckbx4DrKJ3qpp48xLwncPIP+E9fSQKM0MVLVYcv/ntpLicV5L2gF145g4FJY6Y64tCqXfV5FZLvJNlyYxyIKJXDchZgARWPszNLjM9d2DwvSlLil9GTHLWMct1ZA/sG0DrA2B+y4kniyxJlS1l4ZsKR8sKK/DjIF6JlJE0vZppF4KdFbleS9kRgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When you sign off a flight before it leaves, what do you check?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSigcKEAgTGAI4AUIIdGhpbmtpbmcSDJkels/JDZZZbeBVXxoMtLA0ZyCeBlQblk+dIjDKoV8OUXV4/jSpY56chRkVatgehpVWUtnC9i+phXIWgqw0nHPb2hYA7jKCrgryWfUqpwZjGFWlSRIHqupkYXOJoOb9TeM0yhMTaVOwGkz+NbsZLsOBdTXriSwdYZ0ktP8g4GNHlJgpPiV1I+B4BKV3KWlOrn5c2I5AokVv85fwPi+ageVgESLDFuMEQe9UC/rittHQmjqjZbFWCXWsPt6xr2Zte8fvcGqCt8xwANLvAvsTpy7hTWsBVLGAaUzDtdCQ19l6Vaz31GhjRZBPtxMlHNQfGsHrQcQ/HR5Q8MclBY6Wv/u0TTcwbZ48J3yIzKQYaX494L4EURAbrzaRMwpu2mndZ3dHzFa30HkFl/r5hqTy4OQPPbz3RNR4u8C40rREVCG38V9/EbhbZZ5WN65ye5FpGx22ne/JeCLpGhk2S9he/38iBbFFDmQtiMXC4HcAVkDhoIHVUVtuIgJbIRhi48kvDaxo3LGHBHl8MK6VaNT0jSdICqXUsCzKWleMwCD+6qn9vEnA1W3FjPmhbHz6GINxwUdDlo2h5087ozSYCXmOaJLeGvWHh4T3HWsxQNQcmZTIfnKzJX2TK3p0ke++bRMwcXWrrcRwJqfe6b2N/Qy+1iigiX8cml/KPy9hi2o/6DR1v9Tmy+1YQ6IpZgrlYpjUDwZYpdBaz49I5Hf5s84i/1k9hDga9/+oBKybITiSvlZ+WBCYeJHdfV4AUw0z+Jv+vwJpowY777kmjITuOsOyC0z2Vv9ummr5VfqGwilrrwM3+U909ns/rE4drnvCU5w24m1e7+QfUb4cSrRVMIIlGMzjeKlUnkumejXwowFN8OPP+ZCl7l4WMeVgtplOyeZKzp/Ei3rV2XzEyZxf4eOjatWYGwQhB5vNjy3rb1JOoDrf4gvMLeoUStE9Qy8nKL/bCmTsZ/8mGEd7dFMW9RXDW23Vjv/AFMMTtMO6aAdTlBJx4QNAhouxdG6YSL9qTXCWzi6RtngUvpElXh7r0gyGUGTth+Ed5r6pYpwNT+LsIaz9CR52QZmZsAKlRfcRpR0jv3+xdmhYLNxU9XQZC6N0jNElwiclJxSLE+ELiw6UHTuYBRZ+u3Gy3HFYwgtU4YRyP0uPuoes8l8QPPCEUFh/AhGjUnMMYggYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: When two dispatchers want the same drone or the same site for the same time, what should happen?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSygYKEAgTGAI4AUIIdGhpbmtpbmcSDBRYDE9nA2Fby3wjxBoMWjqpAQUgTovZ6pm2IjDgDFkWdHZkplDZNJvRrftIyo6VFoKc6MU3VdaDWfNlDdMyFTKQ/yoHnSs/XKYSAaIq5wVZysFebrnxqum3f5ak2jtEnqlS5n07TMad3GyMNUkafJWCNCHrefF8UOYVi4aFUMeBBt92q3AU+yapDMHFF2ovwdymUb0PDflhycB5I2XaDL/y2PU1p+JDx00fJ8liLemFU8TGMQJGlFD6kyX/D6xECP0d7tGQ9T8AwWD9Uti0pGP3NuAKfC9m5p8c146r78UKqXmo5gwCgJMTM6NQM3K/H6Z4dVPFctGU+u7fTukwX9HKFnh/waXlLv8M94TTIEK+h3GvK3f3CZNMlyvJY0rM9e971C5Ag41X0uSDOm6nzEI3BUC77S/3/iMc2GYYX0gugYvqe/qOESOf6jdXVA9K7QeEwLRq4AgDKZiA/C9FFPV3l8YfyKgeH8LW2nyuTWK8u6OJsIWV/84nFmPpI7zSWUI4Hssqm8Xo0jrb65SghGWDnQE5ok14J0akX81gRFkehRGN8Gyzy8TQj1TQXYlwVFrf0cRaah344XQshdkRdBmxf/buyPTiT3v3ztYzdJFTCrVMH2m4IPrvFbL6rZvVK1yaGCUPz0NbORQs3+YJ3+7wBLHybsbrHCFsBhfpA9lu1qZN+StMIUBWX6OYVrW7qpsABsHuzWmvAQH27eVwhM+RnyEXeSChUe75IgjNJaA6pVJSgr+JKl10U9HwfXdkmzCIYq8h9KaF037ArvuU4pBG2AoOSoUs5GAlcm7lZ9SGk7+aDSGoZn8zK74yMCQXub5rgD+skWvhEO7VYtWXkCdDOOcen+3P2uJFRPMk00TPMlh8Vd55FgbQFYPzBS1WjAn+Hl8x0GhEYCA6GHoMZNYg/6qMdHTnVOYSqoO3BPnSt8FoloMZ7RdS1pPfbUH7QPtUx6PmW5UALeMHVf6xQLLkhk0XQoBYo84sqxuoXMTaELlmJqGOJagRRxdv5sl33sILicnaK/mKBwn2EPiPRp4ARxFwbL+cdjq7B94S9JnU04eDd9lIa4jgfG70v3bw/D5pDqdvsRgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: What goes wrong most often in your work today that the new service must prevent?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQStAcKEAgTGAI4AUIIdGhpbmtpbmcSDHYjOytPA4F78pJYMhoMYZYTkCGXSi7jSqQUIjC1S7Vb7MUyDMjmvar9ii0ZmX/YsYPQSD/+plOH16Tr1x0fM1YBGijl+oosErcTb4Qq0QZeDJXHxGApbO4UI0526jdJOlI4ln0qwbAFiEjHu9mpo/OAsgim9ghqDfYwNn2hxUv2zZtKYYEypUL1iZyeZwuswjnBwYum4LFPASfrhJDAjD/E5g38PGNUDOIkqGh/KsYRWwIZWzX+/JEEGPzQOuATHPMDrgzoRJU9raJIuL/6V2sncefG0SznookoZ49xjjBSBcUaQ9/WMfWqLiCgBOpgt1oIn1i70d/yHBUBUMIgNcQPnUAdxQFLiCI3cPwYszdcGOUIVmOQySsKMsKa4rgYguviGT6eduHXf2h9wGkfHN3fuTJXPbdlSSIAlIvDNGcOMhdaIIDmF2ZgnBUZnKhfMgM0Bs1Uvzmy+LB0MOnNQF2vubYaP1JRgpCMTUv/n6uir7XYVE0chDLU/iGkBRwegbjpvQK1uTPgNWYnTHuQr5/VvBmBZ/j/WnDscDZoAeIWTc4DpmFgFeTLdV2SFME1QwGn0n35m+PKTwRvMWWxZiW8F9bN7OqamI80ZeoU7uw9Z6IHKM1h4//TpTIVSnDbfXvv6m8WFQK/ay6nKNX8owuxWN5UE8GLuH46lbdcL3PNJtxMA9ykaoG5csTU3B0AZ5sa5ejiIPpiQu7RT8USaWhQtoZ9AKA7+zGWXQMghtCpK+dsYvMl1l+Gec315PsqvlHE4DCIMNasto3GX2OTf6PzT0syGiQAq3l3aI1/k8aZPGQSzLfHJbNTe6UOXNvTmSN7Iw9n/x7NdMi+hXlAoYjNgfPcZ+qwTs2lGg+RFU3iV1nxh0aBrk89fT1zXbbNf4C9uFtNCHtNB3UJb6aZoya9p3p2K3jiBINdeL9lz3YYkfOgvcrXogBOi1cyoUuPaJtrR92G+OZlIhqHnteblPRynxiPuwqYJQcsQ2wGgrh8VJYkaKJnWrVEb6+XJDrYBj95O9BgYmt21mcHtaQRVmHtcO69sVALO5xjsKNfD+Q4k1Av+APzq5EuMkbMbbhiBe2g+MYqAN8JVkXiYRbqzHTsjn+dODVu1WjGJzcVq/JpTEuojB/e5lypMuPcstMWZRJgs7oGqYPgeoTKLk1dbe6e9qBzwq3S8kmj8xT8N68xUAhX69VEQkLiYbWqPyZxlXQQ2aDKeCFNBCE/YBm0K2cYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK dispatcher: How should the service help you find which of your drones could get to where a job starts?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSyAYKEAgTGAI4AUIIdGhpbmtpbmcSDMIWMxEw+VKxeDYszRoMH+1E0JA2b8imOg8dIjCwiAmMwpiYqUnlqGBk8ElZHYyYM+aSLtI09OHxXBUNmI5FTejYImacKbo5a/Mvq9sq5QVqFMqMdlIGf295laReCjIX0r9pdkBJqmHYFEJTDAcGKhHnFkwHIijqWzm+4bdCBTEsp7q/9zovNTxL51/wAT7bCINKWhH2tNc8yBo3Nh4cw6SWTy0MfxOy9upVnggaITgpoSM1eVWRmtTM1Ab4i0JkvrAbCHoHlHKCiEYoBvJ6pu2ct2d/nwB5TXZsWgJSqQaXAWvIWNoxUsnUu234J5z2mHrH7auFSyhBKNyyQ25tHCF7yNf796IDdt7Lj+/lUgWo9aT+PrOLVbN5aqRDKyViwvVI2p0pp7LoNdfR4Dn7dtYEM/tYGxBzQdg0nEP7CzRSGA+bBsBwAh3jlik+OcXWGCxE5NnFlty9br1CucZG1ypuf/oSQbqIZkIu0ioz4hxXKo355tQ1VPMQYwfiUEmcuoT4IHs9lF5NvbLDFAQGn9QnKs8gJ9wuv3pA9K/pFv5mmdfl0AI0581ndGOegx/AK+L9VdjNnGqBNEU9+CzvZXvcCGYd3w4O6SIJp8ussefTg879NkY4yBufzqdTV1tMN7mmAui1hFARjXevVjjRj2CWuZNWjiy19Ze1ZzWt59dOg7bfWmDtlDleTQm5myALAVxb05tm4TMD2X9xAHe5Bl10AeyWEjoAh/86bQJ6Ie4q7wbdAtEjcFH8VER8Cv/uFOv9VuXaHqUBlkq1pWE9w/1jm3z9MzunwP415lUSpHK4qDkSQmZAxvVErHSZFZlqMn/PJflNLYMur/brHa4OY60mdExEtHZuxwZax6+X9LrBVYaBs6kznHC+3tTUYtlHjtnZ6jebc+V7fv7Qgwun8envHcvLkvHDDt7m+haNcUMRkT0TZQVSHMsnoOcCrfs71HxZNmdueIUooQ3V2+h6X8/Cw4mz9V76vHt1GTiHtdkv+o2Hte3OWxp+efgl8UHVkrH+UStDCtSc7RvYAY1CtlMqMiMJQi7nJ850xBYXVHDxyCAv182m0c3pGhJ6eo7pm37IAREYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: Please walk me through a normal working day: what do you do with the drones, and what information do you need or record at each step?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "As a fleet technician, I keep our drones and charging equipment in working order. I add new drones to our fleet, retire old ones, set up our charging pads at our sites, and send drones to charge. I also take drones out of service for repairs and put them back when they are ready."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK technician: What do you record about a drone when you add it to the fleet?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSsAcKEAgTGAI4AUIIdGhpbmtpbmcSDNvdUNqCOi8xi0UWhhoMRziqFgoQL9Z3+zciIjB1pBPFQ8YxKhTNBV5iVqFK28NKbjqC+BjdADM1TtGoNmxm0OgfL8k8vrmYW8IoubcqzQY/WdDsFtpVWsrA5ZDKyXLSSxQGRo6GAafABNm7+juWfDTzuy4/Mp9jiaFTxeA7gkKBaVNd5KGHgrgI3/MPy7J8Ac64k5SjrqS+VpiIh3X04Eyj62ylbVvNb9ZNpnwi21Yah1l8Ic2+WMrdjP6IKp6dV6c/cPCs8xdS1zaa74ijbnutb/otiiThKdD64/nq1/bWcYXNTB9Ei7tudljz5kkUZ3hauXN6hEXrxODbeft1zh2cSrIAyjpX0HaGixKxP/L+HZYo2GTzozZ3n0CXfu3Q12Na1jHZygn1rAve0ygOzK20+4bVXRM+bPces3v5gdmACBG5SKp6aoDC3+J8IxOzlvJsaLQ7kRco8kj3PjZu+FLbqu8vtb7uQNH61j57Uk32w7AJOw5UmTPXe+NMxSQ2f6uGKjebA+43V+F6rX3Cue2p53rx7QK8UyDc1YinsFegI7SVxsz2kAatcD4qUAWhFeO3xoyYF0zjDjq6LF5W5IgQBnSE2PuMuGemJxbFradx4nf0P2dAUezuVMjdxejSUbsoKnhRKB+5RjN0T2sxPZW3p4hA39G4/1Tb2zpoZ9IWKHsteUg5f6r5oUjBg86Ge2LkcPRgxn4dpW70rt82/tm86Nt0/Fad7kf8QYWIxhNRZAYkdlOky33yRQwiHr/ZsobyrxxIJ5IEc/O0nc/J71mKZjWdEPaCM7Jt4uwL8MrkzwdPC79kWwfxgHp45PNhgLN4rIQWr7pGHZFnlFzL3YkTYjsC0EvROI+G5149rxE56iFNsLzAB/kerI6ls5zhV76QXdfOdu8+PpLkaPiQj9KQIhc7IfPPqKaf8vCzUclfjU4zT0ttzwCmgrMkqEVC/7oxw8qazRv4xyVTof1I33TGNoRLen6J+mNyq/8alxfepJYunN2ITrz7r7XBiVyFmZNp3lL+MQmI+Mg43sJR61akuNCOC9dOvsoP7/oTYvxtUKaWeBcbqoPYA501cdAOF5EXRCscGADoRJuZ/riIpZxtXPRq/kREfsa4ES1+jcqjBibWXoAKtLZiPv711sXYw4OH9uuth14PTC7En6/J+fGQYE7NXxqfUaSCBHri2MRv8XOWAwsntSeEJONlRNygfurdDPMyrroR8I6v2xgB"
+    },
+    {
+     "type": "text",
+     "text": "ASK technician: When you take a drone out of service for repair while it is already planned for a flight, what should happen to that flight?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "ASK desk: Please walk me through a normal working day: what do you do, what information do you receive and from whom, and what do you need from the new service?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. The authorities define zones where flying is prohibited and announce planned closures with start and end times, as well as sudden closures that apply at once, which are often amended during the day."
+  }
+ ]
+}

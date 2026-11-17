@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yMLuDN4CqSCpWg2ync",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS9QYKEAgTGAI4AUIIdGhpbmtpbmcSDEXtV3pJ/eB3CjgTGBoM4MxUVZtxiTUIkv5sIjBIecZhpLXAwa9r/Z6ykQ4ENwafR2cnmSCSJFK1UrDG/S8w9Wyg4/r8CjpVcv8G7PsqkgYPOnHXzzs33MGekxrUUvNWVmNx09czCyiQweDYYc1JGV9BYbKMNQnLBAWluCNVyG8AY2mvyAcebEg5MUzcOatpMO0fURVFYvATfI4ZgJFL9X1fHoJXZ1qQXVm0ojLKScWFCIUlQwCVaUmXVZaSoJ31YbP6k0YEd8AKQD1UAcX4gseOs53yfO4P5egWgUDWVLAShILUKwzCq36xHAG1Q/t6QWqLvjpIrDgcdnrkoR5OHONN/IgKXzPss7e5/MY7xKBf2WqQ3kegDspKRreZ3EMNygN87geeOakb5ILiSlWH89BDTlp/LuEbiChl9n8kJRUMe9iXST0ehiZdeVedMrSy79uwoWqLfI2kAomWk7e9Xg5vEPJP6SYq6YxZvForhZCrAUCaa9V6WPzaRKv96xPc5vQvkivAZuDtdAMtA8JOzU9jH0el8oT7jq7km9C9YrFa3pePmHt2ExWjBfOwKL2s+jKdFr/aPzFLWwg1h/AP832y9wOgSAMgqJxximMS1PfXRApAVvv8ME/vOHcMksxHRidvAMUPxhdVI06TLQ1gkBCQBLOhzMQfo+p/v42puTEhhuM+LITuWHLyvX1/HC64am0zEuBGQMga73u3sTpAdKwhxKgPPWi4vYXaWrjkyYd/KPpCuICItSusCV2gFN1KFpH8/v5OVpVVQXafeQ/O0Youm0cKeuxHgpZYjsR92Lp36P2W8I5fGqqfAChhxpbAxf+qcnj94P/CBxNL354kPp7E9PbI/NiiDsfz3NGvg/7EjOnoIzDbAVtByifpr9PZHEKeNiFBxXfmPPCr1/czWcgqhmOpNd/I49bHLnNw101yUBp4S129QdtYz77j2yIeGkX2w/xIlKmDQ88sdXU3bLpcO0RdmH6SZQ2bOvi9OPlYFtrigVCS02etkvsNt6/m+R1GOUxlu2HwShoc3wGRclJkD5FO2Bfo/OF2tMSI18sAhSpODJczYr0Ah8wNgBb3WwO6fUGMvePAxk/M16sRg/tPDfNLgVyhLOWs04qMq6J+BK+77LGp6cI8rc1BB8JONakYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: What is your biggest worry about how the new service could make your job harder or cause harm?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 3061,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 61,
+  "output_tokens_details": {
+   "thinking_tokens": 28
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

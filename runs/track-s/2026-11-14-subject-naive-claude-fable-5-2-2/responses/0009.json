@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xLYTbwTgnRNXnBXs4X",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSsQYKEAgTGAI4AUIIdGhpbmtpbmcSDGk84W+9aRrCzV2WJhoM/53TjZsoDUECkngnIjDsovLF3Rl0ktrNHfWkMr0LBI1W/F8WJh19bHYaRL9vFOIjOAwR6UQfF61mhwe6tSUqzgV/CM4+tff7A8hia6EA0oYGvJp4qh6PInEqz1IHmeyrR7lgTDG6q7ywbYAlYDCK3dZnLWG8IAJgvqr01oW1JM/D07IRhH12wMyLMO7YKghOI2+8KxxyzJG1uKVv+QPgc9/a3CyWfvCLdHAjPXx+HnkIBb22WjI919NaSCnipOpqBdOZinQ3UStDhmbM8dd6jm/082lISGyNblZa1eEiGVv3VfbAafbMv+rlqyw9wNcDRvh/mNjtuyA3GYeNIEZeo0I2KME5K6RugJAjaA5on1T1zagCU/CWnc6d/4g/0r6CQaPbDo2zanNOq+Y2rmJaXdfP74bgNyG2ddKD7h/eQrfZ4j/SHRxfN1A1qtR3ev1GmO2PcbD8r2C3UKitcLdy7wofyV5DqP9wrger4UU4qa0ZvYcU6KNRc3IVV1wdWPkE++cDT2U1Ix8uNKD33O5arfqqk7ptaQW9KNgyVFpu9wGFthA12jlSDhRCeiaNTL8GT+Qt/v7S5RISdPGdLjfl+LcFeUxzHCjv3N5B1H+bILTJ72S91KH6967eImWLPA6aCqomKaA/dCwAT1ha13BjfjhZNuHYtzAlTH1GTx/s5GxtjnUHqkLBPnfEV5IySeUxhbYPUETgKImBIjIiU02RsSyGZcO7QhESQklHzhUqyuApKUltAjqf7QMP69mGvszJOiGgaX88/tHxtwiX9zd9jncsOo7vMhDHuyD3V09I1jbxVsUEm9BqAJ2vfkaiATwhar5XdQSCemYUeyZhObrUVdJoHuFiRwm3A6D/VrnRB6W3j7Nob25/yWep5S5/bYsUFu68xfv7JUd4sWofMAhs5IZ/jO2m40h+uBUR/sF0NJBsHt8TDTGfHmYaHMC9YpBV0WyhwoR5qsW0SvPCJsAPoBIQugXR0s3SKmYPf6Isi0jY8adH2xvUYAtQJ3w9aIIks/RS0IjwdwYSW9fxddseGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: What do you check before you sign off a flight for departure, and what must be true for you to be allowed to sign it off?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 1179,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 79,
+  "output_tokens_details": {
+   "thinking_tokens": 34
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yhVicJGCarPAKCzaru",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSkgsKEAgTGAI4AUIIdGhpbmtpbmcSDGpD1gcptbt0O8KUeRoM/sHAiiJ75ewxOARYIjAKtDWkkGuJ8X9ibcQcgNGHccT61YCZEaNYOea7Oz98gZPCJhj6R8ZUx/KsrtPqnbkqrwpN9ow1isaelNCUu1uBOp3YDtqAeuYpSzGjmyFhBtiZflIkXHfZzmj+Cv/Ah1+enGDP5qRnFkfXhMUMgPwd28vd/dTISdSgfzAwFWPGrj66B2UmKPjUmyI9Zm3knbRbIsW1n+dNg1ehCuO7vQQXPbqcnrIM0w2viUagnCpqgVZuhjg1hGPNbRdjb2ht27LLCfxlYbGEF0zVmF+6KlkhGXH9zG5F1ljbpGafpQJ3mkcATLw7sGwolikwewWK+xmzGEX1qIgoTLmhRketzIDrtY/n5f+0GYSKdteAxudfUkvIZflXyfVH0s0m+1axllnLkiHrAhVsQSNNK7Fcw82zQpcsdrOPQlz54X/SzjAfWTHyXCpG+Onhd1eLdwI2XLEKmDPamPYWmbOu1zJWDjhfEfCqOPLeKZ8Ho/3M4E6J+GV/sKLAV4paEWsiwRurZKL8tPP9diBE5ltrNdGN/fhh5G2DuGMfIvnjdzDWyHNXaVQRCO6xUpxgtn8OAIUKHbbvlU0aVrIB9NeezFOURQFfLlf0Fkps7pZXB8dWxuRpWuHH2PWflaxmheiigzO4cIQUnKnWr9eSG8wGwJBBt3kGxAJim8EmtyoRV3ySwvXRMgPxud6UB26gWwPtPW6HsNKMtMxGz0fOx50hq5U0mSzIwI1cL8weVrIM95noLfER8pu1CaPlbM/9DsHSwydXOEhI7lPfdWsafL4tUXHlb58p34Z8Ty45u7YN5b5QhEB9kyCMI770GOuIeuT772s+7H6GWc9M+YnVeoaH6HiPoxsSk67PNov/6nO1h21YY5vyTBYZv++zB42FUwGYKBm70bXLDrgGjxIZsYqNSvp91b0KuDc3+Pbojd1XQoOQiG0OSSwOfyxq9icOKSqU5JiZ4o6afP2l6NUnFfjZa9/jj2ShoPPUF3lBWdw/kOFgFepqqi+UkQs1KpvoaX9TzryGGRo9ro9DbBj6ZqRU8KkYUuiHOyrNCiYxpsbEH5MNiryvAk6wo+mLnLHUM9iht/hintcDWCWBPKWfxlQp8UWX0KANBst51oHtaTaYJ1GBqnzgftUQV3IibBNqSbh0aRIriBOhFmtfaw1kuZTZeTpdHHFuEkXf53KF6FIqTCjxdh46jPSf4mjh16N3dBm77uzeQutRdS2fLUecmfR62FeLDviHDrrDbleAXUTFK7bdDu3+Y2PcfkXaZzsd+Nh3mi1TqANeNsdJX45j9lbPmBUL5tv0xyuAQ2SNDAQ9SIONNaDO0dO0VAeKkIEw9i7Ct4UsYlQdzR5EX3K/+yzhhJpAyJZofMff/DmrT4YYH648VaqsO5kFamZ8m3tNhASwZ0h95yakLF0C5VYmcAJ7MlTH/sX1XcwCf57LtEkQ9QZx8Hmrn3MrSfX4wP7MhZghL0JNP7XIqGvcbpRkztPbB6Z23uD6cbLQ+DKKtkspCMkfsHuzZ/MIk+K+Ue0etD2DRyDCvsmqcJkuP30sq+o/sJtolpPtd5hZPVlnBLq1pZymXn8u6WgFgIBYosTbZoBjoXZ8slBEWqeUGtUjV/MnNgeEN3mcuyyPCFyqWWiRRcQL5xnYyOhHtLrlIAjiyE8HqNe+36pFeOzN3aIyn32RyYds1CLySw9CovmCsNPTbpZrUOr1JESR80dh+C3lr0dgG7do/uCZLSMBoFr01yWj6N/FGfngSh7FANbxS6z/suY8B16UgymK9zA23f6PYjmQhFsqoE/b15Zc0wGOUrPWAANJb3VxRxwbPQg1vG3nFr7Dt1+F1U1nGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: Which instructions does the service send to a drone on your behalf, for example to depart or to stop when you call off a flight?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 8745,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 233,
+  "output_tokens_details": {
+   "thinking_tokens": 186
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

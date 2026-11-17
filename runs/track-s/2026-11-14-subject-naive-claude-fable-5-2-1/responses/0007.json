@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wSCdo9K25gwREgqPBp",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSmwYKEAgTGAI4AUIIdGhpbmtpbmcSDJ9Q8hLPTJ8KwqhvshoM2dsI5IsiTCcuAQm4IjAVNViFDB46EoAFR2RnsQcbdWpUgYBr2ubL1t+6o2//aT2bPkcbUWo6V+21pzjY/HsquAWvVADnEwp7PHLIG/pbgMwVrE2pIkZV9/PvaGdsedrPxR3O/Czqkmk6lDb68f4pqIzwvjt2qoXP6757orZL0yTv69Weop6nB1MYS6zBDzf5VnhQ2O0dhxun3Y8+4iTNwNZaWfe+GxAI/oOIaFBfKZNALk48VbMCs5PmiBg2xU/ZR+z/DF+sHopqZRgpPRPDc4aujeiZ8RuD9ndfhkxges6tUPdVtLuktQkLpT6+cMDVUDe7zpfnrOp0X23e6ksNOGpi4fxMlwcmTGUBIv+AXNhI3X1Awo5Ws8lseEgweTv/xS0DgfBifM9lzh043+nUhlK76qWFWKT6rcDRDZsK3XJvsnZ0YDCveielrPQSURHKgsrW+ToxTtFJ3N+ztjhPtnPslXkPEB7z/CajxROTdcxIpT51wMant0jzjENJnziO9iTYyhuucRjZBixnLXofw4CCbzawaW//Bw5OpN4tCCll4XTCt3oj3Mre2ehWL3SDFXXvI1w12vtBjVRcFFhIIiYN28JHKU6zdkwlBBE/w28SvBqF6mcUdoZJYrf5Y+zIYPGZgyxc2wXpQCriFuXFrpFZme+k9JG8b5xrGOTgehH4Hq8fbGHGHRWpg2JmE4REA4ZmlXyWQ9djkOfJwzXuPgSNtF7UgaroE9MU5G+4WHuu40Z5rB/ogWC1tJfuzaageBHBWlk+a6Ps7GH+uFIgQJy+mooFget7MEMbclzsAm8b2f2WsLFBmEb+tUb71qVrvexpwQjPkTc/FUYB8FxKocHsRPCZaFx/GlhVJMs9CWCxPyU3l3wGnFLnpeMyD+NaijuNSss8NCwIp7jfBorVaUynxj9zhxSfKGNmp20dwfRXD/gJoV6gBBshGkgrMI8zb68m5G1hT+rZbXu5tcv+1Lj0zaCPsODS5pZ922eBFNCdAcfqhn50bRIYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: What goes wrong today, or what are you most worried could go wrong, when taking drones out of service, returning them, retiring them, or sending them to charge?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 924,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 80,
+  "output_tokens_details": {
+   "thinking_tokens": 25
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

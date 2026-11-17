@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xeaqybasW7E9QJqbLm",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS2QYKEAgTGAI4AUIIdGhpbmtpbmcSDPqOEhzyXxCpNVJ6mBoMlspgRzZFcwxGdWpQIjDzllv8WYkq2QANyUgAbYa3GCd05XwI8/N4xSGDMa6mJcphIAMhsmvvR2+LyPeVL2Aq9gVhLD0iGOUsHeCr0IDbCzJNdVUGth09TzgN+HK5rcXVvY40sv61OS49KEYTMwwxYZwdclVCFNIbKKduFbRvUxR6ALkhPhIPyTz4zxz/NFr1Tv8aW+nS1SgS5YFXDOEv2HxblTK3h1Tz9N87gahrCeRbE0FfkQPKx95UG2QfrNrGVUj6Q26TC5BLQRGdBm87v8PbGG+P9ATCwPhY45QQkpi+yyc+edyQ9/fX8pxIKl+pzBFAqi5MfkPruuu2/Qin/XsHF0fpKH9QV0vou+cb/3mWmfBI9puaLuZKb8FOtIxNLfOP9ZM7Ab6CH4c5AUWT7Rf7OUBWTeUrwFZs7SfdGOHbHmSiGVUQIinVIYZhl+lKNncMltEQBLWj58kYpx1zSBfTPXeq6QzQjL9VvaVHs1UdpF9oAlFnETyKiARJFbZ2lRVikrP/5bL8TpoOYmq17SAIXrdekXDWtBmU93FEg5MDsY1EcTeEK6NaG6QgbltBh4Hfouk1VwVMr6BLXEToMGA+jbU09QBwIXw2oOM7ZvWEqdkGd8bTqS4LbaJdh97U3hxHM3KNNjw9nrn21Ypm/EtUrXEBB4DhUTW6ZQzip6vWlgwvLDnBq9j+K4RRBtaWGqJRrnRolc9XZkIBFzyOhm6sRpR5El17mvSx2mlpHJdtAXjS4AdaIfoo/YJ9R/QejF16wGzVKGSjNndeJL8MI0YyuYeOIFq0TABBiQW52lKGKAsEi8sGOrD9pkTySMAzPz7kvIrp/IT7q8609NlsCCb0GiWYRP1NCBmjg62vBZ+I37/boAYFPnNqKFrqXcRb1F9KwA4Tt9TVF6o27EQWwvpRZRz1yl+NPLArPjb4VL6wdZ9CnzsQpP1F9SEg/XRdq8Z0lHYx/L3oxwD7RtODh6jev7hn8o7ZtJ5mjxsSrYQE08V82IjKwFMAAX9n5jIYqi+J9qVEoaW5LBE0N0i1VGvhs99CvhpZxcuQcHbc/p1junCtHgDTSs8Ui0CrBuWxi2wP3KMH4BgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: With no staff accounts or passwords inside the service, how do you expect the service to know that an action comes from your company and from a dispatcher, and must it record which person signed off a flight?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 8925,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 93,
+  "output_tokens_details": {
+   "thinking_tokens": 27
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

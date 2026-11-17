@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xcorGA8gczfEvVVwWx",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSqQgKEAgTGAI4AUIIdGhpbmtpbmcSDCRSTBAmSDKfrANSoBoMDQeU6vm7f7UNp1xIIjBWFlWBoJ021uFUxeYZrVWkvZ/re39Vxs0XzDfi3xY2awpWYHoREtchtr54y71bYAoqxgd5CtlrQlfI04MXdcuqfH6sI/HR8Qbqo3LKSwlYTQn30Yhe5vLBInqaxiVJzVESFU4Ig9SH8eutLnqwt38gj3eE88hhP+wtHUUhjnYuU/Xa6+Xuh6SqnQ4bolirq+Qm8Mf7nyok4yFO4uhj3PLNpfGd63bPWJtECWpkFby7XPJQRJ+eAKqFzS3jKpLjoGuhHjpiq1IOAUVPDJsKWSPPNDqifYiJ5nlMCn/w630VZqoeQPyx0sOxr82ESC1dOV7UW4K2x6xfHoBnjwUQJJXCpU12XLfnNdUpBpY1640XlMZIII7d2cGHL65RH8pDT+Eauyd2ydqWbC/peBmtDQL9StFn5X65Ha0Y+hp7HneCBQI7C21mkLQ2JVbG0HQG/SX0OYDqvfR38hHKrI9cVP9VPhvSBgqHkMMVBcn+113Bt7j75KBGYqLlpMY9fUKd6VW6oRzRCiL83iWRSqwI5zE5VwrPP3aQhwyCz+6DvCUVDx2nQncyqa8YGkeDgeSV/dYvkDAo2dblbV522XQyBuNelGA8FdGRonBEYE0t306gEmgt2svcIVMzGKptYDBEgdWaX5la9gSqAI2q/d5ptLnfUKH3vgKLRdpLx/uzTtA+DOXYOJUWqV5+cor1NKonJYsXbUNgSegtr8i0mIl9UHNmAD7QlCZHSLbahMnsbOYEqgqRYjfK4nOlYdet5ZJYyOT953e2X3qsV8GiinH3qc0KpXPOFQRsIXs+9KG11dCr0HWcIp1o2wvTi0iLAmEAP7HO9AGecqRFR4NglS2bcUmr2Es0RSIpJS+JLuhntshdFO8dn/2tuum0qNEzeh990a1fqFdFKnTEyjeRfXROp51RtmT7cn7W71eUFit0QxVLhtOA0Nb8cTxS4dRM+aPZ7R2rS/wqE/klMMZFHbBffTQ+XOi21UUjW5PJZZdPGZCL5VaHfuj6aTXNOBnVHOiv4LHbHTIBwUvHMj1MhPjXX3PJx/8Jb0CRhkZi08/ug4EW/DzwqWDSR1pyI/+1SapbQXE07Kf+qu6P3QZMq9ElBBQ+ji5j8yg2S/a8BepNBjyILBmWy+tABdWb1Hr7P5uiaM7E6lJoHCRuzi5jQmqgQkkesUE+wppBEcq+TTxY4Bcs/KvpGZ0P14Xbd5OSja0r05zkER7q4RMCyEUcu4R+1kk+ZpsLonNHiSRyXmlaF0AXKu/1PPRFRVi343lEh3haWMEjCmN6TNOpvAwx7n+jkPCdVxp1g3O0SWtBeu1W7axYicyTbDfMxdwll01oqc6MUZgAOE7W+g29yg8YAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: When you ask which of your drones could get to where a job starts, do you mean reachable along corridors that are open, within the drone's range, and fit for the job (load capacity, sensors)? What do you do if a drone is not at the start site?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 7947,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 158,
+  "output_tokens_details": {
+   "thinking_tokens": 75
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

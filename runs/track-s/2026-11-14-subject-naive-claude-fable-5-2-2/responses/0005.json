@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xKen5VuVLc3hfN5duf",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSkQYKEAgTGAI4AUIIdGhpbmtpbmcSDPVZSQM+i/R9xULhDhoMc+7sMJmrtIhhoOHyIjBHZr0aSVjQuhF4b3Ru+aLLN+yrN/pm3IpTIoExRBLckTn2ra9+D9let7EVA5pLIREqrgV4/kDYyfj1Da6YKC0XibRmdwnFST/c9LLh/LCOyRPD87g6lNnu6D/Zs0+7rY5hTsE3oNQDehIPJ/Eundiy5L+aUZ8l4S9JlyYGFDTDS0s2Cj5T9cR+aMsgP5e8MzgxyRVMoGfuna9LmkBDaLYLVw4J3NTWhCFYShqOmSjS8AsP6agrD+HAwCCtDWplGrNCrhah0Zcaz/dbG7uVVahCJ/YO0aczbGRCMo/wRKFXOsQ9W+2SEfyAk67DBvemBaUx/nuOWqXnP25n+77Hg6bFJizhzzQAItYKU5lQEIHSlQhkXsdAsSxl6kfzksMbr00zeuNZHWzkeIJEgci2b8RyFFH1QhWnP7iGJG/sCtnjUiLskpH/C4OrFKl2X9MNpmkyDlZfX5UnZwZ4ww+b51SLO61MBeu295P1jsI8aefcqDC0ugwyRpZmW8h9y8sG+oG0g2E1GfDoWIekzYqpLJl7NabOypSHqJljXsw5nB/7+r0cu9nimpPK4pl3Bm4VSLVee4SR7OQ47dxBEbYRfH0kBlZubWmJmCm3gmzUKbPOFdBUdNSSi2MnupXt4JuejhbpNTsXiuYQllkZqVcYrtFI0m5oL+uw5/dGc2IdkfYFMCK8vljlyFgRFt1nENCBR8iCdpQytqEWow1bjQbyRJAGirmKrXsQDJfZXAkUKQWjBL7Y+M9P8aZ4Dez00lEQCjJ5DMx6xxtw9CYfBifL2DUASPq55oPf6el5Tr58yc0JLgbRmhrGofTvHIR9FKTuel0FJG8VoKCccV7crt6t0jwSQJmWm54UixrBcM5OCgNGmjZCwQ1vqU5dE4u+6Ffksi5UiWfUVJ/mB9yVl518meqNzScObCNKwzeILOAEcKYBEYWahEFRdwmAH87YVKwKv/YJdqeNCqGagu8f8Ul2RK8kVhgB"
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: Can one drone be planned for two flights whose times overlap, and can a site (launch or landing place) take more than one drone at the same time? What are the limits?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 937,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 89,
+  "output_tokens_details": {
+   "thinking_tokens": 30
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

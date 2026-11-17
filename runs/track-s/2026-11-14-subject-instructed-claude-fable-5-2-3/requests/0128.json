@@ -1,0 +1,173 @@
+{
+ "model": "claude-fable-5-2",
+ "max_tokens": 32000,
+ "system": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a member of the platform's airspace desk. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "The interviewee is ready. Ask your first question."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSwwUKEAgTGAI4AUIIdGhpbmtpbmcSDCk2Za/vf7tXNXrk3xoMLiKSn+67omgAUC11IjChSZxzcu7JQgPqzKj1yfKuMrEATDX8PAhnkMN7d1cPYwv/nHJNVMvKxNg0BP6Gq84q4AR9V+0B91BanCVfGOg6HANASH7ZQYnpLYcsnTmWfzAWyEPpJm/CEHVBibss0lj0VaJuWZ8nQVrbtVyZ/mGMokTsyCsIFBVg8pvsLD2aMjiDT8QpCbi+93/KklXFU4Zv0SlwWEhrrkHiKdMX0DBQPcyW23F6h4512Bx8gNozPvWKGB49uqOsLrC4VDaJTvV5GYC75tlrjzkKR4F2jd/kZgr9m6qPJptF++/hDZznuPloGLqmL1Aad/ocOKm1awXO/6XBJVYC4zmb1uyy/gxLctVgdIhtZS4pR5FUk6KySVn0OboZeEy6h8HD0RS6gUmSpKaMkH2Sn/JEvCGlna6vUk037hWjK6fdsiDg/r5VrO/naF3xATnvUUEWbFW7GbC/T7STYZPPX3zZVlGkytsEA+cuaHrBRMrVmVQLtf6WK/lyHra4z8rRUtVBjhj4V1CjNzaQBhcVWCHBq5lrIS+6AEJzijiUdaCJMZjTvHXjpvM5fZu84ly5PwTafr9ATCO+40ugQ/PkDrnnVtmMbLBQ8N2xo0Hs+wAWPvg/e7OkjZL1j00JcwfK2lvVpVZUikTP/uiwIumgvK5OgKJ7dMJaG8/ERHQcfQB9iA5uTlO4Fl6k7f4Vn+Y3L6v0ifqe8UAPBDaJf/2/Wyv5EjEXqsXrrA4CQIbQzr5nPMtTOayGsV4Izt8ttsES9M/JNroP3LWQQ4KkJCXCyTiQR0u3RCKX4+CKM1xvTxQJ/lrDxhcGvZScJheRc6wgCU9zKEPZQfSQZK46Tb6E6vAJ0Yscpv4cYlTQo4ALsqqFLR2cWgGm3EZkNhgB"
+    },
+    {
+     "type": "text",
+     "text": "To start, could you walk me through an ordinary working day for you, from the moment you begin until you finish?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. Drones fly along corridors between named sites, and sites have a limited number of places where drones can take off and land at the same time."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSsQcKEAgTGAI4AUIIdGhpbmtpbmcSDAWbjz5Re357wa6cKRoMT551rwHjd0zJvNvGIjCsUtyMNXb5DGqyiCxuznIKJPf8lKmIMqITXwaVSm16rBuSiUXDS5kIGiAkQCrGDDEqzga6cc5OUoTSi3L1Me11UqLvUJx535e/k9fnCDxBkO+ii8Koy4ZFsDMrM9x0tKHrZ1vUGEcuK2aEPjCWood1a9ftDUyyh4yx/BRFmaa1NGQOfky8MknyAD6BUwsDmRz2tlQmKsZFjujXteY/veZySf/KG4pn915c+XBUlY9FzMBo9pzs4itjC0eIqVzGfJNhRWEhZucVFQ/w6esDYqQJIzZIQBE86j4551wZZ3/z0WdPVJkf7lVdgrKngJN4ZvQNA78PHn6PINvu/ukpgnKAwXzYwre2jXiOdjuNEDHYgNCEdBWmqbpnQ5s1alk0f5rEzQenx6YU4nRJjl9oJPHPpzP6D9pBjoF/+uDmweI0U/MAxC2vh5X6IUr6r82liFfR+G0P8qWlbivNizgeLLj2hV7lJ+adsyx94OxpLyrhHiABfi1j2IRHr1xqCYys3JLzlb1J153SsjoN2tYVk+V08Z/OWJZ+OYheqgobdy7CAYxiNSqHqTO4YnPXJWKHZ1Lx4oExIHAZAPkbZpLANZz9ERBSXCiMZ8AtDNUscg0QzQ+AVDtHiV+7p8+t/YM0JAoqnJ2z9/QJksSsq3x0U+uC7S8dpaZFT43YYNYRvzVFrMcj+J+HZDoSX0ZgHrGZAyo69TKUB/auukH7ra4RHFJEfK+OCzEaW4jJ+d5LuCfkaYUXuZ3tAA/65Yt6Naq2KAcBbBk5cS/3lnTWnKiK3KPobtXC0XKDigtfYuU9AqdZRGtR/pAZm+zu6hx8slSIqbLFjany+rujiJ4oKZa/r2G+yguHmgfs1/5KnUkiHZPVQY9ynOdJx9UeveTIoSdICQGGgyyGlCwZTi1GFT7zXn4Wxi8zLqUPAqO2FMgcX9y2tzMhbMKOU7/G8xTq2rHwTkF7bCCWP0mAb74gFon1rjgmel2iWclZSfmgPH+kRR+bNbkeETn6ZaE8ObIRt7B/kKjHblCEBS2rpyl/CkeoGY9yHxwnF/HfedWO9rGFAjxwEVeJlBrJqceUV/bewpvQy660N0rFwz2cTnx/kQ0zobhYPj0g+tX9qSmZXeoF7wYGU2MG6kZkDSnscE+RIXEFG4HUWvs3C6FT4YJSkzh5p54rPXXgOKwS1WQxO/BuefaVAnIYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Think of the most recent closure you entered. What happened, step by step, from the moment you first heard about it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS6AYKEAgTGAI4AUIIdGhpbmtpbmcSDGarFX/CH9dPUAB0xxoMIYfN61Ii1qfal93WIjDERfGo4Cepc7ww6Qd8x2WyoYZGRzC2STWDMEjMW8jfntW03iA+XfSkEz0knwvQJGoqhQY8Qrm/To2s+WVfyXzylmz707jq90Q3sxW33wufL00TqbroD2otzuZ2m8cV0pkXM+URy9yY8t+1u7iepTLy0t3BQDwVqq3/QV84/yCf6RzwlIxl2vbdwsHlTW/dg1ByQv5OBg7GNLrPYhTgyRM2Umcr4EyhVY6E9hP21MrUSEvDiG25ahtvZazxwUYzWJQhfeHC/ZecFtA4aWy8hr2cRjL95JOqHC+PRcIgcFoOHLZloffryMsvnblzqG97KcxPCD+qHddp5ZP3VTbunhkxKGsbojH6vRp6s88AM0y/V9qzC/sNwQxz19ik4YfDZA83S8g1MSDpJw0DDFdwKp7kp66WEb9JHHs1s/WubAccxGkTz7PVdHsj9MIk57nP/U6U4wFYTsnpTf/iWVDZiXIXBrU9Rr/pUHmBGdO2cuWcY+h437DGcNM7xBER8pc5rq9RlSjz0J2h4IVuBzHRebBaMbQg0a3J6pZnHWIvun+8KUUHhB3TQfzD2dAV+iMx8Vn9NtqOjiWSI1TyO9+vocaSiTKHO3jvoNDrp1fch6el0CFcmV+2yhTcFGZUnL4+7/+Q0cJ5YiGkKJnTC2T6I3UX7GFI6ZYygax9GVYtHBynthKJP0DpjP5eeUxggXqym5eRZ0sImOubw193xk/50jB6dxIS0dA1uhbSrafe3XzxjSu6Ci1zvsET7UUtdRuUrWNO8svDwyW1+UD+rqNeKcQ0MZSwM82LhaSRLrcZqe2gdeVFcwSQhhdOg+IiM8PZqPEpIbXhUxPBr4r95rHSTVF2QsccWp5R3PHo+rZNvBgHdT0vXtPW7VoSdpoP0Q/iVOILzfVNeM7EJUSP95G0JaCZ5yGJmC7Mkv4QmBM6Y9NeygrdoMSfRibnVc4stQKQJUADCUrfzLjOwjvBOfq2llnsYG2BOHrdc+36wW6RfCnxHUENBC5alTJ2pfHqjr8YEo8MTnq+BJZTisAFYnB6XegL+gamSvxNnyGBmDNyHlX1dnGiizzD8KOos56dzKWdc5j0IgsYxxn5lBgB"
+    },
+    {
+     "type": "text",
+     "text": "No problem. When the authorities announce a closure, how does that announcement reach you?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS0QcKEAgTGAI4AUIIdGhpbmtpbmcSDOZBYSgk7ltPoay1wBoM4EKGvtTjU8Bq+PkVIjBgP7t9kZCHkDJlz9rvPiY8khR9WLtntDC8ytVeqzfpk1MliWL/Q9+KJ+yaUVjP808q7gYEWz6wu+z+j+nj51Ys4xvG+tEYUcV/prPehSzanzMWoxYoza6cRGs+9PgBpsf1yH4CA0Da+rMM4wkNjfSIkEH8xxvOyvl8AOiUBH31GVwKxfZ+5bL7fK1U2f8VfBkxGjymBmO9ejNqolxISMJvdsYOtZmwAPMNizb1P2WT90MwsXqfWE1l67sPIttv/fONkRRREjq8pU3KxcHlqgzkf7p/d6TY35z2VA9fGlYoTZ0HuBpByhKSWoEFG3btdAPDtfbbBc3/1DbvuM77w8y8H2AtEBPyHR+IGXs5MYFuq2DcSlHexBZ86blXZyS4DuF8Gje4bmh2vK7IUkjc/j1M0ajX7JBHyld2a6P1vSpXzIk1AFOkWCTIZvvbuyGbexBhI/VJ10hXqMCBg+dtDSpyV7BnkIKBgeMhyuHuGnofPnErAedgQMzsrYkq48/9cxfTAhZpxNVLClwD4tqJp9QRua6uX/HzCncFyfxVVQztqHLpzCZg5CfTf39STuH5MMEOC5Pb/WFb1eHD3K4pyxo2GhA98oPDCqXuHUEaNdXJEFRBpwi8bpImIYvC2ziqgv7qKyMsOEo3a1wpGWS4Qo4IRMpzmJi6nmk439HYQdXgMS48Nb7VHtZHta6g21Ogx7YNu/filv0U/uDXYhFvAc1tR+ZioAriEcersFE6LpF9FiFRBqLh1JQleqzPm+HmxvMzopZLGUIRweApZEvSvaa6LplJcqhtDBj2Hi+7Zj8cAvOHmFjzmnXXpWOQTzGLXodNy3r+MyyqNxy4pVUxxAf7ZQnrTNjPeUbJQ1gWAMlE0loQRnYbnyTFa1uXMcUITadNkGFslrsSOAtUantGv/kdGiJVyGmHXOKNvPlEVkZmUaFddyrAxuU6Tl/7hZhKPx+Ro0Zk/gZsaxBtmc7Hbr9CtyJvi5U7fD6YM1VYfPEVHAoyOyqZzl/EpUy1f59qOD+M+Y6klWeu6a8CC0qCnQJ8qLZjG5FaHptibTg+Wox7bDEZkpKJxcN8YQ8fUXO+cj5m6ZFnxE2PgReeBEKxNgf6L90Jb/G+bqJUf0hBGq7QcoOaqTqvj0dsVojgSP7wBmeJaqBFxQox0Yy9qP4FRXqbGw3zBkLnknhIb+I63IIuXuT7ahWtihIBqrmHk1Xdtl2o1Z/aYo+r/zkX1lz6Nigp/xgB"
+    },
+    {
+     "type": "text",
+     "text": "That's fine. What is the first thing you do when you sit down to work in the morning?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQShQcKEAgTGAI4AUIIdGhpbmtpbmcSDHZuRfCWmbhmZ9t5SRoMKwkhluFhU5whJPM2IjDgu3mQywns72HfL4Ax5zFyZh0YBoIzAy1U05OzfHgOoAXMDVD1Cud2Rq2rdptTK80qogZ+qlLPbgFvYnel3krl7FN5bp/3htjyB3hMeQQndrL1SbhSYwZkzcB08IYfc4g0OpjbSUOA4WTcTvuMC9kfIUxPtgZuFicAZyY8jd9HwykqW3rw6erLm7xsKPUfzxIeLeL2Qv6u10JpdU2qhUZXU9bAzIud1emjiA2ruZPleHEYySDZIKU3QJKFTYKy+dngBBWS3h9nExZ+NtOXQnkShjdkAUgVB5WFLmn0cCCxTj65uoWuWiXspBR8rhGQqvaJmZ6PqXbomT0CF5czSjy6lgHWC60vTAJCs9qI+qhAm/Tll4dH5IgQ5V4y2gU+ACzhb1G5Mln/7GObB5KohOniIOFvOYhomfAmGBxVPlay5JWzG9IVizhmGn367Kf+mMl3QIAb4IIammDK00WPdMU2HLBe+gFYkPF0TQHNlUma7X/i/3qxdNpd66kAp3sMrdQ7C45SxuL5+2IxlmvyLyShwzP3bUHEd1stwW74sdq9aekllJwlUwc2x4pjKafCWWw7y1c3F/WM3Cee771L9RJZdyX6vfF12QPD8leFCu6O60Q5/f471snidFMD7PxcVm2XTgaJPF7AkbtJqii6HcTqM4+Rm5aKDxw+itomJW0cjsRlgXOLRUNHV+xBSWE/7veLZA7NWcbEghYG8IXi7qiXvdDPzMWSKNfcy9sBB6vd8iuQz7liJYZoWsNOGNYeZk6sUzNqO99jn9qxpSeT2P/ThlxO062Ai4uIM8i1w3iV0vF+/WU2O2eWDavgWS844C3KS051C7yj9bVDfTS4/xF8hcT+HFoY+WZMe+eq/evTlNmruiRIBtTvrLE3XW3smYj349jRsdZNggeiGsJfdUa8O8c4WTmfHGhUNrbR30H5ZNyr+JVxmhUD3nMA/uFN0hnnO5X0ZvwBj8Xv/3YLXwLMHE+j5YkU7avB4YTL34TQeUiyc7Yewf+sLQFxUhMvOzrXWfF8Npw6eIeQd1SvfFgZIcTKpyGeMzCp4DxEC2O2bbTky9u6I5gRR2mgXfxGoH9pjhEiWnPDZRIxnlsPR1wTx+49b5Rf5ajE9uK4sR3SPhmAaNOCGAE="
+    },
+    {
+     "type": "text",
+     "text": "Let's try a different angle. Thinking back over the last few months, which day at work was the worst, and what made it bad?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQSgggKEAgTGAI4AUIIdGhpbmtpbmcSDIttiKmtz75TWckegxoM1LFzjlznX/Q2lzwMIjB8gasVX/qrGe9yrBcWt+pLYScWN2PBZtebssYieoX9q5wN8O/zcy1l1NTCkIw+pkAqnwdpmssQQjpVo3hGaFc15yxsiNAC+dy89GoSHkFY50OrNah/USrhYi5yBIHS+BKZVm67wCpiSHLbarx6wX2Ump6KPun2mIQ8lRqTJTbDgpzAqlX6DO0XIW+hlh2OQ2s2zI4vsEKFOH9S3LVwJweU62ZvGq9whaopC65S6Qij2xPo2/USMVf/87LM1rGU0gVUVZn6fSiIA4YQr9VURHCw63WLz+S1u6wXR5egoLUuW8bgA9QOI27kBxlk2UduP0sHNu30Z44lbosD3qKxeiTKSh/nBCFwSW3RN9Z4XtSKgruqtt98VlH6n3nUTsGatZyICAVSvJ7Lcm+4X2VnkRaXtJa8BYFivRFVOqQUgnn4jzI53fiKI/DxkVTAsh+Rr4IE64Iji/GbfUdXr2DFsm9ctkfgWJXiyCgNpnHarXVtehrWRe2gvWehAv2bvruaEnd9VQJKPStfnMZqlnW/1DuM6l7Rybqo8deXJd9Zv0jiW/Kne4T6ya/iONKvGXEyS6vKSwplGggZO4CNSlBXwdVJBWhzXIm4m81DU2n2ukCSIOeP+7lPApAXPnufZz+/1iyMBSk/PVvtInG3myhQrrHvn8Dzrwgqw6QxtIwWJ+CbbQOniHWIY4sXdKR/U0XkCAD3DyWuT72iRuDVer2EZN0wkUgFRo5jD7zVkcpApf8WTlv/NFshkCB3tvite+fhL1t+ykOZP6+1UlEv+kAxQi1u3LHDG9hEzNCM8U2O8qSv4PkZGI1Vi+S5jNUqJH2vSSTl/c0eAdQwoAmqHzb+7fqls16haZ+c+uud5FRjHZwlfnm0aHa/2BYt9QJf8IOoLLv4p5UUmPsQg4rDYy0nEUliwAXGK/xv71vobRdCvCRLpAzesA/rwsT7X0pru3CWgheb2NSCZWTBI4V1/9ViPNGY7f7rinzF6d1JH+HV65odkPpoiE4Aml79IUJo7LgWq1M6qfkm2YpeIo4Ecs41RkTH39GVX2dlVcUneI5UEKesfrl2tPV38PhHJTO5c80gz/1DKoECTBH8gay4NAC04+2wgTsV/4uDEckKwA4KkrR3MlxmZnAloLxX8IqaN8ZVjLJK0wWdzuKArI1BMyMFBsguvxPoKx/8AvPKzri2OHnZ41CEqmmsDQrWZhlaz8vYAG+5/g9U4gS+RP2mL9NR9sIXFQN3QCKunB84dWVe2s4gG4zKWvNE5+mqiOxojmNrnIOPQ+R4dz0J1q+4U1ZB+mR+aa8YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "You said that when a closure is entered, you want to know how much disruption it caused across customers. What does \"disruption\" mean to you there?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS0wYKEAgTGAI4AUIIdGhpbmtpbmcSDNMx36WLZc2X5uBScRoM8N8bIt08JadqnGhMIjAkSq752ii0e1HcPfN/CBA8ZrJHWvBvexYehZ8oF9ff2ztU08EmoCb86GRgLJHupGgq8AVBP2vvy0TBYNEi4rwgKVZYJNbESrvvgjfGgo14e3pKANdzUq7up//R1VpxNdOopaI8kghmv1exQHt+nQ3PUsjau/zBTjv9XkvNwWPAwxuriJdgmFucRcpjcZgtrfk/Yt6X0DqZrnSdc7V1msEHF2ddOp5AWPQCMrqnGcZ8GTnqq6yDfNHZ3BcWoQao21E88LxOJ3Cqnhoz8Z3Sv62NjoTdEEuxUIP9bcxjnwpvLCDH/yIIrar/PbXVOCcW/NLVXU+8+/3Y99//2x0yuJDYJyGYlSy/hllzZH3tOP3OuIj6tFOdZXRcNGue2bPtrrfeaVsIXvizsWJm56Cv5eMcWhSCEiBCaGPi923JhnnZxPm52h+hiqZ3ioZeK5lGTK3T5iUmwEU0kPuDSfy9YU1hhtmr9rl2a8bR1OquCNP9Pz2wAQ+m3Pa6qEGlrb9F1UDoLkNjQGsLmNRE7wHqjNZIB4BYGjNIwfcnO4cz5gSKr3GCoPn40m73caqX35thCC6f/6SdT3wP94hGEbU8DfP0JXWn37PHGkqzyISho4qIPQt9FqLZxKvtn5vi9+Wi3onIsFoBj6qsVNKCDmpbeUPJpKJwbdQAhqSYGqYyJU+GOjwXg5b8+Gw9RlAT6iTFmue2tgd+9Y3at7g07kqhY0qQHq/rjBojTEJiYQazu8pUST55XK5UTTaYwh7DsHIEA5JFfvKHP+PfcSuVeZLObBpScA9w3l28MhFqNYi4R449ZU8DThBp+OQsywGsLPDNJE0lg/FUIyMhC+ndjMKQ/eZuqnwX6m/LR4PJaSo1xQ7/K/dVQA04wFxmJV5h9c5HYeuTyhLhvwJhWBCO0+CcxuiSZjYSCOERpVCy2iXX1mQ0HdR+bu49pjWsQoT84KCCvMG3NqJXkOUh+FR0R8k8Q+iFDLiovPoPJ4ti+Y1R7GRoMJ0iZ3L0VErktuCNdGiVeA+ffwVlA7PiSFobisMMH44XRe4rZPpLS0T7s8BOeuo2VCQl2hgB"
+    },
+    {
+     "type": "text",
+     "text": "All right. If a new service were built for your work, what would worry you most about it getting wrong?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I worry about closures coming into force while drones of several companies are already in the air. I also worry because the service runs on a single server that is updated and restarted during working hours while drones are flying, and it occasionally crashes."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS/wcKEAgTGAI4AUIIdGhpbmtpbmcSDNBNqyW4Slz2beNlrRoMkR0zjXY42AKJQKCCIjAgnbXs14wp5OwMueTwTV7oLpBhR4LNLtR3UX36UQHd+2ZetaaMF6xFeCRD0gNdhmUqnAdKRlZjtx/pAoiCm9Y8k6v5s842IBruxPPMIOU292jezqB42HEDDOu9mD0n5lNh7qFZjKsHrfW4bUrvb2nWfhNhiqoEdYiNztaeES29fkw8gErnqfpMq3YRKLUN/TxOzS0FFC6XYPXBdmy4nfTIyqeAxeS32eH/QFzh12vDQlZV5y+IqgHSy4Kyqrt42WDT3CDUBl+bX2h0a7aqBwNDOuVU2SrP7Z85gNUNU3HXNDHZLFuzS5swmcl5IpeIS3H49qFDPzZ0ypMzcXzv9Qpnv0WktdMT2o+Z++1hHoZiVkO21ZmHFYZizo+9hGt9GWO3/A3OHH8tLge41CVU3u6r1jWinrgWgcU+KmgGkUjYbDlHdbj4YtRACVNZdI+ZugTkoM01+bc2UHH2mh3lVfPvis/YN3kSRUbr65KW6eRbvy9IIwnWBBrxizU6TGi9eN8sMIDWjNYUaRMIokeYrf10N9VJEuurVj2nD7YPfIGy4CJyatV8dZOM09B51oGo+24UVYQKFsgQ7gd00crWdWzgeX1wSHmgZehvY+kZ8drQDKJB3u2AOqTS441PmeJf+DN0t7DTLsMoZSwb8qY9u7EmhDA08IstsyYSPklAsRQhBErqPKQBOB0Wi+T3ov/JWGDrXQjfgcWf/ek2XBMYLJGETwZfGwoj0jGkS5ud86vHUL+QgC8uGGYq9hiaa6UXhFr2senvGFF3cAhL5pslHIxFw4yHkGFLaP/sI1I2qW/hk87yiQvIPd3IX9a2NR7CSbv0av/gnbvHUxr1WbY2pgF7AR8wokGx5pCSnv7vqI3/8jLKyYZV5M8I5wPvVLaCYt2T0JOmMWTkDLBYej7kDNFkMon0/RIgOGY+bp8RBEBtR/p53rFOfYpN7QGuABFridzqLZesO6zD6RGywA9+8QTP8TnkwYGhOLSIf/AMG83Ja6EIjtcxYrEQmLaeM6JAowGZ4hAwGzP3lI5BVMEOsMR8CtBCYSo4csMpcGPkttShUv4QccuRbSWosT7F8FTrFSQWCJmayOGu96k4Udr+f1AEUDkru+0vOIjtB3xzaQffFFVpJFDd9I6bXo3vrrpZUuKlUYhDTEzMSM71hJ+IRQ8GHnYUHaE5ssKyw7pAyUyiaT5l+MssDvB3C2dHvU0gsZhlyYcJ3kjFxC/iGCjN4Zoc+sgPhD/bL7D06C2kcm+l1NDdt+qT/zTYm+ioaH1268uw6REfb/7DogMtvXJYqVwYAQ=="
+    },
+    {
+     "type": "text",
+     "text": "Let's take the first worry. When a closure comes into force while drones are already in the air, what happens today?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  },
+  {
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": "CAQS0gcKEAgTGAI4AUIIdGhpbmtpbmcSDHHlDcpZRRhJJDmHYBoMoihzdNnR1ptfKe+3IjA5vsCoKA6veAPeehwBDyHGvJv9QHXRKHsF7i4/+T5RhikIDfgbqAKmL48FxLPa530q7wY/4LEecBlWYU0F3SXwye2AvuE9G8wnU8iXHG5gjgLsSaZykI7uIisWjAqGHmIGjNKRP/P9IWg+KqScvh/gRJSEoerO6PQeBhYuVoX/z1I4dJgnlbEDpkiX8JdxiqO9EU1ToaOiiqZ94bSM81G44n8JR/oTYNPCJh1pq9bz6canExusfMOiHjBYIyqZDCV79onDUboxIIT1Nt1+Wq9LmGFp0hUrdSezXaOPQpwURpOuMmC0ZNkimYw5852JZ6yc006/peof2UZ8OG64uxpazSAFayJicBoCxvm5pEAKkI0zK/FXCDw62Pgm3luYk2AYfkRS8G7Q2qbzWz2Txd+/30fwfG7mutQgVtOqHgft2BD8U0PynVxbl8apTiE1txDXu77Xp5ho93wF84s3rzV0yzcJma/tYe2RAqpFb9pHRr3YOi3VE+eS9dYjgBTwo+seJHrq/DTsNMYSYftUxTP26hgJiyDDsDvU0cfNZOYtVUxsAwqCWdx4hU4Hr7Fm2qFphjPDGMUwJuADz9F7u9KqEx5R7Wy5Hqnru7Ry/OejBggZ6eI8XYIp/tY2xzJ1lxJAkU/iFBtVXAgn9Za2KdlZX0/zIoinmsy2c5ITOZOeqbUT6oOwxVajqeCnXx0+2IDu/VL//li3GjaR4ctoll+RhlwJaDVKsuqBMXQGQW715zlRrKmMiEJJS6xu24k/El4IohYrD0AlMEDGMZX8+B3e84rkUhFCvyJ1zPu68IE/6PICngHa9YprKy+fVXSoHCEgEje9VZkKcZyMQVDoWEeImYqEPT+5blUN626uH0kryZ4xPSqklzCSOENPmcQkFxAs3xBVsRTivTlja7ba7UKOB9IFcTLqojeY+qOYKO04cb1dBzc++P895FmEnA6KIS+IFU2UG0YDn5Sacn13dpZudRZ18r7E9aaQkMwj7C8+dR2VUP68QgX7cWtdBcbgt1amrG2sNuHYxC8Eke1QxgWdxgZBxZy/ys47OsbDEZdIlSM2MdLjdQawxPLgAvYtbcR0/+tYrRR6IVWSaPoYnnB6bf6hQvUWVd05+OSaf2lqLQaHxzh3WLLFkLRM31RuzwnDvWx8d8+nJz5EjOkHXPtc0T364I/sEM88hwB+Of/pMPsh1/VmdRjhmJpWJMxzsFJFb91cijEWP98rEbO1Zo3ROH0YAQ=="
+    },
+    {
+     "type": "text",
+     "text": "And the second worry: when the server has restarted or crashed while drones were flying, what do you need to know once it is back?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "content": "I don't know."
+  }
+ ]
+}

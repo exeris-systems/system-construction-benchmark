@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2zVGYdX3Eg7CTyyksnj",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSyQYKEAgTGAI4AUIIdGhpbmtpbmcSDC/uPD4J4wIOr5AllRoMd2wtNWZaIztIGHkDIjAsUEOPhbsVF+ObolLIoCihVA6arM2yCQ6fY/QTwiIhKkHqLjT45qPwMMs6hY4OBhcq5gUON/BAj9RvloAzXb7sa2ieHSf34bW5OptoPlHNdT2uIRssjG14BcCYZPiWXY7irajmI712l+sGui5mDt9nimItRfnQ+gBq6WtW9yPgMqQ0MYr3Zqn52D5nQJkO1hbz1e1rOoGfM07P3y9Vskel/fYJHYSlZR/foj3kHn39P4RnG0IxVUqx9guqnEI+HCkakCQdztzTGKdCs3uTGQHXmATREiqsokf7YIlePBNjDunYg0PDj4GrU0GN/m7w9w4xhpW6Odmca55e8eWoAZDZntGeVlDxngTDYcDXJ3OS9uBFgsRrmXW2AbFosfWtegC63FM/+writ9/UoBmeGDgXhwgqq8uABd2Bfq0B3/SUTfCIPRszd+O6IT66o5DmlE3PauhWE3ILTgZ5ZX8qbX6vg2Fki2mJAm9NqR6spbwNpkV9NoymPiWZR4zzLt5GjaWzvpncGfqY1y6o0idQekFqP0GLSgOPge/NJF740BCOOpC8j1P+CvN5ACE7RhdxYrRp8/e4Ee3hv9gwcCl/SawIvwXxDzjXxj3A2pjs6iNJ+Uv72OkrprQZ7T3WknQGoDjnDQNQ8LEPwRwdE5hx6TbH43Imj9uVi8dI773UF4xNlg0V/YldK+ias78DbnkiYa2MmvhiLDo+yY+6inPrbxVAj2KLIYR68ha/Q30xkzdx3JJr8Mltsu1m38tduYCniYKWgQ0tD3Q63exEtyrRgd+cJCVwqBunAzpDNaz0IczpFgXW5Y+ONNDzwbx/8K9PjvE9RjjxbCqLnTIpD/uIqFTm4OJfA/vDA+w9tZaY9WME6STroebyhbn6w1+W7znlWAz8+brwhWDZmxs9J8ZvBKlVFfundS0Gj9gGDayfPNWI6OyZsd0VvpT6cpCowK5AsdG4KW+R11lmoBI/bd0QDWIM9dUr0oiNmF1lJwlbJ/9y5TBVIKsKVuUED9gNAt76IV4kVtjusf7UmIULcIDJ0VApmnCF1E/vV22GGAE="
+  },
+  {
+   "type": "text",
+   "text": "What is one thing a new service must never do?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 3945,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 31,
+  "output_tokens_details": {
+   "thinking_tokens": 17
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I keep drones and charging equipment in working order by adding new drones, retiring old ones, and setting up charging pads at our sites. I also take drones out of service for repairs and put them back, as well as send drones to charge. Regulators can ask us to show how our drones have been looked after, and repairs and servicing are carried out by us technicians.\nThe question: When you add a new drone, what details must be recorded about it, and are there any rules about what makes a drone acceptable or not (e.g., unique identifiers, required fields, which site it belongs to)?\n\nQ3\nThe answer just before it: I don't know.\nThe question: When you take a drone out of service for repair, what must happen to any job it is assigned to or flying, and what has to be true before it can be put back into service?\n\nQ4\nThe answer just before it: I don't know.\nThe question: What goes wrong today, or what are you most worried could go wrong, when taking drones out of service, returning them, retiring them, or sending them to charge?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Are there any rules about sending a drone to charge, for example which charging pad it may use or how many drones a pad can take?\n\nQ6\nThe answer just before it: Each company has its own charging pads at its own sites, a few dozen of them, and pads are never lent to another company. Each drone has a home site, and several connector types are in use that are not interchangeable.\nThe question: Must a drone only be sent to a pad with a matching connector type, and can a drone charge at a pad at a site other than its home site within the same company?\n\nQ7\nThe answer just before it: I don't know.\nThe question: What do you need to know about a charging pad before you send a drone to it?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Can a charging pad charge more than one drone at the same time?\n\nQ9\nThe answer just before it: I don't know.\nThe question: What do regulators ask you to show about how your drones have been looked after, and for how long do those records need to be kept?\n\nQ10\nThe answer just before it: Regulators can ask us to show how our drones have been looked after. I don't know for how long those records need to be kept.\nThe question: Who is allowed to record a repair or service on a drone, and who is allowed to take a drone out of service or put it back?\n\nQ11\nThe answer just before it: Repairs and servicing are carried out by technicians like me. I also take drones out of service for repairs and put them back.\nThe question: Is there anything about your work or your drones that I have not asked about and that the new service must get right?\n\nQ12\nThe answer just before it: I add new drones to the fleet, retire old ones, set up charging pads at our sites, and send drones to charge. I also take drones out of service for repairs and put them back. Repairs and servicing are carried out by us technicians, and regulators can ask us to show how our drones have been looked after.\nThe question: How do you find out that a drone needs servicing or repair — is it by flight hours, a schedule, faults reported from flights, or something else?\n\nQ13\nThe answer just before it: I don't know.\nThe question: What do you know about the different drone models in your fleet and how they differ?\n\nQ14\nThe answer just before it: Our drones are of several models from different manufacturers. They differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use.\nThe question: What does a drone's home site mean for your work — does a drone always return there, charge there, or get serviced there?\n\nQ15\nThe answer just before it: Each drone has a home site, and each company has its own charging pads at its own sites. I set up charging pads at the company's sites.\nThe question: What do your notes say the companies do not want from the service, or consider out of scope?\n\nQ16\nThe answer just before it: I do not know what the companies do not want from the service.\nThe question: When you retire a drone, what should happen to the records of how it was looked after and the flights it flew?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

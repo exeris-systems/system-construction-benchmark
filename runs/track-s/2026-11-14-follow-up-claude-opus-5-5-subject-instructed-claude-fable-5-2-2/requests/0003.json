@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. When a closure is entered, I want to know how much disruption it caused across customers. Drones fly on their own autopilots while people on the ground supervise them.\nThe question: Thinking of the most recent closure you handled, what happened step by step, from the moment you first heard about it?\n\nQ3\nThe answer just before it: I don't know.\nThe question: That's fine. When you start a shift, what is the first thing you look at or do?\n\nQ4\nThe answer just before it: I don't know.\nThe question: You mentioned wanting to know how much disruption a closure caused across customers. How do you find that out today?\n\nQ5\nThe answer just before it: I don't know.\nThe question: No problem. When the authorities announce a closure, how does that announcement reach you?\n\nQ6\nThe answer just before it: I don't know.\nThe question: Let's try a different angle. Thinking back over the last few months, was there a day that stands out as particularly bad for you at the airspace desk?\n\nQ7\nThe answer just before it: I don't know.\nThe question: Okay. Who do you work with most closely — who passes things to you, and who do you pass things on to?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Understood. If a new service were introduced for your work, what would worry you most about it?\n\nQ9\nThe answer just before it: I worry about the service running on a single server because it is updated and restarted during working hours while drones are flying, and it occasionally crashes. We accept a few minutes of interruption, but that is a concern.\nThe question: Can you tell me about a time when a restart or crash happened while drones were flying — what happened on your side?\n\nQ10\nThe answer just before it: I don't know.\nThe question: You said a few minutes of interruption is acceptable. What would turn an interruption into something that is not acceptable?\n\nQ11\nThe answer just before it: I don't know.\nThe question: After something has gone wrong during your shift, what do you need to know straight away?\n\nQ12\nThe answer just before it: I don't know.\nThe question: Is there anything in your work today that you double-check by hand because you don't fully trust what you're shown?\n\nQ13\nThe answer just before it: I don't know.\nThe question: Besides the restarts and crashes, is there anything else you'd be afraid a new service might get wrong?\n\nQ14\nThe answer just before it: I don't know.\nThe question: When you say you want to know how much disruption a closure caused, what counts as disruption for you?\n\nQ15\nThe answer just before it: I don't know.\nThe question: You mentioned zones that group the corridors. What do you use zones for in your work?\n\nQ16\nThe answer just before it: I keep the shared picture of the airspace by working with the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. The authorities define zones where flying is prohibited.\nThe question: When a closure is announced, what exactly gets closed, and for how long?\n\nQ17\nThe answer just before it: The authorities announce closures, which can be planned ones with a start and end time, or sudden ones that apply at once. A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves.\nThe question: When a sudden closure comes into force while drones are already in the air, what do you do?\n\nQ18\nThe answer just before it: I don't know.\nThe question: When a closure is amended during the day, say the area is widened or the end time moves, what does that mean for your work?\n\nQ19\nThe answer just before it: I don't know.\nThe question: Once you know about a closure, who else needs to know about it?\n\nQ20\nThe answer just before it: I don't know.\nThe question: You said earlier \"when a closure is entered.\" Who enters it, and where?\n\nQ21\nThe answer just before it: I don't know.\nThe question: When you look at the effect of a closure across customers, what do you need to see about each company?\n\nQ22\nThe answer just before it: I don't know.\nThe question: Tell me about the flight corridors between sites: how do they get set up, and how do they change over time?\n\nQ23\nThe answer just before it: I keep the shared picture of the airspace by working with the network of flight corridors between sites. Drones fly along these corridors between named sites, and sites have only so many places where drones can take off and land at the same time. I don't know how they get set up or how they change over time.\nThe question: What happens when more drones need to take off or land at a site than it has places for?\n\nQ24\nThe answer just before it: I don't know.\nThe question: You mentioned people on the ground supervise the drones. Who are they, and how does their work connect with yours?\n\nQ25\nThe answer just before it: Drones fly on their own autopilots, and people on the ground supervise them. I do not know who these people are or how their work connects with mine.\nThe question: How do the different customer companies use the same corridors and sites?\n\nQ26\nThe answer just before it: The customer companies include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm, with others expected to join. Each company's fleet, jobs, sites, and problems are its own business, and they accept sharing airspace information because it comes from the authorities and is the same for everyone.\nThe question: Why do you want to know how much disruption a closure caused — what do you do with that knowledge?\n\nQ27\nThe answer just before it: I don't know.\nThe question: What information does a closure announcement from the authorities contain?\n\nQ28\nThe answer just before it: The authorities announce planned closures with a start and end time, as well as sudden ones that apply at once. These closures are often amended during the day, such as when an area is widened or an end time moves.\nThe question: What would a mistake in the shared airspace picture look like, and what would follow from it?\n\nQ29\nThe answer just before it: I don't know.\nThe question: Is there anything about your work, or what you need, that I haven't asked about and you think I should know?\n\nQ30\nThe answer just before it: I don't know.\nThe question: When the service comes back after a restart or a crash, what do you expect to find?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

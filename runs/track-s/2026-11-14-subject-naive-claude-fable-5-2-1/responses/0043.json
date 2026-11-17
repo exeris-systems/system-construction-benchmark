@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2waCPNstjZ3N1atCdTp",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSuAcKEAgTGAI4AUIIdGhpbmtpbmcSDBZt4fzC/oGK0IFAVRoM4ZpqRFzTMehmAiPhIjDs3knZR9IM+qZC0yYJ+8P2LfaZpwCoEtuxf3YCqRvlQ7jPpcD4tJ2NjL6nQ60xNcgq1QaTvUqq8a4sLr58WHm1j1TuR1tlvwx58NxRuS/qgORF5iPnwzJn7KZmCmVKswPUWdGIzklRTaI/CVuL6V/xF6/oKllfxMnjTyiaNdSHlsiinDZypJDfD86+NBPOX0XzHrqWF67GPTCKrZUC/CBNCsnolRpOPXE7XoyFc71h8c1D+xx2ZD11H1Zxk8oTXOwFvIjQEzscMxi7AzsqBNpB27Yd35lQZIlBqZt7P4y2Id5z8sFTwQNWktMxMPKFAF22ZPsyT5+KWOjUkDj3VCrFK58qsaAN1xMtasXvRZioLINvZk9P4qADcWtq/1ooLQwlSiel9zNzhpi9PH2NLx5UWOHNzXhffO5nqFpPwebby+j/7B/cUnZP4bp9LnnhaL/rIFfeSS/ONyXX/epm7G89MCHdgJB6tmZb2Qb6bzoXzeCZb++hklkiwOPpWazdSWrKdNKX3ZRuha/cFrEOHBf1ix0AcsO4qA5erYYilV44zZmRD9ooLxq7U32ydo6eWkBqy9u0GdqWPfF4PEfc76U3/W6EClKh7/KH2szq6GzXRmIZ21pacV58hW5pcRcoGI5MfBHbnquDc4ge50Rbc9IIhYON7MM7joitWyrEfC9thn+wjhUIcD6KHQAGuWJXwOKPJCmuw1BKjNfsbjbaQEAkKs1ro18aw4Xig8nrrkC382R12UZ4BvzodJnQ0wM/9oprmQEt1JafvATEpGd+H1HktAjA6CTr859gP2ie528fzM4sguBBXtXutZcZi/6ogVCH9Rq+LLMbvreuxKyDulKC++P8nYNJeqwPlIqy7HILpRSFydRKY/ZHXW/JiblIVC5e/wCLYo+L7zMkznfCCuTBi+cZ07opiHrX3IHgzBZCwc4Cwcws7YtPI748b3OH+pynQmzLTdsevf/M5QPZZePuDosVn11HRclb8uTX3Uio3Mx+4IM0eEj/PedijijFIvukgKoHjrmCtbU9Hghu9yU/8cQKvI3cvf3DB2RTURyzl+CceIipjxKvkcQ8dWMyh2UUNoKkV34Cu/eb72lh/Oa45baf5HoAE7eNpz+d/hK7u7uhT93we9HLSKfJ66lt84YTCdDb/YE0NY3Jhm+s7LpWFoODhru6wBBRwmgO84pKhisl9aJMm+cBGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: Are some jobs more urgent than others (for example medical loads), and how should urgency affect planning or flights already planned?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 2869,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 96,
+  "output_tokens_details": {
+   "thinking_tokens": 48
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

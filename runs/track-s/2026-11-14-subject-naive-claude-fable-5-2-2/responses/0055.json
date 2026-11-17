@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2xWiBXsDYjssqSJokFd",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSlQsKEAgTGAI4AUIIdGhpbmtpbmcSDEU5HpzcbnQYqM5/FBoM4v+xr+8nbB5oCwmcIjBLL3GadWYCi0G2jjMREymIYw/+BD/e+6i8KSvw6q5u0uR7THiV5DW7JvdAmNtgn9oqsgr6Bol4oQhn9jziGZ/DeBgsW4dbWRjRIu47VhmgO9KI8IRw3k4sKSKLdBy36LW5IPG/SoXKqIrU4/At0BYwJPhg6LHT50Y8ixox14gLKMjIkLghRLSZBrkDuocLsB7qg9vEJS4MliCXoQydVJd/oUbrpG4IGetXbKKuABocdJ4tNlKiEXMA7H2Ho0STE76knDBCw7ESalgTi7lVEYpZpV1hzoTcZXneVBNvjk66GfiCGeY5fRZQgN/JKoD1s7Gqyjz/3lu9rwsgvkgy+pr7fvmtTmJbFPyuDcgetWXjDgwegjAiGgJqJiVCKxsfR+i1gUWjHiFMU3MeUompl+ffKL2lcXqhYectx6ZoQFQr3UipooyBgXsfWfKYE1d2eJsyES3TMZ/OdLFnLYFfMrhAqNMjtv+E8wS4DpzItzixg29Z+fVCtt0SpT3xEPtiR/mmhIbcOapOljSQUlrJh1C1g16p3B3pFWKYIhPQq3BxXA7BXAVh+fnynL0JTGk2hKOzerdSfzRgbh6N04SB/TLJnwPZy3LVcNBMFURMT/AEhGixZhRsbn5rL+ZEPykIUBDofA8Qu2O25GEGAknBpqiCntvsHyb1d/PskC4KWYAzP1dk74it8V0BndPn/CE2YXwf/vQTfzmFNHaljRAe02QxVQ7esSpePb3Vhr6JfjhRH0dCeDzVmYeoUZq/5sWMx9h+Kvo4CCUdIrX1XwMKYMGdq0HuLmzWM8LH3IYC3Zc7FMINfmXy8L0EJnKs4GrvTOMN7vZK/5oyQT8TWHTowzGROhdv32P8Bco9Kkba07TTUmKvukUsoDPetfmMvobWM1MNYbbovZK6JQUnctWh9PrTkFQAq9UQY0DpR9STn3gxJZ+7xujwAlbgzm7g2mLpTrb7k38yKMaGKJJqQrGopgGwlYC6acqmDdAU/pA9N4j9kvImK+vzIlW6SY9VG5J+bI1rSNcX9bKUxFng+YYZeozQtcfHOP45SbVomXsKDdELD/TAHb4sbFtN9kbLKqa/9tZRCrp16aLUob9waQvpW9Q2muzDfg38XZjdqUVwparDYdtfvc2d9Ec/n2bp8qLbpthZJ4l9mvGC9GatImu9+xc0n+ynDH5lOObklwBrCQ5J8An+JYDIVYdc0BfbBV9yxtAZalvXMoHfbsZquD6apFI3hUkoYCB7IBUPSW0SRBFNY5nRWpI/Rv7U+i3L1l4Eg/fVtX5bdEG19iLUUu6xGNhgqSklj9G3ADQ9ogxDCPA4Y7RgQGM8Hq7QjhCHN2spKT5y7pUxpIpYWh9+oTzEvJWeGxzfat9w2gTuAyLqds7JQOv01jlIkA+MRQDPstv6IRZkjdhZPIT+LwFO49kiOpM31Qc47Dwk36qgizShP/rn2M87lkRz3+j3Gv2HIPMYGHKaD0XKG54tM1Bb8/A6WTislcWDgA5xwff4VECsuRjUFtI8H2lH8k0FqvBcX31sEV5naPjKNVYtIIjJ9DzgRXyjSmgRfsOzrOev4xugqW1AalI0ui956J1Tjn1Lqy6vJX+NZbPxPz+qrvvN/GdhETRBhOQRJIJwVh6D0KLkEI6u0u+k706G7vCKUyYQEBjT7u6PISdq90/bTCHQ9VPxO6JlVpDJrRz+MFzGygVDV7lKeGfu5rH5IMEYeBLIiYWtvkcRq6wzSAdE/6ZC5q7K6nxfAH7hA2Gxn/2a5c/6v0IyBHCMiSq+Sa75JIQtK/AySEhYyp3C/Y1v2XW9nR3Vpca4baLpZsP+ApyKF0gvzc7MNSvwiZKrGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK technician: Is there anything else you know about your work, the drones, sites, charging pads, batteries, or what the service must or must not do, that you have not yet told me? Please tell me everything."
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 4991,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 256,
+  "output_tokens_details": {
+   "thinking_tokens": 193
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

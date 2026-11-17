@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2wc3KjDgDAHvTgtddit",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSzwYKEAgTGAI4AUIIdGhpbmtpbmcSDD8UXLj8BSdC8NbgNRoMQQx7YX7TLtMDkosIIjAfvFeYg9E1mpNtB/BNpgZ3ytO7DxDprf+lqKThbjR7y+PYGeTxovYEDAUD3HhwKU0q7AXWfWsznz/Y//5fQ+dg1jeWmTIqdJOpoizZ+7r3T2f0dHFxgOeQaExM6QpyHiaus1XZgmYjDnQfljszpQ61Z0nlB6eOxS2RKERcplUfFZzJXvy3iJMSMpQ2Bhq/Ds1LcukFfnRu6/BcSBRafoe49U+fucb7V/yRP4agag8n5nAhW0sPtaxdYkhHw9O0SMAIDQZfwOyMTTqArICPJKgnCu2pCaoXk5G0/fYjb4e4GutNDVwL4fMV0pfsEEXtBsFVuyQ/sjusIa2pe7agD4RbCkO2qNS9FvFwJgWwZrUmJGRCx8PssI7KW1HJ2ETLe2Brjv8mnPgnEojpzv0H5GKalCqzXrrR5s9w/1hzjqR5+UsLJ+SHB0kL7E84F/Oym0uDNxNFxcIr/itym45OW2nD+YlkFCMUH3uiTEWAFoQgWLxA7OwgY+0pkhe7It3NM4C8itU40KwIGAAcWQ0VRV5GsVCJX2piTkx9fHd608BtxrBp8a8hG4pTfXFahrsaRhHkRSbV3B0qxErewuWqWgXMMcQDX36kUZZmZ1/reyTYX2CKCHegPM1SY9P77g+W3uawBU4/TikMtaMWpcl3JLMBV9esZ41vYSs4rHQQfCH1AyD02kbFZuCcZMeBAPG7wy+1NHelMBUbNPIJshp9Vn7wxnv/FiQaDDr1ujs0yMB4FodEJ/reYWrC51l1UlAiHPAMFqo/X/b9KvDUrvQoEZcLd/eLQqeHBZltRT7kflO3idEW8NgraP97Bt40j3w4BjPVWuzusYV+RoSs99gkqQDtGkNgMWKX8fnAcLwdnVQe65rKUgKEmSxNpEvzUJT7WD3kO+IJ0M0va5YwQasa0q5Jm8JTfCYbhXF64reW7VyjCsBlyhI2QOwWPrhAS69lNI00OtiWeypQ+Fhab5xE7g6HDyubRnDmzMXTO3rjk2gw6e3ihbD7pI5/Fp+be0mpULGLyYMrjBK1WPXG9vxv8Q9F1Vn5zQMdYbTgfJFAM7PrGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK desk: Please walk me through a typical working day: what do you record, change, or decide, and what information do you need at each step?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 3401,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 49,
+  "output_tokens_details": {
+   "thinking_tokens": 8
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

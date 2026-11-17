@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yC3aRNryiBoouP1pyp",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQSrQYKEAgTGAI4AUIIdGhpbmtpbmcSDOoApAJI0ikxfFKg1BoM3+GCFuDbs/+WOhnMIjDsHxI5a/4axmnekFMUq0Vb8CiFEfHoDn5R4z+wT7+E/2H+m0S72ulsYUJ6p/lDGmQqygVSHsWxNGMQ32JQG2YyMKXOXZoQtVR5pRodq8cx0/pQx+1POLsvO377eRCLI7kOE+3eT5haWLTOXnziJnT64ycYMQWWufDC2G1S6sUP21VoQa0PN/tNczFj6t/O0XbLJqGh4Y3hXStSP9PEfM6CHcaKYQLlL+JZRB2Ch3HiE5qIdNlMwoRvTF0HgmSWsLz/vc6q+WnqTpelSQylCJ7v2t14Kt3/T7G8ja2qFehGLkSBFAyr23ZYWmVtYcMNXo8TK+fU2eqvrDXxZhkVNtTAUphlCbozpwdqTZNd1Rnh/FVVp2DnPY3tiKBaZ+ErfguFdhjkc/tC3RUh3E2RiN4Z/fqMKdJoTJjmrF5RAU02+RCujVc8rhoCi/lSz/Fkq9RVQD7KtJvk9c2eeddKv4VpkioNJtqV7Cr52RPnRZaqQyQrVlCc1diZBIqo2vaTbcSE+IP+OuCyac7ScOeu7CZT86rRxGeGNVZzaxDv3yME9RxRWTo0FwHKEkIyRL0hh3nwK3dBRLLbpcRh/WkSJWobVWDIW6F9nGmMTJc/bxo7cTuOPgAfm3WN/OtUhJtwiISUHrmgfhDrTHn4bEtgUYENXoRgqEUC74O/GnZRYvlU1A1TspfifA61+CZtvkHVcJ7lOjQzS/ZNJiH3okmbTQ49ymXZEMxjcYAt5Hfrft2JfILQz0ryMnFlZRGNdoe5wctKoDVVzfAjgKV1Wp000xVHY+63ho95jrZI3pwa62AJk/qYNPNbST4VWTlFyPbqpSGBWReqqtLDfofnDGJbGJvrf3cr03lgG19KIstq4hjfoDmvUBPzMRDqBt2GsyMjOLzwxzNoK1/EDFVaJ+3GMMBqoUT+dwPQbr27TA4fm+0yqVMG4+YrmCxkgjv0O2BDk+67I9pEUtzhecPZH2oWIIWwD452KF86pOknqw4XZ4gJSqOO9QK5RG5eSgTLG4IYAQ=="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: Please walk me through a normal working day: what do you do with your drones and jobs from start to finish, and what information do you need at each step?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 535,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 114,
+  "output_tokens_details": {
+   "thinking_tokens": 63
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}

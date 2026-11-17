@@ -1,0 +1,38 @@
+{
+ "model": "claude-fable-5-2",
+ "id": "msg_011Ch2yYQAUhKEgxD8xmDKKj",
+ "type": "message",
+ "role": "assistant",
+ "content": [
+  {
+   "type": "thinking",
+   "thinking": "",
+   "signature": "CAQS6gYKEAgTGAI4AUIIdGhpbmtpbmcSDItrUXrR4huCv+tkNBoMP8EEbaC+bU/u+zzDIjCVibpr60/cnggnjpLBdOlCYxyLJ6QjPjHH0Fj2LOojGFUicSjLYllSaiaXAGUB4RsqhwbbabowTM+s3rKzR6b8oqCUsBywAFcNsfApkruXwtGq/glnPQxfdF9BU+8INF6OQGxEV7bAA3bvpuift75nvCE2YwNtKSMDdYGn6b5hrgPabGCMQBacuPRZbCbT9g3PC6cHnt36gw0ddoT8hBbIBo/AVspDpsOlKEdL7A4DUj08WbjZzgBEvN5Nc9GxeGlPWrbFrxwH07TN/sTD0et5S6hwwfBwgXMueIN5XETg77y/YvHSYCEQ73sA952egJ2XDUiuZ4I42JVHCixWHY/h+y3jq9Zor0uQTwW09hq9a14y2O2CbfRK4RZ4p23ashg8KXwFeTraq2YzxSkxgQB5spuvi8pIYp7qcXEQRt310cO0GvW0A57BRC4hQJdJHyNB2QSHfJfRGjO20jG5tpDekVTLKdLqtPIoE0XQOT/9tQHG7ITa1IgiRMQOlHk/iOXFNPAJ4sREaODWuRz+edjl1maVnYR5QLXC7baVf/5qRT+oralK2umLTScXieUFyU4aJyEwAIh//4lLKAjTF9Q0b8j3wwhR/m2LKGBmYaM1WNjQXz3aapaKq7J2wE3MKrSxlHgaFZQ1Eu3WmaUH5cbrfiJNZXhndIKCQC2JxAalBvtVV8Lgd+5NRSDvhjGjKOkzfr8Zr8UVr9t9H4FmGV0RzBb8dK6eTOm+40ABezwPONx5abMdE24z2L3jz7tYuNe5oH/90/FAk6Wp0l8zUPRC3FNFVlEHVuoYfAngDPwoez8DWBG/kA0agdFQO1opvaugDUEZAffc4pvMTs73PtfU9SN9TIzkE4dUVAV8aNeRfZ8WYQ+Cac8n0Y/EXdeD++JzlqJZ7HvTOueEL4aRD9UEU5o90rHIi94m6q5X+ycuyBuiwSnLCBSP8iPriVt+tUdbzhKlr5MRWaV9SJm1krasOzi6r/HIU9vp4YhZi3nn0lXIJagUoe4o2AdCoOoNUOMTzDv7PLgsdqzJYmFlXfPcjMqRID3S9TVcBoX3EN8z9Q5gFZjrhjWnPtg7IPluOROsd+wXywoTBrChGAE="
+  },
+  {
+   "type": "text",
+   "text": "ASK dispatcher: For a delivery job, what details does the job have, such as the load, the sites and any time limits?"
+  }
+ ],
+ "container": null,
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "stop_details": null,
+ "usage": {
+  "input_tokens": 5579,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 63,
+  "output_tokens_details": {
+   "thinking_tokens": 24
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "diagnostics": null
+}
