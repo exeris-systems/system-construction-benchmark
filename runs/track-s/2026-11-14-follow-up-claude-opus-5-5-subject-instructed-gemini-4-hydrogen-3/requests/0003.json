@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. The authorities define zones where flying is prohibited, and they announce planned closures with a start and end time, as well as sudden ones that apply at once. These closures are often amended during the day, such as when an area is widened or an end time moves, and a closure can even come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: How do closures reach you, and what do you actually do when you enter one?\n\nQ3\nThe answer just before it: Closures are announced by the authorities as planned ones with a start and end time, or sudden ones that apply at once, and they are often amended during the day, for example when an area is widened or an end time moves. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Can you walk me through a concrete example of the last time you handled a closure, step by step, from the moment you heard about it to when you finished dealing with it?\n\nQ4\nThe answer just before it: I don't know.\nThe question: What was the worst day you had in the last few months, and what made it so bad?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Is there anything in your work today that you check by hand because you do not fully trust it?\n\nQ6\nThe answer just before it: I don't know.\nThe question: What are you afraid a new service might do wrong for your work at the airspace desk?\n\nQ7\nThe answer just before it: I don't know.\nThe question: Right after something has gone wrong with a closure or the airspace, what do you need to know?\n\nQ8\nThe answer just before it: When a closure is entered, I want to know how much disruption it caused across customers. A closure can come into force while drones of several companies are already in the air.\nThe question: Who hands work to you during the day, and who do you hand work to?\n\nQ9\nThe answer just before it: I don't know.\nThe question: What does \"disruption across customers\" mean to you—what specifically are you looking to see when a closure is entered?\n\nQ10\nThe answer just before it: I don't know.\nThe question: How do changes to the network of flight corridors or zones happen in your day-to-day work?\n\nQ11\nThe answer just before it: I keep the shared picture of the airspace, which is the network of flight corridors between sites and the zones that group them. The authorities define zones where flying is prohibited, and they announce closures. I don't know how changes to the network of flight corridors or zones happen in my day-to-day work.\nThe question: What happens to the shared picture when an authority amends a closure during the day?\n\nQ12\nThe answer just before it: Closures are often amended during the day, for example when an area is widened or an end time moves. A closure can even come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Is there anything about how flight corridors, sites, or prohibited zones interact with the companies' flights that you haven't mentioned yet?\n\nQ13\nThe answer just before it: Drones fly along corridors between named sites. Sites have only so many places where drones can take off and land at the same time. Drones fly on their own autopilots, and people on the ground supervise them without steering them with a stick through this service.\nThe question: What do you know or not know about the individual customer companies' operations when you look at the shared airspace?\n\nQ14\nThe answer just before it: The airspace desk works for all customer companies and has no business looking into any one company's operations. Each company's fleet, jobs, sites, and problems are its own business.\nThe question: You mentioned wanting to know how much disruption a closure caused across customers, while also having no business looking into any one company's operations—how do those two fit together for you?\n\nQ15\nThe answer just before it: The airspace desk works for all customer companies and has no business looking into any one company's operations, because each company's fleet, jobs, sites, and problems are its own business. However, when a closure is entered, I want to know how much disruption it caused across customers.\nThe question: What happens to the corridors, zones, or sites when a closure comes into force?\n\nQ16\nThe answer just before it: A closure can come into force while drones of several companies are already in the air. The authorities define zones where flying is prohibited, and they announce closures with a start and end time or sudden ones that apply at once. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Who receives the closure updates or the shared airspace picture once you have entered them?\n\nQ17\nThe answer just before it: I don't know.\nThe question: Is there anything else you do with the shared picture of the airspace that we haven't talked about?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

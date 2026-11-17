@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Could you walk me through an ordinary working day for you, from the moment you start until you finish?",
+      "thoughtSignature": "EvABCu0BAWkUfRN/BFGpx/opJTuh4zSLwc8pGO17CqHnAMdUiYX3zLmi9MyAiCQHdrcrgGk4ttfH2rwSTaI7m86AWatZtEV8u+F8QpL/Ja4lPDvyfk5YfPTZuZNWsTUgz6F8WAJaDpclAfL0LXoTJu1tvG6NI5VCpSZlXSMeWBN/OZNh40rqX0bq2RqMurgM8cyb6yEcddTFda5NpegcBhOim6juTvj8XFaX1CSk6EKFso8TV7EXzOZ3Q0lUTTzgHmBuNa2sYPCaQjy16zay2rffsC4vqSus4Lew5PXDuaB6dsHkGRVuttAyB6GgpHs+KDZA"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 485,
+  "candidatesTokenCount": 25,
+  "totalTokenCount": 543,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 485
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 25
+   }
+  ],
+  "thoughtsTokenCount": 33,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-hydrogen",
+ "responseId": "7Xz4aoDfJuOY3boPhrfIoQo"
+}

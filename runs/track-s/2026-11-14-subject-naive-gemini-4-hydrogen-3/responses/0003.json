@@ -1,0 +1,41 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: What are your day-to-day responsibilities and what tasks do you expect to perform in this new service from the start of your shift to the end?"
+     },
+     {
+      "text": "\n",
+      "thoughtSignature": "Eu0BCuoBAWkUfRMpbBnYqZ5aRxdrObBuonxt2Fx0tE72jEuyBK8yIdD0HbE0nGNf2/mRJ7WW/d5zrltc37NN4zuPkYRLCTokWwMLIF80EWA+cI2yIrBPTViTNlOYLmdKVXS5VqCRYP38jzI/IWF1Xqv0RBj7WVvU+cvI/+yUEvUejjSPQfUjIpnvqEiIRB6Nb1iBgzzYazgYd9geBAJQgqWuJ80phaBaVIqurJw4yK2yBaNY84J3cDA0Mm2hIYq85yPZgcOKqCV3zanVfibHig6hj3Ez9HepqfX7YcSo+uhB1Rp7f+cQUlCplSgQyazp"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 532,
+  "candidatesTokenCount": 40,
+  "totalTokenCount": 600,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 532
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 40
+   }
+  ],
+  "thoughtsTokenCount": 28,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-hydrogen",
+ "responseId": "23v4aprVI4CJvdIPxprsiAs"
+}

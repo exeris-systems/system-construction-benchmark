@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\"requirements\": [{\"id\": \"BR-01\", \"coverage\": \"partial\", \"items\": [\"DR-21\"]}, {\"id\": \"BR-02\", \"coverage\": \"partial\", \"items\": [\"DR-19\"]}, {\"id\": \"BR-03\", \"coverage\": \"partial\", \"items\": [\"DR-01\", \"DR-02\", \"DR-03\", \"DR-04\", \"DR-06\", \"DR-10\", \"DR-11\", \"DR-12\", \"DR-17\", \"DR-18\"]}, {\"id\": \"BR-04\", \"coverage\": \"covered\", \"items\": [\"DR-20\", \"DR-22\"]}, {\"id\": \"BR-05\", \"coverage\": \"partial\", \"items\": [\"DR-01\"]}, {\"id\": \"BR-06\", \"coverage\": \"missing\", \"items\": []}, {\"id\": \"BR-07\", \"coverage\": \"partial\", \"items\": [\"DR-02\", \"DR-05\"]}, {\"id\": \"BR-08\", \"coverage\": \"covered\", \"items\": [\"DR-04\", \"DR-05\"]}, {\"id\": \"BR-09\", \"coverage\": \"covered\", \"items\": [\"DR-03\"]}, {\"id\": \"BR-10\", \"coverage\": \"covered\", \"items\": [\"DR-21\"]}, {\"id\": \"BR-11\", \"coverage\": \"partial\", \"items\": [\"DR-06\"]}, {\"id\": \"BR-12\", \"coverage\": \"partial\", \"items\": [\"DR-07\"]}, {\"id\": \"BR-13\", \"coverage\": \"covered\", \"items\": [\"DR-08\"]}, {\"id\": \"BR-14\", \"coverage\": \"covered\", \"items\": [\"DR-09\"]}, {\"id\": \"BR-15\", \"coverage\": \"covered\", \"items\": [\"DR-08\", \"DR-09\", \"DR-10\"]}, {\"id\": \"BR-16\", \"coverage\": \"covered\", \"items\": [\"DR-10\"]}, {\"id\": \"BR-17\", \"coverage\": \"covered\", \"items\": [\"DR-13\"]}, {\"id\": \"BR-18\", \"coverage\": \"covered\", \"items\": [\"DR-11\"]}, {\"id\": \"BR-19\", \"coverage\": \"covered\", \"items\": [\"DR-12\"]}, {\"id\": \"BR-20\", \"coverage\": \"missing\", \"items\": []}, {\"id\": \"BR-21\", \"coverage\": \"missing\", \"items\": []}, {\"id\": \"BR-22\", \"coverage\": \"covered\", \"items\": [\"DR-15\", \"DR-16\"]}, {\"id\": \"BR-23\", \"coverage\": \"partial\", \"items\": [\"DR-16\"]}, {\"id\": \"BR-24\", \"coverage\": \"covered\", \"items\": [\"DR-14\"]}, {\"id\": \"BR-25\", \"coverage\": \"partial\", \"items\": [\"DR-24\"]}, {\"id\": \"BR-26\", \"coverage\": \"covered\", \"items\": [\"DR-24\"]}, {\"id\": \"BR-27\", \"coverage\": \"covered\", \"items\": [\"DR-24\"]}, {\"id\": \"BR-28\", \"coverage\": \"missing\", \"items\": []}, {\"id\": \"BR-29\", \"coverage\": \"covered\", \"items\": [\"DR-25\"]}, {\"id\": \"BR-30\", \"coverage\": \"partial\", \"items\": [\"DR-17\"]}, {\"id\": \"BR-31\", \"coverage\": \"partial\", \"items\": [\"DR-18\", \"DR-19\"]}, {\"id\": \"BR-32\", \"coverage\": \"missing\", \"items\": []}, {\"id\": \"BR-33\", \"coverage\": \"missing\", \"items\": []}, {\"id\": \"BR-34\", \"coverage\": \"covered\", \"items\": [\"DR-20\"]}, {\"id\": \"BR-35\", \"coverage\": \"partial\", \"items\": [\"DR-28\"]}, {\"id\": \"BR-36\", \"coverage\": \"covered\", \"items\": [\"DR-23\"]}, {\"id\": \"BR-37\", \"coverage\": \"missing\", \"items\": []}, {\"id\": \"BR-38\", \"coverage\": \"missing\", \"items\": []}], \"items\": [{\"id\": \"DR-01\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-05\"]}, {\"id\": \"DR-02\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-07\"]}, {\"id\": \"DR-03\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-09\"]}, {\"id\": \"DR-04\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-08\"]}, {\"id\": \"DR-05\", \"class\": \"reference\", \"requirements\": [\"BR-07\", \"BR-08\"]}, {\"id\": \"DR-06\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-11\"]}, {\"id\": \"DR-07\", \"class\": \"reference\", \"requirements\": [\"BR-12\"]}, {\"id\": \"DR-08\", \"class\": \"reference\", \"requirements\": [\"BR-13\", \"BR-15\"]}, {\"id\": \"DR-09\", \"class\": \"reference\", \"requirements\": [\"BR-14\", \"BR-15\"]}, {\"id\": \"DR-10\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-15\", \"BR-16\"]}, {\"id\": \"DR-11\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-18\"]}, {\"id\": \"DR-12\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-19\"]}, {\"id\": \"DR-13\", \"class\": \"reference\", \"requirements\": [\"BR-17\"]}, {\"id\": \"DR-14\", \"class\": \"reference\", \"requirements\": [\"BR-24\"]}, {\"id\": \"DR-15\", \"class\": \"reference\", \"requirements\": [\"BR-22\"]}, {\"id\": \"DR-16\", \"class\": \"reference\", \"requirements\": [\"BR-22\", \"BR-23\"]}, {\"id\": \"DR-17\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-30\"]}, {\"id\": \"DR-18\", \"class\": \"reference\", \"requirements\": [\"BR-03\", \"BR-31\"]}, {\"id\": \"DR-19\", \"class\": \"reference\", \"requirements\": [\"BR-02\", \"BR-31\"]}, {\"id\": \"DR-20\", \"class\": \"reference\", \"requirements\": [\"BR-04\", \"BR-34\"]}, {\"id\": \"DR-21\", \"class\": \"reference\", \"requirements\": [\"BR-01\", \"BR-10\"]}, {\"id\": \"DR-22\", \"class\": \"reference\", \"requirements\": [\"BR-04\"]}, {\"id\": \"DR-23\", \"class\": \"reference\", \"requirements\": [\"BR-36\"]}, {\"id\": \"DR-24\", \"class\": \"reference\", \"requirements\": [\"BR-25\", \"BR-26\", \"BR-27\"]}, {\"id\": \"DR-25\", \"class\": \"reference\", \"requirements\": [\"BR-29\"]}, {\"id\": \"DR-26\", \"class\": \"user_visible\", \"requirements\": []}, {\"id\": \"DR-27\", \"class\": \"user_visible\", \"requirements\": []}, {\"id\": \"DR-28\", \"class\": \"reference\", \"requirements\": [\"BR-35\"]}]}",
+      "thoughtSignature": "EmQKYgFpFH0To99ceJL6nuVPsx8TWOfR3nY+vceVhtaBn8kbFTjepMRlArdyihb1aAbrwlclUhLatk2FyQ4K693q2KRSl2IyxC0vv9ZymuvaieoFWmqudee+WJZixtY+hHIqpwl/"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 3635,
+  "candidatesTokenCount": 1766,
+  "totalTokenCount": 5401,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 3635
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1766
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "cH74aoyIC77qkdUPkOmQ0Ag"
+}

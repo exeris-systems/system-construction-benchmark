@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I don't know.\nThe question: When you sat down for your last shift, what was the very first thing you had to do?\n\nQ3\nThe answer just before it: I don't know.\nThe question: Who usually contacts you or sends work your way during a shift?\n\nQ4\nThe answer just before it: I don't know.\nThe question: What does your job involve on a typical day?\n\nQ5\nThe answer just before it: My job on the airspace desk involves keeping the shared picture of the airspace. This includes the network of flight corridors between sites, the zones that group them, and the closures announced by the authorities. I work for all customer companies and have no business looking into any one company's operations. When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: When a new closure is announced by the authorities, how does it reach you and what do you do with it?\n\nQ6\nThe answer just before it: I don't know.\nThe question: Can you tell me about the worst day you've had on the airspace desk over the last few months, and what made it so bad?\n\nQ7\nThe answer just before it: I don't know.\nThe question: What do you check by hand today because you do not trust it?\n\nQ8\nThe answer just before it: I don't know.\nThe question: What are you most afraid a new service would get wrong?\n\nQ9\nThe answer just before it: I don't know.\nThe question: When something goes wrong in the airspace, what do you need to know right away?\n\nWhen you enter a closure, what kind of disruption information do you need to see across customers?\n\nQ10\nThe answer just before it: When a closure is entered, I want to know how much disruption it caused across customers.\nThe question: Who do you hand work or updates to?\n\nQ11\nThe answer just before it: I don't know.\nThe question: Who hands work or information to you?\n\nHow do you find out how much disruption a closure caused across customers without looking into any one company's operations?\n\nQ12\nThe answer just before it: I don't know.\nThe question: What does \"how much disruption it caused\" mean in practice when you enter a closure?\n\nQ13\nThe answer just before it: I don't know.\nThe question: Could you tell me more about how the network of flight corridors and the zones that group them change over time?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

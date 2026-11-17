@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\"questions\": [{\"id\": \"Q2\", \"follow_up\": true}, {\"id\": \"Q3\", \"follow_up\": true}, {\"id\": \"Q4\", \"follow_up\": false}, {\"id\": \"Q5\", \"follow_up\": false}, {\"id\": \"Q6\", \"follow_up\": false}, {\"id\": \"Q7\", \"follow_up\": false}, {\"id\": \"Q8\", \"follow_up\": false}, {\"id\": \"Q9\", \"follow_up\": false}, {\"id\": \"Q10\", \"follow_up\": false}, {\"id\": \"Q11\", \"follow_up\": true}, {\"id\": \"Q12\", \"follow_up\": false}, {\"id\": \"Q13\", \"follow_up\": false}, {\"id\": \"Q14\", \"follow_up\": true}, {\"id\": \"Q15\", \"follow_up\": true}, {\"id\": \"Q16\", \"follow_up\": true}, {\"id\": \"Q17\", \"follow_up\": false}]}",
+      "thoughtSignature": "EmMKYQFpFH0TyjQmGJv3jJexsGBeg3rDUQdeQBT6eGZwcGbEc+9KCxp2zL7f2uBKPwyFlfYDxH86lTd46oo3K69DtR4/m4chKH17Naksmc3YNN6ieepalbJsH9IfDPy4tMxuAyg="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1550,
+  "candidatesTokenCount": 239,
+  "totalTokenCount": 1789,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1550
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 239
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-argon",
+ "responseId": "M4L4avamF_nqkdUPx_2uMQ"
+}

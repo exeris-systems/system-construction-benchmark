@@ -1,0 +1,28 @@
+{
+ "variant": "S-naive",
+ "exchanges": [
+  {
+   "role": "dispatcher",
+   "question": "Walk me through your typical day using this service—what do you do from the start of a shift to the end, and what information do you work with?",
+   "answer": "I plan and run flights using this service as a licensed dispatcher, and I am legally responsible for deciding which drone flies along which way and signing off a flight before it leaves. I can call off a flight, and I want help finding out which of my drones could get to where a job starts, though our policy is that software never chooses a drone or a way for us. Several of us plan at the same time, often for the same busy sites and popular drones, while dealing with things happening outside our control like loads being ready or not, drone arrivals, and changing airspace closures that can come into force while drones are already in the air."
+  },
+  {
+   "role": "technician",
+   "question": "Walk me through your typical day using this service—what are your responsibilities, what information do you record or check, and how does your work interact with dispatchers or flights?",
+   "answer": "I keep our drones and charging equipment in working order. My responsibilities include adding new drones to the fleet, retiring old ones, setting up charging pads at our sites, taking drones out of service for repairs and putting them back, and sending drones to charge. Regulators can also ask us to show how our drones have been looked after."
+  }
+ ],
+ "requirements": "ASK desk: Walk me through your typical day using this service—what are your responsibilities, what information do you manage, and how does your work affect dispatchers and flights?\nASK desk: Walk me through your typical day using this service—what are your responsibilities, what information do you manage, and how does your work affect dispatchers and flights?",
+ "items": [],
+ "unreadable": true,
+ "metrics": {
+  "elicitation_initiated": true,
+  "turns_before_first_artifact": 2,
+  "questions": {
+   "technician": 1,
+   "dispatcher": 1,
+   "desk": 0
+  },
+  "limitReached": false
+ }
+}

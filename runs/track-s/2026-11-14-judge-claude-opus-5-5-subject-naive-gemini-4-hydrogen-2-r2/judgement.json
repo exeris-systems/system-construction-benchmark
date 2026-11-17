@@ -1,0 +1,1620 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-14-subject-naive-gemini-4-hydrogen-2-r2",
+  "mode": "subject-naive",
+  "subject": {
+   "provider": "gemini",
+   "model": "gemini-4-hydrogen",
+   "description": {
+    "name": "models/gemini-4-hydrogen",
+    "version": "3.0",
+    "displayName": "Gemini 4 Hydrogen",
+    "description": "Gemini 4 Hydrogen",
+    "inputTokenLimit": 1048576,
+    "outputTokenLimit": 65536,
+    "supportedGenerationMethods": [
+     "generateContent",
+     "countTokens",
+     "batchGenerateContent"
+    ],
+    "temperature": 1,
+    "topP": 0.95,
+    "topK": 64,
+    "maxTemperature": 2,
+    "thinking": true
+   }
+  }
+ },
+ "scored": true,
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must isolate each operating company's data so that users of one company cannot view or modify another company's drones, equipment, charging pads, sites, jobs, routes, customers, flight tracks, clearances, incidents, or maintenance records.",
+   "read": "DR-01"
+  },
+  {
+   "id": "DR-02",
+   "requirement": "When a new operating company is onboarded to the platform, the service must automatically give that company access to all active shared airspace zones, weather warnings, and platform airspace rules while keeping its operational data isolated from all other companies.",
+   "read": "DR-02"
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The service must enforce role-based permissions for fleet technicians, dispatchers, and airspace desk users so that each user can perform only the actions assigned to their role.",
+   "read": "DR-03"
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The service must prevent dispatchers and airspace desk users from creating or editing maintenance records, clearing maintenance or inspection holds, overriding overdue servicing or airworthiness blocks, or changing charging pad operational statuses.",
+   "read": "DR-04"
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The service must prevent fleet technicians from creating customer jobs, dispatching flights, or approving airspace clearances.",
+   "read": "DR-05"
+  },
+  {
+   "id": "DR-06",
+   "requirement": "When presenting a flight plan or active flight to the airspace desk for clearance or monitoring, the service must display only the planned path or waypoints, altitude band, time window, drone model or performance category, an opaque flight and company reference, and a dispatcher contact channel.",
+   "read": "DR-06"
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The service must hide customer names, cargo or payload descriptions, job descriptions, pricing, and internal maintenance records from the airspace desk.",
+   "read": "DR-07"
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The service must record an immutable audit entry containing the timestamp and acting user for every change to drone status, equipment status, charging pad status, maintenance and inspection records, jobs, routes, clearances, overrides, incidents, and airspace zones.",
+   "read": "DR-08"
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The service must store all timestamps unambiguously in UTC and display flight, job, and airspace restriction times in both UTC and the relevant local site time.",
+   "read": "DR-09"
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The service must allow fleet technicians to register a new drone for their company with a unique identifier or registration number, model or type, home site, maximum payload weight, compatible payload or equipment types, maximum range or flight time, weather tolerances such as wind and rain limits, airworthiness certificate expiry date, and routine servicing intervals.",
+   "read": "DR-10"
+  },
+  {
+   "id": "DR-11",
+   "requirement": "When a new drone is registered, the service must place it in an initial maintenance or inspection status and prevent it from being assigned to flights or launched until a fleet technician clears it as ready.",
+   "read": "DR-11"
+  },
+  {
+   "id": "DR-12",
+   "requirement": "The service must track each drone's current operational status as one of maintenance or inspection, ready, flying, charging, or retired.",
+   "read": "DR-12"
+  },
+  {
+   "id": "DR-13",
+   "requirement": "The service must allow a fleet technician to retire a drone only when it is not currently in flight and not assigned to any upcoming scheduled job.",
+   "read": "DR-13"
+  },
+  {
+   "id": "DR-14",
+   "requirement": "Once a drone is marked retired, the service must prevent it from returning to active service while retaining all of its historical flight, maintenance, and inspection records.",
+   "read": "DR-14"
+  },
+  {
+   "id": "DR-15",
+   "requirement": "The service must prevent a fleet technician from taking a drone out of service for maintenance while that drone is currently in flight.",
+   "read": "DR-15"
+  },
+  {
+   "id": "DR-16",
+   "requirement": "When a fleet technician takes a drone out of service for maintenance while it is assigned to upcoming scheduled jobs, the service must remove the drone from availability and alert dispatchers so those jobs can be reassigned.",
+   "read": "DR-16"
+  },
+  {
+   "id": "DR-17",
+   "requirement": "The service must allow fleet technicians to register swappable payload equipment modules, such as cold boxes, camera rigs, or sensor pods, with an identifier, equipment type, working status, calibration status or expiry date, and current drone attachment.",
+   "read": "DR-17"
+  },
+  {
+   "id": "DR-18",
+   "requirement": "The service must allow fleet technicians to attach and detach swappable payload equipment modules to and from drones in their company's fleet.",
+   "read": "DR-18"
+  },
+  {
+   "id": "DR-19",
+   "requirement": "The service must allow fleet technicians to configure charging pads at their company's sites with a pad identifier, site, compatible drone models or connector types, and status as available, occupied, or out of order.",
+   "read": "DR-19"
+  },
+  {
+   "id": "DR-20",
+   "requirement": "The service must allow a fleet technician to send a drone to charge on a pad only if the drone is currently at that site, is not flying or retired, and the selected pad is available and compatible with that drone.",
+   "read": "DR-20"
+  },
+  {
+   "id": "DR-21",
+   "requirement": "While a drone is charging on a pad, the service must mark the drone as charging and the pad as occupied, and update the drone's battery percentage as it charges up to 100 percent.",
+   "read": "DR-21"
+  },
+  {
+   "id": "DR-22",
+   "requirement": "When charging finishes or a technician unplugs a drone without active faults or holds, the service must return the pad status to available and the drone status to ready.",
+   "read": "DR-22"
+  },
+  {
+   "id": "DR-23",
+   "requirement": "When a fleet technician marks a charging pad as out of order, the service must prevent drones from being sent or reserved to charge on it and alert the technician if a drone is currently charging on that pad.",
+   "read": "DR-23"
+  },
+  {
+   "id": "DR-24",
+   "requirement": "When a flight is scheduled to land at a site equipped with charging pads, the service must support checking and reserving compatible pad capacity for the planned arrival window, while allowing ground staff to override pad reservations during an emergency landing.",
+   "read": "DR-24"
+  },
+  {
+   "id": "DR-25",
+   "requirement": "When a flight completes, the service must automatically update the drone's remaining battery percentage, cumulative flight hours, and flight cycles from flight telemetry, and allow a fleet technician to record battery checks manually when telemetry is unavailable.",
+   "read": "DR-25"
+  },
+  {
+   "id": "DR-26",
+   "requirement": "The service must allow fleet technicians to record repair and servicing logs specifying the drone, date and time, performing technician, work carried out, parts replaced, and inspection pass or fail sign-off.",
+   "read": "DR-26"
+  },
+  {
+   "id": "DR-27",
+   "requirement": "The service must track routine servicing intervals by flight hours, flight cycles, and calendar days, and alert fleet technicians when a drone is due or overdue for servicing.",
+   "read": "DR-27"
+  },
+  {
+   "id": "DR-28",
+   "requirement": "The service must block a drone from being dispatched or cleared to fly if it is in maintenance or inspection, is overdue for routine servicing, has an expired airworthiness certificate, has an open critical fault, or carries required equipment that is faulty or out of calibration.",
+   "read": "DR-28"
+  },
+  {
+   "id": "DR-29",
+   "requirement": "If a drone reports an in-flight mechanical fault, experiences a hard landing, or has an incident flagged by a dispatcher upon landing, the service must automatically place the drone into maintenance or inspection status and alert fleet technicians.",
+   "read": "DR-29"
+  },
+  {
+   "id": "DR-30",
+   "requirement": "The service must allow fleet technicians to generate a regulatory compliance report for any company drone over a chosen period showing all maintenance logs, inspection sign-offs, flight history, and verification that the drone did not fly while out of service, overdue, or unairworthy.",
+   "read": "DR-30"
+  },
+  {
+   "id": "DR-31",
+   "requirement": "The service must allow dispatchers to manage sites for their company, recording each site's name, geographic coordinates or address, site type, optional operating hours, sole-company ownership indicator, and ground or charging capacity.",
+   "read": "DR-31"
+  },
+  {
+   "id": "DR-32",
+   "requirement": "The service must allow dispatchers to create jobs containing a customer or client reference, job type, priority level, origin and destination sites or inspection waypoints, payload weight, required equipment or capabilities, and requested time window or deadline.",
+   "read": "DR-32"
+  },
+  {
+   "id": "DR-33",
+   "requirement": "The service must allow dispatchers to define flight routes connecting origin, intermediate waypoints or survey paths, and destination or return base, including planned altitude band, distance, and estimated flight time.",
+   "read": "DR-33"
+  },
+  {
+   "id": "DR-34",
+   "requirement": "Where a delivery job requires the drone to return to a base after drop-off, the service must include the return leg in the planned route, schedule, and battery budget.",
+   "read": "DR-34"
+  },
+  {
+   "id": "DR-35",
+   "requirement": "The service must allow dispatchers to configure recurring route templates with a route, schedule frequency or days of the week, time of day, and required drone specifications, and automatically generate scheduled jobs from active templates unless paused or cancelled.",
+   "read": "DR-35"
+  },
+  {
+   "id": "DR-36",
+   "requirement": "When matching or assigning a drone to a job, the service must verify that the drone belongs to the same company, is ready or scheduled to be ready at the origin site in time, meets payload weight and equipment requirements, and satisfies maintenance, airworthiness, and calibration rules.",
+   "read": "DR-36"
+  },
+  {
+   "id": "DR-37",
+   "requirement": "When matching or scheduling a flight, the service must verify that the drone's battery level and range are sufficient for the full planned route plus the configured safety reserve, and that forecast weather at the sites and along the route is within the drone's tolerances.",
+   "read": "DR-37"
+  },
+  {
+   "id": "DR-38",
+   "requirement": "The service must prevent two jobs from double-booking the same drone for overlapping time windows, including when multiple dispatchers edit the schedule concurrently.",
+   "read": "DR-38"
+  },
+  {
+   "id": "DR-39",
+   "requirement": "Unless a flight is an emergency diversion, the service must prevent scheduling a takeoff or landing at a site outside that site's configured operating hours and prevent exceeding the site's configured drone capacity.",
+   "read": "DR-39"
+  },
+  {
+   "id": "DR-40",
+   "requirement": "The service must track each job through its lifecycle statuses of draft or planned, scheduled, pending airspace clearance, cleared, in flight, and completed, as well as cancelled, failed, or aborted.",
+   "read": "DR-40"
+  },
+  {
+   "id": "DR-41",
+   "requirement": "The service must highlight high-priority jobs such as urgent medical transfers at the top of dispatchers' queues and allow dispatchers to reassign drones from lower-priority scheduled jobs when necessary.",
+   "read": "DR-41"
+  },
+  {
+   "id": "DR-42",
+   "requirement": "When a scheduled job is cancelled before takeoff, the service must immediately release the assigned drone and any reserved charging pad slot so they become available for other jobs.",
+   "read": "DR-42"
+  },
+  {
+   "id": "DR-43",
+   "requirement": "Immediately before a flight is launched, the service must confirm that the drone is ready, not overdue for service or unairworthy, has required working equipment, has sufficient battery with safety reserve, has valid airspace clearance if required, and has site and route weather within the drone's limits, blocking launch if any check fails.",
+   "read": "DR-43"
+  },
+  {
+   "id": "DR-44",
+   "requirement": "While a flight is active, the service must display to the company's dispatchers the drone's live position, altitude, speed, heading, battery level, route progress, live weather, and any relevant airspace alerts.",
+   "read": "DR-44"
+  },
+  {
+   "id": "DR-45",
+   "requirement": "If an active drone stops sending telemetry beyond a configured timeout, the service must raise a lost-link alert to the dispatcher, display the drone's last known position and timestamp, and allow the dispatcher to record manual status updates or mark the drone lost or recovered.",
+   "read": "DR-45"
+  },
+  {
+   "id": "DR-46",
+   "requirement": "During an active flight, the service must allow the dispatcher to issue hold or hover, return-to-base, or diversion commands to an alternate or emergency landing site and record the reason as an incident.",
+   "read": "DR-46"
+  },
+  {
+   "id": "DR-47",
+   "requirement": "If a drone lands at a location other than its originally planned destination, the service must update the drone's current location to the actual landing site.",
+   "read": "DR-47"
+  },
+  {
+   "id": "DR-48",
+   "requirement": "The service must provide a shift handover view for dispatchers showing all active flights, open alerts, pending clearances, priority jobs, timestamps, and dispatcher notes.",
+   "read": "DR-48"
+  },
+  {
+   "id": "DR-49",
+   "requirement": "The service must provide dispatchers with operational summaries of completed, delayed, and failed jobs as well as downloadable flight logs for their company's clients.",
+   "read": "DR-49"
+  },
+  {
+   "id": "DR-50",
+   "requirement": "The service must allow the airspace desk to create, update, and deactivate shared airspace zones including permanent no-fly zones, temporary flight restrictions, special-permit or controlled zones, and weather warnings or advisories.",
+   "read": "DR-50"
+  },
+  {
+   "id": "DR-51",
+   "requirement": "For each airspace zone or weather warning, the service must store a polygon or circle geometry, minimum and maximum altitudes, effective start and end times or permanent flag, restriction type, severity or rule, and authority reference.",
+   "read": "DR-51"
+  },
+  {
+   "id": "DR-52",
+   "requirement": "When an airspace zone or weather warning expires or is deactivated, the service must retain it in historical records for regulatory audits rather than deleting it.",
+   "read": "DR-52"
+  },
+  {
+   "id": "DR-53",
+   "requirement": "Where multiple airspace zones overlap in geography, altitude, and time, the service must apply the strictest applicable restriction rule to any intersecting route.",
+   "read": "DR-53"
+  },
+  {
+   "id": "DR-54",
+   "requirement": "When the airspace desk creates or updates a restriction zone or weather warning, the service must immediately apply it across all companies, invalidate affected clearances or flag affected planned jobs, alert affected dispatchers, and send urgent alerts to both dispatchers and the airspace desk for any active flights inside or approaching the affected area.",
+   "read": "DR-54"
+  },
+  {
+   "id": "DR-55",
+   "requirement": "The service must automatically block any planned route or launch that intersects an active permanent no-fly zone, an active temporary flight restriction without an authorized waiver, or a severe weather warning.",
+   "read": "DR-55"
+  },
+  {
+   "id": "DR-56",
+   "requirement": "The service must place a scheduled flight into pending clearance and require manual approval from the airspace desk whenever its route enters a controlled or special-permit zone, exceeds standard altitude ceilings or visual-line-of-sight rules, requests an emergency or restriction waiver, or conflicts with another company's scheduled flight.",
+   "read": "DR-56"
+  },
+  {
+   "id": "DR-57",
+   "requirement": "The service must check all scheduled flights against one another for spatial and temporal overlap using configured horizontal and vertical separation minimums.",
+   "read": "DR-57"
+  },
+  {
+   "id": "DR-58",
+   "requirement": "When two scheduled flights of the same company violate separation minimums, the service must warn that company's dispatchers directly during planning.",
+   "read": "DR-58"
+  },
+  {
+   "id": "DR-59",
+   "requirement": "When two scheduled flights of different companies violate separation minimums, the service must alert the airspace desk and each affected company's dispatchers without disclosing the other company's identity or commercial details.",
+   "read": "DR-59"
+  },
+  {
+   "id": "DR-60",
+   "requirement": "The service must place high-priority clearance requests, such as urgent medical flights, at the top of the airspace desk's review queue and allow the desk to record an official waiver reference when approving flights under authorized emergency exceptions.",
+   "read": "DR-60"
+  },
+  {
+   "id": "DR-61",
+   "requirement": "When reviewing a clearance request, the service must allow the airspace desk to approve it with optional conditions such as altitude caps or corridor limits, request modifications, or reject it with a reason that returns the job to planning.",
+   "read": "DR-61"
+  },
+  {
+   "id": "DR-62",
+   "requirement": "If a dispatcher modifies a cleared flight's route, altitude, or scheduled time window beyond approved tolerances, or if a newly added restriction or flight conflict affects it, the service must automatically invalidate the existing clearance and require re-approval before takeoff.",
+   "read": "DR-62"
+  },
+  {
+   "id": "DR-63",
+   "requirement": "The service must allow the airspace desk to issue standing clearances for approved recurring routes within defined parameters, and automatically revoke or flag them for re-review if intersecting airspace rules change.",
+   "read": "DR-63"
+  },
+  {
+   "id": "DR-64",
+   "requirement": "The service must allow the airspace desk to configure platform-wide default horizontal and vertical separation minimums, standard altitude ceilings, and alert lead times.",
+   "read": "DR-64"
+  },
+  {
+   "id": "DR-65",
+   "requirement": "When urgent airspace or conflict alerts are sent for active or imminent flights, the service must record whether and when each responsible dispatcher and airspace desk user acknowledged the alert.",
+   "read": "DR-65"
+  },
+  {
+   "id": "DR-66",
+   "requirement": "The service must allow the airspace desk to generate a platform-wide airspace compliance report over a chosen period detailing cleared flights, standing permits, emergency waivers, airspace infringements, and issued alerts. ```",
+   "read": "DR-66"
+  },
+  {
+   "id": "DR-67",
+   "requirement": "The service must isolate each operating company's data so that users of one company cannot view or modify another company's drones, equipment, charging pads, sites, jobs, routes, customers, flight tracks, clearances, incidents, or maintenance records.",
+   "read": "DR-01"
+  },
+  {
+   "id": "DR-68",
+   "requirement": "When a new operating company is onboarded to the platform, the service must automatically give that company access to all active shared airspace zones, weather warnings, and platform airspace rules while keeping its operational data isolated from all other companies.",
+   "read": "DR-02"
+  },
+  {
+   "id": "DR-69",
+   "requirement": "The service must enforce role-based permissions for fleet technicians, dispatchers, and airspace desk users so that each user can perform only the actions assigned to their role.",
+   "read": "DR-03"
+  },
+  {
+   "id": "DR-70",
+   "requirement": "The service must prevent dispatchers and airspace desk users from creating or editing maintenance records, clearing maintenance or inspection holds, overriding overdue servicing or airworthiness blocks, or changing charging pad operational statuses.",
+   "read": "DR-04"
+  },
+  {
+   "id": "DR-71",
+   "requirement": "The service must prevent fleet technicians from creating customer jobs, dispatching flights, or approving airspace clearances.",
+   "read": "DR-05"
+  },
+  {
+   "id": "DR-72",
+   "requirement": "When presenting a flight plan or active flight to the airspace desk for clearance or monitoring, the service must display only the planned path or waypoints, altitude band, time window, drone model or performance category, an opaque flight and company reference, and a dispatcher contact channel.",
+   "read": "DR-06"
+  },
+  {
+   "id": "DR-73",
+   "requirement": "The service must hide customer names, cargo or payload descriptions, job descriptions, pricing, and internal maintenance records from the airspace desk.",
+   "read": "DR-07"
+  },
+  {
+   "id": "DR-74",
+   "requirement": "The service must record an immutable audit entry containing the timestamp and acting user for every change to drone status, equipment status, charging pad status, maintenance and inspection records, jobs, routes, clearances, overrides, incidents, and airspace zones.",
+   "read": "DR-08"
+  },
+  {
+   "id": "DR-75",
+   "requirement": "The service must store all timestamps unambiguously in UTC and display flight, job, and airspace restriction times in both UTC and the relevant local site time.",
+   "read": "DR-09"
+  },
+  {
+   "id": "DR-76",
+   "requirement": "The service must allow fleet technicians to register a new drone for their company with a unique identifier or registration number, model or type, home site, maximum payload weight, compatible payload or equipment types, maximum range or flight time, weather tolerances such as wind and rain limits, airworthiness certificate expiry date, and routine servicing intervals.",
+   "read": "DR-10"
+  },
+  {
+   "id": "DR-77",
+   "requirement": "When a new drone is registered, the service must place it in an initial maintenance or inspection status and prevent it from being assigned to flights or launched until a fleet technician clears it as ready.",
+   "read": "DR-11"
+  },
+  {
+   "id": "DR-78",
+   "requirement": "The service must track each drone's current operational status as one of maintenance or inspection, ready, flying, charging, or retired.",
+   "read": "DR-12"
+  },
+  {
+   "id": "DR-79",
+   "requirement": "The service must allow a fleet technician to retire a drone only when it is not currently in flight and not assigned to any upcoming scheduled job.",
+   "read": "DR-13"
+  },
+  {
+   "id": "DR-80",
+   "requirement": "Once a drone is marked retired, the service must prevent it from returning to active service while retaining all of its historical flight, maintenance, and inspection records.",
+   "read": "DR-14"
+  },
+  {
+   "id": "DR-81",
+   "requirement": "The service must prevent a fleet technician from taking a drone out of service for maintenance while that drone is currently in flight.",
+   "read": "DR-15"
+  },
+  {
+   "id": "DR-82",
+   "requirement": "When a fleet technician takes a drone out of service for maintenance while it is assigned to upcoming scheduled jobs, the service must remove the drone from availability and alert dispatchers so those jobs can be reassigned.",
+   "read": "DR-16"
+  },
+  {
+   "id": "DR-83",
+   "requirement": "The service must allow fleet technicians to register swappable payload equipment modules, such as cold boxes, camera rigs, or sensor pods, with an identifier, equipment type, working status, calibration status or expiry date, and current drone attachment.",
+   "read": "DR-17"
+  },
+  {
+   "id": "DR-84",
+   "requirement": "The service must allow fleet technicians to attach and detach swappable payload equipment modules to and from drones in their company's fleet.",
+   "read": "DR-18"
+  },
+  {
+   "id": "DR-85",
+   "requirement": "The service must allow fleet technicians to configure charging pads at their company's sites with a pad identifier, site, compatible drone models or connector types, and status as available, occupied, or out of order.",
+   "read": "DR-19"
+  },
+  {
+   "id": "DR-86",
+   "requirement": "The service must allow a fleet technician to send a drone to charge on a pad only if the drone is currently at that site, is not flying or retired, and the selected pad is available and compatible with that drone.",
+   "read": "DR-20"
+  },
+  {
+   "id": "DR-87",
+   "requirement": "While a drone is charging on a pad, the service must mark the drone as charging and the pad as occupied, and update the drone's battery percentage as it charges up to 100 percent.",
+   "read": "DR-21"
+  },
+  {
+   "id": "DR-88",
+   "requirement": "When charging finishes or a technician unplugs a drone without active faults or holds, the service must return the pad status to available and the drone status to ready.",
+   "read": "DR-22"
+  },
+  {
+   "id": "DR-89",
+   "requirement": "When a fleet technician marks a charging pad as out of order, the service must prevent drones from being sent or reserved to charge on it and alert the technician if a drone is currently charging on that pad.",
+   "read": "DR-23"
+  },
+  {
+   "id": "DR-90",
+   "requirement": "When a flight is scheduled to land at a site equipped with charging pads, the service must support checking and reserving compatible pad capacity for the planned arrival window, while allowing ground staff to override pad reservations during an emergency landing.",
+   "read": "DR-24"
+  },
+  {
+   "id": "DR-91",
+   "requirement": "When a flight completes, the service must automatically update the drone's remaining battery percentage, cumulative flight hours, and flight cycles from flight telemetry, and allow a fleet technician to record battery checks manually when telemetry is unavailable.",
+   "read": "DR-25"
+  },
+  {
+   "id": "DR-92",
+   "requirement": "The service must allow fleet technicians to record repair and servicing logs specifying the drone, date and time, performing technician, work carried out, parts replaced, and inspection pass or fail sign-off.",
+   "read": "DR-26"
+  },
+  {
+   "id": "DR-93",
+   "requirement": "The service must track routine servicing intervals by flight hours, flight cycles, and calendar days, and alert fleet technicians when a drone is due or overdue for servicing.",
+   "read": "DR-27"
+  },
+  {
+   "id": "DR-94",
+   "requirement": "The service must block a drone from being dispatched or cleared to fly if it is in maintenance or inspection, is overdue for routine servicing, has an expired airworthiness certificate, has an open critical fault, or carries required equipment that is faulty or out of calibration.",
+   "read": "DR-28"
+  },
+  {
+   "id": "DR-95",
+   "requirement": "If a drone reports an in-flight mechanical fault, experiences a hard landing, or has an incident flagged by a dispatcher upon landing, the service must automatically place the drone into maintenance or inspection status and alert fleet technicians.",
+   "read": "DR-29"
+  },
+  {
+   "id": "DR-96",
+   "requirement": "The service must allow fleet technicians to generate a regulatory compliance report for any company drone over a chosen period showing all maintenance logs, inspection sign-offs, flight history, and verification that the drone did not fly while out of service, overdue, or unairworthy.",
+   "read": "DR-30"
+  },
+  {
+   "id": "DR-97",
+   "requirement": "The service must allow dispatchers to manage sites for their company, recording each site's name, geographic coordinates or address, site type, optional operating hours, sole-company ownership indicator, and ground or charging capacity.",
+   "read": "DR-31"
+  },
+  {
+   "id": "DR-98",
+   "requirement": "The service must allow dispatchers to create jobs containing a customer or client reference, job type, priority level, origin and destination sites or inspection waypoints, payload weight, required equipment or capabilities, and requested time window or deadline.",
+   "read": "DR-32"
+  },
+  {
+   "id": "DR-99",
+   "requirement": "The service must allow dispatchers to define flight routes connecting origin, intermediate waypoints or survey paths, and destination or return base, including planned altitude band, distance, and estimated flight time.",
+   "read": "DR-33"
+  },
+  {
+   "id": "DR-100",
+   "requirement": "Where a delivery job requires the drone to return to a base after drop-off, the service must include the return leg in the planned route, schedule, and battery budget.",
+   "read": "DR-34"
+  },
+  {
+   "id": "DR-101",
+   "requirement": "The service must allow dispatchers to configure recurring route templates with a route, schedule frequency or days of the week, time of day, and required drone specifications, and automatically generate scheduled jobs from active templates unless paused or cancelled.",
+   "read": "DR-35"
+  },
+  {
+   "id": "DR-102",
+   "requirement": "When matching or assigning a drone to a job, the service must verify that the drone belongs to the same company, is ready or scheduled to be ready at the origin site in time, meets payload weight and equipment requirements, and satisfies maintenance, airworthiness, and calibration rules.",
+   "read": "DR-36"
+  },
+  {
+   "id": "DR-103",
+   "requirement": "When matching or scheduling a flight, the service must verify that the drone's battery level and range are sufficient for the full planned route plus the configured safety reserve, and that forecast weather at the sites and along the route is within the drone's tolerances.",
+   "read": "DR-37"
+  },
+  {
+   "id": "DR-104",
+   "requirement": "The service must prevent two jobs from double-booking the same drone for overlapping time windows, including when multiple dispatchers edit the schedule concurrently.",
+   "read": "DR-38"
+  },
+  {
+   "id": "DR-105",
+   "requirement": "Unless a flight is an emergency diversion, the service must prevent scheduling a takeoff or landing at a site outside that site's configured operating hours and prevent exceeding the site's configured drone capacity.",
+   "read": "DR-39"
+  },
+  {
+   "id": "DR-106",
+   "requirement": "The service must track each job through its lifecycle statuses of draft or planned, scheduled, pending airspace clearance, cleared, in flight, and completed, as well as cancelled, failed, or aborted.",
+   "read": "DR-40"
+  },
+  {
+   "id": "DR-107",
+   "requirement": "The service must highlight high-priority jobs such as urgent medical transfers at the top of dispatchers' queues and allow dispatchers to reassign drones from lower-priority scheduled jobs when necessary.",
+   "read": "DR-41"
+  },
+  {
+   "id": "DR-108",
+   "requirement": "When a scheduled job is cancelled before takeoff, the service must immediately release the assigned drone and any reserved charging pad slot so they become available for other jobs.",
+   "read": "DR-42"
+  },
+  {
+   "id": "DR-109",
+   "requirement": "Immediately before a flight is launched, the service must confirm that the drone is ready, not overdue for service or unairworthy, has required working equipment, has sufficient battery with safety reserve, has valid airspace clearance if required, and has site and route weather within the drone's limits, blocking launch if any check fails.",
+   "read": "DR-43"
+  },
+  {
+   "id": "DR-110",
+   "requirement": "While a flight is active, the service must display to the company's dispatchers the drone's live position, altitude, speed, heading, battery level, route progress, live weather, and any relevant airspace alerts.",
+   "read": "DR-44"
+  },
+  {
+   "id": "DR-111",
+   "requirement": "If an active drone stops sending telemetry beyond a configured timeout, the service must raise a lost-link alert to the dispatcher, display the drone's last known position and timestamp, and allow the dispatcher to record manual status updates or mark the drone lost or recovered.",
+   "read": "DR-45"
+  },
+  {
+   "id": "DR-112",
+   "requirement": "During an active flight, the service must allow the dispatcher to issue hold or hover, return-to-base, or diversion commands to an alternate or emergency landing site and record the reason as an incident.",
+   "read": "DR-46"
+  },
+  {
+   "id": "DR-113",
+   "requirement": "If a drone lands at a location other than its originally planned destination, the service must update the drone's current location to the actual landing site.",
+   "read": "DR-47"
+  },
+  {
+   "id": "DR-114",
+   "requirement": "The service must provide a shift handover view for dispatchers showing all active flights, open alerts, pending clearances, priority jobs, timestamps, and dispatcher notes.",
+   "read": "DR-48"
+  },
+  {
+   "id": "DR-115",
+   "requirement": "The service must provide dispatchers with operational summaries of completed, delayed, and failed jobs as well as downloadable flight logs for their company's clients.",
+   "read": "DR-49"
+  },
+  {
+   "id": "DR-116",
+   "requirement": "The service must allow the airspace desk to create, update, and deactivate shared airspace zones including permanent no-fly zones, temporary flight restrictions, special-permit or controlled zones, and weather warnings or advisories.",
+   "read": "DR-50"
+  },
+  {
+   "id": "DR-117",
+   "requirement": "For each airspace zone or weather warning, the service must store a polygon or circle geometry, minimum and maximum altitudes, effective start and end times or permanent flag, restriction type, severity or rule, and authority reference.",
+   "read": "DR-51"
+  },
+  {
+   "id": "DR-118",
+   "requirement": "When an airspace zone or weather warning expires or is deactivated, the service must retain it in historical records for regulatory audits rather than deleting it.",
+   "read": "DR-52"
+  },
+  {
+   "id": "DR-119",
+   "requirement": "Where multiple airspace zones overlap in geography, altitude, and time, the service must apply the strictest applicable restriction rule to any intersecting route.",
+   "read": "DR-53"
+  },
+  {
+   "id": "DR-120",
+   "requirement": "When the airspace desk creates or updates a restriction zone or weather warning, the service must immediately apply it across all companies, invalidate affected clearances or flag affected planned jobs, alert affected dispatchers, and send urgent alerts to both dispatchers and the airspace desk for any active flights inside or approaching the affected area.",
+   "read": "DR-54"
+  },
+  {
+   "id": "DR-121",
+   "requirement": "The service must automatically block any planned route or launch that intersects an active permanent no-fly zone, an active temporary flight restriction without an authorized waiver, or a severe weather warning.",
+   "read": "DR-55"
+  },
+  {
+   "id": "DR-122",
+   "requirement": "The service must place a scheduled flight into pending clearance and require manual approval from the airspace desk whenever its route enters a controlled or special-permit zone, exceeds standard altitude ceilings or visual-line-of-sight rules, requests an emergency or restriction waiver, or conflicts with another company's scheduled flight.",
+   "read": "DR-56"
+  },
+  {
+   "id": "DR-123",
+   "requirement": "The service must check all scheduled flights against one another for spatial and temporal overlap using configured horizontal and vertical separation minimums.",
+   "read": "DR-57"
+  },
+  {
+   "id": "DR-124",
+   "requirement": "When two scheduled flights of the same company violate separation minimums, the service must warn that company's dispatchers directly during planning.",
+   "read": "DR-58"
+  },
+  {
+   "id": "DR-125",
+   "requirement": "When two scheduled flights of different companies violate separation minimums, the service must alert the airspace desk and each affected company's dispatchers without disclosing the other company's identity or commercial details.",
+   "read": "DR-59"
+  },
+  {
+   "id": "DR-126",
+   "requirement": "The service must place high-priority clearance requests, such as urgent medical flights, at the top of the airspace desk's review queue and allow the desk to record an official waiver reference when approving flights under authorized emergency exceptions.",
+   "read": "DR-60"
+  },
+  {
+   "id": "DR-127",
+   "requirement": "When reviewing a clearance request, the service must allow the airspace desk to approve it with optional conditions such as altitude caps or corridor limits, request modifications, or reject it with a reason that returns the job to planning.",
+   "read": "DR-61"
+  },
+  {
+   "id": "DR-128",
+   "requirement": "If a dispatcher modifies a cleared flight's route, altitude, or scheduled time window beyond approved tolerances, or if a newly added restriction or flight conflict affects it, the service must automatically invalidate the existing clearance and require re-approval before takeoff.",
+   "read": "DR-62"
+  },
+  {
+   "id": "DR-129",
+   "requirement": "The service must allow the airspace desk to issue standing clearances for approved recurring routes within defined parameters, and automatically revoke or flag them for re-review if intersecting airspace rules change.",
+   "read": "DR-63"
+  },
+  {
+   "id": "DR-130",
+   "requirement": "The service must allow the airspace desk to configure platform-wide default horizontal and vertical separation minimums, standard altitude ceilings, and alert lead times.",
+   "read": "DR-64"
+  },
+  {
+   "id": "DR-131",
+   "requirement": "When urgent airspace or conflict alerts are sent for active or imminent flights, the service must record whether and when each responsible dispatcher and airspace desk user acknowledged the alert.",
+   "read": "DR-65"
+  },
+  {
+   "id": "DR-132",
+   "requirement": "The service must allow the airspace desk to generate a platform-wide airspace compliance report over a chosen period detailing cleared flights, standing permits, emergency waivers, airspace infringements, and issued alerts.",
+   "read": "DR-66"
+  }
+ ],
+ "score": {
+  "covered": 12,
+  "partial": 12,
+  "of": 38,
+  "recall": 0.3157894736842105,
+  "precision": 0.453125,
+  "outOfScope": 10,
+  "technical": 4
+ },
+ "judgement": {
+  "requirements": {
+   "BR-01": {
+    "coverage": "covered",
+    "items": [
+     "DR-01",
+     "DR-67"
+    ]
+   },
+   "BR-02": {
+    "coverage": "partial",
+    "items": [
+     "DR-02",
+     "DR-68"
+    ]
+   },
+   "BR-03": {
+    "coverage": "covered",
+    "items": [
+     "DR-03",
+     "DR-04",
+     "DR-05",
+     "DR-69",
+     "DR-70",
+     "DR-71"
+    ]
+   },
+   "BR-04": {
+    "coverage": "partial",
+    "items": [
+     "DR-07",
+     "DR-73"
+    ]
+   },
+   "BR-05": {
+    "coverage": "partial",
+    "items": [
+     "DR-10",
+     "DR-76"
+    ]
+   },
+   "BR-06": {
+    "coverage": "covered",
+    "items": [
+     "DR-10",
+     "DR-76"
+    ]
+   },
+   "BR-07": {
+    "coverage": "covered",
+    "items": [
+     "DR-14",
+     "DR-20",
+     "DR-80",
+     "DR-86"
+    ]
+   },
+   "BR-08": {
+    "coverage": "partial",
+    "items": [
+     "DR-15",
+     "DR-16",
+     "DR-28",
+     "DR-81",
+     "DR-82",
+     "DR-94"
+    ]
+   },
+   "BR-09": {
+    "coverage": "covered",
+    "items": [
+     "DR-19",
+     "DR-85"
+    ]
+   },
+   "BR-10": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-11": {
+    "coverage": "covered",
+    "items": [
+     "DR-20",
+     "DR-86"
+    ]
+   },
+   "BR-12": {
+    "coverage": "covered",
+    "items": [
+     "DR-08",
+     "DR-26",
+     "DR-74",
+     "DR-92"
+    ]
+   },
+   "BR-13": {
+    "coverage": "covered",
+    "items": [
+     "DR-32",
+     "DR-98"
+    ]
+   },
+   "BR-14": {
+    "coverage": "partial",
+    "items": [
+     "DR-32",
+     "DR-33",
+     "DR-98",
+     "DR-99"
+    ]
+   },
+   "BR-15": {
+    "coverage": "partial",
+    "items": [
+     "DR-33",
+     "DR-36",
+     "DR-99",
+     "DR-102"
+    ]
+   },
+   "BR-16": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-17": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-18": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-19": {
+    "coverage": "covered",
+    "items": [
+     "DR-40",
+     "DR-42",
+     "DR-106",
+     "DR-108"
+    ]
+   },
+   "BR-20": {
+    "coverage": "covered",
+    "items": [
+     "DR-36",
+     "DR-37",
+     "DR-102",
+     "DR-103"
+    ]
+   },
+   "BR-21": {
+    "coverage": "partial",
+    "items": [
+     "DR-55",
+     "DR-121"
+    ]
+   },
+   "BR-22": {
+    "coverage": "partial",
+    "items": [
+     "DR-39",
+     "DR-105"
+    ]
+   },
+   "BR-23": {
+    "coverage": "partial",
+    "items": [
+     "DR-38",
+     "DR-104"
+    ]
+   },
+   "BR-24": {
+    "coverage": "covered",
+    "items": [
+     "DR-37",
+     "DR-43",
+     "DR-103",
+     "DR-109"
+    ]
+   },
+   "BR-25": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-26": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-27": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-28": {
+    "coverage": "partial",
+    "items": [
+     "DR-45",
+     "DR-111"
+    ]
+   },
+   "BR-29": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-30": {
+    "coverage": "partial",
+    "items": [
+     "DR-50",
+     "DR-116"
+    ]
+   },
+   "BR-31": {
+    "coverage": "partial",
+    "items": [
+     "DR-50",
+     "DR-51",
+     "DR-54",
+     "DR-116",
+     "DR-117",
+     "DR-120"
+    ]
+   },
+   "BR-32": {
+    "coverage": "covered",
+    "items": [
+     "DR-54",
+     "DR-01",
+     "DR-120",
+     "DR-67"
+    ]
+   },
+   "BR-33": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-34": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-35": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-36": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-37": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-38": {
+    "coverage": "missing",
+    "items": []
+   }
+  },
+  "items": {
+   "DR-01": {
+    "class": "reference",
+    "requirements": [
+     "BR-01",
+     "BR-32"
+    ]
+   },
+   "DR-02": {
+    "class": "reference",
+    "requirements": [
+     "BR-02"
+    ]
+   },
+   "DR-03": {
+    "class": "reference",
+    "requirements": [
+     "BR-03"
+    ]
+   },
+   "DR-04": {
+    "class": "reference",
+    "requirements": [
+     "BR-03"
+    ]
+   },
+   "DR-05": {
+    "class": "reference",
+    "requirements": [
+     "BR-03"
+    ]
+   },
+   "DR-06": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-07": {
+    "class": "reference",
+    "requirements": [
+     "BR-04"
+    ]
+   },
+   "DR-08": {
+    "class": "reference",
+    "requirements": [
+     "BR-12"
+    ]
+   },
+   "DR-09": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-10": {
+    "class": "reference",
+    "requirements": [
+     "BR-05",
+     "BR-06"
+    ]
+   },
+   "DR-11": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-12": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-13": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-14": {
+    "class": "reference",
+    "requirements": [
+     "BR-07"
+    ]
+   },
+   "DR-15": {
+    "class": "reference",
+    "requirements": [
+     "BR-08"
+    ]
+   },
+   "DR-16": {
+    "class": "reference",
+    "requirements": [
+     "BR-08"
+    ]
+   },
+   "DR-17": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-18": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-19": {
+    "class": "reference",
+    "requirements": [
+     "BR-09"
+    ]
+   },
+   "DR-20": {
+    "class": "reference",
+    "requirements": [
+     "BR-11",
+     "BR-07"
+    ]
+   },
+   "DR-21": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-22": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-23": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-24": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-25": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-26": {
+    "class": "reference",
+    "requirements": [
+     "BR-12"
+    ]
+   },
+   "DR-27": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-28": {
+    "class": "reference",
+    "requirements": [
+     "BR-08"
+    ]
+   },
+   "DR-29": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-30": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-31": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-32": {
+    "class": "reference",
+    "requirements": [
+     "BR-13",
+     "BR-14"
+    ]
+   },
+   "DR-33": {
+    "class": "reference",
+    "requirements": [
+     "BR-14",
+     "BR-15"
+    ]
+   },
+   "DR-34": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-35": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-36": {
+    "class": "reference",
+    "requirements": [
+     "BR-15",
+     "BR-20"
+    ]
+   },
+   "DR-37": {
+    "class": "reference",
+    "requirements": [
+     "BR-20",
+     "BR-24"
+    ]
+   },
+   "DR-38": {
+    "class": "reference",
+    "requirements": [
+     "BR-23"
+    ]
+   },
+   "DR-39": {
+    "class": "reference",
+    "requirements": [
+     "BR-22"
+    ]
+   },
+   "DR-40": {
+    "class": "reference",
+    "requirements": [
+     "BR-19"
+    ]
+   },
+   "DR-41": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-42": {
+    "class": "reference",
+    "requirements": [
+     "BR-19"
+    ]
+   },
+   "DR-43": {
+    "class": "reference",
+    "requirements": [
+     "BR-24"
+    ]
+   },
+   "DR-44": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-45": {
+    "class": "reference",
+    "requirements": [
+     "BR-28"
+    ]
+   },
+   "DR-46": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-47": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-48": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-49": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-50": {
+    "class": "reference",
+    "requirements": [
+     "BR-30",
+     "BR-31"
+    ]
+   },
+   "DR-51": {
+    "class": "reference",
+    "requirements": [
+     "BR-31"
+    ]
+   },
+   "DR-52": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-53": {
+    "class": "technical",
+    "requirements": []
+   },
+   "DR-54": {
+    "class": "reference",
+    "requirements": [
+     "BR-31",
+     "BR-32"
+    ]
+   },
+   "DR-55": {
+    "class": "reference",
+    "requirements": [
+     "BR-21"
+    ]
+   },
+   "DR-56": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-57": {
+    "class": "technical",
+    "requirements": []
+   },
+   "DR-58": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-59": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-60": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-61": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-62": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-63": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-64": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-65": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-66": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-67": {
+    "class": "reference",
+    "requirements": [
+     "BR-01",
+     "BR-32"
+    ]
+   },
+   "DR-68": {
+    "class": "reference",
+    "requirements": [
+     "BR-02"
+    ]
+   },
+   "DR-69": {
+    "class": "reference",
+    "requirements": [
+     "BR-03"
+    ]
+   },
+   "DR-70": {
+    "class": "reference",
+    "requirements": [
+     "BR-03"
+    ]
+   },
+   "DR-71": {
+    "class": "reference",
+    "requirements": [
+     "BR-03"
+    ]
+   },
+   "DR-72": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-73": {
+    "class": "reference",
+    "requirements": [
+     "BR-04"
+    ]
+   },
+   "DR-74": {
+    "class": "reference",
+    "requirements": [
+     "BR-12"
+    ]
+   },
+   "DR-75": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-76": {
+    "class": "reference",
+    "requirements": [
+     "BR-05",
+     "BR-06"
+    ]
+   },
+   "DR-77": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-78": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-79": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-80": {
+    "class": "reference",
+    "requirements": [
+     "BR-07"
+    ]
+   },
+   "DR-81": {
+    "class": "reference",
+    "requirements": [
+     "BR-08"
+    ]
+   },
+   "DR-82": {
+    "class": "reference",
+    "requirements": [
+     "BR-08"
+    ]
+   },
+   "DR-83": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-84": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-85": {
+    "class": "reference",
+    "requirements": [
+     "BR-09"
+    ]
+   },
+   "DR-86": {
+    "class": "reference",
+    "requirements": [
+     "BR-11",
+     "BR-07"
+    ]
+   },
+   "DR-87": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-88": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-89": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-90": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-91": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-92": {
+    "class": "reference",
+    "requirements": [
+     "BR-12"
+    ]
+   },
+   "DR-93": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-94": {
+    "class": "reference",
+    "requirements": [
+     "BR-08"
+    ]
+   },
+   "DR-95": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-96": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-97": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-98": {
+    "class": "reference",
+    "requirements": [
+     "BR-13",
+     "BR-14"
+    ]
+   },
+   "DR-99": {
+    "class": "reference",
+    "requirements": [
+     "BR-14",
+     "BR-15"
+    ]
+   },
+   "DR-100": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-101": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-102": {
+    "class": "reference",
+    "requirements": [
+     "BR-15",
+     "BR-20"
+    ]
+   },
+   "DR-103": {
+    "class": "reference",
+    "requirements": [
+     "BR-20",
+     "BR-24"
+    ]
+   },
+   "DR-104": {
+    "class": "reference",
+    "requirements": [
+     "BR-23"
+    ]
+   },
+   "DR-105": {
+    "class": "reference",
+    "requirements": [
+     "BR-22"
+    ]
+   },
+   "DR-106": {
+    "class": "reference",
+    "requirements": [
+     "BR-19"
+    ]
+   },
+   "DR-107": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-108": {
+    "class": "reference",
+    "requirements": [
+     "BR-19"
+    ]
+   },
+   "DR-109": {
+    "class": "reference",
+    "requirements": [
+     "BR-24"
+    ]
+   },
+   "DR-110": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-111": {
+    "class": "reference",
+    "requirements": [
+     "BR-28"
+    ]
+   },
+   "DR-112": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-113": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-114": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-115": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-116": {
+    "class": "reference",
+    "requirements": [
+     "BR-30",
+     "BR-31"
+    ]
+   },
+   "DR-117": {
+    "class": "reference",
+    "requirements": [
+     "BR-31"
+    ]
+   },
+   "DR-118": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-119": {
+    "class": "technical",
+    "requirements": []
+   },
+   "DR-120": {
+    "class": "reference",
+    "requirements": [
+     "BR-31",
+     "BR-32"
+    ]
+   },
+   "DR-121": {
+    "class": "reference",
+    "requirements": [
+     "BR-21"
+    ]
+   },
+   "DR-122": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-123": {
+    "class": "technical",
+    "requirements": []
+   },
+   "DR-124": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-125": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-126": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-127": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-128": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-129": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-130": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-131": {
+    "class": "other",
+    "requirements": []
+   },
+   "DR-132": {
+    "class": "user_visible",
+    "requirements": []
+   }
+  }
+ }
+}

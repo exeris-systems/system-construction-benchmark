@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I am the licensed person responsible for each flight, and I plan and run the flights. I decide which drone flies and along which way, and I sign off a flight before it leaves. My company's policy is that software never chooses a drone or a way for us, though I want help finding out which of our drones could get to where a job starts. Several of us plan at the same time, often for the same busy sites and popular drones.\nThe question: When you sit down at the start of a shift, what is the first thing you look at, and how does a flight job make its way through your hands until your shift ends?\n\nQ3\nThe answer just before it: I plan and run flights, and I decide which drone flies and along which way before I sign off a flight before it leaves. Several of us plan at the same time, often for the same busy sites and the same popular drones. Software never chooses a drone or a way for us, though I want help finding out which of our drones could get to where a job starts.\nThe question: Where do the flight jobs come from when they land on your desk, and who do you hand work off to during or at the end of a flight?\n\nQ4\nThe answer just before it: I don't know.\nThe question: Walk me through a specific flight from yesterday or your last shift—from the moment you started planning it to the moment it finished.\n\nQ5\nThe answer just before it: I plan and run flights and decide which drone flies and along which way before signing off the flight before it leaves. Deliveries carry a load from one site to another, while inspections take a drone with the right sensors to a list of points in a set order and bring it back to where the inspection started. Drones fly on their own autopilots along corridors between named sites, and people on the ground supervise.\nThe question: Tell me about the worst day you have had at work in the last few months—what happened and what made it so bad?\n\nQ6\nThe answer just before it: A closure can come into force while drones of several companies are already in the air, and closures are often amended during the day, such as when an area is widened or an end time moves. Radio coverage is patchy around ports, industrial sites, and in bad weather, and reports from drones can arrive late, out of order, more than once, or not at all. Batteries drain faster in cold and wind than planned, and the service occasionally crashes during working hours while drones are flying.\nThe question: When something like a mid-flight closure or a service crash happens while your drones are in the air, what do you need to know right away?\n\nQ7\nThe answer just before it: I don't know.\nThe question: What do you double-check by hand today because you do not trust what the system or others tell you?\n\nQ8\nThe answer just before it: I don't know.\nThe question: What are you most afraid a new service would do wrong?\n\nQ9\nThe answer just before it: I am worried that software might choose a drone or a way for us, which goes against our policy. I am also concerned that the service runs on a single server, is updated and restarted during working hours while drones are flying, and occasionally crashes.\nThe question: You mentioned that several dispatchers plan at the same time for the same busy sites and popular drones—how do you currently handle that when two of you want the same drone or site?\n\nQ10\nThe answer just before it: I don't know.\nThe question: When a drone report arrives late, out of order, or goes missing around a port or in bad weather, what do you actually do next?\n\nQ11\nThe answer just before it: I don't know.\nThe question: Earlier you mentioned people on the ground supervising flights—how do you work with them before, during, or after a flight?\n\n\n\n\n\n\n\nBefore you sign off a flight and let it leave, what do you need to verify about the drone, the route, or the airspace?\n\nQ12\nThe answer just before it: I am the licensed person responsible for each flight, and I decide which drone flies and along which way before I sign off a flight before it leaves. I can call off a flight.\nThe question: What makes you decide to call off a flight, and what happens right after you do?\n\nQ13\nThe answer just before it: I am the licensed person responsible for each flight, and I can call off a flight. I don't know what happens right after I do.\nThe question: When you are deciding which drone flies and along which way, what information do you look at?\n\nQ14\nThe answer just before it: I want help finding out which of our drones could get to where a job starts, but software never chooses a drone or a way for us. Drones are of several models from different manufacturers that differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use.\nThe question: When an airspace closure comes into force or is amended mid-flight, how do you find out about it and what do you have to look at?\n\nQ15\nThe answer just before it: I don't know.\nThe question: When you are checking which of your drones could get to where a job starts, what details about the sites or the drones affect whether a drone can actually make that trip?\n\nQ16\nThe answer just before it: Drones differ in how much they can carry, how far they can fly on a full battery, which sensors they carry, and which charging connector they use. Sites have only so many places where drones can take off and land at the same time.\nThe question: Since other companies use the same service, what information must stay strictly within your own company, and is there anything you need to see that involves other companies?\n\nQ17\nThe answer just before it: Each company's fleet, jobs, sites, and problems are its own business. We accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\nThe question: When planning a flight or checking if a drone can make a trip in cold or windy conditions, what do you look at before signing off?\n\nQ18\nThe answer just before it: I don't know.\nThe question: When your shift ends and another dispatcher takes over, what do you pass on to them?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

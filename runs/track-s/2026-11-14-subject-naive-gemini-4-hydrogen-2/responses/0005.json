@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK desk: Can you walk me through your typical day-to-day workflow and the main tasks you need this service to help you with?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "",
+      "thoughtSignature": "EpcFCpQFAWkUfRODOYo8/O64Yw1JnT8BA8hQklP0XELoFrkqmbRivQ8XifphpdL4/t6hLG/k/Dp4EjTk06nvOOGN62e+38uViHcktnt7x9P2FMjM3xUoEliCpLESUm0IlmrERypjilChAoljnFqNOtvPdwq5mznBFXzjoky0gSsIx4a4tlCplC6C9TQsIEr1N/2Hu0h+/pmHDVtJHhmgSUvfpqr20cMe+5YKO5siGQpib/fJncBl6VDLrSZQ04rq68aODfA084MKwWzN0PPnSUFwdAjynLx5PzzAE7wlfW4flIkXiH8Lpo4pMP2W7uTv3Wlx1nBcUtVzh2cfiqyngmwJ2GgJBJoZvl0JBLHsmxwoUvY0reFWv8VZkBCB8eLSDfWg3WvL/TRAqRrIYhDZZDQ0K5UkknFi0BMvP6+/Zzk8gofwmFWA0PVvIUBOCGlKlQFF/4v2A/6yqI9dU/bX86qy/mb3MSPr5WtfiApjPSdSW+WI+Fg4bERpd7XZzm7dGfrfU3BhmPyjY36sFm6I09EKzzIeTyRwGINrliJHA7RnhWJT3gdNqjkpcuW2X1xQqPiw7eUvIG8G90StpfAmXkzWPZXRZ+OsczxbAuTa1ZQET9O3i2jvBPPCeHC5rVYjAcEdgkCjxUyIktA/ZpUliRbq95AFuZ8IU4H5xWgOsVdUrNMq6du1h2XT3EVrzCe6jMVloEE4c7zspyXpk5qYRsNX9jxz65GVQkQQinX30ZfjP0WOGvnMDS2rGGFlOFN5kMRdALRlJDAWVcIr0SFE4XiqniTXkXwCWZRzYs+0W+/JG7RJoNfovOiXqekoo4GOT/yU8f3Jlez9WJIAsmVpER78NrASQyl/EB3AKb6yxsKRxLJWipmtkeDc"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "MALFORMED_FUNCTION_CALL",
+   "index": 0,
+   "finishMessage": "Malformed function call: call:\nASK desk: What specific tasks do you perform day-to-day, what airspace data do you manage, and which companies or users can view or change that data?\n "
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 636,
+  "totalTokenCount": 636,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 636
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-hydrogen",
+ "responseId": "DHv4avPSM9uu28oPoIO36Qs"
+}

@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "Walk me through an ordinary working day for you, from the moment you start until you finish.",
+      "thoughtSignature": "EogCCoUCAWkUfRPMXWHCPybP61ZIF3KMlOktWrjtotsZRjawiV5ewZVjkP3hlLKPi9QGhU0nVdRqQKceRwIDdwH+QP0iH6fxioq9wGYF2DIw0zQdYk/OQRdq0ZxN1gUXejViR7bLiW9ZYnCPUJ+kQxuBFONEoZK4U3W7AdsX9aiN6YvoI/L7L9sGDleUVB0NpOd/Eiy3t6eo8RNTwInyhezpGokTMbc46xQ7vulCvV/GMbujJvfw6BZAB7ZgbA4wvirHq2j+aMdqtXlZXn6Y9+BpgTdXOf76Xifammvi9LRMiDiKwDEd4Dc0k5UVYbU426mgqf6aEtlU4AaesBcQoSbV8rDIB3NE0CCy"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 484,
+  "candidatesTokenCount": 23,
+  "totalTokenCount": 544,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 484
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 23
+   }
+  ],
+  "thoughtsTokenCount": 37,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-hydrogen",
+ "responseId": "4oD4ap-kD7SlkdUPif_6oAU"
+}

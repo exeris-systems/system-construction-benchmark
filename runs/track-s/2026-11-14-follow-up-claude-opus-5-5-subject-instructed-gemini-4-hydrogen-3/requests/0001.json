@@ -1,0 +1,45 @@
+{
+ "model": "claude-opus-5-5",
+ "max_tokens": 32768,
+ "system": "You read part of an interview. An analyst asked one future user of a software service a series of questions. You decide, for each question, whether it follows up the answer given just before it.\n\nA question follows up the previous answer when it asks about something that answer said: it asks the speaker to explain, give an example of, say more about, or say why of something the answer mentioned, or it picks up a particular thing the answer named. Wording does not matter; a question can follow up an answer without repeating any of its words.\n\nA question does not follow up the previous answer when it turns to something that answer did not mention, even if the speaker said it in an earlier answer, even if it stays with the same broad subject, and even if it is a good question. A general question that could follow any answer, such as whether there is anything else, does not follow up either.\n\nYou receive the pairs of the interview after its first question: for each later question, the answer given just before it, and the question.\n\nReply with JSON only: an object with one key, \"questions\", a list with exactly one entry for every pair, in the same order. Each entry has \"id\", the question's id, and \"follow_up\", true or false.\n",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Q2\nThe answer just before it: I don't know.\nThe question: When you first get to work in the morning, what is the very first thing you do?\n\nQ3\nThe answer just before it: I don't know.\nThe question: What kind of work do you do on the drones?\n\nQ4\nThe answer just before it: I keep drones and charging equipment in working order, which includes adding new drones to the fleet, retiring old ones, and taking drones out of service for repairs and putting them back. I also set up charging pads at my company's sites and send drones to charge. Regulators can ask a company to show how its drones have been looked after.\nThe question: How do you find out that a drone needs repairs or needs to be sent to charge?\n\nQ5\nThe answer just before it: I don't know.\nThe question: Who hands work to you, and who do you hand work to?\n\nQ6\nThe answer just before it: I don't know.\nThe question: What was the worst day you had at work in the last few months, and what made it so bad?\n\nQ7\nThe answer just before it: I don't know.\nThe question: What happens right after something goes wrong with a drone or a charging pad—what do you need to know?\n\nQ8\nThe answer just before it: I don't know.\nThe question: Is there anything you check by hand today because you don't trust the information you get?\n\nQ9\nThe answer just before it: I don't know.\nThe question: What are you afraid a new shared service might do wrong for your work?\n\nQ10\nThe answer just before it: I don't know.\nThe question: When regulators ask to see how your drones have been looked after, what do you have to show them?\n\nQ11\nThe answer just before it: Regulators can ask a company to show how its drones have been looked after. I carry out repairs and servicing on the drones and charging equipment.\nThe question: When you take a drone out of service for repairs and later put it back, what happens step by step?\n\nQ12\nThe answer just before it: I don't know.\nThe question: When you set up charging pads at your company's sites, what does that involve?\n\nQ13\nThe answer just before it: I set up charging pads at my company's sites. My company has a few dozen of them, and the pads are never lent to another company. I also keep charging equipment in working order.\nThe question: When you send a drone to charge, how does that work?\n\nQ14\nThe answer just before it: I send drones to charge, and I keep the charging equipment in working order. Each company has its own charging pads at its own sites, which are never lent to another company.\nThe question: What happens when you add a new drone to the fleet or retire an old one?\n\nQ15\nThe answer just before it: I add new drones to the fleet and retire old ones, while keeping the drones and charging equipment in working order. My company runs a few hundred drones of several models from different manufacturers. These models differ in their carrying capacity, flight range on a full battery, carried sensors, and charging connector types, which are not interchangeable.\nThe question: Why does it matter that charging connector types are not interchangeable when you set up pads or send a drone to charge?\n\nQ16\nThe answer just before it: My company's drones use several connector types that are not interchangeable. Because of this, it matters for the charging equipment I keep in working order, the charging pads I set up at our sites, and the drones I send to charge.\nThe question: Do dispatchers or anyone else at your company interact with the drones you look after, or let you know when a drone needs attention?\n\nQ17\nThe answer just before it: I don't know.\nThe question: What do you have to keep track of when you repair or service a drone?\n\nQ18\nThe answer just before it: I carry out repairs and servicing on the drones and charging equipment to keep them in working order. Regulators can ask a company to show how its drones have been looked after.\nThe question: Where do you set up the charging pads, and what do you need to know about a site when you set one up?\n\nQ19\nThe answer just before it: I set up charging pads at my company's sites. Each company has its own charging pads at its own sites, a few dozen of them, and pads are never lent to another company.\nThe question: Why do a drone's carrying capacity, flight range, and carried sensors matter in your work?\n\nQ20\nThe answer just before it: My company runs a few hundred drones of several models from different manufacturers. These models differ in how much they can carry, how far they can fly on a full battery, and which sensors they carry. I add these new drones to the fleet and retire old ones while keeping the drones and charging equipment in working order.\nThe question: Is anything ever shared between your company and the other drone companies when it comes to drones, charging pads, or maintenance information?\n\nQ21\nThe answer just before it: Each company's fleet, jobs, sites, and problems are its own business, and pads are never lent to another company. The only thing companies share is airspace information, because that information comes from the authorities and is the same for everyone.\nThe question: What happens when a charging pad stops working properly?\n\nQ22\nThe answer just before it: I don't know.\nThe question: How many drones or charging pads do you look after, and how do you tell one drone from another?\n\nHow do you decide which charging pad to send a drone to?\n\nQ23\nThe answer just before it: I keep drones and charging equipment in working order for my company, which runs a few hundred drones of several models from different manufacturers. Each company has a few dozen charging pads at its own sites, and I set them up. I do not know how I tell one drone from another or how I decide which charging pad to send a drone to.\nThe question: Does a charging pad work with all of your company's drone models, or only with certain ones?\n\nQ24\nThe answer just before it: My company's drones use several connector types that are not interchangeable. Because of this, it matters which charging connector the drone uses and which equipment I keep in working order or set up.\nThe question: What information do you look at about a drone or a charging pad when you send a drone to charge?\n\nQ25\nThe answer just before it: I send drones to charge, and I keep the drones and charging equipment in working order. Our drones use several connector types that are not interchangeable. I do not know what specific information I look at when I send a drone to charge.\nThe question: When you take a drone out of service for repairs, what changes about that drone?\n\nQ26\nThe answer just before it: I take drones out of service for repairs and put them back. I do not know what changes about the drone itself when I take it out of service.\nThe question: Is there anything else about your work, your company's drones, or your charging equipment that we haven't talked about yet?"
+  }
+ ],
+ "output_config": {
+  "effort": "high",
+  "format": {
+   "type": "json_schema",
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "questions"
+    ],
+    "properties": {
+     "questions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "follow_up"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "follow_up": {
+         "type": "boolean"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

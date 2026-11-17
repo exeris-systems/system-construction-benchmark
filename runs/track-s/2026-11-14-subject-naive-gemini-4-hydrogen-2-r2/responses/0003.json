@@ -1,0 +1,245 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "ASK dispatcher: Walk me through your daily work with the drones and what you need this service to do for you."
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK desk: Walk me through your daily work and what you need this service to do for you."
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK technician: What information do you need to record when adding a new drone to your company's fleet, and what capabilities or limits vary between drones?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK technician: What are all the states a drone can be in, what transitions happen between them, and what happens to scheduled or active jobs if you take a drone out of service or retire it?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK technician: Tell me more about charging pads: what details do they have, how are they linked to sites, what states can they be in, and how does sending a drone to charge work?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK technician: What details do you record for repairs and routine servicing, how are servicing intervals or alerts handled, and what do regulators ask to see?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK technician: Can anyone else in your company—like dispatchers—edit drone capabilities, maintenance records, or charging pad statuses, and what can you see or do regarding jobs and flights?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK technician: How does battery level update during flights and charging, and what happens if a drone reports a fault or hard landing?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK dispatcher: Tell me about sites and jobs: what kinds of sites exist, what information goes into a job, and what types of jobs do the different companies run?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK dispatcher: How do routes work—both one-off and recurring—and what rules determine whether a drone can be matched to a job?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK dispatcher: Walk me through the lifecycle of a job from creation to completion, including any checks or clearances needed before a flight can start."
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK dispatcher: While a drone is in flight, what do you monitor, what unexpected situations can happen, and how do you handle emergencies or diversions?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK dispatcher: Are there rules about site operating hours, landing pad capacity, return flights after delivery, or job priorities and reports?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK dispatcher: What can you see or share with the airspace desk or other companies, and how do you handle airspace conflicts or rejections?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK desk: What information do you see about companies' flights when reviewing clearances or checking for conflicts, and what information must remain hidden from you?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK desk: What types of airspace restrictions, zones, and weather warnings do you manage, what details does each have, and what happens when you add or update one?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK desk: When does a flight require clearance from your desk, what checks does the platform do automatically vs. what do you review manually, and what decisions can you make?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK desk: How does conflict detection between flights work, how are weather warnings handled, and are there special rules for emergency or priority flights like medical deliveries?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK desk: Are there platform-wide airspace settings you configure—like separation buffers or altitude thresholds—and what happens when a new customer company joins the platform?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK technician: Are there any other tasks you do, like managing spare batteries or equipment modules (cold boxes, cameras), or handling multiple technicians in your company?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK dispatcher: What happens if two dispatchers in your company are working at the same time, or during a shift handover, and what else do you need for audit logs, cancellations, or telemetry drop-outs?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK technician: Are there pre-flight checks or firmware/calibration checks you require before a flight, and can charging pads be reserved ahead of time by schedules?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "ASK desk: How are timezones, overlapping airspace zones, and alert acknowledgements handled across the platform?"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "\n"
+     },
+     {
+      "text": "- id: DR-01\n  requirement: >\n    The service must isolate each operating company's data so that users of one company cannot view or modify another company's drones, equipment, charging pads, sites, jobs, routes, customers, flight tracks, clearances, incidents, or maintenance records.\n- id: DR-02\n  requirement: >\n    When a new operating company is onboarded to the platform, the service must automatically give that company access to all active shared airspace zones, weather warnings, and platform airspace rules while keeping its operational data isolated from all other companies.\n- id: DR-03\n  requirement: >\n    The service must enforce role-based permissions for fleet technicians, dispatchers, and airspace desk users so that each user can perform only the actions assigned to their role.\n- id: DR-04\n  requirement: >\n    The service must prevent dispatchers and airspace desk users from creating or editing maintenance records, clearing maintenance or inspection holds, overriding overdue servicing or airworthiness blocks, or changing charging pad operational statuses.\n- id: DR-05\n  requirement: >\n    The service must prevent fleet technicians from creating customer jobs, dispatching flights, or approving airspace clearances.\n- id: DR-06\n  requirement: >\n    When presenting a flight plan or active flight to the airspace desk for clearance or monitoring, the service must display only the planned path or waypoints, altitude band, time window, drone model or performance category, an opaque flight and company reference, and a dispatcher contact channel.\n- id: DR-07\n  requirement: >\n    The service must hide customer names, cargo or payload descriptions, job descriptions, pricing, and internal maintenance records from the airspace desk.\n- id: DR-08\n  requirement: >\n    The service must record an immutable audit entry containing the timestamp and acting user for every change to drone status, equipment status, charging pad status, maintenance and inspection records, jobs, routes, clearances, overrides, incidents, and airspace zones.\n- id: DR-09\n  requirement: >\n    The service must store all timestamps unambiguously in UTC and display flight, job, and airspace restriction times in both UTC and the relevant local site time.\n- id: DR-10\n  requirement: >\n    The service must allow fleet technicians to register a new drone for their company with a unique identifier or registration number, model or type, home site, maximum payload weight, compatible payload or equipment types, maximum range or flight time, weather tolerances such as wind and rain limits, airworthiness certificate expiry date, and routine servicing intervals.\n- id: DR-11\n  requirement: >\n    When a new drone is registered, the service must place it in an initial maintenance or inspection status and prevent it from being assigned to flights or launched until a fleet technician clears it as ready.\n- id: DR-12\n  requirement: >\n    The service must track each drone's current operational status as one of maintenance or inspection, ready, flying, charging, or retired.\n- id: DR-13\n  requirement: >\n    The service must allow a fleet technician to retire a drone only when it is not currently in flight and not assigned to any upcoming scheduled job.\n- id: DR-14\n  requirement: >\n    Once a drone is marked retired, the service must prevent it from returning to active service while retaining all of its historical flight, maintenance, and inspection records.\n- id: DR-15\n  requirement: >\n    The service must prevent a fleet technician from taking a drone out of service for maintenance while that drone is currently in flight.\n- id: DR-16\n  requirement: >\n    When a fleet technician takes a drone out of service for maintenance while it is assigned to upcoming scheduled jobs, the service must remove the drone from availability and alert dispatchers so those jobs can be reassigned.\n- id: DR-17\n  requirement: >\n    The service must allow fleet technicians to register swappable payload equipment modules, such as cold boxes, camera rigs, or sensor pods, with an identifier, equipment type, working status, calibration status or expiry date, and current drone attachment.\n- id: DR-18\n  requirement: >\n    The service must allow fleet technicians to attach and detach swappable payload equipment modules to and from drones in their company's fleet.\n- id: DR-19\n  requirement: >\n    The service must allow fleet technicians to configure charging pads at their company's sites with a pad identifier, site, compatible drone models or connector types, and status as available, occupied, or out of order.\n- id: DR-20\n  requirement: >\n    The service must allow a fleet technician to send a drone to charge on a pad only if the drone is currently at that site, is not flying or retired, and the selected pad is available and compatible with that drone.\n- id: DR-21\n  requirement: >\n    While a drone is charging on a pad, the service must mark the drone as charging and the pad as occupied, and update the drone's battery percentage as it charges up to 100 percent.\n- id: DR-22\n  requirement: >\n    When charging finishes or a technician unplugs a drone without active faults or holds, the service must return the pad status to available and the drone status to ready.\n- id: DR-23\n  requirement: >\n    When a fleet technician marks a charging pad as out of order, the service must prevent drones from being sent or reserved to charge on it and alert the technician if a drone is currently charging on that pad.\n- id: DR-24\n  requirement: >\n    When a flight is scheduled to land at a site equipped with charging pads, the service must support checking and reserving compatible pad capacity for the planned arrival window, while allowing ground staff to override pad reservations during an emergency landing.\n- id: DR-25\n  requirement: >\n    When a flight completes, the service must automatically update the drone's remaining battery percentage, cumulative flight hours, and flight cycles from flight telemetry, and allow a fleet technician to record battery checks manually when telemetry is unavailable.\n- id: DR-26\n  requirement: >\n    The service must allow fleet technicians to record repair and servicing logs specifying the drone, date and time, performing technician, work carried out, parts replaced, and inspection pass or fail sign-off.\n- id: DR-27\n  requirement: >\n    The service must track routine servicing intervals by flight hours, flight cycles, and calendar days, and alert fleet technicians when a drone is due or overdue for servicing.\n- id: DR-28\n  requirement: >\n    The service must block a drone from being dispatched or cleared to fly if it is in maintenance or inspection, is overdue for routine servicing, has an expired airworthiness certificate, has an open critical fault, or carries required equipment that is faulty or out of calibration.\n- id: DR-29\n  requirement: >\n    If a drone reports an in-flight mechanical fault, experiences a hard landing, or has an incident flagged by a dispatcher upon landing, the service must automatically place the drone into maintenance or inspection status and alert fleet technicians.\n- id: DR-30\n  requirement: >\n    The service must allow fleet technicians to generate a regulatory compliance report for any company drone over a chosen period showing all maintenance logs, inspection sign-offs, flight history, and verification that the drone did not fly while out of service, overdue, or unairworthy.\n- id: DR-31\n  requirement: >\n    The service must allow dispatchers to manage sites for their company, recording each site's name, geographic coordinates or address, site type, optional operating hours, sole-company ownership indicator, and ground or charging capacity.\n- id: DR-32\n  requirement: >\n    The service must allow dispatchers to create jobs containing a customer or client reference, job type, priority level, origin and destination sites or inspection waypoints, payload weight, required equipment or capabilities, and requested time window or deadline.\n- id: DR-33\n  requirement: >\n    The service must allow dispatchers to define flight routes connecting origin, intermediate waypoints or survey paths, and destination or return base, including planned altitude band, distance, and estimated flight time.\n- id: DR-34\n  requirement: >\n    Where a delivery job requires the drone to return to a base after drop-off, the service must include the return leg in the planned route, schedule, and battery budget.\n- id: DR-35\n  requirement: >\n    The service must allow dispatchers to configure recurring route templates with a route, schedule frequency or days of the week, time of day, and required drone specifications, and automatically generate scheduled jobs from active templates unless paused or cancelled.\n- id: DR-36\n  requirement: >\n    When matching or assigning a drone to a job, the service must verify that the drone belongs to the same company, is ready or scheduled to be ready at the origin site in time, meets payload weight and equipment requirements, and satisfies maintenance, airworthiness, and calibration rules.\n- id: DR-37\n  requirement: >\n    When matching or scheduling a flight, the service must verify that the drone's battery level and range are sufficient for the full planned route plus the configured safety reserve, and that forecast weather at the sites and along the route is within the drone's tolerances.\n- id: DR-38\n  requirement: >\n    The service must prevent two jobs from double-booking the same drone for overlapping time windows, including when multiple dispatchers edit the schedule concurrently.\n- id: DR-39\n  requirement: >\n    Unless a flight is an emergency diversion, the service must prevent scheduling a takeoff or landing at a site outside that site's configured operating hours and prevent exceeding the site's configured drone capacity.\n- id: DR-40\n  requirement: >\n    The service must track each job through its lifecycle statuses of draft or planned, scheduled, pending airspace clearance, cleared, in flight, and completed, as well as cancelled, failed, or aborted.\n- id: DR-41\n  requirement: >\n    The service must highlight high-priority jobs such as urgent medical transfers at the top of dispatchers' queues and allow dispatchers to reassign drones from lower-priority scheduled jobs when necessary.\n- id: DR-42\n  requirement: >\n    When a scheduled job is cancelled before takeoff, the service must immediately release the assigned drone and any reserved charging pad slot so they become available for other jobs.\n- id: DR-43\n  requirement: >\n    Immediately before a flight is launched, the service must confirm that the drone is ready, not overdue for service or unairworthy, has required working equipment, has sufficient battery with safety reserve, has valid airspace clearance if required, and has site and route weather within the drone's limits, blocking launch if any check fails.\n- id: DR-44\n  requirement: >\n    While a flight is active, the service must display to the company's dispatchers the drone's live position, altitude, speed, heading, battery level, route progress, live weather, and any relevant airspace alerts.\n- id: DR-45\n  requirement: >\n    If an active drone stops sending telemetry beyond a configured timeout, the service must raise a lost-link alert to the dispatcher, display the drone's last known position and timestamp, and allow the dispatcher to record manual status updates or mark the drone lost or recovered.\n- id: DR-46\n  requirement: >\n    During an active flight, the service must allow the dispatcher to issue hold or hover, return-to-base, or diversion commands to an alternate or emergency landing site and record the reason as an incident.\n- id: DR-47\n  requirement: >\n    If a drone lands at a location other than its originally planned destination, the service must update the drone's current location to the actual landing site.\n- id: DR-48\n  requirement: >\n    The service must provide a shift handover view for dispatchers showing all active flights, open alerts, pending clearances, priority jobs, timestamps, and dispatcher notes.\n- id: DR-49\n  requirement: >\n    The service must provide dispatchers with operational summaries of completed, delayed, and failed jobs as well as downloadable flight logs for their company's clients.\n- id: DR-50\n  requirement: >\n    The service must allow the airspace desk to create, update, and deactivate shared airspace zones including permanent no-fly zones, temporary flight restrictions, special-permit or controlled zones, and weather warnings or advisories.\n- id: DR-51\n  requirement: >\n    For each airspace zone or weather warning, the service must store a polygon or circle geometry, minimum and maximum altitudes, effective start and end times or permanent flag, restriction type, severity or rule, and authority reference.\n- id: DR-52\n  requirement: >\n    When an airspace zone or weather warning expires or is deactivated, the service must retain it in historical records for regulatory audits rather than deleting it.\n- id: DR-53\n  requirement: >\n    Where multiple airspace zones overlap in geography, altitude, and time, the service must apply the strictest applicable restriction rule to any intersecting route.\n- id: DR-54\n  requirement: >\n    When the airspace desk creates or updates a restriction zone or weather warning, the service must immediately apply it across all companies, invalidate affected clearances or flag affected planned jobs, alert affected dispatchers, and send urgent alerts to both dispatchers and the airspace desk for any active flights inside or approaching the affected area.\n- id: DR-55\n  requirement: >\n    The service must automatically block any planned route or launch that intersects an active permanent no-fly zone, an active temporary flight restriction without an authorized waiver, or a severe weather warning.\n- id: DR-56\n  requirement: >\n    The service must place a scheduled flight into pending clearance and require manual approval from the airspace desk whenever its route enters a controlled or special-permit zone, exceeds standard altitude ceilings or visual-line-of-sight rules, requests an emergency or restriction waiver, or conflicts with another company's scheduled flight.\n- id: DR-57\n  requirement: >\n    The service must check all scheduled flights against one another for spatial and temporal overlap using configured horizontal and vertical separation minimums.\n- id: DR-58\n  requirement: >\n    When two scheduled flights of the same company violate separation minimums, the service must warn that company's dispatchers directly during planning.\n- id: DR-59\n  requirement: >\n    When two scheduled flights of different companies violate separation minimums, the service must alert the airspace desk and each affected company's dispatchers without disclosing the other company's identity or commercial details.\n- id: DR-60\n  requirement: >\n    The service must place high-priority clearance requests, such as urgent medical flights, at the top of the airspace desk's review queue and allow the desk to record an official waiver reference when approving flights under authorized emergency exceptions.\n- id: DR-61\n  requirement: >\n    When reviewing a clearance request, the service must allow the airspace desk to approve it with optional conditions such as altitude caps or corridor limits, request modifications, or reject it with a reason that returns the job to planning.\n- id: DR-62\n  requirement: >\n    If a dispatcher modifies a cleared flight's route, altitude, or scheduled time window beyond approved tolerances, or if a newly added restriction or flight conflict affects it, the service must automatically invalidate the existing clearance and require re-approval before takeoff.\n- id: DR-63\n  requirement: >\n    The service must allow the airspace desk to issue standing clearances for approved recurring routes within defined parameters, and automatically revoke or flag them for re-review if intersecting airspace rules change.\n- id: DR-64\n  requirement: >\n    The service must allow the airspace desk to configure platform-wide default horizontal and vertical separation minimums, standard altitude ceilings, and alert lead times.\n- id: DR-65\n  requirement: >\n    When urgent airspace or conflict alerts are sent for active or imminent flights, the service must record whether and when each responsible dispatcher and airspace desk user acknowledged the alert.\n- id: DR-66\n  requirement: >\n    The service must allow the airspace desk to generate a platform-wide airspace compliance report over a chosen period detailing cleared flights, standing permits, emergency waivers, airspace infringements, and issued alerts.\n```\n- id: DR-01\n  requirement: >\n    The service must isolate each operating company's data so that users of one company cannot view or modify another company's drones, equipment, charging pads, sites, jobs, routes, customers, flight tracks, clearances, incidents, or maintenance records.\n- id: DR-02\n  requirement: >\n    When a new operating company is onboarded to the platform, the service must automatically give that company access to all active shared airspace zones, weather warnings, and platform airspace rules while keeping its operational data isolated from all other companies.\n- id: DR-03\n  requirement: >\n    The service must enforce role-based permissions for fleet technicians, dispatchers, and airspace desk users so that each user can perform only the actions assigned to their role.\n- id: DR-04\n  requirement: >\n    The service must prevent dispatchers and airspace desk users from creating or editing maintenance records, clearing maintenance or inspection holds, overriding overdue servicing or airworthiness blocks, or changing charging pad operational statuses.\n- id: DR-05\n  requirement: >\n    The service must prevent fleet technicians from creating customer jobs, dispatching flights, or approving airspace clearances.\n- id: DR-06\n  requirement: >\n    When presenting a flight plan or active flight to the airspace desk for clearance or monitoring, the service must display only the planned path or waypoints, altitude band, time window, drone model or performance category, an opaque flight and company reference, and a dispatcher contact channel.\n- id: DR-07\n  requirement: >\n    The service must hide customer names, cargo or payload descriptions, job descriptions, pricing, and internal maintenance records from the airspace desk.\n- id: DR-08\n  requirement: >\n    The service must record an immutable audit entry containing the timestamp and acting user for every change to drone status, equipment status, charging pad status, maintenance and inspection records, jobs, routes, clearances, overrides, incidents, and airspace zones.\n- id: DR-09\n  requirement: >\n    The service must store all timestamps unambiguously in UTC and display flight, job, and airspace restriction times in both UTC and the relevant local site time.\n- id: DR-10\n  requirement: >\n    The service must allow fleet technicians to register a new drone for their company with a unique identifier or registration number, model or type, home site, maximum payload weight, compatible payload or equipment types, maximum range or flight time, weather tolerances such as wind and rain limits, airworthiness certificate expiry date, and routine servicing intervals.\n- id: DR-11\n  requirement: >\n    When a new drone is registered, the service must place it in an initial maintenance or inspection status and prevent it from being assigned to flights or launched until a fleet technician clears it as ready.\n- id: DR-12\n  requirement: >\n    The service must track each drone's current operational status as one of maintenance or inspection, ready, flying, charging, or retired.\n- id: DR-13\n  requirement: >\n    The service must allow a fleet technician to retire a drone only when it is not currently in flight and not assigned to any upcoming scheduled job.\n- id: DR-14\n  requirement: >\n    Once a drone is marked retired, the service must prevent it from returning to active service while retaining all of its historical flight, maintenance, and inspection records.\n- id: DR-15\n  requirement: >\n    The service must prevent a fleet technician from taking a drone out of service for maintenance while that drone is currently in flight.\n- id: DR-16\n  requirement: >\n    When a fleet technician takes a drone out of service for maintenance while it is assigned to upcoming scheduled jobs, the service must remove the drone from availability and alert dispatchers so those jobs can be reassigned.\n- id: DR-17\n  requirement: >\n    The service must allow fleet technicians to register swappable payload equipment modules, such as cold boxes, camera rigs, or sensor pods, with an identifier, equipment type, working status, calibration status or expiry date, and current drone attachment.\n- id: DR-18\n  requirement: >\n    The service must allow fleet technicians to attach and detach swappable payload equipment modules to and from drones in their company's fleet.\n- id: DR-19\n  requirement: >\n    The service must allow fleet technicians to configure charging pads at their company's sites with a pad identifier, site, compatible drone models or connector types, and status as available, occupied, or out of order.\n- id: DR-20\n  requirement: >\n    The service must allow a fleet technician to send a drone to charge on a pad only if the drone is currently at that site, is not flying or retired, and the selected pad is available and compatible with that drone.\n- id: DR-21\n  requirement: >\n    While a drone is charging on a pad, the service must mark the drone as charging and the pad as occupied, and update the drone's battery percentage as it charges up to 100 percent.\n- id: DR-22\n  requirement: >\n    When charging finishes or a technician unplugs a drone without active faults or holds, the service must return the pad status to available and the drone status to ready.\n- id: DR-23\n  requirement: >\n    When a fleet technician marks a charging pad as out of order, the service must prevent drones from being sent or reserved to charge on it and alert the technician if a drone is currently charging on that pad.\n- id: DR-24\n  requirement: >\n    When a flight is scheduled to land at a site equipped with charging pads, the service must support checking and reserving compatible pad capacity for the planned arrival window, while allowing ground staff to override pad reservations during an emergency landing.\n- id: DR-25\n  requirement: >\n    When a flight completes, the service must automatically update the drone's remaining battery percentage, cumulative flight hours, and flight cycles from flight telemetry, and allow a fleet technician to record battery checks manually when telemetry is unavailable.\n- id: DR-26\n  requirement: >\n    The service must allow fleet technicians to record repair and servicing logs specifying the drone, date and time, performing technician, work carried out, parts replaced, and inspection pass or fail sign-off.\n- id: DR-27\n  requirement: >\n    The service must track routine servicing intervals by flight hours, flight cycles, and calendar days, and alert fleet technicians when a drone is due or overdue for servicing.\n- id: DR-28\n  requirement: >\n    The service must block a drone from being dispatched or cleared to fly if it is in maintenance or inspection, is overdue for routine servicing, has an expired airworthiness certificate, has an open critical fault, or carries required equipment that is faulty or out of calibration.\n- id: DR-29\n  requirement: >\n    If a drone reports an in-flight mechanical fault, experiences a hard landing, or has an incident flagged by a dispatcher upon landing, the service must automatically place the drone into maintenance or inspection status and alert fleet technicians.\n- id: DR-30\n  requirement: >\n    The service must allow fleet technicians to generate a regulatory compliance report for any company drone over a chosen period showing all maintenance logs, inspection sign-offs, flight history, and verification that the drone did not fly while out of service, overdue, or unairworthy.\n- id: DR-31\n  requirement: >\n    The service must allow dispatchers to manage sites for their company, recording each site's name, geographic coordinates or address, site type, optional operating hours, sole-company ownership indicator, and ground or charging capacity.\n- id: DR-32\n  requirement: >\n    The service must allow dispatchers to create jobs containing a customer or client reference, job type, priority level, origin and destination sites or inspection waypoints, payload weight, required equipment or capabilities, and requested time window or deadline.\n- id: DR-33\n  requirement: >\n    The service must allow dispatchers to define flight routes connecting origin, intermediate waypoints or survey paths, and destination or return base, including planned altitude band, distance, and estimated flight time.\n- id: DR-34\n  requirement: >\n    Where a delivery job requires the drone to return to a base after drop-off, the service must include the return leg in the planned route, schedule, and battery budget.\n- id: DR-35\n  requirement: >\n    The service must allow dispatchers to configure recurring route templates with a route, schedule frequency or days of the week, time of day, and required drone specifications, and automatically generate scheduled jobs from active templates unless paused or cancelled.\n- id: DR-36\n  requirement: >\n    When matching or assigning a drone to a job, the service must verify that the drone belongs to the same company, is ready or scheduled to be ready at the origin site in time, meets payload weight and equipment requirements, and satisfies maintenance, airworthiness, and calibration rules.\n- id: DR-37\n  requirement: >\n    When matching or scheduling a flight, the service must verify that the drone's battery level and range are sufficient for the full planned route plus the configured safety reserve, and that forecast weather at the sites and along the route is within the drone's tolerances.\n- id: DR-38\n  requirement: >\n    The service must prevent two jobs from double-booking the same drone for overlapping time windows, including when multiple dispatchers edit the schedule concurrently.\n- id: DR-39\n  requirement: >\n    Unless a flight is an emergency diversion, the service must prevent scheduling a takeoff or landing at a site outside that site's configured operating hours and prevent exceeding the site's configured drone capacity.\n- id: DR-40\n  requirement: >\n    The service must track each job through its lifecycle statuses of draft or planned, scheduled, pending airspace clearance, cleared, in flight, and completed, as well as cancelled, failed, or aborted.\n- id: DR-41\n  requirement: >\n    The service must highlight high-priority jobs such as urgent medical transfers at the top of dispatchers' queues and allow dispatchers to reassign drones from lower-priority scheduled jobs when necessary.\n- id: DR-42\n  requirement: >\n    When a scheduled job is cancelled before takeoff, the service must immediately release the assigned drone and any reserved charging pad slot so they become available for other jobs.\n- id: DR-43\n  requirement: >\n    Immediately before a flight is launched, the service must confirm that the drone is ready, not overdue for service or unairworthy, has required working equipment, has sufficient battery with safety reserve, has valid airspace clearance if required, and has site and route weather within the drone's limits, blocking launch if any check fails.\n- id: DR-44\n  requirement: >\n    While a flight is active, the service must display to the company's dispatchers the drone's live position, altitude, speed, heading, battery level, route progress, live weather, and any relevant airspace alerts.\n- id: DR-45\n  requirement: >\n    If an active drone stops sending telemetry beyond a configured timeout, the service must raise a lost-link alert to the dispatcher, display the drone's last known position and timestamp, and allow the dispatcher to record manual status updates or mark the drone lost or recovered.\n- id: DR-46\n  requirement: >\n    During an active flight, the service must allow the dispatcher to issue hold or hover, return-to-base, or diversion commands to an alternate or emergency landing site and record the reason as an incident.\n- id: DR-47\n  requirement: >\n    If a drone lands at a location other than its originally planned destination, the service must update the drone's current location to the actual landing site.\n- id: DR-48\n  requirement: >\n    The service must provide a shift handover view for dispatchers showing all active flights, open alerts, pending clearances, priority jobs, timestamps, and dispatcher notes.\n- id: DR-49\n  requirement: >\n    The service must provide dispatchers with operational summaries of completed, delayed, and failed jobs as well as downloadable flight logs for their company's clients.\n- id: DR-50\n  requirement: >\n    The service must allow the airspace desk to create, update, and deactivate shared airspace zones including permanent no-fly zones, temporary flight restrictions, special-permit or controlled zones, and weather warnings or advisories.\n- id: DR-51\n  requirement: >\n    For each airspace zone or weather warning, the service must store a polygon or circle geometry, minimum and maximum altitudes, effective start and end times or permanent flag, restriction type, severity or rule, and authority reference.\n- id: DR-52\n  requirement: >\n    When an airspace zone or weather warning expires or is deactivated, the service must retain it in historical records for regulatory audits rather than deleting it.\n- id: DR-53\n  requirement: >\n    Where multiple airspace zones overlap in geography, altitude, and time, the service must apply the strictest applicable restriction rule to any intersecting route.\n- id: DR-54\n  requirement: >\n    When the airspace desk creates or updates a restriction zone or weather warning, the service must immediately apply it across all companies, invalidate affected clearances or flag affected planned jobs, alert affected dispatchers, and send urgent alerts to both dispatchers and the airspace desk for any active flights inside or approaching the affected area.\n- id: DR-55\n  requirement: >\n    The service must automatically block any planned route or launch that intersects an active permanent no-fly zone, an active temporary flight restriction without an authorized waiver, or a severe weather warning.\n- id: DR-56\n  requirement: >\n    The service must place a scheduled flight into pending clearance and require manual approval from the airspace desk whenever its route enters a controlled or special-permit zone, exceeds standard altitude ceilings or visual-line-of-sight rules, requests an emergency or restriction waiver, or conflicts with another company's scheduled flight.\n- id: DR-57\n  requirement: >\n    The service must check all scheduled flights against one another for spatial and temporal overlap using configured horizontal and vertical separation minimums.\n- id: DR-58\n  requirement: >\n    When two scheduled flights of the same company violate separation minimums, the service must warn that company's dispatchers directly during planning.\n- id: DR-59\n  requirement: >\n    When two scheduled flights of different companies violate separation minimums, the service must alert the airspace desk and each affected company's dispatchers without disclosing the other company's identity or commercial details.\n- id: DR-60\n  requirement: >\n    The service must place high-priority clearance requests, such as urgent medical flights, at the top of the airspace desk's review queue and allow the desk to record an official waiver reference when approving flights under authorized emergency exceptions.\n- id: DR-61\n  requirement: >\n    When reviewing a clearance request, the service must allow the airspace desk to approve it with optional conditions such as altitude caps or corridor limits, request modifications, or reject it with a reason that returns the job to planning.\n- id: DR-62\n  requirement: >\n    If a dispatcher modifies a cleared flight's route, altitude, or scheduled time window beyond approved tolerances, or if a newly added restriction or flight conflict affects it, the service must automatically invalidate the existing clearance and require re-approval before takeoff.\n- id: DR-63\n  requirement: >\n    The service must allow the airspace desk to issue standing clearances for approved recurring routes within defined parameters, and automatically revoke or flag them for re-review if intersecting airspace rules change.\n- id: DR-64\n  requirement: >\n    The service must allow the airspace desk to configure platform-wide default horizontal and vertical separation minimums, standard altitude ceilings, and alert lead times.\n- id: DR-65\n  requirement: >\n    When urgent airspace or conflict alerts are sent for active or imminent flights, the service must record whether and when each responsible dispatcher and airspace desk user acknowledged the alert.\n- id: DR-66\n  requirement: >\n    The service must allow the airspace desk to generate a platform-wide airspace compliance report over a chosen period detailing cleared flights, standing permits, emergency waivers, airspace infringements, and issued alerts.",
+      "thoughtSignature": "Es0BCsoBAWkUfROtPeF2nj0SFV1+0NORN1e9F4BGrGGoWi708GIZngPXzSryR4fOQzYdul6AlDmvyU3POY6vUdxQkUF+kVfpdDrDN2E5SVb5TUXfbYxQlBF+gKFW5JvN/E79t52NR8DXkCAzEWsrz3crdB/KP5G9qe5Ri3QXHm036SzdEq9XfMFcNHxBgQdP05OpZWAgbqRsignoo3U78TWacwXOPuup/YQNRy4vuQ54VkooijNsOppgLmVAljJDH+j1qB/Z9Gp5xn/VHMI+JA=="
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 540,
+  "candidatesTokenCount": 8127,
+  "totalTokenCount": 16305,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 540
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 8127
+   }
+  ],
+  "thoughtsTokenCount": 7638,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-4-hydrogen",
+ "responseId": "Fnv4ao-WNMb8nsEPkOickAI"
+}

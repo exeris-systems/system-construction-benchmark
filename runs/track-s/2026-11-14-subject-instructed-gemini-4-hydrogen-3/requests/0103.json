@@ -1,0 +1,214 @@
+{
+ "systemInstruction": {
+  "parts": [
+   {
+    "text": "You are a requirements analyst at the start of a software project. Nobody has designed the service yet. Your task now is to interview one future user and find out what they need. You will not see any other description of their work: what you learn, you learn from them.\n\nWhat you know about the business:\n\nA platform company runs a shared service for several independent drone operating companies. Its customers today include a parcel delivery firm, an infrastructure inspection firm, and a regional hospital logistics firm. Others are expected to join.\n\nThe customer companies compete with each other or work for clients who do. Each company's fleet, jobs, sites, and problems are its own business. They accept sharing airspace information, because that information comes from the authorities and is the same for everyone.\n\nThe users of the future service work in three roles: fleet technician, dispatcher, airspace desk. You are now interviewing: a member of the platform's airspace desk. You will interview each of the other roles separately.\n\nCover at least these topics, in your own words and in whatever order the conversation allows:\n\n- an ordinary working day, from start to end;\n- the worst day of the last few months, and what made it bad;\n- what they check by hand today because they do not trust it;\n- what they are afraid a new service would do wrong;\n- what they need to know right after something has gone wrong;\n- who they hand work to, and who hands work to them.\n\nHow to interview:\n\n- Ask one question at a time. Keep questions short and open.\n- Follow up wherever an answer is vague, general, or surprising. Ask for a concrete example.\n- Do not suggest answers, features, or solutions, and do not describe how the service could work.\n- Do not summarise the interview back to the interviewee.\n- You can ask at most 30 questions in this interview.\n- When every topic is covered and follow-ups no longer bring anything new, end by writing exactly `END OF INTERVIEW` on its own line, and nothing else in that message.\n\nWrite only your next question.\n"
+   }
+  ]
+ },
+ "contents": [
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "The interviewee is ready. Ask your first question."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Walk me through an ordinary working day at the airspace desk, from the moment you start until you finish."
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep the shared picture of the airspace, which includes the network of flight corridors between sites, the zones grouping them, and the closures announced by the authorities. The authorities define zones where flying is prohibited, and they announce planned closures with a start and end time, as well as sudden ones that apply at once. These closures are often amended during the day, such as when an area is widened or an end time moves, and a closure can even come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do closures reach you, and what do you actually do when you enter one?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Closures are announced by the authorities as planned ones with a start and end time, or sudden ones that apply at once, and they are often amended during the day, for example when an area is widened or an end time moves. When a closure is entered, I want to know how much disruption it caused across customers."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Can you walk me through a concrete example of the last time you handled a closure, step by step, from the moment you heard about it to when you finished dealing with it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What was the worst day you had in the last few months, and what made it so bad?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Is there anything in your work today that you check by hand because you do not fully trust it?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What are you afraid a new service might do wrong for your work at the airspace desk?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Right after something has gone wrong with a closure or the airspace, what do you need to know?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "When a closure is entered, I want to know how much disruption it caused across customers. A closure can come into force while drones of several companies are already in the air."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Who hands work to you during the day, and who do you hand work to?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What does \"disruption across customers\" mean to you—what specifically are you looking to see when a closure is entered?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I don't know."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "How do changes to the network of flight corridors or zones happen in your day-to-day work?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "I keep the shared picture of the airspace, which is the network of flight corridors between sites and the zones that group them. The authorities define zones where flying is prohibited, and they announce closures. I don't know how changes to the network of flight corridors or zones happen in my day-to-day work."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "What happens to the shared picture when an authority amends a closure during the day?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Closures are often amended during the day, for example when an area is widened or an end time moves. A closure can even come into force while drones of several companies are already in the air. When a closure is entered, I want to know how much disruption it caused across customers."
+    }
+   ]
+  },
+  {
+   "role": "model",
+   "parts": [
+    {
+     "text": "Is there anything about how flight corridors, sites, or prohibited zones interact with the companies' flights that you haven't mentioned yet?"
+    }
+   ]
+  },
+  {
+   "role": "user",
+   "parts": [
+    {
+     "text": "Drones fly along corridors between named sites. Sites have only so many places where drones can take off and land at the same time. Drones fly on their own autopilots, and people on the ground supervise them without steering them with a stick through this service."
+    }
+   ]
+  }
+ ],
+ "generationConfig": {
+  "maxOutputTokens": 32000
+ }
+}

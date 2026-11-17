@@ -1,0 +1,598 @@
+{
+ "judged": {
+  "run": "runs/track-s/2026-11-14-subject-instructed-gemini-4-hydrogen-1-r2",
+  "mode": "subject-instructed",
+  "subject": {
+   "provider": "gemini",
+   "model": "gemini-4-hydrogen",
+   "description": {
+    "name": "models/gemini-4-hydrogen",
+    "version": "3.0",
+    "displayName": "Gemini 4 Hydrogen",
+    "description": "Gemini 4 Hydrogen",
+    "inputTokenLimit": 1048576,
+    "outputTokenLimit": 65536,
+    "supportedGenerationMethods": [
+     "generateContent",
+     "countTokens",
+     "batchGenerateContent"
+    ],
+    "temperature": 1,
+    "topP": 0.95,
+    "topK": 64,
+    "maxTemperature": 2,
+    "thinking": true
+   }
+  }
+ },
+ "scored": false,
+ "items": [
+  {
+   "id": "DR-01",
+   "requirement": "The service must allow a fleet technician to add new drones to their company's fleet and record each drone's payload capacity, full-battery range, carried sensors, and charging connector type.",
+   "read": "DR-01"
+  },
+  {
+   "id": "DR-02",
+   "requirement": "The service must allow a fleet technician to retire old drones from their company's fleet.",
+   "read": "DR-02"
+  },
+  {
+   "id": "DR-03",
+   "requirement": "The service must allow a fleet technician to set up charging pads at their company's sites and record their charging connector types and working order.",
+   "read": "DR-03"
+  },
+  {
+   "id": "DR-04",
+   "requirement": "The service must allow a fleet technician to take drones and charging equipment out of service for repairs or servicing and put them back into service when work is complete.",
+   "read": "DR-04"
+  },
+  {
+   "id": "DR-05",
+   "requirement": "The service must prevent retired drones and drones that are out of service for repairs from being assigned to or signed off for a flight.",
+   "read": "DR-05"
+  },
+  {
+   "id": "DR-06",
+   "requirement": "The service must allow a fleet technician to send a drone to charge at a charging pad with a matching connector.",
+   "read": "DR-06"
+  },
+  {
+   "id": "DR-07",
+   "requirement": "The service must keep a record of repairs, servicing, and service-status changes for each drone so a company can show regulators how its drones have been looked after.",
+   "read": "DR-07"
+  },
+  {
+   "id": "DR-08",
+   "requirement": "The service must support planning and running delivery flights that carry a load from one named site to another along flight corridors.",
+   "read": "DR-08"
+  },
+  {
+   "id": "DR-09",
+   "requirement": "The service must support planning and running inspection flights that send a drone with the required sensors to an ordered list of points and return it to the starting site.",
+   "read": "DR-09"
+  },
+  {
+   "id": "DR-10",
+   "requirement": "The service must never choose a drone or a flight route automatically; a licensed dispatcher must always select both the drone and the way.",
+   "read": "DR-10"
+  },
+  {
+   "id": "DR-11",
+   "requirement": "The service must require a licensed dispatcher to sign off a flight before the flight is allowed to leave.",
+   "read": "DR-11"
+  },
+  {
+   "id": "DR-12",
+   "requirement": "The service must allow a licensed dispatcher to call off a flight before departure or while it is in progress.",
+   "read": "DR-12"
+  },
+  {
+   "id": "DR-13",
+   "requirement": "When a dispatcher is planning a job, the service must help identify which of the company's drones can reach where the job starts, based on payload capacity, full-battery range, carried sensors, and charging connector compatibility.",
+   "read": "DR-13"
+  },
+  {
+   "id": "DR-14",
+   "requirement": "The service must account for faster battery drain in cold and windy conditions when helping dispatchers assess whether a drone can complete a trip and when tracking active flights.",
+   "read": "DR-14"
+  },
+  {
+   "id": "DR-15",
+   "requirement": "The service must enforce the maximum number of simultaneous takeoff and landing places available at each site when flights are planned and run.",
+   "read": "DR-15"
+  },
+  {
+   "id": "DR-16",
+   "requirement": "The service must support multiple dispatchers within a company planning at the same time without allowing the same drone or the same site takeoff and landing place to be double-booked.",
+   "read": "DR-16"
+  },
+  {
+   "id": "DR-17",
+   "requirement": "The service must allow the airspace desk to maintain the shared airspace picture, including the network of flight corridors between sites and the zones that group those corridors.",
+   "read": "DR-17"
+  },
+  {
+   "id": "DR-18",
+   "requirement": "The service must allow the airspace desk to enter airspace closures announced by authorities and amend existing closures, such as widening an area or changing an end time, even while drones of multiple companies are already in the air.",
+   "read": "DR-18"
+  },
+  {
+   "id": "DR-19",
+   "requirement": "The service must make the shared airspace picture, including corridors, zones, and newly entered or amended closures, visible to all customer companies in real time.",
+   "read": "DR-19"
+  },
+  {
+   "id": "DR-20",
+   "requirement": "When a closure is entered or amended, the service must show the airspace desk how much disruption it caused across customer companies in aggregate without exposing any individual company's operations.",
+   "read": "DR-20"
+  },
+  {
+   "id": "DR-21",
+   "requirement": "The service must keep each company's fleet, jobs, sites, charging equipment, flights, and operational problems strictly isolated so that no other company can view or access them.",
+   "read": "DR-21"
+  },
+  {
+   "id": "DR-22",
+   "requirement": "The service must prevent the airspace desk from viewing or accessing any individual company's fleet, jobs, sites, flights, or operational problems.",
+   "read": "DR-22"
+  },
+  {
+   "id": "DR-23",
+   "requirement": "The service must handle instructions sent to drones and charging equipment over unreliable radio links so that duplicate deliveries or uncertain delivery confirmation do not cause unintended repeated actions.",
+   "read": "DR-23"
+  },
+  {
+   "id": "DR-24",
+   "requirement": "The service must accept and process radio reports from drones that arrive late, out of order, more than once, or not at all without corrupting flight or fleet state.",
+   "read": "DR-24"
+  },
+  {
+   "id": "DR-25",
+   "requirement": "The service must handle a drone restarting in flight after a software fault and continuing its flight without losing track of the flight or misreporting its state.",
+   "read": "DR-25"
+  },
+  {
+   "id": "DR-26",
+   "requirement": "The service must not run on a single server as a single point of failure, so that a server failure does not interrupt operations while drones are flying.",
+   "read": "DR-26"
+  },
+  {
+   "id": "DR-27",
+   "requirement": "The service must allow software updates without restarting or interrupting the service during working hours while drones are flying.",
+   "read": "DR-27"
+  },
+  {
+   "id": "DR-28",
+   "requirement": "The service must preserve and recover active flight and fleet state if an unexpected software fault or crash occurs while drones are in the air.",
+   "read": "DR-28"
+  }
+ ],
+ "score": {
+  "covered": 18,
+  "partial": 12,
+  "of": 38,
+  "recall": 0.47368421052631576,
+  "precision": 0.9285714285714286,
+  "outOfScope": 2,
+  "technical": 0
+ },
+ "judgement": {
+  "requirements": {
+   "BR-01": {
+    "coverage": "partial",
+    "items": [
+     "DR-21"
+    ]
+   },
+   "BR-02": {
+    "coverage": "partial",
+    "items": [
+     "DR-19"
+    ]
+   },
+   "BR-03": {
+    "coverage": "partial",
+    "items": [
+     "DR-01",
+     "DR-02",
+     "DR-03",
+     "DR-04",
+     "DR-06",
+     "DR-10",
+     "DR-11",
+     "DR-12",
+     "DR-17",
+     "DR-18"
+    ]
+   },
+   "BR-04": {
+    "coverage": "covered",
+    "items": [
+     "DR-20",
+     "DR-22"
+    ]
+   },
+   "BR-05": {
+    "coverage": "partial",
+    "items": [
+     "DR-01"
+    ]
+   },
+   "BR-06": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-07": {
+    "coverage": "partial",
+    "items": [
+     "DR-02",
+     "DR-05"
+    ]
+   },
+   "BR-08": {
+    "coverage": "covered",
+    "items": [
+     "DR-04",
+     "DR-05"
+    ]
+   },
+   "BR-09": {
+    "coverage": "covered",
+    "items": [
+     "DR-03"
+    ]
+   },
+   "BR-10": {
+    "coverage": "covered",
+    "items": [
+     "DR-21"
+    ]
+   },
+   "BR-11": {
+    "coverage": "partial",
+    "items": [
+     "DR-06"
+    ]
+   },
+   "BR-12": {
+    "coverage": "partial",
+    "items": [
+     "DR-07"
+    ]
+   },
+   "BR-13": {
+    "coverage": "covered",
+    "items": [
+     "DR-08"
+    ]
+   },
+   "BR-14": {
+    "coverage": "covered",
+    "items": [
+     "DR-09"
+    ]
+   },
+   "BR-15": {
+    "coverage": "covered",
+    "items": [
+     "DR-08",
+     "DR-09",
+     "DR-10"
+    ]
+   },
+   "BR-16": {
+    "coverage": "covered",
+    "items": [
+     "DR-10"
+    ]
+   },
+   "BR-17": {
+    "coverage": "covered",
+    "items": [
+     "DR-13"
+    ]
+   },
+   "BR-18": {
+    "coverage": "covered",
+    "items": [
+     "DR-11"
+    ]
+   },
+   "BR-19": {
+    "coverage": "covered",
+    "items": [
+     "DR-12"
+    ]
+   },
+   "BR-20": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-21": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-22": {
+    "coverage": "covered",
+    "items": [
+     "DR-15",
+     "DR-16"
+    ]
+   },
+   "BR-23": {
+    "coverage": "partial",
+    "items": [
+     "DR-16"
+    ]
+   },
+   "BR-24": {
+    "coverage": "covered",
+    "items": [
+     "DR-14"
+    ]
+   },
+   "BR-25": {
+    "coverage": "partial",
+    "items": [
+     "DR-24"
+    ]
+   },
+   "BR-26": {
+    "coverage": "covered",
+    "items": [
+     "DR-24"
+    ]
+   },
+   "BR-27": {
+    "coverage": "covered",
+    "items": [
+     "DR-24"
+    ]
+   },
+   "BR-28": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-29": {
+    "coverage": "covered",
+    "items": [
+     "DR-25"
+    ]
+   },
+   "BR-30": {
+    "coverage": "partial",
+    "items": [
+     "DR-17"
+    ]
+   },
+   "BR-31": {
+    "coverage": "partial",
+    "items": [
+     "DR-18",
+     "DR-19"
+    ]
+   },
+   "BR-32": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-33": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-34": {
+    "coverage": "covered",
+    "items": [
+     "DR-20"
+    ]
+   },
+   "BR-35": {
+    "coverage": "partial",
+    "items": [
+     "DR-28"
+    ]
+   },
+   "BR-36": {
+    "coverage": "covered",
+    "items": [
+     "DR-23"
+    ]
+   },
+   "BR-37": {
+    "coverage": "missing",
+    "items": []
+   },
+   "BR-38": {
+    "coverage": "missing",
+    "items": []
+   }
+  },
+  "items": {
+   "DR-01": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-05"
+    ]
+   },
+   "DR-02": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-07"
+    ]
+   },
+   "DR-03": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-09"
+    ]
+   },
+   "DR-04": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-08"
+    ]
+   },
+   "DR-05": {
+    "class": "reference",
+    "requirements": [
+     "BR-07",
+     "BR-08"
+    ]
+   },
+   "DR-06": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-11"
+    ]
+   },
+   "DR-07": {
+    "class": "reference",
+    "requirements": [
+     "BR-12"
+    ]
+   },
+   "DR-08": {
+    "class": "reference",
+    "requirements": [
+     "BR-13",
+     "BR-15"
+    ]
+   },
+   "DR-09": {
+    "class": "reference",
+    "requirements": [
+     "BR-14",
+     "BR-15"
+    ]
+   },
+   "DR-10": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-15",
+     "BR-16"
+    ]
+   },
+   "DR-11": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-18"
+    ]
+   },
+   "DR-12": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-19"
+    ]
+   },
+   "DR-13": {
+    "class": "reference",
+    "requirements": [
+     "BR-17"
+    ]
+   },
+   "DR-14": {
+    "class": "reference",
+    "requirements": [
+     "BR-24"
+    ]
+   },
+   "DR-15": {
+    "class": "reference",
+    "requirements": [
+     "BR-22"
+    ]
+   },
+   "DR-16": {
+    "class": "reference",
+    "requirements": [
+     "BR-22",
+     "BR-23"
+    ]
+   },
+   "DR-17": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-30"
+    ]
+   },
+   "DR-18": {
+    "class": "reference",
+    "requirements": [
+     "BR-03",
+     "BR-31"
+    ]
+   },
+   "DR-19": {
+    "class": "reference",
+    "requirements": [
+     "BR-02",
+     "BR-31"
+    ]
+   },
+   "DR-20": {
+    "class": "reference",
+    "requirements": [
+     "BR-04",
+     "BR-34"
+    ]
+   },
+   "DR-21": {
+    "class": "reference",
+    "requirements": [
+     "BR-01",
+     "BR-10"
+    ]
+   },
+   "DR-22": {
+    "class": "reference",
+    "requirements": [
+     "BR-04"
+    ]
+   },
+   "DR-23": {
+    "class": "reference",
+    "requirements": [
+     "BR-36"
+    ]
+   },
+   "DR-24": {
+    "class": "reference",
+    "requirements": [
+     "BR-25",
+     "BR-26",
+     "BR-27"
+    ]
+   },
+   "DR-25": {
+    "class": "reference",
+    "requirements": [
+     "BR-29"
+    ]
+   },
+   "DR-26": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-27": {
+    "class": "user_visible",
+    "requirements": []
+   },
+   "DR-28": {
+    "class": "reference",
+    "requirements": [
+     "BR-35"
+    ]
+   }
+  }
+ }
+}
